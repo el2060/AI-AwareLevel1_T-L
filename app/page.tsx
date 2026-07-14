@@ -187,17 +187,17 @@ function splitSections(markdown: string): Section[] {
 }
 
 const sectionMeta = [
-  { mark: "✦", label: "Start", tone: "mint" },
+  { mark: "✦", label: "Start", tone: "blue" },
   { mark: "01", label: "Notice", tone: "blue" },
-  { mark: "02", label: "Connect", tone: "violet" },
-  { mark: "03", label: "Consider", tone: "coral" },
-  { mark: "04", label: "Support", tone: "amber" },
-  { mark: "05", label: "Structure", tone: "mint" },
+  { mark: "02", label: "Connect", tone: "purple" },
+  { mark: "03", label: "Consider", tone: "orange" },
+  { mark: "04", label: "Support", tone: "teal" },
+  { mark: "05", label: "Structure", tone: "green" },
   { mark: "06", label: "Clarify", tone: "blue" },
-  { mark: "07", label: "Use wisely", tone: "violet" },
-  { mark: "08", label: "Bring together", tone: "coral" },
-  { mark: "↺", label: "Reflect", tone: "amber" },
-  { mark: "✓", label: "Recap", tone: "mint" },
+  { mark: "07", label: "Use wisely", tone: "purple" },
+  { mark: "08", label: "Bring together", tone: "orange" },
+  { mark: "↺", label: "Reflect", tone: "teal" },
+  { mark: "✓", label: "Recap", tone: "green" },
   { mark: "→", label: "Next step", tone: "blue" },
 ];
 
@@ -382,6 +382,7 @@ export default function Home() {
   const [completed, setCompleted] = useState<string[]>([]);
   const [notes, setNotes] = useState("");
   const [notesOpen, setNotesOpen] = useState(false);
+  const [contentsOpen, setContentsOpen] = useState(false);
 
   const sections = useMemo(() => splitSections(course), [course]);
   const current = sections[active];
@@ -421,6 +422,7 @@ export default function Home() {
 
   function selectSection(index: number) {
     setActive(index);
+    setContentsOpen(false);
   }
 
   function markComplete() {
@@ -456,35 +458,30 @@ export default function Home() {
     <div className="site-shell">
       <header className="topbar">
         <div className="global-progress" style={{ width: `${progress}%` }} />
-        <div className="brand">
-          <span className="brand-mark">NP</span>
-          <span>AI in T&amp;L Essentials</span>
-        </div>
-        <div className="top-actions">
-          <span className="level-badge">Level 1 · AI-Aware</span>
-          <span className="progress-summary">{completed.length}/{sections.length} complete</span>
-          <button className="notes-button" onClick={() => setNotesOpen(true)}>
-            My notes
-          </button>
+        <div className="topbar-inner">
+          <div className="brand">
+            <img className="np-logo" src="/np-logo.png" alt="Ngee Ann Polytechnic" />
+            <span className="brand-divider" aria-hidden="true" />
+            <span className="course-name">AI in T&amp;L Essentials</span>
+          </div>
+          <div className="top-actions">
+            <span className="level-badge">Level 1 · AI-Aware</span>
+            <button className="notes-button" onClick={() => setNotesOpen(true)}>
+              Notes
+            </button>
+          </div>
         </div>
       </header>
 
-      <nav className="course-nav" aria-label="Course sections">
-        <div className="course-nav-inner">
-          {sections.map((section, index) => (
-            <button
-              key={section.id}
-              className={`chapter-link ${index === active ? "active" : ""}`}
-              onClick={() => selectSection(index)}
-              aria-current={index === active ? "page" : undefined}
-            >
-              <span className={`chapter-number ${completed.includes(section.id) ? "done" : ""}`}>
-                {completed.includes(section.id) ? "✓" : index + 1}
-              </span>
-              <span>{section.shortTitle}</span>
-            </button>
-          ))}
-        </div>
+      <nav className="chapter-dock" aria-label="Course navigation">
+        <button className="dock-arrow" onClick={() => setActive((index) => Math.max(0, index - 1))} disabled={active === 0} aria-label="Previous section">←</button>
+        <button className="contents-trigger" onClick={() => setContentsOpen(true)} aria-haspopup="dialog">
+          <span className="contents-label">Section {active + 1} of {sections.length}</span>
+          <strong>{current.shortTitle}</strong>
+          <span className="contents-caret">⌄</span>
+        </button>
+        <span className="dock-progress">{completed.length} complete</span>
+        <button className="dock-arrow" onClick={() => setActive((index) => Math.min(sections.length - 1, index + 1))} disabled={active === sections.length - 1} aria-label="Next section">→</button>
       </nav>
 
       <main className="reader">
@@ -532,6 +529,26 @@ export default function Home() {
           </div>
         </div>
       </main>
+
+      {contentsOpen && (
+        <div className="contents-overlay" role="presentation" onClick={() => setContentsOpen(false)}>
+          <section className="contents-panel" role="dialog" aria-modal="true" aria-label="Course contents" onClick={(event) => event.stopPropagation()}>
+            <div className="contents-heading">
+              <div><span className="eyebrow">Your learning path</span><h2>Course contents</h2></div>
+              <button className="close-button" onClick={() => setContentsOpen(false)} aria-label="Close course contents">×</button>
+            </div>
+            <div className="contents-list">
+              {sections.map((section, index) => (
+                <button key={section.id} className={index === active ? "active" : ""} onClick={() => selectSection(index)} aria-current={index === active ? "page" : undefined}>
+                  <span className={`contents-number ${completed.includes(section.id) ? "done" : ""}`}>{completed.includes(section.id) ? "✓" : String(index + 1).padStart(2, "0")}</span>
+                  <span><strong>{section.shortTitle}</strong><small>{sectionMeta[index]?.label ?? "Learn"}</small></span>
+                  <i aria-hidden="true">→</i>
+                </button>
+              ))}
+            </div>
+          </section>
+        </div>
+      )}
 
       {notesOpen && (
         <div className="notes-overlay" role="presentation" onClick={() => setNotesOpen(false)}>
