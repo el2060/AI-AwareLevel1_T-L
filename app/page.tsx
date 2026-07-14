@@ -15,6 +15,8 @@ type Choice = {
   feedback: string;
 };
 
+type ActivityNotes = Record<string, string>;
+
 const STORAGE_KEY = "np-ai-aware-course";
 
 function escapeHtml(value: string) {
@@ -230,8 +232,8 @@ function ChoiceCheck({ question, eyebrow, choices }: { question: string; eyebrow
   );
 }
 
-function PulseActivity() {
-  const [selected, setSelected] = useState<string[]>([]);
+function PulseActivity({ value, onChange }: { value: string; onChange: (value: string) => void }) {
+  const selected = value ? value.split("|") : [];
   const options = ["Student learning", "Assessment", "Teaching preparation", "Feedback", "Not sure yet"];
   return (
     <section className="activity-block pulse-activity">
@@ -243,13 +245,81 @@ function PulseActivity() {
           <button
             key={option}
             className={selected.includes(option) ? "selected" : ""}
-            onClick={() => setSelected((items) => items.includes(option) ? items.filter((item) => item !== option) : [...items, option])}
+            onClick={() => onChange((selected.includes(option) ? selected.filter((item) => item !== option) : [...selected, option]).join("|"))}
           >
             {selected.includes(option) ? "✓ " : "+ "}{option}
           </button>
         ))}
       </div>
       {selected.length > 0 && <p className="pulse-note">Keep these areas in mind as you move through the course.</p>}
+    </section>
+  );
+}
+
+function ModulePrompt({ eyebrow = "Your module", question, placeholder, value, onChange, feedback }: { eyebrow?: string; question: string; placeholder: string; value: string; onChange: (value: string) => void; feedback: string }) {
+  return (
+    <section className="activity-block reflection-block">
+      <span className="activity-eyebrow">{eyebrow}</span>
+      <h2>{question}</h2>
+      <textarea value={value} onChange={(event) => onChange(event.target.value)} placeholder={placeholder} maxLength={280} />
+      <div className="reflection-footer"><span>{value.length}/280</span><small>Saved on this browser</small></div>
+      {value.trim() && <div className="reflection-response"><strong>Keep this in view</strong><p>{feedback}</p></div>}
+    </section>
+  );
+}
+
+function ModuleFocusActivity({ moduleName, onModuleName }: { moduleName: string; onModuleName: (value: string) => void }) {
+  return (
+    <section className="activity-block focus-block">
+      <span className="activity-eyebrow">Before you begin</span>
+      <h2>Keep one module in mind</h2>
+      <p>Using one familiar module will make the ideas easier to apply as you go.</p>
+      <label><span>My module</span><input value={moduleName} onChange={(event) => onModuleName(event.target.value)} placeholder="For example: Business Communication" /></label>
+      {moduleName.trim() && <p className="focus-confirmation">✓ We’ll invite you to think about <strong>{moduleName}</strong> throughout the package.</p>}
+    </section>
+  );
+}
+
+function SnapshotActivity({ notes, onChange }: { notes: ActivityNotes; onChange: (key: string, value: string) => void }) {
+  const prompts = [
+    ["snapshot-change", "What is AI changing?", "One change you notice"],
+    ["snapshot-anchor", "What must students still do?", "One capability to protect"],
+    ["snapshot-assessment", "What needs to be clear?", "One assessment condition to check"],
+    ["snapshot-next", "What is one useful next step?", "One small action you can take"],
+  ];
+  const count = prompts.filter(([key]) => notes[key]?.trim()).length;
+  return (
+    <section className="activity-block snapshot-block">
+      <div className="activity-head-row"><div><span className="activity-eyebrow">Bring it together</span><h2>Your module snapshot</h2></div><span className="activity-count">{count} / 4</span></div>
+      <p>Short phrases are enough. This is for your reflection, not submission.</p>
+      <div className="snapshot-fields">
+        {prompts.map(([key, label, placeholder]) => <label key={key}><span>{label}</span><input value={notes[key] ?? ""} onChange={(event) => onChange(key, event.target.value)} placeholder={placeholder} /></label>)}
+      </div>
+      {count === 4 && <div className="activity-feedback"><strong>Your snapshot is ready</strong><p>You have identified a change, a capability to protect, an assessment question and a practical next step.</p></div>}
+    </section>
+  );
+}
+
+function ConfidenceActivity({ value, onChange }: { value: string; onChange: (value: string) => void }) {
+  const selected = value ? value.split("|") : [];
+  const items = ["Spot where AI affects learning", "Use the 3As and PAIR", "Set clearer assessment conditions", "Check tools, data and output"];
+  return (
+    <section className="activity-block confidence-block">
+      <span className="activity-eyebrow">Quick self-check</span><h2>What are you now better prepared to do?</h2>
+      <p>Select each statement that feels true for you.</p>
+      <div className="confidence-list">{items.map((item) => <button key={item} className={selected.includes(item) ? "selected" : ""} onClick={() => onChange((selected.includes(item) ? selected.filter((x) => x !== item) : [...selected, item]).join("|"))}><span>{selected.includes(item) ? "✓" : ""}</span>{item}</button>)}</div>
+      {selected.length === items.length && <div className="activity-feedback"><strong>You have covered the Level 1 foundation</strong><p>The next step is to use these questions when reviewing your own module.</p></div>}
+    </section>
+  );
+}
+
+function NextStepActivity({ value, onChange }: { value: string; onChange: (value: string) => void }) {
+  const options = ["Discuss one change with my module team", "Review one learning outcome using the 3As", "Check one assessment’s GenAI conditions", "Try one small AI-supported learning activity"];
+  return (
+    <section className="activity-block next-step-block">
+      <span className="activity-eyebrow">Before you leave</span><h2>Choose one small next step</h2>
+      <div className="choice-grid">{options.map((option, index) => <button key={option} className={`choice-button ${value === option ? "selected" : ""}`} onClick={() => onChange(option)}><span>{value === option ? "✓" : String.fromCharCode(65 + index)}</span>{option}</button>)}</div>
+      {value && <div className="activity-feedback"><strong>A practical place to start</strong><p>{value}. Keep the scope small and use what you have learnt to guide the conversation or review.</p></div>}
     </section>
   );
 }
@@ -343,25 +413,30 @@ function StrategyMap() {
   );
 }
 
-function SectionInteractive({ title }: { title: string }) {
-  if (title.startsWith("Part 1")) return <PulseActivity />;
+function SectionInteractive({ title, notes, onChange }: { title: string; notes: ActivityNotes; onChange: (key: string, value: string) => void }) {
+  if (title === "AI in T&L Essentials: Level 1 (AI-Aware)") return <ModuleFocusActivity moduleName={notes.module ?? ""} onModuleName={(value) => onChange("module", value)} />;
+  if (title.startsWith("Part 1")) return <PulseActivity value={notes.pulse ?? ""} onChange={(value) => onChange("pulse", value)} />;
   if (title.startsWith("Part 2")) return <StrategyMap />;
-  if (title.startsWith("Part 3")) return <ThreeAsActivity />;
-  if (title.startsWith("Part 4")) return <ChoiceCheck eyebrow="Support or replace?" question="Which use better protects the learning?" choices={[
+  if (title.startsWith("Part 3")) return <div className="activity-stack"><ThreeAsActivity /><ModulePrompt question={`In ${notes.module || "your module"}, what must students still be able to do themselves?`} placeholder="One core capability…" value={notes.anchor ?? ""} onChange={(value) => onChange("anchor", value)} feedback="This is a possible Anchor. Keep it visible when you consider where AI may support the workflow." /></div>;
+  if (title.startsWith("Part 4")) return <div className="activity-stack"><ChoiceCheck eyebrow="Support or replace?" question="Which use better protects the learning?" choices={[
     { label: "AI explains a concept; the student checks it and then practises.", correct: true, feedback: "AI supports clarification, while the student still checks and practises the intended learning." },
     { label: "AI completes the assignment; the student submits the response.", correct: false, feedback: "Here, AI replaces the thinking and performance the student needs to develop." },
-  ]} />;
-  if (title.startsWith("Part 5")) return <PairBuilder />;
-  if (title.startsWith("Part 6")) return <ChoiceCheck eyebrow="Assessment judgement" question="A student declares that GenAI created a required interview. Is that acceptable?" choices={[
+  ]} /><ModulePrompt question="Where could AI support learning without doing the learning for students?" placeholder="A practice, feedback or explanation opportunity…" value={notes.support ?? ""} onChange={(value) => onChange("support", value)} feedback="A useful opportunity keeps students checking, practising, deciding or explaining." /></div>;
+  if (title.startsWith("Part 5")) return <div className="activity-stack"><PairBuilder /><ModulePrompt question="What could students compare, check or improve?" placeholder="An AI-generated explanation, solution, draft…" value={notes.pair ?? ""} onChange={(value) => onChange("pair", value)} feedback="This gives students something to work on critically, instead of treating AI output as the final answer." /></div>;
+  if (title.startsWith("Part 6")) return <div className="activity-stack"><ChoiceCheck eyebrow="Assessment judgement" question="A student declares that GenAI created a required interview. Is that acceptable?" choices={[
     { label: "Yes. Declaration makes the use acceptable.", correct: false, feedback: "Declaration is required, but it does not make a prohibited use acceptable." },
     { label: "It depends on how realistic the generated responses are.", correct: false, feedback: "The issue is not realism. The assessment requires a real human interaction." },
     { label: "No. GenAI cannot replace the real interaction required by the task.", correct: true, feedback: "Correct. Simulating a required human interaction is always prohibited." },
-  ]} />;
-  if (title.startsWith("Part 7")) return <ChoiceCheck eyebrow="Tool judgement" question="Which is the soundest use?" choices={[
+  ]} /><ModulePrompt question="What is one GenAI condition your students should not have to guess?" placeholder="For example: what AI may be used for…" value={notes.assessment ?? ""} onChange={(value) => onChange("assessment", value)} feedback="Clear conditions should state what AI may support, what students must do, and what they need to check, retain and declare." /></div>;
+  if (title.startsWith("Part 7")) return <div className="activity-stack"><ChoiceCheck eyebrow="Tool judgement" question="Which is the soundest use?" choices={[
     { label: "Use Pair.gov.sg to suggest activities, then check and adapt one.", correct: true, feedback: "The purpose is clear, the tool is suitable, and the lecturer reviews the output." },
     { label: "Use an unapproved public tool to analyse named student records.", correct: false, feedback: "The tool is not approved for the information involved." },
     { label: "Let an AI summary decide which students need intervention.", correct: false, feedback: "AI may support an initial review, but a person must interpret the context and make the decision." },
-  ]} />;
+  ]} /><ModulePrompt question="What would you need to check before using AI output with students?" placeholder="Accuracy, level, data, access…" value={notes.toolcheck ?? ""} onChange={(value) => onChange("toolcheck", value)} feedback="A suitable use has a clear purpose, an approved tool, checked output and a person making the final decision." /></div>;
+  if (title.startsWith("Part 8")) return <SnapshotActivity notes={notes} onChange={onChange} />;
+  if (title.startsWith("Look Back")) return <ModulePrompt eyebrow="Look back" question="What is one question you are now better prepared to ask?" placeholder="One question I will carry into my module…" value={notes.lookback ?? ""} onChange={(value) => onChange("lookback", value)} feedback="Being AI-aware starts with asking the right question before choosing a tool or changing a learning activity." />;
+  if (title === "Module Summary") return <ConfidenceActivity value={notes.confidence ?? ""} onChange={(value) => onChange("confidence", value)} />;
+  if (title.startsWith("You Have Completed")) return <NextStepActivity value={notes.nextstep ?? ""} onChange={(value) => onChange("nextstep", value)} />;
   return null;
 }
 
@@ -408,6 +483,7 @@ export default function Home() {
   const [active, setActive] = useState(0);
   const [completed, setCompleted] = useState<string[]>([]);
   const [notes, setNotes] = useState("");
+  const [activityNotes, setActivityNotes] = useState<ActivityNotes>({});
   const [notesOpen, setNotesOpen] = useState(false);
   const [contentsOpen, setContentsOpen] = useState(false);
 
@@ -428,6 +504,7 @@ export default function Home() {
         const parsed = JSON.parse(saved);
         setCompleted(parsed.completed ?? []);
         setNotes(parsed.notes ?? "");
+        setActivityNotes(parsed.activityNotes ?? {});
         setActive(parsed.active ?? 0);
       } catch {
         window.localStorage.removeItem(STORAGE_KEY);
@@ -439,9 +516,9 @@ export default function Home() {
     if (!course) return;
     window.localStorage.setItem(
       STORAGE_KEY,
-      JSON.stringify({ completed, notes, active }),
+      JSON.stringify({ completed, notes, activityNotes, active }),
     );
-  }, [completed, notes, active, course]);
+  }, [completed, notes, activityNotes, active, course]);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -467,6 +544,10 @@ export default function Home() {
       setCompleted((items) => [...items, current.id]);
     }
     setActive((index) => Math.min(index + 1, sections.length - 1));
+  }
+
+  function setActivityValue(key: string, value: string) {
+    setActivityNotes((items) => ({ ...items, [key]: value }));
   }
 
   if (!current) {
@@ -526,7 +607,7 @@ export default function Home() {
           dangerouslySetInnerHTML={{ __html: markdownToHtml(current.markdown) }}
         />
 
-        <SectionInteractive title={current.title} />
+        <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />
 
         {progress === 100 && active === sections.length - 1 && (
           <div className="completion-moment">
