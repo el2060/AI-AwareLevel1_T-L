@@ -645,19 +645,19 @@ export default function Home() {
 
       <nav className="chapter-dock" aria-label="Course navigation">
         <button className="dock-arrow" onClick={() => setActive((index) => Math.max(0, index - 1))} disabled={active === 0} aria-label="Previous section">←</button>
+        <div className="current-section" aria-live="polite">
+          <span>Section {active + 1} of {sections.length}</span>
+          <strong>{current.shortTitle}</strong>
+        </div>
         <button
-          className="contents-trigger"
+          className="sections-button"
           onClick={() => setContentsOpen(true)}
           aria-haspopup="dialog"
           aria-expanded={contentsOpen}
-          aria-label={`Open all sections. Current section: ${current.shortTitle}`}
+          aria-label="Open all sections"
         >
-          <span className="contents-menu-icon" aria-hidden="true">☰</span>
-          <span className="contents-current">
-            <span className="contents-label">Section {active + 1} of {sections.length}</span>
-            <strong>{current.shortTitle}</strong>
-          </span>
-          <span className="contents-action">All sections <i aria-hidden="true">⌄</i></span>
+          <span>All sections</span>
+          <i aria-hidden="true">⌄</i>
         </button>
         <span className="dock-progress">{completed.length} complete</span>
         <button className="dock-arrow" onClick={() => setActive((index) => Math.min(sections.length - 1, index + 1))} disabled={active === sections.length - 1} aria-label="Next section">→</button>
