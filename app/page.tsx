@@ -197,7 +197,7 @@ const sectionMeta = [
   { mark: "01", label: "AI in your module", tone: "blue" },
   { mark: "02", label: "NP’s approach", tone: "purple" },
   { mark: "03", label: "Curriculum", tone: "orange" },
-  { mark: "04", label: "Learning", tone: "teal" },
+  { mark: "04", label: "Facilitation", tone: "teal" },
   { mark: "05", label: "PAIR", tone: "green" },
   { mark: "06", label: "Assessment", tone: "blue" },
   { mark: "07", label: "Tools and data", tone: "purple" },
@@ -635,7 +635,7 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
     { label: "Use an unapproved public tool to analyse named student records.", correct: false, feedback: "The tool is not approved for the information involved." },
     { label: "Let an AI summary decide which students need intervention.", correct: false, feedback: "AI may support an initial review, but a person must interpret the context and make the decision." },
   ]} />;
-  if (title.startsWith("Part 8")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep your chosen module in mind. Tap each question once you have considered it." items={["What is AI changing?", "What must students still learn and do?", "Where might AI support learning?", "What assessment, tool or data condition needs attention?"]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered the change, the learning to protect, a possible support and a condition to check." />;
+  if (title.startsWith("Part 8")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep your chosen module in mind. Tap each question once you have considered it." items={["Curriculum: What must students still learn and do themselves?", "Facilitation: Where could AI support learning without doing it for students?", "Assessment: How will learning remain visible?", "Tools and data: What should you check before using a tool or learning data?"]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered the learning to protect, a possible support, how learning remains visible and what needs checking." />;
   if (title.startsWith("Look Back")) return <CarryForwardActivity value={notes.lookbackchoice ?? ""} onChange={(value) => onChange("lookbackchoice", value)} />;
   if (title === "Module Summary") return <ConfidenceActivity value={notes.confidence ?? ""} onChange={(value) => onChange("confidence", value)} />;
   if (title.startsWith("You Have Completed")) return <NextStepActivity value={notes.nextstep ?? ""} onChange={(value) => onChange("nextstep", value)} />;
@@ -648,25 +648,25 @@ function OpeningVisual() {
     {
       title: "Curriculum",
       detail: "What AI may change in your module and discipline",
-      feedback: "Start by noticing which knowledge, skills and professional judgements students still need to develop.",
+      feedback: "What must students still learn and do themselves, and how is AI changing the discipline?",
       icon: BookOpen,
     },
     {
       title: "Facilitation",
       detail: "How AI may support learning and practice",
-      feedback: "Ask whether the use gives students more practice, feedback or explanation—without doing the learning for them.",
+      feedback: "Where could AI give students more explanation, practice or feedback without doing the learning for them?",
       icon: Lightbulb,
     },
     {
       title: "Assessment",
       detail: "How students show their learning credibly",
-      feedback: "Keep the intended learning visible, then make the GenAI conditions clear to students.",
+      feedback: "What must students demonstrate, and how will learning remain visible when AI can produce the product?",
       icon: ClipboardCheck,
     },
     {
-      title: "Data and technology",
+      title: "Tools and data",
       detail: "How to choose tools and handle information safely",
-      feedback: "Start with the learning purpose, then consider the information involved, limits of the tool and human oversight.",
+      feedback: "What could a tool or learning data support, and what should you check before using it?",
       icon: ShieldCheck,
     },
   ];
@@ -675,8 +675,8 @@ function OpeningVisual() {
     <section className="opening-visual" aria-label="What this package covers">
       <div className="overview-heading">
         <span>At a glance</span>
-        <h2>Four areas of AI-aware practice</h2>
-        <p>Choose an area to preview the question you will explore.</p>
+        <h2>Four AI-aware questions for your module</h2>
+        <p>Choose an area to preview a guiding question for the package.</p>
       </div>
       <div className="overview-areas">
         {areas.map((area, index) => {

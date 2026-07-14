@@ -27,7 +27,7 @@ By the end of this module, you will be able to:
 1. **Curriculum:** Describe how AI may affect what students need to learn and do in your discipline or module.
 2. **Facilitation:** Describe the benefits, limitations, risks and good practices of using AI to support learning.
 3. **Assessment:** Describe how AI affects assessment validity and academic integrity, and describe how to apply NP’s essential requirements for GenAI use.
-4. **Data and technology:** Analyse how a potentially relevant AI tool could support a T&L purpose, including the information involved, its limitations and appropriate oversight.
+4. **Tools and data:** Analyse how a potentially relevant AI tool could support a T&L purpose, including the information involved, its limitations and appropriate oversight.
 
 The Level 1 focus is awareness: recognise the key issues, understand NP’s shared approaches and identify what may need attention in a module you teach, lead or support.
 
@@ -39,12 +39,12 @@ This follows the everyday work described in the TLCF: designing curriculum, faci
 
 As you go through this package, keep one module that you currently teach, lead or support in mind.
 
-You will consider it from four angles:
+You will consider four guiding questions:
 
-1. What is AI changing?
-2. What must students still learn?
-3. Where might AI support learning?
-4. What needs to be clarified or safeguarded?
+1. **Curriculum:** What must students still learn and do themselves, and how is AI changing the discipline?
+2. **Facilitation:** Where could AI give students more explanation, practice or feedback without doing the learning for them?
+3. **Assessment:** What must students demonstrate, and how will learning remain visible when AI can produce the product?
+4. **Tools and data:** What could a tool or learning data support, and what should you check before using it?
 
 Use these questions throughout the package to identify what may need attention and one sensible next step.
 
@@ -146,10 +146,10 @@ NP’s five strategies work together towards the same goal. Explore the overview
 
 This package brings the strategies into four practical questions:
 
-1. **Curriculum alignment and the 3As:** What should students learn, practise and demonstrate?
-2. **Learning and PAIR:** How can students learn with AI?
-3. **Assessment:** How will students show what they can do?
-4. **Tools and data:** How should AI be used responsibly?
+1. **Curriculum:** What must students still learn and do themselves, and how is AI changing the discipline? The 3As help course and module teams review learning outcomes, activities and assessment together.
+2. **Facilitation:** Where could AI give students more explanation, practice or feedback without doing the learning for them? PAIR offers a structure for learning with AI.
+3. **Assessment:** What must students demonstrate, and how will learning remain visible when AI can produce the product?
+4. **Tools and data:** What could a tool or learning data support, and what should you check before using it?
 
 These questions guide Parts 3 to 7. They are connected: what students need to learn affects how they practise, what an assessment should require, and whether a tool is a suitable choice.
 
@@ -653,21 +653,21 @@ Return to the module you selected at the start.
 
 Use these four questions.
 
-## Design Learning
+## Curriculum
 
-> How is AI changing what students may need to know or do in this discipline?
+> What must students still learn and do themselves, and how is AI changing the discipline?
 
-## Facilitate Learning
+## Facilitation
 
-> Where might AI support learning—and where might it replace essential thinking or practice?
+> Where could AI give students more explanation, practice or feedback without doing the learning for them?
 
-## Assess Learning
+## Assessment
 
-> What must students demonstrate, and are the GenAI conditions clear?
+> What must students demonstrate, and how will learning remain visible when AI can produce the product?
 
-## Review and Improve
+## Tools and Data
 
-> What feedback, learning information or tool use needs to be checked before you act?
+> What could a tool or learning data support, and what should you check before using it?
 
 These questions provide a practical starting point for AI-aware teaching at NP. They help you connect curriculum, facilitation, assessment, tools and data instead of considering each in isolation.
 
