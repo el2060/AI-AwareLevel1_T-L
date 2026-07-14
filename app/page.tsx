@@ -645,10 +645,19 @@ export default function Home() {
 
       <nav className="chapter-dock" aria-label="Course navigation">
         <button className="dock-arrow" onClick={() => setActive((index) => Math.max(0, index - 1))} disabled={active === 0} aria-label="Previous section">←</button>
-        <button className="contents-trigger" onClick={() => setContentsOpen(true)} aria-haspopup="dialog">
-          <span className="contents-label">Section {active + 1} of {sections.length}</span>
-          <strong>{current.shortTitle}</strong>
-          <span className="contents-caret">⌄</span>
+        <button
+          className="contents-trigger"
+          onClick={() => setContentsOpen(true)}
+          aria-haspopup="dialog"
+          aria-expanded={contentsOpen}
+          aria-label={`Open all sections. Current section: ${current.shortTitle}`}
+        >
+          <span className="contents-menu-icon" aria-hidden="true">☰</span>
+          <span className="contents-current">
+            <span className="contents-label">Section {active + 1} of {sections.length}</span>
+            <strong>{current.shortTitle}</strong>
+          </span>
+          <span className="contents-action">All sections <i aria-hidden="true">⌄</i></span>
         </button>
         <span className="dock-progress">{completed.length} complete</span>
         <button className="dock-arrow" onClick={() => setActive((index) => Math.min(sections.length - 1, index + 1))} disabled={active === sections.length - 1} aria-label="Next section">→</button>
@@ -712,7 +721,7 @@ export default function Home() {
         <div className="contents-overlay" role="presentation" onClick={() => setContentsOpen(false)}>
           <section className="contents-panel" role="dialog" aria-modal="true" aria-label="Course contents" onClick={(event) => event.stopPropagation()}>
             <div className="contents-heading">
-              <div><span className="eyebrow">Your learning path</span><h2>Course contents</h2></div>
+              <div><span className="eyebrow">Jump to any section</span><h2>All sections</h2></div>
               <button className="close-button" onClick={() => setContentsOpen(false)} aria-label="Close course contents">×</button>
             </div>
             <div className="contents-list">
