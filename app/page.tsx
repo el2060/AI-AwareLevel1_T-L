@@ -328,7 +328,7 @@ function ModuleSummary() {
       label: "Learning design",
       title: "3As and PAIR",
       preview: "Use the 3As to review aligned learning outcomes, activities and assessment; use PAIR to structure learning with AI.",
-      takeaway: "Anchor foundations, Augment authentic work and Advance new possibilities. The 3As guide a review of what students should learn, how they will practise it and how they will demonstrate it. PAIR gives students a process for learning with AI.",
+      takeaway: "Anchor foundations, Augment authentic work and Advance new possibilities. The 3As guide a review of what students should learn, how they will practise it and how they will demonstrate it. NP has adopted and adapted PAIR as a process for learning with AI.",
       practice: "Check that your learning outcome, learning activity and assessment are aligned. Use AI to support practice and learning—not to take over the thinking.",
       icon: Sparkles,
       tone: "purple",
@@ -450,8 +450,8 @@ function ThreeAsActivity() {
 }
 
 function PairBuilder() {
-  const steps = ["Problem", "AI", "Interaction", "Reflection"];
-  const shuffled = ["Reflection", "Interaction", "Problem", "AI"];
+  const steps = ["Problem framing", "AI tool selection", "Iteration", "Reflection"];
+  const shuffled = ["Reflection", "Iteration", "Problem framing", "AI tool selection"];
   const [picked, setPicked] = useState<string[]>([]);
   const [nudge, setNudge] = useState("");
   const next = steps[picked.length];
@@ -473,7 +473,7 @@ function PairBuilder() {
                 setPicked([...picked, step]);
                 setNudge("");
               } else {
-                setNudge(picked.length === 0 ? "Start with the problem or task students need to address." : "Not quite—think about what should follow the stage you just placed.");
+                setNudge(picked.length === 0 ? "Start by framing the problem or task students need to address." : "Not quite—think about what should follow the stage you just placed.");
               }
             }}
           >{step}</button>
@@ -487,7 +487,7 @@ function PairBuilder() {
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
-    { name: "Pedagogy · PAIR", question: "Help students learn with AI", detail: "PAIR gives students a visible process for framing problems, using AI critically and reflecting.", icon: MessageCircle },
+    { name: "Pedagogy · PAIR", question: "Help students learn with AI", detail: "NP has adopted and adapted PAIR as a visible process for problem framing, AI tool selection, critical iteration and reflection.", icon: MessageCircle },
     { name: "Curriculum · 3As", question: "Keep outcomes, learning and assessment aligned", detail: "The 3As help course and module teams review learning outcomes, learning activities and assessment together as AI changes the discipline.", icon: Sparkles },
     { name: "Assessment", question: "Keep learning visible", detail: "Assessment conditions should show what students must demonstrate and how AI may be used.", icon: ClipboardCheck },
     { name: "Personalised learning", question: "Scaffold practice and feedback", detail: "AI-enabled tutors and learning assistants can support practice, feedback and different learning needs.", icon: Bot },
@@ -699,9 +699,9 @@ function ThreeAsInfographic() {
 
 function PairInfographic() {
   const stages = [
-    { letter: "P", name: "Problem", action: "Frame the task", detail: "Clarify the purpose, context, constraints and required outcome.", cue: "What are we trying to solve?", tone: "problem" },
-    { letter: "A", name: "AI", action: "Choose deliberately", detail: "Decide whether AI is suitable, which tool fits and what information can be used safely.", cue: "What can the tool help with?", tone: "ai" },
-    { letter: "I", name: "Interaction", action: "Work critically", detail: "Question, refine, compare and check the output before combining it with your own knowledge.", cue: "How will we test the output?", tone: "interaction" },
+    { letter: "P", name: "Problem framing", action: "Frame the task", detail: "Clarify the purpose, context, constraints and required outcome.", cue: "What are we trying to solve?", tone: "problem" },
+    { letter: "A", name: "AI tool selection", action: "Choose deliberately", detail: "Decide whether AI is suitable, which tool fits and what information can be used safely.", cue: "What can the tool help with?", tone: "ai" },
+    { letter: "I", name: "Iteration", action: "Work, check and refine", detail: "Question, compare, check and refine the output before combining it with your own knowledge.", cue: "How will we test and improve the output?", tone: "interaction" },
     { letter: "R", name: "Reflection", action: "Learn from the process", detail: "Identify what helped or hindered, where human judgement mattered and what to change next time.", cue: "What did we learn?", tone: "reflection" },
   ];
   return (
