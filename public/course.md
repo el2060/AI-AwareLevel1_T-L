@@ -31,6 +31,8 @@ By the end of this module, you should be able to:
 
 At Level 1, the focus is on recognising and describing what matters. You are not expected to redesign your module in this package.
 
+This package provides the shared awareness foundation. Deeper module review, redesign and implementation are supported through later capability-building and School-based support.
+
 ---
 
 ## Keep One Module in Mind
@@ -128,7 +130,13 @@ NP aims to prepare students to become **AI-ready professionals** who combine:
 - Domain knowledge and skills.
 - Responsible and effective use of AI.
 
-This shared goal gives context to NP’s approaches. At Level 1, you only need to recognise what each approach helps us consider.
+This vision is supported by three commitments:
+
+- **AI-relevant curriculum:** Knowledge and skills remain relevant to the discipline and profession.
+- **AI-integrated learning and assessment:** Students learn to work with AI while still demonstrating what they know and can do.
+- **AI-enabled learning support:** AI may provide suitable practice, feedback and personalised support.
+
+These commitments give context to NP’s approaches. At Level 1, you only need to recognise what each approach helps us consider.
 
 ## Five Strategies, One Goal
 
@@ -136,11 +144,11 @@ NP’s five strategies work together towards the same goal.
 
 | Strategy | What it means |
 | --- | --- |
-| **Adopt a pedagogy** | Use PAIR to help students learn and solve problems with AI. |
+| **Embed AI-integrated pedagogy** | Use PAIR to help students learn and solve problems with AI. |
 | **Transform the curriculum** | Use the 3As to review what students need to learn. |
 | **Redesign assessment** | Keep assessment authentic, valid and relevant. |
-| **Support personalised learning** | Use suitable AI-enabled platforms to support learning. |
-| **Strengthen human skills** | Develop judgement, ethics, creativity, communication and collaboration. |
+| **Enable personalised learning** | Use suitable AI-enabled tutors and learning assistants to scaffold learning. |
+| **Strengthen human skills and resilience** | Develop judgement, ethics, creativity, communication and collaboration. |
 
 You will not work through all five strategies in depth here. Instead, the rest of this package follows four practical questions:
 
@@ -158,6 +166,8 @@ These questions form the thread for Parts 3 to 7. A decision in one area may aff
 AI can now assist with tasks that students previously completed independently. This may change some professional workflows, but it does not remove the need for strong foundations.
 
 Students need enough disciplinary knowledge and judgement to recognise when AI output is wrong, unsafe or unsuitable.
+
+NP students build a common AI-literacy foundation. The 3As then help course teams consider the disciplinary, professional and human capabilities students need in their own fields.
 
 NP’s **3As framework** helps us consider the balance between human capability and AI-enabled practice.
 
@@ -269,6 +279,8 @@ Not every learning outcome needs to change, but it is worth considering how AI m
 
 AI can support learning when it is used for a clear purpose and does not remove the thinking or practice students need.
 
+NP’s direction is for AI-enabled tutors and learning assistants to **scaffold and coach**, rather than simply provide answers. For example, D2L Lumi Tutor provides students with on-demand summaries, flashcards and practice questions grounded in module content. Other adaptive-learning support is being piloted.
+
 ## Possible Benefits
 
 AI may help students:
@@ -347,6 +359,12 @@ For your selected module:
 # Part 5: PAIR—Learning With AI
 
 NP’s **PAIR framework** provides a simple structure for AI-supported learning and problem-solving.
+
+PAIR is designed to remain useful across disciplines and changing tools. It keeps the learning:
+
+- **Human-centred:** AI supports rather than replaces human judgement.
+- **Skill-focused:** Students practise transferable skills such as problem framing, evaluation and reflection.
+- **Tool-independent:** The process can be used with different AI tools as they evolve.
 
 ## P — Problem
 
@@ -464,7 +482,7 @@ If AI can generate the final product without the student demonstrating the inten
 
 ## NP’s Position on GenAI in Summative Assessment
 
-Every NP lecturer should know the following requirements.
+NP’s Guidelines for GenAI Use in Summative Assessment took effect in AY2026. Every NP lecturer should know the following requirements.
 
 ### GenAI is allowed unless explicitly prohibited
 

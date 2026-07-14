@@ -419,8 +419,8 @@ function StrategyMap() {
   ];
   return (
     <section className="strategy-map" aria-label="How NP approaches connect across this package">
-      <div className="strategy-heading"><span>One shared goal</span><h2>From AI-ready graduates to four lecturer questions</h2><p>Select an area to see where it appears in this package.</p></div>
-      <div className="strategy-goal"><strong>AI-ready graduates</strong><span>Human qualities + domain expertise + responsible AI use</span></div>
+      <div className="strategy-heading"><span>For this package</span><h2>Carry four questions into the rest of the module</h2><p>Each question turns NP’s direction into something you can notice in your own module.</p></div>
+      <div className="strategy-goal"><strong>Five NP strategies</strong><span>Four practical questions for an AI-aware lecturer</span></div>
       <div className="strategy-path">
         {items.map(([name, question, detail], index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
           <i>{String(index + 1).padStart(2, "0")}</i><span><strong>{name}</strong><b>{question}</b>{active === index && <small>{detail}</small>}</span>
@@ -433,7 +433,7 @@ function StrategyMap() {
 function SectionInteractive({ title, notes, onChange }: { title: string; notes: ActivityNotes; onChange: (key: string, value: string) => void }) {
   if (title === "AI in T&L Essentials: Level 1 (AI-Aware)") return <ModuleFocusActivity moduleName={notes.module ?? ""} onModuleName={(value) => onChange("module", value)} />;
   if (title.startsWith("Part 1")) return <PulseActivity value={notes.pulse ?? ""} onChange={(value) => onChange("pulse", value)} />;
-  if (title.startsWith("Part 2")) return null;
+  if (title.startsWith("Part 2")) return <StrategyMap />;
   if (title.startsWith("Part 3")) return <div className="activity-stack"><ThreeAsActivity /><ModulePrompt question={`In ${notes.module || "your module"}, what must students still be able to do themselves?`} placeholder="One core capability…" value={notes.anchor ?? ""} onChange={(value) => onChange("anchor", value)} feedback="This is a possible Anchor. Keep it visible when you consider where AI may support the workflow." /></div>;
   if (title.startsWith("Part 4")) return <div className="activity-stack"><ChoiceCheck eyebrow="Support or replace?" question="Which use better protects the learning?" choices={[
     { label: "AI explains a concept; the student checks it and then practises.", correct: true, feedback: "AI supports clarification, while the student still checks and practises the intended learning." },
@@ -664,7 +664,7 @@ export default function Home() {
           </div>
         </div>
         <h1 className="page-title">{current.title}</h1>
-        {active === 0 ? <OpeningVisual /> : current.title.startsWith("Part 2") ? <StrategyMap /> : <SectionVisual title={current.title} />}
+        {active === 0 ? <OpeningVisual /> : <SectionVisual title={current.title} />}
         <article
           key={current.id}
           className="course-content"
