@@ -487,6 +487,66 @@ function OpeningVisual() {
   );
 }
 
+function ThreeAsInfographic() {
+  return (
+    <figure className="concept-visual three-as-infographic" aria-labelledby="three-as-title">
+      <figcaption>
+        <span>The 3As</span>
+        <strong id="three-as-title">Build from strong foundations to new possibilities</strong>
+      </figcaption>
+      <div className="three-as-path">
+        <section className="three-as-band advance-band">
+          <div className="three-as-label"><i aria-hidden="true">A</i><div><b>Advance</b><small>Explore what becomes possible</small></div></div>
+          <p>Emerging or transformative AI applications within the discipline.</p>
+          <em>New services · new workflows · future practice</em>
+        </section>
+        <section className="three-as-band augment-band">
+          <div className="three-as-label"><i aria-hidden="true">A</i><div><b>Augment</b><small>Improve authentic practice</small></div></div>
+          <p>AI-enabled capabilities that strengthen a real professional workflow.</p>
+          <em>Generate · compare · analyse · improve</em>
+        </section>
+        <section className="three-as-band anchor-band">
+          <div className="three-as-label"><i aria-hidden="true">A</i><div><b>Anchor</b><small>Protect the foundations</small></div></div>
+          <p>Core disciplinary, human and professional capabilities students must develop.</p>
+          <em>Knowledge · skills · reasoning · judgement</em>
+        </section>
+      </div>
+      <div className="infographic-note"><span aria-hidden="true">↑</span><p><strong>Start with Anchor.</strong> Then identify where AI may Augment practice or Advance the discipline.</p></div>
+    </figure>
+  );
+}
+
+function PairInfographic() {
+  const stages = [
+    { letter: "P", name: "Problem", action: "Frame the task", detail: "Clarify the purpose, context, constraints and required outcome.", cue: "What are we trying to solve?", tone: "problem" },
+    { letter: "A", name: "AI", action: "Choose deliberately", detail: "Decide whether AI is suitable, which tool fits and what information can be used safely.", cue: "What can the tool help with?", tone: "ai" },
+    { letter: "I", name: "Interaction", action: "Work critically", detail: "Question, refine, compare and check the output before combining it with your own knowledge.", cue: "How will we test the output?", tone: "interaction" },
+    { letter: "R", name: "Reflection", action: "Learn from the process", detail: "Identify what helped or hindered, where human judgement mattered and what to change next time.", cue: "What did we learn?", tone: "reflection" },
+  ];
+  return (
+    <figure className="concept-visual pair-infographic" aria-labelledby="pair-title">
+      <figcaption>
+        <span>PAIR</span>
+        <strong id="pair-title">A visible process for learning and problem-solving with AI</strong>
+      </figcaption>
+      <div className="pair-journey">
+        {stages.map((stage, index) => (
+          <div className="pair-step-wrap" key={stage.name}>
+            <section className={`pair-stage pair-${stage.tone}`}>
+              <div className="pair-stage-head"><i aria-hidden="true">{stage.letter}</i><b>{stage.name}</b></div>
+              <strong>{stage.action}</strong>
+              <p>{stage.detail}</p>
+              <small>{stage.cue}</small>
+            </section>
+            {index < stages.length - 1 && <span className="pair-connector" aria-hidden="true">→</span>}
+          </div>
+        ))}
+      </div>
+      <div className="infographic-note pair-loop"><span aria-hidden="true">↺</span><p><strong>PAIR is iterative.</strong> Reflection can lead to a better-framed problem and a stronger next attempt.</p></div>
+    </figure>
+  );
+}
+
 function SectionVisual({ title }: { title: string }) {
   if (title.startsWith("Part 1")) return (
     <figure className="concept-visual ai-map-visual" aria-label="AI may appear across teaching preparation, student learning, assessment and feedback">
@@ -494,24 +554,14 @@ function SectionVisual({ title }: { title: string }) {
       <div className="ai-map"><div className="ai-map-core">AI</div><div className="map-item map-a"><b>Prepare</b><small>Examples · activities</small></div><div className="map-item map-b"><b>Learn</b><small>Explain · practise</small></div><div className="map-item map-c"><b>Assess</b><small>Create · demonstrate</small></div><div className="map-item map-d"><b>Feedback</b><small>Review · improve</small></div></div>
     </figure>
   );
-  if (title.startsWith("Part 3")) return (
-    <figure className="concept-visual three-a-visual" aria-label="The 3As: Anchor, Augment and Advance">
-      <figcaption><span>The 3As</span><strong>Start with strong foundations</strong></figcaption>
-      <div className="three-a-stack"><div className="advance-layer"><b>Advance</b><span>Explore new possibilities</span></div><div className="augment-layer"><b>Augment</b><span>Improve authentic workflows</span></div><div className="anchor-layer"><b>Anchor</b><span>Protect core knowledge, skills and judgement</span></div></div>
-    </figure>
-  );
+  if (title.startsWith("Part 3")) return <ThreeAsInfographic />;
   if (title.startsWith("Part 4")) return (
     <figure className="concept-visual support-visual" aria-label="AI should support rather than replace learning">
       <figcaption><span>A useful test</span><strong>Is AI supporting or replacing the learning?</strong></figcaption>
       <div className="support-scale"><div className="support-side good"><span>✓</span><b>Support</b><small>Explain · practise · check · improve</small></div><div className="scale-pivot"><span /></div><div className="support-side caution"><span>!</span><b>Replace</b><small>Complete · copy · submit</small></div></div>
     </figure>
   );
-  if (title.startsWith("Part 5")) return (
-    <figure className="concept-visual pair-visual" aria-label="PAIR: Problem, AI, Interaction, Reflection">
-      <figcaption><span>PAIR</span><strong>Keep the learning process visible</strong></figcaption>
-      <div className="pair-flow"><div><b>P</b><span>Problem</span><small>Frame it</small></div><i>→</i><div><b>A</b><span>AI</span><small>Choose it</small></div><i>→</i><div><b>I</b><span>Interaction</span><small>Question it</small></div><i>→</i><div><b>R</b><span>Reflection</span><small>Learn from it</small></div></div>
-    </figure>
-  );
+  if (title.startsWith("Part 5")) return <PairInfographic />;
   if (title.startsWith("Part 6")) return (
     <figure className="concept-visual assessment-visual" aria-label="Assessment decisions begin with the learning outcome">
       <figcaption><span>Assessment</span><strong>Begin with what students must demonstrate</strong></figcaption>

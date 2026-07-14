@@ -165,69 +165,21 @@ AI can now assist with tasks that students previously completed independently. T
 
 Students need enough disciplinary knowledge and judgement to recognise when AI output is wrong, unsafe or unsuitable.
 
-NP students build a common foundation in AI literacy. The 3As then help course and module teams identify the disciplinary, professional and human capabilities students need in their fields.
+NP students build a common foundation in AI literacy. NP’s **3As framework** then helps course and module teams balance human capability with AI-enabled practice in each discipline.
 
-NP’s **3As framework** helps course and module teams balance human capability with AI-enabled practice.
+Read the infographic from the foundation upwards:
 
-## Anchor
+- **Anchor:** What must students still know and be able to do?
+- **Augment:** Where might AI improve an authentic professional workflow while students retain judgement?
+- **Advance:** Where might AI enable new services, workflows or forms of professional practice?
 
-Anchor refers to the core disciplinary, professional and human capabilities students need, independent of AI.
+Start with Anchor. Augment and Advance build on the disciplinary foundations students need to use AI well.
 
-These may include:
+## Examples Across Disciplines
 
-- Foundational knowledge.
-- Technical or practical competence.
-- Disciplinary reasoning.
-- Critical thinking.
-- Ethical judgement.
-- Communication and collaboration.
-- Safe professional practice.
-
-Ask:
-
-> What must my students still know or be able to do without inappropriate dependence on AI?
-
-Examples include:
-
-- An engineering student explains why a system failed.
-- A health sciences student makes a safe judgement based on observed evidence.
-- A business student interprets evidence before making a recommendation.
-- A media student evaluates whether a message is accurate, ethical and suitable for its audience.
-- A computing student explains, tests and debugs generated code.
-
-These are Anchor capabilities. Students need them to work with AI responsibly.
-
-## Augment
-
-Augment refers to using AI to improve an authentic disciplinary or professional workflow.
-
-Students might use AI to:
-
-- Generate initial options for evaluation.
-- Compare possible solutions.
-- Analyse or visualise information.
-- Receive feedback on an early draft.
-- Automate a routine part of a workflow.
-- Improve professional communication.
-
-The student still applies disciplinary knowledge and makes the final judgement.
-
-Ask:
-
-> Where might AI help students work more effectively without replacing the intended learning?
-
-## Advance
-
-Advance refers to emerging or transformative uses of AI.
-
-Students might:
-
-- Develop an AI-enabled service.
-- Redesign an existing workflow.
-- Prototype a new AI-supported solution.
-- Explore how AI may change future professional practice.
-
-Advance is most relevant when students have sufficient disciplinary foundations to explore new possibilities meaningfully.
+- **Anchor:** A health sciences student makes a safe judgement from observed evidence; a computing student explains, tests and debugs generated code.
+- **Augment:** A business student uses AI to compare possible options, then evaluates the evidence and justifies a recommendation.
+- **Advance:** An engineering or media student prototypes a new AI-enabled solution for an industry need.
 
 ## Apply It to Your Module
 
@@ -247,7 +199,7 @@ The 3As help you ask:
 - Where AI might enhance professional practice.
 - Where AI may create new possibilities.
 
-Not every learning outcome needs to change, but it is worth considering how AI may affect the curriculum.
+Use these questions to identify what should remain strong and where AI may add value in the curriculum.
 
 ---
 
@@ -342,61 +294,16 @@ PAIR works across disciplines and as tools change. It keeps the learning:
 - **Skill-focused:** Students practise transferable skills such as problem framing, evaluation and reflection.
 - **Tool-independent:** The process can be used with different AI tools as they evolve.
 
-## P — Problem
-
-Students first identify:
-
-- The problem.
-- The context.
-- The intended outcome.
-- The constraints.
-- The required deliverable.
-
-The problem should guide the use of AI.
-
-## A — AI
-
-Students consider:
-
-- Whether AI is suitable for the task.
-- Which tool may be appropriate.
-- What the tool can and cannot do.
-- What information the tool requires.
-- Whether that information can be entered safely.
-
-## I — Interaction
-
-Students:
-
-- Interact with the tool.
-- Question the output.
-- Refine their instructions.
-- Compare alternatives.
-- Check important claims.
-- Combine useful output with their own knowledge.
-
-Interaction involves more than accepting the first response.
-
-## R — Reflection
-
-Students consider:
-
-- How AI helped or hindered.
-- What they contributed.
-- Which decisions required human judgement.
-- What risks or ethical issues arose.
-- What they would do differently.
-
-The reflection should show the student’s own thinking.
+The infographic shows four connected stages. Students frame the problem before choosing a tool, interact critically rather than accepting the first response, and reflect on both the outcome and the learning process.
 
 ## Example: A Communication Campaign
 
-A student needs to develop a communication campaign. A sensible PAIR sequence would be:
+A student needs to develop a communication campaign. They could use PAIR to:
 
-1. **Problem:** Clarify the audience, purpose and constraints.
-2. **AI:** Consider whether an AI tool is suitable for generating initial ideas.
-3. **Interaction:** Evaluate the generated ideas and refine selected options.
-4. **Reflection:** Consider how AI affected the creative and decision-making process.
+1. **Problem:** Clarify the audience, purpose, constraints and intended outcome.
+2. **AI:** Decide whether an AI tool is suitable for generating initial ideas.
+3. **Interaction:** Evaluate the ideas, check assumptions and refine selected options.
+4. **Reflection:** Explain how AI affected the creative process and where human judgement mattered.
 
 ## A Shorter Activity Pattern
 
