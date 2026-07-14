@@ -295,7 +295,8 @@ button { color: inherit; }
   cursor: pointer;
   transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
 }
-.overview-area:hover { transform: translateY(-2px); border-color: #b9d9f4; }
+.overview-area:not(.overview-area-static):hover { transform: translateY(-2px); border-color: #b9d9f4; }
+.overview-area-static { cursor: default; }
 .overview-area.active { border-color: var(--blue); background: var(--blue-soft); box-shadow: 0 8px 22px rgba(0,117,222,.10); }
 .overview-area > span {
   width: 40px;
@@ -313,9 +314,6 @@ button { color: inherit; }
 .area-2 > span { background: var(--purple); color: #4c2468; }
 .area-3 > span { background: var(--orange); color: #70340b; }
 .area-4 > span { background: var(--teal); color: #155c58; }
-.overview-feedback { display: flex; align-items: flex-start; gap: 10px; margin-top: 16px; padding: 13px 16px; border-radius: 10px; background: #f7f7ff; color: #36316e; animation: feedback-in .22s ease both; }
-.overview-feedback svg { flex: 0 0 auto; margin-top: 3px; color: var(--indigo); }.overview-feedback > div { min-width: 0; }.overview-feedback span { display: block; color: var(--indigo); font-size: 10px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }.overview-feedback p { margin: 3px 0 0; font-size: 15px; font-weight: 620; line-height: 1.45; }
-
 .concept-visual {
   position: relative;
   margin: 12px 0 42px;

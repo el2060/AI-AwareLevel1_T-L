@@ -29,24 +29,7 @@ By the end of this module, you will be able to:
 3. **Assessment:** Describe how AI affects assessment validity and academic integrity, and identify how NP’s requirements for GenAI use apply to an assessment.
 4. **Tools and data:** Identify where an AI tool or learning data could support a T&L purpose, and what to check before using it.
 
-The Level 1 focus is awareness: recognise the key issues, understand NP’s shared approaches and identify what may need attention in a module you teach, lead or support.
-
-This package focuses on four domains from the T&L Competency Framework (TLCF): curriculum design, facilitation of learning, assessment, and data and tech-enhanced T&L. It looks at what AI changes in each.
-
----
-
-## Keep One Module in Mind
-
-As you go through this package, keep one module that you currently teach, lead or support in mind.
-
-You will consider four guiding questions:
-
-1. **Curriculum:** What is AI changing in what students must learn and do?
-2. **Learning:** Where might AI support learning without replacing it?
-3. **Assessment:** What must students still demonstrate themselves?
-4. **Tools and data:** Where could an AI tool or learning data support your T&L work—and what needs checking before you use it?
-
-Use these questions throughout the package to identify what may need attention and one concrete next step.
+At Level 1, the focus is awareness: recognise the key issues and identify what may need attention. The package focuses on four T&L Competency Framework (TLCF) domains: curriculum design, facilitation of learning, assessment, and data and tech-enhanced T&L.
 
 ---
 

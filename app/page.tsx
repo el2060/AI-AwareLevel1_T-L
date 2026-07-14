@@ -635,7 +635,7 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
     { label: "Use an unapproved public tool to analyse named student records.", correct: false, feedback: "The tool is not approved for the information involved." },
     { label: "Let an AI summary decide which students need intervention.", correct: false, feedback: "AI may support an initial review, but a person must interpret the context and make the decision." },
   ]} />;
-  if (title.startsWith("Part 8")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep your chosen module in mind. Tap each question once you have considered it." items={["Curriculum: What is AI changing in what students must learn and do?", "Learning: Where might AI support learning without replacing it?", "Assessment: What must students still demonstrate themselves?", "Tools and data: Where could an AI tool or learning data support your T&L work—and what needs checking before you use it?"]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered what is changing, the learning to protect, what students need to demonstrate, and where a tool or learning data could help with appropriate checks." />;
+  if (title.startsWith("Part 8")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep a module you teach, lead or support in mind. Tap each question once you have considered it." items={["Curriculum: What is AI changing in what students must learn and do?", "Learning: Where might AI support learning without replacing it?", "Assessment: What must students still demonstrate themselves?", "Tools and data: Where could an AI tool or learning data support your T&L work—and what needs checking before you use it?"]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered what is changing, the learning to protect, what students need to demonstrate, and where a tool or learning data could help with appropriate checks." />;
   if (title.startsWith("Look Back")) return <CarryForwardActivity value={notes.lookbackchoice ?? ""} onChange={(value) => onChange("lookbackchoice", value)} />;
   if (title === "Module Summary") return <ConfidenceActivity value={notes.confidence ?? ""} onChange={(value) => onChange("confidence", value)} />;
   if (title.startsWith("You Have Completed")) return <NextStepActivity value={notes.nextstep ?? ""} onChange={(value) => onChange("nextstep", value)} />;
@@ -643,30 +643,25 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
 }
 
 function OpeningVisual() {
-  const [active, setActive] = useState(0);
   const areas = [
     {
       title: "Curriculum",
-      detail: "What AI is changing in what students must learn and do",
-      feedback: "What is AI changing in what students must learn and do?",
+      detail: "What AI may change in your module",
       icon: BookOpen,
     },
     {
       title: "Learning",
-      detail: "How AI can support practice and feedback without replacing learning",
-      feedback: "Where might AI support learning without replacing it?",
+      detail: "How AI can support practice and feedback",
       icon: Lightbulb,
     },
     {
       title: "Assessment",
       detail: "How students show their learning credibly",
-      feedback: "What must students still demonstrate themselves?",
       icon: ClipboardCheck,
     },
     {
       title: "Tools and data",
       detail: "How AI tools and learning data can support your T&L work",
-      feedback: "Where could an AI tool or learning data support your T&L work—and what needs checking before you use it?",
       icon: ShieldCheck,
     },
   ];
@@ -675,19 +670,18 @@ function OpeningVisual() {
     <section className="opening-visual" aria-label="What this package covers">
       <div className="overview-heading">
         <span>At a glance</span>
-        <h2>Four AI-aware questions for your module</h2>
-        <p>Choose an area to preview a guiding question for the package.</p>
+        <h2>Four areas of AI-aware T&amp;L</h2>
+        <p>This package looks at four parts of your teaching work.</p>
       </div>
       <div className="overview-areas">
         {areas.map((area, index) => {
           const Icon = area.icon;
-          return <button type="button" className={`overview-area area-${index + 1} ${active === index ? "active" : ""}`} key={area.title} onClick={() => setActive(index)} aria-pressed={active === index}>
+          return <div className={`overview-area overview-area-static area-${index + 1}`} key={area.title}>
             <span><Icon size={20} strokeWidth={2.2} aria-hidden="true" /></span>
             <div><strong>{area.title}</strong><small>{area.detail}</small></div>
-          </button>;
+          </div>;
         })}
       </div>
-      <div className="overview-feedback" aria-live="polite"><Scale size={18} aria-hidden="true" /><div><span>Guiding question</span><p>{areas[active].feedback}</p></div></div>
     </section>
   );
 }
