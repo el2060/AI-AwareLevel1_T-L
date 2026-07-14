@@ -9,6 +9,12 @@ type Section = {
   markdown: string;
 };
 
+type Choice = {
+  label: string;
+  correct?: boolean;
+  feedback: string;
+};
+
 const STORAGE_KEY = "np-ai-aware-course";
 
 function escapeHtml(value: string) {
@@ -180,6 +186,196 @@ function splitSections(markdown: string): Section[] {
   });
 }
 
+const sectionMeta = [
+  { mark: "✦", label: "Start", tone: "mint" },
+  { mark: "01", label: "Notice", tone: "blue" },
+  { mark: "02", label: "Connect", tone: "violet" },
+  { mark: "03", label: "Consider", tone: "coral" },
+  { mark: "04", label: "Support", tone: "amber" },
+  { mark: "05", label: "Structure", tone: "mint" },
+  { mark: "06", label: "Clarify", tone: "blue" },
+  { mark: "07", label: "Use wisely", tone: "violet" },
+  { mark: "08", label: "Bring together", tone: "coral" },
+  { mark: "↺", label: "Reflect", tone: "amber" },
+  { mark: "✓", label: "Recap", tone: "mint" },
+  { mark: "→", label: "Next step", tone: "blue" },
+];
+
+function ChoiceCheck({ question, eyebrow, choices }: { question: string; eyebrow: string; choices: Choice[] }) {
+  const [selected, setSelected] = useState<number | null>(null);
+  const choice = selected === null ? null : choices[selected];
+  return (
+    <section className="activity-block">
+      <span className="activity-eyebrow">{eyebrow}</span>
+      <h2>{question}</h2>
+      <div className="choice-grid">
+        {choices.map((item, index) => (
+          <button
+            key={item.label}
+            className={`choice-button ${selected === index ? "selected" : ""}`}
+            onClick={() => setSelected(index)}
+          >
+            <span>{String.fromCharCode(65 + index)}</span>
+            {item.label}
+          </button>
+        ))}
+      </div>
+      {choice && (
+        <div className={`activity-feedback ${choice.correct === false ? "try-again" : ""}`}>
+          <strong>{choice.correct === false ? "Consider this" : "Good call"}</strong>
+          <p>{choice.feedback}</p>
+        </div>
+      )}
+    </section>
+  );
+}
+
+function PulseActivity() {
+  const [selected, setSelected] = useState<string[]>([]);
+  const options = ["Student learning", "Assessment", "Teaching preparation", "Feedback", "Not sure yet"];
+  return (
+    <section className="activity-block pulse-activity">
+      <span className="activity-eyebrow">30-second pulse</span>
+      <h2>Where are you noticing AI in your work?</h2>
+      <p>Select all that feel relevant. There is no right answer.</p>
+      <div className="chip-row">
+        {options.map((option) => (
+          <button
+            key={option}
+            className={selected.includes(option) ? "selected" : ""}
+            onClick={() => setSelected((items) => items.includes(option) ? items.filter((item) => item !== option) : [...items, option])}
+          >
+            {selected.includes(option) ? "✓ " : "+ "}{option}
+          </button>
+        ))}
+      </div>
+      {selected.length > 0 && <p className="pulse-note">Keep these areas in mind as you move through the course.</p>}
+    </section>
+  );
+}
+
+function ThreeAsActivity() {
+  const prompts = [
+    { text: "Students explain a core procedure without AI.", answer: "Anchor" },
+    { text: "Students use AI to compare options before making a professional judgement.", answer: "Augment" },
+    { text: "Students prototype a new AI-enabled service.", answer: "Advance" },
+  ];
+  const [index, setIndex] = useState(0);
+  const [selected, setSelected] = useState<string | null>(null);
+  const current = prompts[index];
+  return (
+    <section className="activity-block three-as-activity">
+      <div className="activity-head-row">
+        <div>
+          <span className="activity-eyebrow">Quick sort</span>
+          <h2>Which of the 3As fits best?</h2>
+        </div>
+        <span className="activity-count">{index + 1} / {prompts.length}</span>
+      </div>
+      <blockquote>{current.text}</blockquote>
+      <div className="three-as-options">
+        {[
+          ["Anchor", "Keep the foundations strong"],
+          ["Augment", "Enhance an authentic workflow"],
+          ["Advance", "Explore new possibilities"],
+        ].map(([name, description]) => (
+          <button key={name} className={selected === name ? "selected" : ""} onClick={() => setSelected(name)}>
+            <strong>{name}</strong><small>{description}</small>
+          </button>
+        ))}
+      </div>
+      {selected && (
+        <div className={`activity-feedback ${selected !== current.answer ? "try-again" : ""}`}>
+          <strong>{selected === current.answer ? "That’s it" : "Look again"}</strong>
+          <p>The best fit is <b>{current.answer}</b>.</p>
+          {selected === current.answer && index < prompts.length - 1 && (
+            <button className="inline-next" onClick={() => { setIndex(index + 1); setSelected(null); }}>Try the next one →</button>
+          )}
+        </div>
+      )}
+    </section>
+  );
+}
+
+function PairBuilder() {
+  const steps = ["Problem", "AI", "Interaction", "Reflection"];
+  const shuffled = ["Reflection", "Interaction", "Problem", "AI"];
+  const [picked, setPicked] = useState<string[]>([]);
+  const next = steps[picked.length];
+  const complete = picked.length === steps.length;
+  return (
+    <section className="activity-block pair-builder">
+      <span className="activity-eyebrow">Build the flow</span>
+      <h2>Tap the PAIR stages in order</h2>
+      <div className="pair-track">
+        {steps.map((step, index) => <div key={step} className={picked[index] === step ? "filled" : ""}>{picked[index] ? <><b>{step[0]}</b><span>{step}</span></> : <em>{index + 1}</em>}</div>)}
+      </div>
+      <div className="pair-options">
+        {shuffled.map((step) => (
+          <button
+            key={step}
+            disabled={picked.includes(step)}
+            onClick={() => step === next && setPicked([...picked, step])}
+          >{step}</button>
+        ))}
+      </div>
+      <p className="pair-hint">{complete ? "PAIR keeps the learning process visible from problem framing to reflection." : `Next: think about what comes ${picked.length === 0 ? "first" : "next"}.`}</p>
+    </section>
+  );
+}
+
+function StrategyMap() {
+  const [active, setActive] = useState(0);
+  const items = [
+    ["3As", "What capabilities should students develop?"],
+    ["PAIR", "How can students learn and work with AI?"],
+    ["Assessment", "How will students show what they can do?"],
+    ["Tools & data", "How should AI be used responsibly?"],
+  ];
+  return (
+    <section className="strategy-map" aria-label="NP AI-enabled T&L approaches">
+      <div className="strategy-orbit">
+        <div className="orbit-core"><strong>AI-ready</strong><span>graduates</span></div>
+        {items.map(([name], index) => <button key={name} className={`orbit-node node-${index} ${active === index ? "active" : ""}`} onClick={() => setActive(index)}>{name}</button>)}
+      </div>
+      <div className="strategy-copy"><span>{items[active][0]}</span><p>{items[active][1]}</p></div>
+    </section>
+  );
+}
+
+function SectionInteractive({ title }: { title: string }) {
+  if (title.startsWith("Part 1")) return <PulseActivity />;
+  if (title.startsWith("Part 2")) return <StrategyMap />;
+  if (title.startsWith("Part 3")) return <ThreeAsActivity />;
+  if (title.startsWith("Part 4")) return <ChoiceCheck eyebrow="Support or replace?" question="Which use better protects the learning?" choices={[
+    { label: "AI explains a concept; the student checks it and then practises.", correct: true, feedback: "AI supports clarification, while the student still checks and practises the intended learning." },
+    { label: "AI completes the assignment; the student submits the response.", correct: false, feedback: "Here, AI replaces the thinking and performance the student needs to develop." },
+  ]} />;
+  if (title.startsWith("Part 5")) return <PairBuilder />;
+  if (title.startsWith("Part 6")) return <ChoiceCheck eyebrow="Assessment judgement" question="A student declares that GenAI created a required interview. Is that acceptable?" choices={[
+    { label: "Yes. Declaration makes the use acceptable.", correct: false, feedback: "Declaration is required, but it does not make a prohibited use acceptable." },
+    { label: "It depends on how realistic the generated responses are.", correct: false, feedback: "The issue is not realism. The assessment requires a real human interaction." },
+    { label: "No. GenAI cannot replace the real interaction required by the task.", correct: true, feedback: "Correct. Simulating a required human interaction is always prohibited." },
+  ]} />;
+  if (title.startsWith("Part 7")) return <ChoiceCheck eyebrow="Tool judgement" question="Which is the soundest use?" choices={[
+    { label: "Use Pair.gov.sg to suggest activities, then check and adapt one.", correct: true, feedback: "The purpose is clear, the tool is suitable, and the lecturer reviews the output." },
+    { label: "Use an unapproved public tool to analyse named student records.", correct: false, feedback: "The tool is not approved for the information involved." },
+    { label: "Let an AI summary decide which students need intervention.", correct: false, feedback: "AI may support an initial review, but a person must interpret the context and make the decision." },
+  ]} />;
+  return null;
+}
+
+function OpeningVisual() {
+  return (
+    <div className="opening-visual" aria-label="AI-ready professionals combine human qualities, domain expertise and responsible AI use">
+      <div className="visual-label">AI-ready professional</div>
+      <div className="venn human"><span>Human</span><small>judgement</small></div>
+      <div className="venn domain"><span>Domain</span><small>expertise</small></div>
+      <div className="venn ai"><span>AI</span><small>capability</small></div>
+    </div>
+  );
+}
+
 export default function Home() {
   const [course, setCourse] = useState("");
   const [active, setActive] = useState(0);
@@ -254,10 +450,12 @@ export default function Home() {
   }
 
   const isComplete = completed.includes(current.id);
+  const meta = sectionMeta[active] ?? sectionMeta[0];
 
   return (
     <div className="site-shell">
       <header className="topbar">
+        <div className="global-progress" style={{ width: `${progress}%` }} />
         <div className="brand">
           <span className="brand-mark">NP</span>
           <span>AI in T&amp;L Essentials</span>
@@ -315,13 +513,28 @@ export default function Home() {
           </select>
         </div>
 
-        <div className="section-kicker">
-          Section {active + 1} of {sections.length}
+        <div className={`section-intro tone-${meta.tone}`}>
+          <div className="section-mark">{meta.mark}</div>
+          <div>
+            <div className="section-kicker">Section {active + 1} of {sections.length}</div>
+            <span>{meta.label}</span>
+          </div>
         </div>
+        {active === 0 && <OpeningVisual />}
         <article
+          key={current.id}
           className="course-content"
           dangerouslySetInnerHTML={{ __html: markdownToHtml(current.markdown) }}
         />
+
+        <SectionInteractive title={current.title} />
+
+        {progress === 100 && active === sections.length - 1 && (
+          <div className="completion-moment">
+            <div className="completion-burst"><span>✓</span></div>
+            <div><strong>Learning package complete</strong><p>You have worked through every section. Your progress is saved on this browser.</p></div>
+          </div>
+        )}
 
         <div className="section-actions">
           <button className={`complete-button ${isComplete ? "is-complete" : ""}`} onClick={markComplete}>
