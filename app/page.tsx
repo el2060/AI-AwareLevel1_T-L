@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useMemo, useState } from "react";
-import { BookOpen, Bot, ClipboardCheck, Lightbulb, MessageCircle, Scale, ShieldCheck, Sparkles, Users } from "lucide-react";
+import { BookOpen, Bot, ClipboardCheck, Database, Lightbulb, MessageCircle, Scale, ShieldCheck, Sparkles, Users } from "lucide-react";
 
 type Section = {
   id: string;
@@ -647,13 +647,13 @@ function OpeningVisual() {
   const areas = [
     {
       title: "Curriculum",
-      detail: "What AI may change in your module and discipline",
+      detail: "What AI is changing in what students must learn and do",
       feedback: "What is AI changing in what students must learn and do?",
       icon: BookOpen,
     },
     {
       title: "Learning",
-      detail: "How AI may support learning and practice",
+      detail: "How AI can support practice and feedback without replacing learning",
       feedback: "Where might AI support learning without replacing it?",
       icon: Lightbulb,
     },
@@ -665,7 +665,7 @@ function OpeningVisual() {
     },
     {
       title: "Tools and data",
-      detail: "How to choose tools and handle information safely",
+      detail: "How AI tools and learning data can support your T&L work—used safely",
       feedback: "What tool or data use needs checking?",
       icon: ShieldCheck,
     },
@@ -687,7 +687,7 @@ function OpeningVisual() {
           </button>;
         })}
       </div>
-      <div className="overview-feedback" aria-live="polite"><Scale size={18} aria-hidden="true" /><p><strong>{areas[active].title}:</strong> {areas[active].feedback}</p></div>
+      <div className="overview-feedback" aria-live="polite"><Scale size={18} aria-hidden="true" /><div><span>Guiding question</span><p>{areas[active].feedback}</p></div></div>
     </section>
   );
 }
@@ -756,35 +756,39 @@ function LecturerPracticeMap() {
   const [active, setActive] = useState(0);
   const areas = [
     {
-      title: "Design learning",
+      title: "Curriculum",
       domain: "Curriculum Design & Development",
-      question: "What may need to change?",
-      detail: "Review what students need to know, practise and do as AI changes the discipline.",
+      work: "Plan outcomes, examples and activities",
+      question: "What is AI changing in what students must learn and do?",
+      detail: "Review the learning outcomes, activities and assessment together as AI changes the discipline and its practice.",
       icon: BookOpen,
       tone: "design",
     },
     {
-      title: "Facilitate learning",
+      title: "Learning",
       domain: "Facilitation of Learning",
-      question: "How can AI support practice?",
+      work: "Explanations, practice and student AI use",
+      question: "Where might AI support learning without replacing it?",
       detail: "Use AI where it gives students a useful explanation, practice or feedback without doing the learning for them.",
       icon: Lightbulb,
       tone: "facilitate",
     },
     {
-      title: "Assess learning",
+      title: "Assessment",
       domain: "Assessment",
-      question: "What must remain visible?",
+      work: "Task design, integrity and GenAI conditions",
+      question: "What must students still demonstrate themselves?",
       detail: "Decide what students need to demonstrate, then make the GenAI conditions clear and aligned to that evidence.",
       icon: ClipboardCheck,
       tone: "assess",
     },
     {
-      title: "Review and improve",
-      domain: "Reflective Practice · Data & Tech-Enhanced T&L",
-      question: "What should you check before acting?",
-      detail: "Use feedback, learning information and approved tools as starting points. Check the output and decide what improvement is appropriate.",
-      icon: MessageCircle,
+      title: "Tools and data",
+      domain: "Data & Tech-Enhanced T&L",
+      work: "Materials, feedback themes, results and approved tools",
+      question: "What tool or data use needs checking?",
+      detail: "Use approved tools and learning information as starting points. Check what information is involved, the output and the judgement needed before acting.",
+      icon: Database,
       tone: "review",
     },
   ];
@@ -792,8 +796,8 @@ function LecturerPracticeMap() {
   const SelectedIcon = selected.icon;
   return (
     <figure className="concept-visual lecturer-practice-visual" aria-labelledby="lecturer-practice-title">
-      <figcaption><span>In your module</span><strong id="lecturer-practice-title">Where might AI matter?</strong></figcaption>
-      <p className="practice-map-intro">Start with the teaching work in front of you. Select a moment to see the AI-aware question to ask.</p>
+      <figcaption><span>In your module</span><strong id="lecturer-practice-title">Four AI-aware questions for your teaching work</strong></figcaption>
+      <p className="practice-map-intro">Start with one part of your teaching work. Select an area to see the question to ask.</p>
       <div className="lecturer-practice-map">
         <div className="practice-map-label"><span>AI-aware</span><strong>teaching practice</strong></div>
         <div className="practice-map-options">
@@ -801,7 +805,7 @@ function LecturerPracticeMap() {
             const Icon = area.icon;
             return <button key={area.title} type="button" className={`practice-map-option ${area.tone} ${active === index ? "active" : ""}`} onClick={() => setActive(index)} aria-pressed={active === index}>
               <i><Icon size={18} strokeWidth={2.2} aria-hidden="true" /></i>
-              <span><strong>{area.title}</strong><small>{area.question}</small></span>
+              <span><strong>{area.title}</strong><small>{area.work}</small></span>
             </button>;
           })}
         </div>

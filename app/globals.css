@@ -309,8 +309,8 @@ button { color: inherit; }
 .area-2 > span { background: var(--purple); color: #4c2468; }
 .area-3 > span { background: var(--orange); color: #70340b; }
 .area-4 > span { background: var(--teal); color: #155c58; }
-.overview-feedback { display: flex; align-items: flex-start; gap: 10px; margin-top: 16px; padding: 14px 16px; border-radius: 10px; background: #f7f7ff; color: #36316e; animation: feedback-in .22s ease both; }
-.overview-feedback svg { flex: 0 0 auto; margin-top: 2px; color: var(--indigo); }.overview-feedback p { margin: 0; font-size: 14px; line-height: 1.5; }.overview-feedback strong { color: var(--indigo); }
+.overview-feedback { display: flex; align-items: flex-start; gap: 10px; margin-top: 16px; padding: 13px 16px; border-radius: 10px; background: #f7f7ff; color: #36316e; animation: feedback-in .22s ease both; }
+.overview-feedback svg { flex: 0 0 auto; margin-top: 3px; color: var(--indigo); }.overview-feedback > div { min-width: 0; }.overview-feedback span { display: block; color: var(--indigo); font-size: 10px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }.overview-feedback p { margin: 3px 0 0; font-size: 15px; font-weight: 620; line-height: 1.45; }
 
 .concept-visual {
   position: relative;

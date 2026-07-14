@@ -31,7 +31,7 @@ By the end of this module, you will be able to:
 
 The Level 1 focus is awareness: recognise the key issues, understand NP’s shared approaches and identify what may need attention in a module you teach, lead or support.
 
-These are the same domains you know from the T&L Competency Framework (TLCF): curriculum design, facilitation of learning, assessment, and data and tech-enhanced T&L. This module looks at what AI changes in each.
+This package focuses on four domains from the T&L Competency Framework (TLCF): curriculum design, facilitation of learning, assessment, and data and tech-enhanced T&L. It looks at what AI changes in each.
 
 ---
 
