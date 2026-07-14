@@ -208,7 +208,7 @@ const sectionMeta = [
 ];
 
 const sectionBridges = [
-  "Start by noticing where AI may already appear in one module you know well.",
+  "Consider where AI may already be showing up in a module you teach or support.",
   "With that module in mind, see how NP’s approaches give us a shared set of questions.",
   "Begin with curriculum: what must students still learn, and where might AI add value?",
   "Once the learning is clear, consider how AI might support practice without replacing it.",
@@ -683,7 +683,7 @@ export default function Home() {
 
         {sectionBridges[active] && active < sections.length - 1 && (
           <div className="section-bridge">
-            <span>Where this leads next</span>
+            <span>Next</span>
             <p>{sectionBridges[active]}</p>
           </div>
         )}
