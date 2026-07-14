@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { BookOpen, Bot, ClipboardCheck, Lightbulb, MessageCircle, Scale, ShieldCheck, Sparkles, Users } from "lucide-react";
 
 type Section = {
   id: string;
@@ -402,19 +403,19 @@ function PairBuilder() {
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
-    ["Pedagogy · PAIR", "Help students learn with AI", "PAIR gives students a visible process for framing problems, using AI critically and reflecting."],
-    ["Curriculum · 3As", "Review what students need to learn", "The 3As help identify the foundations to keep strong and where AI may add value."],
-    ["Assessment", "Keep learning visible", "Assessment conditions should show what students must demonstrate and how AI may be used."],
-    ["Personalised learning", "Scaffold practice and feedback", "AI-enabled tutors and learning assistants can support practice, feedback and different learning needs."],
-    ["Human skills and resilience", "Keep judgement at the centre", "Ethics, communication, creativity, resilience and professional judgement remain essential."],
+    { name: "Pedagogy · PAIR", question: "Help students learn with AI", detail: "PAIR gives students a visible process for framing problems, using AI critically and reflecting.", icon: MessageCircle },
+    { name: "Curriculum · 3As", question: "Review what students need to learn", detail: "The 3As help identify the foundations to keep strong and where AI may add value.", icon: Sparkles },
+    { name: "Assessment", question: "Keep learning visible", detail: "Assessment conditions should show what students must demonstrate and how AI may be used.", icon: ClipboardCheck },
+    { name: "Personalised learning", question: "Scaffold practice and feedback", detail: "AI-enabled tutors and learning assistants can support practice, feedback and different learning needs.", icon: Bot },
+    { name: "Human skills and resilience", question: "Keep judgement at the centre", detail: "Ethics, communication, creativity, resilience and professional judgement remain essential.", icon: Users },
   ];
   return (
     <section className="strategy-map" aria-label="How NP approaches connect across this package">
       <div className="strategy-heading"><span>NP’s approach</span><h2>NP’s five strategies at a glance</h2><p>Explore each strategy to see where it appears in this package.</p></div>
       <div className="strategy-goal"><strong>AI-ready graduates</strong><span>Human qualities · domain expertise · responsible use of AI</span></div>
       <div className="strategy-path">
-        {items.map(([name, question, detail], index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
-          <i>{String(index + 1).padStart(2, "0")}</i><span><strong>{name}</strong><b>{question}</b>{active === index && <small>{detail}</small>}</span>
+        {items.map(({ name, question, detail, icon: Icon }, index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
+          <i><Icon size={18} strokeWidth={2.2} aria-hidden="true" /></i><span><strong>{name}</strong><b>{question}</b>{active === index && <small>{detail}</small>}</span>
         </button>)}
       </div>
     </section>
@@ -450,22 +451,31 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
 }
 
 function OpeningVisual() {
+  const [active, setActive] = useState(0);
   const areas = [
     {
       title: "Curriculum",
       detail: "What AI may change in your module and discipline",
+      feedback: "Start by noticing which knowledge, skills and professional judgements students still need to develop.",
+      icon: BookOpen,
     },
     {
       title: "Facilitation",
       detail: "How AI may support learning and practice",
+      feedback: "Ask whether the use gives students more practice, feedback or explanation—without doing the learning for them.",
+      icon: Lightbulb,
     },
     {
       title: "Assessment",
       detail: "How students show their learning credibly",
+      feedback: "Keep the intended learning visible, then make the GenAI conditions clear to students.",
+      icon: ClipboardCheck,
     },
     {
       title: "Data and technology",
       detail: "How to choose tools and handle information safely",
+      feedback: "Start with the learning purpose, then consider the information involved, limits of the tool and human oversight.",
+      icon: ShieldCheck,
     },
   ];
 
@@ -474,15 +484,18 @@ function OpeningVisual() {
       <div className="overview-heading">
         <span>At a glance</span>
         <h2>Four areas of AI-aware practice</h2>
+        <p>Choose an area to preview the question you will explore.</p>
       </div>
       <div className="overview-areas">
-        {areas.map((area, index) => (
-          <div className={`overview-area area-${index + 1}`} key={area.title}>
-            <span>{String(index + 1).padStart(2, "0")}</span>
+        {areas.map((area, index) => {
+          const Icon = area.icon;
+          return <button type="button" className={`overview-area area-${index + 1} ${active === index ? "active" : ""}`} key={area.title} onClick={() => setActive(index)} aria-pressed={active === index}>
+            <span><Icon size={20} strokeWidth={2.2} aria-hidden="true" /></span>
             <div><strong>{area.title}</strong><small>{area.detail}</small></div>
-          </div>
-        ))}
+          </button>;
+        })}
       </div>
+      <div className="overview-feedback" aria-live="polite"><Scale size={18} aria-hidden="true" /><p><strong>{areas[active].title}:</strong> {areas[active].feedback}</p></div>
     </section>
   );
 }
