@@ -188,6 +188,10 @@ function splitSections(markdown: string): Section[] {
   });
 }
 
+function withoutTitle(markdown: string) {
+  return markdown.replace(/^# .+\r?\n?/, "").trim();
+}
+
 const sectionMeta = [
   { mark: "✦", label: "Start", tone: "blue" },
   { mark: "01", label: "Notice", tone: "blue" },
@@ -478,6 +482,58 @@ function OpeningVisual() {
   );
 }
 
+function SectionVisual({ title }: { title: string }) {
+  if (title.startsWith("Part 1")) return (
+    <figure className="concept-visual ai-map-visual" aria-label="AI may appear across teaching preparation, student learning, assessment and feedback">
+      <figcaption><span>In your module</span><strong>Where might AI appear?</strong></figcaption>
+      <div className="ai-map"><div className="ai-map-core">AI</div><div className="map-item map-a"><b>Prepare</b><small>Examples · activities</small></div><div className="map-item map-b"><b>Learn</b><small>Explain · practise</small></div><div className="map-item map-c"><b>Assess</b><small>Create · demonstrate</small></div><div className="map-item map-d"><b>Feedback</b><small>Review · improve</small></div></div>
+    </figure>
+  );
+  if (title.startsWith("Part 2")) return (
+    <figure className="concept-visual np-approach-visual" aria-label="Four questions guide AI-aware teaching at NP">
+      <figcaption><span>NP’s approach</span><strong>Four questions keep the focus on learning</strong></figcaption>
+      <div className="question-wheel"><div className="wheel-core"><b>AI-ready</b><small>graduates</small></div><div className="wheel-item"><i>01</i><span>What should students learn?</span></div><div className="wheel-item"><i>02</i><span>How can AI support learning?</span></div><div className="wheel-item"><i>03</i><span>How will students show learning?</span></div><div className="wheel-item"><i>04</i><span>How should tools and data be used?</span></div></div>
+    </figure>
+  );
+  if (title.startsWith("Part 3")) return (
+    <figure className="concept-visual three-a-visual" aria-label="The 3As: Anchor, Augment and Advance">
+      <figcaption><span>The 3As</span><strong>Start with strong foundations</strong></figcaption>
+      <div className="three-a-stack"><div className="advance-layer"><b>Advance</b><span>Explore new possibilities</span></div><div className="augment-layer"><b>Augment</b><span>Improve authentic workflows</span></div><div className="anchor-layer"><b>Anchor</b><span>Protect core knowledge, skills and judgement</span></div></div>
+    </figure>
+  );
+  if (title.startsWith("Part 4")) return (
+    <figure className="concept-visual support-visual" aria-label="AI should support rather than replace learning">
+      <figcaption><span>A useful test</span><strong>Is AI supporting or replacing the learning?</strong></figcaption>
+      <div className="support-scale"><div className="support-side good"><span>✓</span><b>Support</b><small>Explain · practise · check · improve</small></div><div className="scale-pivot"><span /></div><div className="support-side caution"><span>!</span><b>Replace</b><small>Complete · copy · submit</small></div></div>
+    </figure>
+  );
+  if (title.startsWith("Part 5")) return (
+    <figure className="concept-visual pair-visual" aria-label="PAIR: Problem, AI, Interaction, Reflection">
+      <figcaption><span>PAIR</span><strong>Keep the learning process visible</strong></figcaption>
+      <div className="pair-flow"><div><b>P</b><span>Problem</span><small>Frame it</small></div><i>→</i><div><b>A</b><span>AI</span><small>Choose it</small></div><i>→</i><div><b>I</b><span>Interaction</span><small>Question it</small></div><i>→</i><div><b>R</b><span>Reflection</span><small>Learn from it</small></div></div>
+    </figure>
+  );
+  if (title.startsWith("Part 6")) return (
+    <figure className="concept-visual assessment-visual" aria-label="Assessment decisions begin with the learning outcome">
+      <figcaption><span>Assessment</span><strong>Begin with what students must demonstrate</strong></figcaption>
+      <div className="assessment-flow"><div><i>01</i><b>Learning outcome</b><small>What capability matters?</small></div><span>→</span><div><i>02</i><b>Evidence</b><small>What must students show?</small></div><span>→</span><div><i>03</i><b>AI conditions</b><small>What is allowed and clear?</small></div></div>
+    </figure>
+  );
+  if (title.startsWith("Part 7")) return (
+    <figure className="concept-visual tool-visual" aria-label="Four checks for responsible AI tool use">
+      <figcaption><span>Before you use a tool</span><strong>Apply four checks</strong></figcaption>
+      <div className="tool-checks"><div><i>01</i><b>Learning value</b><small>Does it help learning?</small></div><div><i>02</i><b>Output quality</b><small>Is it checked?</small></div><div><i>03</i><b>Data and ethics</b><small>Is the use safe?</small></div><div><i>04</i><b>Human oversight</b><small>Who decides?</small></div></div>
+    </figure>
+  );
+  if (title.startsWith("Part 8")) return (
+    <figure className="concept-visual module-lens-visual" aria-label="Review a module through four AI-aware lenses">
+      <figcaption><span>Bring it together</span><strong>Review one module through four lenses</strong></figcaption>
+      <div className="module-lens"><div className="lens-core">My<br />module</div><div className="lens-item lens-one"><b>Curriculum</b><small>What changes?</small></div><div className="lens-item lens-two"><b>Learning</b><small>What helps?</small></div><div className="lens-item lens-three"><b>Assessment</b><small>What shows learning?</small></div><div className="lens-item lens-four"><b>Tools &amp; data</b><small>What is safe?</small></div></div>
+    </figure>
+  );
+  return null;
+}
+
 export default function Home() {
   const [course, setCourse] = useState("");
   const [active, setActive] = useState(0);
@@ -600,11 +656,12 @@ export default function Home() {
             <span>{meta.label}</span>
           </div>
         </div>
-        {active === 0 && <OpeningVisual />}
+        <h1 className="page-title">{current.title}</h1>
+        {active === 0 ? <OpeningVisual /> : <SectionVisual title={current.title} />}
         <article
           key={current.id}
           className="course-content"
-          dangerouslySetInnerHTML={{ __html: markdownToHtml(current.markdown) }}
+          dangerouslySetInnerHTML={{ __html: markdownToHtml(withoutTitle(current.markdown)) }}
         />
 
         <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />
