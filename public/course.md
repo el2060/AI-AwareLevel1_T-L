@@ -534,19 +534,23 @@ At Level 1, focus on four things:
 
 Start with the T&L need, not the tool. A useful tool choice depends on the learning purpose, the information involved and how the output will be reviewed.
 
-## NP-Supported Tools
+## AI Tools for Your T&L Work
 
-### M365 Copilot
+### Start with M365 Copilot
 
-Within NP's Microsoft 365 environment, Copilot can help you review connected documents, summarise feedback, draft communications and prepare a first version of learning materials.
+M365 Copilot is the primary AI assistant provisioned to NP staff. It is a practical starting point when your work is already in the Microsoft 365 environment.
 
-### Pair.gov.sg
+It can help you review module documents, summarise de-identified feedback, draft communications, prepare meeting follow-up and create a first version of learning materials. Check the output, adapt it for your module and make the final decision yourself.
 
-Pair.gov.sg can help you explore alternatives, draft or rewrite T&L materials, generate examples, explain concepts at different levels and structure an activity.
+### Other approved Government tools
 
-M365 Copilot and Pair.gov.sg are cleared for **Official (Closed)** and **Sensitive Normal** content. Use them according to NP’s current guidance for the information and purpose involved.
+Other approved tools may suit a particular task. **Pair Chat (pair.gov.sg)** is a GovTech AI assistant for public officers. Alongside chat, it offers Assistants, batch jobs and writing templates. It may be useful when a Government workflow or repeatable task is the better fit — not simply as another way to do everyday M365 work.
 
-Most routine T&L content is non-classified. Even so, check what information you are entering and whether the tool is approved for it.
+### Use the right tool for the information
+
+Use M365 Copilot, Pair Chat and any other tool only for the information classification and purpose it is approved for under NP’s current guidance. Do not enter personal, sensitive or proprietary information in a tool that has not been cleared for it.
+
+Most routine T&L content is non-classified. Still, pause before you enter information: consider the task, the data, the tool and the human oversight needed.
 
 <!--use-case-explorer-->
 
@@ -578,7 +582,7 @@ Before using an AI tool, consider:
 
 ## Match the Information to the Tool
 
-M365 Copilot and Pair.gov.sg may be used for Official (Closed) and Sensitive Normal content according to NP’s current guidance.
+Different tools have different approval conditions. Check NP’s current guidance for the tool, information classification and purpose before entering information.
 
 For other public AI tools, do not enter personal, sensitive or proprietary information unless the tool has been explicitly approved for that information and purpose.
 
@@ -627,7 +631,7 @@ Before using the output, check that:
 
 ## Apply It to Your Module
 
-Think of one possible use of M365 Copilot, Pair.gov.sg or another approved tool.
+Think of one possible use of M365 Copilot or another approved tool.
 
 Consider:
 
@@ -682,7 +686,7 @@ Possible next steps include:
 - Reviewing one learning outcome, activity and assessment together through the 3As.
 - Trying a generate–compare–check–improve activity.
 - Checking the GenAI conditions in one assignment descriptor.
-- Exploring an appropriate use of M365 Copilot or Pair.gov.sg.
+- Exploring an appropriate use of M365 Copilot or another approved tool.
 
 ---
 

@@ -346,7 +346,7 @@ function ModuleSummary() {
       label: "Tools and responsibility",
       title: "Use tools with care",
       preview: "Choose a suitable tool, check the information and keep human oversight.",
-      takeaway: "M365 Copilot and Pair.gov.sg are cleared for Official (Closed) and Sensitive Normal content, subject to NP’s current guidance.",
+      takeaway: "Start with M365 Copilot for routine staff work. Use any AI tool only for the information and purpose it is approved for under NP’s current guidance.",
       practice: "You remain responsible for learning materials, assessment decisions, grades and feedback.",
       icon: ShieldCheck,
       tone: "teal",
@@ -544,7 +544,7 @@ function UseCaseExplorer() {
     },
     {
       title: "Draft industry examples",
-      tool: "M365 Copilot or Pair.gov.sg",
+      tool: "M365 Copilot",
       icon: Lightbulb,
       use: "Generate a first set of worked examples, scenarios or practice questions in a workplace context.",
       prompt: "Draft three Year [1/2/3] workplace examples for [concept] in [diploma]. Include a common misconception to spot. Use plain English for a first exposure.",
@@ -562,7 +562,7 @@ function UseCaseExplorer() {
     },
     {
       title: "Test assignment clarity",
-      tool: "M365 Copilot or Pair.gov.sg",
+      tool: "M365 Copilot",
       icon: ClipboardCheck,
       use: "Surface instructions or GenAI conditions that a student may read in more than one way.",
       prompt: "Read this assignment brief as a Year 2 student. Identify unclear instructions, marking expectations and GenAI conditions. Then ask five questions a confused student may ask.",
@@ -580,7 +580,7 @@ function UseCaseExplorer() {
     },
     {
       title: "Create alternative formats",
-      tool: "M365 Copilot or Pair.gov.sg",
+      tool: "M365 Copilot",
       icon: Users,
       use: "Create a simpler explanation, step-by-step version or short self-check activity from the same source material.",
       prompt: "Create a simpler explanation, a step-by-step worksheet version and five self-check questions for [concept]. Keep the technical meaning identical and flag anything you were unsure how to simplify.",
