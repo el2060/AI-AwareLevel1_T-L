@@ -17,8 +17,6 @@ type Choice = {
 
 type ActivityNotes = Record<string, string>;
 
-const STORAGE_KEY = "np-ai-aware-course";
-
 function escapeHtml(value: string) {
   return value
     .replaceAll("&", "&amp;")
@@ -589,9 +587,7 @@ export default function Home() {
   const [course, setCourse] = useState("");
   const [active, setActive] = useState(0);
   const [completed, setCompleted] = useState<string[]>([]);
-  const [notes, setNotes] = useState("");
   const [activityNotes, setActivityNotes] = useState<ActivityNotes>({});
-  const [notesOpen, setNotesOpen] = useState(false);
   const [contentsOpen, setContentsOpen] = useState(false);
 
   const sections = useMemo(() => splitSections(course), [course]);
@@ -604,28 +600,7 @@ export default function Home() {
     fetch("/course.md")
       .then((response) => response.text())
       .then(setCourse);
-
-    const saved = window.localStorage.getItem(STORAGE_KEY);
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        setCompleted(parsed.completed ?? []);
-        setNotes(parsed.notes ?? "");
-        setActivityNotes(parsed.activityNotes ?? {});
-        setActive(parsed.active ?? 0);
-      } catch {
-        window.localStorage.removeItem(STORAGE_KEY);
-      }
-    }
   }, []);
-
-  useEffect(() => {
-    if (!course) return;
-    window.localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify({ completed, notes, activityNotes, active }),
-    );
-  }, [completed, notes, activityNotes, active, course]);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -688,9 +663,6 @@ export default function Home() {
           </button>
           <div className="top-actions">
             <span className="level-badge">Level 1 · AI-Aware</span>
-            <button className="notes-button" onClick={() => setNotesOpen(true)}>
-              Notes
-            </button>
           </div>
         </div>
       </header>
@@ -723,13 +695,14 @@ export default function Home() {
         </div>
         <h1 className="page-title">{active === 0 ? current.title : current.shortTitle}</h1>
         {active === 0 ? <OpeningVisual /> : <SectionVisual title={current.title} />}
+        {active > 0 && active !== 5 && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
         <article
           key={current.id}
           className="course-content"
           dangerouslySetInnerHTML={{ __html: markdownToHtml(withoutTitle(current.markdown)) }}
         />
 
-        <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />
+        {active === 5 && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
 
         {sectionBridges[active] && active < sections.length - 1 && (
           <div className="section-bridge">
@@ -741,7 +714,7 @@ export default function Home() {
         {progress === 100 && active === sections.length - 1 && (
           <div className="completion-moment">
             <div className="completion-burst"><span>✓</span></div>
-            <div><strong>Learning package complete</strong><p>You have worked through every section. Your progress is saved on this browser.</p></div>
+            <div><strong>Learning package complete</strong><p>You have worked through every section and practised the key Level 1 decisions.</p></div>
           </div>
         )}
 
@@ -787,27 +760,6 @@ export default function Home() {
         </div>
       )}
 
-      {notesOpen && (
-        <div className="notes-overlay" role="presentation" onClick={() => setNotesOpen(false)}>
-          <aside className="notes-panel" role="dialog" aria-modal="true" aria-label="My notes" onClick={(event) => event.stopPropagation()}>
-            <div className="notes-heading">
-              <div>
-                <span className="eyebrow">Private to this browser</span>
-                <h2>My notes</h2>
-              </div>
-              <button className="close-button" onClick={() => setNotesOpen(false)} aria-label="Close notes">×</button>
-            </div>
-            <p>Capture a thought, question or next step as you go.</p>
-            <textarea
-              value={notes}
-              onChange={(event) => setNotes(event.target.value)}
-              placeholder="One thing I want to remember…"
-              autoFocus
-            />
-            <button className="done-button" onClick={() => setNotesOpen(false)}>Done</button>
-          </aside>
-        </div>
-      )}
     </div>
   );
 }
