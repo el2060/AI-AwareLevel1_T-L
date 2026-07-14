@@ -25,9 +25,9 @@ Allow about 60–75 minutes for this learning package. The completion quiz is ad
 By the end of this module, you will be able to:
 
 1. **Curriculum:** Describe how AI is changing what students need to learn and do in your discipline or module.
-2. **Facilitation:** Describe the benefits, limitations, risks and recommended practices for using AI to support learning.
-3. **Assessment:** Describe how AI affects assessment validity and academic integrity, and how to apply NP’s requirements for GenAI use.
-4. **Tools and data:** Analyse how a potentially relevant AI tool could support a T&L purpose, including the information involved, its limitations and appropriate oversight.
+2. **Facilitation:** Describe how AI can support learning, including its benefits, limitations, risks and recommended practices.
+3. **Assessment:** Describe how AI affects assessment validity and academic integrity, and identify how NP’s requirements for GenAI use apply to an assessment.
+4. **Tools and data:** Assess whether an AI tool is suitable for a T&L purpose, considering the information involved, the tool’s limitations and the oversight required.
 
 The Level 1 focus is awareness: recognise the key issues, understand NP’s shared approaches and identify what may need attention in a module you teach, lead or support.
 
