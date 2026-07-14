@@ -366,51 +366,38 @@ function SectionInteractive({ title }: { title: string }) {
 }
 
 function OpeningVisual() {
-  const steps = [
+  const areas = [
     {
-      title: "Notice what AI changes",
-      detail: "Recognise how AI affects your discipline, teaching, learning and evidence of student achievement.",
+      title: "AI in teaching and learning",
+      detail: "How AI affects your modules and students",
     },
     {
-      title: "Connect with NP’s approaches",
-      detail: "See how the 3As and PAIR help you make sense of AI-enabled teaching and learning in your module.",
+      title: "NP’s approach to AI in T&L",
+      detail: "How NP supports learning with AI",
     },
     {
-      title: "Set assessment boundaries",
-      detail: "Distinguish acceptable and prohibited GenAI use, and communicate the conditions clearly to students.",
+      title: "AI in assessment",
+      detail: "How to set clear expectations for GenAI use",
     },
     {
-      title: "Use tools and data responsibly",
-      detail: "Choose suitable NP-supported tools, protect information and keep professional judgement in the loop.",
+      title: "Tools, data and responsible use",
+      detail: "How to choose tools and handle data safely",
     },
   ];
-  const [active, setActive] = useState(0);
 
   return (
-    <section className="opening-visual" aria-label="Your AI-aware learning path">
-      <div className="pathway-heading">
-        <span>Your learning path</span>
-        <h2>Four things you will be ready to do</h2>
-        <p>Select each step for a quick preview.</p>
+    <section className="opening-visual" aria-label="What this package covers">
+      <div className="overview-heading">
+        <span>At a glance</span>
+        <h2>What this package covers</h2>
       </div>
-      <div className="pathway-steps" role="tablist" aria-label="AI-aware learning outcomes">
-        {steps.map((step, index) => (
-          <button
-            key={step.title}
-            className={active === index ? "active" : ""}
-            onClick={() => setActive(index)}
-            role="tab"
-            aria-selected={active === index}
-            aria-controls="pathway-detail"
-          >
+      <div className="overview-areas">
+        {areas.map((area, index) => (
+          <div className={`overview-area area-${index + 1}`} key={area.title}>
             <span>{String(index + 1).padStart(2, "0")}</span>
-            <strong>{step.title}</strong>
-          </button>
+            <div><strong>{area.title}</strong><small>{area.detail}</small></div>
+          </div>
         ))}
-      </div>
-      <div className="pathway-detail" id="pathway-detail" role="tabpanel" aria-live="polite">
-        <span>{String(active + 1).padStart(2, "0")}</span>
-        <p>{steps[active].detail}</p>
       </div>
     </section>
   );
