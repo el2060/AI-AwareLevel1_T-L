@@ -2,15 +2,15 @@
 
 ## Welcome
 
-AI is already part of how students learn and how many workplaces operate. You may already see students using GenAI to explain concepts, generate ideas or work on assignments—and wonder what this means for your teaching and assessments.
+AI is already part of how students learn and how many workplaces operate. You may already see students using GenAI to explain concepts, generate ideas or work on assignments—and be asking what this means for your teaching and assessment.
 
 This module helps you:
 
-- Notice how AI may affect your discipline and modules.
-- Make sense of NP’s key approaches to AI-enabled Teaching and Learning.
-- Decide where AI may support learning and where it may get in the way.
-- Apply NP’s essential requirements for GenAI use in assessment.
-- Use AI tools and learning data with care and sound judgement.
+- **Recognise** how AI is changing what and how your students learn in your discipline.
+- **Understand** NP’s key approaches to AI-enabled Teaching and Learning—the 3As and PAIR.
+- **Judge** where AI supports learning and where it undermines it.
+- **Apply** NP’s requirements for GenAI use in assessment.
+- **Use** approved AI tools and learning data responsibly in your own work.
 
 All NP academic staff are required to complete this module. It gives us a common starting point for decisions about AI in Teaching and Learning.
 
