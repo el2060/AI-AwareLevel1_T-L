@@ -643,35 +643,33 @@ export default function Home() {
         </div>
       </header>
 
-      <nav className="chapter-dock" aria-label="Course navigation">
-        <button className="dock-arrow" onClick={() => setActive((index) => Math.max(0, index - 1))} disabled={active === 0} aria-label="Previous section">←</button>
-        <div className="current-section" aria-live="polite">
-          <span>Section {active + 1} of {sections.length}</span>
-          <strong>{current.shortTitle}</strong>
+      <nav className="chapter-nav" aria-label="Course navigation">
+        <div className="chapter-nav-inner">
+          <button className="chapter-step" onClick={() => setActive((index) => Math.max(0, index - 1))} disabled={active === 0} aria-label="Previous section"><span aria-hidden="true">←</span><b>Previous</b></button>
+          <div className="current-section" aria-live="polite">
+            <span>Section {active + 1} of {sections.length}</span>
+            <strong>{current.shortTitle}</strong>
+          </div>
+          <button
+            className="contents-button"
+            onClick={() => setContentsOpen(true)}
+            aria-haspopup="dialog"
+            aria-expanded={contentsOpen}
+          >
+            Contents
+          </button>
+          <button className="chapter-step next-step" onClick={() => setActive((index) => Math.min(sections.length - 1, index + 1))} disabled={active === sections.length - 1} aria-label="Next section"><b>Next</b><span aria-hidden="true">→</span></button>
         </div>
-        <button
-          className="sections-button"
-          onClick={() => setContentsOpen(true)}
-          aria-haspopup="dialog"
-          aria-expanded={contentsOpen}
-          aria-label="Open all sections"
-        >
-          <span>All sections</span>
-          <i aria-hidden="true">⌄</i>
-        </button>
-        <span className="dock-progress">{completed.length} complete</span>
-        <button className="dock-arrow" onClick={() => setActive((index) => Math.min(sections.length - 1, index + 1))} disabled={active === sections.length - 1} aria-label="Next section">→</button>
       </nav>
 
       <main className="reader">
         <div className={`section-intro tone-${meta.tone}`}>
           <div className="section-mark">{meta.mark}</div>
           <div>
-            <div className="section-kicker">Section {active + 1} of {sections.length}</div>
-            <span>{meta.label}</span>
+            <div className="section-kicker">{meta.label}</div>
           </div>
         </div>
-        <h1 className="page-title">{current.title}</h1>
+        <h1 className="page-title">{active === 0 ? current.title : current.shortTitle}</h1>
         {active === 0 ? <OpeningVisual /> : <SectionVisual title={current.title} />}
         <article
           key={current.id}
@@ -721,7 +719,7 @@ export default function Home() {
         <div className="contents-overlay" role="presentation" onClick={() => setContentsOpen(false)}>
           <section className="contents-panel" role="dialog" aria-modal="true" aria-label="Course contents" onClick={(event) => event.stopPropagation()}>
             <div className="contents-heading">
-              <div><span className="eyebrow">Jump to any section</span><h2>All sections</h2></div>
+              <div><span className="eyebrow">{completed.length} of {sections.length} complete</span><h2>Course contents</h2></div>
               <button className="close-button" onClick={() => setContentsOpen(false)} aria-label="Close course contents">×</button>
             </div>
             <div className="contents-list">
