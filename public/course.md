@@ -12,7 +12,7 @@ This module helps you:
 - **Apply** NP’s requirements for GenAI use in assessment.
 - **Use** approved AI tools and learning data responsibly in your own work.
 
-All NP academic staff are required to complete this module. It gives us a common starting point for decisions about AI in Teaching and Learning.
+This module gives all Academic Staff in NP a shared understanding of how AI is changing T&L at NP—and what it means for your module.
 
 ### Learning time
 
