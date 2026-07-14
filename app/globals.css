@@ -469,8 +469,6 @@ button { color: inherit; }
 .section-bridge span { color: var(--blue); font-size: 10px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
 .section-bridge p { margin: 6px 0 0; max-width: 610px; color: var(--ink-soft); font-size: 14px; line-height: 1.55; }
 .section-actions { margin-top: 58px; padding-top: 24px; border-top: 1px solid var(--line); }
-.complete-button { border: 1px solid #abd8ba; border-radius: 8px; padding: 10px 14px; background: #eef8f1; color: #166127; font-weight: 650; cursor: pointer; }
-.complete-button.is-complete { background: #198b34; border-color: #198b34; color: #fff; }
 .pager { display: flex; justify-content: space-between; gap: 12px; margin-top: 32px; }
 .pager button { border: 1px solid var(--line); border-radius: 999px; padding: 10px 17px; background: #fff; cursor: pointer; }
 .pager button:hover:not(:disabled) { background: #f0efed; }.pager button:disabled { opacity: .4; cursor: default; }

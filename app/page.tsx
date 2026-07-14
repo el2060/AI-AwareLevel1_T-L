@@ -611,21 +611,13 @@ export default function Home() {
     setContentsOpen(false);
   }
 
-  function markComplete() {
-    if (!current) return;
-    setCompleted((items) =>
-      items.includes(current.id)
-        ? items.filter((id) => id !== current.id)
-        : [...items, current.id],
-    );
-  }
-
   function goNext() {
     if (!current) return;
-    if (!completed.includes(current.id)) {
-      setCompleted((items) => [...items, current.id]);
-    }
-    setActive((index) => Math.min(index + 1, sections.length - 1));
+    const nextIndex = Math.min(active + 1, sections.length - 1);
+    const nextSection = sections[nextIndex];
+    const completedIds = nextSection ? [current.id, nextSection.id] : [current.id];
+    setCompleted((items) => Array.from(new Set([...items, ...completedIds])));
+    setActive(nextIndex);
   }
 
   function setActivityValue(key: string, value: string) {
@@ -641,7 +633,6 @@ export default function Home() {
     );
   }
 
-  const isComplete = completed.includes(current.id);
   const meta = sectionMeta[active] ?? sectionMeta[0];
 
   return (
@@ -682,7 +673,7 @@ export default function Home() {
           >
             Contents
           </button>
-          <button className="chapter-step next-step" onClick={() => setActive((index) => Math.min(sections.length - 1, index + 1))} disabled={active === sections.length - 1} aria-label="Next section"><b>Next</b><span aria-hidden="true">→</span></button>
+          <button className="chapter-step next-step" onClick={goNext} disabled={active === sections.length - 1} aria-label="Next section"><b>Next</b><span aria-hidden="true">→</span></button>
         </div>
       </nav>
 
@@ -719,9 +710,6 @@ export default function Home() {
         )}
 
         <div className="section-actions">
-          <button className={`complete-button ${isComplete ? "is-complete" : ""}`} onClick={markComplete}>
-            {isComplete ? "✓ Section complete" : "Mark as complete"}
-          </button>
           <div className="pager">
             <button
               onClick={() => setActive((index) => Math.max(0, index - 1))}
