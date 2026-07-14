@@ -16,7 +16,7 @@ All NP academic staff are required to complete this module. It gives us a common
 
 ### Learning time
 
-Allow up to two hours, including the core learning package, short activities and the separately administered completion quiz.
+Allow about 60–75 minutes for this learning package. The completion quiz is administered separately.
 
 ---
 
@@ -24,12 +24,12 @@ Allow up to two hours, including the core learning package, short activities and
 
 By the end of this module, you will be able to:
 
-1. **Curriculum:** Describe how AI may affect what students need to learn in your discipline or module.
-2. **Learning:** Describe the benefits, limitations and risks of using AI to support learning, and recognise where the 3As and PAIR fit.
-3. **Assessment:** Explain how AI may affect assessment validity and academic integrity, and identify NP’s essential requirements for GenAI use.
-4. **Tools and data:** Consider whether an AI tool is suitable for a T&L purpose and the information involved.
+1. **Curriculum:** Describe how AI may affect what students need to learn and do in your discipline or module.
+2. **Facilitation:** Describe the benefits, limitations, risks and good practices of using AI to support learning.
+3. **Assessment:** Describe how AI affects assessment validity and academic integrity, and describe how to apply NP’s essential requirements for GenAI use.
+4. **Data and technology:** Analyse how a potentially relevant AI tool could support a T&L purpose, including the information involved, its limitations and appropriate oversight.
 
-The Level 1 focus is awareness: spot the key issues, use NP’s shared approaches and identify what may need attention in a module you teach or support.
+The Level 1 focus is awareness: recognise the key issues, understand NP’s shared approaches and identify what may need attention in a module you teach, lead or support.
 
 ---
 
@@ -136,26 +136,20 @@ This vision is supported by three commitments:
 
 These commitments shape NP’s approaches. At Level 1, focus on the purpose of each approach.
 
-## Five Strategies, One Goal
+## Five Strategies, One Shared Direction
 
-NP’s five strategies work together towards the same goal.
+NP’s five strategies work together towards the same goal. Explore the overview below to see what each one means for Teaching and Learning.
 
-| Strategy | What it means |
-| --- | --- |
-| **Embed AI-integrated pedagogy** | Use PAIR to help students learn and solve problems with AI. |
-| **Transform the curriculum** | Use the 3As to review what students need to learn. |
-| **Redesign assessment** | Keep assessment authentic, valid and relevant. |
-| **Enable personalised learning** | Use suitable AI-enabled tutors and learning assistants to scaffold learning. |
-| **Strengthen human skills and resilience** | Develop judgement, ethics, creativity, communication and collaboration. |
+## Four Questions for This Package
 
-This package focuses on four practical questions that cut across the five strategies:
+This package brings the strategies into four practical questions:
 
 1. **Curriculum and the 3As:** What should students learn?
 2. **Learning and PAIR:** How can students learn with AI?
 3. **Assessment:** How will students show what they can do?
 4. **Tools and data:** How should AI be used responsibly?
 
-These questions guide Parts 3 to 7. A decision in one area may affect the others. For example, what students must learn affects how they practise and what an assessment should require.
+These questions guide Parts 3 to 7. They are connected: what students need to learn affects how they practise, what an assessment should require, and whether a tool is a suitable choice.
 
 ---
 
@@ -205,9 +199,11 @@ Use these questions to identify what should remain strong and where AI may add v
 
 # Part 4: How Can AI Support Learning?
 
-AI can support learning when it is used for a clear purpose and does not remove the thinking or practice students need.
+AI can support learning when it has a clear purpose and does not remove the thinking or practice students need.
 
 At NP, AI-enabled tutors and learning assistants are intended to **scaffold and coach**, rather than simply provide answers. For example, D2L Lumi Tutor provides students with on-demand summaries, flashcards and practice questions grounded in module content. Other adaptive-learning support is being piloted.
+
+For students, useful support gives them more to think with: another explanation, a chance to practise, feedback to act on or a prompt to reflect. The lecturer still decides what good learning looks like in the module.
 
 ## Possible Benefits
 
@@ -272,7 +268,13 @@ Students then:
 3. Explain how empathy and professional judgement shaped their response.
 4. Role-play the interaction with another person.
 
-AI supports initial exploration. It does not replace empathy, professional judgement or human interaction.
+AI supports initial exploration. It does not replace empathy, professional judgement or the human interaction students need to practise.
+
+## Supporting Different Learners
+
+AI may help make learning more accessible through alternative explanations, examples at different levels, practice questions or language support.
+
+Check that the meaning and learning standard remain accurate, the examples are inclusive, and the tool does not replace appropriate human or institutional support.
 
 ## Pause and Consider
 
@@ -523,6 +525,8 @@ At Level 1, focus on four things:
 - Identify important limitations and risks.
 - Decide what needs to be checked before use.
 
+Start with the T&L need, not the tool. A useful tool choice depends on the learning purpose, the information involved and how the output will be reviewed.
+
 ## NP-Supported Tools
 
 ### M365 Copilot
@@ -677,7 +681,7 @@ Use these four questions.
 
 > Is the proposed tool suitable for the learning purpose and information involved?
 
-These questions provide a practical starting point for AI-aware teaching at NP.
+These questions provide a practical starting point for AI-aware teaching at NP. They help you connect curriculum, facilitation, assessment, tools and data instead of considering each in isolation.
 
 ## Your AI-Aware Module Snapshot
 
@@ -723,7 +727,7 @@ The key ideas are:
 - NP aims to develop AI-ready graduates who combine human qualities, domain expertise and responsible AI capability.
 - The 3As help course and module teams identify Anchor, Augment and Advance capabilities.
 - PAIR helps students frame problems, use AI, interact critically and reflect.
-- AI may support learning, but its output and effect on learning must be checked.
+- AI may support learning and personalised practice, but its output and effect on learning must be checked.
 - Assessment decisions begin with the learning outcome and credible evidence of what students can do.
 - GenAI use in summative assessment is allowed unless explicitly prohibited. Every submission cover page requires a GenAI Use Declaration, and prohibited uses remain unacceptable even when declared.
 - GenAI assessment conditions must be stated clearly and discussed with students.

@@ -404,15 +404,16 @@ function PairBuilder() {
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
-    ["Curriculum · 3As", "What should students learn?", "Part 3 looks at Anchor, Augment and Advance."],
-    ["Learning · PAIR", "How can students learn with AI?", "Parts 4 and 5 focus on supporting learning and using PAIR."],
-    ["Assessment", "How will students show what they can do?", "Part 6 focuses on credible evidence and clear GenAI conditions."],
-    ["Tools & data", "How should AI be used responsibly?", "Part 7 focuses on suitable tools, safe information use and human oversight."],
+    ["Pedagogy · PAIR", "Help students learn with AI", "PAIR gives students a visible process for framing problems, using AI critically and reflecting."],
+    ["Curriculum · 3As", "Review what students need to learn", "The 3As help identify the foundations to keep strong and where AI may add value."],
+    ["Assessment", "Keep learning visible", "Assessment conditions should show what students must demonstrate and how AI may be used."],
+    ["Personalised learning", "Scaffold practice and feedback", "AI-enabled tutors and learning assistants can support practice, feedback and different learning needs."],
+    ["Human skills and resilience", "Keep judgement at the centre", "Ethics, communication, creativity, resilience and professional judgement remain essential."],
   ];
   return (
     <section className="strategy-map" aria-label="How NP approaches connect across this package">
-      <div className="strategy-heading"><span>For this package</span><h2>Use four questions as you continue</h2><p>Each question links NP’s approaches to a module you teach or support.</p></div>
-      <div className="strategy-goal"><strong>Five NP strategies</strong><span>Four questions to use in your module</span></div>
+      <div className="strategy-heading"><span>NP’s approach</span><h2>NP’s five strategies at a glance</h2><p>Explore each strategy to see where it appears in this package.</p></div>
+      <div className="strategy-goal"><strong>AI-ready graduates</strong><span>Human qualities · domain expertise · responsible use of AI</span></div>
       <div className="strategy-path">
         {items.map(([name, question, detail], index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
           <i>{String(index + 1).padStart(2, "0")}</i><span><strong>{name}</strong><b>{question}</b>{active === index && <small>{detail}</small>}</span>
@@ -428,8 +429,9 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
   if (title.startsWith("Part 2")) return <StrategyMap />;
   if (title.startsWith("Part 3")) return <ThreeAsActivity />;
   if (title.startsWith("Part 4")) return <ChoiceCheck eyebrow="Support or replace?" question="Which use better protects the learning?" choices={[
-    { label: "AI explains a concept; the student checks it and then practises.", correct: true, feedback: "AI supports clarification, while the student still checks and practises the intended learning." },
-    { label: "AI completes the assignment; the student submits the response.", correct: false, feedback: "Here, AI replaces the thinking and performance the student needs to develop." },
+    { label: "AI explains a concept; the student checks it against module material and then applies it to a practice task.", correct: true, feedback: "AI supports clarification, while the student still checks, practises and applies the intended learning." },
+    { label: "AI completes the assignment; the student lightly edits and submits the response.", correct: false, feedback: "Here, AI replaces the thinking and performance the student needs to develop." },
+    { label: "AI gives students a model answer before they have attempted the problem themselves.", correct: false, feedback: "A model answer may be useful later, but giving it first can remove the productive struggle and practice students need." },
   ]} />;
   if (title.startsWith("Part 5")) return <PairBuilder />;
   if (title.startsWith("Part 6")) return <div className="activity-stack"><ChoiceCheck eyebrow="Assessment judgement" question="A student declares that GenAI created a required interview. Is that acceptable?" choices={[
@@ -452,20 +454,20 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
 function OpeningVisual() {
   const areas = [
     {
-      title: "AI in teaching and learning",
-      detail: "How AI affects your modules and students",
+      title: "Curriculum",
+      detail: "What AI may change in your module and discipline",
     },
     {
-      title: "NP’s approach to AI in T&L",
-      detail: "How NP supports learning with AI",
+      title: "Facilitation",
+      detail: "How AI may support learning and practice",
     },
     {
-      title: "AI in assessment",
-      detail: "How to set clear expectations for GenAI use",
+      title: "Assessment",
+      detail: "How students show their learning credibly",
     },
     {
-      title: "Tools, data and responsible use",
-      detail: "How to choose tools and handle data safely",
+      title: "Data and technology",
+      detail: "How to choose tools and handle information safely",
     },
   ];
 
@@ -473,7 +475,7 @@ function OpeningVisual() {
     <section className="opening-visual" aria-label="What this package covers">
       <div className="overview-heading">
         <span>At a glance</span>
-        <h2>What this package covers</h2>
+        <h2>Four areas of AI-aware practice</h2>
       </div>
       <div className="overview-areas">
         {areas.map((area, index) => (
