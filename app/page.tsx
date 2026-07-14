@@ -194,14 +194,14 @@ function withoutTitle(markdown: string) {
 
 const sectionMeta = [
   { mark: "✦", label: "Start", tone: "blue" },
-  { mark: "01", label: "Notice", tone: "blue" },
-  { mark: "02", label: "Connect", tone: "purple" },
-  { mark: "03", label: "Consider", tone: "orange" },
-  { mark: "04", label: "Support", tone: "teal" },
-  { mark: "05", label: "Structure", tone: "green" },
-  { mark: "06", label: "Clarify", tone: "blue" },
-  { mark: "07", label: "Use wisely", tone: "purple" },
-  { mark: "08", label: "Bring together", tone: "orange" },
+  { mark: "01", label: "AI in your module", tone: "blue" },
+  { mark: "02", label: "NP’s approach", tone: "purple" },
+  { mark: "03", label: "Curriculum", tone: "orange" },
+  { mark: "04", label: "Learning", tone: "teal" },
+  { mark: "05", label: "PAIR", tone: "green" },
+  { mark: "06", label: "Assessment", tone: "blue" },
+  { mark: "07", label: "Tools and data", tone: "purple" },
+  { mark: "08", label: "Bring it together", tone: "orange" },
   { mark: "↺", label: "Reflect", tone: "teal" },
   { mark: "✓", label: "Recap", tone: "green" },
   { mark: "→", label: "Next step", tone: "blue" },
@@ -209,13 +209,13 @@ const sectionMeta = [
 
 const sectionBridges = [
   "Consider where AI may already be showing up in a module you teach or support.",
-  "With that module in mind, see how NP’s approaches give us a shared set of questions.",
-  "Begin with curriculum: what must students still learn, and where might AI add value?",
-  "Once the learning is clear, consider how AI might support practice without replacing it.",
-  "PAIR then gives students a simple process for learning and problem-solving with AI.",
-  "The same focus on visible learning helps us make sound assessment decisions.",
-  "Clear assessment conditions also depend on suitable tools, safe data use and human oversight.",
-  "Bring the questions together and take an AI-aware look at one module.",
+  "See how NP’s approaches help you ask four practical questions.",
+  "Start with curriculum: what must students learn, and where might AI add value?",
+  "Then consider how AI might support practice without taking over the learning.",
+  "Use PAIR to structure how students learn and solve problems with AI.",
+  "Apply the same focus on visible learning to assessment.",
+  "Clear assessment conditions go together with suitable tools, safe data use and human oversight.",
+  "Bring the questions together for a module you teach or support.",
 ];
 
 function ChoiceCheck({ question, eyebrow, choices }: { question: string; eyebrow: string; choices: Choice[] }) {
@@ -253,7 +253,7 @@ function PulseActivity({ value, onChange }: { value: string; onChange: (value: s
   return (
     <section className="activity-block pulse-activity">
       <span className="activity-eyebrow">30-second pulse</span>
-      <h2>Where are you noticing AI in your work?</h2>
+      <h2>Where are you seeing AI in your work?</h2>
       <p>Select all that feel relevant. There is no right answer.</p>
       <div className="chip-row">
         {options.map((option) => (
@@ -266,7 +266,7 @@ function PulseActivity({ value, onChange }: { value: string; onChange: (value: s
           </button>
         ))}
       </div>
-      {selected.length > 0 && <p className="pulse-note">Keep these areas in mind as you move through the course.</p>}
+      {selected.length > 0 && <p className="pulse-note">Keep these areas in mind as you continue.</p>}
     </section>
   );
 }
@@ -292,7 +292,7 @@ function CarryForwardActivity({ value, onChange }: { value: string; onChange: (v
   const feedback = options.find(([question]) => question === value)?.[1];
   return (
     <section className="activity-block carry-forward-block">
-      <span className="activity-eyebrow">Look back</span><h2>Which question will you carry into your module?</h2><p>Choose the one that feels most useful right now.</p>
+      <span className="activity-eyebrow">Look back</span><h2>Which question will you take back to your module?</h2><p>Choose the one that feels most useful right now.</p>
       <div className="choice-grid">{options.map(([question], index) => <button key={question} className={`choice-button ${value === question ? "selected" : ""}`} onClick={() => onChange(question)}><span>{value === question ? "✓" : String.fromCharCode(65 + index)}</span>{question}</button>)}</div>
       {feedback && <div className="activity-feedback"><strong>A useful question to keep asking</strong><p>{feedback}</p></div>}
     </section>
@@ -304,10 +304,10 @@ function ConfidenceActivity({ value, onChange }: { value: string; onChange: (val
   const items = ["Spot where AI affects learning", "Use the 3As and PAIR", "Set clearer assessment conditions", "Check tools, data and output"];
   return (
     <section className="activity-block confidence-block">
-      <span className="activity-eyebrow">Quick self-check</span><h2>What are you now better prepared to do?</h2>
+      <span className="activity-eyebrow">Quick self-check</span><h2>What do you now feel ready to do?</h2>
       <p>Select each statement that feels true for you.</p>
       <div className="confidence-list">{items.map((item) => <button key={item} className={selected.includes(item) ? "selected" : ""} onClick={() => onChange((selected.includes(item) ? selected.filter((x) => x !== item) : [...selected, item]).join("|"))}><span>{selected.includes(item) ? "✓" : ""}</span>{item}</button>)}</div>
-      {selected.length === items.length && <div className="activity-feedback"><strong>You have covered the Level 1 foundation</strong><p>The next step is to use these questions when reviewing your own module.</p></div>}
+      {selected.length === items.length && <div className="activity-feedback"><strong>You have covered the Level 1 foundation</strong><p>Use these questions when reviewing a module you teach or support.</p></div>}
     </section>
   );
 }
@@ -318,7 +318,7 @@ function NextStepActivity({ value, onChange }: { value: string; onChange: (value
     <section className="activity-block next-step-block">
       <span className="activity-eyebrow">Before you leave</span><h2>Choose one small next step</h2>
       <div className="choice-grid">{options.map((option, index) => <button key={option} className={`choice-button ${value === option ? "selected" : ""}`} onClick={() => onChange(option)}><span>{value === option ? "✓" : String.fromCharCode(65 + index)}</span>{option}</button>)}</div>
-      {value && <div className="activity-feedback"><strong>A practical place to start</strong><p>{value}. Keep the scope small and use what you have learnt to guide the conversation or review.</p></div>}
+      {value && <div className="activity-feedback"><strong>A practical place to start</strong><p>{value}. This is a focused way to put Level 1 awareness into practice.</p></div>}
     </section>
   );
 }
@@ -404,15 +404,15 @@ function PairBuilder() {
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
-    ["Curriculum · 3As", "What should students learn?", "Parts 3 looks at Anchor, Augment and Advance."],
+    ["Curriculum · 3As", "What should students learn?", "Part 3 looks at Anchor, Augment and Advance."],
     ["Learning · PAIR", "How can students learn with AI?", "Parts 4 and 5 focus on supporting learning and using PAIR."],
     ["Assessment", "How will students show what they can do?", "Part 6 focuses on credible evidence and clear GenAI conditions."],
     ["Tools & data", "How should AI be used responsibly?", "Part 7 focuses on suitable tools, safe information use and human oversight."],
   ];
   return (
     <section className="strategy-map" aria-label="How NP approaches connect across this package">
-      <div className="strategy-heading"><span>For this package</span><h2>Carry four questions into the rest of the module</h2><p>Each question turns NP’s direction into something you can notice in your own module.</p></div>
-      <div className="strategy-goal"><strong>Five NP strategies</strong><span>Four practical questions for an AI-aware lecturer</span></div>
+      <div className="strategy-heading"><span>For this package</span><h2>Use four questions as you continue</h2><p>Each question links NP’s approaches to a module you teach or support.</p></div>
+      <div className="strategy-goal"><strong>Five NP strategies</strong><span>Four questions to use in your module</span></div>
       <div className="strategy-path">
         {items.map(([name, question, detail], index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
           <i>{String(index + 1).padStart(2, "0")}</i><span><strong>{name}</strong><b>{question}</b>{active === index && <small>{detail}</small>}</span>

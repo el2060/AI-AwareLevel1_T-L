@@ -2,17 +2,17 @@
 
 ## Welcome
 
-AI is already part of how our students learn and how many workplaces operate. You may be seeing students use GenAI to explain concepts, generate ideas or work on assignments—and wondering what this means for your teaching and assessments.
+AI is already part of how students learn and how many workplaces operate. You may already see students using GenAI to explain concepts, generate ideas or work on assignments—and wonder what this means for your teaching and assessments.
 
-This module will help you:
+This module helps you:
 
-- Consider what AI may change in your discipline and modules.
-- Understand NP’s key approaches to AI-enabled Teaching and Learning.
-- Recognise where AI can support learning and where it may get in the way.
-- Recognise and follow NP’s essential requirements for GenAI use in assessment.
-- Use AI tools and learning data with appropriate care and judgement.
+- Notice how AI may affect your discipline and modules.
+- Make sense of NP’s key approaches to AI-enabled Teaching and Learning.
+- Decide where AI may support learning and where it may get in the way.
+- Apply NP’s essential requirements for GenAI use in assessment.
+- Use AI tools and learning data with care and sound judgement.
 
-All NP academic staff are required to complete this module. It gives us a common starting point for making informed decisions about AI in our teaching.
+All NP academic staff are required to complete this module. It gives us a common starting point for decisions about AI in Teaching and Learning.
 
 ### Learning time
 
@@ -22,20 +22,20 @@ Allow up to two hours, including the core learning package, short activities and
 
 ## What You Will Learn
 
-By the end of this module, you should be able to:
+By the end of this module, you will be able to:
 
 1. **Curriculum:** Describe how AI may affect what students need to learn in your discipline or module.
 2. **Learning:** Describe the benefits, limitations and risks of using AI to support learning, and recognise where the 3As and PAIR fit.
 3. **Assessment:** Explain how AI may affect assessment validity and academic integrity, and identify NP’s essential requirements for GenAI use.
 4. **Tools and data:** Consider whether an AI tool is suitable for a T&L purpose and the information involved.
 
-The Level 1 focus is awareness: recognise the key issues, use NP’s shared approaches and identify what may need attention in your module.
+The Level 1 focus is awareness: spot the key issues, use NP’s shared approaches and identify what may need attention in a module you teach or support.
 
 ---
 
 ## Keep One Module in Mind
 
-As you go through this package, think of one module that you teach or support.
+As you go through this package, keep one module that you currently teach, lead or support in mind.
 
 You will consider it from four angles:
 
@@ -44,7 +44,7 @@ You will consider it from four angles:
 3. Where might AI support learning?
 4. What needs to be clarified or safeguarded?
 
-Use these four questions to notice what may need attention and identify one sensible next step.
+Use these questions throughout the package to identify what may need attention and one sensible next step.
 
 ---
 
@@ -56,7 +56,7 @@ A student submits a polished report. The argument is clear, the language is flue
 
 The student then tells you that GenAI helped to produce most of it.
 
-Before deciding whether this is acceptable, what would you need to know?
+Before deciding whether this is acceptable, what would you want to know?
 
 You might ask:
 
@@ -71,7 +71,7 @@ A polished product alone may not tell us what the student knows or can do.
 
 ## Where AI May Appear
 
-AI may be part of your work when you:
+You may encounter AI when you:
 
 - Prepare examples or explanations.
 - Develop learning activities.
@@ -96,23 +96,23 @@ A useful question to carry through this module is:
 
 > For this learning purpose, what should the student do, what might AI support, and what safeguards are needed?
 
-## Three Basic Principles
+## Three Things to Keep in Mind
 
 ### 1. People remain responsible
 
 AI may assist with a task, but lecturers and students remain responsible for how its output is used.
 
-### 2. AI output must be checked
+### 2. Check AI output
 
 AI can produce inaccurate, fabricated, biased, outdated or unsuitable responses—even when the response sounds convincing.
 
-### 3. AI use must follow NP requirements
+### 3. Follow NP requirements
 
 This is especially important in assessment, grading and work involving personal, sensitive or proprietary information.
 
 ### Pause and Consider
 
-For the module you selected:
+For the module you have in mind:
 
 > Where are you most likely to encounter AI—in student learning, assessment, your own preparation, or more than one of these?
 
@@ -122,7 +122,7 @@ For the module you selected:
 
 ## Preparing AI-Ready Graduates
 
-NP aims to prepare students to become **AI-ready professionals** who combine:
+NP aims to prepare **AI-ready graduates** who combine:
 
 - Strong human qualities.
 - Domain knowledge and skills.
@@ -134,7 +134,7 @@ This vision is supported by three commitments:
 - **AI-integrated learning and assessment:** Students learn to work with AI while still demonstrating what they know and can do.
 - **AI-enabled learning support:** AI may provide suitable practice, feedback and personalised support.
 
-These commitments give context to NP’s approaches. At Level 1, focus on what each approach helps us consider.
+These commitments shape NP’s approaches. At Level 1, focus on the purpose of each approach.
 
 ## Five Strategies, One Goal
 
@@ -148,14 +148,14 @@ NP’s five strategies work together towards the same goal.
 | **Enable personalised learning** | Use suitable AI-enabled tutors and learning assistants to scaffold learning. |
 | **Strengthen human skills and resilience** | Develop judgement, ethics, creativity, communication and collaboration. |
 
-You will not work through all five strategies in depth here. Instead, the rest of this package follows four practical questions:
+This package focuses on four practical questions that cut across the five strategies:
 
 1. **Curriculum and the 3As:** What should students learn?
 2. **Learning and PAIR:** How can students learn with AI?
 3. **Assessment:** How will students show what they can do?
 4. **Tools and data:** How should AI be used responsibly?
 
-These questions form the thread for Parts 3 to 7. A decision in one area may affect the others. For example, what students must learn affects how they practise and what an assessment should require.
+These questions guide Parts 3 to 7. A decision in one area may affect the others. For example, what students must learn affects how they practise and what an assessment should require.
 
 ---
 
@@ -165,9 +165,9 @@ AI can now assist with tasks that students previously completed independently. T
 
 Students need enough disciplinary knowledge and judgement to recognise when AI output is wrong, unsafe or unsuitable.
 
-NP students build a common AI-literacy foundation. The 3As then help course teams consider the disciplinary, professional and human capabilities students need in their own fields.
+NP students build a common foundation in AI literacy. The 3As then help course and module teams identify the disciplinary, professional and human capabilities students need in their fields.
 
-NP’s **3As framework** helps us consider the balance between human capability and AI-enabled practice.
+NP’s **3As framework** helps course and module teams balance human capability with AI-enabled practice.
 
 ## Anchor
 
@@ -227,29 +227,7 @@ Students might:
 - Prototype a new AI-supported solution.
 - Explore how AI may change future professional practice.
 
-Not every module needs an Advance component. It is most relevant when students have sufficient disciplinary foundations to explore new possibilities meaningfully.
-
-## Quick Check
-
-Which of the 3As best fits each example?
-
-### Example 1
-
-Students complete a safety-critical procedure independently and explain their reasoning.
-
-**Suggested response:** Anchor. Students demonstrate an essential professional capability independently.
-
-### Example 2
-
-Students use AI to generate possible solutions, evaluate them against disciplinary criteria and justify their final choice.
-
-**Suggested response:** Augment. AI supports the workflow, while students retain responsibility for the judgement.
-
-### Example 3
-
-Students prototype an AI-enabled service for an unmet industry need.
-
-**Suggested response:** Advance. Students explore a potentially transformative professional application.
+Advance is most relevant when students have sufficient disciplinary foundations to explore new possibilities meaningfully.
 
 ## Apply It to Your Module
 
@@ -259,11 +237,11 @@ Consider:
 
 > One professional or disciplinary workflow that AI might Augment is...
 
-At Level 1, use the 3As to recognise these distinctions in a familiar module.
+At Level 1, use the 3As to spot these distinctions in a module you teach or support.
 
 ## Key Takeaway
 
-The 3As help us consider:
+The 3As help you ask:
 
 - What students must still be able to do independently.
 - Where AI might enhance professional practice.
@@ -277,7 +255,7 @@ Not every learning outcome needs to change, but it is worth considering how AI m
 
 AI can support learning when it is used for a clear purpose and does not remove the thinking or practice students need.
 
-NP’s direction is for AI-enabled tutors and learning assistants to **scaffold and coach**, rather than simply provide answers. For example, D2L Lumi Tutor provides students with on-demand summaries, flashcards and practice questions grounded in module content. Other adaptive-learning support is being piloted.
+At NP, AI-enabled tutors and learning assistants are intended to **scaffold and coach**, rather than simply provide answers. For example, D2L Lumi Tutor provides students with on-demand summaries, flashcards and practice questions grounded in module content. Other adaptive-learning support is being piloted.
 
 ## Possible Benefits
 
@@ -305,7 +283,7 @@ AI may produce output that is:
 - Unsuitable for the learner level.
 - Unsupported by reliable evidence.
 
-Poorly planned AI use may also:
+Without a clear learning purpose, AI may also:
 
 - Reduce independent thinking.
 - Remove useful practice.
@@ -346,7 +324,7 @@ AI supports initial exploration. It does not replace empathy, professional judge
 
 ## Pause and Consider
 
-For your selected module:
+For the module you have in mind:
 
 > Where could AI support practice, feedback or scaffolding?
 
@@ -356,9 +334,9 @@ For your selected module:
 
 # Part 5: PAIR—Learning With AI
 
-NP’s **PAIR framework** provides a simple structure for AI-supported learning and problem-solving.
+NP’s **PAIR framework** gives students a simple structure for AI-supported learning and problem-solving.
 
-PAIR is designed to remain useful across disciplines and changing tools. It keeps the learning:
+PAIR works across disciplines and as tools change. It keeps the learning:
 
 - **Human-centred:** AI supports rather than replaces human judgement.
 - **Skill-focused:** Students practise transferable skills such as problem framing, evaluation and reflection.
@@ -409,9 +387,9 @@ Students consider:
 - What risks or ethical issues arose.
 - What they would do differently.
 
-The reflection must represent the student’s own thinking.
+The reflection should show the student’s own thinking.
 
-## Quick Check
+## Example: A Communication Campaign
 
 A student needs to develop a communication campaign. A sensible PAIR sequence would be:
 
@@ -437,7 +415,7 @@ This turns AI output into material for learning instead of treating it as the an
 
 ## Apply It to Your Module
 
-> Where could students compare, check or improve an AI-generated output rather than simply accept it?
+> In a module you teach or support, where could students compare, check or improve AI-generated output rather than simply accept it?
 
 ## Key Takeaway
 
@@ -480,7 +458,7 @@ If AI can generate the final product without the student demonstrating the inten
 
 ## NP’s Position on GenAI in Summative Assessment
 
-NP’s Guidelines for GenAI Use in Summative Assessment took effect in AY2026. Every NP lecturer should know the following requirements.
+NP’s Guidelines for GenAI Use in Summative Assessment took effect in AY2026. These are the key requirements for your assessments.
 
 ### GenAI is allowed unless explicitly prohibited
 
@@ -492,7 +470,7 @@ This does not mean that students may use AI in any way they choose. They must fo
 
 All submission cover pages must include the required **GenAI Use Declaration**.
 
-Students must declare that they have used GenAI according to the assessment conditions. Where use is restricted, they must also be prepared to produce the required evidence of their AI use.
+Students must complete the declaration for every submission and state whether and how they used GenAI in line with the assessment conditions. Where use is restricted, they must also be prepared to produce the required evidence of their AI use.
 
 GenAI use must also be cited according to the applicable instructions.
 
@@ -561,7 +539,7 @@ Instruction B is clearer. It states:
 - What evidence must be retained.
 - What must be declared.
 
-A clear assignment descriptor should state:
+A clear assignment descriptor should cover:
 
 1. The GenAI stance for each component.
 2. Permitted purposes.
@@ -570,7 +548,7 @@ A clear assignment descriptor should state:
 5. Verification, citation and declaration requirements.
 6. Uses that are restricted or prohibited.
 
-## Communicate—Do Not Only Publish
+## Discuss the Conditions With Students
 
 Written conditions are necessary, but students may still interpret them differently.
 
@@ -597,7 +575,7 @@ Students might:
 - Discuss ambiguous examples.
 - Participate in a mock run.
 
-Students should not encounter complex AI conditions for the first time when they submit their work.
+Give students a chance to work with the conditions before the summative submission.
 
 ## Staff Use of GenAI in Grading
 
@@ -631,14 +609,14 @@ Begin with the learning outcome. Then decide what students must demonstrate, whe
 
 AI tools may support your work and your students’ learning.
 
-At Level 1, you should be able to:
+At Level 1, focus on four things:
 
 - Recognise potentially relevant tools.
 - Describe possible T&L uses.
 - Identify important limitations and risks.
 - Decide what needs to be checked before use.
 
-## NP-Approved Tools
+## NP-Supported Tools
 
 ### M365 Copilot
 
@@ -677,9 +655,9 @@ You compare the suggestions with the module content, correct inaccuracies and ad
 
 M365 Copilot and Pair.gov.sg are cleared for **Official (Closed)** and **Sensitive Normal** content. Use them according to NP’s current guidance for the information and purpose involved.
 
-Most routine T&L content is non-classified. Nevertheless, consider what information you are entering and whether the selected tool is approved for it.
+Most routine T&L content is non-classified. Even so, check what information you are entering and whether the tool is approved for it.
 
-## Apply Four Checks
+## Ask Four Questions
 
 Before using an AI tool, consider:
 
@@ -723,26 +701,6 @@ Information requiring care includes:
 
 When unsure, check the tool’s current NP approval and data conditions before entering the information.
 
-## Quick Check
-
-### Situation A
-
-You use Pair.gov.sg to generate three possible low-stakes learning activities. You check them against the learning outcome and adapt one for your class.
-
-This is a potentially appropriate use. The purpose is clear and the lecturer reviews the output.
-
-### Situation B
-
-You upload student grades and personal comments into a public AI tool that has not been approved for this information.
-
-This is inappropriate. The tool is not approved for the information, and AI should not make student-support decisions.
-
-### Situation C
-
-You use M365 Copilot to produce an initial summary of feedback. You check the summary against the source information, look for minority views and make the final interpretation yourself.
-
-This may be appropriate when the use follows NP’s current conditions. The AI summary remains a starting point for human review.
-
 ## Treat AI-Generated Insights as Starting Points
 
 AI may summarise comments, group themes or suggest patterns. These outputs are not final findings or decisions.
@@ -776,7 +734,7 @@ Before using the output, check that:
 
 ## Apply It to Your Module
 
-Choose one possible use of M365 Copilot, Pair.gov.sg or another approved tool.
+Think of one possible use of M365 Copilot, Pair.gov.sg or another approved tool.
 
 Consider:
 
@@ -800,7 +758,7 @@ Use these four questions.
 
 > How is AI changing what students may need to know or do in this discipline?
 
-## Facilitation
+## Learning
 
 > Where might AI support learning—and where might it replace essential thinking or practice?
 
@@ -812,7 +770,7 @@ Use these four questions.
 
 > Is the proposed tool suitable for the learning purpose and information involved?
 
-These questions provide a practical starting point for AI-Aware teaching at NP.
+These questions provide a practical starting point for AI-aware teaching at NP.
 
 ## Your AI-Aware Module Snapshot
 
@@ -835,9 +793,9 @@ Possible next steps include:
 
 ---
 
-# Look Back at Your Starting Point
+# Look Back
 
-Recall the statement you selected at the start.
+Think back to the module and questions you carried through the package.
 
 Now consider:
 
@@ -847,26 +805,23 @@ Now consider:
 
 > One action I am better prepared to take is...
 
-AI awareness is not measured by the number of tools you have used. It begins with recognising what matters and responding with sound educational and professional judgement.
+Being AI-aware starts with recognising what matters and responding with sound educational and professional judgement.
 
 ---
 
 # Module Summary
 
-You have learned that:
+The key ideas are:
 
 - NP aims to develop AI-ready graduates who combine human qualities, domain expertise and responsible AI capability.
-- The 3As help us consider Anchor, Augment and Advance capabilities.
-- PAIR helps students frame problems, select AI, interact critically and reflect.
-- AI can support learning but can also introduce error, bias, over-reliance, access and data risks.
-- Assessment decisions should begin with the learning outcome and credible evidence of learning.
-- GenAI use in summative assessment is allowed unless explicitly prohibited, but students must follow all stated conditions.
-- Every submission cover page requires a GenAI Use Declaration.
-- Declaring a prohibited use does not make it acceptable.
-- GenAI assessment conditions must be communicated in writing and discussed with students.
-- M365 Copilot and Pair.gov.sg may support T&L tasks and are cleared for Official (Closed) and Sensitive Normal content, subject to NP’s current guidance.
-- AI-generated output remains a starting point for human checking and judgement.
-- Staff remain responsible for learning materials, assessment decisions, grades and feedback.
+- The 3As help course and module teams identify Anchor, Augment and Advance capabilities.
+- PAIR helps students frame problems, use AI, interact critically and reflect.
+- AI may support learning, but its output and effect on learning must be checked.
+- Assessment decisions begin with the learning outcome and credible evidence of what students can do.
+- GenAI use in summative assessment is allowed unless explicitly prohibited. Every submission cover page requires a GenAI Use Declaration, and prohibited uses remain unacceptable even when declared.
+- GenAI assessment conditions must be stated clearly and discussed with students.
+- M365 Copilot and Pair.gov.sg are cleared for Official (Closed) and Sensitive Normal content, subject to NP’s current guidance.
+- Lecturers remain responsible for learning materials, assessment decisions, grades and feedback.
 
 ---
 
@@ -874,7 +829,7 @@ You have learned that:
 
 You have reached the end of **AI in T&L Essentials: Level 1 (AI-Aware)**.
 
-You should now be equipped to:
+You are now equipped to:
 
 - Recognise AI’s implications for curriculum, learning and assessment.
 - Explain NP’s key AI-enabled T&L approaches.
@@ -885,4 +840,4 @@ You should now be equipped to:
 
 Complete the separately administered quiz to fulfil the programme’s completion requirements.
 
-Being AI-Aware does not mean having every answer. It means knowing what to consider, which NP approaches apply and where to seek further guidance as you move towards purposeful application.
+Being AI-aware means knowing what to consider, which NP approaches apply and where to seek guidance before taking the next step.
