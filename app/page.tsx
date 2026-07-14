@@ -759,7 +759,7 @@ function LecturerPracticeMap() {
       title: "Design learning",
       domain: "Curriculum Design & Development",
       question: "What may need to change?",
-      detail: "Review what students need to know, practise and do as AI changes your discipline and its workplace practices.",
+      detail: "Review what students need to know, practise and do as AI changes the discipline.",
       icon: BookOpen,
       tone: "design",
     },
@@ -809,7 +809,7 @@ function LecturerPracticeMap() {
           <i><SelectedIcon size={21} strokeWidth={2.2} aria-hidden="true" /></i>
           <div><span>{selected.domain}</span><strong>{selected.question}</strong><p>{selected.detail}</p></div>
         </div>
-        <p className="practice-map-footnote"><b>Across all four:</b> draw on your industry expertise to keep learning relevant and use professional judgement when AI is involved.</p>
+        <p className="practice-map-footnote"><b>Across all four:</b> use professional judgement when AI is involved and keep the learning purpose in view.</p>
       </div>
     </figure>
   );

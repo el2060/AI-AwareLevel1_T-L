@@ -31,7 +31,7 @@ By the end of this module, you will be able to:
 
 The Level 1 focus is awareness: recognise the key issues, understand NP’s shared approaches and identify what may need attention in a module you teach, lead or support.
 
-This follows the everyday work described in the TLCF: designing curriculum, facilitating learning and assessing learning. It also brings in reflective practice, responsible use of data and technology, and the industry context that keeps your module current.
+This follows the everyday work described in the TLCF: designing curriculum, facilitating learning and assessing learning. It also brings in reflective practice and responsible use of data and technology.
 
 ---
 
@@ -80,7 +80,7 @@ AI may matter across the everyday work of teaching:
 - **Assess learning:** Keep evidence of students’ own thinking, judgement and performance visible.
 - **Review and improve:** Use feedback, learning information and suitable tools to improve the module with care.
 
-Your industry knowledge helps you judge what remains important in professional practice. AI is one factor to consider; the learning purpose comes first.
+AI is one factor to consider; the learning purpose comes first.
 
 Students may use AI to:
 
