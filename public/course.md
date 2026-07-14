@@ -299,17 +299,19 @@ PAIR works across disciplines and as tools change. It keeps learning:
 - **Responsibility-centred:** Students and lecturers remain accountable for judgement, choices and learning.
 - **Platform-independent:** The process can be used with different AI tools as they evolve.
 
-The four connected stages are **Problem framing, AI tool selection, Iteration and Reflection**. Students frame the problem before choosing a tool, iterate critically rather than accepting the first response, and reflect on both the outcome and the learning process.
+The four connected stages are **Problem, AI, Interaction and Reflection**. Students formulate the problem before choosing a tool, interact critically rather than accepting the first response, and reflect on both the outcome and the learning process.
 
 *Adapted from: Acar, O. A. (2023). “Are Your Students Ready for AI? A 4-Step Framework for a ChatGPT World.” HBP Education.*
+
+<!--pair-design-guide-->
 
 ## Example: A Communication Campaign
 
 A student needs to develop a communication campaign. They could use PAIR to:
 
-1. **Problem framing:** Clarify the audience, purpose, constraints and intended outcome.
-2. **AI tool selection:** Decide whether an AI tool is suitable for generating initial ideas.
-3. **Iteration:** Evaluate the ideas, check assumptions and refine selected options.
+1. **Problem:** Clarify the audience, purpose, constraints and intended outcome.
+2. **AI:** Decide whether an AI tool is suitable for generating initial ideas.
+3. **Interaction:** Experiment with the tool, evaluate the ideas, check assumptions and refine selected options.
 4. **Reflection:** Explain how AI affected the creative process and where human judgement mattered.
 
 ## A Shorter Activity Pattern
@@ -333,7 +335,7 @@ This turns AI output into material for learning instead of treating it as the an
 
 ## Key Takeaway
 
-PAIR keeps the focus on problem framing, deliberate tool selection, critical iteration and reflection. It positions AI as a tool within learning—not as a substitute for learning.
+PAIR keeps the focus on problem formulation, deliberate tool selection, critical interaction and reflection. It positions AI as a tool within learning—not as a substitute for learning.
 
 ---
 

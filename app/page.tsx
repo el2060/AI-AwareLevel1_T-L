@@ -450,8 +450,8 @@ function ThreeAsActivity() {
 }
 
 function PairBuilder() {
-  const steps = ["Problem framing", "AI tool selection", "Iteration", "Reflection"];
-  const shuffled = ["Reflection", "Iteration", "Problem framing", "AI tool selection"];
+  const steps = ["Problem", "AI", "Interaction", "Reflection"];
+  const shuffled = ["Reflection", "Interaction", "Problem", "AI"];
   const [picked, setPicked] = useState<string[]>([]);
   const [nudge, setNudge] = useState("");
   const next = steps[picked.length];
@@ -473,7 +473,7 @@ function PairBuilder() {
                 setPicked([...picked, step]);
                 setNudge("");
               } else {
-                setNudge(picked.length === 0 ? "Start by framing the problem or task students need to address." : "Not quite—think about what should follow the stage you just placed.");
+                setNudge(picked.length === 0 ? "Start with the problem or task students need to address." : "Not quite—think about what should follow the stage you just placed.");
               }
             }}
           >{step}</button>
@@ -484,10 +484,34 @@ function PairBuilder() {
   );
 }
 
+function PairDesignGuide() {
+  const [active, setActive] = useState(0);
+  const stages = [
+    { name: "Problem", action: "Formulate the problem", learner: "Identify the core problem, its components and constraints.", facilitator: "What is the context and problem? Is it complex or open to different approaches? What is the deliverable?", icon: Lightbulb, tone: "problem" },
+    { name: "AI", action: "Select suitable AI tools", learner: "Explore and identify the most suitable AI tools for the problem.", facilitator: "Which tools may be relevant? How will students review and justify their choice?", icon: Bot, tone: "ai" },
+    { name: "Interaction", action: "Interact with the AI tools", learner: "Experiment with different ways to interact; critically evaluate outputs and integrate them to tackle the problem.", facilitator: "What will students do with the tool—for example, generate ideas, gather resources, craft an outline or refine a draft? How will they evaluate the output?", icon: MessageCircle, tone: "interaction" },
+    { name: "Reflection", action: "Reflect on the experience", learner: "Evaluate how the AI tool helped or hindered problem-solving, and reflect on collaborating with AI and its broader implications.", facilitator: "How will students evaluate their use of AI, including what helped, what got in the way and where human judgement mattered?", icon: Scale, tone: "reflection" },
+  ];
+  const selected = stages[active];
+  const Icon = selected.icon;
+  return (
+    <section className={`pair-design-guide tone-${selected.tone}`} aria-label="Design an AI-enabled learning experience with PAIR">
+      <div className="pair-design-heading"><span>Design with PAIR</span><h2>Use the four stages to shape an activity</h2><p>Choose a stage to see what students do and the design questions you can use as a facilitator.</p></div>
+      <div className="pair-design-tabs" role="tablist" aria-label="PAIR stages">
+        {stages.map((stage, index) => <button key={stage.name} type="button" role="tab" aria-selected={active === index} className={active === index ? "active" : ""} onClick={() => setActive(index)}><span>{stage.name[0]}</span>{stage.name}</button>)}
+      </div>
+      <div className="pair-design-detail" role="tabpanel">
+        <span className="pair-design-icon"><Icon size={22} strokeWidth={2} /></span>
+        <div><span className="pair-design-kicker">{selected.name}</span><h3>{selected.action}</h3><div className="pair-design-columns"><section><strong>Learners will</strong><p>{selected.learner}</p></section><section><strong>Consider as facilitator</strong><p>{selected.facilitator}</p></section></div></div>
+      </div>
+    </section>
+  );
+}
+
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
-    { name: "Pedagogy · PAIR", question: "Help students learn with AI", detail: "NP has adopted and adapted PAIR as a visible process for problem framing, AI tool selection, critical iteration and reflection.", icon: MessageCircle },
+    { name: "Pedagogy · PAIR", question: "Help students learn with AI", detail: "NP has adopted and adapted PAIR as a visible process for problem framing, AI tool selection, critical interaction and reflection.", icon: MessageCircle },
     { name: "Curriculum · 3As", question: "Keep outcomes, learning and assessment aligned", detail: "The 3As help course and module teams review learning outcomes, learning activities and assessment together as AI changes the discipline.", icon: Sparkles },
     { name: "Assessment", question: "Keep learning visible", detail: "Assessment conditions should show what students must demonstrate and how AI may be used.", icon: ClipboardCheck },
     { name: "Personalised learning", question: "Scaffold practice and feedback", detail: "AI-enabled tutors and learning assistants can support practice, feedback and different learning needs.", icon: Bot },
@@ -699,9 +723,9 @@ function ThreeAsInfographic() {
 
 function PairInfographic() {
   const stages = [
-    { letter: "P", name: "Problem framing", action: "Frame the task", detail: "Clarify the purpose, context, constraints and required outcome.", cue: "What are we trying to solve?", tone: "problem" },
-    { letter: "A", name: "AI tool selection", action: "Choose deliberately", detail: "Decide whether AI is suitable, which tool fits and what information can be used safely.", cue: "What can the tool help with?", tone: "ai" },
-    { letter: "I", name: "Iteration", action: "Work, check and refine", detail: "Question, compare, check and refine the output before combining it with your own knowledge.", cue: "How will we test and improve the output?", tone: "interaction" },
+    { letter: "P", name: "Problem", action: "Formulate the problem", detail: "Identify the core problem, its components and constraints.", cue: "What are we trying to solve?", tone: "problem" },
+    { letter: "A", name: "AI", action: "Select suitable AI tools", detail: "Explore and identify the most suitable AI tools for the problem.", cue: "What can the tool help with?", tone: "ai" },
+    { letter: "I", name: "Interaction", action: "Interact with AI tools", detail: "Experiment, critically evaluate outputs and integrate them to tackle the problem.", cue: "How will we test and use the output?", tone: "interaction" },
     { letter: "R", name: "Reflection", action: "Learn from the process", detail: "Identify what helped or hindered, where human judgement mattered and what to change next time.", cue: "What did we learn?", tone: "reflection" },
   ];
   return (
@@ -818,11 +842,13 @@ export default function Home() {
 
   const meta = sectionMeta[active] ?? sectionMeta[0];
   const useCaseMarker = "<!--use-case-explorer-->";
+  const pairDesignMarker = "<!--pair-design-guide-->";
   const moduleSummaryMarker = "<!--module-summary-->";
   const sectionMarkdown = withoutTitle(current.markdown);
   const hasUseCaseExplorer = current.title.startsWith("Part 7") && sectionMarkdown.includes(useCaseMarker);
+  const hasPairDesignGuide = current.title.startsWith("Part 5") && sectionMarkdown.includes(pairDesignMarker);
   const hasModuleSummary = current.title === "Module Summary" && sectionMarkdown.includes(moduleSummaryMarker);
-  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasModuleSummary ? moduleSummaryMarker : "";
+  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairDesignGuide ? pairDesignMarker : hasModuleSummary ? moduleSummaryMarker : "";
   const [contentBeforeInteractive, contentAfterInteractive = ""] = activeMarker
     ? sectionMarkdown.split(activeMarker)
     : [sectionMarkdown];
@@ -886,6 +912,7 @@ export default function Home() {
         />
 
         {hasUseCaseExplorer && <UseCaseExplorer />}
+        {hasPairDesignGuide && <PairDesignGuide />}
         {hasModuleSummary && <ModuleSummary />}
 
         {contentAfterInteractive && <article
