@@ -531,42 +531,17 @@ Start with the T&L need, not the tool. A useful tool choice depends on the learn
 
 ### M365 Copilot
 
-M365 Copilot may support tasks within the Microsoft 365 environment, such as:
-
-- Drafting an announcement.
-- Producing an initial outline for learning materials.
-- Summarising a document for review.
-- Generating initial questions or examples.
-- Summarising feedback.
-- Producing meeting recaps or action points.
-- Rewriting content for clarity or a particular audience.
-
-#### Example
-
-You ask M365 Copilot to draft an announcement reminding students about an upcoming consultation and the preparation required.
-
-Before using it, you check the dates, instructions, tone and clarity. Copilot provides a starting draft; you remain responsible for the final communication.
+Within NP's Microsoft 365 environment, Copilot can help you review connected documents, summarise feedback, draft communications and prepare a first version of learning materials.
 
 ### Pair.gov.sg
 
-Pair.gov.sg may support tasks such as:
-
-- Brainstorming learning activities.
-- Drafting or rewriting T&L materials.
-- Generating initial examples.
-- Explaining a concept at different levels.
-- Suggesting discussion questions.
-- Producing an initial structure for a lesson or activity.
-
-#### Example
-
-You ask Pair.gov.sg to suggest three ways of explaining a difficult concept to first-year students.
-
-You compare the suggestions with the module content, correct inaccuracies and adapt one explanation for your students. The tool expands your options; your disciplinary knowledge determines what is accurate and suitable.
+Pair.gov.sg can help you explore alternatives, draft or rewrite T&L materials, generate examples, explain concepts at different levels and structure an activity.
 
 M365 Copilot and Pair.gov.sg are cleared for **Official (Closed)** and **Sensitive Normal** content. Use them according to NP’s current guidance for the information and purpose involved.
 
 Most routine T&L content is non-classified. Even so, check what information you are entering and whether the tool is approved for it.
+
+<!--use-case-explorer-->
 
 ## Ask Four Questions
 

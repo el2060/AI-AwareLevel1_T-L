@@ -422,6 +422,90 @@ function StrategyMap() {
   );
 }
 
+function UseCaseExplorer() {
+  const [active, setActive] = useState(0);
+  const useCases = [
+    {
+      title: "Review module materials",
+      tool: "M365 Copilot",
+      icon: BookOpen,
+      use: "Flag outdated references, duplicated content, misalignment or inconsistent instructions across module documents.",
+      prompt: "Review these module documents. List outdated references, duplicated content, misalignment with learning outcomes and inconsistent student instructions. Name the source document. Do not rewrite.",
+      check: "Verify each flag against the actual document. The tool can misread structure or highlight an intentional choice.",
+      judgement: "What changes to make, with your module team and the 3As in mind.",
+    },
+    {
+      title: "Draft industry examples",
+      tool: "M365 Copilot or Pair.gov.sg",
+      icon: Lightbulb,
+      use: "Generate a first set of worked examples, scenarios or practice questions in a workplace context.",
+      prompt: "Draft three Year [1/2/3] workplace examples for [concept] in [diploma]. Include a common misconception to spot. Use plain English for a first exposure.",
+      check: "Check accuracy, learner level, tone and whether the industry detail is realistic.",
+      judgement: "What is technically and professionally correct, and what goes in front of students.",
+    },
+    {
+      title: "Summarise feedback themes",
+      tool: "M365 Copilot",
+      icon: MessageCircle,
+      use: "Group de-identified open-ended feedback into themes so you can review it more efficiently.",
+      prompt: "Summarise these de-identified feedback comments into themes. For each, give a short label and approximate number of related comments. List minority views separately. Do not infer causes or recommend actions.",
+      check: "Read a sample of original comments. Look for omissions, minority views and identifying details.",
+      judgement: "How to interpret the feedback and what action, if any, is appropriate.",
+    },
+    {
+      title: "Test assignment clarity",
+      tool: "M365 Copilot or Pair.gov.sg",
+      icon: ClipboardCheck,
+      use: "Surface instructions or GenAI conditions that a student may read in more than one way.",
+      prompt: "Read this assignment brief as a Year 2 student. Identify unclear instructions, marking expectations and GenAI conditions. Then ask five questions a confused student may ask.",
+      check: "Compare with questions students actually ask. The tool simulates a reader; it does not know your students.",
+      judgement: "The assessment design and how you will explain the conditions in class.",
+    },
+    {
+      title: "Spot patterns in quiz results",
+      tool: "M365 Copilot in Excel",
+      icon: Scale,
+      use: "Identify low-success questions or topic patterns in a de-identified question-level results export.",
+      prompt: "This sheet contains de-identified question-level quiz results. Identify low-success questions, possible flawed questions and weak topic areas. Make no claims about individual students or causes.",
+      check: "Verify the figures and consider context: a weak result may reflect a flawed question, timing or teaching sequence.",
+      judgement: "What to revisit in teaching. Decisions about individual students remain with you.",
+    },
+    {
+      title: "Create alternative formats",
+      tool: "M365 Copilot or Pair.gov.sg",
+      icon: Users,
+      use: "Create a simpler explanation, step-by-step version or short self-check activity from the same source material.",
+      prompt: "Create a simpler explanation, a step-by-step worksheet version and five self-check questions for [concept]. Keep the technical meaning identical and flag anything you were unsure how to simplify.",
+      check: "Check that the meaning and learning standard are preserved, and that examples are inclusive and accessible.",
+      judgement: "How to support your learners without replacing appropriate human or institutional support.",
+    },
+  ];
+  const selected = useCases[active];
+  const Icon = selected.icon;
+  return (
+    <section className="use-case-explorer" aria-label="Explore common AI-supported teaching and learning tasks">
+      <div className="use-case-heading"><span>Explore common T&amp;L uses</span><h2>Start with a task you already do</h2><p>Choose one use case. Notice the boundary between a useful first pass and the judgement that remains yours.</p></div>
+      <div className="use-case-tabs">
+        {useCases.map((item, index) => {
+          const ItemIcon = item.icon;
+          return <button key={item.title} type="button" className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}><ItemIcon size={18} aria-hidden="true" /><span>{item.title}</span></button>;
+        })}
+      </div>
+      <div className="use-case-detail" aria-live="polite">
+        <div className="use-case-title"><span><Icon size={22} aria-hidden="true" /></span><div><small>Suggested tool</small><strong>{selected.tool}</strong></div></div>
+        <h3>{selected.title}</h3><p>{selected.use}</p>
+        <div className="prompt-starter"><strong>Prompt starter</strong><p>{selected.prompt}</p></div>
+        <div className="use-case-checks"><div><b>Check</b><p>{selected.check}</p></div><div><b>Your judgement</b><p>{selected.judgement}</p></div></div>
+      </div>
+      <p className="use-case-reminder"><strong>The pattern:</strong> give relevant context, set a bounded task, state the constraints, then check the output. The tool drafts, flags or summarises. You decide.</p>
+    </section>
+  );
+}
+
+function ToolChecksActivity({ value, onChange }: { value: string; onChange: (value: string) => void }) {
+  return <TapChecklist eyebrow="Four checks" title="Before using AI output with students, what will you check?" prompt="Select all four. Each one matters." items={["Learning value", "Output quality", "Data and ethics", "Human oversight"]} value={value} onChange={onChange} completionTitle="A sound AI-aware check" completionText="A suitable use has a clear learning purpose, an appropriate tool, checked output, safe information handling and a person making the final decision." />;
+}
+
 function SectionInteractive({ title, notes, onChange }: { title: string; notes: ActivityNotes; onChange: (key: string, value: string) => void }) {
   if (title === "AI in T&L Essentials: Level 1 (AI-Aware)") return null;
   if (title.startsWith("Part 1")) return <PulseActivity value={notes.pulse ?? ""} onChange={(value) => onChange("pulse", value)} />;
@@ -438,11 +522,11 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
     { label: "It depends on how realistic the generated responses are.", correct: false, feedback: "The issue is not realism. The assessment requires a real human interaction." },
     { label: "No. GenAI cannot replace the real interaction required by the task.", correct: true, feedback: "Correct. Simulating a required human interaction is always prohibited." },
   ]} /><TapChecklist eyebrow="Make it clear" title="What should the assignment descriptor spell out?" prompt="The instruction says only: ‘You may use AI appropriately.’ Select every detail students still need." items={["What AI may be used for", "What students must do themselves", "What evidence they must keep", "What they must check, cite and declare", "What is restricted or prohibited"]} value={notes.assessmentcheck ?? ""} onChange={(value) => onChange("assessmentcheck", value)} completionTitle="That is the clearer brief" completionText="Students should know the permitted purpose, their own contribution, the evidence to retain, and the checking and declaration requirements." /></div>;
-  if (title.startsWith("Part 7")) return <div className="activity-stack"><ChoiceCheck eyebrow="Tool judgement" question="Which is the soundest use?" choices={[
+  if (title.startsWith("Part 7")) return <ChoiceCheck eyebrow="Tool judgement" question="Which is the soundest use?" choices={[
     { label: "Use Pair.gov.sg to suggest activities, then check and adapt one.", correct: true, feedback: "The purpose is clear, the tool is suitable, and the lecturer reviews the output." },
     { label: "Use an unapproved public tool to analyse named student records.", correct: false, feedback: "The tool is not approved for the information involved." },
     { label: "Let an AI summary decide which students need intervention.", correct: false, feedback: "AI may support an initial review, but a person must interpret the context and make the decision." },
-  ]} /><TapChecklist eyebrow="Four checks" title="Before using AI output with students, what will you check?" prompt="Select all four. Each one matters." items={["Learning value", "Output quality", "Data and ethics", "Human oversight"]} value={notes.toolchecks ?? ""} onChange={(value) => onChange("toolchecks", value)} completionTitle="A sound AI-aware check" completionText="A suitable use has a clear learning purpose, an appropriate tool, checked output, safe information handling and a person making the final decision." /></div>;
+  ]} />;
   if (title.startsWith("Part 8")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep your chosen module in mind. Tap each question once you have considered it." items={["What is AI changing?", "What must students still learn and do?", "Where might AI support learning?", "What assessment, tool or data condition needs attention?"]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered the change, the learning to protect, a possible support and a condition to check." />;
   if (title.startsWith("Look Back")) return <CarryForwardActivity value={notes.lookbackchoice ?? ""} onChange={(value) => onChange("lookbackchoice", value)} />;
   if (title === "Module Summary") return <ConfidenceActivity value={notes.confidence ?? ""} onChange={(value) => onChange("confidence", value)} />;
@@ -647,6 +731,10 @@ export default function Home() {
   }
 
   const meta = sectionMeta[active] ?? sectionMeta[0];
+  const useCaseMarker = "<!--use-case-explorer-->";
+  const sectionMarkdown = withoutTitle(current.markdown);
+  const [contentBeforeUseCases, contentAfterUseCases = ""] = sectionMarkdown.split(useCaseMarker);
+  const hasUseCaseExplorer = current.title.startsWith("Part 7") && sectionMarkdown.includes(useCaseMarker);
 
   return (
     <div className="site-shell">
@@ -701,12 +789,21 @@ export default function Home() {
         {active === 0 ? <OpeningVisual /> : <SectionVisual title={current.title} />}
         {active > 0 && active !== 5 && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
         <article
-          key={current.id}
+          key={`${current.id}-before`}
           className="course-content"
-          dangerouslySetInnerHTML={{ __html: markdownToHtml(withoutTitle(current.markdown)) }}
+          dangerouslySetInnerHTML={{ __html: markdownToHtml(contentBeforeUseCases) }}
         />
 
+        {hasUseCaseExplorer && <UseCaseExplorer />}
+
+        {contentAfterUseCases && <article
+          key={`${current.id}-after`}
+          className="course-content course-content-continuation"
+          dangerouslySetInnerHTML={{ __html: markdownToHtml(contentAfterUseCases) }}
+        />}
+
         {active === 5 && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
+        {current.title.startsWith("Part 7") && <ToolChecksActivity value={activityNotes.toolchecks ?? ""} onChange={(value) => setActivityValue("toolchecks", value)} />}
 
         {sectionBridges[active] && active < sections.length - 1 && (
           <div className="section-bridge">
