@@ -20,7 +20,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: auto; }
 body {
   margin: 0;
   background: var(--canvas);
@@ -181,8 +181,8 @@ button { color: inherit; }
 .tone-teal .section-mark { background: var(--teal); color: #155c58; }
 .tone-green .section-mark { background: var(--green); color: #176126; }
 
-.course-content { padding-top: 4px; animation: section-in .42s ease both; }
-@keyframes section-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.course-content { padding-top: 4px; animation: section-in .22s ease-out both; }
+@keyframes section-in { from { opacity: 0; } to { opacity: 1; } }
 .page-title {
   margin: 0 0 24px;
   max-width: 680px;

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { BookOpen, Bot, ClipboardCheck, Lightbulb, MessageCircle, Scale, ShieldCheck, Sparkles, Users } from "lucide-react";
 
 type Section = {
@@ -699,8 +699,10 @@ export default function Home() {
       .then(setCourse);
   }, []);
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  useLayoutEffect(() => {
+    // Move to the start of the new section before it is painted. This avoids
+    // replaying a long upward scroll whenever a lecturer moves on.
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, [active]);
 
   function selectSection(index: number) {
