@@ -191,6 +191,10 @@ button { color: inherit; }
   letter-spacing: -.048em;
   font-weight: 760;
 }
+.page-title.home-title { max-width: none; margin-bottom: 28px; font-size: clamp(34px, 4.4vw, 44px); line-height: 1.1; letter-spacing: -.038em; font-weight: 720; }
+.home-title > span, .home-title > small { display: block; }
+.home-title > small { margin-top: 10px; color: var(--blue-active); font-size: 14px; font-weight: 720; letter-spacing: .055em; line-height: 1.3; text-transform: uppercase; }
+.home-title > small i { margin: 0 7px; color: #9fb9d1; font-style: normal; }
 .course-content h2 { margin: 50px 0 16px; font-size: 30px; line-height: 1.16; letter-spacing: -.034em; }
 .course-content h3 { margin: 34px 0 12px; font-size: 22px; line-height: 1.25; letter-spacing: -.02em; }
 .course-content h4 { margin: 26px 0 9px; font-size: 17px; }
@@ -550,6 +554,7 @@ button { color: inherit; }
   .current-section span { font-size: 10px; }
   .reader { width: calc(100% - 32px); padding: 48px 0 56px; }
   .page-title { font-size: 38px; }
+  .page-title.home-title { font-size: 33px; }
   .course-content h2 { font-size: 26px; }
   .course-content h3 { font-size: 20px; }
   .course-content p, .course-content li { font-size: 16px; }

@@ -964,7 +964,12 @@ export default function Home() {
             <div className="section-kicker">{meta.label}</div>
           </div>
         </div>
-        <h1 className="page-title">{active === 0 ? current.title : current.shortTitle}</h1>
+        {active === 0 ? (
+          <h1 className="page-title home-title">
+            <span>AI in T&amp;L Essentials</span>
+            <small>Level 1 <i aria-hidden="true">·</i> AI-Aware</small>
+          </h1>
+        ) : <h1 className="page-title">{current.shortTitle}</h1>}
         {active === 0 ? <OpeningVisual /> : <SectionVisual title={current.title} />}
         {active > 0 && active !== 5 && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
         <article
