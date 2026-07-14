@@ -163,8 +163,40 @@ button { color: inherit; }
 .course-content h4 { margin: 24px 0 8px; font-size: 15px; }
 .course-content p, .course-content li { color: var(--ink-soft); font-size: 16px; line-height: 1.72; }
 .course-content p { margin: 0 0 17px; }
-.course-content ul, .course-content ol { margin: 10px 0 24px; padding-left: 25px; }
-.course-content li { margin: 6px 0; padding-left: 3px; }
+.course-content ul, .course-content ol { margin: 13px 0 28px; padding: 0; }
+.course-content ul { list-style: none; }
+.course-content ol { list-style: none; counter-reset: course-step; }
+.course-content li { position: relative; margin: 0; padding: 4px 0 4px 29px; }
+.course-content li + li { margin-top: 5px; }
+.course-content ul > li::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 15px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 0 4px var(--blue-soft);
+}
+.course-content ol > li { counter-increment: course-step; padding-left: 38px; }
+.course-content ol > li::before {
+  content: counter(course-step);
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  background: var(--blue-soft);
+  color: #075ea8;
+  font-size: 11px;
+  font-weight: 750;
+}
+.course-content p + ul, .course-content p + ol { margin-top: 8px; }
+.course-content ul + p, .course-content ol + p { margin-top: 4px; }
 .course-content strong { color: var(--ink); font-weight: 650; }
 .course-content hr { margin: 46px 0; border: 0; border-top: 1px solid var(--line); }
 .course-content blockquote {
