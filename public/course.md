@@ -697,17 +697,7 @@ Being AI-aware starts with recognising what matters and responding with sound ed
 
 # Module Summary
 
-The key ideas are:
-
-- NP aims to develop AI-ready graduates who combine human qualities, domain expertise and responsible AI capability.
-- The 3As help course and module teams identify Anchor, Augment and Advance capabilities.
-- PAIR helps students frame problems, use AI, interact critically and reflect.
-- AI may support learning and personalised practice, but its output and effect on learning must be checked.
-- Assessment decisions begin with the learning outcome and credible evidence of what students can do.
-- GenAI use in summative assessment is allowed unless explicitly prohibited. Every submission cover page requires a GenAI Use Declaration, and prohibited uses remain unacceptable even when declared.
-- GenAI assessment conditions must be stated clearly and discussed with students.
-- M365 Copilot and Pair.gov.sg are cleared for Official (Closed) and Sensitive Normal content, subject to NP’s current guidance.
-- Lecturers remain responsible for learning materials, assessment decisions, grades and feedback.
+<!--module-summary-->
 
 ---
 

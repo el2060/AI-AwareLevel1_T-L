@@ -117,7 +117,8 @@ function markdownToHtml(markdown: string) {
         items.push(lines[i].trim().replace(/^-\s+/, ""));
         i += 1;
       }
-      output.push(`<ul>${items.map((item) => `<li>${inlineMarkdown(item)}</li>`).join("")}</ul>`);
+      const listClass = items.length >= 5 ? "course-list course-list-long" : "course-list";
+      output.push(`<ul class="${listClass}">${items.map((item) => `<li>${inlineMarkdown(item)}</li>`).join("")}</ul>`);
       continue;
     }
 
@@ -307,6 +308,89 @@ function ConfidenceActivity({ value, onChange }: { value: string; onChange: (val
       <p>Select each statement that feels true for you.</p>
       <div className="confidence-list">{items.map((item) => <button key={item} className={selected.includes(item) ? "selected" : ""} onClick={() => onChange((selected.includes(item) ? selected.filter((x) => x !== item) : [...selected, item]).join("|"))}><span>{selected.includes(item) ? "✓" : ""}</span>{item}</button>)}</div>
       {selected.length === items.length && <div className="activity-feedback"><strong>You have covered the Level 1 foundation</strong><p>Use these questions when reviewing a module you teach or support.</p></div>}
+    </section>
+  );
+}
+
+function ModuleSummary() {
+  const [active, setActive] = useState(0);
+  const themes = [
+    {
+      label: "The aim",
+      title: "AI-ready graduates",
+      preview: "Human qualities, domain expertise and responsible AI capability.",
+      takeaway: "At NP, AI readiness is not only about using a tool. Students need the human and professional judgement to use it well.",
+      practice: "Keep asking what students need to understand, do and judge in your discipline.",
+      icon: Users,
+      tone: "blue",
+    },
+    {
+      label: "Learning design",
+      title: "3As and PAIR",
+      preview: "Use the 3As to review capabilities; use PAIR to structure learning with AI.",
+      takeaway: "Anchor foundations, Augment authentic work and Advance new possibilities. PAIR helps students frame a problem, use AI, interact critically and reflect.",
+      practice: "Use AI to support practice and learning—not to take over the thinking. Check the output and its effect on learning.",
+      icon: Sparkles,
+      tone: "purple",
+    },
+    {
+      label: "Assessment",
+      title: "Make learning credible",
+      preview: "Start with the learning outcome and evidence of what students can do.",
+      takeaway: "GenAI is allowed in summative assessment unless explicitly prohibited. Every submission cover page needs a GenAI Use Declaration; declaring a prohibited use does not make it acceptable.",
+      practice: "State the conditions clearly in the assignment descriptor and discuss them with students.",
+      icon: ClipboardCheck,
+      tone: "orange",
+    },
+    {
+      label: "Tools and responsibility",
+      title: "Use tools with care",
+      preview: "Choose a suitable tool, check the information and keep human oversight.",
+      takeaway: "M365 Copilot and Pair.gov.sg are cleared for Official (Closed) and Sensitive Normal content, subject to NP’s current guidance.",
+      practice: "You remain responsible for learning materials, assessment decisions, grades and feedback.",
+      icon: ShieldCheck,
+      tone: "teal",
+    },
+  ];
+  const selected = themes[active];
+  const Icon = selected.icon;
+
+  return (
+    <section className="module-summary" aria-label="Key ideas from this package">
+      <div className="summary-heading">
+        <span>Key ideas</span>
+        <h2>Four ideas to carry into your teaching</h2>
+        <p>Choose a theme to revisit its essential point and the question it leaves you with.</p>
+      </div>
+      <div className="summary-layout">
+        <div className="summary-topics" role="tablist" aria-label="Key ideas">
+          {themes.map((theme, index) => {
+            const ThemeIcon = theme.icon;
+            return (
+              <button
+                key={theme.title}
+                type="button"
+                role="tab"
+                aria-selected={active === index}
+                className={`summary-topic ${active === index ? "active" : ""} tone-${theme.tone}`}
+                onClick={() => setActive(index)}
+              >
+                <span className="summary-topic-icon"><ThemeIcon size={18} strokeWidth={2} /></span>
+                <span><small>{theme.label}</small><strong>{theme.title}</strong><em>{theme.preview}</em></span>
+              </button>
+            );
+          })}
+        </div>
+        <div className={`summary-detail tone-${selected.tone}`} role="tabpanel">
+          <span className="summary-detail-icon"><Icon size={23} strokeWidth={2} /></span>
+          <div className="summary-detail-copy">
+            <span>{selected.label}</span>
+            <h3>{selected.title}</h3>
+            <p>{selected.takeaway}</p>
+            <div><strong>In your teaching</strong><p>{selected.practice}</p></div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
@@ -734,9 +818,14 @@ export default function Home() {
 
   const meta = sectionMeta[active] ?? sectionMeta[0];
   const useCaseMarker = "<!--use-case-explorer-->";
+  const moduleSummaryMarker = "<!--module-summary-->";
   const sectionMarkdown = withoutTitle(current.markdown);
-  const [contentBeforeUseCases, contentAfterUseCases = ""] = sectionMarkdown.split(useCaseMarker);
   const hasUseCaseExplorer = current.title.startsWith("Part 7") && sectionMarkdown.includes(useCaseMarker);
+  const hasModuleSummary = current.title === "Module Summary" && sectionMarkdown.includes(moduleSummaryMarker);
+  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasModuleSummary ? moduleSummaryMarker : "";
+  const [contentBeforeInteractive, contentAfterInteractive = ""] = activeMarker
+    ? sectionMarkdown.split(activeMarker)
+    : [sectionMarkdown];
 
   return (
     <div className="site-shell">
@@ -793,15 +882,16 @@ export default function Home() {
         <article
           key={`${current.id}-before`}
           className="course-content"
-          dangerouslySetInnerHTML={{ __html: markdownToHtml(contentBeforeUseCases) }}
+          dangerouslySetInnerHTML={{ __html: markdownToHtml(contentBeforeInteractive) }}
         />
 
         {hasUseCaseExplorer && <UseCaseExplorer />}
+        {hasModuleSummary && <ModuleSummary />}
 
-        {contentAfterUseCases && <article
+        {contentAfterInteractive && <article
           key={`${current.id}-after`}
           className="course-content course-content-continuation"
-          dangerouslySetInnerHTML={{ __html: markdownToHtml(contentAfterUseCases) }}
+          dangerouslySetInnerHTML={{ __html: markdownToHtml(contentAfterInteractive) }}
         />}
 
         {active === 5 && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
