@@ -179,58 +179,90 @@ button { color: inherit; }
 }
 
 .opening-visual {
-  position: relative;
-  min-height: 330px;
-  margin: 10px 0 40px;
-  overflow: hidden;
+  margin: 12px 0 42px;
+  padding: 28px;
   border-radius: 16px;
-  background: var(--indigo);
-  isolation: isolate;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  box-shadow: 0 .2px 1px rgba(0,0,0,.01), 0 2px 10px rgba(0,0,0,.025), 0 16px 38px rgba(0,0,0,.035);
 }
-.opening-visual::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,.36) 1px, transparent 1px);
-  background-size: 22px 22px;
-  opacity: .35;
-}
-.visual-label {
-  position: absolute;
-  z-index: 3;
-  left: 22px;
-  top: 20px;
-  padding: 6px 9px;
-  border-radius: 999px;
-  background: #fff;
-  color: var(--indigo);
+.pathway-heading { max-width: 500px; }
+.pathway-heading > span {
+  color: var(--blue);
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: .06em;
+  font-weight: 750;
+  letter-spacing: .1em;
   text-transform: uppercase;
 }
-.venn {
+.pathway-heading h2 {
+  margin: 7px 0 7px;
+  font-size: 27px;
+  line-height: 1.15;
+  letter-spacing: -.035em;
+}
+.pathway-heading p { margin: 0; color: var(--muted); font-size: 14px; }
+.pathway-steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 25px;
+}
+.pathway-steps::before {
+  content: "";
   position: absolute;
-  z-index: 2;
-  width: 188px;
-  height: 188px;
+  left: 7%;
+  right: 7%;
+  top: 19px;
+  height: 1px;
+  background: var(--line);
+}
+.pathway-steps button {
+  position: relative;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,.28);
-  mix-blend-mode: screen;
-  transition: transform .3s ease;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0 7px 10px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
 }
-.venn span { font-size: 21px; font-weight: 750; letter-spacing: -.04em; }
-.venn small { margin-top: 2px; font-size: 12px; }
-.venn.human { left: calc(50% - 188px); top: 80px; background: rgba(125,224,203,.78); color: #113f3c; }
-.venn.domain { left: calc(50% - 1px); top: 80px; background: rgba(123,185,241,.78); color: #173a63; }
-.venn.ai { left: calc(50% - 94px); top: 138px; background: rgba(240,174,122,.76); color: #552b0c; }
-.opening-visual:hover .human { transform: translate(-5px, -3px); }
-.opening-visual:hover .domain { transform: translate(5px, -3px); }
-.opening-visual:hover .ai { transform: translateY(5px); }
+.pathway-steps button > span {
+  position: relative;
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--canvas);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  transition: transform .18s ease, background .18s ease, color .18s ease;
+}
+.pathway-steps button strong { font-size: 12px; line-height: 1.35; font-weight: 650; }
+.pathway-steps button:hover > span { transform: translateY(-2px); border-color: #9bc7ee; }
+.pathway-steps button.active > span { border-color: var(--blue); background: var(--blue); color: #fff; box-shadow: 0 0 0 4px var(--blue-soft); }
+.pathway-steps button.active strong { color: var(--blue-active); }
+.pathway-detail {
+  min-height: 84px;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  align-items: start;
+  gap: 13px;
+  margin-top: 14px;
+  padding: 17px;
+  border-radius: 10px;
+  background: var(--blue-soft);
+  animation: feedback-in .24s ease both;
+}
+.pathway-detail > span { color: var(--blue); font-size: 12px; font-weight: 750; }
+.pathway-detail p { margin: 0; color: #164a73; font-size: 14px; line-height: 1.55; }
 
 .table-wrap { overflow-x: auto; margin: 22px 0 30px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
 .course-content table { width: 100%; border-collapse: collapse; font-size: 14px; }
@@ -355,9 +387,10 @@ button { color: inherit; }
   .course-content h1 { font-size: 38px; }
   .course-content h2 { font-size: 23px; }
   .course-content p, .course-content li { font-size: 15px; }
-  .opening-visual { min-height: 282px; }
-  .venn { width: 145px; height: 145px; }
-  .venn.human { left: calc(50% - 145px); top: 78px; }.venn.domain { left: calc(50% - 1px); top: 78px; }.venn.ai { left: calc(50% - 73px); top: 125px; }
+  .opening-visual { padding: 22px 18px; }
+  .pathway-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 8px; }
+  .pathway-steps::before { display: none; }
+  .pathway-steps button { display: grid; grid-template-columns: 39px 1fr; align-items: center; }
   .activity-block { padding: 22px 18px; }.three-as-options { grid-template-columns: 1fr; }.three-as-options button { min-height: 68px; }.pair-track { grid-template-columns: repeat(2, 1fr); }
   .strategy-map { grid-template-columns: 1fr; padding: 18px; }.strategy-orbit { min-height: 280px; }
   .contents-panel { padding: 22px 17px; }.contents-list { grid-template-columns: 1fr; }
