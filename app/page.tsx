@@ -197,7 +197,7 @@ const sectionMeta = [
   { mark: "01", label: "AI in your module", tone: "blue" },
   { mark: "02", label: "NP’s approach", tone: "purple" },
   { mark: "03", label: "Curriculum", tone: "orange" },
-  { mark: "04", label: "Facilitation", tone: "teal" },
+  { mark: "04", label: "Learning", tone: "teal" },
   { mark: "05", label: "PAIR", tone: "green" },
   { mark: "06", label: "Assessment", tone: "blue" },
   { mark: "07", label: "Tools and data", tone: "purple" },
@@ -635,7 +635,7 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
     { label: "Use an unapproved public tool to analyse named student records.", correct: false, feedback: "The tool is not approved for the information involved." },
     { label: "Let an AI summary decide which students need intervention.", correct: false, feedback: "AI may support an initial review, but a person must interpret the context and make the decision." },
   ]} />;
-  if (title.startsWith("Part 8")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep your chosen module in mind. Tap each question once you have considered it." items={["Curriculum: What must students still learn and do themselves?", "Facilitation: Where could AI support learning without doing it for students?", "Assessment: How will learning remain visible?", "Tools and data: What should you check before using a tool or learning data?"]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered the learning to protect, a possible support, how learning remains visible and what needs checking." />;
+  if (title.startsWith("Part 8")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep your chosen module in mind. Tap each question once you have considered it." items={["Curriculum: What is AI changing in what students must learn and do?", "Learning: Where might AI support learning without replacing it?", "Assessment: What must students still demonstrate themselves?", "Tools and data: What tool or data use needs checking?"]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered what is changing, the learning to protect, a possible support, and what needs checking." />;
   if (title.startsWith("Look Back")) return <CarryForwardActivity value={notes.lookbackchoice ?? ""} onChange={(value) => onChange("lookbackchoice", value)} />;
   if (title === "Module Summary") return <ConfidenceActivity value={notes.confidence ?? ""} onChange={(value) => onChange("confidence", value)} />;
   if (title.startsWith("You Have Completed")) return <NextStepActivity value={notes.nextstep ?? ""} onChange={(value) => onChange("nextstep", value)} />;
@@ -648,25 +648,25 @@ function OpeningVisual() {
     {
       title: "Curriculum",
       detail: "What AI may change in your module and discipline",
-      feedback: "What must students still learn and do themselves, and how is AI changing the discipline?",
+      feedback: "What is AI changing in what students must learn and do?",
       icon: BookOpen,
     },
     {
-      title: "Facilitation",
+      title: "Learning",
       detail: "How AI may support learning and practice",
-      feedback: "Where could AI give students more explanation, practice or feedback without doing the learning for them?",
+      feedback: "Where might AI support learning without replacing it?",
       icon: Lightbulb,
     },
     {
       title: "Assessment",
       detail: "How students show their learning credibly",
-      feedback: "What must students demonstrate, and how will learning remain visible when AI can produce the product?",
+      feedback: "What must students still demonstrate themselves?",
       icon: ClipboardCheck,
     },
     {
       title: "Tools and data",
       detail: "How to choose tools and handle information safely",
-      feedback: "What could a tool or learning data support, and what should you check before using it?",
+      feedback: "What tool or data use needs checking?",
       icon: ShieldCheck,
     },
   ];

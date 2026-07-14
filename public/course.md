@@ -24,14 +24,14 @@ Allow about 60–75 minutes for this learning package. The completion quiz is ad
 
 By the end of this module, you will be able to:
 
-1. **Curriculum:** Describe how AI may affect what students need to learn and do in your discipline or module.
-2. **Facilitation:** Describe the benefits, limitations, risks and good practices of using AI to support learning.
-3. **Assessment:** Describe how AI affects assessment validity and academic integrity, and describe how to apply NP’s essential requirements for GenAI use.
+1. **Curriculum:** Describe how AI is changing what students need to learn and do in your discipline or module.
+2. **Facilitation:** Describe the benefits, limitations, risks and recommended practices for using AI to support learning.
+3. **Assessment:** Describe how AI affects assessment validity and academic integrity, and how to apply NP’s requirements for GenAI use.
 4. **Tools and data:** Analyse how a potentially relevant AI tool could support a T&L purpose, including the information involved, its limitations and appropriate oversight.
 
 The Level 1 focus is awareness: recognise the key issues, understand NP’s shared approaches and identify what may need attention in a module you teach, lead or support.
 
-This follows the everyday work described in the TLCF: designing curriculum, facilitating learning and assessing learning. It also brings in reflective practice and responsible use of data and technology.
+These are the same domains you know from the T&L Competency Framework (TLCF): curriculum design, facilitation of learning, assessment, and data and tech-enhanced T&L. This module looks at what AI changes in each.
 
 ---
 
@@ -41,12 +41,12 @@ As you go through this package, keep one module that you currently teach, lead o
 
 You will consider four guiding questions:
 
-1. **Curriculum:** What must students still learn and do themselves, and how is AI changing the discipline?
-2. **Facilitation:** Where could AI give students more explanation, practice or feedback without doing the learning for them?
-3. **Assessment:** What must students demonstrate, and how will learning remain visible when AI can produce the product?
-4. **Tools and data:** What could a tool or learning data support, and what should you check before using it?
+1. **Curriculum:** What is AI changing in what students must learn and do?
+2. **Learning:** Where might AI support learning without replacing it?
+3. **Assessment:** What must students still demonstrate themselves?
+4. **Tools and data:** What tool or data use needs checking?
 
-Use these questions throughout the package to identify what may need attention and one sensible next step.
+Use these questions throughout the package to identify what may need attention and one concrete next step.
 
 ---
 
@@ -146,10 +146,10 @@ NP’s five strategies work together towards the same goal. Explore the overview
 
 This package brings the strategies into four practical questions:
 
-1. **Curriculum:** What must students still learn and do themselves, and how is AI changing the discipline? The 3As help course and module teams review learning outcomes, activities and assessment together.
-2. **Facilitation:** Where could AI give students more explanation, practice or feedback without doing the learning for them? PAIR offers a structure for learning with AI.
-3. **Assessment:** What must students demonstrate, and how will learning remain visible when AI can produce the product?
-4. **Tools and data:** What could a tool or learning data support, and what should you check before using it?
+1. **Curriculum:** What is AI changing in what students must learn and do? The 3As help course and module teams review learning outcomes, activities and assessment together.
+2. **Learning:** Where might AI support learning without replacing it? PAIR offers a structure for learning with AI.
+3. **Assessment:** What must students still demonstrate themselves?
+4. **Tools and data:** What tool or data use needs checking?
 
 These questions guide Parts 3 to 7. They are connected: what students need to learn affects how they practise, what an assessment should require, and whether a tool is a suitable choice.
 
@@ -655,19 +655,19 @@ Use these four questions.
 
 ## Curriculum
 
-> What must students still learn and do themselves, and how is AI changing the discipline?
+> What is AI changing in what students must learn and do?
 
-## Facilitation
+## Learning
 
-> Where could AI give students more explanation, practice or feedback without doing the learning for them?
+> Where might AI support learning without replacing it?
 
 ## Assessment
 
-> What must students demonstrate, and how will learning remain visible when AI can produce the product?
+> What must students still demonstrate themselves?
 
 ## Tools and Data
 
-> What could a tool or learning data support, and what should you check before using it?
+> What tool or data use needs checking?
 
 These questions provide a practical starting point for AI-aware teaching at NP. They help you connect curriculum, facilitation, assessment, tools and data instead of considering each in isolation.
 
