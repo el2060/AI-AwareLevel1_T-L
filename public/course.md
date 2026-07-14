@@ -144,7 +144,7 @@ NP’s five strategies work together towards the same goal. Explore the overview
 
 This package brings the strategies into four practical questions:
 
-1. **Curriculum and the 3As:** What should students learn?
+1. **Curriculum alignment and the 3As:** What should students learn, practise and demonstrate?
 2. **Learning and PAIR:** How can students learn with AI?
 3. **Assessment:** How will students show what they can do?
 4. **Tools and data:** How should AI be used responsibly?
@@ -159,15 +159,15 @@ AI can now assist with tasks that students previously completed independently. T
 
 Students need enough disciplinary knowledge and judgement to recognise when AI output is wrong, unsafe or unsuitable.
 
-NP students build a common foundation in AI literacy. NP’s **3As framework** then helps course and module teams balance human capability with AI-enabled practice in each discipline.
+NP students build a common foundation in AI literacy. NP’s **3As framework** helps course and module teams review the constructive alignment of **learning outcomes, learning activities and assessment** as AI changes disciplinary and professional practice.
 
-Read the infographic from the foundation upwards:
+Use the infographic with one module in mind:
 
-- **Anchor:** What must students still know and be able to do?
-- **Augment:** Where might AI improve an authentic professional workflow while students retain judgement?
-- **Advance:** Where might AI enable new services, workflows or forms of professional practice?
+- **Anchor:** Which outcomes require students to retain core knowledge, skills and judgement—and how will activities and assessment support and evidence these?
+- **Augment:** Which outcomes involve students using AI to improve an authentic professional workflow while retaining judgement—and how will they practise and show this use?
+- **Advance:** Which outcomes involve students using AI to create new services, workflows or forms of professional practice—and what learning and assessment experiences would enable this?
 
-Start with Anchor. Augment and Advance build on the disciplinary foundations students need to use AI well.
+Start with Anchor. Augment and Advance build on the disciplinary foundations students need to use AI well. Not every learning outcome or module will require all three.
 
 ## Examples Across Disciplines
 
@@ -177,23 +177,25 @@ Start with Anchor. Augment and Advance build on the disciplinary foundations stu
 
 ## Apply It to Your Module
 
-Consider:
+Start with one learning outcome in a module you teach, lead or support. Consider:
 
 > One capability my students must retain as an Anchor is...
 
 > One professional or disciplinary workflow that AI might Augment is...
 
-At Level 1, use the 3As to spot these distinctions in a module you teach or support.
+Then ask: are the learning activities giving students suitable practice, and does the assessment make the intended learning visible?
+
+At Level 1, use the 3As to recognise these distinctions and the need for alignment across the module.
 
 ## Key Takeaway
 
-The 3As help you ask:
+The 3As help course and module teams review:
 
-- What students must still be able to do independently.
-- Where AI might enhance professional practice.
-- Where AI may create new possibilities.
+- The learning outcomes: what students must do independently, with AI, or in new AI-enabled ways.
+- The learning activities: how students will practise and develop those outcomes.
+- The assessment: what evidence will show that the intended learning has been achieved.
 
-Use these questions to identify what should remain strong and where AI may add value in the curriculum.
+Use these questions to keep learning outcomes, activities and assessment constructively aligned as AI changes the discipline.
 
 ---
 
@@ -672,7 +674,7 @@ Think of one response to each prompt:
 Possible next steps include:
 
 - Discussing an AI-related change with your module team.
-- Reviewing one learning outcome through the 3As.
+- Reviewing one learning outcome, activity and assessment together through the 3As.
 - Trying a generate–compare–check–improve activity.
 - Checking the GenAI conditions in one assignment descriptor.
 - Exploring an appropriate use of M365 Copilot or Pair.gov.sg.

@@ -327,9 +327,9 @@ function ModuleSummary() {
     {
       label: "Learning design",
       title: "3As and PAIR",
-      preview: "Use the 3As to review capabilities; use PAIR to structure learning with AI.",
-      takeaway: "Anchor foundations, Augment authentic work and Advance new possibilities. PAIR helps students frame a problem, use AI, interact critically and reflect.",
-      practice: "Use AI to support practice and learning—not to take over the thinking. Check the output and its effect on learning.",
+      preview: "Use the 3As to review aligned learning outcomes, activities and assessment; use PAIR to structure learning with AI.",
+      takeaway: "Anchor foundations, Augment authentic work and Advance new possibilities. The 3As guide a review of what students should learn, how they will practise it and how they will demonstrate it. PAIR gives students a process for learning with AI.",
+      practice: "Check that your learning outcome, learning activity and assessment are aligned. Use AI to support practice and learning—not to take over the thinking.",
       icon: Sparkles,
       tone: "purple",
     },
@@ -396,7 +396,7 @@ function ModuleSummary() {
 }
 
 function NextStepActivity({ value, onChange }: { value: string; onChange: (value: string) => void }) {
-  const options = ["Discuss one change with my module team", "Review one learning outcome using the 3As", "Check one assessment’s GenAI conditions", "Try one small AI-supported learning activity"];
+  const options = ["Discuss one change with my module team", "Review one learning outcome, activity and assessment using the 3As", "Check one assessment’s GenAI conditions", "Try one small AI-supported learning activity"];
   return (
     <section className="activity-block next-step-block">
       <span className="activity-eyebrow">Before you leave</span><h2>Choose one small next step</h2>
@@ -408,9 +408,9 @@ function NextStepActivity({ value, onChange }: { value: string; onChange: (value
 
 function ThreeAsActivity() {
   const prompts = [
-    { text: "Students explain a core procedure without AI.", answer: "Anchor" },
-    { text: "Students use AI to compare options before making a professional judgement.", answer: "Augment" },
-    { text: "Students prototype a new AI-enabled service.", answer: "Advance" },
+    { text: "Learning outcome: Students explain a core procedure without AI. Which 3A should guide the aligned learning activity and assessment?", answer: "Anchor" },
+    { text: "Learning outcome: Students use AI to compare options before making a professional judgement. Which 3A should guide the aligned learning activity and assessment?", answer: "Augment" },
+    { text: "Learning outcome: Students prototype a new AI-enabled service. Which 3A should guide the aligned learning activity and assessment?", answer: "Advance" },
   ];
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
@@ -439,7 +439,7 @@ function ThreeAsActivity() {
       {selected && (
         <div className={`activity-feedback ${selected !== current.answer ? "try-again" : ""}`}>
           <strong>{selected === current.answer ? "That’s it" : "Look again"}</strong>
-          <p>The best fit is <b>{current.answer}</b>.</p>
+          <p>The best fit is <b>{current.answer}</b>. Next, check that the learning activity gives suitable practice and the assessment makes this outcome visible.</p>
           {selected === current.answer && index < prompts.length - 1 && (
             <button className="inline-next" onClick={() => { setIndex(index + 1); setSelected(null); }}>Try the next one →</button>
           )}
@@ -488,7 +488,7 @@ function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
     { name: "Pedagogy · PAIR", question: "Help students learn with AI", detail: "PAIR gives students a visible process for framing problems, using AI critically and reflecting.", icon: MessageCircle },
-    { name: "Curriculum · 3As", question: "Review what students need to learn", detail: "The 3As help identify the foundations to keep strong and where AI may add value.", icon: Sparkles },
+    { name: "Curriculum · 3As", question: "Keep outcomes, learning and assessment aligned", detail: "The 3As help course and module teams review learning outcomes, learning activities and assessment together as AI changes the discipline.", icon: Sparkles },
     { name: "Assessment", question: "Keep learning visible", detail: "Assessment conditions should show what students must demonstrate and how AI may be used.", icon: ClipboardCheck },
     { name: "Personalised learning", question: "Scaffold practice and feedback", detail: "AI-enabled tutors and learning assistants can support practice, feedback and different learning needs.", icon: Bot },
     { name: "Human skills and resilience", question: "Keep judgement at the centre", detail: "Ethics, communication, creativity, resilience and professional judgement remain essential.", icon: Users },
@@ -673,7 +673,7 @@ function ThreeAsInfographic() {
     <figure className="concept-visual three-as-infographic" aria-labelledby="three-as-title">
       <figcaption>
         <span>The 3As</span>
-        <strong id="three-as-title">Build from strong foundations to new possibilities</strong>
+        <strong id="three-as-title">Review aligned learning outcomes, activities and assessment</strong>
       </figcaption>
       <div className="three-as-path">
         <section className="three-as-band advance-band">
@@ -683,16 +683,16 @@ function ThreeAsInfographic() {
         </section>
         <section className="three-as-band augment-band">
           <div className="three-as-label"><i aria-hidden="true">A</i><div><b>Augment</b><small>Improve authentic practice</small></div></div>
-          <p>AI-enabled capabilities that strengthen a real professional workflow.</p>
+          <p>AI-enabled practice that strengthens a real professional workflow.</p>
           <em>Generate · compare · analyse · improve</em>
         </section>
         <section className="three-as-band anchor-band">
           <div className="three-as-label"><i aria-hidden="true">A</i><div><b>Anchor</b><small>Protect the foundations</small></div></div>
-          <p>Core disciplinary, human and professional capabilities students must develop.</p>
+          <p>Core disciplinary, human and professional learning students must develop.</p>
           <em>Knowledge · skills · reasoning · judgement</em>
         </section>
       </div>
-      <div className="infographic-note"><span aria-hidden="true">↑</span><p><strong>Start with Anchor.</strong> Then identify where AI may Augment practice or Advance the discipline.</p></div>
+      <div className="infographic-note"><span aria-hidden="true">↑</span><p><strong>Start with Anchor.</strong> Then review how learning outcomes, activities and assessment align when AI may Augment practice or Advance the discipline.</p></div>
     </figure>
   );
 }
