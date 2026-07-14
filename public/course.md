@@ -29,9 +29,7 @@ By the end of this module, you should be able to:
 3. **Assessment:** Explain how AI may affect assessment validity and academic integrity, and identify NP’s essential requirements for GenAI use.
 4. **Tools and data:** Consider whether an AI tool is suitable for a T&L purpose and the information involved.
 
-At Level 1, the focus is on recognising and describing what matters. You are not expected to redesign your module in this package.
-
-This package provides the shared awareness foundation. Deeper module review, redesign and implementation are supported through later capability-building and School-based support.
+The Level 1 focus is awareness: recognise the key issues, use NP’s shared approaches and identify what may need attention in your module.
 
 ---
 
@@ -46,7 +44,7 @@ You will consider it from four angles:
 3. Where might AI support learning?
 4. What needs to be clarified or safeguarded?
 
-You are not expected to redesign your module today. The aim is to recognise what matters and identify a sensible next step.
+Use these four questions to notice what may need attention and identify one sensible next step.
 
 ---
 
@@ -136,7 +134,7 @@ This vision is supported by three commitments:
 - **AI-integrated learning and assessment:** Students learn to work with AI while still demonstrating what they know and can do.
 - **AI-enabled learning support:** AI may provide suitable practice, feedback and personalised support.
 
-These commitments give context to NP’s approaches. At Level 1, you only need to recognise what each approach helps us consider.
+These commitments give context to NP’s approaches. At Level 1, focus on what each approach helps us consider.
 
 ## Five Strategies, One Goal
 
@@ -261,7 +259,7 @@ Consider:
 
 > One professional or disciplinary workflow that AI might Augment is...
 
-You do not need to redesign anything yet. At Level 1, recognising the distinction is the first step.
+At Level 1, use the 3As to recognise these distinctions in a familiar module.
 
 ## Key Takeaway
 
