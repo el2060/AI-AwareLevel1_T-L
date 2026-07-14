@@ -249,7 +249,7 @@ function ChoiceCheck({ question, eyebrow, choices }: { question: string; eyebrow
 
 function PulseActivity({ value, onChange }: { value: string; onChange: (value: string) => void }) {
   const selected = value ? value.split("|") : [];
-  const options = ["Student learning", "Assessment", "Teaching preparation", "Feedback", "Not sure yet"];
+  const options = ["Design learning", "Facilitate learning", "Assess learning", "Review and improve", "Not sure yet"];
   return (
     <section className="activity-block pulse-activity">
       <span className="activity-eyebrow">30-second pulse</span>
@@ -752,13 +752,71 @@ function PairInfographic() {
   );
 }
 
-function SectionVisual({ title }: { title: string }) {
-  if (title.startsWith("Part 1")) return (
-    <figure className="concept-visual ai-map-visual" aria-label="AI may appear across teaching preparation, student learning, assessment and feedback">
-      <figcaption><span>In your module</span><strong>Where might AI appear?</strong></figcaption>
-      <div className="ai-map"><div className="ai-map-core">AI</div><div className="map-item map-a"><b>Prepare</b><small>Examples · activities</small></div><div className="map-item map-b"><b>Learn</b><small>Explain · practise</small></div><div className="map-item map-c"><b>Assess</b><small>Create · demonstrate</small></div><div className="map-item map-d"><b>Feedback</b><small>Review · improve</small></div></div>
+function LecturerPracticeMap() {
+  const [active, setActive] = useState(0);
+  const areas = [
+    {
+      title: "Design learning",
+      domain: "Curriculum Design & Development",
+      question: "What may need to change?",
+      detail: "Review what students need to know, practise and do as AI changes your discipline and its workplace practices.",
+      icon: BookOpen,
+      tone: "design",
+    },
+    {
+      title: "Facilitate learning",
+      domain: "Facilitation of Learning",
+      question: "How can AI support practice?",
+      detail: "Use AI where it gives students a useful explanation, practice or feedback without doing the learning for them.",
+      icon: Lightbulb,
+      tone: "facilitate",
+    },
+    {
+      title: "Assess learning",
+      domain: "Assessment",
+      question: "What must remain visible?",
+      detail: "Decide what students need to demonstrate, then make the GenAI conditions clear and aligned to that evidence.",
+      icon: ClipboardCheck,
+      tone: "assess",
+    },
+    {
+      title: "Review and improve",
+      domain: "Reflective Practice · Data & Tech-Enhanced T&L",
+      question: "What should you check before acting?",
+      detail: "Use feedback, learning information and approved tools as starting points. Check the output and decide what improvement is appropriate.",
+      icon: MessageCircle,
+      tone: "review",
+    },
+  ];
+  const selected = areas[active];
+  const SelectedIcon = selected.icon;
+  return (
+    <figure className="concept-visual lecturer-practice-visual" aria-labelledby="lecturer-practice-title">
+      <figcaption><span>In your module</span><strong id="lecturer-practice-title">Where might AI matter?</strong></figcaption>
+      <p className="practice-map-intro">Start with the teaching work in front of you. Select a moment to see the AI-aware question to ask.</p>
+      <div className="lecturer-practice-map">
+        <div className="practice-map-label"><span>AI-aware</span><strong>teaching practice</strong></div>
+        <div className="practice-map-options">
+          {areas.map((area, index) => {
+            const Icon = area.icon;
+            return <button key={area.title} type="button" className={`practice-map-option ${area.tone} ${active === index ? "active" : ""}`} onClick={() => setActive(index)} aria-pressed={active === index}>
+              <i><Icon size={18} strokeWidth={2.2} aria-hidden="true" /></i>
+              <span><strong>{area.title}</strong><small>{area.question}</small></span>
+            </button>;
+          })}
+        </div>
+        <div className={`practice-map-detail ${selected.tone}`}>
+          <i><SelectedIcon size={21} strokeWidth={2.2} aria-hidden="true" /></i>
+          <div><span>{selected.domain}</span><strong>{selected.question}</strong><p>{selected.detail}</p></div>
+        </div>
+        <p className="practice-map-footnote"><b>Across all four:</b> draw on your industry expertise to keep learning relevant and use professional judgement when AI is involved.</p>
+      </div>
     </figure>
   );
+}
+
+function SectionVisual({ title }: { title: string }) {
+  if (title.startsWith("Part 1")) return <LecturerPracticeMap />;
   if (title.startsWith("Part 3")) return <ThreeAsInfographic />;
   if (title.startsWith("Part 4")) return (
     <figure className="concept-visual support-visual" aria-label="AI should support rather than replace learning">

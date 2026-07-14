@@ -31,6 +31,8 @@ By the end of this module, you will be able to:
 
 The Level 1 focus is awareness: recognise the key issues, understand NP’s shared approaches and identify what may need attention in a module you teach, lead or support.
 
+This follows the everyday work described in the TLCF: designing curriculum, facilitating learning and assessing learning. It also brings in reflective practice, responsible use of data and technology, and the industry context that keeps your module current.
+
 ---
 
 ## Keep One Module in Mind
@@ -69,16 +71,16 @@ You might ask:
 
 A polished product alone may not tell us what the student knows or can do.
 
-## Where AI May Appear
+## Where AI May Matter in Your Module
 
-You may encounter AI when you:
+AI may matter across the everyday work of teaching:
 
-- Prepare examples or explanations.
-- Develop learning activities.
-- Facilitate student practice.
-- Design assessments.
-- Provide feedback.
-- Review learning information.
+- **Design learning:** Review what students need to learn, practise and do as AI changes disciplinary and workplace practice.
+- **Facilitate learning:** Decide when AI can support explanation, practice or feedback without doing the learning for students.
+- **Assess learning:** Keep evidence of students’ own thinking, judgement and performance visible.
+- **Review and improve:** Use feedback, learning information and suitable tools to improve the module with care.
+
+Your industry knowledge helps you judge what remains important in professional practice. AI is one factor to consider; the learning purpose comes first.
 
 Students may use AI to:
 
@@ -114,7 +116,7 @@ This is especially important in assessment, grading and work involving personal,
 
 For the module you have in mind:
 
-> Where are you most likely to encounter AI—in student learning, assessment, your own preparation, or more than one of these?
+> Which part of your teaching work is most likely to need attention first?
 
 ---
 
@@ -651,21 +653,21 @@ Return to the module you selected at the start.
 
 Use these four questions.
 
-## Curriculum
+## Design Learning
 
 > How is AI changing what students may need to know or do in this discipline?
 
-## Learning
+## Facilitate Learning
 
 > Where might AI support learning—and where might it replace essential thinking or practice?
 
-## Assessment
+## Assess Learning
 
 > What must students demonstrate, and are the GenAI conditions clear?
 
-## Tools and Data
+## Review and Improve
 
-> Is the proposed tool suitable for the learning purpose and information involved?
+> What feedback, learning information or tool use needs to be checked before you act?
 
 These questions provide a practical starting point for AI-aware teaching at NP. They help you connect curriculum, facilitation, assessment, tools and data instead of considering each in isolation.
 
