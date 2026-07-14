@@ -462,57 +462,32 @@ export default function Home() {
         </div>
         <div className="top-actions">
           <span className="level-badge">Level 1 · AI-Aware</span>
+          <span className="progress-summary">{completed.length}/{sections.length} complete</span>
           <button className="notes-button" onClick={() => setNotesOpen(true)}>
             My notes
           </button>
         </div>
       </header>
 
-      <aside className="sidebar" aria-label="Course sections">
-        <div className="progress-card">
-          <div className="progress-copy">
-            <span>Your progress</span>
-            <strong>{progress}%</strong>
-          </div>
-          <div className="progress-track" aria-label={`${progress}% complete`}>
-            <span style={{ width: `${progress}%` }} />
-          </div>
-          <small>{completed.length} of {sections.length} sections</small>
-        </div>
-
-        <nav>
+      <nav className="course-nav" aria-label="Course sections">
+        <div className="course-nav-inner">
           {sections.map((section, index) => (
             <button
               key={section.id}
-              className={`nav-item ${index === active ? "active" : ""}`}
+              className={`chapter-link ${index === active ? "active" : ""}`}
               onClick={() => selectSection(index)}
               aria-current={index === active ? "page" : undefined}
             >
-              <span className={`nav-dot ${completed.includes(section.id) ? "done" : ""}`}>
+              <span className={`chapter-number ${completed.includes(section.id) ? "done" : ""}`}>
                 {completed.includes(section.id) ? "✓" : index + 1}
               </span>
               <span>{section.shortTitle}</span>
             </button>
           ))}
-        </nav>
-      </aside>
+        </div>
+      </nav>
 
       <main className="reader">
-        <div className="mobile-nav">
-          <label htmlFor="section-select">Section</label>
-          <select
-            id="section-select"
-            value={active}
-            onChange={(event) => selectSection(Number(event.target.value))}
-          >
-            {sections.map((section, index) => (
-              <option key={section.id} value={index}>
-                {index + 1}. {section.shortTitle}
-              </option>
-            ))}
-          </select>
-        </div>
-
         <div className={`section-intro tone-${meta.tone}`}>
           <div className="section-mark">{meta.mark}</div>
           <div>
