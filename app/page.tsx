@@ -207,6 +207,17 @@ const sectionMeta = [
   { mark: "→", label: "Next step", tone: "blue" },
 ];
 
+const sectionBridges = [
+  "Start by noticing where AI may already appear in one module you know well.",
+  "With that module in mind, see how NP’s approaches give us a shared set of questions.",
+  "Begin with curriculum: what must students still learn, and where might AI add value?",
+  "Once the learning is clear, consider how AI might support practice without replacing it.",
+  "PAIR then gives students a simple process for learning and problem-solving with AI.",
+  "The same focus on visible learning helps us make sound assessment decisions.",
+  "Clear assessment conditions also depend on suitable tools, safe data use and human oversight.",
+  "Bring the questions together and take an AI-aware look at one module.",
+];
+
 function ChoiceCheck({ question, eyebrow, choices }: { question: string; eyebrow: string; choices: Choice[] }) {
   const [selected, setSelected] = useState<number | null>(null);
   const choice = selected === null ? null : choices[selected];
@@ -401,18 +412,20 @@ function PairBuilder() {
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
-    ["3As", "What capabilities should students develop?"],
-    ["PAIR", "How can students learn and work with AI?"],
-    ["Assessment", "How will students show what they can do?"],
-    ["Tools & data", "How should AI be used responsibly?"],
+    ["Curriculum · 3As", "What should students learn?", "Parts 3 looks at Anchor, Augment and Advance."],
+    ["Learning · PAIR", "How can students learn with AI?", "Parts 4 and 5 focus on supporting learning and using PAIR."],
+    ["Assessment", "How will students show what they can do?", "Part 6 focuses on credible evidence and clear GenAI conditions."],
+    ["Tools & data", "How should AI be used responsibly?", "Part 7 focuses on suitable tools, safe information use and human oversight."],
   ];
   return (
-    <section className="strategy-map" aria-label="NP AI-enabled T&L approaches">
-      <div className="strategy-orbit">
-        <div className="orbit-core"><strong>AI-ready</strong><span>graduates</span></div>
-        {items.map(([name], index) => <button key={name} className={`orbit-node node-${index} ${active === index ? "active" : ""}`} onClick={() => setActive(index)}>{name}</button>)}
+    <section className="strategy-map" aria-label="How NP approaches connect across this package">
+      <div className="strategy-heading"><span>One shared goal</span><h2>From AI-ready graduates to four lecturer questions</h2><p>Select an area to see where it appears in this package.</p></div>
+      <div className="strategy-goal"><strong>AI-ready graduates</strong><span>Human qualities + domain expertise + responsible AI use</span></div>
+      <div className="strategy-path">
+        {items.map(([name, question, detail], index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
+          <i>{String(index + 1).padStart(2, "0")}</i><span><strong>{name}</strong><b>{question}</b>{active === index && <small>{detail}</small>}</span>
+        </button>)}
       </div>
-      <div className="strategy-copy"><span>{items[active][0]}</span><p>{items[active][1]}</p></div>
     </section>
   );
 }
@@ -420,7 +433,7 @@ function StrategyMap() {
 function SectionInteractive({ title, notes, onChange }: { title: string; notes: ActivityNotes; onChange: (key: string, value: string) => void }) {
   if (title === "AI in T&L Essentials: Level 1 (AI-Aware)") return <ModuleFocusActivity moduleName={notes.module ?? ""} onModuleName={(value) => onChange("module", value)} />;
   if (title.startsWith("Part 1")) return <PulseActivity value={notes.pulse ?? ""} onChange={(value) => onChange("pulse", value)} />;
-  if (title.startsWith("Part 2")) return <StrategyMap />;
+  if (title.startsWith("Part 2")) return null;
   if (title.startsWith("Part 3")) return <div className="activity-stack"><ThreeAsActivity /><ModulePrompt question={`In ${notes.module || "your module"}, what must students still be able to do themselves?`} placeholder="One core capability…" value={notes.anchor ?? ""} onChange={(value) => onChange("anchor", value)} feedback="This is a possible Anchor. Keep it visible when you consider where AI may support the workflow." /></div>;
   if (title.startsWith("Part 4")) return <div className="activity-stack"><ChoiceCheck eyebrow="Support or replace?" question="Which use better protects the learning?" choices={[
     { label: "AI explains a concept; the student checks it and then practises.", correct: true, feedback: "AI supports clarification, while the student still checks and practises the intended learning." },
@@ -487,12 +500,6 @@ function SectionVisual({ title }: { title: string }) {
     <figure className="concept-visual ai-map-visual" aria-label="AI may appear across teaching preparation, student learning, assessment and feedback">
       <figcaption><span>In your module</span><strong>Where might AI appear?</strong></figcaption>
       <div className="ai-map"><div className="ai-map-core">AI</div><div className="map-item map-a"><b>Prepare</b><small>Examples · activities</small></div><div className="map-item map-b"><b>Learn</b><small>Explain · practise</small></div><div className="map-item map-c"><b>Assess</b><small>Create · demonstrate</small></div><div className="map-item map-d"><b>Feedback</b><small>Review · improve</small></div></div>
-    </figure>
-  );
-  if (title.startsWith("Part 2")) return (
-    <figure className="concept-visual np-approach-visual" aria-label="Four questions guide AI-aware teaching at NP">
-      <figcaption><span>NP’s approach</span><strong>Four questions keep the focus on learning</strong></figcaption>
-      <div className="question-wheel"><div className="wheel-core"><b>AI-ready</b><small>graduates</small></div><div className="wheel-item"><i>01</i><span>What should students learn?</span></div><div className="wheel-item"><i>02</i><span>How can AI support learning?</span></div><div className="wheel-item"><i>03</i><span>How will students show learning?</span></div><div className="wheel-item"><i>04</i><span>How should tools and data be used?</span></div></div>
     </figure>
   );
   if (title.startsWith("Part 3")) return (
@@ -657,7 +664,7 @@ export default function Home() {
           </div>
         </div>
         <h1 className="page-title">{current.title}</h1>
-        {active === 0 ? <OpeningVisual /> : <SectionVisual title={current.title} />}
+        {active === 0 ? <OpeningVisual /> : current.title.startsWith("Part 2") ? <StrategyMap /> : <SectionVisual title={current.title} />}
         <article
           key={current.id}
           className="course-content"
@@ -665,6 +672,13 @@ export default function Home() {
         />
 
         <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />
+
+        {sectionBridges[active] && active < sections.length - 1 && (
+          <div className="section-bridge">
+            <span>Where this leads next</span>
+            <p>{sectionBridges[active]}</p>
+          </div>
+        )}
 
         {progress === 100 && active === sections.length - 1 && (
           <div className="completion-moment">

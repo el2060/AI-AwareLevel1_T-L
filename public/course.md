@@ -9,7 +9,7 @@ This module will help you:
 - Consider what AI may change in your discipline and modules.
 - Understand NP’s key approaches to AI-enabled Teaching and Learning.
 - Recognise where AI can support learning and where it may get in the way.
-- Apply NP’s requirements for GenAI use in assessment.
+- Recognise and follow NP’s essential requirements for GenAI use in assessment.
 - Use AI tools and learning data with appropriate care and judgement.
 
 All NP academic staff are required to complete this module. It gives us a common starting point for making informed decisions about AI in our teaching.
@@ -24,12 +24,12 @@ Allow up to two hours, including the core learning package, short activities and
 
 By the end of this module, you should be able to:
 
-1. Describe how AI may affect what students learn and how they learn in your discipline.
-2. Recognise NP’s key approaches to AI-enabled T&L, including the 3As and PAIR.
-3. Describe the benefits, limitations and risks of using AI to support learning.
-4. Explain how AI may affect assessment validity and academic integrity.
-5. Identify NP’s requirements for GenAI use in summative assessment.
-6. Consider whether an AI tool is suitable for a particular T&L use.
+1. **Curriculum:** Describe how AI may affect what students need to learn in your discipline or module.
+2. **Learning:** Describe the benefits, limitations and risks of using AI to support learning, and recognise where the 3As and PAIR fit.
+3. **Assessment:** Explain how AI may affect assessment validity and academic integrity, and identify NP’s essential requirements for GenAI use.
+4. **Tools and data:** Consider whether an AI tool is suitable for a T&L purpose and the information involved.
+
+At Level 1, the focus is on recognising and describing what matters. You are not expected to redesign your module in this package.
 
 ---
 
@@ -128,7 +128,11 @@ NP aims to prepare students to become **AI-ready professionals** who combine:
 - Domain knowledge and skills.
 - Responsible and effective use of AI.
 
-NP’s approach includes five connected strategies.
+This shared goal gives context to NP’s approaches. At Level 1, you only need to recognise what each approach helps us consider.
+
+## Five Strategies, One Goal
+
+NP’s five strategies work together towards the same goal.
 
 | Strategy | What it means |
 | --- | --- |
@@ -138,14 +142,14 @@ NP’s approach includes five connected strategies.
 | **Support personalised learning** | Use suitable AI-enabled platforms to support learning. |
 | **Strengthen human skills** | Develop judgement, ethics, creativity, communication and collaboration. |
 
-In this package, we will focus on four practical questions:
+You will not work through all five strategies in depth here. Instead, the rest of this package follows four practical questions:
 
-> **3As:** What should students learn?  
-> **PAIR:** How can students learn with AI?  
-> **Assessment:** How will students show what they can do?  
-> **Tools and data:** How should AI be used responsibly?
+1. **Curriculum and the 3As:** What should students learn?
+2. **Learning and PAIR:** How can students learn with AI?
+3. **Assessment:** How will students show what they can do?
+4. **Tools and data:** How should AI be used responsibly?
 
-These questions are connected. A change in one area may affect the others.
+These questions form the thread for Parts 3 to 7. A decision in one area may affect the others. For example, what students must learn affects how they practise and what an assessment should require.
 
 ---
 
@@ -583,9 +587,11 @@ Students should not encounter complex AI conditions for the first time when they
 
 If GenAI assists with grading or feedback:
 
+- Pilot the use first on a small representative sample with management approval.
 - Staff remain responsible for every grade and feedback decision.
 - Every AI suggestion must be reviewed and validated by a human marker.
 - AI must not make the final grading decision.
+- Every student’s grade must be reviewed by a human marker; do not review only a sample of grades.
 - Use must follow the required approval and quality-assurance process.
 - Validity, reliability, fairness and transparency must be checked.
 - Relevant use should be disclosed to students as required.
