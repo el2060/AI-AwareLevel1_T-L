@@ -622,11 +622,18 @@ export default function Home() {
       <header className="topbar">
         <div className="global-progress" style={{ width: `${progress}%` }} />
         <div className="topbar-inner">
-          <div className="brand">
+          <button
+            type="button"
+            className="brand brand-home"
+            onClick={() => selectSection(0)}
+            aria-label="Return to course home"
+            aria-current={active === 0 ? "page" : undefined}
+            title="Course home"
+          >
             <img className="np-logo" src="/np-logo.png" alt="Ngee Ann Polytechnic" />
             <span className="brand-divider" aria-hidden="true" />
             <span className="course-name">AI in T&amp;L Essentials</span>
-          </div>
+          </button>
           <div className="top-actions">
             <span className="level-badge">Level 1 · AI-Aware</span>
             <button className="notes-button" onClick={() => setNotesOpen(true)}>

@@ -61,6 +61,24 @@ button { color: inherit; }
 }
 .brand, .top-actions { display: flex; align-items: center; }
 .brand { min-width: 0; gap: 13px; }
+.brand-home {
+  margin-left: -6px;
+  padding: 6px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color .16s ease, transform .16s ease;
+}
+.brand-home:hover { background: var(--canvas); }
+.brand-home:active { transform: scale(.985); }
+.brand-home:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
 .np-logo { width: 126px; height: auto; display: block; }
 .brand-divider { width: 1px; height: 28px; background: var(--line); }
 .course-name { font-size: 14px; font-weight: 650; letter-spacing: -.01em; white-space: nowrap; }
