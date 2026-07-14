@@ -16,7 +16,7 @@ All NP academic staff are required to complete this module. It gives us a common
 
 ### Learning time
 
-Allow about 60–75 minutes for this learning package. The completion quiz is administered separately.
+This programme takes about 2 hours in total: this learning package with its activities, plus the completion quiz. Work through it at your own pace—you can leave and return anytime.
 
 ---
 
