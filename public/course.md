@@ -56,12 +56,12 @@ A polished product alone may not tell us what the student knows or can do.
 
 ## Where AI May Matter in Your Module
 
-AI may matter across the everyday work of teaching:
+AI may matter across four parts of your teaching work:
 
-- **Design learning:** Review what students need to learn, practise and do as AI changes disciplinary and workplace practice.
-- **Facilitate learning:** Decide when AI can support explanation, practice or feedback without doing the learning for students.
-- **Assess learning:** Keep evidence of students’ own thinking, judgement and performance visible.
-- **Review and improve:** Use feedback, learning information and suitable tools to improve the module with care.
+- **Curriculum:** Review what students need to learn, practise and do as AI changes disciplinary and workplace practice.
+- **Learning:** Decide when AI can support explanation, practice or feedback without doing the learning for students.
+- **Assessment:** Keep evidence of students’ own thinking, judgement and performance visible.
+- **Tools and data:** Use learning information and suitable tools to support T&L work with care.
 
 AI is one factor to consider; the learning purpose comes first.
 
@@ -125,16 +125,16 @@ These commitments shape NP’s approaches. At Level 1, focus on the purpose of e
 
 NP’s five strategies work together towards the same goal. Explore the overview below to see what each one means for Teaching and Learning.
 
-## Four Questions for This Package
+## Four Areas in This Package
 
-This package brings the strategies into four practical questions:
+The five strategies appear in four practical areas of T&L:
 
-1. **Curriculum:** What is AI changing in what students must learn and do? The 3As help course and module teams review learning outcomes, activities and assessment together.
-2. **Learning:** Where might AI support learning without replacing it? PAIR offers a structure for learning with AI.
-3. **Assessment:** What must students still demonstrate themselves?
-4. **Tools and data:** Where could an AI tool or learning data support your T&L work—and what needs checking before you use it?
+1. **Curriculum:** The 3As help course and module teams review learning outcomes, activities and assessment together.
+2. **Learning:** PAIR provides a structure for learning with AI.
+3. **Assessment:** Assessment conditions keep students’ learning and contribution visible.
+4. **Tools and data:** Suitable tools and learning data can support T&L work when their use is checked and overseen.
 
-These questions guide Parts 3 to 7. They are connected: what students need to learn affects how they practise, what an assessment should require, and whether a tool is a suitable choice.
+Parts 3 to 7 build through these areas in sequence. Each affects the next: what students need to learn shapes their practice, assessment and the tools that may be useful.
 
 ---
 
@@ -403,21 +403,6 @@ Students must not:
 
 Declaring one of these uses does not make it acceptable.
 
-## Check Your Judgement
-
-A student is required to interview an industry practitioner. Instead, the student asks GenAI to create realistic interview responses and declares this use.
-
-Is the use acceptable?
-
-A. Yes, because all declared GenAI use is allowed.  
-B. Yes, provided the responses are checked.  
-C. No, because GenAI cannot replace a real interaction required by the task.  
-D. No, unless the student also submits the chatbot history.
-
-**Suggested response:** C.
-
-Declaration is required, but it does not make a prohibited use acceptable.
-
 ## Make Assessment Instructions Clear
 
 Students should not have to guess what “appropriate AI use” means.
@@ -510,12 +495,7 @@ Begin with the learning outcome. Then decide what students must demonstrate, whe
 
 AI tools may support your work and your students’ learning.
 
-At Level 1, focus on four things:
-
-- Recognise potentially relevant tools.
-- Describe possible T&L uses.
-- Identify important limitations and risks.
-- Decide what needs to be checked before use.
+This part has two purposes: see practical ways AI tools and learning data can support T&L work, and know what to check before using them.
 
 Start with the T&L need, not the tool. A useful tool choice depends on the learning purpose, the information involved and how the output will be reviewed.
 
@@ -539,7 +519,7 @@ Most routine T&L content is non-classified. Still, pause before you enter inform
 
 <!--use-case-explorer-->
 
-## Ask Four Questions
+## Four Checks Before You Use a Tool
 
 Before using an AI tool, consider:
 
@@ -595,25 +575,6 @@ You still need to:
 - Identify possible bias.
 - Decide what action, if any, is appropriate.
 
-## Supporting Different Learning Needs
-
-AI may help create:
-
-- Alternative explanations.
-- Examples at different levels of complexity.
-- Practice questions.
-- Summaries and study prompts.
-- Different representations of content.
-- Language support.
-
-Before using the output, check that:
-
-- The meaning remains accurate.
-- The intended learning standard has not been lowered.
-- The examples are inclusive.
-- Students can access the required tools.
-- AI does not replace appropriate human or institutional support.
-
 ## Apply It to Your Module
 
 Think of one possible use of M365 Copilot or another approved tool.
@@ -632,40 +593,9 @@ A suitable AI use has a clear learning purpose, an appropriate tool, safe handli
 
 # Part 8: Bring It All Together
 
-Return to the module you selected at the start.
+Choose a module you teach, lead or support. The four-lens activity brings together the curriculum, learning, assessment, and tools-and-data considerations from this package.
 
-Use these four questions.
-
-## Curriculum
-
-> What is AI changing in what students must learn and do?
-
-## Learning
-
-> Where might AI support learning without replacing it?
-
-## Assessment
-
-> What must students still demonstrate themselves?
-
-## Tools and Data
-
-> Where could an AI tool or learning data support your T&L work—and what needs checking before you use it?
-
-These questions provide a practical starting point for AI-aware teaching at NP. They help you connect curriculum, facilitation, assessment, tools and data instead of considering each in isolation.
-
-## Your AI-Aware Module Snapshot
-
-Think of one response to each prompt:
-
-1. **A change I notice:** One way AI is changing my discipline, module or students’ learning.
-2. **An Anchor to protect:** One capability students must continue to develop and demonstrate.
-3. **A possible Augment opportunity:** One learning or professional workflow AI might support.
-4. **A risk to manage:** One risk involving learning, accuracy, bias, access, data or over-reliance.
-5. **An assessment question:** One expectation or GenAI condition I may need to check.
-6. **A next step:** One small action I can take.
-
-Possible next steps include:
+Afterwards, choose one small next step:
 
 - Discussing an AI-related change with your module team.
 - Reviewing one learning outcome, activity and assessment together through the 3As.
@@ -677,17 +607,7 @@ Possible next steps include:
 
 # Look Back
 
-Think back to the module and questions you carried through the package.
-
-Now consider:
-
-> One thing I understand more clearly is...
-
-> One question I now know to ask is...
-
-> One action I am better prepared to take is...
-
-Being AI-aware starts with recognising what matters and responding with sound educational and professional judgement.
+Use the question you chose above to carry one useful idea into your next module conversation or review.
 
 ---
 
@@ -701,15 +621,13 @@ Being AI-aware starts with recognising what matters and responding with sound ed
 
 You have reached the end of **AI in T&L Essentials: Level 1 (AI-Aware)**.
 
-You are now equipped to:
+You now have a shared Level 1 foundation to:
 
-- Recognise AI’s implications for curriculum, learning and assessment.
-- Explain NP’s key AI-enabled T&L approaches.
-- Identify appropriate questions before using AI.
-- Recognise NP’s essential GenAI assessment requirements.
-- Consider whether an AI tool is suitable for a T&L use.
-- Take a responsible next step within your module.
+- Recognise where AI may affect curriculum, learning, assessment, and tools and data.
+- Use the 3As and PAIR to orient a teaching or learning decision.
+- Apply NP’s requirements for GenAI use in assessment.
+- Choose one appropriate next step for a module you teach, lead or support.
 
 Complete the separately administered quiz to fulfil the programme’s completion requirements.
 
-Being AI-aware means knowing what to consider, which NP approaches apply and where to seek guidance before taking the next step.
+Being AI-aware means knowing what to consider, which NP approaches apply and when to seek guidance.

@@ -209,13 +209,13 @@ const sectionMeta = [
 
 const sectionBridges = [
   "Consider where AI may already be showing up in a module you teach or support.",
-  "See how NP’s approaches help you ask four practical questions.",
+  "See how NP’s approaches appear across four practical areas of T&L.",
   "Start with curriculum: what must students learn, and where might AI add value?",
   "Then consider how AI might support practice without taking over the learning.",
   "Use PAIR to structure how students learn and solve problems with AI.",
   "Apply the same focus on visible learning to assessment.",
   "Clear assessment conditions go together with suitable tools, safe data use and human oversight.",
-  "Bring the questions together for a module you teach or support.",
+  "Bring the four areas together for a module you teach or support.",
 ];
 
 function ChoiceCheck({ question, eyebrow, choices }: { question: string; eyebrow: string; choices: Choice[] }) {
@@ -249,7 +249,7 @@ function ChoiceCheck({ question, eyebrow, choices }: { question: string; eyebrow
 
 function PulseActivity({ value, onChange }: { value: string; onChange: (value: string) => void }) {
   const selected = value ? value.split("|") : [];
-  const options = ["Design learning", "Facilitate learning", "Assess learning", "Review and improve", "Not sure yet"];
+  const options = ["Curriculum", "Learning", "Assessment", "Tools and data", "Not sure yet"];
   return (
     <section className="activity-block pulse-activity">
       <span className="activity-eyebrow">30-second pulse</span>
@@ -343,11 +343,11 @@ function ModuleSummary() {
       tone: "orange",
     },
     {
-      label: "Tools and responsibility",
-      title: "Use tools with care",
-      preview: "Choose a suitable tool, check the information and keep human oversight.",
-      takeaway: "Start with M365 Copilot for routine staff work. Use any AI tool only for the information and purpose it is approved for under NP’s current guidance.",
-      practice: "You remain responsible for learning materials, assessment decisions, grades and feedback.",
+      label: "Tools and data",
+      title: "Use tools purposefully",
+      preview: "Start with a T&L task, then check the information, output and oversight.",
+      takeaway: "M365 Copilot can support routine staff work such as reviewing materials, drafting examples and summarising de-identified feedback. Use any tool only for the information and purpose it is approved for.",
+      practice: "Use AI output as a starting point. You remain responsible for learning materials, assessment decisions, grades and feedback.",
       icon: ShieldCheck,
       tone: "teal",
     },
@@ -360,7 +360,7 @@ function ModuleSummary() {
       <div className="summary-heading">
         <span>Key ideas</span>
         <h2>Four ideas to carry into your teaching</h2>
-        <p>Choose a theme to revisit its essential point and the question it leaves you with.</p>
+        <p>Choose a theme to revisit its essential point and how it applies to your teaching.</p>
       </div>
       <div className="summary-layout">
         <div className="summary-topics" role="tablist" aria-label="Key ideas">
@@ -543,12 +543,12 @@ function UseCaseExplorer() {
       judgement: "What changes to make, with your module team and the 3As in mind.",
     },
     {
-      title: "Draft industry examples",
+      title: "Draft practice examples",
       tool: "M365 Copilot",
       icon: Lightbulb,
-      use: "Generate a first set of worked examples, scenarios or practice questions in a workplace context.",
-      prompt: "Draft three Year [1/2/3] workplace examples for [concept] in [diploma]. Include a common misconception to spot. Use plain English for a first exposure.",
-      check: "Check accuracy, learner level, tone and whether the industry detail is realistic.",
+      use: "Generate a first set of worked examples, scenarios or practice questions in an authentic context.",
+      prompt: "Draft three Year [1/2/3] practice examples for [concept] in [diploma]. Include a common misconception to spot. Use plain English for a first exposure.",
+      check: "Check accuracy, learner level, tone and whether the context is realistic.",
       judgement: "What is technically and professionally correct, and what goes in front of students.",
     },
     {
