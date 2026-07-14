@@ -635,7 +635,7 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
     { label: "Use an unapproved public tool to analyse named student records.", correct: false, feedback: "The tool is not approved for the information involved." },
     { label: "Let an AI summary decide which students need intervention.", correct: false, feedback: "AI may support an initial review, but a person must interpret the context and make the decision." },
   ]} />;
-  if (title.startsWith("Part 8")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep your chosen module in mind. Tap each question once you have considered it." items={["Curriculum: What is AI changing in what students must learn and do?", "Learning: Where might AI support learning without replacing it?", "Assessment: What must students still demonstrate themselves?", "Tools and data: What tool or data use needs checking?"]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered what is changing, the learning to protect, a possible support, and what needs checking." />;
+  if (title.startsWith("Part 8")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep your chosen module in mind. Tap each question once you have considered it." items={["Curriculum: What is AI changing in what students must learn and do?", "Learning: Where might AI support learning without replacing it?", "Assessment: What must students still demonstrate themselves?", "Tools and data: Where could an AI tool or learning data support your T&L work—and what needs checking before you use it?"]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered what is changing, the learning to protect, what students need to demonstrate, and where a tool or learning data could help with appropriate checks." />;
   if (title.startsWith("Look Back")) return <CarryForwardActivity value={notes.lookbackchoice ?? ""} onChange={(value) => onChange("lookbackchoice", value)} />;
   if (title === "Module Summary") return <ConfidenceActivity value={notes.confidence ?? ""} onChange={(value) => onChange("confidence", value)} />;
   if (title.startsWith("You Have Completed")) return <NextStepActivity value={notes.nextstep ?? ""} onChange={(value) => onChange("nextstep", value)} />;
@@ -665,8 +665,8 @@ function OpeningVisual() {
     },
     {
       title: "Tools and data",
-      detail: "How AI tools and learning data can support your T&L work—used safely",
-      feedback: "What tool or data use needs checking?",
+      detail: "How AI tools and learning data can support your T&L work",
+      feedback: "Where could an AI tool or learning data support your T&L work—and what needs checking before you use it?",
       icon: ShieldCheck,
     },
   ];
@@ -786,8 +786,8 @@ function LecturerPracticeMap() {
       title: "Tools and data",
       domain: "Data & Tech-Enhanced T&L",
       work: "Materials, feedback themes, results and approved tools",
-      question: "What tool or data use needs checking?",
-      detail: "Use approved tools and learning information as starting points. Check what information is involved, the output and the judgement needed before acting.",
+      question: "Where could an AI tool or learning data support your T&L work—and what needs checking before you use it?",
+      detail: "Consider useful starting points—such as drafting materials, reviewing feedback themes or spotting patterns in results—then check the information involved, the output and the judgement needed before acting.",
       icon: Database,
       tone: "review",
     },
