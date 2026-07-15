@@ -346,7 +346,7 @@ function ModuleSummary() {
       label: "Tools and data",
       title: "Support engagement and outcomes",
       preview: "Use suitable tools and learning data to support learning safely and responsibly, then check the information, output and oversight.",
-      takeaway: "M365 Copilot can support activities such as reviewing materials, drafting examples and summarising de-identified feedback. Use any tool only for the information and purpose it is approved for.",
+      takeaway: "M365 Copilot is cleared up to OC-Restricted and can support reviewing materials, drafting examples and summarising de-identified feedback. Use every tool only for its approved information and purpose.",
       practice: "Use AI output or learning data as a starting point. You remain responsible for the teaching and learning decision that follows.",
       icon: ShieldCheck,
       tone: "teal",

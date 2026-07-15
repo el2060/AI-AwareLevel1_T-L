@@ -424,6 +424,8 @@ Start with the T&L need, not the tool. A useful tool choice depends on the learn
 
 M365 Copilot is the primary AI assistant provisioned to NP staff. It is a practical starting point when your work is already in the Microsoft 365 environment.
 
+M365 Copilot is cleared for information up to **OC-Restricted**, subject to NP's current guidance for the information and purpose involved.
+
 It can help you review module documents, summarise de-identified feedback, draft communications, prepare meeting follow-up and create a first version of learning materials. Check the output, adapt it for your module and make the final decision yourself.
 
 ### Other approved Government tools
@@ -460,7 +462,7 @@ Before using an AI tool, consider:
 
 ## Match the Information to the Tool
 
-Use M365 Copilot, Pair Chat and any other tool only for the information classification and purpose it is approved for under NP’s current guidance. Before entering information, consider the task, the data, the tool and the human oversight needed.
+Tool approval conditions may differ. M365 Copilot is cleared up to OC-Restricted; check the corresponding approval conditions before using Pair Chat or any other tool. Before entering information, consider the task, the data, the tool and the human oversight needed.
 
 For other public AI tools, do not enter personal, sensitive or proprietary information unless the tool has been explicitly approved for that information and purpose.
 
