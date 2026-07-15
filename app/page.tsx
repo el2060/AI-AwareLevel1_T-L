@@ -214,7 +214,7 @@ const sectionBridges = [
   "Then consider how AI might support practice without taking over the learning.",
   "Use PAIR to structure how students learn and solve problems with AI.",
   "Apply the same focus on visible learning to assessment.",
-  "Clear assessment conditions go together with suitable tools, safe data use and human oversight.",
+  "Clear assessment conditions go together with suitable tools, responsible data use and human oversight.",
   "Bring the four areas together for a module you teach or support.",
 ];
 
@@ -345,7 +345,7 @@ function ModuleSummary() {
     {
       label: "Tools and data",
       title: "Support engagement and outcomes",
-      preview: "Use suitable tools and learning data to support learning, then check the information, output and oversight.",
+      preview: "Use suitable tools and learning data to support learning safely and responsibly, then check the information, output and oversight.",
       takeaway: "M365 Copilot can support activities such as reviewing materials, drafting examples and summarising de-identified feedback. Use any tool only for the information and purpose it is approved for.",
       practice: "Use AI output or learning data as a starting point. You remain responsible for the teaching and learning decision that follows.",
       icon: ShieldCheck,
@@ -635,7 +635,7 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
     { label: "Use an unapproved public tool to analyse named student records.", correct: false, feedback: "The tool is not approved for the information involved." },
     { label: "Let an AI summary decide which students need intervention.", correct: false, feedback: "AI may support an initial review, but a person must interpret the context and make the decision." },
   ]} />;
-  if (title.startsWith("Part 8")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep a module you teach, lead or support in mind. Tap each question once you have considered it." items={["Curriculum: What is AI changing in what students must learn and how they are taught?", "Learning: Where might AI support learning without replacing it?", "Assessment: How will assessment provide authentic evidence of students’ learning?", "Tools and data: Where could AI tools or learning data improve engagement or support a learning outcome—and what needs checking before use?"]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered what is changing, the learning to protect, how assessment can provide authentic evidence, and where AI tools or learning data could help with appropriate checks." />;
+  if (title.startsWith("Part 8")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep a module you teach, lead or support in mind. Tap each question once you have considered it." items={["Curriculum: What is AI changing in what students must learn and how they are taught?", "Learning: Where might AI support learning without replacing it?", "Assessment: How will assessment provide authentic evidence of students’ learning?", "Tools and data: Where could AI tools or learning data safely and responsibly support engagement or a learning outcome—and what needs checking before use?"]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered what is changing, the learning to protect, how assessment can provide authentic evidence, and where AI tools or learning data could safely and responsibly help with appropriate checks." />;
   if (title.startsWith("Look Back")) return <CarryForwardActivity value={notes.lookbackchoice ?? ""} onChange={(value) => onChange("lookbackchoice", value)} />;
   if (title === "Module Summary") return <ConfidenceActivity value={notes.confidence ?? ""} onChange={(value) => onChange("confidence", value)} />;
   if (title.startsWith("You Have Completed")) return <NextStepActivity value={notes.nextstep ?? ""} onChange={(value) => onChange("nextstep", value)} />;
@@ -651,12 +651,12 @@ function OpeningVisual() {
     },
     {
       title: "Learning",
-      detail: "How AI can improve learning experiences, practice and feedback",
+      detail: "How AI can support learning, practice and feedback",
       icon: Lightbulb,
     },
     {
       title: "Assessment",
-      detail: "How AI changes assessment—and how assessment can remain authentic",
+      detail: "How AI changes assessment—and how it can remain authentic and credible",
       icon: ClipboardCheck,
     },
     {
@@ -838,7 +838,7 @@ function SectionVisual({ title }: { title: string }) {
   if (title.startsWith("Part 8")) return (
     <figure className="concept-visual module-lens-visual" aria-label="Review a module through four AI-aware lenses">
       <figcaption><span>Bring it together</span><strong>Review one module through four lenses</strong></figcaption>
-      <div className="module-lens"><div className="lens-core">My<br />module</div><div className="lens-item lens-one"><b>Curriculum</b><small>What changes?</small></div><div className="lens-item lens-two"><b>Learning</b><small>What helps?</small></div><div className="lens-item lens-three"><b>Assessment</b><small>What shows learning?</small></div><div className="lens-item lens-four"><b>Tools &amp; data</b><small>What is safe?</small></div></div>
+      <div className="module-lens"><div className="lens-core">My<br />module</div><div className="lens-item lens-one"><b>Curriculum</b><small>What changes?</small></div><div className="lens-item lens-two"><b>Learning</b><small>What helps?</small></div><div className="lens-item lens-three"><b>Assessment</b><small>What shows learning?</small></div><div className="lens-item lens-four"><b>Tools &amp; data</b><small>What helps—and what needs checking?</small></div></div>
     </figure>
   );
   return null;
