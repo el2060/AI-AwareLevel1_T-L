@@ -479,6 +479,66 @@ function PairBuilder() {
   );
 }
 
+function FacilitationRolePlay() {
+  const moves = [
+    {
+      context: "A Year 1 class has used AI to get a simpler explanation of a difficult concept. Before they move to practice, what is your next facilitation move?",
+      choices: [
+        { label: "Ask students to compare the explanation with the module material, identify one limitation, then attempt a practice task.", good: true, feedback: "This keeps students checking, thinking and applying. AI has supported clarification rather than replaced the learning." },
+        { label: "Give students the AI explanation as the answer and move straight to the next topic.", good: false, feedback: "The explanation may be useful, but students still need to verify it and practise applying the concept." },
+        { label: "Tell students not to use AI for explanations under any circumstances.", good: false, feedback: "The key question is whether the AI use supports the intended learning with suitable checks—not whether it exists at all." },
+      ],
+    },
+    {
+      context: "Students are now drafting a response to a client scenario. They want AI to suggest a first version. What will make the activity a learning experience?",
+      choices: [
+        { label: "Ask them to generate, compare, check and improve the draft, then explain the judgement behind their final response.", good: true, feedback: "This is a useful learning pattern. Students use AI output as material to evaluate and improve, while their judgement remains visible." },
+        { label: "Let students submit the AI draft if the writing is clear and professional.", good: false, feedback: "A polished draft does not by itself show the student’s reasoning, judgement or ability to adapt to the context." },
+        { label: "Require every student to use the same prompt and keep the first output unchanged.", good: false, feedback: "Learning comes from purposeful interaction, checking and improvement—not from accepting a first response." },
+      ],
+    },
+  ];
+  const [stage, setStage] = useState(0);
+  const [picked, setPicked] = useState<number | null>(null);
+  const current = moves[stage];
+  const answer = picked === null ? null : current.choices[picked];
+  const last = stage === moves.length - 1;
+  return (
+    <section className="activity-block facilitation-roleplay">
+      <div className="roleplay-header"><span className="activity-eyebrow">Facilitation simulation</span><span className="roleplay-step">Move {stage + 1} of {moves.length}</span></div>
+      <h2>You are facilitating the next step</h2>
+      <div className="roleplay-scene"><span className="roleplay-avatar" aria-hidden="true">L</span><div><small>Lecturer context</small><p>{current.context}</p></div></div>
+      <p className="roleplay-prompt">Choose the move that best protects the learning.</p>
+      <div className="roleplay-moves">
+        {current.choices.map((choice, index) => <button key={choice.label} type="button" className={picked === index ? `${choice.good ? "good" : "caution"} selected` : ""} onClick={() => setPicked(index)}><span>{String.fromCharCode(65 + index)}</span><strong>{choice.label}</strong></button>)}
+      </div>
+      {answer && <div className={`activity-feedback ${answer.good ? "" : "try-again"}`}><strong>{answer.good ? "A learning-centred move" : "Pause and reconsider"}</strong><p>{answer.feedback}</p>{!last && <button className="inline-next" type="button" onClick={() => { setStage(stage + 1); setPicked(null); }}>Try the next move →</button>}{last && answer.good && <p className="roleplay-close">A useful facilitation pattern is: give students something to work with, then ask them to compare, check, improve and explain their judgement.</p>}</div>}
+    </section>
+  );
+}
+
+function AssessmentBriefBuilder() {
+  const clauses = [
+    { id: "purpose", label: "Permitted use", text: "You may use GenAI to brainstorm possible approaches and receive feedback on an early draft." },
+    { id: "contribution", label: "Student contribution", text: "Your final analysis, selection of evidence and recommendation must be your own." },
+    { id: "process", label: "Check and declare", text: "Check AI-generated claims, retain evidence of your interaction, cite and declare your use." },
+    { id: "boundary", label: "Clear boundary", text: "Do not use GenAI for any prohibited component or to simulate a required human interaction." },
+  ];
+  const [selected, setSelected] = useState<string[]>([]);
+  const complete = selected.length === clauses.length;
+  return (
+    <section className="activity-block assessment-builder">
+      <div className="assessment-builder-heading"><span className="activity-eyebrow">Briefing challenge</span><span className="activity-count">{selected.length} / {clauses.length}</span></div>
+      <h2>Turn a vague AI instruction into a usable brief</h2>
+      <p>Start with the instruction below. Tap each essential clause to add it to the student-facing brief.</p>
+      <div className="brief-draft"><small>Initial instruction</small><strong>“You may use AI appropriately.”</strong><span>This does not tell students enough.</span></div>
+      <div className="brief-clauses">{clauses.map((clause, index) => <button key={clause.id} type="button" className={selected.includes(clause.id) ? "selected" : ""} onClick={() => setSelected((items) => items.includes(clause.id) ? items.filter((item) => item !== clause.id) : [...items, clause.id])}><span>{selected.includes(clause.id) ? "✓" : String(index + 1).padStart(2, "0")}</span><div><small>{clause.label}</small><strong>{clause.text}</strong></div></button>)}</div>
+      {selected.length > 0 && <div className="brief-preview"><span>Student-facing brief</span>{clauses.filter((clause) => selected.includes(clause.id)).map((clause) => <p key={clause.id}>{clause.text}</p>)}</div>}
+      {complete && <div className="activity-feedback"><strong>A clear assessment brief</strong><p>Students can now see the permitted purpose, their required contribution, the checking and declaration requirements, and the boundaries of use. Announce and discuss these conditions in class.</p></div>}
+    </section>
+  );
+}
+
 function PairDesignGuide() {
   const [active, setActive] = useState(0);
   const stages = [
@@ -613,11 +673,8 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
   if (title === "AI in T&L Essentials: Level 1 (AI-Aware)") return null;
   if (title.startsWith("Part 1")) return <PulseActivity value={notes.pulse ?? ""} onChange={(value) => onChange("pulse", value)} />;
   if (title.startsWith("Part 2")) return <ThreeAsActivity />;
-  if (title.startsWith("Part 4")) return <div className="activity-stack"><ChoiceCheck eyebrow="Assessment judgement" question="A student declares that GenAI created a required interview. Is that acceptable?" choices={[
-    { label: "Yes. Declaration makes the use acceptable.", correct: false, feedback: "Declaration is required, but it does not make a prohibited use acceptable." },
-    { label: "It depends on how realistic the generated responses are.", correct: false, feedback: "The issue is not realism. The assessment requires a real human interaction." },
-    { label: "No. GenAI cannot replace the real interaction required by the task.", correct: true, feedback: "Correct. Simulating a required human interaction is always prohibited." },
-  ]} /><TapChecklist eyebrow="Make it clear" title="What should the assignment descriptor spell out?" prompt="The instruction says only: ‘You may use AI appropriately.’ Select every detail students still need." items={["What AI may be used for", "What students must do themselves", "What evidence they must keep", "What they must check, cite and declare", "What is restricted or prohibited"]} value={notes.assessmentcheck ?? ""} onChange={(value) => onChange("assessmentcheck", value)} completionTitle="That is the clearer brief" completionText="Students should know the permitted purpose, their own contribution, the evidence to retain, and the checking and declaration requirements." /></div>;
+  if (title.startsWith("Part 3")) return <FacilitationRolePlay />;
+  if (title.startsWith("Part 4")) return <AssessmentBriefBuilder />;
   if (title.startsWith("Part 5")) return <ChoiceCheck eyebrow="Tool judgement" question="Which is the soundest use?" choices={[
     { label: "Use an approved AI tool, such as M365 Copilot, to suggest activities, then check and adapt one.", correct: true, feedback: "The purpose is clear, the tool is suitable, and the lecturer reviews the output." },
     { label: "Use an unapproved public tool to analyse named student records.", correct: false, feedback: "The tool is not approved for the information involved." },
