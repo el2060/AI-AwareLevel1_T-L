@@ -45,26 +45,6 @@ A useful question to carry through this module is:
 
 > For this learning purpose, what should the student do, what might AI support, and what safeguards are needed?
 
-## Three Things to Keep in Mind
-
-### 1. People remain responsible
-
-AI may assist with a task, but lecturers and students remain responsible for how its output is used.
-
-### 2. Check AI output
-
-AI can produce inaccurate, fabricated, biased, outdated or unsuitable responses—even when the response sounds convincing.
-
-### 3. Follow NP requirements
-
-This is especially important in assessment, grading and work involving personal, sensitive or proprietary information.
-
-### Pause and Consider
-
-For the module you have in mind:
-
-> Which part of your teaching work is most likely to need attention first?
-
 ---
 
 # Part 2: NP’s Shared Direction for AI-Enabled T&L
@@ -167,35 +147,19 @@ For students, useful support gives them more to think with: another explanation,
 
 AI may help students:
 
-- Access another explanation.
-- Generate examples.
-- Practise with questions or quizzes.
-- Brainstorm possibilities.
-- Receive preliminary feedback.
-- Compare different approaches.
-- Clarify an unfamiliar concept.
-- Learn at an appropriate pace.
-
-It may also help lecturers develop initial examples, explanations or activities for checking and adaptation.
+- Access another explanation or example.
+- Practise with questions and receive preliminary feedback.
+- Brainstorm or compare approaches.
+- Work at an appropriate pace or level.
 
 ## Possible Limitations and Risks
 
 AI may produce output that is:
 
-- Incorrect or fabricated.
-- Biased or stereotypical.
-- Outdated.
-- Too generic.
-- Unsuitable for the learner level.
-- Unsupported by reliable evidence.
+- Incorrect, fabricated or outdated.
+- Biased, stereotypical or unsuitable for the learner level.
 
-Without a clear learning purpose, AI may also:
-
-- Reduce independent thinking.
-- Remove useful practice.
-- Encourage over-reliance.
-- Create access or fairness concerns.
-- Raise copyright or attribution issues.
+Without a clear learning purpose, it may also reduce independent thinking or useful practice, and create access, fairness, copyright or attribution concerns.
 
 ## Supporting or Replacing Learning?
 
@@ -248,12 +212,7 @@ For the module you have in mind:
 
 NP has adopted and adapted the **PAIR framework** as a simple, platform-independent structure for AI-supported learning and problem-solving across all three years of PET diplomas.
 
-PAIR works across disciplines and as tools change. It keeps learning:
-
-- **Human-centred:** AI supports rather than replaces human judgement.
-- **Skill-focused:** Students practise transferable skills such as problem framing, evaluation and reflection.
-- **Responsibility-centred:** Students and lecturers remain accountable for judgement, choices and learning.
-- **Platform-independent:** The process can be used with different AI tools as they evolve.
+PAIR works across disciplines and as tools change. It is a human-centred, skill-focused and platform-independent process that keeps students and lecturers accountable for judgement, choices and learning.
 
 The four connected stages are **Problem, AI, Interaction and Reflection**. Students formulate the problem before choosing a tool, interact critically rather than accepting the first response, and reflect on both the outcome and the learning process.
 
@@ -398,15 +357,7 @@ Compare these instructions.
 
 > You may use GenAI to brainstorm possible approaches and receive feedback on an early draft. Your final analysis, selection of evidence and recommendation must be your own. Check all AI-generated claims against reliable sources, retain evidence of your AI interaction and declare your use upon submission.
 
-Instruction B is clearer. It states:
-
-- What AI may be used for.
-- What the student must do.
-- What must be checked.
-- What evidence must be retained.
-- What must be declared.
-
-A clear assignment descriptor should cover:
+Instruction B is clearer because it sets out the boundaries of AI use. A clear assignment descriptor should cover:
 
 1. The GenAI stance for each component.
 2. Permitted purposes.
@@ -419,13 +370,7 @@ A clear assignment descriptor should cover:
 
 Written conditions are necessary, but students may still interpret them differently.
 
-Module Leaders should:
-
-- Inform students early.
-- Post a clear announcement.
-- Discuss the conditions in class.
-- Give students an opportunity to ask questions.
-- Use examples or a mock run where practical.
+Module Leaders should announce the conditions early, discuss them in class and give students an opportunity to ask questions. Use examples or a mock run where practical.
 
 Two-way communication helps address misunderstandings before submission.
 
@@ -433,14 +378,7 @@ Two-way communication helps address misunderstandings before submission.
 
 Where AI use is restricted or prohibited in a summative assessment, formative activities should prepare students to meet those conditions.
 
-Students might:
-
-- Compare acceptable and unacceptable uses.
-- Examine sample declarations.
-- Practise checking AI output.
-- Complete an independent task before an AI-supported task.
-- Discuss ambiguous examples.
-- Participate in a mock run.
+Students might compare acceptable and unacceptable uses, examine sample declarations, practise checking AI output, or work through an independent task before an AI-supported one.
 
 Give students a chance to work with the conditions before the summative submission.
 
@@ -492,12 +430,6 @@ It can help you review module documents, summarise de-identified feedback, draft
 
 Other approved tools may suit a particular task. **Pair Chat (pair.gov.sg)** is a GovTech AI assistant for public officers. Alongside chat, it offers Assistants, batch jobs and writing templates. It may be useful when a Government workflow or repeatable task is the better fit — not simply as another way to do everyday M365 work.
 
-### Use the right tool for the information
-
-Use M365 Copilot, Pair Chat and any other tool only for the information classification and purpose it is approved for under NP’s current guidance. Do not enter personal, sensitive or proprietary information in a tool that has not been cleared for it.
-
-Most routine T&L content is non-classified. Still, pause before you enter information: consider the task, the data, the tool and the human oversight needed.
-
 <!--use-case-explorer-->
 
 ## Four Checks Before You Use a Tool
@@ -528,7 +460,7 @@ Before using an AI tool, consider:
 
 ## Match the Information to the Tool
 
-Different tools have different approval conditions. Check NP’s current guidance for the tool, information classification and purpose before entering information.
+Use M365 Copilot, Pair Chat and any other tool only for the information classification and purpose it is approved for under NP’s current guidance. Before entering information, consider the task, the data, the tool and the human oversight needed.
 
 For other public AI tools, do not enter personal, sensitive or proprietary information unless the tool has been explicitly approved for that information and purpose.
 
