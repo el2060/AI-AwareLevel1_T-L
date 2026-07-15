@@ -661,7 +661,7 @@ function OpeningVisual() {
     },
     {
       title: "Tools and data",
-      detail: "How AI tools and learning data can support engagement and learning outcomes",
+      detail: "How AI tools and learning data can safely and responsibly support engagement and learning outcomes",
       icon: ShieldCheck,
     },
   ];
