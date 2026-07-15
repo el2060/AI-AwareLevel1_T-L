@@ -35,32 +35,11 @@ Level 1 is about awareness: recognise the key issues and identify what may need 
 
 # Part 1: AI and Your Module
 
-## Consider This
+## Start With Your Module
 
-A student submits a polished report. The argument is clear, the language is fluent and the recommendations sound convincing.
+AI may already appear in your module: in content, student learning, assessment, feedback or learning data. It can support some work, change what students need to practise, or make evidence of learning less clear.
 
-The student then tells you that GenAI helped to produce most of it.
-
-Before deciding whether this is acceptable, what would you want to know?
-
-You might ask:
-
-- What was the assessment intended to measure?
-- What did the student contribute?
-- What did the assignment instructions allow?
-- Did the student check and adapt the AI output?
-- Was the AI use declared?
-- Does the submission show that the student achieved the learning outcome?
-
-A polished product alone may not tell us what the student knows or can do.
-
-## Where AI May Matter in Your Module
-
-AI may affect curriculum, learning, assessment, and tools and data. Use the visual above to explore each area. They organise this package and return in Part 8.
-
-Students may use AI to explain concepts, generate ideas, organise information, develop drafts, create media, polish language or test understanding.
-
-Some uses may support learning. Others may replace the thinking or practice students need.
+Use the visual above to explore the four related areas. They organise this package and return in Part 8.
 
 A useful question to carry through this module is:
 
@@ -331,20 +310,21 @@ NP’s Strategy 3 is to redesign assessment for authentic AI-relevant learning a
 
 At Level 1, focus on recognising why assessment needs authentic evidence in an AI-enabled context and applying the current requirements. Review and redesign are the next, phased steps for course and module teams.
 
-## Where Should You Begin?
+## Consider This
 
-An assignment asks students to analyse a case and recommend a course of action. GenAI can produce a complete response.
+A student submits a polished report. The argument is clear, the language is fluent and the recommendations sound convincing.
 
-What should the lecturer consider first?
+The student then tells you that GenAI helped to produce most of it.
 
-A. Whether an AI-detection tool can identify generated text.  
-B. Whether AI should be prohibited throughout the module.  
-C. What capability the assignment is intended to assess.  
-D. Whether students have declared that they used AI.
+Before deciding how this use should be treated, ask:
 
-**Suggested response:** C.
+- What was the assessment intended to measure?
+- What did the student contribute?
+- What did the assignment instructions allow?
+- Did the student check and adapt the AI output?
+- Was the AI use declared?
 
-Declaration and assessment conditions matter, but the learning outcome must first determine what students need to demonstrate.
+A polished product alone may not show what the student knows or can do. Start with the learning outcome, then decide what evidence and conditions are needed.
 
 ## Start With the Learning Outcome
 
