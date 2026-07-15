@@ -335,9 +335,9 @@ function ModuleSummary() {
     },
     {
       label: "Assessment",
-      title: "Make learning credible",
-      preview: "Start with the learning outcome and evidence of what students can do.",
-      takeaway: "GenAI is allowed in summative assessment unless explicitly prohibited. Every submission cover page needs a GenAI Use Declaration; declaring a prohibited use does not make it acceptable.",
+      title: "Assure authentic evidence",
+      preview: "Start with the learning outcome and evidence of what students can do independently and with AI.",
+      takeaway: "GenAI is allowed in summative assessment unless explicitly prohibited. Assessment should still provide authentic evidence of students’ Anchor competencies and, where relevant, their Augment use of AI.",
       practice: "State the conditions clearly in the assignment descriptor and discuss them with students.",
       icon: ClipboardCheck,
       tone: "orange",
@@ -635,7 +635,7 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
     { label: "Use an unapproved public tool to analyse named student records.", correct: false, feedback: "The tool is not approved for the information involved." },
     { label: "Let an AI summary decide which students need intervention.", correct: false, feedback: "AI may support an initial review, but a person must interpret the context and make the decision." },
   ]} />;
-  if (title.startsWith("Part 8")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep a module you teach, lead or support in mind. Tap each question once you have considered it." items={["Curriculum: What is AI changing in what students must learn and how they are taught?", "Learning: Where might AI support learning without replacing it?", "Assessment: What evidence must show that students have achieved the learning outcome?", "Tools and data: Where could AI tools or learning data improve engagement or support a learning outcome—and what needs checking before use?"]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered what is changing, the learning to protect, what evidence is needed, and where AI tools or learning data could help with appropriate checks." />;
+  if (title.startsWith("Part 8")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep a module you teach, lead or support in mind. Tap each question once you have considered it." items={["Curriculum: What is AI changing in what students must learn and how they are taught?", "Learning: Where might AI support learning without replacing it?", "Assessment: How will assessment provide authentic evidence of students’ learning?", "Tools and data: Where could AI tools or learning data improve engagement or support a learning outcome—and what needs checking before use?"]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered what is changing, the learning to protect, how assessment can provide authentic evidence, and where AI tools or learning data could help with appropriate checks." />;
   if (title.startsWith("Look Back")) return <CarryForwardActivity value={notes.lookbackchoice ?? ""} onChange={(value) => onChange("lookbackchoice", value)} />;
   if (title === "Module Summary") return <ConfidenceActivity value={notes.confidence ?? ""} onChange={(value) => onChange("confidence", value)} />;
   if (title.startsWith("You Have Completed")) return <NextStepActivity value={notes.nextstep ?? ""} onChange={(value) => onChange("nextstep", value)} />;
@@ -656,7 +656,7 @@ function OpeningVisual() {
     },
     {
       title: "Assessment",
-      detail: "How assessment can provide credible evidence of student learning",
+      detail: "How assessment can provide authentic evidence of learning in an AI-enabled context",
       icon: ClipboardCheck,
     },
     {
@@ -770,9 +770,9 @@ function LecturerPracticeMap() {
     {
       title: "Assessment",
       domain: "Assessment",
-      work: "Assessment design, integrity and GenAI conditions",
-      question: "What evidence must show that students have achieved the learning outcome?",
-      detail: "Decide what evidence is needed, then make the GenAI conditions clear and aligned to that evidence.",
+      work: "Assessment design, validity and GenAI conditions",
+      question: "How will assessment provide authentic evidence of students’ learning?",
+      detail: "Decide what evidence is needed from students independently and, where relevant, with AI. Then make the GenAI conditions clear and aligned to that evidence.",
       icon: ClipboardCheck,
       tone: "assess",
     },

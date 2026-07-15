@@ -324,11 +324,13 @@ PAIR keeps the focus on problem formulation, deliberate tool selection, critical
 
 ---
 
-# Part 6: What Does AI Mean for Assessment?
+# Part 6: How Does AI Affect Assessment?
 
-Assessment should provide credible evidence that students have achieved the intended learning outcomes.
+In an AI-enabled context, assessment needs to provide authentic, credible evidence that students have achieved the intended learning outcomes.
 
-AI creates a challenge when it performs the same thinking or work that the assessment is meant to measure.
+AI creates a challenge when it performs the same thinking or work that the assessment is meant to measure. The assessment must still make clear what students can do independently and, where appropriate, how they use AI to support their work.
+
+NP’s assessment strategy is to review learning outcomes and assessments for **Anchor** competencies that students demonstrate independently and **Augment** competencies where students use AI with judgement. This helps assure both human competencies and AI capabilities in authentic professional practice.
 
 ## Where Should You Begin?
 
