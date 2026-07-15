@@ -809,7 +809,7 @@ function PairInfographic() {
           </div>
         ))}
       </div>
-      <div className="infographic-note pair-loop"><span aria-hidden="true">↺</span><p><strong>PAIR can loop.</strong> Reflection can lead to a better-framed problem and a stronger next attempt.</p></div>
+      <div className="infographic-note pair-loop"><span aria-hidden="true">↔</span><p><strong>Interaction is iterative.</strong> Students should not rely on a single prompt—they refine their questions based on the AI’s responses and critically evaluate each output.</p></div>
     </figure>
   );
 }
