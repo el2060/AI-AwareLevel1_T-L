@@ -7,12 +7,11 @@ AI is already part of how students learn and how many workplaces operate. You ma
 This module helps you:
 
 - **Recognise** how AI is changing what students need to learn and how they are taught in your discipline.
-- **Understand** NP’s key approaches to AI-enabled Teaching and Learning—the 3As and PAIR.
-- **Judge** where AI supports learning and where it undermines it.
-- **Apply** NP’s requirements for GenAI use in assessment.
-- **Use** approved AI tools and learning data purposefully and responsibly in your T&L work.
+- **Describe** the benefits, limitations, risks and recommended practices of facilitating learning with AI—anchored by NP’s PAIR framework.
+- **Judge** where AI supports learning and where it undermines it, and how NP’s GenAI requirements apply to assessment.
+- **Recognise** where AI tools and learning data could legally, safely and responsibly support your T&L work.
 
-This module gives NP Academic Staff a shared understanding of how AI is changing T&L—and what it means for your module.
+This is Level 1: AI-Aware—building the shared vocabulary and judgement every NP Academic Staff member needs. Level 2: AI-Proficient is where you go on to apply these approaches and use AI tools directly within your own teaching, learning design and assessment.
 
 ### Learning time
 
@@ -25,9 +24,9 @@ Allow about 2 hours for this package, its activities and the completion quiz. Wo
 By the end of this module, you will be able to:
 
 1. **Curriculum:** Describe how AI is changing what students need to learn and how they are taught in your discipline or module.
-2. **Learning:** Describe how AI can support learning, including its benefits, limitations, risks and recommended practices.
+2. **Facilitation:** Describe the benefits, limitations, risks and recommended practices of applying AI to improve learning experiences.
 3. **Assessment:** Describe how AI affects assessment design, validity and academic integrity, and how NP’s GenAI requirements apply.
-4. **Tools and data:** Describe how AI tools and learning data can support engagement and learning outcomes, including diverse learning needs; identify what to check for safe, responsible use.
+4. **Tools and data:** Describe how AI tools and learning data can be used legally, safely and responsibly to support engagement and learning outcomes, including diverse learning needs.
 
 Level 1 is about awareness: recognise the key issues and identify what may need attention. The package draws on four T&L Competency Framework (TLCF) domains: curriculum design, facilitation of learning, assessment, and data and tech-enhanced T&L.
 
@@ -108,6 +107,12 @@ The 3As are lenses, not a fixed sequence. Use the lens—or combination of lense
 - **Anchor:** A health sciences student makes a safe judgement from observed evidence; a computing student explains, tests and debugs generated code.
 - **Augment:** A business student uses AI to compare possible options, then evaluates the evidence and justifies a recommendation.
 - **Advance:** An engineering or media student prototypes a new AI-enabled solution for an industry need.
+
+## Try This: Draft Practice Examples
+
+Alongside reviewing a module through the 3As, GenAI has an immediate, smaller use in curriculum work: drafting a first set of worked examples or practice questions.
+
+Give the tool your topic, the diploma and year, and ask it to include a common misconception to spot. Check the draft for accuracy, learner level and tone before using it—the “Draft practice examples” use case in Part 5 has a ready-to-use prompt.
 
 ## Apply It to Your Module
 
@@ -373,6 +378,12 @@ If GenAI assists with grading or feedback:
 - Validity, reliability, fairness and transparency must be checked.
 - Relevant use should be disclosed to students as required.
 - Student work must only be handled in an approved environment.
+
+## Try This: Test Assignment Clarity
+
+GenAI can also help you stress-test a brief before it reaches students: does it read clearly, and are the GenAI conditions and marking expectations unambiguous?
+
+Ask the tool to read your brief as a student would and list what it finds unclear, then compare its questions with what students actually ask. The “Test assignment clarity” use case in Part 5 has a ready-to-use prompt.
 
 ## Apply It to Your Module
 

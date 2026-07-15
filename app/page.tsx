@@ -242,67 +242,63 @@ function ChoiceCheck({ question, eyebrow, choices }: { question: string; eyebrow
   );
 }
 
-function PulseActivity({ value, onChange }: { value: string; onChange: (value: string) => void }) {
-  const selected = value ? value.split("|") : [];
-  const options = ["Curriculum", "Learning", "Assessment", "Tools and data", "Not sure yet"];
+function DomainSpotter() {
+  const domains = ["Curriculum", "Facilitation", "Assessment", "Tools and data"];
+  const scenarios = [
+    { id: "curriculum", context: "Your diploma team is reviewing whether graduates still need to hand-code without AI assistance.", answer: "Curriculum", feedback: "This is Curriculum: AI is changing what students need to learn and how it’s taught. Part 2 uses the 3As to work through exactly this kind of question." },
+    { id: "facilitation", context: "A student asks an AI tutor to explain a concept a second way before attempting the practice questions.", answer: "Facilitation", feedback: "This is Facilitation: AI is supporting explanation and practice. Part 3 uses PAIR to judge when this helps rather than replaces learning." },
+    { id: "assessment", context: "A student’s submission reads as clearly GenAI-polished, and you need to decide what still counts as their own work.", answer: "Assessment", feedback: "This is Assessment: providing authentic, credible evidence of learning. Part 4 covers NP’s GenAI requirements for summative assessment." },
+    { id: "tools", context: "You want to summarise a term’s worth of student feedback comments to spot common themes.", answer: "Tools and data", feedback: "This is Tools and Data: using AI and learning data safely and responsibly. Part 5 covers what to check before you start." },
+  ];
+  const [active, setActive] = useState(0);
+  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const current = scenarios[active];
+  const picked = answers[current.id];
+  const solved = Object.keys(answers).length;
   return (
-    <section className="activity-block pulse-activity">
-      <span className="activity-eyebrow">30-second pulse</span>
-      <h2>Where are you seeing AI in your work?</h2>
-      <p>Select all that feel relevant. There is no right answer.</p>
-      <div className="chip-row">
-        {options.map((option) => (
-          <button
-            key={option}
-            className={selected.includes(option) ? "selected" : ""}
-            onClick={() => onChange((selected.includes(option) ? selected.filter((item) => item !== option) : [...selected, option]).join("|"))}
-          >
-            {selected.includes(option) ? "✓ " : "+ "}{option}
-          </button>
-        ))}
+    <section className="activity-block domain-spotter">
+      <div className="activity-head-row">
+        <div><span className="activity-eyebrow">Spot the domain</span><h2>Where does each moment belong?</h2></div>
+        <span className="activity-count">{solved} / {scenarios.length} spotted</span>
       </div>
-      {selected.length > 0 && <p className="pulse-note">Keep these areas in mind as you continue.</p>}
+      <p>This package is organised around four familiar areas of your T&amp;L work. Read each moment, then tap the area it mainly touches.</p>
+      <div className="domain-spotter-tabs" role="tablist" aria-label="Scenarios">
+        {scenarios.map((s, index) => {
+          const a = answers[s.id];
+          const state = !a ? "" : a === s.answer ? "solved" : "attempted";
+          return <button key={s.id} type="button" role="tab" aria-selected={active === index} className={`${active === index ? "active" : ""} ${state}`} onClick={() => setActive(index)}>{a ? (a === s.answer ? "✓" : "•") : index + 1}</button>;
+        })}
+      </div>
+      <div className="domain-spotter-case"><p>{current.context}</p></div>
+      <div className="domain-spotter-options">
+        {domains.map((d) => <button key={d} type="button" className={picked === d ? (d === current.answer ? "selected correct" : "selected wrong") : ""} onClick={() => setAnswers((a) => ({ ...a, [current.id]: d }))}>{d}</button>)}
+      </div>
+      {picked && (
+        <div className={`activity-feedback ${picked !== current.answer ? "try-again" : ""}`}>
+          <strong>{picked === current.answer ? current.answer : `This one is ${current.answer}`}</strong>
+          <p>{current.feedback}</p>
+        </div>
+      )}
     </section>
   );
 }
 
-function TapChecklist({ eyebrow, title, prompt, items, value, onChange, completionTitle, completionText }: { eyebrow: string; title: string; prompt: string; items: string[]; value: string; onChange: (value: string) => void; completionTitle: string; completionText: string }) {
+function TapChecklist({ eyebrow, title, prompt, items, tips, value, onChange, completionTitle, completionText }: { eyebrow: string; title: string; prompt: string; items: string[]; tips?: string[]; value: string; onChange: (value: string) => void; completionTitle: string; completionText: string }) {
   const selected = value ? value.split("|") : [];
   return (
     <section className="activity-block tap-checklist">
       <div className="activity-head-row"><div><span className="activity-eyebrow">{eyebrow}</span><h2>{title}</h2></div><span className="activity-count">{selected.length} / {items.length}</span></div>
       <p>{prompt}</p>
-      <div className="tap-check-grid">{items.map((item, index) => <button key={item} className={selected.includes(item) ? "selected" : ""} onClick={() => onChange((selected.includes(item) ? selected.filter((x) => x !== item) : [...selected, item]).join("|"))}><span>{selected.includes(item) ? "✓" : String(index + 1).padStart(2, "0")}</span><strong>{item}</strong></button>)}</div>
+      <div className="tap-check-grid">{items.map((item, index) => {
+        const isSelected = selected.includes(item);
+        return (
+          <button key={item} className={isSelected ? "selected" : ""} onClick={() => onChange((isSelected ? selected.filter((x) => x !== item) : [...selected, item]).join("|"))}>
+            <span>{isSelected ? "✓" : String(index + 1).padStart(2, "0")}</span>
+            <div><strong>{item}</strong>{isSelected && tips?.[index] && <small className="tap-check-tip">{tips[index]}</small>}</div>
+          </button>
+        );
+      })}</div>
       {selected.length === items.length && <div className="activity-feedback"><strong>{completionTitle}</strong><p>{completionText}</p></div>}
-    </section>
-  );
-}
-
-function CarryForwardActivity({ value, onChange }: { value: string; onChange: (value: string) => void }) {
-  const options = [
-    ["What must students still learn and do?", "Start with the capability, not the tool."],
-    ["How will students’ learning remain visible?", "Look for evidence of thinking, judgement and contribution."],
-    ["Is the tool and information suitable?", "Check the purpose, output, data and human oversight."],
-  ];
-  const feedback = options.find(([question]) => question === value)?.[1];
-  return (
-    <section className="activity-block carry-forward-block">
-      <span className="activity-eyebrow">Look back</span><h2>Which question will you take back to your module?</h2><p>Choose the one that feels most useful right now.</p>
-      <div className="choice-grid">{options.map(([question], index) => <button key={question} className={`choice-button ${value === question ? "selected" : ""}`} onClick={() => onChange(question)}><span>{value === question ? "✓" : String.fromCharCode(65 + index)}</span>{question}</button>)}</div>
-      {feedback && <div className="activity-feedback"><strong>A useful question to keep asking</strong><p>{feedback}</p></div>}
-    </section>
-  );
-}
-
-function ConfidenceActivity({ value, onChange }: { value: string; onChange: (value: string) => void }) {
-  const selected = value ? value.split("|") : [];
-  const items = ["Spot where AI affects learning", "Use the 3As and PAIR", "Set clearer assessment conditions", "Check tools, data and output"];
-  return (
-    <section className="activity-block confidence-block">
-      <span className="activity-eyebrow">Quick self-check</span><h2>What do you now feel ready to do?</h2>
-      <p>Select each statement that feels true for you.</p>
-      <div className="confidence-list">{items.map((item) => <button key={item} className={selected.includes(item) ? "selected" : ""} onClick={() => onChange((selected.includes(item) ? selected.filter((x) => x !== item) : [...selected, item]).join("|"))}><span>{selected.includes(item) ? "✓" : ""}</span>{item}</button>)}</div>
-      {selected.length === items.length && <div className="activity-feedback"><strong>You have covered the Level 1 foundation</strong><p>Use these questions when reviewing a module you teach or support.</p></div>}
     </section>
   );
 }
@@ -514,22 +510,37 @@ function FacilitationRolePlay() {
 
 function AssessmentBriefBuilder() {
   const clauses = [
-    { id: "purpose", label: "Permitted use", text: "You may use GenAI to brainstorm possible approaches and receive feedback on an early draft." },
-    { id: "contribution", label: "Student contribution", text: "Your final analysis, selection of evidence and recommendation must be your own." },
-    { id: "process", label: "Check and declare", text: "Check AI-generated claims, retain evidence of your interaction, cite and declare your use." },
-    { id: "boundary", label: "Clear boundary", text: "Do not use GenAI for any prohibited component or to simulate a required human interaction." },
+    { id: "purpose", label: "Permitted use", text: "You may use GenAI to brainstorm possible approaches and receive feedback on an early draft.", correct: true },
+    { id: "contribution", label: "Student contribution", text: "Your final analysis, selection of evidence and recommendation must be your own.", correct: true },
+    { id: "process", label: "Check and declare", text: "Check AI-generated claims, retain evidence of your interaction, cite and declare your use.", correct: true },
+    { id: "boundary", label: "Clear boundary", text: "Do not use GenAI for any prohibited component or to simulate a required human interaction.", correct: true },
+    { id: "unlimited", label: "Unlimited use", text: "You may use GenAI as much as you like, in any way that helps you finish the assignment.", correct: false, feedback: "Too permissive—it never says what must remain the student’s own contribution." },
+    { id: "skip-declare", label: "Skip declaration", text: "You do not need to declare AI use if you only used it for an early draft.", correct: false, feedback: "Incorrect. NP requires a GenAI Use Declaration on every submission, whatever the AI was used for." },
   ];
+  const correctIds = clauses.filter((clause) => clause.correct).map((clause) => clause.id);
   const [selected, setSelected] = useState<string[]>([]);
-  const complete = selected.length === clauses.length;
+  const correctSelected = selected.filter((id) => correctIds.includes(id));
+  const wrongSelected = selected.filter((id) => !correctIds.includes(id));
+  const lastWrong = clauses.find((clause) => clause.id === wrongSelected[wrongSelected.length - 1]);
+  const complete = correctSelected.length === correctIds.length && wrongSelected.length === 0;
   return (
     <section className="activity-block assessment-builder">
-      <div className="assessment-builder-heading"><span className="activity-eyebrow">Briefing challenge</span><span className="activity-count">{selected.length} / {clauses.length}</span></div>
-      <h2>Turn a vague AI instruction into a usable brief</h2>
-      <p>Start with the instruction below. Tap each essential clause to add it to the student-facing brief.</p>
+      <div className="assessment-builder-heading"><span className="activity-eyebrow">Briefing challenge</span><span className="activity-count">{correctSelected.length} / {correctIds.length}</span></div>
+      <h2>Which clauses belong in a clear, compliant brief?</h2>
+      <p>Start with the instruction below. Tap each candidate clause—some belong, some don’t.</p>
       <div className="brief-draft"><small>Initial instruction</small><strong>“You may use AI appropriately.”</strong><span>This does not tell students enough.</span></div>
-      <div className="brief-clauses">{clauses.map((clause, index) => <button key={clause.id} type="button" className={selected.includes(clause.id) ? "selected" : ""} onClick={() => setSelected((items) => items.includes(clause.id) ? items.filter((item) => item !== clause.id) : [...items, clause.id])}><span>{selected.includes(clause.id) ? "✓" : String(index + 1).padStart(2, "0")}</span><div><small>{clause.label}</small><strong>{clause.text}</strong></div></button>)}</div>
-      {selected.length > 0 && <div className="brief-preview"><span>Student-facing brief</span>{clauses.filter((clause) => selected.includes(clause.id)).map((clause) => <p key={clause.id}>{clause.text}</p>)}</div>}
-      {complete && <div className="activity-feedback"><strong>A clear assessment brief</strong><p>Students can now see the permitted purpose, their required contribution, the checking and declaration requirements, and the boundaries of use. Announce and discuss these conditions in class.</p></div>}
+      <div className="brief-clauses">{clauses.map((clause, index) => {
+        const isSelected = selected.includes(clause.id);
+        return (
+          <button key={clause.id} type="button" className={`${isSelected ? "selected" : ""} ${isSelected && !clause.correct ? "wrong" : ""}`} onClick={() => setSelected((items) => items.includes(clause.id) ? items.filter((item) => item !== clause.id) : [...items, clause.id])}>
+            <span>{isSelected ? (clause.correct ? "✓" : "✗") : String(index + 1).padStart(2, "0")}</span>
+            <div><small>{clause.label}</small><strong>{clause.text}</strong></div>
+          </button>
+        );
+      })}</div>
+      {lastWrong && <div className="activity-feedback try-again"><strong>Look again</strong><p>{lastWrong.feedback}</p></div>}
+      {correctSelected.length > 0 && <div className="brief-preview"><span>Student-facing brief (from what you’ve selected so far)</span>{clauses.filter((clause) => correctSelected.includes(clause.id)).map((clause) => <p key={clause.id}>{clause.text}</p>)}</div>}
+      {complete && <div className="activity-feedback"><strong>A clear assessment brief</strong><p>Students can now see the permitted purpose, their required contribution, the checking and declaration requirements, and the boundaries of use—with nothing vague or non-compliant slipped in. Announce and discuss these conditions in class.</p></div>}
     </section>
   );
 }
@@ -660,13 +671,17 @@ function UseCaseExplorer() {
   );
 }
 
-function ToolChecksActivity({ value, onChange }: { value: string; onChange: (value: string) => void }) {
-  return <TapChecklist eyebrow="Four checks" title="Before using AI output with students, what will you check?" prompt="Select all four. Each one matters." items={["Learning value", "Output quality", "Data and ethics", "Human oversight"]} value={value} onChange={onChange} completionTitle="A sound AI-aware check" completionText="A suitable use has a clear learning purpose, an appropriate tool, checked output, safe information handling and a person making the final decision." />;
+function ToolChecksActivity() {
+  return <ChoiceCheck eyebrow="Four checks in practice" question="A colleague wants to paste a spreadsheet of named student grades into a public AI chatbot to spot patterns. Which check matters most here?" choices={[
+    { label: "Data and ethics: check the tool is approved for this information before anything is entered.", correct: true, feedback: "Named grades are personal data. Confirm approval and purpose before entering anything—this check comes first, whatever the analysis is for." },
+    { label: "Output quality: check the patterns it finds are accurate.", correct: false, feedback: "This matters once you proceed, but it isn’t the first concern. Named grades shouldn’t enter an unapproved tool at all." },
+    { label: "Learning value: check the analysis actually helps a teaching decision.", correct: false, feedback: "A fair goal, but it doesn’t address the immediate problem—personal student data entering a tool that may not be approved for it." },
+  ]} />;
 }
 
 function SectionInteractive({ title, notes, onChange }: { title: string; notes: ActivityNotes; onChange: (key: string, value: string) => void }) {
   if (title === "AI in T&L Essentials: Level 1 (AI-Aware)") return null;
-  if (title.startsWith("Part 1")) return <PulseActivity value={notes.pulse ?? ""} onChange={(value) => onChange("pulse", value)} />;
+  if (title.startsWith("Part 1")) return <DomainSpotter />;
   if (title.startsWith("Part 2")) return <ThreeAsActivity />;
   if (title.startsWith("Part 3")) return <FacilitationRolePlay />;
   if (title.startsWith("Part 4")) return <AssessmentBriefBuilder />;
@@ -675,7 +690,7 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
     { label: "Use an unapproved public tool to analyse named student records.", correct: false, feedback: "The tool is not approved for the information involved." },
     { label: "Let an AI summary decide which students need intervention.", correct: false, feedback: "AI may support an initial review, but a person must interpret the context and make the decision." },
   ]} />;
-  if (title.startsWith("Part 6")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep a module you teach, lead or support in mind. Tap each question once you have considered it." items={["Curriculum: What is AI changing in what students must learn and how they are taught?", "Facilitation: Where might AI support learning without replacing it?", "Assessment: How will assessment provide authentic evidence of students’ learning?", "Tools and data: Where could AI tools or learning data safely and responsibly support engagement or a learning outcome—and what needs checking before use?"]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered what is changing, the learning to protect, how assessment can provide authentic evidence, and where AI tools or learning data could safely and responsibly help with appropriate checks." />;
+  if (title.startsWith("Part 6")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep a module you teach, lead or support in mind. Tap each question once you have considered it—and see a reminder of what to check." items={["Curriculum: What is AI changing in what students must learn and how they are taught?", "Facilitation: Where might AI support learning without replacing it?", "Assessment: How will assessment provide authentic evidence of students’ learning?", "Tools and data: Where could AI tools or learning data safely and responsibly support engagement or a learning outcome—and what needs checking before use?"]} tips={["Use the 3As: is this an Anchor, Augment or Advance capability?", "Use PAIR: has the student formulated the problem and reflected on the process, not just accepted the first AI output?", "Check the assignment descriptor states the GenAI stance, permitted purposes and declaration requirement.", "Confirm the tool is approved for the information involved, and that a person still reviews the output."]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered what is changing, the learning to protect, how assessment can provide authentic evidence, and where AI tools or learning data could safely and responsibly help with appropriate checks." />;
   if (title.startsWith("Part 7")) return <NextStepActivity value={notes.nextstep ?? ""} onChange={(value) => onChange("nextstep", value)} />;
   return null;
 }
@@ -688,7 +703,7 @@ function OpeningVisual() {
       icon: BookOpen,
     },
     {
-      title: "Learning",
+      title: "Facilitation",
       detail: "How AI can support learning, practice and feedback",
       icon: Lightbulb,
     },
@@ -812,7 +827,7 @@ function LecturerPracticeMap() {
       tone: "design",
     },
     {
-      title: "Learning",
+      title: "Facilitation",
       domain: "Facilitation of Learning",
       work: "Explanations, practice and student AI use",
       question: "Where might AI support learning without replacing it?",
@@ -898,7 +913,7 @@ function SectionVisual({ title }: { title: string }) {
   if (title.startsWith("Part 6")) return (
     <figure className="concept-visual module-lens-visual" aria-label="Review a module through four AI-aware lenses">
       <figcaption><span>Bring it together</span><strong>Review one module through four lenses</strong></figcaption>
-      <div className="module-lens"><div className="lens-core">My<br />module</div><div className="lens-item lens-one"><b>Curriculum</b><small>What changes?</small></div><div className="lens-item lens-two"><b>Learning</b><small>What helps?</small></div><div className="lens-item lens-three"><b>Assessment</b><small>What shows learning?</small></div><div className="lens-item lens-four"><b>Tools &amp; data</b><small>What helps—and what needs checking?</small></div></div>
+      <div className="module-lens"><div className="lens-core">My<br />module</div><div className="lens-item lens-one"><b>Curriculum</b><small>What changes?</small></div><div className="lens-item lens-two"><b>Facilitation</b><small>What helps?</small></div><div className="lens-item lens-three"><b>Assessment</b><small>What shows learning?</small></div><div className="lens-item lens-four"><b>Tools &amp; data</b><small>What helps—and what needs checking?</small></div></div>
     </figure>
   );
   return null;
@@ -1040,7 +1055,7 @@ export default function Home() {
         />}
 
         {!current.title.startsWith("Part 1") && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
-        {current.title.startsWith("Part 5") && <ToolChecksActivity value={activityNotes.toolchecks ?? ""} onChange={(value) => setActivityValue("toolchecks", value)} />}
+        {current.title.startsWith("Part 5") && <ToolChecksActivity />}
 
         {sectionBridges[active] && active < sections.length - 1 && (
           <div className="section-bridge">
