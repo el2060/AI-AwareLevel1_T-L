@@ -97,7 +97,7 @@ NP students build a common foundation in AI literacy. NP’s **3As framework** h
 
 Use the infographic with one module in mind:
 
-- **Anchor:** Core human and professional capabilities that remain valued in the discipline, independently of AI. Which outcomes require students to retain this knowledge, skill or judgement—and how will activities and assessment evidence it?
+- **Anchor:** Core disciplinary, professional and human capabilities valued by the profession and industry, and demonstrated independently of AI. Which outcomes require students to retain this knowledge, skill or judgement—and how will activities and assessment evidence it?
 - **Augment:** Capabilities for using AI to work more productively and effectively in a domain while retaining judgement. How will students practise and show this use in an authentic workflow?
 - **Advance:** Stretch capabilities focused on using AI for innovation or transformation in professional practice. What new service, workflow or possibility might students explore—and what learning and assessment experiences would enable it?
 

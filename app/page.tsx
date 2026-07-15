@@ -432,7 +432,7 @@ function ThreeAsActivity() {
     },
   ];
   const lenses = [
-    { name: "Anchor", description: "Core human and professional capability, valued independently of AI." },
+    { name: "Anchor", description: "Core domain, professional and human capability, valued in the field and demonstrated independently of AI." },
     { name: "Augment", description: "Use AI to improve the productivity and quality of domain work." },
     { name: "Advance", description: "Use AI to innovate or transform professional practice." },
   ];
@@ -778,9 +778,9 @@ function ThreeAsInfographic() {
           <em>Generate · compare · analyse · improve</em>
         </section>
         <section className="three-as-band anchor-band">
-          <div className="three-as-label"><i aria-hidden="true">A</i><div><b>Anchor</b><small>Protect the foundations</small></div></div>
-          <p>Core disciplinary, human and professional learning students must develop.</p>
-          <em>Knowledge · skills · reasoning · judgement</em>
+          <div className="three-as-label"><i aria-hidden="true">A</i><div><b>Anchor</b><small>Keep core capabilities visible</small></div></div>
+          <p>Core disciplinary, professional and human capabilities valued in the field—and demonstrated independently of AI.</p>
+          <em>Knowledge · skills · reasoning · judgement · human qualities</em>
         </section>
       </div>
       <div className="infographic-note"><span aria-hidden="true">↔</span><p><strong>Use the three lenses.</strong> Identify the capability students need, then review how learning outcomes, activities and assessment align.</p></div>
