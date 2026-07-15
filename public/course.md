@@ -2,7 +2,7 @@
 
 ## Welcome
 
-AI is already part of how students learn and how many workplaces operate. You may already see students using GenAI to explain concepts, generate ideas or work on assignments—and be asking what this means for your teaching and assessment.
+AI is already part of how students learn and how many workplaces operate. You may see students using GenAI to explain concepts, generate ideas or develop assignments—and ask what this means for your teaching and assessment.
 
 This module helps you:
 
@@ -12,11 +12,11 @@ This module helps you:
 - **Apply** NP’s requirements for GenAI use in assessment.
 - **Use** approved AI tools and learning data purposefully and responsibly in your T&L work.
 
-This module gives all Academic Staff in NP a shared understanding of how AI is changing T&L at NP—and what it means for your module.
+This module gives NP Academic Staff a shared understanding of how AI is changing T&L—and what it means for your module.
 
 ### Learning time
 
-This programme takes about 2 hours in total: this learning package with its activities, plus the completion quiz. Work through it at your own pace—you can leave and return anytime.
+Allow about 2 hours for this package, its activities and the completion quiz. Work at your own pace—you can leave and return at any time.
 
 ---
 
@@ -26,10 +26,10 @@ By the end of this module, you will be able to:
 
 1. **Curriculum:** Describe how AI is changing what students need to learn and how they are taught in your discipline or module.
 2. **Learning:** Describe how AI can support learning, including its benefits, limitations, risks and recommended practices.
-3. **Assessment:** Describe how AI affects assessment design, validity and academic integrity, and how NP’s requirements for GenAI use apply to assessment.
-4. **Tools and data:** Describe how AI tools and learning data can support engagement and achievement of learning outcomes, including diverse learning needs; identify what must be checked for safe and responsible use.
+3. **Assessment:** Describe how AI affects assessment design, validity and academic integrity, and how NP’s GenAI requirements apply.
+4. **Tools and data:** Describe how AI tools and learning data can support engagement and learning outcomes, including diverse learning needs; identify what to check for safe, responsible use.
 
-At Level 1, the focus is awareness: recognise the key issues and identify what may need attention. The package focuses on four T&L Competency Framework (TLCF) domains: curriculum design, facilitation of learning, assessment, and data and tech-enhanced T&L.
+Level 1 is about awareness: recognise the key issues and identify what may need attention. The package draws on four T&L Competency Framework (TLCF) domains: curriculum design, facilitation of learning, assessment, and data and tech-enhanced T&L.
 
 ---
 
@@ -56,12 +56,12 @@ A polished product alone may not tell us what the student knows or can do.
 
 ## Where AI May Matter in Your Module
 
-AI may matter across four parts of your teaching work:
+AI may affect four parts of your teaching work:
 
-- **Curriculum:** Review what students need to learn and how they are taught as AI changes disciplinary and workplace practice.
-- **Learning:** Decide when AI can support explanation, practice or feedback without doing the learning for students.
-- **Assessment:** Keep evidence of students’ own thinking, judgement and performance visible.
-- **Tools and data:** Consider how AI tools and learning data could safely and responsibly support engagement, learning outcomes or diverse learning needs—and what needs checking.
+- **Curriculum:** What students need to learn and how they are taught.
+- **Learning:** How AI may support explanation, practice and feedback.
+- **Assessment:** How evidence of students’ thinking, judgement and performance remains authentic and credible.
+- **Tools and data:** How tools and data may support learning—safely and responsibly.
 
 AI is one factor to consider; the learning purpose comes first.
 
@@ -132,7 +132,7 @@ The five strategies appear in four practical areas of T&L:
 1. **Curriculum:** The 3As help course and module teams review learning outcomes, activities and assessment together.
 2. **Learning:** PAIR provides a structure for learning with AI.
 3. **Assessment:** Assessment conditions keep students’ learning and contribution visible.
-4. **Tools and data:** AI-enabled tools and learning data can safely and responsibly support engagement and learning outcomes when the purpose, information, output and oversight are considered.
+4. **Tools and data:** AI-enabled tools and learning data can support learning safely and responsibly when the purpose, information, output and oversight are considered.
 
 Parts 3 to 7 build through these areas in sequence. Each affects the next: what students need to learn shapes their practice, assessment and the tools that may be useful.
 
