@@ -195,7 +195,7 @@ function withoutTitle(markdown: string) {
 const sectionMeta = [
   { mark: "✦", label: "Start", tone: "blue" },
   { mark: "01", label: "AI in your module", tone: "blue" },
-  { mark: "02", label: "NP’s approach", tone: "purple" },
+  { mark: "02", label: "NP’s shared direction", tone: "purple" },
   { mark: "03", label: "Curriculum", tone: "orange" },
   { mark: "04", label: "Learning", tone: "teal" },
   { mark: "05", label: "PAIR", tone: "green" },
@@ -209,12 +209,12 @@ const sectionMeta = [
 
 const sectionBridges = [
   "Consider where AI may already be showing up in a module you teach or support.",
-  "See how NP’s approaches appear across four practical areas of T&L.",
-  "Start with curriculum: what must students learn, and where might AI add value?",
-  "Then consider how AI might support practice without taking over the learning.",
-  "Use PAIR to structure how students learn and solve problems with AI.",
-  "Apply the same focus on visible learning to assessment.",
-  "Clear assessment conditions go together with suitable tools, responsible data use and human oversight.",
+  "Place that module in NP’s shared direction for AI-enabled T&L.",
+  "Start with curriculum: what must students learn, and how should learning, activities and assessment align?",
+  "Then consider how AI might support practice and feedback without taking over the learning.",
+  "Use PAIR to structure that AI-supported learning experience.",
+  "Then consider how assessment keeps learning authentic, credible and visible.",
+  "Finally, choose suitable tools and data uses—and check information, output and human oversight.",
   "Bring the four areas together for a module you teach or support.",
 ];
 
@@ -900,11 +900,13 @@ export default function Home() {
   const useCaseMarker = "<!--use-case-explorer-->";
   const pairDesignMarker = "<!--pair-design-guide-->";
   const moduleSummaryMarker = "<!--module-summary-->";
+  const strategyMapMarker = "<!--strategy-map-->";
   const sectionMarkdown = withoutTitle(current.markdown);
   const hasUseCaseExplorer = current.title.startsWith("Part 7") && sectionMarkdown.includes(useCaseMarker);
   const hasPairDesignGuide = current.title.startsWith("Part 5") && sectionMarkdown.includes(pairDesignMarker);
   const hasModuleSummary = current.title === "Module Summary" && sectionMarkdown.includes(moduleSummaryMarker);
-  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairDesignGuide ? pairDesignMarker : hasModuleSummary ? moduleSummaryMarker : "";
+  const hasStrategyMap = current.title.startsWith("Part 2") && sectionMarkdown.includes(strategyMapMarker);
+  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairDesignGuide ? pairDesignMarker : hasModuleSummary ? moduleSummaryMarker : hasStrategyMap ? strategyMapMarker : "";
   const [contentBeforeInteractive, contentAfterInteractive = ""] = activeMarker
     ? sectionMarkdown.split(activeMarker)
     : [sectionMarkdown];
@@ -965,7 +967,7 @@ export default function Home() {
           </h1>
         ) : <h1 className="page-title">{current.shortTitle}</h1>}
         {active === 0 ? <OpeningVisual /> : <SectionVisual title={current.title} />}
-        {active > 0 && active !== 5 && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
+        {active > 0 && active !== 5 && !hasStrategyMap && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
         <article
           key={`${current.id}-before`}
           className="course-content"
@@ -975,6 +977,7 @@ export default function Home() {
         {hasUseCaseExplorer && <UseCaseExplorer />}
         {hasPairDesignGuide && <PairDesignGuide />}
         {hasModuleSummary && <ModuleSummary />}
+        {hasStrategyMap && <StrategyMap />}
 
         {contentAfterInteractive && <article
           key={`${current.id}-after`}

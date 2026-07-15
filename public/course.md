@@ -56,24 +56,9 @@ A polished product alone may not tell us what the student knows or can do.
 
 ## Where AI May Matter in Your Module
 
-AI may affect four parts of your teaching work:
+AI may affect curriculum, learning, assessment, and tools and data. Use the visual above to explore each area. They organise this package and return in Part 8.
 
-- **Curriculum:** What students need to learn and how they are taught.
-- **Learning:** How AI may support explanation, practice and feedback.
-- **Assessment:** How evidence of students’ thinking, judgement and performance remains authentic and credible.
-- **Tools and data:** How tools and data may support learning—safely and responsibly.
-
-AI is one factor to consider; the learning purpose comes first.
-
-Students may use AI to:
-
-- Seek explanations.
-- Generate ideas.
-- Organise information.
-- Develop an outline or draft.
-- Create text, code, images or other media.
-- Polish language.
-- Test their understanding.
+Students may use AI to explain concepts, generate ideas, organise information, develop drafts, create media, polish language or test understanding.
 
 Some uses may support learning. Others may replace the thinking or practice students need.
 
@@ -103,7 +88,11 @@ For the module you have in mind:
 
 ---
 
-# Part 2: NP’s Approach to AI-Enabled T&L
+# Part 2: NP’s Shared Direction for AI-Enabled T&L
+
+## From Your Module to NP’s Direction
+
+Part 1 started with a module. NP’s shared direction helps you decide what to look for and what to do next.
 
 ## Preparing AI-Ready Graduates
 
@@ -119,22 +108,25 @@ This vision is supported by three commitments:
 - **AI-integrated learning and assessment:** Students learn to work with AI while still demonstrating what they know and can do.
 - **AI-enabled learning support:** AI may provide suitable practice, feedback and personalised support.
 
-These commitments shape NP’s approaches. At Level 1, focus on the purpose of each approach.
+These commitments shape NP’s approaches. At Level 1, focus on their purpose and where they may affect your module.
 
-## Five Strategies, One Shared Direction
+## Five Strategies, Four Practice Areas
 
-NP’s five strategies work together towards the same goal. Explore the overview below to see what each one means for Teaching and Learning.
+NP’s five strategies set the shared direction. Explore them below, then see how this package uses four familiar TLCF practice areas to make that direction relevant to your teaching work.
 
-## Four Areas in This Package
+<!--strategy-map-->
 
-The five strategies appear in four practical areas of T&L:
+The strategies and the four practice areas are related, not a one-to-one map.
 
-1. **Curriculum:** The 3As help course and module teams review learning outcomes, activities and assessment together.
-2. **Learning:** PAIR provides a structure for learning with AI.
-3. **Assessment:** Assessment conditions keep students’ learning and contribution visible.
-4. **Tools and data:** AI-enabled tools and learning data can support learning safely and responsibly when the purpose, information, output and oversight are considered.
+The connections are:
 
-Parts 3 to 7 build through these areas in sequence. Each affects the next: what students need to learn shapes their practice, assessment and the tools that may be useful.
+- **3As:** Review learning outcomes, activities and assessment together.
+- **PAIR:** Structure learning and problem-solving with AI.
+- **Assessment guidance:** Keep AI use clear and evidence of learning credible.
+- **AI-enabled learning support and tools:** Support practice, feedback, engagement and learning outcomes with appropriate checks.
+- **Human skills, resilience and judgement:** Run through all of these areas—especially Anchor, Reflection and authentic assessment.
+
+Parts 3 to 7 now follow a module-design sequence: curriculum, learning, assessment, then tools and data. PAIR provides a structure for AI-supported learning; human judgement remains central throughout.
 
 ---
 
@@ -285,6 +277,8 @@ PAIR works across disciplines and as tools change. It keeps learning:
 - **Platform-independent:** The process can be used with different AI tools as they evolve.
 
 The four connected stages are **Problem, AI, Interaction and Reflection**. Students formulate the problem before choosing a tool, interact critically rather than accepting the first response, and reflect on both the outcome and the learning process.
+
+When students select a tool, start with the learning purpose. Part 7 provides the fuller checks for the tool, information, output and human oversight.
 
 *Adapted from: Acar, O. A. (2023). “Are Your Students Ready for AI? A 4-Step Framework for a ChatGPT World.” HBP Education.*
 
@@ -610,7 +604,7 @@ A suitable AI use has a clear learning purpose, an appropriate tool, safe handli
 
 # Part 8: Bring It All Together
 
-Choose a module you teach, lead or support. The four-lens activity brings together the curriculum, learning, assessment, and tools-and-data considerations from this package.
+Choose a module you teach, lead or support. The four-lens activity brings together the curriculum, learning, assessment, and tools and data considerations from this package.
 
 Afterwards, choose one small next step:
 
@@ -643,6 +637,7 @@ You now have a shared Level 1 foundation to:
 - Recognise where AI may affect curriculum, learning, assessment, and tools and data.
 - Use the 3As and PAIR to orient a teaching or learning decision.
 - Apply NP’s requirements for GenAI use in assessment.
+- Keep human judgement at the centre when AI is involved.
 - Choose one appropriate next step for a module you teach, lead or support.
 
 Complete the separately administered quiz to fulfil the programme’s completion requirements.
