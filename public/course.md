@@ -6,12 +6,10 @@ AI is already part of how students learn and how many workplaces operate. You ma
 
 This module helps you:
 
-- **Recognise** how AI is changing what students need to learn and how they are taught in your discipline.
-- **Describe** the benefits, limitations, risks and recommended practices of facilitating learning with AI—anchored by NP’s PAIR framework.
+- **Recognise** how AI is changing what students need to learn and how they are taught in your discipline, and use NP’s 3As to review learning outcomes, activities and assessment together.
+- **Describe** the benefits, limitations, risks and recommended practices of facilitating learning with AI, drawing on NP’s PAIR approach.
 - **Judge** where AI supports learning and where it undermines it, and how NP’s GenAI requirements apply to assessment.
 - **Recognise** where AI tools and learning data could legally, safely and responsibly support your T&L work.
-
-This is Level 1: AI-Aware—recognising and describing how AI affects curriculum, facilitation, assessment and data and tech-enhanced T&L, the shared foundation every NP Academic Staff member needs.
 
 ### Learning time
 
@@ -96,9 +94,9 @@ NP students build a common foundation in AI literacy. NP’s **3As framework** h
 
 Use the infographic with one module in mind:
 
-- **Anchor:** Core disciplinary, professional and human capabilities valued by the profession and industry, and demonstrated independently of AI. Which outcomes require students to retain this knowledge, skill or judgement—and how will activities and assessment evidence it?
-- **Augment:** Capabilities for using AI to work more productively and effectively in a domain while retaining judgement. How will students practise and show this use in an authentic workflow?
-- **Advance:** Stretch capabilities focused on using AI for innovation or transformation in professional practice. What new service, workflow or possibility might students explore—and what learning and assessment experiences would enable it?
+- **Anchor:** Which outcomes require students to retain core knowledge, skill or judgement independently of AI—and how will activities and assessment evidence it?
+- **Augment:** How will students practise and show productive, judgement-retaining use of AI in an authentic workflow?
+- **Advance:** What new service, workflow or possibility might students explore with AI—and what learning and assessment experiences would enable it?
 
 The 3As are lenses, not a fixed sequence. Use the lens—or combination of lenses—that best represents the capability students need to develop. Not every learning outcome or module will require all three.
 
@@ -517,13 +515,13 @@ A suitable AI use has a clear learning purpose, an appropriate tool, safe handli
 
 # Part 6: Apply It to Your Module
 
-Choose a module you teach, lead or support. The four-lens activity brings together the curriculum, learning, assessment, and tools and data considerations from this package.
+Choose a module you teach, lead or support. The four-lens activity brings together the curriculum, facilitation, assessment, and tools and data considerations from this package.
 
 Afterwards, choose one small next step:
 
 - Discussing an AI-related change with your module team.
 - Reviewing one learning outcome, activity and assessment together through the 3As.
-- Trying a generate–compare–check–improve activity.
+- Trying a Generate → Compare → Check → Improve activity.
 - Checking the GenAI conditions in one assignment descriptor.
 - Exploring an appropriate use of M365 Copilot or another approved tool.
 
@@ -539,7 +537,7 @@ You now have a shared Level 1 foundation to:
 
 - Recognise where AI may affect curriculum, facilitation, assessment, and tools and data.
 - Use the 3As and PAIR to orient a teaching or learning decision.
-- Apply NP’s requirements for GenAI use in assessment.
+- Describe NP’s requirements for GenAI use in assessment.
 - Keep human judgement at the centre when AI is involved.
 - Choose one appropriate next step for a module you teach, lead or support.
 
