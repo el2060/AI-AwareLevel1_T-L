@@ -34,6 +34,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local dev shell override (Windows-only path, breaks Linux CI/Vercel)
+.npmrc
+
 # typescript
 next-env.d.ts
 /dist/
