@@ -418,7 +418,7 @@ It can help you review module documents, summarise de-identified feedback, draft
 
 ### Other approved Government tools
 
-Other approved tools may suit a particular task. **Pair Chat (pair.gov.sg)** is a GovTech AI assistant for public officers. Alongside chat, it offers Assistants, batch jobs and writing templates. It may be useful when a Government workflow or repeatable task is the better fit — not simply as another way to do everyday M365 work.
+Other approved tools may suit a particular task. **Pair Chat (pair.gov.sg)** is a GovTech AI assistant for public officers. It is cleared for information up to **OC-Sensitive Normal (OC-SN)**, subject to NP's current guidance for the information and purpose involved. Alongside chat, it offers Assistants, batch jobs and writing templates. It may be useful when a Government workflow or repeatable task is the better fit — not simply as another way to do everyday M365 work.
 
 <!--use-case-explorer-->
 
@@ -450,7 +450,7 @@ Before using an AI tool, consider:
 
 ## Match the Information to the Tool
 
-Tool approval conditions may differ. M365 Copilot is cleared up to OC-Restricted; check the corresponding approval conditions before using Pair Chat or any other tool. Before entering information, consider the task, the data, the tool and the human oversight needed.
+M365 Copilot is cleared up to OC-Restricted, and Pair Chat is cleared up to OC-Sensitive Normal (OC-SN). Before using either tool, confirm that the information and purpose are covered by NP's current guidance. Other tools may have different approval conditions. Before entering information, consider the task, the data, the tool and the human oversight needed.
 
 For other public AI tools, do not enter personal, sensitive or proprietary information unless the tool has been explicitly approved for that information and purpose.
 

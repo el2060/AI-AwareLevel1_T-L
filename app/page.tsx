@@ -341,7 +341,7 @@ function ModuleSummary() {
       label: "Tools and data",
       title: "Support engagement and outcomes",
       preview: "Use suitable tools and learning data to support learning safely and responsibly, then check the information, output and oversight.",
-      takeaway: "M365 Copilot is cleared up to OC-Restricted and can support reviewing materials, drafting examples and summarising de-identified feedback. Use every tool only for its approved information and purpose.",
+      takeaway: "M365 Copilot is cleared up to OC-Restricted; Pair Chat is cleared up to OC-Sensitive Normal (OC-SN). Use every tool only for its approved information and purpose.",
       practice: "Use AI output or learning data as a starting point. You remain responsible for the teaching and learning decision that follows.",
       icon: ShieldCheck,
       tone: "teal",
