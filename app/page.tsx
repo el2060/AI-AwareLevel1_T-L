@@ -402,42 +402,72 @@ function NextStepActivity({ value, onChange }: { value: string; onChange: (value
 }
 
 function ThreeAsActivity() {
-  const prompts = [
-    { text: "Learning outcome: Students explain a core procedure without AI. Which 3A should guide the aligned learning activity and assessment?", answer: "Anchor" },
-    { text: "Learning outcome: Students use AI to compare options before making a professional judgement. Which 3A should guide the aligned learning activity and assessment?", answer: "Augment" },
-    { text: "Learning outcome: Students prototype a new AI-enabled service. Which 3A should guide the aligned learning activity and assessment?", answer: "Advance" },
+  const cases = [
+    {
+      id: "health",
+      domain: "Health and life sciences",
+      role: "A health professional",
+      capability: "Interprets observed evidence, decides when to escalate, and explains the reasoning behind a safe course of action.",
+      answer: "Anchor",
+      feedback: "This is an Anchor competency: a core human and professional capability that students must be able to demonstrate independently of AI.",
+      alignment: "Where will students practise making and explaining this judgement without relying on an AI-generated answer?",
+    },
+    {
+      id: "business",
+      domain: "Business, design and media",
+      role: "A business or creative professional",
+      capability: "Uses AI to generate campaign options, evaluates the evidence and context, then justifies a recommendation for a client.",
+      answer: "Augment",
+      feedback: "This is an Augment competency: students leverage AI to work more productively and effectively in their domain while retaining professional judgement.",
+      alignment: "How will students practise evaluating AI output and show why their final recommendation is appropriate?",
+    },
+    {
+      id: "engineering",
+      domain: "Engineering and ICT",
+      role: "An engineering or technology professional",
+      capability: "Designs and tests an AI-enabled solution that changes how a service, workflow or system could operate.",
+      answer: "Advance",
+      feedback: "This is an Advance competency: a stretch capability focused on innovation and transformation through AI within professional practice.",
+      alignment: "What learning activity and assessment would let students explore the new possibility while testing its value, limits and risks?",
+    },
   ];
-  const [index, setIndex] = useState(0);
-  const [selected, setSelected] = useState<string | null>(null);
-  const current = prompts[index];
+  const lenses = [
+    { name: "Anchor", description: "Core human and professional capability, valued independently of AI." },
+    { name: "Augment", description: "Use AI to improve the productivity and quality of domain work." },
+    { name: "Advance", description: "Use AI to innovate or transform professional practice." },
+  ];
+  const [active, setActive] = useState(0);
+  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const current = cases[active];
+  const selected = answers[current.id];
+  const completed = Object.keys(answers).length;
   return (
-    <section className="activity-block three-as-activity">
+    <section className="activity-block three-as-activity competency-studio">
       <div className="activity-head-row">
         <div>
-          <span className="activity-eyebrow">Quick sort</span>
-          <h2>Which of the 3As fits best?</h2>
+          <span className="activity-eyebrow">Competency studio</span>
+          <h2>Identify the capability before choosing the 3A</h2>
         </div>
-        <span className="activity-count">{index + 1} / {prompts.length}</span>
+        <span className="activity-count">{completed} / {cases.length} explored</span>
       </div>
-      <blockquote>{current.text}</blockquote>
-      <div className="three-as-options">
-        {[
-          ["Anchor", "Keep the foundations strong"],
-          ["Augment", "Enhance an authentic workflow"],
-          ["Advance", "Explore new possibilities"],
-        ].map(([name, description]) => (
-          <button key={name} className={selected === name ? "selected" : ""} onClick={() => setSelected(name)}>
-            <strong>{name}</strong><small>{description}</small>
-          </button>
-        ))}
+      <p>Choose a professional context, then decide which kind of student capability the module is developing.</p>
+      <div className="competency-case-tabs" role="tablist" aria-label="Professional contexts">
+        {cases.map((item, index) => <button key={item.id} type="button" role="tab" aria-selected={active === index} className={active === index ? "active" : ""} onClick={() => setActive(index)}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.domain}</strong></button>)}
+      </div>
+      <div className="competency-case" role="tabpanel">
+        <span>{current.role}</span>
+        <h3>Students need to be able to…</h3>
+        <p>{current.capability}</p>
+      </div>
+      <p className="competency-question">Which 3A best describes this capability?</p>
+      <div className="competency-lenses">
+        {lenses.map((lens) => <button key={lens.name} type="button" className={selected === lens.name ? "selected" : ""} onClick={() => setAnswers((items) => ({ ...items, [current.id]: lens.name }))}><strong>{lens.name}</strong><small>{lens.description}</small></button>)}
       </div>
       {selected && (
         <div className={`activity-feedback ${selected !== current.answer ? "try-again" : ""}`}>
-          <strong>{selected === current.answer ? "That’s it" : "Look again"}</strong>
-          <p>The best fit is <b>{current.answer}</b>. Next, check that the learning activity gives suitable practice and the assessment makes this outcome visible.</p>
-          {selected === current.answer && index < prompts.length - 1 && (
-            <button className="inline-next" onClick={() => { setIndex(index + 1); setSelected(null); }}>Try the next one →</button>
-          )}
+          <strong>{selected === current.answer ? `${current.answer} fits` : "Look again"}</strong>
+          <p>{selected === current.answer ? current.feedback : `This capability is best framed as ${current.answer}. ${current.feedback}`}</p>
+          <p className="alignment-cue"><b>Alignment question:</b> {current.alignment}</p>
         </div>
       )}
     </section>

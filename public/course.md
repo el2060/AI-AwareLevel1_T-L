@@ -97,9 +97,9 @@ NP students build a common foundation in AI literacy. NP’s **3As framework** h
 
 Use the infographic with one module in mind:
 
-- **Anchor:** Which outcomes require students to retain core knowledge, skills and judgement—and how will activities and assessment support and evidence these?
-- **Augment:** Which outcomes involve students using AI to improve an authentic professional workflow while retaining judgement—and how will they practise and show this use?
-- **Advance:** Which outcomes involve students using AI to create new services, workflows or forms of professional practice—and what learning and assessment experiences would enable this?
+- **Anchor:** Core human and professional capabilities that remain valued in the discipline, independently of AI. Which outcomes require students to retain this knowledge, skill or judgement—and how will activities and assessment evidence it?
+- **Augment:** Capabilities for using AI to work more productively and effectively in a domain while retaining judgement. How will students practise and show this use in an authentic workflow?
+- **Advance:** Stretch capabilities focused on using AI for innovation or transformation in professional practice. What new service, workflow or possibility might students explore—and what learning and assessment experiences would enable it?
 
 Start with Anchor. Augment and Advance build on the disciplinary foundations students need to use AI well. Not every learning outcome or module will require all three.
 
