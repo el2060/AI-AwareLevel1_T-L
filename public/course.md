@@ -330,7 +330,12 @@ In an AI-enabled context, assessment needs to provide authentic, credible eviden
 
 AI creates a challenge when it performs the same thinking or work that the assessment is meant to measure. The assessment must still make clear what students can do independently and, where appropriate, how they use AI to support their work.
 
-NP’s assessment strategy is to review learning outcomes and assessments for **Anchor** competencies that students demonstrate independently and **Augment** competencies where students use AI with judgement. This helps assure both human competencies and AI capabilities in authentic professional practice.
+NP’s Strategy 3 is to redesign assessment for authentic AI-relevant learning and professional practice. It has two connected strands:
+
+- **Current guidance:** Apply NP’s GenAI requirements for summative assessment, including clear conditions, declaration and prohibited uses.
+- **Phased review and redesign:** Course and module teams review learning outcomes, activities and assessments through the 3As to identify **Anchor**, **Augment** and, where relevant, **Advance** competencies.
+
+At Level 1, focus on recognising why assessment needs authentic evidence in an AI-enabled context and applying the current requirements. Review and redesign are the next, phased steps for course and module teams.
 
 ## Where Should You Begin?
 

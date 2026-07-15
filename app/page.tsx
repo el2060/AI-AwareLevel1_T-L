@@ -656,7 +656,7 @@ function OpeningVisual() {
     },
     {
       title: "Assessment",
-      detail: "How assessment can provide authentic evidence of learning in an AI-enabled context",
+      detail: "How AI changes assessment—and how assessment can remain authentic",
       icon: ClipboardCheck,
     },
     {
@@ -824,9 +824,9 @@ function SectionVisual({ title }: { title: string }) {
   );
   if (title.startsWith("Part 5")) return <PairInfographic />;
   if (title.startsWith("Part 6")) return (
-    <figure className="concept-visual assessment-visual" aria-label="Assessment decisions begin with the learning outcome">
-      <figcaption><span>Assessment</span><strong>Begin with what students must demonstrate</strong></figcaption>
-      <div className="assessment-flow"><div><i>01</i><b>Learning outcome</b><small>What capability matters?</small></div><span>→</span><div><i>02</i><b>Evidence</b><small>What must students show?</small></div><span>→</span><div><i>03</i><b>AI conditions</b><small>What is allowed and clear?</small></div></div>
+    <figure className="concept-visual assessment-visual" aria-label="Assessment strategy in an AI-enabled context">
+      <figcaption><span>Assessment strategy</span><strong>Current guidance, then phased review through the 3As</strong></figcaption>
+      <div className="assessment-flow"><div><i>01 · Now</i><b>Apply current guidance</b><small>Set clear GenAI conditions, declaration and prohibited uses.</small></div><span>→</span><div><i>02 · Next</i><b>Review through the 3As</b><small>Identify Anchor, Augment and, where relevant, Advance competencies.</small></div><span>→</span><div><i>03 · Purpose</i><b>Keep assessment authentic</b><small>Show what students can do in AI-enabled professional practice.</small></div></div>
     </figure>
   );
   if (title.startsWith("Part 7")) return (
