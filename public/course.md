@@ -11,7 +11,7 @@ This module helps you:
 - **Judge** where AI supports learning and where it undermines it, and how NP’s GenAI requirements apply to assessment.
 - **Recognise** where AI tools and learning data could legally, safely and responsibly support your T&L work.
 
-This is Level 1: AI-Aware—building the shared vocabulary and judgement every NP Academic Staff member needs. Level 2: AI-Proficient is where you go on to apply these approaches and use AI tools directly within your own teaching, learning design and assessment.
+This is Level 1: AI-Aware—recognising and describing how AI affects curriculum, facilitation, assessment and data and tech-enhanced T&L, the shared foundation every NP Academic Staff member needs.
 
 ### Learning time
 
