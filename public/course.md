@@ -100,6 +100,8 @@ Use the infographic with one module in mind:
 
 The 3As are lenses, not a fixed sequence. Use the lens—or combination of lenses—that best represents the capability students need to develop. Not every learning outcome or module will require all three.
 
+A useful benchmark when defining Anchors: generally, whatever AI can already do well in your discipline should **not** be treated as an Anchor. The question is what your graduates must do that AI cannot.
+
 ## Examples Across Disciplines
 
 - **Anchor:** A health sciences student makes a safe judgement from observed evidence; a computing student explains, tests and debugs generated code.
@@ -133,6 +135,8 @@ The 3As help course and module teams review:
 - The assessment: what evidence will show that the intended learning has been achieved.
 
 Use these questions to keep learning outcomes, activities and assessment constructively aligned as AI changes the discipline.
+
+One question captures it all: to maximise employability, what must your students do that AI **cannot** do (Anchor), **with** AI (Augment), and **beyond current job boundaries** (Advance)?
 
 ---
 
@@ -226,6 +230,14 @@ Students then:
 AI supports initial exploration. It does not replace empathy, professional judgement or the human interaction students need to practise.
 
 AI-enabled tutors and learning assistants, such as D2L Lumi Tutor, are a separate, complementary NP strategy for personalised practice and feedback outside class contact time—see Part 5: Tools and Data.
+
+## Guiding Students' Everyday Use
+
+Students also use AI outside structured activities. Basic guidance worth giving in any module:
+
+- Frame a clear request rather than pasting the task—better prompts get more useful output.
+- Check outputs for accuracy and bias before relying on them.
+- Do not submit unverified AI work, and declare and cite AI use as instructed.
 
 ## Apply It to Your Module
 
@@ -465,6 +477,8 @@ Information requiring care includes:
 
 When unsure, check the tool’s current NP approval and data conditions before entering the information.
 
+The same care applies to students: remind them not to enter personal, employer or proprietary information into public AI tools, in class or on internship.
+
 ## Treat AI-Generated Insights as Starting Points
 
 AI may summarise comments, group themes or suggest patterns. These outputs are not final findings or decisions.
@@ -499,7 +513,7 @@ Before using a tool in this way, check that:
 
 ## Apply It to Your Module
 
-Think of one possible use of M365 Copilot or another approved tool.
+Think of one possible use of M365 Copilot or another approved tool. If you are new to AI tools, start with a small, low-risk use case—such as drafting practice questions from non-sensitive material—before anything with higher stakes.
 
 Consider:
 
