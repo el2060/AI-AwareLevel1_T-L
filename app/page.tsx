@@ -896,7 +896,6 @@ export default function Home() {
     );
   }
 
-  const meta = sectionMeta[active] ?? sectionMeta[0];
   const useCaseMarker = "<!--use-case-explorer-->";
   const pairDesignMarker = "<!--pair-design-guide-->";
   const moduleSummaryMarker = "<!--module-summary-->";
@@ -936,30 +935,25 @@ export default function Home() {
 
       <nav className="chapter-nav" aria-label="Course navigation">
         <div className="chapter-nav-inner">
-          <button className="chapter-step" onClick={() => setActive((index) => Math.max(0, index - 1))} disabled={active === 0} aria-label="Previous section"><span aria-hidden="true">←</span><b>Previous</b></button>
-          <div className="current-section" aria-live="polite">
-            <span>Section {active + 1} of {sections.length}</span>
-            <strong>{current.shortTitle}</strong>
+          <div className="chapter-nav-left">
+            {active > 0 && <button className="chapter-icon" onClick={() => setActive((index) => Math.max(0, index - 1))} aria-label="Previous section" title="Previous section"><span aria-hidden="true">←</span></button>}
+            <span className="chapter-position" aria-live="polite">{active + 1} <i aria-hidden="true">/</i> {sections.length}</span>
           </div>
-          <button
-            className="contents-button"
-            onClick={() => setContentsOpen(true)}
-            aria-haspopup="dialog"
-            aria-expanded={contentsOpen}
-          >
-            Contents
-          </button>
-          <button className="chapter-step next-step" onClick={goNext} disabled={active === sections.length - 1} aria-label="Next section"><b>Next</b><span aria-hidden="true">→</span></button>
+          <div className="chapter-nav-actions">
+            <button
+              className="contents-button"
+              onClick={() => setContentsOpen(true)}
+              aria-haspopup="dialog"
+              aria-expanded={contentsOpen}
+            >
+              Contents
+            </button>
+            {active < sections.length - 1 && <button className="chapter-icon" onClick={goNext} aria-label="Next section" title="Next section"><span aria-hidden="true">→</span></button>}
+          </div>
         </div>
       </nav>
 
       <main className="reader">
-        <div className={`section-intro tone-${meta.tone}`}>
-          <div className="section-mark">{meta.mark}</div>
-          <div>
-            <div className="section-kicker">{meta.label}</div>
-          </div>
-        </div>
         {active === 0 ? (
           <h1 className="page-title home-title">
             <span>AI in T&amp;L Essentials</span>
