@@ -24,10 +24,10 @@ This programme takes about 2 hours in total: this learning package with its acti
 
 By the end of this module, you will be able to:
 
-1. **Curriculum:** Describe how AI is changing what students need to learn and do in your discipline or module.
+1. **Curriculum:** Describe how AI is changing what students need to learn and how they are taught in your discipline or module.
 2. **Facilitation:** Describe how AI can support learning, including its benefits, limitations, risks and recommended practices.
-3. **Assessment:** Describe how AI affects assessment validity and academic integrity, and identify how NP’s requirements for GenAI use apply to an assessment.
-4. **Tools and data:** Identify where AI tools or learning data could enhance a T&L activity, and what to check before using them.
+3. **Assessment:** Describe how AI affects assessment design, validity and academic integrity, and how NP’s requirements for GenAI use apply to assessment.
+4. **Tools and data:** Describe how AI tools and learning data can support engagement and achievement of learning outcomes, including diverse learning needs; identify what must be checked before use.
 
 At Level 1, the focus is awareness: recognise the key issues and identify what may need attention. The package focuses on four T&L Competency Framework (TLCF) domains: curriculum design, facilitation of learning, assessment, and data and tech-enhanced T&L.
 
@@ -58,10 +58,10 @@ A polished product alone may not tell us what the student knows or can do.
 
 AI may matter across four parts of your teaching work:
 
-- **Curriculum:** Review what students need to learn, practise and do as AI changes disciplinary and workplace practice.
+- **Curriculum:** Review what students need to learn and how they are taught as AI changes disciplinary and workplace practice.
 - **Learning:** Decide when AI can support explanation, practice or feedback without doing the learning for students.
 - **Assessment:** Keep evidence of students’ own thinking, judgement and performance visible.
-- **Tools and data:** Consider how AI-enabled tools and learning information could enhance a learning activity or teaching decision—and what needs checking.
+- **Tools and data:** Consider how AI tools and learning data could support engagement, learning outcomes or diverse learning needs—and what needs checking.
 
 AI is one factor to consider; the learning purpose comes first.
 
@@ -132,7 +132,7 @@ The five strategies appear in four practical areas of T&L:
 1. **Curriculum:** The 3As help course and module teams review learning outcomes, activities and assessment together.
 2. **Learning:** PAIR provides a structure for learning with AI.
 3. **Assessment:** Assessment conditions keep students’ learning and contribution visible.
-4. **Tools and data:** AI-enabled tools and learning data can enhance a T&L activity when the purpose, information, output and oversight are considered.
+4. **Tools and data:** AI-enabled tools and learning data can support engagement and learning outcomes when the purpose, information, output and oversight are considered.
 
 Parts 3 to 7 build through these areas in sequence. Each affects the next: what students need to learn shapes their practice, assessment and the tools that may be useful.
 
@@ -493,7 +493,7 @@ Begin with the learning outcome. Then decide what students must demonstrate, whe
 
 # Part 7: Using AI Tools and Learning Data Responsibly
 
-AI tools and learning data can enhance a learning activity or teaching decision.
+AI tools and learning data can support engagement, learning outcomes and appropriate support for different learning needs.
 
 This part has two purposes: see practical T&L uses, and know what to check before using a tool or acting on AI-generated insights.
 
@@ -574,6 +574,16 @@ You still need to:
 - Consider the learning context.
 - Identify possible bias.
 - Decide what action, if any, is appropriate.
+
+## Engagement and Diverse Learning Needs
+
+AI-enabled tools may offer another explanation, a different format, practice at an appropriate level or timely feedback. These can support engagement and access when they are connected to the intended learning outcome.
+
+Before using a tool in this way, check that:
+
+- The learning purpose and standard remain clear.
+- The output is accurate, inclusive and accessible.
+- AI supports—not replaces—appropriate human or institutional support.
 
 ## Apply It to Your Module
 

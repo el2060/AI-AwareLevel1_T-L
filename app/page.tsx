@@ -344,8 +344,8 @@ function ModuleSummary() {
     },
     {
       label: "Tools and data",
-      title: "Enhance T&L purposefully",
-      preview: "Start with a T&L activity, then check the information, output and oversight.",
+      title: "Support engagement and outcomes",
+      preview: "Use suitable tools and learning data to support learning, then check the information, output and oversight.",
       takeaway: "M365 Copilot can support activities such as reviewing materials, drafting examples and summarising de-identified feedback. Use any tool only for the information and purpose it is approved for.",
       practice: "Use AI output or learning data as a starting point. You remain responsible for the teaching and learning decision that follows.",
       icon: ShieldCheck,
@@ -635,7 +635,7 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
     { label: "Use an unapproved public tool to analyse named student records.", correct: false, feedback: "The tool is not approved for the information involved." },
     { label: "Let an AI summary decide which students need intervention.", correct: false, feedback: "AI may support an initial review, but a person must interpret the context and make the decision." },
   ]} />;
-  if (title.startsWith("Part 8")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep a module you teach, lead or support in mind. Tap each question once you have considered it." items={["Curriculum: What is AI changing in what students must learn and do?", "Learning: Where might AI support learning without replacing it?", "Assessment: What must students still demonstrate themselves?", "Tools and data: Where could AI tools or learning data enhance a T&L activity—and what needs checking before use?"]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered what is changing, the learning to protect, what students need to demonstrate, and where AI tools or learning data could help with appropriate checks." />;
+  if (title.startsWith("Part 8")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep a module you teach, lead or support in mind. Tap each question once you have considered it." items={["Curriculum: What is AI changing in what students must learn and how they are taught?", "Learning: Where might AI support learning without replacing it?", "Assessment: What evidence must show that students have achieved the learning outcome?", "Tools and data: Where could AI tools or learning data improve engagement or support a learning outcome—and what needs checking before use?"]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered what is changing, the learning to protect, what evidence is needed, and where AI tools or learning data could help with appropriate checks." />;
   if (title.startsWith("Look Back")) return <CarryForwardActivity value={notes.lookbackchoice ?? ""} onChange={(value) => onChange("lookbackchoice", value)} />;
   if (title === "Module Summary") return <ConfidenceActivity value={notes.confidence ?? ""} onChange={(value) => onChange("confidence", value)} />;
   if (title.startsWith("You Have Completed")) return <NextStepActivity value={notes.nextstep ?? ""} onChange={(value) => onChange("nextstep", value)} />;
@@ -646,22 +646,22 @@ function OpeningVisual() {
   const areas = [
     {
       title: "Curriculum",
-      detail: "What AI may change in your module",
+      detail: "How AI is changing what students learn and how they are taught",
       icon: BookOpen,
     },
     {
       title: "Learning",
-      detail: "How AI can support practice and feedback",
+      detail: "How AI can improve learning experiences, practice and feedback",
       icon: Lightbulb,
     },
     {
       title: "Assessment",
-      detail: "How students show their learning credibly",
+      detail: "How assessment can provide credible evidence of student learning",
       icon: ClipboardCheck,
     },
     {
       title: "Tools and data",
-      detail: "How AI tools and learning data can enhance a T&L activity",
+      detail: "How AI tools and learning data can support engagement and learning outcomes",
       icon: ShieldCheck,
     },
   ];
@@ -752,8 +752,8 @@ function LecturerPracticeMap() {
     {
       title: "Curriculum",
       domain: "Curriculum Design & Development",
-      work: "Plan outcomes, examples and activities",
-      question: "What is AI changing in what students must learn and do?",
+      work: "Learning outcomes, activities and assessment",
+      question: "What is AI changing in what students need to learn and how they are taught?",
       detail: "Review the learning outcomes, activities and assessment together as AI changes the discipline and its practice.",
       icon: BookOpen,
       tone: "design",
@@ -770,18 +770,18 @@ function LecturerPracticeMap() {
     {
       title: "Assessment",
       domain: "Assessment",
-      work: "Task design, integrity and GenAI conditions",
-      question: "What must students still demonstrate themselves?",
-      detail: "Decide what students need to demonstrate, then make the GenAI conditions clear and aligned to that evidence.",
+      work: "Assessment design, integrity and GenAI conditions",
+      question: "What evidence must show that students have achieved the learning outcome?",
+      detail: "Decide what evidence is needed, then make the GenAI conditions clear and aligned to that evidence.",
       icon: ClipboardCheck,
       tone: "assess",
     },
     {
       title: "Tools and data",
       domain: "Data & Tech-Enhanced T&L",
-      work: "AI-supported activities, feedback and learning data",
-      question: "Where could AI tools or learning data enhance a T&L activity—and what needs checking before use?",
-      detail: "Consider how an AI tool or learning information could enhance an activity, feedback process or teaching decision. Then check the information involved, the output and the judgement needed before acting.",
+      work: "AI-supported learning, feedback and learning data",
+      question: "Where could AI tools or learning data improve engagement or support a learning outcome—and what needs checking before use?",
+      detail: "Consider how an AI tool or learning information could support engagement, an activity or a teaching decision. Then check the information involved, the output and the judgement needed before acting.",
       icon: Database,
       tone: "review",
     },
