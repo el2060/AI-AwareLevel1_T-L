@@ -33,13 +33,13 @@ Level 1 is about awareness: recognise the key issues and identify what may need 
 
 ---
 
-# Part 1: AI and Your Module
+# Part 1: AI in Your T&L Work
 
 ## Start With Your Module
 
 AI may already appear in your module: in content, student learning, assessment, feedback or learning data. It can support some work, change what students need to practise, or make evidence of learning less clear.
 
-Use the visual above to explore the four related areas. They organise this package and return in Part 8.
+Use the visual above to explore the four related areas. They organise this package and return in Part 6.
 
 A useful question to carry through this module is:
 
@@ -47,11 +47,9 @@ A useful question to carry through this module is:
 
 ---
 
-# Part 2: NP’s Shared Direction for AI-Enabled T&L
+## NP’s Shared Direction for AI-Enabled T&L
 
-## From Your Module to NP’s Direction
-
-Part 1 started with a module. NP’s shared direction helps you decide what to look for and what to do next.
+NP’s shared direction helps you decide what to look for and what to do next in the module you have in mind.
 
 ## Preparing AI-Ready Graduates
 
@@ -85,11 +83,11 @@ The connections are:
 - **AI-enabled learning support and tools:** Support practice, feedback, engagement and learning outcomes with appropriate checks.
 - **Human skills, resilience and judgement:** Run through all of these areas—especially Anchor, Reflection and authentic assessment.
 
-Parts 3 to 7 now follow a module-design sequence: curriculum, learning, assessment, then tools and data. PAIR provides a structure for AI-supported learning; human judgement remains central throughout.
+The next four parts follow the TLCF areas: curriculum, facilitation of learning, assessment, and tools and data. PAIR sits within facilitation as a structure for AI-supported learning; human judgement remains central throughout.
 
 ---
 
-# Part 3: What Should Students Learn?
+# Part 2: Curriculum — What Should Students Learn?
 
 AI can now assist with tasks that students previously completed independently. This may change some professional workflows, but it does not remove the need for strong foundations.
 
@@ -135,7 +133,7 @@ Use these questions to keep learning outcomes, activities and assessment constru
 
 ---
 
-# Part 4: How Can AI Support Learning?
+# Part 3: Facilitation — Supporting Learning With AI
 
 AI can support learning when it has a clear purpose and does not remove the thinking or practice students need.
 
@@ -198,17 +196,7 @@ AI may help make learning more accessible through alternative explanations, exam
 
 Check that the meaning and learning standard remain accurate, the examples are inclusive, and the tool does not replace appropriate human or institutional support.
 
-## Pause and Consider
-
-For the module you have in mind:
-
-> Where could AI support practice, feedback or scaffolding?
-
-> What thinking or performance must remain with the student?
-
----
-
-# Part 5: PAIR—Learning With AI
+## PAIR: A Structure for Learning With AI
 
 NP has adopted and adapted the **PAIR framework** as a simple, platform-independent structure for AI-supported learning and problem-solving across all three years of PET diplomas.
 
@@ -216,7 +204,7 @@ PAIR works across disciplines and as tools change. It is a human-centred, skill-
 
 The four connected stages are **Problem, AI, Interaction and Reflection**. Students formulate the problem before choosing a tool, interact critically rather than accepting the first response, and reflect on both the outcome and the learning process.
 
-When students select a tool, start with the learning purpose. Part 7 provides the fuller checks for the tool, information, output and human oversight.
+When students select a tool, start with the learning purpose. Part 5 provides the fuller checks for the tool, information, output and human oversight.
 
 *Adapted from: Acar, O. A. (2023). “Are Your Students Ready for AI? A 4-Step Framework for a ChatGPT World.” HBP Education.*
 
@@ -256,7 +244,7 @@ PAIR keeps the focus on problem formulation, deliberate tool selection, critical
 
 ---
 
-# Part 6: How Does AI Affect Assessment?
+# Part 4: Assessment — Authentic and Credible Evidence
 
 In an AI-enabled context, assessment needs to provide authentic, credible evidence that students have achieved the intended learning outcomes.
 
@@ -410,7 +398,7 @@ Begin with the learning outcome. Then decide what students must demonstrate, whe
 
 ---
 
-# Part 7: Using AI Tools and Learning Data Responsibly
+# Part 5: Tools and Data — Purposeful and Responsible Use
 
 AI tools and learning data can safely and responsibly support engagement, learning outcomes and appropriate support for different learning needs.
 
@@ -516,7 +504,7 @@ A suitable AI use has a clear learning purpose, an appropriate tool, safe handli
 
 ---
 
-# Part 8: Bring It All Together
+# Part 6: Apply It to Your Module
 
 Choose a module you teach, lead or support. The four-lens activity brings together the curriculum, learning, assessment, and tools and data considerations from this package.
 
@@ -530,25 +518,15 @@ Afterwards, choose one small next step:
 
 ---
 
-# Look Back
-
-Use the question you chose above to carry one useful idea into your next module conversation or review.
-
----
-
-# Module Summary
+# Part 7: Key Takeaways and Next Step
 
 <!--module-summary-->
 
----
-
-# You Have Completed the Learning Package
-
-You have reached the end of **AI in T&L Essentials: Level 1 (AI-Aware)**.
+## You Have Completed the Learning Package
 
 You now have a shared Level 1 foundation to:
 
-- Recognise where AI may affect curriculum, learning, assessment, and tools and data.
+- Recognise where AI may affect curriculum, facilitation, assessment, and tools and data.
 - Use the 3As and PAIR to orient a teaching or learning decision.
 - Apply NP’s requirements for GenAI use in assessment.
 - Keep human judgement at the centre when AI is involved.
