@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "C:\\Users\\limee\\OneDrive\\Desktop\\AI Aware Level 1 T&L\\AI-AwareLevel1_T-L",
+      "port": 3000
+    }
+  ]
+}

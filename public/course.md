@@ -135,72 +135,11 @@ Use these questions to keep learning outcomes, activities and assessment constru
 
 # Part 3: Facilitation — Supporting Learning With AI
 
-AI can support learning when it has a clear purpose and does not remove the thinking or practice students need.
+NP's pedagogy for facilitating learning with AI is the **PAIR framework**—established practice, embedded in at least one core module of every PET diploma. PAIR positions AI as a tool that augments students' thinking and judgement, not a substitute for it.
 
-At NP, AI-enabled tutors and learning assistants are intended to **scaffold and coach**, rather than simply provide answers. For example, D2L Lumi Tutor provides students with on-demand summaries, flashcards and practice questions grounded in module content. Other adaptive-learning support is being piloted.
+## PAIR: NP's Pedagogy for Learning With AI
 
-For students, useful support gives them more to think with: another explanation, a chance to practise, feedback to act on or a prompt to reflect. The lecturer still decides what good learning looks like in the module.
-
-## Possible Benefits
-
-AI may help students:
-
-- Access another explanation or example.
-- Practise with questions and receive preliminary feedback.
-- Brainstorm or compare approaches.
-- Work at an appropriate pace or level.
-
-## Possible Limitations and Risks
-
-AI may produce output that is:
-
-- Incorrect, fabricated or outdated.
-- Biased, stereotypical or unsuitable for the learner level.
-
-Without a clear learning purpose, it may also reduce independent thinking or useful practice, and create access, fairness, copyright or attribution concerns.
-
-## Supporting or Replacing Learning?
-
-Consider these two situations.
-
-### Situation A
-
-> “I did not understand the concept, so I asked an AI tool to explain it more simply. I checked the explanation against the module notes and then attempted the practice questions.”
-
-This may support learning. The student used AI for clarification, checked the output and continued practising.
-
-### Situation B
-
-> “I did not understand the concept, so I asked an AI tool to complete the assignment and submitted the answer.”
-
-This does not support the intended learning. AI replaced the thinking and performance the student needed to develop.
-
-The difference lies in the learning process—not simply in whether AI was used.
-
-## A Simple T&L Example
-
-A hospitality lecturer asks students to use AI to suggest responses to a dissatisfied guest.
-
-Students then:
-
-1. Identify weaknesses in the generated responses.
-2. Adapt the language to the guest and situation.
-3. Explain how empathy and professional judgement shaped their response.
-4. Role-play the interaction with another person.
-
-AI supports initial exploration. It does not replace empathy, professional judgement or the human interaction students need to practise.
-
-## Supporting Different Learners
-
-AI may help make learning more accessible through alternative explanations, examples at different levels, practice questions or language support.
-
-Check that the meaning and learning standard remain accurate, the examples are inclusive, and the tool does not replace appropriate human or institutional support.
-
-## PAIR: A Structure for Learning With AI
-
-NP has adopted and adapted the **PAIR framework** as a simple, platform-independent structure for AI-supported learning and problem-solving across all three years of PET diplomas.
-
-PAIR works across disciplines and as tools change. It is a human-centred, skill-focused and platform-independent process that keeps students and lecturers accountable for judgement, choices and learning.
+PAIR is a simple, platform-independent structure for AI-supported learning and problem-solving. It is human-centred and skill-focused, and it keeps students and lecturers accountable for judgement, choices and learning as AI tools continue to change.
 
 The four connected stages are **Problem, AI, Interaction and Reflection**. Students formulate the problem before choosing a tool, interact critically rather than accepting the first response, and reflect on both the outcome and the learning process.
 
@@ -233,6 +172,57 @@ For example, students could:
 4. Improve it for a specified audience.
 
 This turns AI output into material for learning instead of treating it as the answer.
+
+## Using PAIR to Judge Interaction and Reflection
+
+A useful test at the Interaction and Reflection stages is whether AI is supporting or replacing the learning. AI can support learning when it has a clear purpose and does not remove the thinking or practice students need. Useful support gives students more to think with: another explanation, a chance to practise, feedback to act on or a prompt to reflect. You still decide what good learning looks like in your module.
+
+### Situation A
+
+> “I did not understand the concept, so I asked an AI tool to explain it more simply. I checked the explanation against the module notes and then attempted the practice questions.”
+
+This may support learning. The student used AI for clarification, checked the output and continued practising.
+
+### Situation B
+
+> “I did not understand the concept, so I asked an AI tool to complete the assignment and submitted the answer.”
+
+This does not support the intended learning. AI replaced the thinking and performance the student needed to develop.
+
+The difference lies in the learning process—not simply in whether AI was used.
+
+## Possible Benefits
+
+AI may help students:
+
+- Access another explanation or example.
+- Practise with questions and receive preliminary feedback.
+- Brainstorm or compare approaches.
+- Work at an appropriate pace or level.
+
+## Possible Limitations and Risks
+
+AI may produce output that is:
+
+- Incorrect, fabricated or outdated.
+- Biased, stereotypical or unsuitable for the learner level.
+
+Without a clear learning purpose, it may also reduce independent thinking or useful practice, and create access, fairness, copyright or attribution concerns.
+
+## PAIR in Practice: A Simple T&L Example
+
+A hospitality lecturer asks students to use AI to suggest responses to a dissatisfied guest.
+
+Students then:
+
+1. Identify weaknesses in the generated responses.
+2. Adapt the language to the guest and situation.
+3. Explain how empathy and professional judgement shaped their response.
+4. Role-play the interaction with another person.
+
+AI supports initial exploration. It does not replace empathy, professional judgement or the human interaction students need to practise.
+
+AI-enabled tutors and learning assistants, such as D2L Lumi Tutor, are a separate, complementary NP strategy for personalised practice and feedback outside class contact time—see Part 5: Tools and Data.
 
 ## Apply It to Your Module
 
@@ -478,9 +468,19 @@ You still need to:
 - Identify possible bias.
 - Decide what action, if any, is appropriate.
 
+## AI-Enabled Tutors and Learning Assistants
+
+NP's Strategy 4 is to support personalised and adaptive learning through AI-enabled tutors and learning assistants that **scaffold and coach**—rather than simply provide answers—outside class contact time.
+
+- **D2L Lumi Tutor:** Available institution-wide within NP's LMS, grounded in module content, offering on-demand summaries, flashcards and practice questions.
+- **Adaptive learning assistants:** Being piloted to support proficiency diagnostics, personalised study plans, adaptive practice difficulty and real-time feedback.
+- **NP-developed learning assistants:** Subject tutors, process coaches, simulated practice environments and reflective guides tailored to disciplinary contexts.
+
+These tools complement your facilitation; they do not replace it. Useful support gives students more to think with, and you still decide what good learning looks like in your module.
+
 ## Engagement and Diverse Learning Needs
 
-AI-enabled tools may offer another explanation, a different format, practice at an appropriate level or timely feedback. These can support engagement and access when they are connected to the intended learning outcome.
+AI-enabled tools, including the learning assistants above, may offer another explanation, a different format, practice at an appropriate level or timely feedback. These can support engagement and access when they are connected to the intended learning outcome.
 
 Before using a tool in this way, check that:
 

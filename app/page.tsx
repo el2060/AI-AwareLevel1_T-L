@@ -474,41 +474,6 @@ function ThreeAsActivity() {
   );
 }
 
-function PairBuilder() {
-  const steps = ["Problem", "AI", "Interaction", "Reflection"];
-  const shuffled = ["Reflection", "Interaction", "Problem", "AI"];
-  const [picked, setPicked] = useState<string[]>([]);
-  const [nudge, setNudge] = useState("");
-  const next = steps[picked.length];
-  const complete = picked.length === steps.length;
-  return (
-    <section className="activity-block pair-builder">
-      <span className="activity-eyebrow">Build the flow</span>
-      <h2>Tap the PAIR stages in order</h2>
-      <div className="pair-track">
-        {steps.map((step, index) => <div key={step} className={picked[index] === step ? "filled" : ""}>{picked[index] ? <><b>{step[0]}</b><span>{step}</span></> : <em>{index + 1}</em>}</div>)}
-      </div>
-      <div className="pair-options">
-        {shuffled.map((step) => (
-          <button
-            key={step}
-            disabled={picked.includes(step)}
-            onClick={() => {
-              if (step === next) {
-                setPicked([...picked, step]);
-                setNudge("");
-              } else {
-                setNudge(picked.length === 0 ? "Start with the problem or task students need to address." : "Not quite—think about what should follow the stage you just placed.");
-              }
-            }}
-          >{step}</button>
-        ))}
-      </div>
-      <p className={`pair-hint ${nudge ? "pair-nudge" : ""}`}>{complete ? "PAIR keeps the learning process visible from problem framing to reflection." : nudge || `Next: think about what comes ${picked.length === 0 ? "first" : "next"}.`}</p>
-    </section>
-  );
-}
-
 function FacilitationRolePlay() {
   const moves = [
     {
@@ -760,30 +725,45 @@ function OpeningVisual() {
 }
 
 function ThreeAsInfographic() {
+  const lenses = [
+    {
+      key: "anchor",
+      name: "Anchor",
+      tagline: "Independent of AI",
+      body: "Core disciplinary and professional competencies valued by the profession and industry—plus the human qualities, such as judgement and integrity, that industry values just as highly. Demonstrated without AI.",
+      cue: "Knowledge · skills · reasoning · judgement · human qualities",
+    },
+    {
+      key: "augment",
+      name: "Augment",
+      tagline: "Improve authentic practice",
+      body: "AI-enabled practice that strengthens a real professional workflow.",
+      cue: "Generate · compare · analyse · improve",
+    },
+    {
+      key: "advance",
+      name: "Advance",
+      tagline: "Explore what becomes possible",
+      body: "Emerging or transformative AI applications within the discipline.",
+      cue: "New services · new workflows · future practice",
+    },
+  ];
   return (
     <figure className="concept-visual three-as-infographic" aria-labelledby="three-as-title">
       <figcaption>
         <span>The 3As</span>
-        <strong id="three-as-title">Review aligned learning outcomes, activities and assessment</strong>
+        <strong id="three-as-title">Three lenses for reviewing learning outcomes, activities and assessment</strong>
       </figcaption>
       <div className="three-as-path">
-        <section className="three-as-band advance-band">
-          <div className="three-as-label"><i aria-hidden="true">A</i><div><b>Advance</b><small>Explore what becomes possible</small></div></div>
-          <p>Emerging or transformative AI applications within the discipline.</p>
-          <em>New services · new workflows · future practice</em>
-        </section>
-        <section className="three-as-band augment-band">
-          <div className="three-as-label"><i aria-hidden="true">A</i><div><b>Augment</b><small>Improve authentic practice</small></div></div>
-          <p>AI-enabled practice that strengthens a real professional workflow.</p>
-          <em>Generate · compare · analyse · improve</em>
-        </section>
-        <section className="three-as-band anchor-band">
-          <div className="three-as-label"><i aria-hidden="true">A</i><div><b>Anchor</b><small>Keep core capabilities visible</small></div></div>
-          <p>Core disciplinary, professional and human capabilities valued in the field—and demonstrated independently of AI.</p>
-          <em>Knowledge · skills · reasoning · judgement · human qualities</em>
-        </section>
+        {lenses.map((lens) => (
+          <section key={lens.key} className={`three-as-band ${lens.key}-band`}>
+            <div className="three-as-label"><i aria-hidden="true">A</i><div><b>{lens.name}</b><small>{lens.tagline}</small></div></div>
+            <p>{lens.body}</p>
+            <em>{lens.cue}</em>
+          </section>
+        ))}
       </div>
-      <div className="infographic-note"><span aria-hidden="true">↔</span><p><strong>Use the three lenses.</strong> Identify the capability students need, then review how learning outcomes, activities and assessment align.</p></div>
+      <div className="infographic-note"><span aria-hidden="true">↔</span><p><strong>Three lenses, not a sequence.</strong> Identify the capability students need, then review how learning outcomes, activities and assessment align.</p></div>
     </figure>
   );
 }
@@ -890,9 +870,17 @@ function SectionVisual({ title }: { title: string }) {
   if (title.startsWith("Part 1")) return <LecturerPracticeMap />;
   if (title.startsWith("Part 2")) return <ThreeAsInfographic />;
   if (title.startsWith("Part 3")) return (
-    <figure className="concept-visual support-visual" aria-label="AI should support rather than replace learning">
-      <figcaption><span>A useful test</span><strong>Is AI supporting or replacing the learning?</strong></figcaption>
-      <div className="support-scale"><div className="support-side good"><span>✓</span><b>Support</b><small>Explain · practise · check · improve</small></div><div className="scale-pivot"><span /></div><div className="support-side caution"><span>!</span><b>Replace</b><small>Complete · copy · submit</small></div></div>
+    <figure className="concept-visual pair-hero-visual" aria-label="PAIR: NP's pedagogy for learning with AI">
+      <figcaption><span>NP’s pedagogy</span><strong>PAIR: a visible process for learning with AI</strong></figcaption>
+      <div className="pair-hero-flow">
+        <div><b>P</b><small>Problem</small></div>
+        <span aria-hidden="true">→</span>
+        <div><b>A</b><small>AI</small></div>
+        <span aria-hidden="true">→</span>
+        <div><b>I</b><small>Interaction</small></div>
+        <span aria-hidden="true">→</span>
+        <div><b>R</b><small>Reflection</small></div>
+      </div>
     </figure>
   );
   if (title.startsWith("Part 4")) return (
@@ -1050,8 +1038,6 @@ export default function Home() {
           className="course-content course-content-continuation"
           dangerouslySetInnerHTML={{ __html: markdownToHtml(contentAfterInteractive) }}
         />}
-
-        {hasPairDesignGuide && <PairBuilder />}
 
         {!current.title.startsWith("Part 1") && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
         {current.title.startsWith("Part 5") && <ToolChecksActivity value={activityNotes.toolchecks ?? ""} onChange={(value) => setActivityValue("toolchecks", value)} />}
