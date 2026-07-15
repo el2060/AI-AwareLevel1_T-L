@@ -101,7 +101,7 @@ Use the infographic with one module in mind:
 - **Augment:** Capabilities for using AI to work more productively and effectively in a domain while retaining judgement. How will students practise and show this use in an authentic workflow?
 - **Advance:** Stretch capabilities focused on using AI for innovation or transformation in professional practice. What new service, workflow or possibility might students explore—and what learning and assessment experiences would enable it?
 
-Start with Anchor. Augment and Advance build on the disciplinary foundations students need to use AI well. Not every learning outcome or module will require all three.
+The 3As are lenses, not a fixed sequence. Use the lens—or combination of lenses—that best represents the capability students need to develop. Not every learning outcome or module will require all three.
 
 ## Examples Across Disciplines
 

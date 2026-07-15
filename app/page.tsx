@@ -783,7 +783,7 @@ function ThreeAsInfographic() {
           <em>Knowledge · skills · reasoning · judgement</em>
         </section>
       </div>
-      <div className="infographic-note"><span aria-hidden="true">↑</span><p><strong>Start with Anchor.</strong> Then review how learning outcomes, activities and assessment align when AI may Augment practice or Advance the discipline.</p></div>
+      <div className="infographic-note"><span aria-hidden="true">↔</span><p><strong>Use the three lenses.</strong> Identify the capability students need, then review how learning outcomes, activities and assessment align.</p></div>
     </figure>
   );
 }
