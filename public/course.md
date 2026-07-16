@@ -98,7 +98,7 @@ Use the infographic with one module in mind:
 
 The 3As are lenses, not a fixed sequence. Use the lens—or combination of lenses—that best represents the capability students need to develop. Not every learning outcome or module will require all three.
 
-A useful benchmark when defining Anchors: generally, whatever AI can already do well in your discipline should **not** be treated as an Anchor. The question is what your graduates must do that AI cannot.
+A useful benchmark when defining Anchors: whatever AI can already do well in your discipline should **not** be treated as an Anchor. The question is what your graduates must do that AI cannot.
 
 ## Examples Across Disciplines
 
@@ -134,7 +134,7 @@ The 3As help course and module teams review:
 
 Use these questions to keep learning outcomes, activities and assessment constructively aligned as AI changes the discipline.
 
-One question captures it all: to maximise employability, what must your students do that AI **cannot** do (Anchor), **with** AI (Augment), and **beyond current job boundaries** (Advance)?
+To maximise employability: what must your students do that AI **cannot** do (Anchor), **with** AI (Augment), and **beyond current job boundaries** (Advance)?
 
 ---
 
@@ -361,19 +361,11 @@ Instruction B is clearer because it sets out the boundaries of AI use. A clear a
 
 ## Discuss the Conditions With Students
 
-Written conditions are necessary, but students may still interpret them differently.
-
-Announce the conditions early, discuss them in class and give students an opportunity to ask questions. Use examples or a mock run where practical.
-
-Two-way communication helps address misunderstandings before submission.
+Written conditions alone can still be interpreted differently. Announce them early, discuss them in class, use examples or a mock run where practical, and give students a chance to ask questions—two-way communication catches misunderstandings before submission.
 
 ## Prepare Students Through Formative Learning
 
-Where AI use is restricted or prohibited in a summative assessment, formative activities should prepare students to meet those conditions.
-
-Students might compare acceptable and unacceptable uses, examine sample declarations, practise checking AI output, or work through an independent task before an AI-supported one.
-
-Give students a chance to work with the conditions before the summative submission.
+Where AI use is restricted or prohibited in a summative assessment, formative activities should prepare students to meet those conditions—for example, comparing acceptable and unacceptable uses, examining sample declarations, practising checking AI output, or working through an independent task before an AI-supported one.
 
 ## Staff Use of GenAI in Grading
 
@@ -461,7 +453,7 @@ Before using an AI tool, consider:
 
 ## Match the Information to the Tool
 
-M365 Copilot is cleared up to OC-Restricted, and Pair Chat is cleared up to OC-Sensitive Normal (OC-SN). Before using either tool, confirm that the information and purpose are covered by NP's current guidance. Other tools may have different approval conditions. Before entering information, consider the task, the data, the tool and the human oversight needed.
+Before entering information into any tool, confirm the information and purpose are covered by NP's current guidance for that tool—clearance levels and approval conditions vary. Consider the task, the data, the tool and the human oversight needed.
 
 For other public AI tools, do not enter personal, sensitive or proprietary information unless the tool has been explicitly approved for that information and purpose.
 
@@ -499,7 +491,7 @@ NP's Strategy 4 is to support personalised and adaptive learning through AI-enab
 - **Adaptive learning assistants:** Being piloted to support proficiency diagnostics, personalised study plans, adaptive practice difficulty and real-time feedback.
 - **NP-developed learning assistants:** Subject tutors, process coaches, simulated practice environments and reflective guides tailored to disciplinary contexts.
 
-These tools complement your facilitation; they do not replace it. Useful support gives students more to think with, and you still decide what good learning looks like in your module.
+These tools complement your facilitation; they do not replace it. You still decide what good learning looks like in your module, and how these tools fit into it.
 
 ## Engagement and Diverse Learning Needs
 
