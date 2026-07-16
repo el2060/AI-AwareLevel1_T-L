@@ -204,7 +204,7 @@ const sectionMeta = [
 ];
 
 const sectionBridges = [
-  "Start with a module you teach, lead or support, then see how AI already touches it.",
+  "Keep one module you teach, lead or support in mind as you work through the package.",
   "Begin with curriculum: what must students learn, and how should learning outcomes, activities and assessment align?",
   "Then consider how AI can support learning and practice—and use PAIR to give that learning a clear structure.",
   "Next, consider how assessment keeps learning authentic, credible and visible.",
@@ -360,7 +360,7 @@ function ModuleSummary() {
       label: "Learning design",
       title: "3As and PAIR",
       preview: "Use the 3As to review aligned learning outcomes, activities and assessment; use PAIR to structure learning with AI.",
-      takeaway: "Anchor what AI can't replace, Augment productivity and quality with AI, and Advance by redefining what the job looks like. The 3As guide a review of what students should learn, how they will practise it and how they will demonstrate it. NP has adopted and adapted PAIR as a process for learning with AI.",
+      takeaway: "Anchor what AI can't replace, Augment productive and effective AI use, and Advance by rewarding students who redefine the job. The 3As start with what assessment should measure, then align the learning outcomes and activities to match. NP has adopted and adapted PAIR as a process for learning with AI.",
       practice: "Check that your learning outcome, learning activity and assessment are aligned. Use AI to support practice and learning—not to take over the thinking.",
       icon: Sparkles,
       tone: "purple",
@@ -469,9 +469,9 @@ function ThreeAsActivity() {
     },
   ];
   const lenses = [
-    { name: "Anchor", description: "Core domain, professional and human capability, valued in the field and demonstrated independently of AI. The benchmark is simple: if AI can already do it well, it isn't an Anchor." },
-    { name: "Augment", description: "Use AI to improve the productivity and quality of domain work." },
-    { name: "Advance", description: "Use AI to go beyond the pre-AI job—redefining what's possible, not just doing it faster." },
+    { name: "Anchor", description: "Skills, judgement or human qualities AI cannot replace or replicate—capabilities students must retain in spite of AI. If AI can already perform the assessed task well, it isn't an Anchor outcome." },
+    { name: "Augment", description: "Use AI to improve the productivity and quality of domain work, while applying appropriate disciplinary judgement and oversight." },
+    { name: "Advance", description: "Challenge students to use AI to go beyond established pre-AI job boundaries—not just doing the old work faster, but redefining what's possible." },
   ];
   const [active, setActive] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -613,7 +613,7 @@ function PairDesignGuide() {
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
-    { name: "Curriculum · 3As", question: "Keep outcomes, learning and assessment aligned", detail: "The 3As help course and module teams review learning outcomes, learning activities and assessment together as AI changes the discipline. You will use this in Part 2.", icon: Sparkles },
+    { name: "Curriculum · 3As", question: "Decide what assessment should measure", detail: "The 3As help course and module teams decide what assessment should measure as AI changes the discipline, then align outcomes and activities. You will use this in Part 2.", icon: Sparkles },
     { name: "Pedagogy · PAIR", question: "Help students learn with AI", detail: "PAIR gives students a visible process for learning and problem-solving with AI. You will use this in Part 3.", icon: MessageCircle },
     { name: "Assessment", question: "Keep learning visible", detail: "Assessment conditions should show what students must demonstrate and how AI may be used. Covered in Part 4.", icon: ClipboardCheck },
     { name: "Personalised learning", question: "Scaffold practice and feedback", detail: "AI-enabled tutors and learning assistants can support practice, feedback and different learning needs. Covered in Part 5.", icon: Bot },
@@ -765,7 +765,7 @@ function OpeningVisual() {
       <div className="overview-heading">
         <span>At a glance</span>
         <h2>Four areas of AI-aware T&amp;L</h2>
-        <p>This package looks at four parts of your teaching work.</p>
+        <p>This package explores AI across four areas of your teaching practice.</p>
       </div>
       <div className="overview-areas">
         {areas.map((area, index) => {
@@ -786,29 +786,29 @@ function ThreeAsInfographic() {
       key: "anchor",
       name: "Anchor",
       tagline: "AI is the benchmark",
-      body: "Human skills and professional judgement that AI cannot replace or replicate—capabilities your students need in spite of AI. If AI can already do it well, it isn't an Anchor.",
-      cue: "Knowledge · skills · reasoning · judgement · human qualities",
+      body: "Assess skills, judgement or human qualities that AI cannot replace or replicate—capabilities students must retain in spite of AI. If AI can already perform the assessed task well, it isn't an Anchor outcome.",
+      cue: "Human judgement · empathy · ethical reasoning · creativity · interpersonal skills · professional responsibility",
     },
     {
       key: "augment",
       name: "Augment",
-      tagline: "Improve productivity and quality",
-      body: "Using AI to work more productively, and to raise the quality of what students produce, in a real professional workflow.",
-      cue: "Generate · compare · analyse · improve",
+      tagline: "Assess productive, effective AI use",
+      body: "Assess how well students use AI to improve productivity and the quality of their work, while applying appropriate disciplinary judgement and oversight.",
+      cue: "Generate · compare · analyse · evaluate · improve",
     },
     {
       key: "advance",
       name: "Advance",
-      tagline: "Redefine the job, not just speed it up",
-      body: "Recognising students whose use of AI lets them go beyond the pre-AI job—not just doing the old role faster, but changing what the role can be.",
-      cue: "New services · new workflows · future practice",
+      tagline: "Reward new AI-enabled possibilities",
+      body: "In suitable modules, challenge students to use AI to go beyond established pre-AI job boundaries—not merely completing the same work faster, but redefining what may be possible.",
+      cue: "New services · new workflows · new roles · future practice",
     },
   ];
   return (
     <figure className="concept-visual three-as-infographic" aria-labelledby="three-as-title">
       <figcaption>
         <span>The 3As</span>
-        <strong id="three-as-title">Three lenses for reviewing learning outcomes, activities and assessment</strong>
+        <strong id="three-as-title">Three lenses for reviewing assessment—and aligning learning outcomes and activities accordingly</strong>
       </figcaption>
       <div className="three-as-path">
         {lenses.map((lens) => (
@@ -819,7 +819,7 @@ function ThreeAsInfographic() {
           </section>
         ))}
       </div>
-      <div className="infographic-note"><span aria-hidden="true">↔</span><p><strong>Three lenses, not a sequence.</strong> Identify the capability students need, then review how learning outcomes, activities and assessment align.</p></div>
+      <div className="infographic-note"><span aria-hidden="true">↔</span><p><strong>Three lenses, not a sequence.</strong> Not every outcome or module needs all three—use them to decide what an assessment should measure as AI changes the work.</p></div>
     </figure>
   );
 }
@@ -900,7 +900,7 @@ function LecturerPracticeMap() {
   return (
     <figure className="concept-visual lecturer-practice-visual" aria-labelledby="lecturer-practice-title">
       <figcaption><span>In your module</span><strong id="lecturer-practice-title">Four AI-aware questions for your teaching work</strong></figcaption>
-      <p className="practice-map-intro">Start with one part of your teaching work. Select an area to see the question to ask.</p>
+      <p className="practice-map-intro">Select an area to explore one key AI-aware question for your teaching practice.</p>
       <div className="lecturer-practice-map">
         <div className="practice-map-label"><span>AI-aware</span><strong>teaching practice</strong></div>
         <div className="practice-map-options">
