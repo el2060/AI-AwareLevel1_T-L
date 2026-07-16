@@ -211,7 +211,7 @@ const sectionBridges = [
   "Next, consider how assessment keeps learning authentic, credible and visible.",
   "Then choose suitable tools and data uses, checking information, output and human oversight.",
   "Bring the four areas together for a module you teach, lead or support.",
-  "Finish with the key ideas and one appropriate next step.",
+  "Finish with the key ideas and choose one next step.",
 ];
 
 function ChoiceCheck({ question, eyebrow, choices }: { question: string; eyebrow: string; choices: Choice[] }) {
@@ -599,7 +599,7 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
   if (title.startsWith("Part 2")) return <ThreeAsActivity />;
   if (title.startsWith("Part 3")) return <FacilitationRolePlay />;
   if (title.startsWith("Part 4")) return <AssessmentBriefBuilder />;
-  if (title.startsWith("Part 6")) return <TapChecklist eyebrow="Four-lens review" title="Consider Each Lens" prompt="Tap each question after considering it for your module." items={["Curriculum: What may need review in the learning outcomes, activities or assessment?", "Facilitation: Where could students compare, check or improve AI-generated output?", "Assessment: What must students demonstrate independently, and where might AI use be appropriate?", "Data and Tools: What T&L need could a tool support, and what would need checking before use?"]} tips={["Use the 3As to identify whether the capability is Anchor, Augment or Advance.", "Use PAIR to keep students checking, improving and reflecting rather than accepting the first output.", "Check that the GenAI conditions and evidence of student learning are clear.", "Check learning value, output quality, data and ethics, and human oversight."]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="Four lenses considered" completionText="You have identified what may need attention in this module. Choose one small next step below." />;
+  if (title.startsWith("Part 6")) return <TapChecklist eyebrow="In your module" title="Four-Lens Review" prompt="Tap each question after considering it for your module." items={["Curriculum: What may need review in the learning outcomes, activities or assessment?", "Facilitation: Where could students compare, check or improve AI-generated output?", "Assessment: What must students demonstrate independently, and where might GenAI use be appropriate?", "Data and Tools: What T&L need could a tool support, and what would need checking before use?"]} tips={["Use the 3As to consider whether the capability is Anchor, Augment or Advance.", "Use PAIR to keep students evaluating, refining and reflecting rather than accepting the first output.", "Check that the GenAI conditions and evidence of student learning are clear.", "Consider learning value, output quality, data and ethics, and human oversight."]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="Four Lenses Considered" completionText="You have identified what may need attention in this module. Now choose one small next step." />;
   if (title.startsWith("Part 7")) return <NextStepActivity value={notes.nextstep ?? ""} onChange={(value) => onChange("nextstep", value)} />;
   return null;
 }

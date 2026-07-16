@@ -339,7 +339,7 @@ A suitable AI use has a clear learning purpose, an appropriate tool, safe handli
 
 ## Review One Module Through Four Lenses
 
-Choose a module you teach, lead or support. Use the four questions to identify where AI may affect the learning and what may need attention.
+Choose a module you teach, lead or support. Use the four questions to identify where AI may affect learning and what may need attention.
 
 <!--module-review-->
 
