@@ -2,13 +2,13 @@
 
 ## Welcome
 
-AI is already shaping how students learn and how work is carried out across many professions. Students may use GenAI to explain concepts, generate ideas or support assignment work—raising new questions for teaching, learning and assessment.
+AI is shaping how students learn and how work is carried out across many professions. Students may use GenAI to explain concepts, generate ideas or support assignment work—raising new considerations for teaching, learning and assessment.
 
-This package will help you recognise how AI affects four areas of your T&L practice and what you may need to consider in your own module.
+This package explores how AI affects four areas of your T&L practice and what this may mean for your module.
 
 ### Learning time
 
-Allow about 2 hours to complete the package, its activities and the completion quiz.
+Allow about **2 hours** to complete the package, its activities and the completion quiz.
 
 ---
 
@@ -16,14 +16,15 @@ Allow about 2 hours to complete the package, its activities and the completion q
 
 By the end of this module, you will be able to:
 
-1. **Curriculum:** Recognise how AI may change what students need to learn and where learning outcomes, activities or assessments may need review.
-2. **Facilitation:** Identify ways AI can support learning, practice and feedback without replacing the intended learning.
-3. **Assessment:** Explain how AI affects assessment validity, authenticity and academic integrity, and identify NP’s key requirements.
-4. **Data and Tools:** Apply basic checks when using AI tools and learning data to support student engagement and learning safely and responsibly.
+**Curriculum:** Recognise how AI may change what students need to learn and where learning outcomes, activities or assessments may need review.
 
-Level 1 focuses on awareness: recognising the key issues and identifying what may need attention. The package draws on four domains of the T&L Competency Framework (TLCF): Curriculum Design and Development, Facilitation of Learning, Assessment, and Data and Tech-Enhanced T&L.
+**Facilitation:** Identify ways AI can support learning, practice and feedback without replacing the intended learning.
 
-You do not need to memorise every framework introduced. Focus on the **four areas of practice**, the **3As and PAIR**, and the **four checks for tools and data**.
+**Assessment:** Explain how AI affects assessment validity, authenticity and academic integrity, and identify NP’s key requirements.
+
+**Data and Tools:** Apply basic checks when using AI tools and learning data to support student engagement and learning safely and responsibly.
+
+Level 1 focuses on recognising key considerations across four T&L Competency Framework domains: Curriculum Design and Development, Facilitation of Learning, Assessment, and Data and Tech-Enhanced T&L.
 
 ---
 
