@@ -245,7 +245,7 @@ function ChoiceCheck({ question, eyebrow, choices }: { question: string; eyebrow
 function DomainSpotter() {
   const domains = ["Curriculum", "Facilitation", "Assessment", "Data and tools"];
   const scenarios = [
-    { id: "curriculum", context: "Your diploma team is reviewing whether graduates still need to hand-code without AI assistance.", answer: "Curriculum", feedback: "This is Curriculum: AI is changing what students need to learn and how it’s taught. Part 2 uses the 3As to work through exactly this kind of question." },
+    { id: "curriculum", context: "Your diploma team is reviewing which coding capabilities students must demonstrate themselves and which should include effective use of AI-assisted development.", answer: "Curriculum", feedback: "This is Curriculum: AI is changing what students need to learn and how it’s taught. Part 2 uses the 3As to work through exactly this kind of question." },
     { id: "facilitation", context: "A student asks an AI tutor to explain a concept a second way before attempting the practice questions.", answer: "Facilitation", feedback: "This is Facilitation: AI is supporting explanation and practice. Part 3 uses PAIR to judge when this helps rather than replaces learning." },
     { id: "assessment", context: "A student’s submission reads as clearly GenAI-polished, and you need to decide what still counts as their own work.", answer: "Assessment", feedback: "This is Assessment: providing authentic, credible evidence of learning. Part 4 covers NP’s GenAI requirements for summative assessment." },
     { id: "tools", context: "You want to use AI to summarise a term’s worth of student feedback comments to spot common themes.", answer: "Data and tools", feedback: "This is Data and Tools: using AI and learning data safely and responsibly. Part 5 covers what to check before you start." },
@@ -359,7 +359,7 @@ function ModuleSummary() {
     {
       label: "Learning design",
       title: "3As and PAIR",
-      preview: "Use the 3As to review aligned learning outcomes, activities and assessment; use PAIR to structure learning with AI.",
+      preview: "Use the 3As to decide what assessment should measure, then align outcomes and activities; use PAIR to structure learning with AI.",
       takeaway: "Anchor what AI can't replace, Augment productive and effective AI use, and Advance by rewarding students who redefine the job. The 3As start with what assessment should measure, then align the learning outcomes and activities to match. NP has adopted and adapted PAIR as a process for learning with AI.",
       practice: "Check that your learning outcome, learning activity and assessment are aligned. Use AI to support practice and learning—not to take over the thinking.",
       icon: Sparkles,
@@ -444,7 +444,7 @@ function ThreeAsActivity() {
       id: "health",
       domain: "Health and life sciences",
       role: "A health professional",
-      capability: "Interprets observed evidence, decides when to escalate, and explains the reasoning behind a safe course of action.",
+      capability: "Interpret observed evidence, decide when to escalate, and explain the reasoning behind a safe course of action.",
       answer: "Anchor",
       feedback: "This is an Anchor competency: a core human and professional capability that students must be able to demonstrate independently of AI.",
       alignment: "Where will students practise making and explaining this judgement without relying on an AI-generated answer?",
@@ -453,7 +453,7 @@ function ThreeAsActivity() {
       id: "business",
       domain: "Business, design and media",
       role: "A business or creative professional",
-      capability: "Uses AI to generate campaign options, evaluates the evidence and context, then justifies a recommendation for a client.",
+      capability: "Use AI to generate campaign options, evaluate the evidence and context, then justify a recommendation for a client.",
       answer: "Augment",
       feedback: "This is an Augment competency: students leverage AI to work more productively and effectively in their domain while retaining professional judgement.",
       alignment: "How will students practise evaluating AI output and show why their final recommendation is appropriate?",
@@ -462,7 +462,7 @@ function ThreeAsActivity() {
       id: "engineering",
       domain: "Engineering and ICT",
       role: "An engineering or technology professional",
-      capability: "Designs and tests an AI-enabled solution that changes how a service, workflow or system could operate.",
+      capability: "Design and test an AI-enabled solution that changes how a service, workflow or system could operate.",
       answer: "Advance",
       feedback: "This is an Advance competency: a stretch capability focused on innovation and transformation through AI within professional practice.",
       alignment: "What learning activity and assessment would let students explore the new possibility while testing its value, limits and risks?",
@@ -713,7 +713,7 @@ function UseCaseExplorer() {
 }
 
 function ToolChecksActivity() {
-  return <ChoiceCheck eyebrow="Four checks in practice" question="An approved AI tool summarises exam results and flags three students for early intervention. The data approval isn’t in question here. Which check matters most before you act on the flags?" choices={[
+  return <ChoiceCheck eyebrow="Four checks in practice" question="An approved AI tool summarises exam results and flags three students for early intervention. Assume the tool and data use have already been approved. Which check matters most before you act on the flags?" choices={[
     { label: "Human oversight: review the context yourself and decide—don’t let the flagged list become the decision.", correct: true, feedback: "The tool can support an initial review, but a person must interpret the context, check for omissions and decide what action, if any, is appropriate." },
     { label: "Output quality: check that the summary’s figures are accurate.", correct: false, feedback: "Worth checking, but accuracy alone doesn’t answer the harder question—who decides what happens to the students on that list." },
     { label: "Learning value: check the analysis addresses a real teaching need.", correct: false, feedback: "A fair question generally, but it doesn’t address the immediate risk here—treating the AI’s flags as the decision itself." },
@@ -863,7 +863,7 @@ function LecturerPracticeMap() {
       domain: "Curriculum Design & Development",
       work: "Learning outcomes, activities and assessment",
       question: "What is AI changing in what students need to learn and how they are taught?",
-      detail: "Review the learning outcomes, activities and assessment together as AI changes the discipline and its practice.",
+      detail: "Consider how learning outcomes, activities and assessment may need to remain aligned as AI changes disciplinary and professional practice.",
       icon: BookOpen,
       tone: "design",
     },
@@ -942,7 +942,7 @@ function SectionVisual({ title }: { title: string }) {
   if (title.startsWith("Part 4")) return (
     <figure className="concept-visual assessment-visual" aria-label="What every AI-enabled assessment needs">
       <figcaption><span>For every assessment</span><strong>Two things to get right</strong></figcaption>
-      <div className="tool-checks"><div><i>1</i><b>Apply current guidance</b><small>Clear GenAI conditions, declaration and prohibited uses.</small></div><div><i>2</i><b>Check validity through the 3As</b><small>Anchor: independent of AI. Augment: assess the process, not just the output.</small></div></div>
+      <div className="tool-checks"><div><i>1</i><b>Apply current guidance</b><small>Clear GenAI conditions, declaration and prohibited uses.</small></div><div><i>2</i><b>Protect the intended learning</b><small>Use the 3As to clarify what students demonstrate in spite of AI, with AI, or through new AI-enabled practice.</small></div></div>
     </figure>
   );
   if (title.startsWith("Part 5")) return (
@@ -1111,7 +1111,7 @@ export default function Home() {
         {progress === 100 && active === sections.length - 1 && (
           <div className="completion-moment">
             <div className="completion-burst"><span>✓</span></div>
-            <div><strong>Learning package complete</strong><p>You have worked through every section and practised the key Level 1 decisions.</p></div>
+            <div><strong>Learning package complete</strong><p>You have worked through every section and applied the key Level 1 considerations.</p></div>
           </div>
         )}
 

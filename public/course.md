@@ -2,7 +2,7 @@
 
 ## Welcome
 
-AI is already part of how students learn and how many workplaces operate. You may see students using GenAI to explain concepts, generate ideas or develop assignments—and ask what this means for your teaching and assessment. This module builds your awareness across four areas of your T&L practice, set out below.
+AI is already part of how students learn and how many workplaces operate. You may see students using GenAI to explain concepts, generate ideas or develop assignments—and ask what this means for your teaching and assessment. This module builds your awareness of how AI affects four areas of your T&L practice.
 
 ### Learning time
 
@@ -49,7 +49,7 @@ Three things need to be true for that to happen:
 
 - **AI-relevant curriculum:** Knowledge and skills remain relevant to the discipline and profession.
 - **AI-integrated learning and assessment:** Students learn to work with AI while still demonstrating what they know and can do.
-- **AI-enabled learning support:** AI may provide suitable practice, feedback and personalised support.
+- **AI-enabled learning support:** AI can provide appropriate practice, feedback and personalised support when aligned with the intended learning.
 
 At Level 1, focus on where these show up in your own module.
 
@@ -65,13 +65,13 @@ The next four parts turn them into four familiar areas of your teaching work: cu
 
 AI can now assist with tasks that students previously completed independently. This may change some professional workflows, but it does not remove the need for strong foundations.
 
-Students need enough disciplinary knowledge and judgement to recognise when AI output is wrong, unsafe or unsuitable. This holds whether you teach pre-employment (PET) or adult (CET) learners—the approach differs (pedagogy vs andragogy), but the foundational judgement students need does not.
+Students need enough disciplinary knowledge and judgement to recognise when AI output is wrong, unsafe or unsuitable. This applies to both PET and CET learners, although the learning context and facilitation approach may differ.
 
 NP students build a common foundation in AI literacy. NP’s **3As framework** helps course and module teams decide what assessment should measure as AI changes professional practice, then align the learning outcomes and activities accordingly.
 
-## The Student AI Baseline: What Every Student Already Learns
+## The Student AI Baseline: What Every Student Is Expected to Learn
 
-Before working out what your own module needs to add, it helps to know the common ground every NP student is expected to reach — NP’s **Student AI Baseline Competencies**, spanning four areas:
+Before deciding what your module needs to add, it helps to understand the common AI competencies every NP student is expected to develop — NP’s **Student AI Baseline Competencies**, spanning four areas:
 
 | Area | Baseline competency |
 | :--- | :--- |
@@ -80,13 +80,13 @@ Before working out what your own module needs to add, it helps to know the commo
 | **Learn to Use AI** | Apply AI for value creation and evaluate outputs for accuracy, bias and contextual fit |
 | **Learn Beyond AI** | Evaluate societal, ethical and legal implications using human-centred judgement |
 
-This baseline is generic—it does not replace what your discipline needs. The 3As below help you build on it: where a student’s baseline literacy already covers a skill, your module can assume it and focus on the Augment or Advance layer specific to your field.
+The baseline is generic and does not replace discipline-specific learning. Use the 3As below to identify what your module should reinforce or extend through Anchor, Augment and, where relevant, Advance outcomes.
 
 <!--baseline-check-->
 
 Use the infographic to identify where the 3As may be relevant to one module—detailed redesign is a later, phased step, not something Level 1 asks of you:
 
-- **Anchor:** Which outcomes require students to retain core knowledge, skill or judgement independently of AI—and how will activities and assessment evidence it?
+- **Anchor:** Which outcomes assess skills, judgement or human qualities that AI cannot replace or replicate—and how will students demonstrate these capabilities?
 - **Augment:** How will students practise and show productive, judgement-retaining use of AI in an authentic workflow?
 - **Advance:** What new service, workflow or possibility might students explore with AI—and what learning and assessment experiences would enable it?
 
@@ -112,7 +112,7 @@ At this stage, you are not expected to redesign the module. The aim is to identi
 
 Start with one learning outcome in a module you teach, lead or support. Consider:
 
-> One capability my students must retain as an Anchor is...
+> One uniquely human capability my students must demonstrate as an Anchor is...
 
 > One professional or disciplinary workflow that AI might Augment is...
 
@@ -122,13 +122,11 @@ At Level 1, use the 3As to recognise these distinctions and the need for alignme
 
 ## Key Takeaway
 
-The 3As help course and module teams review:
+The 3As help course and module teams decide what assessment should measure as AI changes the discipline, then align the rest:
 
-- The learning outcomes: what students must do independently, with AI, or in new AI-enabled ways.
-- The learning activities: how students will practise and develop those outcomes.
 - The assessment: what evidence will show that the intended learning has been achieved.
-
-Use these questions to keep learning outcomes, activities and assessment constructively aligned as AI changes the discipline.
+- The learning outcomes: what students must do in spite of AI, with AI, or in new AI-enabled ways.
+- The learning activities: how students will practise and develop those outcomes.
 
 What uniquely human capabilities should students demonstrate in spite of AI (Anchor)? How well should they use AI to improve their work (Augment)? Where might AI enable them to go beyond existing job boundaries (Advance)? Align your learning outcomes, learning activities and assessments accordingly.
 
@@ -144,7 +142,7 @@ PAIR is a simple, platform-independent structure for AI-supported learning and p
 
 When students select a tool, start with the learning purpose. Part 5 provides the fuller checks for the tool, information, output and human oversight.
 
-PAIR is also how you help students meet two of the baseline competencies above: engaging AI critically as a learning partner (**Learn With AI**), and applying AI for value creation with appropriate evaluation (**Learn to Use AI**). This matters most with **agentic AI**, which can carry out multiple connected tasks on a student's behalf. The Problem and Interaction stages are where students must stay in control—deciding what to delegate, checking each step, and not letting a multi-step agent quietly complete the thinking for them.
+PAIR is also how you help students meet two of the baseline competencies above: **Learn With AI** and **Learn to Use AI**. This becomes especially important with **agentic AI**, which can carry out multiple connected tasks. Students must remain responsible for what they delegate, how they check the process, and whether the AI is supporting rather than replacing the intended learning.
 
 *Adapted from: Acar, O. A. (2023). “Are Your Students Ready for AI? A 4-Step Framework for a ChatGPT World.” HBP Education.*
 
@@ -255,7 +253,7 @@ NP’s Policy on Generative AI in Summative Assessment took effect in AY2026. Th
 
 ### GenAI is allowed unless explicitly prohibited
 
-The default position is that GenAI use in summative assessment is allowed unless the assignment descriptor explicitly prohibits it. Typical allowed uses include brainstorming, language polishing, media creation, data visualisation and scaffolding.
+The default position is that GenAI use in summative assessment is allowed unless the assignment descriptor explicitly prohibits it. Unless restricted or prohibited, allowed uses include brainstorming, language polishing, media creation, data visualisation and scaffolding.
 
 This does not mean that students may use AI in any way they choose. They must follow all stated conditions and the uses that are always prohibited.
 
@@ -313,17 +311,7 @@ Where AI use is restricted or prohibited in a summative assessment, formative ac
 
 ## Staff Use of GenAI in Grading
 
-If GenAI assists with grading or feedback:
-
-- Pilot the use first on a small representative sample with management approval.
-- Staff remain responsible for every grade and feedback decision.
-- Every AI suggestion must be reviewed and validated by a human marker.
-- AI must not make the final grading decision.
-- Every student’s grade must be reviewed by a human marker; do not review only a sample of grades.
-- Use must follow the required approval and quality-assurance process.
-- Calibrate and document your prompts and outputs iteratively, to check validity, reliability, fairness and transparency.
-- Relevant use should be disclosed to students as required.
-- Student work must only be handled in an approved environment.
+GenAI-assisted grading is a higher-risk use with strict requirements: prior management approval and a small pilot first, an approved environment for student work, documented quality assurance, disclosure to students, and human review of every grade and feedback decision—not a sample. AI must never make the final grading decision; staff remain fully responsible. Refer to NP's detailed requirements before piloting such a use.
 
 ## Apply It to Your Module
 
@@ -359,7 +347,9 @@ It can help you review module documents, summarise de-identified feedback, draft
 
 ### Other approved Government tools
 
-Other approved tools may suit a particular task. **Pair Chat (pair.gov.sg)** is a GovTech AI assistant for public officers. It is cleared for information up to **OC-Sensitive Normal (OC-SN)**, subject to NP's current guidance for the information and purpose involved. Alongside chat, it offers Assistants, batch jobs and writing templates. It may be useful when a Government workflow or repeatable task is the better fit — not simply as another way to do everyday M365 work.
+Other approved tools may suit a particular task. **Pair Chat (pair.gov.sg)** is a GovTech AI assistant for public officers—no relation to NP's PAIR pedagogy in Part 3. It is cleared for information up to **OC-Sensitive Normal (OC-SN)**, subject to NP's current guidance for the information and purpose involved. Alongside chat, it offers Assistants, batch jobs and writing templates. It may be useful when a Government workflow or repeatable task is the better fit — not simply as another way to do everyday M365 work.
+
+Clearance levels and approved uses can change—always refer to NP's latest tool and data-handling guidance before entering information.
 
 <!--use-case-explorer-->
 
