@@ -6,10 +6,10 @@ AI is already part of how students learn and how many workplaces operate. You ma
 
 This module helps you:
 
-- **Recognise** how AI is changing what students need to learn and how you teach it in your discipline.
-- **Understand** the benefits, limitations and risks of facilitating learning with AI.
+- **Recognise** how AI is changing what students need to learn and how you teach it in your discipline, including the AI baseline every student is expected to reach.
+- **Understand** the benefits, limitations and risks of facilitating learning with AI, including how to guide students' use of it — especially agentic AI.
 - **Recognise** how AI affects assessment design, validity and academic integrity, and what NP’s GenAI requirements mean for you.
-- **Identify** where AI tools and learning data can legally, safely and responsibly support your T&L work.
+- **Identify** where AI tools and learning data can effectively, safely and responsibly support your T&L work.
 
 ### Learning time
 
@@ -21,10 +21,10 @@ Allow about 2 hours for this package, its activities and the completion quiz. Wo
 
 By the end of this module, you will be able to:
 
-1. **Curriculum:** Describe how AI is changing what students need to learn and how they are taught in your discipline or module.
-2. **Facilitation:** Describe the benefits, limitations, risks and recommended practices of applying AI to improve learning experiences.
+1. **Curriculum:** Describe how AI is changing what students need to learn and how they are taught in your discipline or module, including the baseline AI literacies expected of every student (e.g. using generative and agentic AI for learning, value creation and problem-solving, with critical evaluation and human oversight).
+2. **Facilitation:** Describe the benefits, limitations, risks and recommended practices of applying AI to improve learning experiences, including how to guide students to interact with AI productively and responsibly (e.g. when AI performs multiple connected, agentic tasks on their behalf).
 3. **Assessment:** Describe how AI affects assessment design, validity and academic integrity, and how NP’s GenAI requirements apply.
-4. **Tools and data:** Describe how AI tools and learning data can be used legally, safely and responsibly to support engagement and learning outcomes, including diverse learning needs.
+4. **Tools and data:** Describe how AI tools and learning data can be used effectively, safely and responsibly to support engagement and learning outcomes (e.g. for students with diverse learning needs).
 
 Level 1 is about awareness: recognise the key issues and identify what may need attention. The package draws on four T&L Competency Framework (TLCF) domains: curriculum design, facilitation of learning, assessment, and data and tech-enhanced T&L.
 
@@ -75,6 +75,20 @@ AI can now assist with tasks that students previously completed independently. T
 Students need enough disciplinary knowledge and judgement to recognise when AI output is wrong, unsafe or unsuitable.
 
 NP students build a common foundation in AI literacy. NP’s **3As framework** helps course and module teams review the constructive alignment of **learning outcomes, learning activities and assessment** as AI changes disciplinary and professional practice.
+
+## The Student AI Baseline: What Every Student Already Learns
+
+Before working out what your own module needs to add, it helps to know the common ground every NP student is expected to reach — NP’s **Student AI Baseline Competencies**, spanning five areas:
+
+| Area | Baseline competency |
+| :--- | :--- |
+| Learn About AI — AI Definitions | Describe AI and its evolution and affordances |
+| Learn With AI — Computational Thinking | Apply computational thinking to critically engage with AI as a learning partner |
+| Learn About AI — Approaches & Fields | Describe AI approaches (e.g. supervised/unsupervised/reinforcement learning, generative AI, agentic AI) and fields (e.g. ML, NLP, computer vision) |
+| Learn to Use AI — AI Usage | Apply AI for value creation, evaluating outputs for accuracy, bias and contextual fit before use |
+| Learn Beyond AI — Societal Impact | Evaluate the societal, ethical and legal impacts of AI, exercising human-centred judgement |
+
+This baseline is generic—it does not replace what your discipline needs. The 3As below help you build on it: where a student’s baseline literacy already covers a skill, your module can assume it and focus on the Augment or Advance layer specific to your field.
 
 Use the infographic with one module in mind:
 
@@ -135,6 +149,8 @@ PAIR is a simple, platform-independent structure for AI-supported learning and p
 The four connected stages are **Problem, AI, Interaction and Reflection**. Students formulate the problem before choosing a tool, interact critically rather than accepting the first response, and reflect on both the outcome and the learning process.
 
 When students select a tool, start with the learning purpose. Part 5 provides the fuller checks for the tool, information, output and human oversight.
+
+PAIR is also how you help students meet two of the baseline competencies above: engaging AI critically as a learning partner (**Learn With AI**), and applying AI for value creation with appropriate evaluation (**Learn to Use AI**). This matters most with **agentic AI**, which can carry out multiple connected tasks on a student's behalf. The Problem and Interaction stages are where students must stay in control—deciding what to delegate, checking each step, and not letting a multi-step agent quietly complete the thinking for them.
 
 *Adapted from: Acar, O. A. (2023). “Are Your Students Ready for AI? A 4-Step Framework for a ChatGPT World.” HBP Education.*
 
@@ -395,7 +411,7 @@ Begin with the learning outcome. Then decide what students must demonstrate, whe
 
 # Part 5: Tools and Data — Purposeful and Responsible Use
 
-AI tools and learning data can safely and responsibly support engagement, learning outcomes and appropriate support for different learning needs.
+AI tools and learning data can be used effectively, safely and responsibly to support engagement, learning outcomes and appropriate support for different learning needs.
 
 This part has two purposes: see practical T&L uses, and know what to check before using a tool or acting on AI-generated insights.
 
@@ -534,6 +550,7 @@ Afterwards, choose one small next step:
 You now have a shared Level 1 foundation to:
 
 - Recognise where AI may affect curriculum, facilitation, assessment, and tools and data.
+- Recognise the AI baseline students are expected to reach, and build on it in your module.
 - Refer to the 3As and PAIR to orient a teaching or learning decision.
 - Describe NP’s requirements for GenAI use in assessment.
 - Keep human judgement at the centre when AI is involved.
