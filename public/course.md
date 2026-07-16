@@ -58,11 +58,9 @@ Three things need to be true for that to happen:
 
 At Level 1, focus on where these show up in your own module.
 
-NP’s five strategies guide how this direction is being translated into curriculum, learning, assessment and student support.
-
 <!--strategy-map-->
 
-The next four parts turn them into four familiar areas of your teaching work: curriculum (Part 2), facilitation of learning (Part 3), assessment (Part 4), and data and tools (Part 5). Human judgement runs through all four.
+The next four parts explore how this direction applies to curriculum, facilitation of learning, assessment, and data and tools. Human judgement runs through all four.
 
 ---
 
@@ -76,9 +74,9 @@ NP students build a common foundation in AI literacy. NP’s **3As framework** h
 
 ## A Common Student AI Baseline
 
-All students receive a common AI literacy foundation across four areas: **learning about AI, learning with AI, learning to use AI and learning beyond AI**. Your module builds on this baseline through discipline-specific application; the baseline is context, not another framework you need to memorise here.
+All students receive a common AI literacy foundation: **learning about AI, learning with AI, learning to use AI and learning beyond AI**. Modules build on this foundation through discipline-specific learning and application.
 
-Use the 3As below to identify what your module may need to reinforce or extend through Anchor, Augment and, where relevant, Advance outcomes.
+Use the 3As to consider what your module may need to reinforce or extend.
 
 Use the infographic to identify where the 3As may be relevant to one module—detailed redesign is a later, phased step, not something Level 1 asks of you:
 
@@ -87,12 +85,6 @@ Use the infographic to identify where the 3As may be relevant to one module—de
 - **Advance:** What new service, workflow or possibility might students explore with AI—and what learning and assessment experiences would enable it?
 
 Use the lens—or combination of lenses—that best represents the capability students need to develop. Not every learning outcome or module will require all three.
-
-## Try This: Draft Practice Examples
-
-Alongside reviewing a module through the 3As, GenAI has an immediate, smaller use in curriculum work: drafting a first set of worked examples or practice questions.
-
-Give the tool your topic, the diploma and year, and ask it to include a common misconception to spot. Check the draft for accuracy, learner level and tone before using it—the “Draft practice examples” use case in Part 5 has a ready-to-use prompt.
 
 ## Apply It to Your Module
 
@@ -124,7 +116,7 @@ NP's pedagogy for facilitating learning with AI is the **PAIR framework**—esta
 
 ## PAIR: NP's Pedagogy for Learning With AI
 
-PAIR is a simple, platform-independent structure for AI-supported learning and problem-solving. It is human-centred, skill-focused and responsibility-centred: students remain accountable for the problem, tool choice, interaction, verification, outputs and learning, so that AI supports rather than replaces intended learning.
+PAIR is a simple, platform-independent structure for AI-supported learning and problem-solving. It is human-centred, skill-focused and responsibility-centred: students remain accountable for their choices, AI outputs and learning.
 
 When students select a tool, start with the learning purpose. Part 5 provides the fuller checks for the tool, information, output and human oversight.
 
@@ -163,7 +155,7 @@ The difference lies in the learning process—not simply in whether AI was used.
 
 ## Benefits and Limitations
 
-AI may help students access another explanation, practise with preliminary feedback, brainstorm or compare approaches, or work at an appropriate pace.
+AI may help students access another explanation, practise with timely feedback, brainstorm or compare approaches, or work at an appropriate pace.
 
 AI may also produce output that is incorrect, fabricated, outdated or biased—and without a clear learning purpose, it can reduce independent thinking and raise access, fairness, copyright or attribution concerns.
 
@@ -244,7 +236,7 @@ NP’s Policy on Generative AI in Summative Assessment took effect in AY2026. Th
 
 ### GenAI is allowed unless explicitly restricted or prohibited
 
-The default position is that GenAI use in summative assessment is allowed unless the assignment descriptor explicitly restricts or prohibits it. Where no restriction or prohibition is stated, allowed uses include brainstorming, language polishing, media creation, data visualisation and scaffolding.
+The default position is that GenAI use in summative assessment is allowed unless the assignment descriptor explicitly restricts or prohibits it. Where no restriction or prohibition is stated, GenAI use is allowed by default. Examples include brainstorming, language polishing, media creation, data visualisation and scaffolding.
 
 This does not mean that students may use AI in any way they choose. They must follow all stated conditions and the uses that are always prohibited.
 
@@ -281,12 +273,11 @@ Compare these instructions.
 
 Instruction B is clearer because it sets out the boundaries of AI use. A clear assignment descriptor should cover:
 
-1. For each component, state any restrictions or prohibitions. If none are stated, GenAI is allowed by default, subject to declaration and always-prohibited uses.
+1. Any restrictions or prohibitions for each component.
 2. Permitted purposes.
 3. The student’s required original contribution.
 4. Evidence of process to retain or produce.
 5. Verification, citation and declaration requirements.
-6. Uses that are restricted or prohibited.
 
 GenAI can also help you stress-test a brief before it reaches students: ask the tool to read it as a student would and list what it finds unclear, then compare its questions with what students actually ask. The “Test assignment clarity” use case in Part 5 has a ready-to-use prompt.
 
@@ -296,7 +287,7 @@ Written conditions alone can still be interpreted differently. Announce them ear
 
 All relevant submission cover pages must include the required **GenAI Use Declaration**. Students state whether and how they used GenAI in line with the assessment conditions. Where use is restricted, they must retain or produce the required evidence of their AI use. GenAI use must be cited according to the applicable instructions.
 
-Where AI use is restricted or prohibited in a summative assessment, formative activities should prepare students to meet those conditions—for example, mock runs during IPLs, Turnitin draft submissions with tutor feedback, or comparing acceptable and unacceptable uses.
+Where GenAI use is restricted or prohibited in a summative assessment, formative activities should prepare students to meet those conditions—for example, mock runs during IPLs, Turnitin draft submissions with tutor feedback, or comparing acceptable and unacceptable uses.
 
 ## Staff Use of GenAI in Grading
 
@@ -306,7 +297,7 @@ Using GenAI in grading requires additional safeguards. Staff must not independen
 
 Consider:
 
-> One capability students must demonstrate themselves is...
+> One capability students must demonstrate independently of AI is...
 
 > One GenAI condition in my assessment that may need clarification is...
 
@@ -318,9 +309,9 @@ Begin with the learning outcome. Then decide what students must demonstrate, whe
 
 # Part 5: Data and Tools — Purposeful and Responsible Use
 
-AI tools and learning data can be used effectively, safely and responsibly to support engagement, learning outcomes and appropriate support for different learning needs. AI is the newest addition to a familiar TLCF competency—Integrate EdTech in T&L—so the same judgement you already apply to other EdTech tools applies here.
+AI tools and learning data can support engagement, learning outcomes and different learning needs when used purposefully and responsibly. AI is the newest addition to a familiar TLCF competency—Integrate EdTech in T&L—so the same judgement you already apply to other EdTech tools applies here.
 
-This part has two purposes: see practical T&L uses, and know what to check before using a tool or acting on AI-generated insights.
+This part introduces practical T&L uses and what to check before using a tool or acting on AI-generated insights.
 
 Start with the T&L need, not the tool. A useful tool choice depends on the learning purpose, the information involved and how the output will be reviewed.
 
@@ -336,7 +327,7 @@ Think about T&L uses in three clusters:
 
 M365 Copilot is the primary AI assistant provisioned to NP staff. It is a practical starting point when your work is already in the Microsoft 365 environment.
 
-M365 Copilot may be used with information covered by NP’s current tool and data-handling guidance. It can help you review module documents, summarise de-identified feedback, draft communications, prepare meeting follow-up and create a first version of learning materials. Check the output, adapt it for your module and make the final decision yourself.
+M365 Copilot may be used with information covered by NP’s current tool and data-handling guidance. It can help you review module documents, summarise feedback where the information is appropriate for the tool, draft communications, prepare meeting follow-up and create a first version of learning materials. Check the output, adapt it for your module and make the final decision yourself.
 
 ### Other approved tools for specific uses
 
@@ -366,7 +357,8 @@ Before using an AI tool, consider:
 - Is the tool approved for that information and purpose?
 - Are there fairness, access, ownership or copyright concerns?
 
-Before entering information into any tool, confirm the information and purpose are covered by NP's current guidance for that tool—clearance levels and approval conditions vary. For other public AI tools, do not enter personal, sensitive or proprietary information unless the tool has been explicitly approved for that information and purpose. Information requiring care includes student names or identifiers, individual grades, personal circumstances, health or support information, confidential assessment material, industry partner or employer information, and unreleased research or intellectual property. The same care applies to students: remind them not to enter personal, employer or proprietary information into public AI tools, in class or on internship.
+> **Protect sensitive information**
+> Do not enter personal, sensitive or proprietary information into a public AI tool unless it is approved for that information and purpose. This includes student identifiers, grades, personal circumstances, confidential assessments, employer information and unreleased research. Remind students to apply the same care in class, on internship and at work.
 
 ### 4. Human oversight
 
@@ -438,7 +430,7 @@ You now have a shared Level 1 foundation to:
 
 - Recognise where AI may affect curriculum, facilitation, assessment, and the use of data and tools.
 - Recognise the common student AI baseline and consider where your module builds on it.
-- Refer to the 3As and PAIR to orient a teaching or learning decision.
+- Use the 3As and PAIR to inform a teaching or learning decision.
 - Describe NP’s requirements for GenAI use in assessment.
 - Keep human judgement at the centre when AI is involved.
 - Choose one appropriate next step for a module you teach, lead or support.

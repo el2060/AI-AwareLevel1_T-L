@@ -245,7 +245,7 @@ function ChoiceCheck({ question, eyebrow, choices }: { question: string; eyebrow
 function DomainSpotter() {
   const domains = ["Curriculum", "Facilitation", "Assessment", "Data and Tools"];
   const scenarios = [
-    { id: "curriculum", context: "Your diploma team is reviewing which coding capabilities students must demonstrate themselves and which should include effective use of AI-assisted development.", answer: "Curriculum", feedback: "This is Curriculum: AI is changing what students need to learn and how it’s taught. Part 2 uses the 3As to work through exactly this kind of question." },
+    { id: "curriculum", context: "Your diploma team is reviewing which coding capabilities students must demonstrate independently of AI and which should include effective use of AI-assisted development.", answer: "Curriculum", feedback: "This is Curriculum: AI is changing what students need to learn and how it’s taught. Part 2 uses the 3As to work through exactly this kind of question." },
     { id: "facilitation", context: "A student asks an AI tutor to explain a concept a second way before attempting the practice questions.", answer: "Facilitation", feedback: "This is Facilitation: AI is supporting explanation and practice. Part 3 uses PAIR to judge when this helps rather than replaces learning." },
     { id: "assessment", context: "A student’s submission reads as clearly GenAI-polished, and you need to decide what still counts as their own work.", answer: "Assessment", feedback: "This is Assessment: providing authentic, credible evidence of learning. Part 4 covers NP’s GenAI requirements for summative assessment." },
     { id: "tools", context: "You want to use AI to summarise a term’s worth of student feedback comments to spot common themes.", answer: "Data and Tools", feedback: "This is Data and Tools: using AI and learning data safely and responsibly. Part 5 covers what to check before you start." },
@@ -428,9 +428,9 @@ function ThreeAsActivity() {
     },
   ];
   const lenses = [
-    { name: "Anchor", description: "Disciplinary foundations, human qualities and professional judgement students must retain and demonstrate independently. Where AI can perform a task, identify what students must still understand, judge or do." },
-    { name: "Augment", description: "Use AI to improve the productivity and quality of domain work, while applying appropriate disciplinary judgement and oversight." },
-    { name: "Advance", description: "Challenge students to use AI to go beyond established pre-AI job boundaries—not just doing the old work faster, but redefining what's possible." },
+    { name: "Anchor", description: "Identify the disciplinary foundations, human qualities and professional judgement students must retain and demonstrate independently of AI." },
+    { name: "Augment", description: "Develop and assess how well students use AI to improve the productivity and quality of their work, while applying disciplinary judgement and oversight." },
+    { name: "Advance", description: "In suitable modules, enable students to explore how AI can go beyond established pre-AI job boundaries—not just doing the old work faster, but redefining what's possible." },
   ];
   const [active, setActive] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -580,7 +580,7 @@ function StrategyMap() {
   ];
   return (
     <section className="strategy-map" aria-label="How NP approaches connect across this package">
-      <div className="strategy-heading"><span>NP’s approach</span><h2>NP’s five strategies at a glance</h2><p>These provide context for the package—you do not need to memorise them. Explore where each one connects to your T&amp;L work.</p></div>
+      <div className="strategy-heading"><span>NP’s approach</span><h2>NP’s five strategies at a glance</h2><p>These provide context for the package. Explore how each connects to your T&amp;L work.</p></div>
       <div className="strategy-goal"><strong>AI-ready graduates</strong><span>Human qualities · domain expertise · responsible use of AI</span></div>
       <div className="strategy-path">
         {items.map(({ name, question, detail, icon: Icon }, index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
@@ -616,8 +616,8 @@ function UseCaseExplorer() {
       title: "Summarise feedback themes",
       tool: "M365 Copilot",
       icon: MessageCircle,
-      use: "Group de-identified open-ended feedback into themes so you can review it more efficiently.",
-      prompt: "Summarise these de-identified feedback comments into themes. For each, give a short label and approximate number of related comments. List minority views separately. Do not infer causes or recommend actions.",
+      use: "Group feedback that is appropriate for the tool into themes so you can review it more efficiently.",
+      prompt: "Summarise these feedback comments into themes. For each, give a short label and approximate number of related comments. List minority views separately. Do not infer causes or recommend actions.",
       check: "Read a sample of original comments. Look for omissions, minority views and identifying details.",
       judgement: "How to interpret the feedback and what action, if any, is appropriate.",
     },
@@ -745,21 +745,21 @@ function ThreeAsInfographic() {
       key: "anchor",
       name: "Anchor",
       tagline: "AI is the benchmark",
-      body: "Assess disciplinary foundations, human qualities and professional judgement students must retain and demonstrate independently. Where AI can perform a task, identify what students must still understand, judge or do.",
+      body: "Identify the disciplinary foundations, human qualities and professional judgement students must retain and demonstrate independently of AI.",
       cue: "Human judgement · empathy · ethical reasoning · creativity · interpersonal skills · professional responsibility",
     },
     {
       key: "augment",
       name: "Augment",
       tagline: "Assess productive, effective AI use",
-      body: "Assess how well students use AI to improve productivity and the quality of their work, while applying appropriate disciplinary judgement and oversight.",
+      body: "Develop and assess how well students use AI to improve the productivity and quality of their work, while applying disciplinary judgement and oversight.",
       cue: "Generate · compare · analyse · evaluate · improve",
     },
     {
       key: "advance",
       name: "Advance",
       tagline: "Reward new AI-enabled possibilities",
-      body: "In suitable modules, challenge students to use AI to go beyond established pre-AI job boundaries—not merely completing the same work faster, but redefining what may be possible.",
+      body: "In suitable modules, enable students to explore how AI can go beyond established pre-AI job boundaries—not merely completing the same work faster, but redefining what may be possible.",
       cue: "New services · new workflows · new roles · future practice",
     },
   ];
@@ -901,7 +901,7 @@ function SectionVisual({ title }: { title: string }) {
   if (title.startsWith("Part 4")) return (
     <figure className="concept-visual assessment-visual" aria-label="What every AI-enabled assessment needs">
       <figcaption><span>For every assessment</span><strong>Two things to get right</strong></figcaption>
-      <div className="tool-checks"><div><i>1</i><b>Apply current guidance</b><small>GenAI is allowed by default unless explicitly restricted or prohibited. Conditions, declaration requirements and always-prohibited uses must still be clear.</small></div><div><i>2</i><b>Protect the intended learning</b><small>Use the 3As to clarify what students demonstrate in spite of AI, with AI, or through new AI-enabled practice.</small></div></div>
+      <div className="tool-checks"><div><i>1</i><b>Apply current guidance</b><small>GenAI is allowed by default unless explicitly restricted or prohibited. Conditions, declaration requirements and always-prohibited uses must still be clear.</small></div><div><i>2</i><b>Protect the intended learning</b><small>Use the 3As to clarify what students demonstrate independently of AI, with AI, or through new AI-enabled practice.</small></div></div>
     </figure>
   );
   if (title.startsWith("Part 5")) return (
