@@ -285,11 +285,11 @@ If AI can generate the final product without the student demonstrating the inten
 
 ## NP’s Position on GenAI in Summative Assessment
 
-NP’s Guidelines for GenAI Use in Summative Assessment took effect in AY2026. These are the key requirements for your assessments.
+NP’s Policy on Generative AI in Summative Assessment took effect in AY2026. These are the key requirements for your assessments.
 
 ### GenAI is allowed unless explicitly prohibited
 
-The default position is that GenAI use in summative assessment is allowed unless the assignment descriptor explicitly prohibits it.
+The default position is that GenAI use in summative assessment is allowed unless the assignment descriptor explicitly prohibits it. Typical allowed uses include brainstorming, language polishing, media creation, data visualisation and scaffolding.
 
 This does not mean that students may use AI in any way they choose. They must follow all stated conditions and the uses that are always prohibited.
 
@@ -301,9 +301,9 @@ Students must complete the declaration for every submission and state whether an
 
 GenAI use must also be cited according to the applicable instructions.
 
-### Include a live, in-person element
+### A common restriction: allowed for preparation, not the assessed moment
 
-In the era of AI, every summative assessment should include a live, in-person element—such as a viva, presentation or in-class task—so students demonstrate their understanding directly, not only through a submitted artefact.
+One common way to restrict GenAI use: allow it for preparation—research, ideation, drafting, feedback—but not during the assessed in-person presentation, test or performance itself. This keeps the live moment as evidence of what the student can do unaided.
 
 ### Restrictions must be clear
 
@@ -333,6 +333,12 @@ Students must not:
 
 Declaring one of these uses does not make it acceptable.
 
+## If You Suspect Misuse
+
+Undeclared GenAI use, breaching the stated conditions, purely AI-generated work, disguising AI output as original, or simulating a required human interaction all count as misconduct.
+
+If you suspect a student has misused GenAI, don't decide alone: follow NP's process for interviewing a student suspected of cheating with AI, then escalate under Academic Integrity procedures. Penalties can include invalidating the assessment.
+
 ## Make Assessment Instructions Clear
 
 Students should not have to guess what “appropriate AI use” means.
@@ -349,7 +355,7 @@ Compare these instructions.
 
 Instruction B is clearer because it sets out the boundaries of AI use. A clear assignment descriptor should cover:
 
-1. The GenAI stance for each component—required, permitted, restricted or prohibited.
+1. The GenAI stance for each component—restricted or prohibited (if unstated, GenAI is allowed by default).
 2. Permitted purposes.
 3. The student’s required original contribution.
 4. Evidence of process to retain or produce.
@@ -362,7 +368,7 @@ Written conditions alone can still be interpreted differently. Announce them ear
 
 ## Prepare Students Through Formative Learning
 
-Where AI use is restricted or prohibited in a summative assessment, formative activities should prepare students to meet those conditions—for example, comparing acceptable and unacceptable uses, examining sample declarations, practising checking AI output, or working through an independent task before an AI-supported one.
+Where AI use is restricted or prohibited in a summative assessment, formative activities should prepare students to meet those conditions—for example, mock runs during IPLs, Turnitin draft submissions with tutor feedback, or comparing acceptable and unacceptable uses.
 
 ## Staff Use of GenAI in Grading
 
@@ -374,7 +380,7 @@ If GenAI assists with grading or feedback:
 - AI must not make the final grading decision.
 - Every student’s grade must be reviewed by a human marker; do not review only a sample of grades.
 - Use must follow the required approval and quality-assurance process.
-- Validity, reliability, fairness and transparency must be checked.
+- Calibrate and document your prompts and outputs iteratively, to check validity, reliability, fairness and transparency.
 - Relevant use should be disclosed to students as required.
 - Student work must only be handled in an approved environment.
 
