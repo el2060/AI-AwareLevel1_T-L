@@ -176,8 +176,8 @@ At Level 1, focus on applying NP’s current requirements and recognising where 
 
 Ask:
 
-- What capability is being assessed?
-- What must students demonstrate independently?
+- What capability is the assessment intended to measure?
+- What must students demonstrate independently of AI?
 - Where might AI use reflect authentic professional practice?
 - What evidence will make the student’s contribution visible?
 
@@ -185,7 +185,7 @@ If AI can produce the final output without the student demonstrating the intende
 
 ### 2. State the GenAI Conditions Clearly
 
-NP’s default position is that GenAI use in summative assessment is allowed unless explicitly restricted or prohibited.
+GenAI is allowed by default. Where use is restricted or prohibited, the scope and conditions must be stated clearly.
 
 Where use is restricted, state:
 
@@ -196,14 +196,14 @@ Where use is restricted, state:
 
 Where use is prohibited, state clearly which component or activity is covered.
 
-#### Always-Prohibited Uses
+#### Always-prohibited uses
 
 Students must not:
 
 - submit purely AI-generated content as their own;
-- disguise AI-generated content as original;
+- disguise AI-generated content as original work;
 - rely solely on GenAI for insights or reflections;
-- simulate an interview, observation or interaction that must involve a real person.
+- use GenAI to simulate an interview, observation or interaction that must involve a real person.
 
 Declaring a prohibited use does not make it acceptable.
 
@@ -215,12 +215,12 @@ Avoid vague instructions such as:
 
 Be specific:
 
-> You may use GenAI to brainstorm possible approaches and receive feedback on an early draft. Your final analysis, selection of evidence and recommendation must be your own. Check all AI-generated claims against reliable sources, retain evidence of your AI interaction and declare your use upon submission.
+> You may use GenAI to brainstorm possible approaches and receive feedback on an early draft. Your final analysis, selection of evidence and recommendation must be your own. Check AI-generated claims, retain evidence of your interaction, and cite and declare your use.
 
-A clear brief should state:
+A clear assessment brief should state:
 
-- any restrictions or prohibitions;
 - permitted purposes;
+- any restrictions or prohibitions;
 - the student’s required contribution;
 - evidence of process;
 - verification, citation and declaration requirements.
@@ -229,13 +229,23 @@ A clear brief should state:
 
 Explain the conditions early and discuss examples with students. Use formative activities or mock runs where useful to clarify acceptable practice.
 
-All relevant submission cover pages must include the required **GenAI Use Declaration**. Where use is restricted, students must retain or produce the required evidence.
+All relevant submission cover pages must include the required **GenAI Use Declaration**. Where use is restricted, students must retain or produce the required evidence of their AI use.
+
+## Suspected Misuse
+
+Undeclared use, breach of stated conditions, purely AI-generated work and simulated human interactions may constitute academic misconduct.
+
+Follow NP’s process for interviewing a student suspected of cheating with AI and the established Academic Integrity procedures. Do not make a decision based only on suspicion or an AI-detection result.
 
 ## Staff Use of GenAI in Grading
 
-Staff must not independently use GenAI to determine grades. Any use as a grading assistant requires prior approval, an approved environment, quality assurance, student disclosure and human review of every grade and feedback decision. Staff remain fully responsible.
+Staff must not independently use GenAI to determine grades.
+
+Any use as a grading assistant requires prior management approval, an approved environment, a small pilot, documented quality assurance, student disclosure and human review of every grade and feedback decision. Staff remain fully responsible.
 
 ## Apply It to Your Module
+
+Consider:
 
 - One capability students must demonstrate independently of AI is…
 - One GenAI condition that may need clarification is…

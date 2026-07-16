@@ -495,9 +495,9 @@ function FacilitationRolePlay() {
 }
 
 function AssessmentBriefBuilder() {
-  return <ChoiceCheck eyebrow="Briefing challenge" question="Which instruction is clearer?" choices={[
+  return <ChoiceCheck eyebrow="Briefing challenge" question="Which instruction gives students clearer guidance?" choices={[
     { label: "You may use AI appropriately.", correct: false, feedback: "This is too vague. It does not state the permitted use, the student’s required contribution, or the evidence and declaration expectations." },
-    { label: "You may use GenAI to brainstorm approaches and receive feedback on an early draft. Your final analysis and recommendation must be your own. Check AI-generated claims, retain evidence of your interaction, and cite and declare your use.", correct: true, feedback: "Clear instructions state the permitted use, required student contribution, evidence and declaration expectations." },
+    { label: "You may use GenAI to brainstorm possible approaches and receive feedback on an early draft. Your final analysis and recommendation must be your own. Check AI-generated claims, retain evidence of your interaction, and cite and declare your use.", correct: true, feedback: "It states the permitted use, the student’s required contribution, the checks to perform and the declaration expectations." },
   ]} />;
 }
 
@@ -814,8 +814,8 @@ function SectionVisual({ title }: { title: string }) {
   if (title.startsWith("Part 3")) return null;
   if (title.startsWith("Part 4")) return (
     <figure className="concept-visual assessment-visual" aria-label="What every AI-enabled assessment needs">
-      <figcaption><span>For every assessment</span><strong>Two things to get right</strong></figcaption>
-      <div className="tool-checks"><div><i>1</i><b>Apply current guidance</b><small>GenAI is allowed by default unless explicitly restricted or prohibited. Conditions, declaration requirements and always-prohibited uses must still be clear.</small></div><div><i>2</i><b>Protect the intended learning</b><small>Use the 3As to clarify what students demonstrate independently of AI, with AI, or through new AI-enabled practice.</small></div></div>
+      <figcaption><span>Assessment focus</span><strong>Two priorities for every assessment</strong></figcaption>
+      <div className="tool-checks"><div><i>1</i><b>Apply NP’s current GenAI requirements</b><small>GenAI is allowed by default. State any restrictions or prohibitions clearly, and require students to cite and declare their use.</small></div><div><i>2</i><b>Protect the intended learning</b><small>Use the 3As to clarify what students demonstrate independently of AI, with AI, or through new AI-enabled practice.</small></div></div>
     </figure>
   );
   if (title.startsWith("Part 5")) return (
