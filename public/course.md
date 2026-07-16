@@ -2,7 +2,7 @@
 
 ## Welcome
 
-AI is shaping how students learn and how work is carried out across many professions. Students may use GenAI to explain concepts, generate ideas or support assignment work—raising new considerations for teaching, learning and assessment.
+AI is shaping how students learn and how work is done across many professions. Students may use GenAI to explain concepts, generate ideas or support assignment work—raising new considerations for teaching, learning and assessment.
 
 This package explores how AI affects four areas of your T&L practice and what this may mean for your module.
 
@@ -24,7 +24,7 @@ By the end of this module, you will be able to:
 
 **Data and Tools:** Apply basic checks when using AI tools and learning data to support student engagement and learning safely and responsibly.
 
-Level 1 focuses on recognising key considerations across four T&L Competency Framework domains: Curriculum Design and Development, Facilitation of Learning, Assessment, and Data and Tech-Enhanced T&L.
+Level 1 focuses on key considerations across four T&L Competency Framework domains: Curriculum Design and Development, Facilitation of Learning, Assessment, and Data and Tech-Enhanced T&L.
 
 ---
 
