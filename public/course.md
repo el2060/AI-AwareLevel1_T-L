@@ -2,14 +2,7 @@
 
 ## Welcome
 
-AI is already part of how students learn and how many workplaces operate. You may see students using GenAI to explain concepts, generate ideas or develop assignments—and ask what this means for your teaching and assessment.
-
-This module helps you:
-
-- **Recognise** how AI is changing what students need to learn and how you teach it in your discipline, including the AI baseline every student is expected to reach.
-- **Understand** the benefits, limitations and risks of facilitating learning with AI, including how to guide students' use of it — especially agentic AI.
-- **Recognise** how AI affects assessment design, validity and academic integrity, and what NP’s GenAI requirements mean for you.
-- **Identify** where AI tools and learning data can effectively, safely and responsibly support your T&L work.
+AI is already part of how students learn and how many workplaces operate. You may see students using GenAI to explain concepts, generate ideas or develop assignments—and ask what this means for your teaching and assessment. This module builds your awareness across four areas of your T&L practice, set out below.
 
 ### Learning time
 
