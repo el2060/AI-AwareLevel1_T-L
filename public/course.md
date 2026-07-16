@@ -24,7 +24,7 @@ By the end of this module, you will be able to:
 1. **Curriculum:** Describe how AI is changing what students need to learn and how they are taught in your discipline or module, including the baseline AI literacies expected of every student (e.g. using generative and agentic AI for learning, value creation and problem-solving, with critical evaluation and human oversight).
 2. **Facilitation:** Describe the benefits, limitations, risks and recommended practices of applying AI to improve learning experiences, including how to guide students to interact with AI productively and responsibly (e.g. when AI performs multiple connected, agentic tasks on their behalf).
 3. **Assessment:** Describe how AI affects assessment design, validity and academic integrity, and how NP’s GenAI requirements apply.
-4. **Tools and data:** Describe how AI tools and learning data can be used effectively, safely and responsibly to support engagement and learning outcomes (e.g. for students with diverse learning needs).
+4. **Data and tools:** Describe how AI tools and learning data can be used effectively, safely and responsibly to support engagement and learning outcomes (e.g. for students with diverse learning needs).
 
 Level 1 is about awareness: recognise the key issues and identify what may need attention. The package draws on four T&L Competency Framework (TLCF) domains: curriculum design, facilitation of learning, assessment, and data and tech-enhanced T&L.
 
@@ -64,7 +64,7 @@ Five strategies put this direction into practice.
 
 <!--strategy-map-->
 
-The next four parts turn them into four familiar areas of your teaching work: curriculum (Part 2), facilitation of learning (Part 3), assessment (Part 4), and tools and data (Part 5). Human judgement runs through all four.
+The next four parts turn them into four familiar areas of your teaching work: curriculum (Part 2), facilitation of learning (Part 3), assessment (Part 4), and data and tools (Part 5). Human judgement runs through all four.
 
 ---
 
@@ -72,7 +72,7 @@ The next four parts turn them into four familiar areas of your teaching work: cu
 
 AI can now assist with tasks that students previously completed independently. This may change some professional workflows, but it does not remove the need for strong foundations.
 
-Students need enough disciplinary knowledge and judgement to recognise when AI output is wrong, unsafe or unsuitable.
+Students need enough disciplinary knowledge and judgement to recognise when AI output is wrong, unsafe or unsuitable. This holds whether you teach pre-employment (PET) or adult (CET) learners—the pedagogical or andragogical approach differs, but the foundational judgement students need does not.
 
 NP students build a common foundation in AI literacy. NP’s **3As framework** helps course and module teams review the constructive alignment of **learning outcomes, learning activities and assessment** as AI changes disciplinary and professional practice.
 
@@ -401,9 +401,9 @@ Begin with the learning outcome. Then decide what students must demonstrate, whe
 
 ---
 
-# Part 5: Tools and Data — Purposeful and Responsible Use
+# Part 5: Data and Tools — Purposeful and Responsible Use
 
-AI tools and learning data can be used effectively, safely and responsibly to support engagement, learning outcomes and appropriate support for different learning needs.
+AI tools and learning data can be used effectively, safely and responsibly to support engagement, learning outcomes and appropriate support for different learning needs. AI is the newest addition to a familiar TLCF competency—Integrate EdTech in T&L—so the same judgement you already apply to other EdTech tools applies here.
 
 This part has two purposes: see practical T&L uses, and know what to check before using a tool or acting on AI-generated insights.
 
@@ -473,7 +473,7 @@ The same care applies to students: remind them not to enter personal, employer o
 
 ## Treat AI-Generated Insights as Starting Points
 
-AI may summarise comments, group themes or suggest patterns. These outputs are not final findings or decisions.
+AI adds a new layer to learning analytics: it may summarise comments, group themes or suggest patterns from module or student data. These outputs are not final findings or decisions.
 
 You still need to:
 
@@ -495,7 +495,7 @@ These tools complement your facilitation; they do not replace it. You still deci
 
 ## Engagement and Diverse Learning Needs
 
-AI-enabled tools, including the learning assistants above, may offer another explanation, a different format, practice at an appropriate level or timely feedback. These can support engagement and access when they are connected to the intended learning outcome.
+AI-enabled tools, including the learning assistants above, can support Universal Design for Learning (UDL)—offering another explanation, a different format, practice at an appropriate level or timely feedback. These can support engagement and access when they are connected to the intended learning outcome.
 
 Before using a tool in this way, check that:
 
@@ -521,7 +521,7 @@ A suitable AI use has a clear learning purpose, an appropriate tool, safe handli
 
 # Part 6: Apply It to Your Module
 
-Choose a module you teach, lead or support. The four-lens activity brings together the curriculum, facilitation, assessment, and tools and data considerations from this package.
+Choose a module you teach, lead or support. The four-lens activity brings together the curriculum, facilitation, assessment, and data and tools considerations from this package.
 
 Afterwards, choose one small next step:
 
@@ -541,7 +541,7 @@ Afterwards, choose one small next step:
 
 You now have a shared Level 1 foundation to:
 
-- Recognise where AI may affect curriculum, facilitation, assessment, and tools and data.
+- Recognise where AI may affect curriculum, facilitation, assessment, and data and tools.
 - Recognise the AI baseline students are expected to reach, and build on it in your module.
 - Refer to the 3As and PAIR to orient a teaching or learning decision.
 - Describe NP’s requirements for GenAI use in assessment.
