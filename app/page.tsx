@@ -369,7 +369,7 @@ function ModuleSummary() {
       label: "Assessment",
       title: "Assure authentic evidence",
       preview: "Start with the learning outcome and evidence of what students can do independently and with AI.",
-      takeaway: "GenAI is allowed in summative assessment unless explicitly prohibited. Assessment should still provide authentic evidence of students’ Anchor competencies and, where relevant, their Augment use of AI.",
+      takeaway: "GenAI is allowed in summative assessment unless explicitly prohibited. Assessment should still confirm Anchor competencies independently of AI and, where relevant, evaluate the process behind students’ Augment use of AI—not just the final output.",
       practice: "State the conditions clearly in the assignment descriptor and discuss them with students.",
       icon: ClipboardCheck,
       tone: "orange",
@@ -942,7 +942,7 @@ function SectionVisual({ title }: { title: string }) {
   if (title.startsWith("Part 4")) return (
     <figure className="concept-visual assessment-visual" aria-label="Assessment strategy in an AI-enabled context">
       <figcaption><span>Assessment strategy</span><strong>Current guidance, then phased review through the 3As</strong></figcaption>
-      <div className="assessment-flow"><div><i>01 · Now</i><b>Apply current guidance</b><small>Set clear GenAI conditions, declaration and prohibited uses.</small></div><span>→</span><div><i>02 · Next</i><b>Review through the 3As</b><small>Identify Anchor, Augment and, where relevant, Advance competencies.</small></div><span>→</span><div><i>03 · Purpose</i><b>Keep assessment authentic</b><small>Show what students can do in AI-enabled professional practice.</small></div></div>
+      <div className="assessment-flow"><div><i>01 · Now</i><b>Apply current guidance</b><small>Set clear GenAI conditions, declaration and prohibited uses.</small></div><span>→</span><div><i>02 · Next</i><b>Review through the 3As</b><small>Identify Anchor, Augment and, where relevant, Advance competencies.</small></div><span>→</span><div><i>03 · Purpose</i><b>Keep assessment valid</b><small>Anchor: confirm students can perform independently of AI. Augment: assess their AI-use process, not just the output.</small></div></div>
     </figure>
   );
   if (title.startsWith("Part 5")) return (

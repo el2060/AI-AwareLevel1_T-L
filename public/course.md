@@ -99,7 +99,7 @@ AI is the benchmark for defining Anchors: whatever it can already do well in you
 
 - **Anchor:** A health sciences student makes a safe judgement from observed evidence; a computing student explains, tests and debugs generated code.
 - **Augment:** A business student uses AI to compare possible options, then evaluates the evidence and justifies a recommendation.
-- **Advance:** An engineering or media student prototypes a new AI-enabled solution for an industry need.
+- **Advance:** A media student directs AI-generated performances instead of working with human actors; an IT student spends more time on business or management problems because AI now handles the coding.
 
 ## Try This: Draft Practice Examples
 
@@ -129,7 +129,7 @@ The 3As help course and module teams review:
 
 Use these questions to keep learning outcomes, activities and assessment constructively aligned as AI changes the discipline.
 
-To maximise employability: what must your students do that AI **cannot** do (Anchor), do **better with** AI (Augment), and do to **redefine the job** (Advance)?
+To maximise employability: what must your students do that AI **cannot** do (Anchor), **with** AI (Augment), and **beyond current job boundaries** (Advance)? Align your learning outcomes, learning activities and assessments accordingly.
 
 ---
 
@@ -301,6 +301,10 @@ Students must complete the declaration for every submission and state whether an
 
 GenAI use must also be cited according to the applicable instructions.
 
+### Include a live, in-person element
+
+In the era of AI, every summative assessment should include a live, in-person element—such as a viva, presentation or in-class task—so students demonstrate their understanding directly, not only through a submitted artefact.
+
 ### Restrictions must be clear
 
 Where GenAI use is restricted, the assignment descriptor should state:
@@ -345,7 +349,7 @@ Compare these instructions.
 
 Instruction B is clearer because it sets out the boundaries of AI use. A clear assignment descriptor should cover:
 
-1. The GenAI stance for each component.
+1. The GenAI stance for each component—required, permitted, restricted or prohibited.
 2. Permitted purposes.
 3. The student’s required original contribution.
 4. Evidence of process to retain or produce.
