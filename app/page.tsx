@@ -14,6 +14,7 @@ type Choice = {
   label: string;
   correct?: boolean;
   feedback: string;
+  feedbackTitle?: string;
 };
 
 type ActivityNotes = Record<string, string>;
@@ -234,7 +235,7 @@ function ChoiceCheck({ question, eyebrow, choices }: { question: string; eyebrow
       </div>
       {choice && (
         <div className={`activity-feedback ${choice.correct === false ? "try-again" : ""}`}>
-          <strong>{choice.correct === false ? "Consider this" : "Good call"}</strong>
+          <strong>{choice.feedbackTitle ?? (choice.correct === false ? "Consider this" : "Good call")}</strong>
           <p>{choice.feedback}</p>
         </div>
       )}
@@ -497,7 +498,7 @@ function FacilitationRolePlay() {
 function AssessmentBriefBuilder() {
   return <ChoiceCheck eyebrow="Briefing challenge" question="Which instruction gives students clearer guidance?" choices={[
     { label: "You may use AI appropriately.", correct: false, feedback: "This is too vague. It does not state the permitted use, the student’s required contribution, or the evidence and declaration expectations." },
-    { label: "You may use GenAI to brainstorm possible approaches and receive feedback on an early draft. Your final analysis and recommendation must be your own. Check AI-generated claims, retain evidence of your interaction, and cite and declare your use.", correct: true, feedback: "It states the permitted use, the student’s required contribution, the checks to perform and the declaration expectations." },
+    { label: "You may use GenAI to brainstorm possible approaches and receive feedback on an early draft. Your final analysis and recommendation must be your own. Check AI-generated claims, retain evidence of your interaction, and cite and declare your use.", correct: true, feedbackTitle: "B is clearer.", feedback: "It states the permitted use, the student’s required contribution, the checks to perform, and the citation and declaration expectations." },
   ]} />;
 }
 
@@ -617,7 +618,7 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
   if (title.startsWith("Part 2")) return <ThreeAsActivity />;
   if (title.startsWith("Part 3")) return <FacilitationRolePlay />;
   if (title.startsWith("Part 4")) return <AssessmentBriefBuilder />;
-  if (title.startsWith("Part 6")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep a module you teach, lead or support in mind. Tap each question once you have considered it—and see a reminder of what to check." items={["Curriculum: What is AI changing in what students must learn and how they are taught?", "Facilitation: Where might AI support learning without replacing it?", "Assessment: How will assessment provide authentic evidence of students’ learning?", "Data and Tools: Where could AI tools or learning data safely and responsibly support engagement or a learning outcome—and what needs checking before use?"]} tips={["Use the 3As: is this an Anchor, Augment or Advance capability?", "Use PAIR: has the student formulated the problem and reflected on the process, not just accepted the first AI output?", "Check the assignment descriptor states the GenAI stance, permitted purposes and declaration requirement.", "Confirm the tool is approved for the information involved, and that a person still reviews the output."]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered what is changing, the learning to protect, how assessment can provide authentic evidence, and where AI tools or learning data could safely and responsibly help with appropriate checks." />;
+  if (title.startsWith("Part 6")) return <TapChecklist eyebrow="Four-lens review" title="Consider Each Lens" prompt="Tap each question after considering it for your module." items={["Curriculum: What may need review in the learning outcomes, activities or assessment?", "Facilitation: Where could students compare, check or improve AI-generated output?", "Assessment: What must students demonstrate independently, and where might AI use be appropriate?", "Data and Tools: What T&L need could a tool support, and what would need checking before use?"]} tips={["Use the 3As to identify whether the capability is Anchor, Augment or Advance.", "Use PAIR to keep students checking, improving and reflecting rather than accepting the first output.", "Check that the GenAI conditions and evidence of student learning are clear.", "Check learning value, output quality, data and ethics, and human oversight."]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="Four lenses considered" completionText="You have identified what may need attention in this module. Choose one small next step below." />;
   if (title.startsWith("Part 7")) return <NextStepActivity value={notes.nextstep ?? ""} onChange={(value) => onChange("nextstep", value)} />;
   return null;
 }
@@ -814,8 +815,8 @@ function SectionVisual({ title }: { title: string }) {
   if (title.startsWith("Part 3")) return null;
   if (title.startsWith("Part 4")) return (
     <figure className="concept-visual assessment-visual" aria-label="What every AI-enabled assessment needs">
-      <figcaption><span>Assessment focus</span><strong>Two priorities for every assessment</strong></figcaption>
-      <div className="tool-checks"><div><i>1</i><b>Apply NP’s current GenAI requirements</b><small>GenAI is allowed by default. State any restrictions or prohibitions clearly, and require students to cite and declare their use.</small></div><div><i>2</i><b>Protect the intended learning</b><small>Use the 3As to clarify what students demonstrate independently of AI, with AI, or through new AI-enabled practice.</small></div></div>
+      <figcaption><span>Assessment focus</span><strong>Two assessment priorities</strong></figcaption>
+      <div className="tool-checks"><div><i>1</i><b>Apply NP’s current GenAI requirements</b><small>GenAI is allowed by default. State any restrictions or prohibitions clearly, and require students to cite and declare their use as instructed.</small></div><div><i>2</i><b>Protect the intended learning</b><small>Use the 3As to clarify what students demonstrate independently of AI, with AI, or through new AI-enabled practice.</small></div></div>
     </figure>
   );
   if (title.startsWith("Part 5")) return (
@@ -824,12 +825,7 @@ function SectionVisual({ title }: { title: string }) {
       <div className="tool-checks"><div><i>01</i><b>Learning value</b><small>Does it help learning?</small></div><div><i>02</i><b>Output quality</b><small>Is it checked?</small></div><div><i>03</i><b>Data and ethics</b><small>Is the use safe?</small></div><div><i>04</i><b>Human oversight</b><small>Who decides?</small></div></div>
     </figure>
   );
-  if (title.startsWith("Part 6")) return (
-    <figure className="concept-visual module-lens-visual" aria-label="Review a module through four AI-aware lenses">
-      <figcaption><span>Bring it together</span><strong>Review one module through four lenses</strong></figcaption>
-      <div className="module-lens"><div className="lens-core">My<br />module</div><div className="lens-item lens-one"><b>Curriculum</b><small>What changes?</small></div><div className="lens-item lens-two"><b>Facilitation</b><small>What helps?</small></div><div className="lens-item lens-three"><b>Assessment</b><small>What shows learning?</small></div><div className="lens-item lens-four"><b>Data &amp; tools</b><small>What helps—and what needs checking?</small></div></div>
-    </figure>
-  );
+  if (title.startsWith("Part 6")) return null;
   return null;
 }
 
@@ -887,14 +883,16 @@ export default function Home() {
 
   const useCaseMarker = "<!--use-case-explorer-->";
   const pairInfographicMarker = "<!--pair-infographic-->";
+  const moduleReviewMarker = "<!--module-review-->";
   const moduleSummaryMarker = "<!--module-summary-->";
   const strategyMapMarker = "<!--strategy-map-->";
   const sectionMarkdown = withoutTitle(current.markdown);
   const hasUseCaseExplorer = current.title.startsWith("Part 5") && sectionMarkdown.includes(useCaseMarker);
   const hasPairInfographic = current.title.startsWith("Part 3") && sectionMarkdown.includes(pairInfographicMarker);
+  const hasModuleReview = current.title.startsWith("Part 6") && sectionMarkdown.includes(moduleReviewMarker);
   const hasModuleSummary = current.title.startsWith("Part 7") && sectionMarkdown.includes(moduleSummaryMarker);
   const hasStrategyMap = current.title.startsWith("Part 1") && sectionMarkdown.includes(strategyMapMarker);
-  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairInfographic ? pairInfographicMarker : hasModuleSummary ? moduleSummaryMarker : hasStrategyMap ? strategyMapMarker : "";
+  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairInfographic ? pairInfographicMarker : hasModuleReview ? moduleReviewMarker : hasModuleSummary ? moduleSummaryMarker : hasStrategyMap ? strategyMapMarker : "";
   const [contentBeforeInteractive, contentAfterInteractive = ""] = activeMarker
     ? sectionMarkdown.split(activeMarker)
     : [sectionMarkdown];
@@ -959,6 +957,7 @@ export default function Home() {
 
         {hasUseCaseExplorer && <UseCaseExplorer />}
         {hasPairInfographic && <PairInfographic />}
+        {hasModuleReview && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
         {hasModuleSummary && <ModuleSummary />}
         {hasStrategyMap && <StrategyMap />}
         {contentAfterInteractive && <article
@@ -967,7 +966,7 @@ export default function Home() {
           dangerouslySetInnerHTML={{ __html: markdownToHtml(contentAfterInteractive) }}
         />}
 
-        {!current.title.startsWith("Part 1") && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
+        {!current.title.startsWith("Part 1") && !hasModuleReview && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
         {current.title.startsWith("Part 5") && <ToolChecksActivity />}
 
         {sectionBridges[active] && active < sections.length - 1 && (

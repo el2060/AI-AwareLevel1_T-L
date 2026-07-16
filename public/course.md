@@ -166,7 +166,7 @@ PAIR keeps the focus on problem formulation, suitable tool selection, critical i
 
 # Part 4: Assessment — Authentic and Credible Evidence
 
-Assessment must provide credible evidence that students have achieved the intended learning outcomes. A polished final product alone may not show what the student knows, can do or contributed.
+Assessment must provide credible evidence that students have achieved the intended learning outcomes. A polished final product alone may not show what the student knows, can do or contributed to the work.
 
 At Level 1, focus on applying NP’s current requirements and recognising where an assessment may need further review.
 
@@ -191,7 +191,7 @@ Where use is restricted, state:
 
 - what GenAI may be used for;
 - what must be the student’s own contribution;
-- what evidence of the process must be retained or produced;
+- what evidence of the student’s process and contribution must be retained or produced;
 - how AI output should be checked, cited and declared.
 
 Where use is prohibited, state clearly which component or activity is covered.
@@ -235,13 +235,13 @@ All relevant submission cover pages must include the required **GenAI Use Declar
 
 Undeclared use, breach of stated conditions, purely AI-generated work and simulated human interactions may constitute academic misconduct.
 
-Follow NP’s process for interviewing a student suspected of cheating with AI and the established Academic Integrity procedures. Do not make a decision based only on suspicion or an AI-detection result.
+Follow NP’s process for interviewing a student suspected of cheating with AI and the established Academic Integrity procedures. Do not make a decision based on suspicion alone.
 
 ## Staff Use of GenAI in Grading
 
 Staff must not independently use GenAI to determine grades.
 
-Any use as a grading assistant requires prior management approval, an approved environment, a small pilot, documented quality assurance, student disclosure and human review of every grade and feedback decision. Staff remain fully responsible.
+Any use as a grading assistant requires prior management approval, an approved environment, quality assurance, student disclosure and human review of every grade and feedback decision. Staff remain fully responsible.
 
 ## Apply It to Your Module
 
@@ -317,15 +317,19 @@ A suitable AI use has a clear learning purpose, an appropriate tool, safe handli
 
 # Part 6: Apply It to Your Module
 
-Choose a module you teach, lead or support. The four-lens activity brings together the curriculum, facilitation, assessment, and data and tools considerations from this package.
+## Review One Module Through Four Lenses
 
-Afterwards, choose one small next step:
+Choose a module you teach, lead or support. Use the four questions to identify where AI may affect the learning and what may need attention.
 
-- Discussing an AI-related change with your module team.
-- Identifying one learning outcome, activity or assessment that may need further review through the 3As.
-- Trying a Generate → Compare → Check → Improve activity.
-- Checking the GenAI conditions in one assignment descriptor.
-- Exploring an appropriate use of M365 Copilot or another approved tool.
+<!--module-review-->
+
+## Choose One Small Next Step
+
+- Discuss one AI-related consideration with your module team.
+- Identify one outcome, activity or assessment for further 3As review.
+- Try a Generate → Compare → Check → Improve activity.
+- Check the GenAI conditions in one assessment brief.
+- Explore one small, appropriate use of M365 Copilot or another approved tool.
 
 ---
 
