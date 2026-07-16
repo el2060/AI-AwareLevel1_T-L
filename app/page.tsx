@@ -204,7 +204,7 @@ const sectionMeta = [
 ];
 
 const sectionBridges = [
-  "Start with a module you teach, lead or support, then place it in NP’s shared direction for AI-enabled T&L.",
+  "Start with a module you teach, lead or support, then see how AI already touches it.",
   "Begin with curriculum: what must students learn, and how should learning outcomes, activities and assessment align?",
   "Then consider how AI can support learning and practice—and use PAIR to give that learning a clear structure.",
   "Next, consider how assessment keeps learning authentic, credible and visible.",

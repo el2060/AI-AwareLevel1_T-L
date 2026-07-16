@@ -45,15 +45,15 @@ NP aims to prepare **AI-ready graduates** who combine:
 - Domain knowledge and skills.
 - Responsible and effective use of AI.
 
-This vision is supported by three commitments:
+Three things need to be true for that to happen:
 
 - **AI-relevant curriculum:** Knowledge and skills remain relevant to the discipline and profession.
 - **AI-integrated learning and assessment:** Students learn to work with AI while still demonstrating what they know and can do.
 - **AI-enabled learning support:** AI may provide suitable practice, feedback and personalised support.
 
-These commitments shape NP’s approaches. At Level 1, focus on their purpose and where they may affect your module.
+At Level 1, focus on where these show up in your own module.
 
-Five strategies put this direction into practice.
+Five strategies turn this into everyday practice.
 
 <!--strategy-map-->
 
