@@ -405,38 +405,37 @@ function ThreeAsActivity() {
       role: "A health professional",
       capability: "Interpret observed evidence, decide when to escalate, and explain the reasoning behind a safe course of action.",
       answer: "Anchor",
-      feedback: "This is an Anchor competency: a core human and professional capability that students must be able to demonstrate independently of AI.",
+      feedback: "The capability centres on disciplinary judgement and safe decision-making that students must demonstrate independently of AI.",
       alignment: "Where will students practise making and explaining this judgement without relying on an AI-generated answer?",
     },
     {
       id: "business",
       domain: "Business, design and media",
       role: "A business or creative professional",
-      capability: "Use AI to generate campaign options, evaluate the evidence and context, then justify a recommendation for a client.",
+      capability: "Use AI to compare options, then evaluate the evidence and justify a recommendation for a client.",
       answer: "Augment",
-      feedback: "This is an Augment competency: students leverage AI to work more productively and effectively in their domain while retaining professional judgement.",
+      feedback: "The capability uses AI to extend the work while students retain responsibility for evaluating evidence and justifying the final recommendation.",
       alignment: "How will students practise evaluating AI output and show why their final recommendation is appropriate?",
     },
     {
       id: "engineering",
       domain: "Engineering and ICT",
       role: "An engineering or technology professional",
-      capability: "Design and test an AI-enabled solution that changes how a service, workflow or system could operate.",
+      capability: "Use AI-assisted development to create and test a new workflow or solution beyond the previous scope of the role.",
       answer: "Advance",
-      feedback: "This is an Advance competency: a stretch capability focused on innovation and transformation through AI within professional practice.",
+      feedback: "The capability uses AI to create a new workflow or solution that extends professional practice beyond the role’s previous scope.",
       alignment: "What learning activity and assessment would let students explore the new possibility while testing its value, limits and risks?",
     },
   ];
   const lenses = [
     { name: "Anchor", description: "Identify the disciplinary foundations, human qualities and professional judgement students must retain and demonstrate independently of AI." },
-    { name: "Augment", description: "Develop and assess how well students use AI to improve the productivity and quality of their work, while applying disciplinary judgement and oversight." },
-    { name: "Advance", description: "In suitable modules, enable students to explore how AI can go beyond established pre-AI job boundaries—not just doing the old work faster, but redefining what's possible." },
+    { name: "Augment", description: "Develop and assess how well students use AI to improve the productivity and quality of their work while applying disciplinary judgement and oversight." },
+    { name: "Advance", description: "In suitable modules, enable students to explore how AI may go beyond established pre-AI job boundaries—not only doing the same work faster, but creating new services, workflows or roles." },
   ];
   const [active, setActive] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const current = cases[active];
   const selected = answers[current.id];
-  const completed = Object.keys(answers).length;
   return (
     <section className="activity-block three-as-activity competency-studio">
       <div className="activity-head-row">
@@ -444,9 +443,9 @@ function ThreeAsActivity() {
           <span className="activity-eyebrow">Competency studio</span>
           <h2>Identify the capability before choosing the 3A</h2>
         </div>
-        <span className="activity-count">{completed} / {cases.length} explored</span>
+        <span className="activity-count">{cases.length} contexts to explore</span>
       </div>
-      <p>Choose a professional context, then decide which kind of student capability the module is developing.</p>
+      <p>Choose a professional context, then decide which 3A best describes the capability being developed.</p>
       <div className="competency-case-tabs" role="tablist" aria-label="Professional contexts">
         {cases.map((item, index) => <button key={item.id} type="button" role="tab" aria-selected={active === index} className={active === index ? "active" : ""} onClick={() => setActive(index)}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.domain}</strong></button>)}
       </div>
@@ -739,22 +738,22 @@ function ThreeAsInfographic() {
     {
       key: "anchor",
       name: "Anchor",
-      tagline: "AI is the benchmark",
+      tagline: "What students must retain and demonstrate independently of AI",
       body: "Identify the disciplinary foundations, human qualities and professional judgement students must retain and demonstrate independently of AI.",
       cue: "Human judgement · empathy · ethical reasoning · creativity · interpersonal skills · professional responsibility",
     },
     {
       key: "augment",
       name: "Augment",
-      tagline: "Assess productive, effective AI use",
-      body: "Develop and assess how well students use AI to improve the productivity and quality of their work, while applying disciplinary judgement and oversight.",
+      tagline: "How students should use AI productively",
+      body: "Develop and assess how well students use AI to improve the productivity and quality of their work while applying disciplinary judgement and oversight.",
       cue: "Generate · compare · analyse · evaluate · improve",
     },
     {
       key: "advance",
       name: "Advance",
-      tagline: "Reward new AI-enabled possibilities",
-      body: "In suitable modules, enable students to explore how AI can go beyond established pre-AI job boundaries—not merely completing the same work faster, but redefining what may be possible.",
+      tagline: "What new possibilities AI may enable",
+      body: "In suitable modules, enable students to explore how AI may go beyond established pre-AI job boundaries—not only doing the same work faster, but creating new services, workflows or roles.",
       cue: "New services · new workflows · new roles · future practice",
     },
   ];
@@ -773,7 +772,7 @@ function ThreeAsInfographic() {
           </section>
         ))}
       </div>
-      <div className="infographic-note"><span aria-hidden="true">↔</span><p><strong>Three lenses, not a sequence.</strong> Decide what students need to learn and demonstrate as AI changes professional practice, then align outcomes, activities and assessment.</p></div>
+      <div className="infographic-note"><span aria-hidden="true">↔</span><p><strong>The 3As are lenses, not a sequence.</strong> Not every learning outcome or module will require all three.</p></div>
     </figure>
   );
 }

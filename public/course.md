@@ -66,47 +66,33 @@ The next four parts explore how this direction applies to curriculum, facilitati
 
 # Part 2: Curriculum — What Should Students Learn?
 
-AI can now assist with tasks that students previously completed independently. This may change some professional workflows, but it does not remove the need for strong foundations.
+AI can now perform tasks that students previously completed independently. This may change professional practice, but students still need strong disciplinary foundations and judgement to recognise when AI output is wrong, unsafe or unsuitable.
 
-Students need enough disciplinary knowledge and judgement to recognise when AI output is wrong, unsafe or unsuitable. This applies to both PET and CET learners, although the learning context and facilitation approach may differ.
+All students receive a common foundation in AI literacy. The 3As help course and module teams consider how discipline-specific learning should build on that foundation.
 
-NP students build a common foundation in AI literacy. NP’s **3As framework** helps course and module teams review what students need to learn and demonstrate as AI changes professional practice, then align outcomes, activities and assessment.
+## Consider Your Module
 
-## A Common Student AI Baseline
+Choose one learning outcome from a module you teach, lead or support.
 
-All students receive a common AI literacy foundation: **learning about AI, learning with AI, learning to use AI and learning beyond AI**. Modules build on this foundation through discipline-specific learning and application.
+- What must students still understand, judge or do independently of AI?
+- Where should students learn to use AI productively?
+- Is there any new AI-enabled practice worth exploring?
 
-Use the 3As to consider what your module may need to reinforce or extend.
+Then ask:
 
-Use the infographic to identify where the 3As may be relevant to one module—detailed redesign is a later, phased step, not something Level 1 asks of you:
+> Do the learning activities provide suitable practice, and does the assessment make the intended learning visible?
 
-- **Anchor:** Which disciplinary foundations, human qualities and professional judgement must students retain and demonstrate independently of AI?
-- **Augment:** How will students practise and show productive, judgement-retaining use of AI in an authentic workflow?
-- **Advance:** What new service, workflow or possibility might students explore with AI—and what learning and assessment experiences would enable it?
-
-Use the lens—or combination of lenses—that best represents the capability students need to develop. Not every learning outcome or module will require all three.
-
-## Apply It to Your Module
-
-At this stage, you are not expected to redesign the module. The aim is to identify one area that may need further review.
-
-Start with one learning outcome in a module you teach, lead or support. Consider:
-
-> One disciplinary, human or professional capability my students must demonstrate independently of AI is...
-
-> One professional or disciplinary workflow that AI might Augment is...
-
-Then ask: are the learning activities giving students suitable practice, and does the assessment make the intended learning visible?
-
-At Level 1, use the 3As to recognise these distinctions and the need for alignment across the module.
+At Level 1, the aim is to recognise where further review may be needed.
 
 ## Key Takeaway
 
-Use the 3As to identify what students must demonstrate independently of AI, how they should use AI productively, and where AI may enable new forms of professional practice. Then check that learning outcomes, activities and assessment remain aligned:
+Use the 3As to consider:
 
-- The learning outcomes: what students must understand, do or judge independently, with AI, or in new AI-enabled ways.
-- The learning activities: how students will practise and develop those outcomes.
-- The assessment: what evidence will show that the intended learning has been achieved.
+- what students must demonstrate independently of AI;
+- how they should use AI productively;
+- where AI may enable new forms of professional practice.
+
+Then check that learning outcomes, activities and assessment remain aligned.
 
 ---
 
