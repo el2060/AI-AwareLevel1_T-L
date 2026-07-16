@@ -940,9 +940,9 @@ function SectionVisual({ title }: { title: string }) {
     </figure>
   );
   if (title.startsWith("Part 4")) return (
-    <figure className="concept-visual assessment-visual" aria-label="Assessment strategy in an AI-enabled context">
-      <figcaption><span>Assessment strategy</span><strong>Current guidance, then phased review through the 3As</strong></figcaption>
-      <div className="assessment-flow"><div><i>Now</i><b>Apply current guidance</b><small>Set clear GenAI conditions, declaration and prohibited uses.</small></div><span>→</span><div><i>Next</i><b>Review through the 3As</b><small>Anchor: confirm independence from AI. Augment: assess the AI-use process, not just the output.</small></div></div>
+    <figure className="concept-visual assessment-visual" aria-label="What every AI-enabled assessment needs">
+      <figcaption><span>For every assessment</span><strong>Two things to get right</strong></figcaption>
+      <div className="tool-checks"><div><i>1</i><b>Apply current guidance</b><small>Clear GenAI conditions, declaration and prohibited uses.</small></div><div><i>2</i><b>Check validity through the 3As</b><small>Anchor: independent of AI. Augment: assess the process, not just the output.</small></div></div>
     </figure>
   );
   if (title.startsWith("Part 5")) return (
