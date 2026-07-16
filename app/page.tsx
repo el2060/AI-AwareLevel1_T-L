@@ -198,7 +198,7 @@ const sectionMeta = [
   { mark: "02", label: "Curriculum", tone: "orange" },
   { mark: "03", label: "Facilitation", tone: "teal" },
   { mark: "04", label: "Assessment", tone: "blue" },
-  { mark: "05", label: "Data and tools", tone: "purple" },
+  { mark: "05", label: "Data and Tools", tone: "purple" },
   { mark: "06", label: "Apply", tone: "orange" },
   { mark: "07", label: "Key takeaways", tone: "green" },
 ];
@@ -243,12 +243,12 @@ function ChoiceCheck({ question, eyebrow, choices }: { question: string; eyebrow
 }
 
 function DomainSpotter() {
-  const domains = ["Curriculum", "Facilitation", "Assessment", "Data and tools"];
+  const domains = ["Curriculum", "Facilitation", "Assessment", "Data and Tools"];
   const scenarios = [
     { id: "curriculum", context: "Your diploma team is reviewing which coding capabilities students must demonstrate themselves and which should include effective use of AI-assisted development.", answer: "Curriculum", feedback: "This is Curriculum: AI is changing what students need to learn and how it’s taught. Part 2 uses the 3As to work through exactly this kind of question." },
     { id: "facilitation", context: "A student asks an AI tutor to explain a concept a second way before attempting the practice questions.", answer: "Facilitation", feedback: "This is Facilitation: AI is supporting explanation and practice. Part 3 uses PAIR to judge when this helps rather than replaces learning." },
     { id: "assessment", context: "A student’s submission reads as clearly GenAI-polished, and you need to decide what still counts as their own work.", answer: "Assessment", feedback: "This is Assessment: providing authentic, credible evidence of learning. Part 4 covers NP’s GenAI requirements for summative assessment." },
-    { id: "tools", context: "You want to use AI to summarise a term’s worth of student feedback comments to spot common themes.", answer: "Data and tools", feedback: "This is Data and Tools: using AI and learning data safely and responsibly. Part 5 covers what to check before you start." },
+    { id: "tools", context: "You want to use AI to summarise a term’s worth of student feedback comments to spot common themes.", answer: "Data and Tools", feedback: "This is Data and Tools: using AI and learning data safely and responsibly. Part 5 covers what to check before you start." },
   ];
   const [active, setActive] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -328,13 +328,13 @@ function ModuleSummary() {
       label: "Assessment",
       title: "Assure authentic evidence",
       preview: "Start with the learning outcome and evidence of what students can do independently and with AI.",
-      takeaway: "GenAI is allowed in summative assessment unless explicitly prohibited. Assessment should still confirm Anchor competencies independently of AI and, where relevant, evaluate the process behind students’ Augment use of AI—not just the final output.",
+      takeaway: "GenAI is allowed in summative assessment unless explicitly restricted or prohibited. Assessment should still confirm Anchor competencies independently of AI and, where relevant, evaluate the process behind students’ Augment use of AI—not just the final output.",
       practice: "State the conditions clearly in the assignment descriptor and discuss them with students.",
       icon: ClipboardCheck,
       tone: "orange",
     },
     {
-      label: "Data and tools",
+      label: "Data and Tools",
       title: "Support engagement and outcomes",
       preview: "Use suitable AI tools and learning data to support learning safely and responsibly, then check the information, output and oversight.",
       takeaway: "Start with the T&L need. Use every tool only for the information and purpose covered by NP’s current guidance, then check the output before acting.",
@@ -513,7 +513,7 @@ function AssessmentBriefBuilder() {
     { id: "purpose", label: "Permitted use", text: "You may use GenAI to brainstorm possible approaches and receive feedback on an early draft.", correct: true },
     { id: "contribution", label: "Student contribution", text: "Your final analysis, selection of evidence and recommendation must be your own.", correct: true },
     { id: "process", label: "Check and declare", text: "Check AI-generated claims, retain evidence of your interaction, cite and declare your use.", correct: true },
-    { id: "boundary", label: "Clear boundary", text: "Do not use GenAI for any prohibited component or to simulate a required human interaction.", correct: true },
+    { id: "boundary", label: "Clear boundary", text: "Do not use GenAI in any component where it is prohibited, or to simulate an interview, observation or interaction that must involve a real person.", correct: true },
     { id: "unlimited", label: "Unlimited use", text: "You may use GenAI as much as you like, in any way that helps you finish the assignment.", correct: false, feedback: "Too permissive—it never says what must remain the student’s own contribution." },
     { id: "skip-declare", label: "Skip declaration", text: "You do not need to declare AI use if you only used it for an early draft.", correct: false, feedback: "Incorrect. Relevant submission cover pages require the GenAI Use Declaration, including how AI was used." },
   ];
@@ -672,7 +672,7 @@ function UseCaseExplorer() {
 }
 
 function ToolChecksActivity() {
-  return <ChoiceCheck eyebrow="Four checks in practice" question="An approved AI tool summarises exam results and flags three students for early intervention. The tool, data use and figures have already been checked. What matters most before you act on the flags?" choices={[
+  return <ChoiceCheck eyebrow="Four checks in practice" question="An approved AI tool summarises exam results and flags three students for possible early intervention. The data use is approved and the figures are accurate. What matters most before acting on the flags?" choices={[
     { label: "Human oversight: review the context yourself and decide—don’t let the flagged list become the decision.", correct: true, feedback: "The tool can support an initial review, but a person must interpret the context, check for omissions and decide what action, if any, is appropriate." },
     { label: "Output quality: check that the summary’s figures are accurate.", correct: false, feedback: "Worth checking, but accuracy alone doesn’t answer the harder question—who decides what happens to the students on that list." },
     { label: "Learning value: check the analysis addresses a real teaching need.", correct: false, feedback: "A fair question generally, but it doesn’t address the immediate risk here—treating the AI’s flags as the decision itself." },
@@ -690,7 +690,7 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
     { label: "Use an unapproved public tool to analyse named student records.", correct: false, feedback: "The tool is not approved for the information involved." },
     { label: "Let an AI summary decide which students need intervention.", correct: false, feedback: "AI may support an initial review, but a person must interpret the context and make the decision." },
   ]} />;
-  if (title.startsWith("Part 6")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep a module you teach, lead or support in mind. Tap each question once you have considered it—and see a reminder of what to check." items={["Curriculum: What is AI changing in what students must learn and how they are taught?", "Facilitation: Where might AI support learning without replacing it?", "Assessment: How will assessment provide authentic evidence of students’ learning?", "Data and tools: Where could AI tools or learning data safely and responsibly support engagement or a learning outcome—and what needs checking before use?"]} tips={["Use the 3As: is this an Anchor, Augment or Advance capability?", "Use PAIR: has the student formulated the problem and reflected on the process, not just accepted the first AI output?", "Check the assignment descriptor states the GenAI stance, permitted purposes and declaration requirement.", "Confirm the tool is approved for the information involved, and that a person still reviews the output."]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered what is changing, the learning to protect, how assessment can provide authentic evidence, and where AI tools or learning data could safely and responsibly help with appropriate checks." />;
+  if (title.startsWith("Part 6")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep a module you teach, lead or support in mind. Tap each question once you have considered it—and see a reminder of what to check." items={["Curriculum: What is AI changing in what students must learn and how they are taught?", "Facilitation: Where might AI support learning without replacing it?", "Assessment: How will assessment provide authentic evidence of students’ learning?", "Data and Tools: Where could AI tools or learning data safely and responsibly support engagement or a learning outcome—and what needs checking before use?"]} tips={["Use the 3As: is this an Anchor, Augment or Advance capability?", "Use PAIR: has the student formulated the problem and reflected on the process, not just accepted the first AI output?", "Check the assignment descriptor states the GenAI stance, permitted purposes and declaration requirement.", "Confirm the tool is approved for the information involved, and that a person still reviews the output."]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered what is changing, the learning to protect, how assessment can provide authentic evidence, and where AI tools or learning data could safely and responsibly help with appropriate checks." />;
   if (title.startsWith("Part 7")) return <NextStepActivity value={notes.nextstep ?? ""} onChange={(value) => onChange("nextstep", value)} />;
   return null;
 }
@@ -713,7 +713,7 @@ function OpeningVisual() {
       icon: ClipboardCheck,
     },
     {
-      title: "Data and tools",
+      title: "Data and Tools",
       detail: "How AI tools and learning data can support learning—safely and responsibly",
       icon: ShieldCheck,
     },
@@ -845,7 +845,7 @@ function LecturerPracticeMap() {
       tone: "assess",
     },
     {
-      title: "Data and tools",
+      title: "Data and Tools",
       domain: "Data & Tech-Enhanced T&L",
       work: "AI-supported learning, feedback and learning data",
       question: "Where could AI tools or learning data improve engagement or support a learning outcome—and what needs checking before use?",
@@ -901,7 +901,7 @@ function SectionVisual({ title }: { title: string }) {
   if (title.startsWith("Part 4")) return (
     <figure className="concept-visual assessment-visual" aria-label="What every AI-enabled assessment needs">
       <figcaption><span>For every assessment</span><strong>Two things to get right</strong></figcaption>
-      <div className="tool-checks"><div><i>1</i><b>Apply current guidance</b><small>GenAI is allowed by default unless prohibited, but conditions, declaration and prohibited uses must still be clear.</small></div><div><i>2</i><b>Protect the intended learning</b><small>Use the 3As to clarify what students demonstrate in spite of AI, with AI, or through new AI-enabled practice.</small></div></div>
+      <div className="tool-checks"><div><i>1</i><b>Apply current guidance</b><small>GenAI is allowed by default unless explicitly restricted or prohibited. Conditions, declaration requirements and always-prohibited uses must still be clear.</small></div><div><i>2</i><b>Protect the intended learning</b><small>Use the 3As to clarify what students demonstrate in spite of AI, with AI, or through new AI-enabled practice.</small></div></div>
     </figure>
   );
   if (title.startsWith("Part 5")) return (

@@ -14,10 +14,10 @@ Allow about 2 hours for this package, its activities and the completion quiz.
 
 By the end of this module, you will be able to:
 
-1. **Curriculum:** Recognise how AI may change what students need to learn and where outcomes, activities or assessment may need review.
+1. **Curriculum:** Recognise how AI may change what students need to learn and where learning outcomes, activities or assessments may need review.
 2. **Facilitation:** Identify ways AI can support learning, practice and feedback without replacing intended learning.
 3. **Assessment:** Explain how AI affects assessment validity, authenticity and academic integrity, and identify NP’s key requirements.
-4. **Data and tools:** Apply basic checks when using AI tools and learning data to support student engagement and learning.
+4. **Data and Tools:** Apply basic checks when using AI tools and learning data to support student engagement and learning safely and responsibly.
 
 Level 1 is about awareness: recognise the key issues and identify what may need attention. The package draws on four T&L Competency Framework (TLCF) domains: curriculum design, facilitation of learning, assessment, and data and tech-enhanced T&L.
 
@@ -79,13 +79,11 @@ Use the 3As below to identify what your module may need to reinforce or extend t
 
 Use the infographic to identify where the 3As may be relevant to one module—detailed redesign is a later, phased step, not something Level 1 asks of you:
 
-- **Anchor:** Which disciplinary foundations, human qualities and professional judgements must students retain and demonstrate independently of AI?
+- **Anchor:** Which disciplinary foundations, human qualities and professional judgement must students retain and demonstrate independently of AI?
 - **Augment:** How will students practise and show productive, judgement-retaining use of AI in an authentic workflow?
 - **Advance:** What new service, workflow or possibility might students explore with AI—and what learning and assessment experiences would enable it?
 
 Use the lens—or combination of lenses—that best represents the capability students need to develop. Not every learning outcome or module will require all three.
-
-**AI is the benchmark for Anchor outcomes:** where AI can perform a task, identify what the student must still understand, judge or do independently. Students may still need the underlying knowledge or technical capability to evaluate AI output and exercise professional judgement.
 
 ## Try This: Draft Practice Examples
 
@@ -99,7 +97,7 @@ At this stage, you are not expected to redesign the module. The aim is to identi
 
 Start with one learning outcome in a module you teach, lead or support. Consider:
 
-> One uniquely human capability my students must demonstrate as an Anchor is...
+> One disciplinary, human or professional capability my students must demonstrate independently of AI is...
 
 > One professional or disciplinary workflow that AI might Augment is...
 
@@ -111,11 +109,9 @@ At Level 1, use the 3As to recognise these distinctions and the need for alignme
 
 Use the 3As to identify what students must demonstrate independently of AI, how they should use AI productively, and where AI may enable new forms of professional practice. Then check that learning outcomes, activities and assessment remain aligned:
 
-- The assessment: what evidence will show that the intended learning has been achieved.
-- The learning outcomes: what students must do in spite of AI, with AI, or in new AI-enabled ways.
+- The learning outcomes: what students must understand, do or judge independently, with AI, or in new AI-enabled ways.
 - The learning activities: how students will practise and develop those outcomes.
-
-What uniquely human capabilities should students demonstrate in spite of AI (Anchor)? How well should they use AI to improve their work (Augment)? Where might AI enable them to go beyond existing job boundaries (Advance)? Align your learning outcomes, learning activities and assessments accordingly.
+- The assessment: what evidence will show that the intended learning has been achieved.
 
 ---
 
@@ -125,11 +121,9 @@ NP's pedagogy for facilitating learning with AI is the **PAIR framework**—esta
 
 ## PAIR: NP's Pedagogy for Learning With AI
 
-PAIR is a simple, platform-independent structure for AI-supported learning and problem-solving. It is human-centred and skill-focused, and it keeps students and lecturers accountable for judgement, choices and learning as AI tools continue to change.
+PAIR is a simple, platform-independent structure for AI-supported learning and problem-solving. It is human-centred, skill-focused and responsibility-centred: students remain accountable for the problem, tool choice, interaction, verification, outputs and learning, so that AI supports rather than replaces intended learning.
 
 When students select a tool, start with the learning purpose. Part 5 provides the fuller checks for the tool, information, output and human oversight.
-
-PAIR also helps students learn with AI and use it productively. Students remain responsible for what they delegate, how they check the process, and whether AI is supporting rather than replacing the intended learning.
 
 *Adapted from: Acar, O. A. (2023). “Are Your Students Ready for AI? A 4-Step Framework for a ChatGPT World.” HBP Education.*
 
@@ -191,7 +185,7 @@ Students also use AI outside structured activities. Basic guidance worth giving 
 
 - Start with the learning purpose and formulate a clear request rather than simply pasting the task.
 - Check outputs for accuracy and bias before relying on them.
-- Do not submit unverified AI work, and declare and cite AI use as instructed.
+- Check and adapt AI output; do not submit purely AI-generated work as your own; and declare and cite AI use as instructed.
 
 ## Apply It to Your Module
 
@@ -218,10 +212,10 @@ At Level 1, focus on recognising why assessment needs authentic evidence in an A
 
 Use four lecturer actions to keep the essentials clear:
 
-1. **Start with the learning outcome.**
-2. **State the GenAI conditions clearly.**
-3. **Make student learning visible.**
-4. **Prepare students and obtain the required declaration.**
+1. **Start with the learning outcome.** Clarify what students must demonstrate independently and, where relevant, with AI.
+2. **State the GenAI conditions clearly.** Specify any permitted purposes, restrictions, prohibitions and required evidence.
+3. **Make student learning visible.** Require students to show their reasoning, original contribution and AI-use process where relevant.
+4. **Prepare students and require declaration.** Explain the conditions, provide formative preparation, resolve misunderstandings and obtain the required declaration.
 
 ## 1. Start With the Learning Outcome
 
@@ -245,15 +239,11 @@ If AI can generate the final product without the student demonstrating the inten
 
 NP’s Policy on Generative AI in Summative Assessment took effect in AY2026. These are the key requirements for your assessments.
 
-### GenAI is allowed unless explicitly prohibited
+### GenAI is allowed unless explicitly restricted or prohibited
 
-The default position is that GenAI use in summative assessment is allowed unless the assignment descriptor explicitly prohibits it. Unless restricted or prohibited, allowed uses include brainstorming, language polishing, media creation, data visualisation and scaffolding.
+The default position is that GenAI use in summative assessment is allowed unless the assignment descriptor explicitly restricts or prohibits it. Where no restriction or prohibition is stated, allowed uses include brainstorming, language polishing, media creation, data visualisation and scaffolding.
 
 This does not mean that students may use AI in any way they choose. They must follow all stated conditions and the uses that are always prohibited.
-
-### Use the required declaration
-
-All relevant submission cover pages must include the required **GenAI Use Declaration**. Students state whether and how they used GenAI in line with the assessment conditions. Where use is restricted, they must also be prepared to produce the required evidence of their AI use. GenAI use must be cited according to the applicable instructions.
 
 ### Restrictions and prohibitions must be explicit
 
@@ -270,7 +260,7 @@ Students must not:
 - Rely solely on GenAI for insights or reflections.
 - Use GenAI to simulate human interactions when the task requires real interviews, observations or interactions.
 
-Declaring one of these uses does not make it acceptable. If you suspect a student has misused GenAI, don’t decide alone: follow NP’s process for interviewing a student suspected of cheating with AI, then escalate under Academic Integrity procedures. Penalties can include invalidating the assessment.
+Declaring one of these uses does not make it acceptable. If you suspect a student has misused GenAI, don’t decide alone: follow NP’s process for interviewing a student suspected of cheating with AI, then escalate under Academic Integrity procedures. Consequences may include invalidation of the assessment.
 
 ## 3. Make Student Learning Visible
 
@@ -288,7 +278,7 @@ Compare these instructions.
 
 Instruction B is clearer because it sets out the boundaries of AI use. A clear assignment descriptor should cover:
 
-1. The GenAI stance for each component—restricted or prohibited (if unstated, GenAI is allowed by default).
+1. For each component, state any restrictions or prohibitions. If none are stated, GenAI is allowed by default, subject to declaration and always-prohibited uses.
 2. Permitted purposes.
 3. The student’s required original contribution.
 4. Evidence of process to retain or produce.
@@ -297,9 +287,11 @@ Instruction B is clearer because it sets out the boundaries of AI use. A clear a
 
 GenAI can also help you stress-test a brief before it reaches students: ask the tool to read it as a student would and list what it finds unclear, then compare its questions with what students actually ask. The “Test assignment clarity” use case in Part 5 has a ready-to-use prompt.
 
-## 4. Prepare Students and Obtain the Declaration
+## 4. Prepare Students and Require Declaration
 
-Written conditions alone can still be interpreted differently. Announce them early, discuss them in class, use examples or a mock run where practical, and give students a chance to ask questions—two-way communication catches misunderstandings before submission. Remind students to complete the required declaration and retain any required evidence of AI use.
+Written conditions alone can still be interpreted differently. Announce them early, discuss them in class, use examples or a mock run where practical, and give students a chance to ask questions—two-way communication catches misunderstandings before submission.
+
+All relevant submission cover pages must include the required **GenAI Use Declaration**. Students state whether and how they used GenAI in line with the assessment conditions. Where use is restricted, they must retain or produce the required evidence of their AI use. GenAI use must be cited according to the applicable instructions.
 
 Where AI use is restricted or prohibited in a summative assessment, formative activities should prepare students to meet those conditions—for example, mock runs during IPLs, Turnitin draft submissions with tutor feedback, or comparing acceptable and unacceptable uses.
 
@@ -335,7 +327,7 @@ Think about T&L uses in three clusters:
 
 - **Prepare learning:** draft examples, review materials or create alternative formats.
 - **Support learning:** provide practice, feedback and adaptive support.
-- **Understand learning:** summarise feedback or identify patterns in learning data.
+- **Understand learning:** summarise feedback, identify patterns in learning data and inform possible follow-up—without allowing AI to make decisions about students.
 
 ### Start with M365 Copilot
 
@@ -343,9 +335,9 @@ M365 Copilot is the primary AI assistant provisioned to NP staff. It is a practi
 
 M365 Copilot may be used with information covered by NP’s current tool and data-handling guidance. It can help you review module documents, summarise de-identified feedback, draft communications, prepare meeting follow-up and create a first version of learning materials. Check the output, adapt it for your module and make the final decision yourself.
 
-### Other approved Government tools
+### Other approved tools for specific uses
 
-Other approved tools may suit a particular task. **Pair Chat (pair.gov.sg)** is a GovTech AI assistant for public officers—no relation to NP's PAIR pedagogy in Part 3. It may suit a Government workflow or repeatable task when covered by NP’s current guidance.
+Other approved tools may be suitable for specific purposes. Use them only where the tool, information and purpose are covered by NP’s current guidance.
 
 Tool clearance and approved uses can change. **Check NP’s latest tool clearance and data guidance** before entering information.
 
@@ -441,7 +433,7 @@ Afterwards, choose one small next step:
 
 You now have a shared Level 1 foundation to:
 
-- Recognise where AI may affect curriculum, facilitation, assessment, and data and tools.
+- Recognise where AI may affect curriculum, facilitation, assessment, and the use of data and tools.
 - Recognise the common student AI baseline and consider where your module builds on it.
 - Refer to the 3As and PAIR to orient a teaching or learning decision.
 - Describe NP’s requirements for GenAI use in assessment.
