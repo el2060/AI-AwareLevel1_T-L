@@ -584,7 +584,7 @@ function StrategyMap() {
       <div className="strategy-goal"><strong>AI-ready graduates</strong><span>Human qualities · domain expertise · responsible use of AI</span></div>
       <div className="strategy-path">
         {items.map(({ name, question, detail, icon: Icon }, index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
-          <i><Icon size={18} strokeWidth={2.2} aria-hidden="true" /></i><span><strong>{name}</strong><b>{question}</b>{active === index && <small>{detail}</small>}</span>
+          <i><Icon size={18} strokeWidth={2.2} aria-hidden="true" /></i><span><strong>Strategy {index + 1} · {name}</strong><b>{question}</b>{active === index && <small>{detail}</small>}</span>
         </button>)}
       </div>
     </section>

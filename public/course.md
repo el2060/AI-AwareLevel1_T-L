@@ -126,7 +126,7 @@ One question captures it all: to maximise employability, what must your students
 
 # Part 3: Facilitation — Supporting Learning With AI
 
-NP's pedagogy for facilitating learning with AI is the **PAIR framework**—established practice, embedded in at least one core module of every PET diploma. PAIR positions AI as a tool that augments students' thinking and judgement, not a substitute for it.
+NP's pedagogy for facilitating learning with AI is the **PAIR framework**—established practice, embedded in at least one core module of every PET (Pre-Employment Training) diploma. PAIR positions AI as a tool that augments students' thinking and judgement, not a substitute for it.
 
 ## PAIR: NP's Pedagogy for Learning With AI
 
@@ -347,7 +347,7 @@ Instruction B is clearer because it sets out the boundaries of AI use. A clear a
 
 Written conditions are necessary, but students may still interpret them differently.
 
-Module Leaders should announce the conditions early, discuss them in class and give students an opportunity to ask questions. Use examples or a mock run where practical.
+Announce the conditions early, discuss them in class and give students an opportunity to ask questions. Use examples or a mock run where practical.
 
 Two-way communication helps address misunderstandings before submission.
 
@@ -534,7 +534,7 @@ Afterwards, choose one small next step:
 You now have a shared Level 1 foundation to:
 
 - Recognise where AI may affect curriculum, facilitation, assessment, and tools and data.
-- Use the 3As and PAIR to orient a teaching or learning decision.
+- Refer to the 3As and PAIR to orient a teaching or learning decision.
 - Describe NP’s requirements for GenAI use in assessment.
 - Keep human judgement at the centre when AI is involved.
 - Choose one appropriate next step for a module you teach, lead or support.
