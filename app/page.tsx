@@ -283,47 +283,6 @@ function DomainSpotter() {
   );
 }
 
-function BaselineSpotter() {
-  const areas = ["Learn About AI", "Learn With AI", "Learn to Use AI", "Learn Beyond AI"];
-  const scenarios = [
-    { id: "definitions", context: "A student can explain, in their own words, the difference between machine learning, generative AI and agentic AI.", answer: "Learn About AI", feedback: "This is Learn About AI: knowing AI definitions, evolution and affordances—and the approaches and fields behind them." },
-    { id: "computational", context: "A student asks an AI tool to explain its reasoning, spots a gap in the logic, and asks a follow-up question to probe it further.", answer: "Learn With AI", feedback: "This is Learn With AI: applying computational thinking to critically engage with AI as a learning partner." },
-    { id: "usage", context: "A student uses an AI tool to draft a first version of a project proposal, then checks it for accuracy and bias before using it.", answer: "Learn to Use AI", feedback: "This is Learn to Use AI: applying AI for value creation, with appropriate evaluation before use." },
-    { id: "beyond", context: "A student weighs the fairness and privacy implications of an AI system before recommending its use in a client project.", answer: "Learn Beyond AI", feedback: "This is Learn Beyond AI: evaluating the societal, ethical and legal impacts of AI, with human-centred judgement." },
-  ];
-  const [active, setActive] = useState(0);
-  const [answers, setAnswers] = useState<Record<string, string>>({});
-  const current = scenarios[active];
-  const picked = answers[current.id];
-  const solved = Object.keys(answers).length;
-  return (
-    <section className="activity-block domain-spotter">
-      <div className="activity-head-row">
-        <div><span className="activity-eyebrow">Spot the baseline area</span><h2>Where does each student moment belong?</h2></div>
-        <span className="activity-count">{solved} / {scenarios.length} spotted</span>
-      </div>
-      <p>The Student AI Baseline spans four kinds of student behaviour. Read each moment, then tap the area it mainly shows.</p>
-      <div className="domain-spotter-tabs" role="tablist" aria-label="Scenarios">
-        {scenarios.map((s, index) => {
-          const a = answers[s.id];
-          const state = !a ? "" : a === s.answer ? "solved" : "attempted";
-          return <button key={s.id} type="button" role="tab" aria-selected={active === index} className={`${active === index ? "active" : ""} ${state}`} onClick={() => setActive(index)}>{a ? (a === s.answer ? "✓" : "•") : index + 1}</button>;
-        })}
-      </div>
-      <div className="domain-spotter-case"><p>{current.context}</p></div>
-      <div className="domain-spotter-options">
-        {areas.map((a) => <button key={a} type="button" className={picked === a ? (a === current.answer ? "selected correct" : "selected wrong") : ""} onClick={() => setAnswers((prev) => ({ ...prev, [current.id]: a }))}>{a}</button>)}
-      </div>
-      {picked && (
-        <div className={`activity-feedback ${picked !== current.answer ? "try-again" : ""}`}>
-          <strong>{picked === current.answer ? current.answer : `This one is ${current.answer}`}</strong>
-          <p>{current.feedback}</p>
-        </div>
-      )}
-    </section>
-  );
-}
-
 function TapChecklist({ eyebrow, title, prompt, items, tips, value, onChange, completionTitle, completionText }: { eyebrow: string; title: string; prompt: string; items: string[]; tips?: string[]; value: string; onChange: (value: string) => void; completionTitle: string; completionText: string }) {
   const selected = value ? value.split("|") : [];
   return (
@@ -359,8 +318,8 @@ function ModuleSummary() {
     {
       label: "Learning design",
       title: "3As and PAIR",
-      preview: "Use the 3As to decide what assessment should measure, then align outcomes and activities; use PAIR to structure learning with AI.",
-      takeaway: "Anchor what AI can't replace, Augment productive and effective AI use, and Advance by rewarding students who redefine the job. The 3As start with what assessment should measure, then align the learning outcomes and activities to match. NP has adopted and adapted PAIR as a process for learning with AI.",
+      preview: "Use the 3As to review curriculum and assessment; use PAIR to structure learning with AI.",
+      takeaway: "Use the 3As to identify what students must demonstrate independently, how they should use AI productively, and where AI may enable new professional practice. Then align outcomes, activities and assessment. Use PAIR to structure the learning process with AI.",
       practice: "Check that your learning outcome, learning activity and assessment are aligned. Use AI to support practice and learning—not to take over the thinking.",
       icon: Sparkles,
       tone: "purple",
@@ -378,7 +337,7 @@ function ModuleSummary() {
       label: "Data and tools",
       title: "Support engagement and outcomes",
       preview: "Use suitable AI tools and learning data to support learning safely and responsibly, then check the information, output and oversight.",
-      takeaway: "M365 Copilot is cleared up to OC-Restricted; Pair Chat is cleared up to OC-Sensitive Normal (OC-SN). Use every tool only for its approved information and purpose.",
+      takeaway: "Start with the T&L need. Use every tool only for the information and purpose covered by NP’s current guidance, then check the output before acting.",
       practice: "Use AI output or learning data as a starting point. You remain responsible for the teaching and learning decision that follows.",
       icon: ShieldCheck,
       tone: "teal",
@@ -428,7 +387,7 @@ function ModuleSummary() {
 }
 
 function NextStepActivity({ value, onChange }: { value: string; onChange: (value: string) => void }) {
-  const options = ["Discuss one change with my module team", "Review one learning outcome, activity and assessment using the 3As", "Check one assessment’s GenAI conditions", "Try one small AI-supported learning activity"];
+  const options = ["Discuss one change with my module team", "Identify one outcome, activity or assessment for further 3As review", "Check one assessment’s GenAI conditions", "Try one small AI-supported learning activity"];
   return (
     <section className="activity-block next-step-block">
       <span className="activity-eyebrow">Before you leave</span><h2>Choose one small next step</h2>
@@ -469,7 +428,7 @@ function ThreeAsActivity() {
     },
   ];
   const lenses = [
-    { name: "Anchor", description: "Skills, judgement or human qualities AI cannot replace or replicate—capabilities students must retain in spite of AI. If AI can already perform the assessed task well, it isn't an Anchor outcome." },
+    { name: "Anchor", description: "Disciplinary foundations, human qualities and professional judgement students must retain and demonstrate independently. Where AI can perform a task, identify what students must still understand, judge or do." },
     { name: "Augment", description: "Use AI to improve the productivity and quality of domain work, while applying appropriate disciplinary judgement and oversight." },
     { name: "Advance", description: "Challenge students to use AI to go beyond established pre-AI job boundaries—not just doing the old work faster, but redefining what's possible." },
   ];
@@ -556,7 +515,7 @@ function AssessmentBriefBuilder() {
     { id: "process", label: "Check and declare", text: "Check AI-generated claims, retain evidence of your interaction, cite and declare your use.", correct: true },
     { id: "boundary", label: "Clear boundary", text: "Do not use GenAI for any prohibited component or to simulate a required human interaction.", correct: true },
     { id: "unlimited", label: "Unlimited use", text: "You may use GenAI as much as you like, in any way that helps you finish the assignment.", correct: false, feedback: "Too permissive—it never says what must remain the student’s own contribution." },
-    { id: "skip-declare", label: "Skip declaration", text: "You do not need to declare AI use if you only used it for an early draft.", correct: false, feedback: "Incorrect. NP requires a GenAI Use Declaration on every submission, whatever the AI was used for." },
+    { id: "skip-declare", label: "Skip declaration", text: "You do not need to declare AI use if you only used it for an early draft.", correct: false, feedback: "Incorrect. Relevant submission cover pages require the GenAI Use Declaration, including how AI was used." },
   ];
   const correctIds = clauses.filter((clause) => clause.correct).map((clause) => clause.id);
   const [selected, setSelected] = useState<string[]>([]);
@@ -613,15 +572,15 @@ function PairDesignGuide() {
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
-    { name: "Curriculum · 3As", question: "Decide what assessment should measure", detail: "The 3As help course and module teams decide what assessment should measure as AI changes the discipline, then align outcomes and activities. You will use this in Part 2.", icon: Sparkles },
     { name: "Pedagogy · PAIR", question: "Help students learn with AI", detail: "PAIR gives students a visible process for learning and problem-solving with AI. You will use this in Part 3.", icon: MessageCircle },
+    { name: "Curriculum · 3As", question: "Review what students need to learn and demonstrate", detail: "The 3As help course and module teams review curriculum and assessment as AI changes the discipline, then align outcomes, activities and evidence of learning. You will use this in Part 2.", icon: Sparkles },
     { name: "Assessment", question: "Keep learning visible", detail: "Assessment conditions should show what students must demonstrate and how AI may be used. Covered in Part 4.", icon: ClipboardCheck },
     { name: "Personalised learning", question: "Scaffold practice and feedback", detail: "AI-enabled tutors and learning assistants can support practice, feedback and different learning needs. Covered in Part 5.", icon: Bot },
     { name: "Human skills and resilience", question: "Keep judgement at the centre", detail: "Ethics, communication, creativity, resilience and professional judgement remain essential. This runs through every part.", icon: Users },
   ];
   return (
     <section className="strategy-map" aria-label="How NP approaches connect across this package">
-      <div className="strategy-heading"><span>NP’s approach</span><h2>NP’s five strategies at a glance</h2><p>Explore each strategy to see where you will meet it in this package.</p></div>
+      <div className="strategy-heading"><span>NP’s approach</span><h2>NP’s five strategies at a glance</h2><p>These provide context for the package—you do not need to memorise them. Explore where each one connects to your T&amp;L work.</p></div>
       <div className="strategy-goal"><strong>AI-ready graduates</strong><span>Human qualities · domain expertise · responsible use of AI</span></div>
       <div className="strategy-path">
         {items.map(({ name, question, detail, icon: Icon }, index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
@@ -713,7 +672,7 @@ function UseCaseExplorer() {
 }
 
 function ToolChecksActivity() {
-  return <ChoiceCheck eyebrow="Four checks in practice" question="An approved AI tool summarises exam results and flags three students for early intervention. Assume the tool and data use have already been approved. Which check matters most before you act on the flags?" choices={[
+  return <ChoiceCheck eyebrow="Four checks in practice" question="An approved AI tool summarises exam results and flags three students for early intervention. The tool, data use and figures have already been checked. What matters most before you act on the flags?" choices={[
     { label: "Human oversight: review the context yourself and decide—don’t let the flagged list become the decision.", correct: true, feedback: "The tool can support an initial review, but a person must interpret the context, check for omissions and decide what action, if any, is appropriate." },
     { label: "Output quality: check that the summary’s figures are accurate.", correct: false, feedback: "Worth checking, but accuracy alone doesn’t answer the harder question—who decides what happens to the students on that list." },
     { label: "Learning value: check the analysis addresses a real teaching need.", correct: false, feedback: "A fair question generally, but it doesn’t address the immediate risk here—treating the AI’s flags as the decision itself." },
@@ -786,7 +745,7 @@ function ThreeAsInfographic() {
       key: "anchor",
       name: "Anchor",
       tagline: "AI is the benchmark",
-      body: "Assess skills, judgement or human qualities that AI cannot replace or replicate—capabilities students must retain in spite of AI. If AI can already perform the assessed task well, it isn't an Anchor outcome.",
+      body: "Assess disciplinary foundations, human qualities and professional judgement students must retain and demonstrate independently. Where AI can perform a task, identify what students must still understand, judge or do.",
       cue: "Human judgement · empathy · ethical reasoning · creativity · interpersonal skills · professional responsibility",
     },
     {
@@ -808,7 +767,7 @@ function ThreeAsInfographic() {
     <figure className="concept-visual three-as-infographic" aria-labelledby="three-as-title">
       <figcaption>
         <span>The 3As</span>
-        <strong id="three-as-title">Three lenses for reviewing assessment—and aligning learning outcomes and activities accordingly</strong>
+        <strong id="three-as-title">Three lenses for reviewing curriculum and assessment</strong>
       </figcaption>
       <div className="three-as-path">
         {lenses.map((lens) => (
@@ -819,7 +778,7 @@ function ThreeAsInfographic() {
           </section>
         ))}
       </div>
-      <div className="infographic-note"><span aria-hidden="true">↔</span><p><strong>Three lenses, not a sequence.</strong> Not every outcome or module needs all three—use them to decide what an assessment should measure as AI changes the work.</p></div>
+      <div className="infographic-note"><span aria-hidden="true">↔</span><p><strong>Three lenses, not a sequence.</strong> Decide what students need to learn and demonstrate as AI changes professional practice, then align outcomes, activities and assessment.</p></div>
     </figure>
   );
 }
@@ -942,7 +901,7 @@ function SectionVisual({ title }: { title: string }) {
   if (title.startsWith("Part 4")) return (
     <figure className="concept-visual assessment-visual" aria-label="What every AI-enabled assessment needs">
       <figcaption><span>For every assessment</span><strong>Two things to get right</strong></figcaption>
-      <div className="tool-checks"><div><i>1</i><b>Apply current guidance</b><small>Clear GenAI conditions, declaration and prohibited uses.</small></div><div><i>2</i><b>Protect the intended learning</b><small>Use the 3As to clarify what students demonstrate in spite of AI, with AI, or through new AI-enabled practice.</small></div></div>
+      <div className="tool-checks"><div><i>1</i><b>Apply current guidance</b><small>GenAI is allowed by default unless prohibited, but conditions, declaration and prohibited uses must still be clear.</small></div><div><i>2</i><b>Protect the intended learning</b><small>Use the 3As to clarify what students demonstrate in spite of AI, with AI, or through new AI-enabled practice.</small></div></div>
     </figure>
   );
   if (title.startsWith("Part 5")) return (
@@ -1016,14 +975,12 @@ export default function Home() {
   const pairDesignMarker = "<!--pair-design-guide-->";
   const moduleSummaryMarker = "<!--module-summary-->";
   const strategyMapMarker = "<!--strategy-map-->";
-  const baselineCheckMarker = "<!--baseline-check-->";
   const sectionMarkdown = withoutTitle(current.markdown);
   const hasUseCaseExplorer = current.title.startsWith("Part 5") && sectionMarkdown.includes(useCaseMarker);
   const hasPairDesignGuide = current.title.startsWith("Part 3") && sectionMarkdown.includes(pairDesignMarker);
   const hasModuleSummary = current.title.startsWith("Part 7") && sectionMarkdown.includes(moduleSummaryMarker);
   const hasStrategyMap = current.title.startsWith("Part 1") && sectionMarkdown.includes(strategyMapMarker);
-  const hasBaselineCheck = current.title.startsWith("Part 2") && sectionMarkdown.includes(baselineCheckMarker);
-  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairDesignGuide ? pairDesignMarker : hasModuleSummary ? moduleSummaryMarker : hasStrategyMap ? strategyMapMarker : hasBaselineCheck ? baselineCheckMarker : "";
+  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairDesignGuide ? pairDesignMarker : hasModuleSummary ? moduleSummaryMarker : hasStrategyMap ? strategyMapMarker : "";
   const [contentBeforeInteractive, contentAfterInteractive = ""] = activeMarker
     ? sectionMarkdown.split(activeMarker)
     : [sectionMarkdown];
@@ -1090,8 +1047,6 @@ export default function Home() {
         {hasPairDesignGuide && <><PairInfographic /><PairDesignGuide /></>}
         {hasModuleSummary && <ModuleSummary />}
         {hasStrategyMap && <StrategyMap />}
-        {hasBaselineCheck && <BaselineSpotter />}
-
         {contentAfterInteractive && <article
           key={`${current.id}-after`}
           className="course-content course-content-continuation"
