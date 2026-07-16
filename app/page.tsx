@@ -572,15 +572,15 @@ function PairDesignGuide() {
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
-    { name: "Pedagogy · PAIR", question: "Help students learn with AI", detail: "NP has adopted and adapted PAIR as a visible process for problem framing, AI tool selection, critical interaction and reflection.", icon: MessageCircle },
-    { name: "Curriculum · 3As", question: "Keep outcomes, learning and assessment aligned", detail: "The 3As help course and module teams review learning outcomes, learning activities and assessment together as AI changes the discipline.", icon: Sparkles },
-    { name: "Assessment", question: "Keep learning visible", detail: "Assessment conditions should show what students must demonstrate and how AI may be used.", icon: ClipboardCheck },
-    { name: "Personalised learning", question: "Scaffold practice and feedback", detail: "AI-enabled tutors and learning assistants can support practice, feedback and different learning needs.", icon: Bot },
-    { name: "Human skills and resilience", question: "Keep judgement at the centre", detail: "Ethics, communication, creativity, resilience and professional judgement remain essential.", icon: Users },
+    { name: "Curriculum · 3As", question: "Keep outcomes, learning and assessment aligned", detail: "The 3As help course and module teams review learning outcomes, learning activities and assessment together as AI changes the discipline. You will use this in Part 2.", icon: Sparkles },
+    { name: "Pedagogy · PAIR", question: "Help students learn with AI", detail: "PAIR gives students a visible process for learning and problem-solving with AI. You will use this in Part 3.", icon: MessageCircle },
+    { name: "Assessment", question: "Keep learning visible", detail: "Assessment conditions should show what students must demonstrate and how AI may be used. Covered in Part 4.", icon: ClipboardCheck },
+    { name: "Personalised learning", question: "Scaffold practice and feedback", detail: "AI-enabled tutors and learning assistants can support practice, feedback and different learning needs. Covered in Part 5.", icon: Bot },
+    { name: "Human skills and resilience", question: "Keep judgement at the centre", detail: "Ethics, communication, creativity, resilience and professional judgement remain essential. This runs through every part.", icon: Users },
   ];
   return (
     <section className="strategy-map" aria-label="How NP approaches connect across this package">
-      <div className="strategy-heading"><span>NP’s approach</span><h2>NP’s five strategies at a glance</h2><p>Explore each strategy to see where it appears in this package.</p></div>
+      <div className="strategy-heading"><span>NP’s approach</span><h2>NP’s five strategies at a glance</h2><p>Explore each strategy to see where you will meet it in this package.</p></div>
       <div className="strategy-goal"><strong>AI-ready graduates</strong><span>Human qualities · domain expertise · responsible use of AI</span></div>
       <div className="strategy-path">
         {items.map(({ name, question, detail, icon: Icon }, index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>

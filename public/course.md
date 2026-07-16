@@ -6,10 +6,10 @@ AI is already part of how students learn and how many workplaces operate. You ma
 
 This module helps you:
 
-- **Recognise** how AI is changing what students need to learn and how they are taught in your discipline, and use NP’s 3As to review learning outcomes, activities and assessment together.
-- **Describe** the benefits, limitations, risks and recommended practices of facilitating learning with AI, drawing on NP’s PAIR approach.
-- **Judge** where AI supports learning and where it undermines it, and how NP’s GenAI requirements apply to assessment.
-- **Recognise** where AI tools and learning data could legally, safely and responsibly support your T&L work.
+- **Recognise** how AI is changing what students need to learn and how they are taught in your discipline.
+- **Describe** the benefits, limitations and risks of facilitating learning with AI.
+- **Describe** how AI affects assessment design, validity and academic integrity, and how NP’s GenAI requirements apply.
+- **Recognise** where AI tools and learning data can legally, safely and responsibly support your T&L work.
 
 ### Learning time
 
@@ -46,10 +46,6 @@ A useful question to carry through this module is:
 
 ## NP’s Shared Direction for AI-Enabled T&L
 
-NP’s shared direction helps you decide what to look for and what to do next in the module you have in mind.
-
-## Preparing AI-Ready Graduates
-
 NP aims to prepare **AI-ready graduates** who combine:
 
 - Strong human qualities.
@@ -64,23 +60,11 @@ This vision is supported by three commitments:
 
 These commitments shape NP’s approaches. At Level 1, focus on their purpose and where they may affect your module.
 
-## Five Strategies, Four Practice Areas
-
-NP’s five strategies set the shared direction. Explore them below, then see how this package uses four familiar TLCF practice areas to make that direction relevant to your teaching work.
+Five strategies put this direction into practice.
 
 <!--strategy-map-->
 
-The strategies and the four practice areas are related, not a one-to-one map.
-
-The connections are:
-
-- **3As:** Review learning outcomes, activities and assessment together.
-- **PAIR:** Structure learning and problem-solving with AI.
-- **Assessment guidance:** Keep AI use clear and evidence of learning credible.
-- **AI-enabled learning support and tools:** Support practice, feedback, engagement and learning outcomes with appropriate checks.
-- **Human skills, resilience and judgement:** Run through all of these areas—especially Anchor, Reflection and authentic assessment.
-
-The next four parts follow the TLCF areas: curriculum, facilitation of learning, assessment, and tools and data. PAIR sits within facilitation as a structure for AI-supported learning; human judgement remains central throughout.
+You do not need to memorise the strategies. The next four parts turn them into four familiar areas of your teaching work: curriculum (Part 2), facilitation of learning (Part 3), assessment (Part 4), and tools and data (Part 5). Human judgement runs through all four.
 
 ---
 
@@ -229,7 +213,7 @@ Students then:
 
 AI supports initial exploration. It does not replace empathy, professional judgement or the human interaction students need to practise.
 
-AI-enabled tutors and learning assistants, such as D2L Lumi Tutor, are a separate, complementary NP strategy for personalised practice and feedback outside class contact time—see Part 5: Tools and Data.
+AI-enabled tutors, such as D2L Lumi Tutor, offer personalised practice and feedback outside class time—covered in Part 5.
 
 ## Guiding Students' Everyday Use
 

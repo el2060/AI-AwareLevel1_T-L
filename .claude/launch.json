@@ -5,7 +5,7 @@
       "name": "dev",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
-      "cwd": "C:\\Users\\limee\\OneDrive\\Desktop\\AI Aware Level 1 T&L\\AI-AwareLevel1_T-L",
+      "cwd": "C:\\Users\\Administrator\\Desktop\\VSCode Devts\\AI Aware Level 1\\AI-AwareLevel1_T-L",
       "port": 3000
     }
   ]
