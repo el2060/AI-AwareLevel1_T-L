@@ -369,4 +369,4 @@ You now have a shared Level 1 foundation to:
 
 Complete the separately administered quiz to fulfil the programme requirements.
 
-> Being AI-aware means knowing what to consider, which NP approaches apply and when to seek guidance.
+> **Being AI-aware means knowing what to consider, which NP approaches apply and when to seek guidance.**

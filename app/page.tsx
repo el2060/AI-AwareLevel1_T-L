@@ -316,7 +316,7 @@ function ModuleSummary() {
     {
       label: "Learning design",
       title: "3As and PAIR",
-      preview: "Use the 3As to review what students need to learn and demonstrate; use PAIR to structure learning with AI.",
+      preview: "Use the 3As to review what students need to learn and demonstrate, and PAIR to structure learning with AI.",
       icon: Sparkles,
       tone: "purple",
     },
@@ -363,12 +363,18 @@ function ModuleSummary() {
 }
 
 function NextStepActivity({ value, onChange }: { value: string; onChange: (value: string) => void }) {
-  const options = ["Discuss one AI-related consideration with my module team", "Identify one outcome, activity or assessment for further 3As review", "Check one assessment’s GenAI conditions", "Try one small AI-supported learning activity"];
+  const options = [
+    { label: "Discuss one AI-related consideration with my module team", feedback: "Discussing one AI-related consideration with your module team is a focused way to put Level 1 awareness into practice." },
+    { label: "Identify one outcome, activity or assessment for further 3As review", feedback: "Identifying one area for further 3As review is a focused way to put Level 1 awareness into practice." },
+    { label: "Check one assessment’s GenAI conditions", feedback: "Checking one assessment’s GenAI conditions is a focused way to put Level 1 awareness into practice." },
+    { label: "Try one small AI-supported learning activity", feedback: "Trying one small AI-supported learning activity is a focused way to put Level 1 awareness into practice." },
+  ];
+  const selected = options.find((option) => option.label === value);
   return (
     <section className="activity-block next-step-block">
       <span className="activity-eyebrow">Before you leave</span><h2>Choose one small next step</h2>
-      <div className="choice-grid">{options.map((option, index) => <button key={option} className={`choice-button ${value === option ? "selected" : ""}`} onClick={() => onChange(option)}><span>{value === option ? "✓" : String.fromCharCode(65 + index)}</span>{option}</button>)}</div>
-      {value && <div className="activity-feedback"><strong>A practical place to start</strong><p>{value}. This is a focused way to put Level 1 awareness into practice.</p></div>}
+      <div className="choice-grid">{options.map((option, index) => { const letter = String.fromCharCode(65 + index); const isSelected = value === option.label; return <button key={option.label} className={`choice-button ${isSelected ? "selected" : ""}`} onClick={() => onChange(option.label)}><span>{isSelected ? `✓ ${letter}` : letter}</span>{option.label}</button>; })}</div>
+      {selected && <div className="activity-feedback"><strong>A Practical Place to Start</strong><p>{selected.feedback}</p></div>}
     </section>
   );
 }
