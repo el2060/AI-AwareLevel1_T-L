@@ -309,92 +309,52 @@ Begin with the learning outcome. Then decide what students must demonstrate, whe
 
 # Part 5: Data and Tools — Purposeful and Responsible Use
 
-AI tools and learning data can support engagement, learning outcomes and different learning needs when used purposefully and responsibly. AI is the newest addition to a familiar TLCF competency—Integrate EdTech in T&L—so the same judgement you already apply to other EdTech tools applies here.
+AI tools and learning data can support engagement, learning outcomes and different learning needs when used purposefully and responsibly. Start with the T&L need—not the tool.
 
-This part introduces practical T&L uses and what to check before using a tool or acting on AI-generated insights.
+## Before Using a Tool, Apply Four Checks
 
-Start with the T&L need, not the tool. A useful tool choice depends on the learning purpose, the information involved and how the output will be reviewed.
+- **Learning value:** Does it support the intended learning?
+- **Output quality:** Is the output accurate and suitable?
+- **Data and ethics:** Is the information safe and appropriate to use?
+- **Human oversight:** Who reviews, decides and remains responsible?
 
-## AI Tools for Your T&L Work
-
-Think about T&L uses in three clusters:
+## How AI May Support Your T&L Work
 
 - **Prepare learning:** draft examples, review materials or create alternative formats.
-- **Support learning:** provide practice, feedback and adaptive support.
-- **Understand learning:** summarise feedback, identify patterns in learning data and inform possible follow-up—without allowing AI to make decisions about students.
+- **Support learning:** provide practice, feedback or personalised support.
+- **Understand learning:** summarise feedback or identify patterns that may warrant further review.
 
-### Start with M365 Copilot
+The tool provides a first pass. You check, adapt and decide.
 
-M365 Copilot is the primary AI assistant provisioned to NP staff. It is a practical starting point when your work is already in the Microsoft 365 environment.
+## Start With an Approved Tool
 
-M365 Copilot may be used with information covered by NP’s current tool and data-handling guidance. It can help you review module documents, summarise feedback where the information is appropriate for the tool, draft communications, prepare meeting follow-up and create a first version of learning materials. Check the output, adapt it for your module and make the final decision yourself.
+M365 Copilot is the primary AI assistant provided to NP staff. It can support tasks such as reviewing module materials, drafting learning resources and summarising suitable feedback.
 
-### Other approved tools for specific uses
-
-Other approved tools may be suitable for specific purposes. Use them only where the tool, information and purpose are covered by NP’s current guidance.
-
-Tool clearance and approved uses can change. **Check NP’s latest tool clearance and data guidance** before entering information.
+Use AI tools only where the tool, information and purpose are covered by NP’s current guidance. Approved uses and clearance may change, so check the latest guidance before entering information.
 
 <!--use-case-explorer-->
 
-## Four Checks Before You Use a Tool
+## Protect Sensitive Information
 
-Before using an AI tool, consider:
+> Do not enter personal, sensitive or proprietary information into a public AI tool unless it is approved for that information and purpose. This includes student identifiers, grades, personal circumstances, confidential assessments, employer information and unreleased research.
 
-### 1. Learning value
-
-- What teaching or learning need does the tool address?
-- Does it support student thinking or complete the thinking for them?
-
-### 2. Output quality
-
-- Is the output accurate, relevant and suitable for the learner level?
-- How will it be checked and adapted?
-
-### 3. Data and ethics
-
-- What information will enter the tool?
-- Is the tool approved for that information and purpose?
-- Are there fairness, access, ownership or copyright concerns?
-
-> **Protect sensitive information**
-> Do not enter personal, sensitive or proprietary information into a public AI tool unless it is approved for that information and purpose. This includes student identifiers, grades, personal circumstances, confidential assessments, employer information and unreleased research. Remind students to apply the same care in class, on internship and at work.
-
-### 4. Human oversight
-
-- Who will review the output?
-- Who makes the final decision?
-- Who remains responsible?
+Remind students to apply the same care in class, on internship and at work.
 
 ## Treat AI-Generated Insights as Starting Points
 
-AI adds a new layer to learning analytics: it may summarise comments, group themes or suggest patterns from module or student data. These outputs are not final findings or decisions.
+AI may summarise comments, group themes or suggest patterns in learning data. It should not decide what action to take.
 
-You still need to:
+Check the source information, consider the learning context and apply your professional judgement before acting.
 
-- Check the output against the source information.
-- Look for omissions and minority views.
-- Consider the learning context.
-- Identify possible bias.
-- Decide what action, if any, is appropriate.
+## AI-Enabled Learning Support
 
-## AI-Enabled Tutors and Learning Assistants
+NP is introducing AI-enabled tutors and learning assistants that can provide summaries, practice, feedback and personalised support outside class time.
 
-NP's Strategy 4 is to support personalised and adaptive learning through AI-enabled tutors and learning assistants that **scaffold and coach**—rather than simply provide answers—outside class contact time.
-
-- **D2L Lumi Tutor:** Available institution-wide within NP's LMS, grounded in module content, offering on-demand summaries, flashcards and practice questions.
-- **Adaptive learning assistants:** Being piloted to support proficiency diagnostics, personalised study plans, adaptive practice difficulty and real-time feedback.
-- **NP-developed learning assistants:** Subject tutors, process coaches, simulated practice environments and reflective guides tailored to disciplinary contexts.
-
-These tools complement your facilitation; they do not replace it. You still decide what good learning looks like in your module, and how these tools fit into it.
-
-These tools, and AI more broadly, can also support Universal Design for Learning (UDL)—offering another explanation, a different format, practice at an appropriate level or timely feedback—when connected to the intended learning outcome. Before using a tool this way, check that the learning purpose and standard remain clear, the output is accurate, inclusive and accessible, and AI supports rather than replaces appropriate human or institutional support.
+These tools complement—not replace—your facilitation. You still decide what good learning looks like and how the tool supports it.
 
 ## Apply It to Your Module
 
-Think of one possible use of M365 Copilot or another approved tool. If you are new to AI tools, start with a small, low-risk use case—such as drafting practice questions from non-sensitive material—before anything with higher stakes.
-
-Consider:
+Think of one small, low-risk use.
 
 > What T&L need could it support?
 

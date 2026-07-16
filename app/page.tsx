@@ -600,8 +600,8 @@ function UseCaseExplorer() {
       icon: BookOpen,
       use: "Flag outdated references, duplicated content, misalignment or inconsistent instructions across module documents.",
       prompt: "Review these module documents. List outdated references, duplicated content, misalignment with learning outcomes and inconsistent student instructions. Name the source document. Do not rewrite.",
-      check: "Verify each flag against the actual document. The tool can misread structure or highlight an intentional choice.",
-      judgement: "What changes to make, with your module team and the 3As in mind.",
+      check: "Verify each finding against the original material.",
+      judgement: "Decide what, if anything, should change.",
     },
     {
       title: "Draft practice examples",
@@ -672,10 +672,10 @@ function UseCaseExplorer() {
 }
 
 function ToolChecksActivity() {
-  return <ChoiceCheck eyebrow="Four checks in practice" question="An approved AI tool summarises exam results and flags three students for possible early intervention. The data use is approved and the figures are accurate. What matters most before acting on the flags?" choices={[
-    { label: "Human oversight: review the context yourself and decide—don’t let the flagged list become the decision.", correct: true, feedback: "The tool can support an initial review, but a person must interpret the context, check for omissions and decide what action, if any, is appropriate." },
-    { label: "Output quality: check that the summary’s figures are accurate.", correct: false, feedback: "Worth checking, but accuracy alone doesn’t answer the harder question—who decides what happens to the students on that list." },
-    { label: "Learning value: check the analysis addresses a real teaching need.", correct: false, feedback: "A fair question generally, but it doesn’t address the immediate risk here—treating the AI’s flags as the decision itself." },
+  return <ChoiceCheck eyebrow="Four checks in practice" question="An approved AI tool summarises results and flags three students for possible early intervention. The data use is approved and the figures are accurate. What should you do before acting?" choices={[
+    { label: "Review the students’ context and make the decision yourself.", correct: true, feedback: "The AI-generated flags are inputs, not decisions. Review the context and apply your professional judgement before acting." },
+    { label: "Act on the flags because the tool and data use are approved.", correct: false, feedback: "Approval does not make the AI output a decision. A person must review the context and decide what action, if any, is appropriate." },
+    { label: "Ask the tool to choose the most urgent student first.", correct: false, feedback: "AI should not make student-support decisions. Human oversight remains essential even when the figures are accurate." },
   ]} />;
 }
 
@@ -685,11 +685,6 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
   if (title.startsWith("Part 2")) return <ThreeAsActivity />;
   if (title.startsWith("Part 3")) return <FacilitationRolePlay />;
   if (title.startsWith("Part 4")) return <AssessmentBriefBuilder />;
-  if (title.startsWith("Part 5")) return <ChoiceCheck eyebrow="Tool judgement" question="Which is the soundest use?" choices={[
-    { label: "Use an approved AI tool, such as M365 Copilot, to suggest activities, then check and adapt one.", correct: true, feedback: "The purpose is clear, the tool is suitable, and the lecturer reviews the output." },
-    { label: "Use an unapproved public tool to analyse named student records.", correct: false, feedback: "The tool is not approved for the information involved." },
-    { label: "Let an AI summary decide which students need intervention.", correct: false, feedback: "AI may support an initial review, but a person must interpret the context and make the decision." },
-  ]} />;
   if (title.startsWith("Part 6")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep a module you teach, lead or support in mind. Tap each question once you have considered it—and see a reminder of what to check." items={["Curriculum: What is AI changing in what students must learn and how they are taught?", "Facilitation: Where might AI support learning without replacing it?", "Assessment: How will assessment provide authentic evidence of students’ learning?", "Data and Tools: Where could AI tools or learning data safely and responsibly support engagement or a learning outcome—and what needs checking before use?"]} tips={["Use the 3As: is this an Anchor, Augment or Advance capability?", "Use PAIR: has the student formulated the problem and reflected on the process, not just accepted the first AI output?", "Check the assignment descriptor states the GenAI stance, permitted purposes and declaration requirement.", "Confirm the tool is approved for the information involved, and that a person still reviews the output."]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered what is changing, the learning to protect, how assessment can provide authentic evidence, and where AI tools or learning data could safely and responsibly help with appropriate checks." />;
   if (title.startsWith("Part 7")) return <NextStepActivity value={notes.nextstep ?? ""} onChange={(value) => onChange("nextstep", value)} />;
   return null;
