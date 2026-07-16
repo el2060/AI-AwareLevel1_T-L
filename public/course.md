@@ -83,13 +83,15 @@ Before working out what your own module needs to add, it helps to know the commo
 
 This baseline is generic—it does not replace what your discipline needs. The 3As below help you build on it: where a student’s baseline literacy already covers a skill, your module can assume it and focus on the Augment or Advance layer specific to your field.
 
+<!--baseline-check-->
+
 Use the infographic with one module in mind:
 
 - **Anchor:** Which outcomes require students to retain core knowledge, skill or judgement independently of AI—and how will activities and assessment evidence it?
 - **Augment:** How will students practise and show productive, judgement-retaining use of AI in an authentic workflow?
 - **Advance:** What new service, workflow or possibility might students explore with AI—and what learning and assessment experiences would enable it?
 
-The 3As are lenses, not a fixed sequence. Use the lens—or combination of lenses—that best represents the capability students need to develop. Not every learning outcome or module will require all three.
+Use the lens—or combination of lenses—that best represents the capability students need to develop. Not every learning outcome or module will require all three.
 
 A useful benchmark when defining Anchors: whatever AI can already do well in your discipline should **not** be treated as an Anchor. The question is what your graduates must do that AI cannot.
 
@@ -138,8 +140,6 @@ NP's pedagogy for facilitating learning with AI is the **PAIR framework**—esta
 ## PAIR: NP's Pedagogy for Learning With AI
 
 PAIR is a simple, platform-independent structure for AI-supported learning and problem-solving. It is human-centred and skill-focused, and it keeps students and lecturers accountable for judgement, choices and learning as AI tools continue to change.
-
-The four connected stages are **Problem, AI, Interaction and Reflection**. Students formulate the problem before choosing a tool, interact critically rather than accepting the first response, and reflect on both the outcome and the learning process.
 
 When students select a tool, start with the learning purpose. Part 5 provides the fuller checks for the tool, information, output and human oversight.
 

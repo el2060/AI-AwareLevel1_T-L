@@ -198,7 +198,7 @@ const sectionMeta = [
   { mark: "02", label: "Curriculum", tone: "orange" },
   { mark: "03", label: "Facilitation", tone: "teal" },
   { mark: "04", label: "Assessment", tone: "blue" },
-  { mark: "05", label: "Tools and data", tone: "purple" },
+  { mark: "05", label: "Data and tools", tone: "purple" },
   { mark: "06", label: "Apply", tone: "orange" },
   { mark: "07", label: "Key takeaways", tone: "green" },
 ];
@@ -243,12 +243,12 @@ function ChoiceCheck({ question, eyebrow, choices }: { question: string; eyebrow
 }
 
 function DomainSpotter() {
-  const domains = ["Curriculum", "Facilitation", "Assessment", "Tools and data"];
+  const domains = ["Curriculum", "Facilitation", "Assessment", "Data and tools"];
   const scenarios = [
     { id: "curriculum", context: "Your diploma team is reviewing whether graduates still need to hand-code without AI assistance.", answer: "Curriculum", feedback: "This is Curriculum: AI is changing what students need to learn and how it’s taught. Part 2 uses the 3As to work through exactly this kind of question." },
     { id: "facilitation", context: "A student asks an AI tutor to explain a concept a second way before attempting the practice questions.", answer: "Facilitation", feedback: "This is Facilitation: AI is supporting explanation and practice. Part 3 uses PAIR to judge when this helps rather than replaces learning." },
     { id: "assessment", context: "A student’s submission reads as clearly GenAI-polished, and you need to decide what still counts as their own work.", answer: "Assessment", feedback: "This is Assessment: providing authentic, credible evidence of learning. Part 4 covers NP’s GenAI requirements for summative assessment." },
-    { id: "tools", context: "You want to summarise a term’s worth of student feedback comments to spot common themes.", answer: "Tools and data", feedback: "This is Tools and Data: using AI and learning data safely and responsibly. Part 5 covers what to check before you start." },
+    { id: "tools", context: "You want to summarise a term’s worth of student feedback comments to spot common themes.", answer: "Data and tools", feedback: "This is Data and Tools: using AI and learning data safely and responsibly. Part 5 covers what to check before you start." },
   ];
   const [active, setActive] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -272,6 +272,47 @@ function DomainSpotter() {
       <div className="domain-spotter-case"><p>{current.context}</p></div>
       <div className="domain-spotter-options">
         {domains.map((d) => <button key={d} type="button" className={picked === d ? (d === current.answer ? "selected correct" : "selected wrong") : ""} onClick={() => setAnswers((a) => ({ ...a, [current.id]: d }))}>{d}</button>)}
+      </div>
+      {picked && (
+        <div className={`activity-feedback ${picked !== current.answer ? "try-again" : ""}`}>
+          <strong>{picked === current.answer ? current.answer : `This one is ${current.answer}`}</strong>
+          <p>{current.feedback}</p>
+        </div>
+      )}
+    </section>
+  );
+}
+
+function BaselineSpotter() {
+  const areas = ["Learn About AI", "Learn With AI", "Learn to Use AI", "Learn Beyond AI"];
+  const scenarios = [
+    { id: "definitions", context: "A student can explain, in their own words, the difference between machine learning, generative AI and agentic AI.", answer: "Learn About AI", feedback: "This is Learn About AI: knowing AI definitions, evolution and affordances—and the approaches and fields behind them." },
+    { id: "computational", context: "A student asks an AI tool to explain its reasoning, spots a gap in the logic, and asks a follow-up question to probe it further.", answer: "Learn With AI", feedback: "This is Learn With AI: applying computational thinking to critically engage with AI as a learning partner." },
+    { id: "usage", context: "A student uses an AI tool to draft a first version of a project proposal, then checks it for accuracy and bias before using it.", answer: "Learn to Use AI", feedback: "This is Learn to Use AI: applying AI for value creation, with appropriate evaluation before use." },
+    { id: "beyond", context: "A student weighs the fairness and privacy implications of an AI system before recommending its use in a client project.", answer: "Learn Beyond AI", feedback: "This is Learn Beyond AI: evaluating the societal, ethical and legal impacts of AI, with human-centred judgement." },
+  ];
+  const [active, setActive] = useState(0);
+  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const current = scenarios[active];
+  const picked = answers[current.id];
+  const solved = Object.keys(answers).length;
+  return (
+    <section className="activity-block domain-spotter">
+      <div className="activity-head-row">
+        <div><span className="activity-eyebrow">Spot the baseline area</span><h2>Where does each student moment belong?</h2></div>
+        <span className="activity-count">{solved} / {scenarios.length} spotted</span>
+      </div>
+      <p>The Student AI Baseline spans four kinds of student behaviour. Read each moment, then tap the area it mainly shows.</p>
+      <div className="domain-spotter-tabs" role="tablist" aria-label="Scenarios">
+        {scenarios.map((s, index) => {
+          const a = answers[s.id];
+          const state = !a ? "" : a === s.answer ? "solved" : "attempted";
+          return <button key={s.id} type="button" role="tab" aria-selected={active === index} className={`${active === index ? "active" : ""} ${state}`} onClick={() => setActive(index)}>{a ? (a === s.answer ? "✓" : "•") : index + 1}</button>;
+        })}
+      </div>
+      <div className="domain-spotter-case"><p>{current.context}</p></div>
+      <div className="domain-spotter-options">
+        {areas.map((a) => <button key={a} type="button" className={picked === a ? (a === current.answer ? "selected correct" : "selected wrong") : ""} onClick={() => setAnswers((prev) => ({ ...prev, [current.id]: a }))}>{a}</button>)}
       </div>
       {picked && (
         <div className={`activity-feedback ${picked !== current.answer ? "try-again" : ""}`}>
@@ -334,7 +375,7 @@ function ModuleSummary() {
       tone: "orange",
     },
     {
-      label: "Tools and data",
+      label: "Data and tools",
       title: "Support engagement and outcomes",
       preview: "Use suitable tools and learning data to support learning safely and responsibly, then check the information, output and oversight.",
       takeaway: "M365 Copilot is cleared up to OC-Restricted; Pair Chat is cleared up to OC-Sensitive Normal (OC-SN). Use every tool only for its approved information and purpose.",
@@ -672,10 +713,10 @@ function UseCaseExplorer() {
 }
 
 function ToolChecksActivity() {
-  return <ChoiceCheck eyebrow="Four checks in practice" question="A colleague wants to paste a spreadsheet of named student grades into a public AI chatbot to spot patterns. Which check matters most here?" choices={[
-    { label: "Data and ethics: check the tool is approved for this information before anything is entered.", correct: true, feedback: "Named grades are personal data. Confirm approval and purpose before entering anything—this check comes first, whatever the analysis is for." },
-    { label: "Output quality: check the patterns it finds are accurate.", correct: false, feedback: "This matters once you proceed, but it isn’t the first concern. Named grades shouldn’t enter an unapproved tool at all." },
-    { label: "Learning value: check the analysis actually helps a teaching decision.", correct: false, feedback: "A fair goal, but it doesn’t address the immediate problem—personal student data entering a tool that may not be approved for it." },
+  return <ChoiceCheck eyebrow="Four checks in practice" question="An approved AI tool summarises exam results and flags three students for early intervention. The data approval isn’t in question here. Which check matters most before you act on the flags?" choices={[
+    { label: "Human oversight: review the context yourself and decide—don’t let the flagged list become the decision.", correct: true, feedback: "The tool can support an initial review, but a person must interpret the context, check for omissions and decide what action, if any, is appropriate." },
+    { label: "Output quality: check that the summary’s figures are accurate.", correct: false, feedback: "Worth checking, but accuracy alone doesn’t answer the harder question—who decides what happens to the students on that list." },
+    { label: "Learning value: check the analysis addresses a real teaching need.", correct: false, feedback: "A fair question generally, but it doesn’t address the immediate risk here—treating the AI’s flags as the decision itself." },
   ]} />;
 }
 
@@ -690,7 +731,7 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
     { label: "Use an unapproved public tool to analyse named student records.", correct: false, feedback: "The tool is not approved for the information involved." },
     { label: "Let an AI summary decide which students need intervention.", correct: false, feedback: "AI may support an initial review, but a person must interpret the context and make the decision." },
   ]} />;
-  if (title.startsWith("Part 6")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep a module you teach, lead or support in mind. Tap each question once you have considered it—and see a reminder of what to check." items={["Curriculum: What is AI changing in what students must learn and how they are taught?", "Facilitation: Where might AI support learning without replacing it?", "Assessment: How will assessment provide authentic evidence of students’ learning?", "Tools and data: Where could AI tools or learning data safely and responsibly support engagement or a learning outcome—and what needs checking before use?"]} tips={["Use the 3As: is this an Anchor, Augment or Advance capability?", "Use PAIR: has the student formulated the problem and reflected on the process, not just accepted the first AI output?", "Check the assignment descriptor states the GenAI stance, permitted purposes and declaration requirement.", "Confirm the tool is approved for the information involved, and that a person still reviews the output."]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered what is changing, the learning to protect, how assessment can provide authentic evidence, and where AI tools or learning data could safely and responsibly help with appropriate checks." />;
+  if (title.startsWith("Part 6")) return <TapChecklist eyebrow="Bring it together" title="Take an AI-aware look at one module" prompt="Keep a module you teach, lead or support in mind. Tap each question once you have considered it—and see a reminder of what to check." items={["Curriculum: What is AI changing in what students must learn and how they are taught?", "Facilitation: Where might AI support learning without replacing it?", "Assessment: How will assessment provide authentic evidence of students’ learning?", "Data and tools: Where could AI tools or learning data safely and responsibly support engagement or a learning outcome—and what needs checking before use?"]} tips={["Use the 3As: is this an Anchor, Augment or Advance capability?", "Use PAIR: has the student formulated the problem and reflected on the process, not just accepted the first AI output?", "Check the assignment descriptor states the GenAI stance, permitted purposes and declaration requirement.", "Confirm the tool is approved for the information involved, and that a person still reviews the output."]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="You have an AI-aware module snapshot" completionText="You have considered what is changing, the learning to protect, how assessment can provide authentic evidence, and where AI tools or learning data could safely and responsibly help with appropriate checks." />;
   if (title.startsWith("Part 7")) return <NextStepActivity value={notes.nextstep ?? ""} onChange={(value) => onChange("nextstep", value)} />;
   return null;
 }
@@ -713,7 +754,7 @@ function OpeningVisual() {
       icon: ClipboardCheck,
     },
     {
-      title: "Tools and data",
+      title: "Data and tools",
       detail: "How tools and learning data can support learning—safely and responsibly",
       icon: ShieldCheck,
     },
@@ -845,7 +886,7 @@ function LecturerPracticeMap() {
       tone: "assess",
     },
     {
-      title: "Tools and data",
+      title: "Data and tools",
       domain: "Data & Tech-Enhanced T&L",
       work: "AI-supported learning, feedback and learning data",
       question: "Where could AI tools or learning data improve engagement or support a learning outcome—and what needs checking before use?",
@@ -913,7 +954,7 @@ function SectionVisual({ title }: { title: string }) {
   if (title.startsWith("Part 6")) return (
     <figure className="concept-visual module-lens-visual" aria-label="Review a module through four AI-aware lenses">
       <figcaption><span>Bring it together</span><strong>Review one module through four lenses</strong></figcaption>
-      <div className="module-lens"><div className="lens-core">My<br />module</div><div className="lens-item lens-one"><b>Curriculum</b><small>What changes?</small></div><div className="lens-item lens-two"><b>Facilitation</b><small>What helps?</small></div><div className="lens-item lens-three"><b>Assessment</b><small>What shows learning?</small></div><div className="lens-item lens-four"><b>Tools &amp; data</b><small>What helps—and what needs checking?</small></div></div>
+      <div className="module-lens"><div className="lens-core">My<br />module</div><div className="lens-item lens-one"><b>Curriculum</b><small>What changes?</small></div><div className="lens-item lens-two"><b>Facilitation</b><small>What helps?</small></div><div className="lens-item lens-three"><b>Assessment</b><small>What shows learning?</small></div><div className="lens-item lens-four"><b>Data &amp; tools</b><small>What helps—and what needs checking?</small></div></div>
     </figure>
   );
   return null;
@@ -975,12 +1016,14 @@ export default function Home() {
   const pairDesignMarker = "<!--pair-design-guide-->";
   const moduleSummaryMarker = "<!--module-summary-->";
   const strategyMapMarker = "<!--strategy-map-->";
+  const baselineCheckMarker = "<!--baseline-check-->";
   const sectionMarkdown = withoutTitle(current.markdown);
   const hasUseCaseExplorer = current.title.startsWith("Part 5") && sectionMarkdown.includes(useCaseMarker);
   const hasPairDesignGuide = current.title.startsWith("Part 3") && sectionMarkdown.includes(pairDesignMarker);
   const hasModuleSummary = current.title.startsWith("Part 7") && sectionMarkdown.includes(moduleSummaryMarker);
   const hasStrategyMap = current.title.startsWith("Part 1") && sectionMarkdown.includes(strategyMapMarker);
-  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairDesignGuide ? pairDesignMarker : hasModuleSummary ? moduleSummaryMarker : hasStrategyMap ? strategyMapMarker : "";
+  const hasBaselineCheck = current.title.startsWith("Part 2") && sectionMarkdown.includes(baselineCheckMarker);
+  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairDesignGuide ? pairDesignMarker : hasModuleSummary ? moduleSummaryMarker : hasStrategyMap ? strategyMapMarker : hasBaselineCheck ? baselineCheckMarker : "";
   const [contentBeforeInteractive, contentAfterInteractive = ""] = activeMarker
     ? sectionMarkdown.split(activeMarker)
     : [sectionMarkdown];
@@ -1047,6 +1090,7 @@ export default function Home() {
         {hasPairDesignGuide && <><PairInfographic /><PairDesignGuide /></>}
         {hasModuleSummary && <ModuleSummary />}
         {hasStrategyMap && <StrategyMap />}
+        {hasBaselineCheck && <BaselineSpotter />}
 
         {contentAfterInteractive && <article
           key={`${current.id}-after`}
