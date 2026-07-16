@@ -206,7 +206,7 @@ const sectionMeta = [
 
 const sectionBridges = [
   "Next, see where AI already touches your own T&L work.",
-  "Begin with curriculum: what must students learn, and how should learning outcomes, activities and assessment align?",
+  "Begin with curriculum: what must students learn and demonstrate as AI changes professional practice?",
   "Then consider how AI can support learning and practice—and use PAIR to give that learning a clear structure.",
   "Next, consider how assessment keeps learning authentic, credible and visible.",
   "Then choose suitable tools and data uses, checking information, output and human oversight.",
@@ -305,82 +305,57 @@ function TapChecklist({ eyebrow, title, prompt, items, tips, value, onChange, co
 }
 
 function ModuleSummary() {
-  const [active, setActive] = useState(0);
   const themes = [
     {
       label: "The aim",
       title: "AI-ready graduates",
-      preview: "Human qualities, domain expertise and responsible AI capability.",
-      takeaway: "At NP, AI readiness is not only about using a tool. Students need the human and professional judgement to use it well.",
-      practice: "Keep asking what students need to understand, do and judge in your discipline.",
+      preview: "Develop human qualities, domain expertise and responsible AI capability.",
       icon: Users,
       tone: "blue",
     },
     {
       label: "Learning design",
       title: "3As and PAIR",
-      preview: "Use the 3As to review curriculum and assessment; use PAIR to structure learning with AI.",
-      takeaway: "Use the 3As to identify what students must demonstrate independently, how they should use AI productively, and where AI may enable new professional practice. Then align outcomes, activities and assessment. Use PAIR to structure the learning process with AI.",
-      practice: "Check that your learning outcome, learning activity and assessment are aligned. Use AI to support practice and learning—not to take over the thinking.",
+      preview: "Use the 3As to review what students need to learn and demonstrate; use PAIR to structure learning with AI.",
       icon: Sparkles,
       tone: "purple",
     },
     {
       label: "Assessment",
-      title: "Assure authentic evidence",
-      preview: "Start with the learning outcome and evidence of what students can do independently and with AI.",
-      takeaway: "GenAI is allowed in summative assessment unless explicitly restricted or prohibited. Assessment should still confirm Anchor competencies independently of AI and, where relevant, evaluate the process behind students’ Augment use of AI—not just the final output.",
-      practice: "State the conditions clearly in the assignment descriptor and discuss them with students.",
+      title: "Authentic evidence",
+      preview: "Start with the learning outcome and make visible what students can do independently and with AI.",
       icon: ClipboardCheck,
       tone: "orange",
     },
     {
       label: "Data and Tools",
-      title: "Support engagement and outcomes",
-      preview: "Use suitable AI tools and learning data to support learning safely and responsibly, then check the information, output and oversight.",
-      takeaway: "Start with the T&L need. Use every tool only for the information and purpose covered by NP’s current guidance, then check the output before acting.",
-      practice: "Use AI output or learning data as a starting point. You remain responsible for the teaching and learning decision that follows.",
+      title: "Purposeful use",
+      preview: "Use suitable tools and learning data safely, check the output and retain human oversight.",
       icon: ShieldCheck,
       tone: "teal",
     },
   ];
-  const selected = themes[active];
-  const Icon = selected.icon;
 
   return (
     <section className="module-summary" aria-label="Key ideas from this package">
       <div className="summary-heading">
-        <span>Key ideas</span>
+        <span>Key takeaways</span>
         <h2>Four ideas to carry into your teaching</h2>
-        <p>Choose a theme to revisit its essential point and how it applies to your teaching.</p>
       </div>
-      <div className="summary-layout">
-        <div className="summary-topics" role="tablist" aria-label="Key ideas">
-          {themes.map((theme, index) => {
+      <div className="summary-layout summary-layout-static">
+        <div className="summary-topics summary-topics-static">
+          {themes.map((theme) => {
             const ThemeIcon = theme.icon;
             return (
-              <button
+              <div
                 key={theme.title}
-                type="button"
-                role="tab"
-                aria-selected={active === index}
-                className={`summary-topic ${active === index ? "active" : ""} tone-${theme.tone}`}
-                onClick={() => setActive(index)}
+                className={`summary-topic tone-${theme.tone}`}
               >
                 <span className="summary-topic-icon"><ThemeIcon size={18} strokeWidth={2} /></span>
                 <span><small>{theme.label}</small><strong>{theme.title}</strong><em>{theme.preview}</em></span>
-              </button>
+              </div>
             );
           })}
-        </div>
-        <div className={`summary-detail tone-${selected.tone}`} role="tabpanel">
-          <span className="summary-detail-icon"><Icon size={23} strokeWidth={2} /></span>
-          <div className="summary-detail-copy">
-            <span>{selected.label}</span>
-            <h3>{selected.title}</h3>
-            <p>{selected.takeaway}</p>
-            <div><strong>In your teaching</strong><p>{selected.practice}</p></div>
-          </div>
         </div>
       </div>
     </section>
@@ -388,7 +363,7 @@ function ModuleSummary() {
 }
 
 function NextStepActivity({ value, onChange }: { value: string; onChange: (value: string) => void }) {
-  const options = ["Discuss one change with my module team", "Identify one outcome, activity or assessment for further 3As review", "Check one assessment’s GenAI conditions", "Try one small AI-supported learning activity"];
+  const options = ["Discuss one AI-related consideration with my module team", "Identify one outcome, activity or assessment for further 3As review", "Check one assessment’s GenAI conditions", "Try one small AI-supported learning activity"];
   return (
     <section className="activity-block next-step-block">
       <span className="activity-eyebrow">Before you leave</span><h2>Choose one small next step</h2>
@@ -614,7 +589,7 @@ function ToolChecksActivity() {
 
 function SectionInteractive({ title, notes, onChange }: { title: string; notes: ActivityNotes; onChange: (key: string, value: string) => void }) {
   if (title === "AI in T&L Essentials: Level 1 (AI-Aware)") return null;
-  if (title.startsWith("Part 1")) return <DomainSpotter />;
+  if (title.startsWith("Part 1")) return null;
   if (title.startsWith("Part 2")) return <ThreeAsActivity />;
   if (title.startsWith("Part 3")) return <FacilitationRolePlay />;
   if (title.startsWith("Part 4")) return <AssessmentBriefBuilder />;
@@ -810,7 +785,7 @@ function LecturerPracticeMap() {
 }
 
 function SectionVisual({ title }: { title: string }) {
-  if (title.startsWith("Part 1")) return <LecturerPracticeMap />;
+  if (title.startsWith("Part 1")) return null;
   if (title.startsWith("Part 2")) return <ThreeAsInfographic />;
   if (title.startsWith("Part 3")) return null;
   if (title.startsWith("Part 4")) return (
@@ -885,14 +860,12 @@ export default function Home() {
   const pairInfographicMarker = "<!--pair-infographic-->";
   const moduleReviewMarker = "<!--module-review-->";
   const moduleSummaryMarker = "<!--module-summary-->";
-  const strategyMapMarker = "<!--strategy-map-->";
   const sectionMarkdown = withoutTitle(current.markdown);
   const hasUseCaseExplorer = current.title.startsWith("Part 5") && sectionMarkdown.includes(useCaseMarker);
   const hasPairInfographic = current.title.startsWith("Part 3") && sectionMarkdown.includes(pairInfographicMarker);
   const hasModuleReview = current.title.startsWith("Part 6") && sectionMarkdown.includes(moduleReviewMarker);
   const hasModuleSummary = current.title.startsWith("Part 7") && sectionMarkdown.includes(moduleSummaryMarker);
-  const hasStrategyMap = current.title.startsWith("Part 1") && sectionMarkdown.includes(strategyMapMarker);
-  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairInfographic ? pairInfographicMarker : hasModuleReview ? moduleReviewMarker : hasModuleSummary ? moduleSummaryMarker : hasStrategyMap ? strategyMapMarker : "";
+  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairInfographic ? pairInfographicMarker : hasModuleReview ? moduleReviewMarker : hasModuleSummary ? moduleSummaryMarker : "";
   const [contentBeforeInteractive, contentAfterInteractive = ""] = activeMarker
     ? sectionMarkdown.split(activeMarker)
     : [sectionMarkdown];
@@ -948,7 +921,6 @@ export default function Home() {
           </h1>
         ) : <h1 className="page-title">{current.shortTitle}</h1>}
         {active === 0 ? <OpeningVisual /> : <SectionVisual title={current.title} />}
-        {current.title.startsWith("Part 1") && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
         <article
           key={`${current.id}-before`}
           className="course-content"
@@ -959,7 +931,6 @@ export default function Home() {
         {hasPairInfographic && <PairInfographic />}
         {hasModuleReview && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
         {hasModuleSummary && <ModuleSummary />}
-        {hasStrategyMap && <StrategyMap />}
         {contentAfterInteractive && <article
           key={`${current.id}-after`}
           className="course-content course-content-continuation"
@@ -976,13 +947,6 @@ export default function Home() {
           </div>
         )}
 
-        {progress === 100 && active === sections.length - 1 && (
-          <div className="completion-moment">
-            <div className="completion-burst"><span>✓</span></div>
-            <div><strong>Learning package complete</strong><p>You have worked through every section and applied the key Level 1 considerations.</p></div>
-          </div>
-        )}
-
         <div className="section-actions">
           <div className="pager">
             <button
@@ -991,13 +955,7 @@ export default function Home() {
             >
               Previous
             </button>
-            <button
-              className="next-button"
-              onClick={goNext}
-              disabled={active === sections.length - 1}
-            >
-              Next section
-            </button>
+            {active < sections.length - 1 && <button className="next-button" onClick={goNext}>Next section</button>}
           </div>
         </div>
       </main>

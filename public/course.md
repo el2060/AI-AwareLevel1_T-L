@@ -30,35 +30,55 @@ Level 1 focuses on key considerations across four T&L Competency Framework domai
 
 # Part 1: AI in Your T&L Work
 
-## Start With Your Module
+AI may affect what students need to learn, how they learn, how learning is assessed, and how tools and data support them.
 
-AI may already affect your module's content, learning activities, assessment, feedback or use of learning data. It can support some work, change what students need to practise, or make evidence of learning less clear.
+This package explores four areas of your T&L practice:
 
-Use the visual above to explore the four related areas that organise this package.
+**Curriculum**
 
-A useful question for your module:
+What students need to learn and demonstrate.
+
+**Facilitation**
+
+How AI may support explanation, practice and feedback.
+
+**Assessment**
+
+How learning remains authentic, credible and visible.
+
+**Data and Tools**
+
+How AI tools and learning data may support learning safely and responsibly.
+
+Across all four, keep the learning purpose in view and apply professional judgement.
+
+## Keep One Module in Mind
+
+As you work through the package, consider:
 
 > For this learning purpose, what should the student do, what might AI support, and what safeguards are needed?
 
----
-
 ## NP’s Shared Direction for AI-Enabled T&L
 
-NP aims to prepare **AI-ready graduates** who combine:
+NP aims to prepare AI-ready graduates who combine:
 
-- Strong human qualities.
-- Domain knowledge and skills.
-- Responsible and effective use of AI.
+- strong human qualities;
+- domain knowledge and skills;
+- responsible and effective use of AI.
 
-Three things need to be true for that to happen:
+This requires:
 
 - **AI-relevant curriculum:** Knowledge and skills remain relevant to the discipline and profession.
 - **AI-integrated learning and assessment:** Students learn to work with AI while still demonstrating what they know and can do.
-- **AI-enabled learning support:** AI can provide appropriate practice, feedback and personalised support when aligned with the intended learning.
+- **AI-enabled learning support:** AI provides appropriate practice, feedback and personalised support.
 
-At Level 1, focus on where these show up in your own module.
+## NP’s Five Strategies
 
-<!--strategy-map-->
+- **Strategy 1 · Pedagogy · PAIR:** Help students learn with AI.
+- **Strategy 2 · Curriculum · 3As:** Review what students need to learn and demonstrate.
+- **Strategy 3 · Assessment:** Keep learning visible.
+- **Strategy 4 · Personalised Learning:** Scaffold practice and feedback.
+- **Strategy 5 · Human Skills and Resilience:** Build the human edge.
 
 The next four parts explore how this direction applies to curriculum, facilitation of learning, assessment, and data and tools. Human judgement runs through all four.
 
@@ -341,13 +361,12 @@ Choose a module you teach, lead or support. Use the four questions to identify w
 
 You now have a shared Level 1 foundation to:
 
-- Recognise where AI may affect curriculum, facilitation, assessment, and the use of data and tools.
-- Recognise the common student AI baseline and consider where your module builds on it.
-- Use the 3As and PAIR to inform a teaching or learning decision.
-- Describe NP’s requirements for GenAI use in assessment.
-- Keep human judgement at the centre when AI is involved.
-- Choose one appropriate next step for a module you teach, lead or support.
+- recognise where AI may affect curriculum, facilitation, assessment, and the use of data and tools;
+- use the 3As and PAIR to inform a teaching or learning decision;
+- identify NP’s key requirements for GenAI use in assessment;
+- keep human judgement at the centre;
+- choose one appropriate next step for a module you teach, lead or support.
 
-Complete the separately administered quiz to fulfil the programme’s completion requirements.
+Complete the separately administered quiz to fulfil the programme requirements.
 
-Being AI-aware means knowing what to consider, which NP approaches apply and when to seek guidance.
+> Being AI-aware means knowing what to consider, which NP approaches apply and when to seek guidance.
