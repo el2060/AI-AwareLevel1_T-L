@@ -195,7 +195,7 @@ function withoutTitle(markdown: string) {
 
 const sectionMeta = [
   { mark: "✦", label: "Start", tone: "blue" },
-  { mark: "01", label: "AI in your T&L work", tone: "blue" },
+  { mark: "01", label: "NP direction", tone: "blue" },
   { mark: "02", label: "Curriculum", tone: "orange" },
   { mark: "03", label: "Facilitation", tone: "teal" },
   { mark: "04", label: "Assessment", tone: "blue" },
@@ -204,7 +204,7 @@ const sectionMeta = [
 ];
 
 const sectionBridges = [
-  "Next, see where AI already touches your own T&L work.",
+  "See how these four areas connect to NP’s direction for AI-enabled T&L.",
   "Begin with curriculum: what must students learn and demonstrate as AI changes professional practice?",
   "Then consider how AI can support learning and practice—and use PAIR to give that learning a clear structure.",
   "Next, consider how assessment keeps learning authentic, credible and visible.",
