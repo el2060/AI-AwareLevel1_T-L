@@ -335,38 +335,28 @@ A suitable AI use has a clear learning purpose, an appropriate tool, safe handli
 
 ---
 
-# Part 6: Apply It to Your Module
+# Part 6: Bring It Together
 
 ## Review One Module Through Four Lenses
 
-Choose a module you teach, lead or support. Use the four questions to identify where AI may affect learning and what may need attention.
+Choose a module you teach, lead or support. Consider each question once.
 
 <!--module-review-->
 
-## Choose One Small Next Step
+## Four Ideas to Carry Forward
 
-- Discuss one AI-related consideration with your module team.
-- Identify one outcome, activity or assessment for further 3As review.
-- Try a Generate → Compare → Check → Improve activity.
-- Check the GenAI conditions in one assessment brief.
-- Explore one small, appropriate use of M365 Copilot or another approved tool.
+**AI-ready graduates**
 
----
+Human qualities, domain expertise and responsible AI capability.
 
-# Part 7: Key Takeaways and Next Step
+**3As and PAIR**
 
-<!--module-summary-->
+Use the 3As to review what students need to learn and demonstrate, and PAIR to structure learning with AI.
 
-## You Have Completed the Learning Package
+**Authentic evidence**
 
-You now have a shared Level 1 foundation to:
+Start with the learning outcome and make visible what students can do independently and with AI.
 
-- recognise where AI may affect curriculum, facilitation, assessment, and the use of data and tools;
-- use the 3As and PAIR to inform a teaching or learning decision;
-- identify NP’s key requirements for GenAI use in assessment;
-- keep human judgement at the centre;
-- choose one appropriate next step for a module you teach, lead or support.
+**Purposeful use**
 
-Complete the separately administered quiz to fulfil the programme requirements.
-
-> **Being AI-aware means knowing what to consider, which NP approaches apply and when to seek guidance.**
+Use suitable tools and learning data safely, check the output and retain human oversight.

@@ -200,8 +200,7 @@ const sectionMeta = [
   { mark: "03", label: "Facilitation", tone: "teal" },
   { mark: "04", label: "Assessment", tone: "blue" },
   { mark: "05", label: "Data and Tools", tone: "purple" },
-  { mark: "06", label: "Apply", tone: "orange" },
-  { mark: "07", label: "Key takeaways", tone: "green" },
+  { mark: "06", label: "Bring together", tone: "green" },
 ];
 
 const sectionBridges = [
@@ -211,7 +210,6 @@ const sectionBridges = [
   "Next, consider how assessment keeps learning authentic, credible and visible.",
   "Then choose suitable tools and data uses, checking information, output and human oversight.",
   "Bring the four areas together for a module you teach, lead or support.",
-  "Finish with the key ideas and choose one next step.",
 ];
 
 function ChoiceCheck({ question, eyebrow, choices }: { question: string; eyebrow: string; choices: Choice[] }) {
@@ -284,7 +282,7 @@ function DomainSpotter() {
   );
 }
 
-function TapChecklist({ eyebrow, title, prompt, items, tips, value, onChange, completionTitle, completionText }: { eyebrow: string; title: string; prompt: string; items: string[]; tips?: string[]; value: string; onChange: (value: string) => void; completionTitle: string; completionText: string }) {
+function TapChecklist({ eyebrow, title, prompt, items, tips, value, onChange, completionTitle, completionText }: { eyebrow: string; title: string; prompt: string; items: string[]; tips?: string[]; value: string; onChange: (value: string) => void; completionTitle?: string; completionText?: string }) {
   const selected = value ? value.split("|") : [];
   return (
     <section className="activity-block tap-checklist">
@@ -299,75 +297,17 @@ function TapChecklist({ eyebrow, title, prompt, items, tips, value, onChange, co
           </button>
         );
       })}</div>
-      {selected.length === items.length && <div className="activity-feedback"><strong>{completionTitle}</strong><p>{completionText}</p></div>}
-    </section>
-  );
-}
-
-function ModuleSummary() {
-  const themes = [
-    {
-      label: "The aim",
-      title: "AI-ready graduates",
-      preview: "Develop human qualities, domain expertise and responsible AI capability.",
-      icon: Users,
-      tone: "blue",
-    },
-    {
-      label: "Learning design",
-      title: "3As and PAIR",
-      preview: "Use the 3As to review what students need to learn and demonstrate, and PAIR to structure learning with AI.",
-      icon: Sparkles,
-      tone: "purple",
-    },
-    {
-      label: "Assessment",
-      title: "Authentic evidence",
-      preview: "Start with the learning outcome and make visible what students can do independently and with AI.",
-      icon: ClipboardCheck,
-      tone: "orange",
-    },
-    {
-      label: "Data and Tools",
-      title: "Purposeful use",
-      preview: "Use suitable tools and learning data safely, check the output and retain human oversight.",
-      icon: ShieldCheck,
-      tone: "teal",
-    },
-  ];
-
-  return (
-    <section className="module-summary" aria-label="Key ideas from this package">
-      <div className="summary-heading">
-        <span>Key takeaways</span>
-        <h2>Four ideas to carry into your teaching</h2>
-      </div>
-      <div className="summary-layout summary-layout-static">
-        <div className="summary-topics summary-topics-static">
-          {themes.map((theme) => {
-            const ThemeIcon = theme.icon;
-            return (
-              <div
-                key={theme.title}
-                className={`summary-topic tone-${theme.tone}`}
-              >
-                <span className="summary-topic-icon"><ThemeIcon size={18} strokeWidth={2} /></span>
-                <span><small>{theme.label}</small><strong>{theme.title}</strong><em>{theme.preview}</em></span>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+      {completionTitle && completionText && selected.length === items.length && <div className="activity-feedback"><strong>{completionTitle}</strong><p>{completionText}</p></div>}
     </section>
   );
 }
 
 function NextStepActivity({ value, onChange }: { value: string; onChange: (value: string) => void }) {
   const options = [
-    { label: "Discuss one AI-related consideration with my module team", feedback: "Discussing one AI-related consideration with your module team is a focused way to put Level 1 awareness into practice." },
-    { label: "Identify one outcome, activity or assessment for further 3As review", feedback: "Identifying one area for further 3As review is a focused way to put Level 1 awareness into practice." },
+    { label: "Identify one outcome, activity or assessment for further 3As review", feedback: "A single 3As review is a manageable way to begin identifying what may need attention." },
+    { label: "Try one Generate → Compare → Check → Improve activity", feedback: "A structured activity gives students practice in evaluating and improving AI output rather than accepting the first response." },
     { label: "Check one assessment’s GenAI conditions", feedback: "Checking one assessment’s GenAI conditions is a focused way to put Level 1 awareness into practice." },
-    { label: "Try one small AI-supported learning activity", feedback: "Trying one small AI-supported learning activity is a focused way to put Level 1 awareness into practice." },
+    { label: "Explore one small, appropriate use of M365 Copilot or another approved tool", feedback: "Start with a clear teaching and learning need, then check the output, data considerations and your oversight." },
   ];
   const selected = options.find((option) => option.label === value);
   return (
@@ -375,8 +315,16 @@ function NextStepActivity({ value, onChange }: { value: string; onChange: (value
       <span className="activity-eyebrow">Before you leave</span><h2>Choose one small next step</h2>
       <div className="choice-grid">{options.map((option, index) => { const letter = String.fromCharCode(65 + index); const isSelected = value === option.label; return <button key={option.label} className={`choice-button ${isSelected ? "selected" : ""}`} onClick={() => onChange(option.label)}><span>{isSelected ? `✓ ${letter}` : letter}</span>{option.label}</button>; })}</div>
       {selected && <div className="activity-feedback"><strong>A Practical Place to Start</strong><p>{selected.feedback}</p></div>}
+      <div className="final-next-step-closing">
+        <blockquote><strong>Being AI-aware means knowing what to consider, which NP approaches apply and when to seek guidance.</strong></blockquote>
+        <p>Complete the separately administered quiz to fulfil the programme requirements.</p>
+      </div>
     </section>
   );
+}
+
+function FourLensReview({ value, onChange }: { value: string; onChange: (value: string) => void }) {
+  return <TapChecklist eyebrow="Review one module" title="Four-Lens Review" prompt="Tap each question after considering it for your module." items={["Curriculum: What may need review in the learning outcomes, activities or assessment?", "Facilitation: Where could students compare, check or improve AI-generated output?", "Assessment: What must students demonstrate independently, and where might GenAI use be appropriate?", "Data and Tools: What T&L need could a tool support, and what would need checking before use?"]} tips={["Use the 3As to consider whether the capability is Anchor, Augment or Advance.", "Use PAIR to keep students evaluating, refining and reflecting.", "Check that the conditions and evidence of learning are clear.", "Consider learning value, output quality, data and ethics, and human oversight."]} value={value} onChange={onChange} />;
 }
 
 function ThreeAsActivity() {
@@ -599,8 +547,6 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
   if (title.startsWith("Part 2")) return <ThreeAsActivity />;
   if (title.startsWith("Part 3")) return <FacilitationRolePlay />;
   if (title.startsWith("Part 4")) return <AssessmentBriefBuilder />;
-  if (title.startsWith("Part 6")) return <TapChecklist eyebrow="In your module" title="Four-Lens Review" prompt="Tap each question after considering it for your module." items={["Curriculum: What may need review in the learning outcomes, activities or assessment?", "Facilitation: Where could students compare, check or improve AI-generated output?", "Assessment: What must students demonstrate independently, and where might GenAI use be appropriate?", "Data and Tools: What T&L need could a tool support, and what would need checking before use?"]} tips={["Use the 3As to consider whether the capability is Anchor, Augment or Advance.", "Use PAIR to keep students evaluating, refining and reflecting rather than accepting the first output.", "Check that the GenAI conditions and evidence of student learning are clear.", "Consider learning value, output quality, data and ethics, and human oversight."]} value={notes.snapshotcheck ?? ""} onChange={(value) => onChange("snapshotcheck", value)} completionTitle="Four Lenses Considered" completionText="You have identified what may need attention in this module. Now choose one small next step." />;
-  if (title.startsWith("Part 7")) return <NextStepActivity value={notes.nextstep ?? ""} onChange={(value) => onChange("nextstep", value)} />;
   return null;
 }
 
@@ -865,13 +811,11 @@ export default function Home() {
   const useCaseMarker = "<!--use-case-explorer-->";
   const pairInfographicMarker = "<!--pair-infographic-->";
   const moduleReviewMarker = "<!--module-review-->";
-  const moduleSummaryMarker = "<!--module-summary-->";
   const sectionMarkdown = withoutTitle(current.markdown);
   const hasUseCaseExplorer = current.title.startsWith("Part 5") && sectionMarkdown.includes(useCaseMarker);
   const hasPairInfographic = current.title.startsWith("Part 3") && sectionMarkdown.includes(pairInfographicMarker);
   const hasModuleReview = current.title.startsWith("Part 6") && sectionMarkdown.includes(moduleReviewMarker);
-  const hasModuleSummary = current.title.startsWith("Part 7") && sectionMarkdown.includes(moduleSummaryMarker);
-  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairInfographic ? pairInfographicMarker : hasModuleReview ? moduleReviewMarker : hasModuleSummary ? moduleSummaryMarker : "";
+  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairInfographic ? pairInfographicMarker : hasModuleReview ? moduleReviewMarker : "";
   const [contentBeforeInteractive, contentAfterInteractive = ""] = activeMarker
     ? sectionMarkdown.split(activeMarker)
     : [sectionMarkdown];
@@ -935,13 +879,14 @@ export default function Home() {
 
         {hasUseCaseExplorer && <UseCaseExplorer />}
         {hasPairInfographic && <PairInfographic />}
-        {hasModuleReview && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
-        {hasModuleSummary && <ModuleSummary />}
+        {hasModuleReview && <FourLensReview value={activityNotes.snapshotcheck ?? ""} onChange={(value) => setActivityValue("snapshotcheck", value)} />}
         {contentAfterInteractive && <article
           key={`${current.id}-after`}
           className="course-content course-content-continuation"
           dangerouslySetInnerHTML={{ __html: markdownToHtml(contentAfterInteractive) }}
         />}
+
+        {hasModuleReview && <NextStepActivity value={activityNotes.nextstep ?? ""} onChange={(value) => setActivityValue("nextstep", value)} />}
 
         {!current.title.startsWith("Part 1") && !hasModuleReview && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
         {current.title.startsWith("Part 5") && <ToolChecksActivity />}
