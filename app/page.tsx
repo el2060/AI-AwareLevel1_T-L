@@ -204,7 +204,7 @@ const sectionMeta = [
 ];
 
 const sectionBridges = [
-  "Keep one module you teach, lead or support in mind as you work through the package.",
+  "Next, see where AI already touches your own T&L work.",
   "Begin with curriculum: what must students learn, and how should learning outcomes, activities and assessment align?",
   "Then consider how AI can support learning and practice—and use PAIR to give that learning a clear structure.",
   "Next, consider how assessment keeps learning authentic, credible and visible.",
@@ -245,10 +245,10 @@ function ChoiceCheck({ question, eyebrow, choices }: { question: string; eyebrow
 function DomainSpotter() {
   const domains = ["Curriculum", "Facilitation", "Assessment", "Data and Tools"];
   const scenarios = [
-    { id: "curriculum", context: "Your diploma team is reviewing which coding capabilities students must demonstrate independently of AI and which should include effective use of AI-assisted development.", answer: "Curriculum", feedback: "This is Curriculum: AI is changing what students need to learn and how it’s taught. Part 2 uses the 3As to work through exactly this kind of question." },
-    { id: "facilitation", context: "A student asks an AI tutor to explain a concept a second way before attempting the practice questions.", answer: "Facilitation", feedback: "This is Facilitation: AI is supporting explanation and practice. Part 3 uses PAIR to judge when this helps rather than replaces learning." },
-    { id: "assessment", context: "A student’s submission reads as clearly GenAI-polished, and you need to decide what still counts as their own work.", answer: "Assessment", feedback: "This is Assessment: providing authentic, credible evidence of learning. Part 4 covers NP’s GenAI requirements for summative assessment." },
-    { id: "tools", context: "You want to use AI to summarise a term’s worth of student feedback comments to spot common themes.", answer: "Data and Tools", feedback: "This is Data and Tools: using AI and learning data safely and responsibly. Part 5 covers what to check before you start." },
+    { id: "curriculum", context: "Your diploma team is reviewing which coding capabilities students must demonstrate independently of AI and which should include effective use of AI-assisted development.", answer: "Curriculum", feedback: "This is Curriculum: AI is changing what students need to learn and how it’s taught." },
+    { id: "facilitation", context: "A student asks an AI tutor to explain a concept a second way before attempting the practice questions.", answer: "Facilitation", feedback: "This is Facilitation: AI is supporting explanation and practice." },
+    { id: "assessment", context: "A student’s submission reads as clearly GenAI-polished, and you need to decide what still counts as their own work.", answer: "Assessment", feedback: "This is Assessment: providing authentic, credible evidence of learning." },
+    { id: "tools", context: "You want to use AI to summarise a term’s worth of student feedback comments to spot common themes.", answer: "Data and Tools", feedback: "This is Data and Tools: using AI and learning data safely and responsibly." },
   ];
   const [active, setActive] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -572,11 +572,11 @@ function PairDesignGuide() {
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
-    { name: "Pedagogy · PAIR", question: "Help students learn with AI", detail: "PAIR gives students a visible process for learning and problem-solving with AI. You will use this in Part 3.", icon: MessageCircle },
-    { name: "Curriculum · 3As", question: "Review what students need to learn and demonstrate", detail: "The 3As help course and module teams review curriculum and assessment as AI changes the discipline, then align outcomes, activities and evidence of learning. You will use this in Part 2.", icon: Sparkles },
-    { name: "Assessment", question: "Keep learning visible", detail: "Assessment conditions should show what students must demonstrate and how AI may be used. Covered in Part 4.", icon: ClipboardCheck },
-    { name: "Personalised learning", question: "Scaffold practice and feedback", detail: "AI-enabled tutors and learning assistants can support practice, feedback and different learning needs. Covered in Part 5.", icon: Bot },
-    { name: "Human skills and resilience", question: "Keep judgement at the centre", detail: "Ethics, communication, creativity, resilience and professional judgement remain essential. This runs through every part.", icon: Users },
+    { name: "Pedagogy · PAIR", question: "Help students learn with AI", detail: "PAIR gives students a visible process for learning and problem-solving with AI.", icon: MessageCircle },
+    { name: "Curriculum · 3As", question: "Review what students need to learn and demonstrate", detail: "The 3As help course and module teams review curriculum and assessment as AI changes the discipline, then align outcomes, activities and evidence of learning.", icon: Sparkles },
+    { name: "Assessment", question: "Keep learning visible", detail: "Assessment conditions should show what students must demonstrate and how AI may be used.", icon: ClipboardCheck },
+    { name: "Personalised learning", question: "Scaffold practice and feedback", detail: "AI-enabled tutors and learning assistants can support practice, feedback and different learning needs.", icon: Bot },
+    { name: "Human Skills and Resilience", question: "Build the human edge", detail: "Develop purpose, resilience, human judgement and the ability to relate, think and act effectively in an AI-enabled world.", icon: Users },
   ];
   return (
     <section className="strategy-map" aria-label="How NP approaches connect across this package">

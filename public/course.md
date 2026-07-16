@@ -34,9 +34,9 @@ Level 1 focuses on key considerations across four T&L Competency Framework domai
 
 AI may already affect your module's content, learning activities, assessment, feedback or use of learning data. It can support some work, change what students need to practise, or make evidence of learning less clear.
 
-Use the visual above to explore the four related areas. They organise this package and return in Part 6.
+Use the visual above to explore the four related areas that organise this package.
 
-A useful question to carry through this module is:
+A useful question for your module:
 
 > For this learning purpose, what should the student do, what might AI support, and what safeguards are needed?
 
@@ -118,7 +118,7 @@ NP's pedagogy for facilitating learning with AI is the **PAIR framework**—esta
 
 PAIR is a simple, platform-independent structure for AI-supported learning and problem-solving. It is human-centred, skill-focused and responsibility-centred: students remain accountable for their choices, AI outputs and learning.
 
-When students select a tool, start with the learning purpose. Part 5 provides the fuller checks for the tool, information, output and human oversight.
+When students select a tool, start with the learning purpose—then check it is a suitable, approved choice before use.
 
 *Adapted from: Acar, O. A. (2023). “Are Your Students Ready for AI? A 4-Step Framework for a ChatGPT World.” HBP Education.*
 
@@ -172,7 +172,7 @@ Students then:
 
 AI supports initial exploration. It does not replace empathy, professional judgement or the human interaction students need to practise.
 
-AI-enabled tutors, such as D2L Lumi Tutor, offer personalised practice and feedback outside class time—covered in Part 5.
+AI-enabled tutors, such as D2L Lumi Tutor, offer personalised practice and feedback outside class time.
 
 ## Guiding Students' Everyday Use
 
