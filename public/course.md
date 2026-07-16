@@ -13,7 +13,7 @@ This module helps you:
 
 ### Learning time
 
-Allow about 2 hours for this package, its activities and the completion quiz. Work at your own pace—you can leave and return at any time.
+Allow about 2 hours for this package, its activities and the completion quiz.
 
 ---
 
@@ -64,7 +64,7 @@ Five strategies put this direction into practice.
 
 <!--strategy-map-->
 
-You do not need to memorise the strategies. The next four parts turn them into four familiar areas of your teaching work: curriculum (Part 2), facilitation of learning (Part 3), assessment (Part 4), and tools and data (Part 5). Human judgement runs through all four.
+The next four parts turn them into four familiar areas of your teaching work: curriculum (Part 2), facilitation of learning (Part 3), assessment (Part 4), and tools and data (Part 5). Human judgement runs through all four.
 
 ---
 
