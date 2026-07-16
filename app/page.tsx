@@ -248,7 +248,7 @@ function DomainSpotter() {
     { id: "curriculum", context: "Your diploma team is reviewing whether graduates still need to hand-code without AI assistance.", answer: "Curriculum", feedback: "This is Curriculum: AI is changing what students need to learn and how it’s taught. Part 2 uses the 3As to work through exactly this kind of question." },
     { id: "facilitation", context: "A student asks an AI tutor to explain a concept a second way before attempting the practice questions.", answer: "Facilitation", feedback: "This is Facilitation: AI is supporting explanation and practice. Part 3 uses PAIR to judge when this helps rather than replaces learning." },
     { id: "assessment", context: "A student’s submission reads as clearly GenAI-polished, and you need to decide what still counts as their own work.", answer: "Assessment", feedback: "This is Assessment: providing authentic, credible evidence of learning. Part 4 covers NP’s GenAI requirements for summative assessment." },
-    { id: "tools", context: "You want to summarise a term’s worth of student feedback comments to spot common themes.", answer: "Data and tools", feedback: "This is Data and Tools: using AI and learning data safely and responsibly. Part 5 covers what to check before you start." },
+    { id: "tools", context: "You want to use AI to summarise a term’s worth of student feedback comments to spot common themes.", answer: "Data and tools", feedback: "This is Data and Tools: using AI and learning data safely and responsibly. Part 5 covers what to check before you start." },
   ];
   const [active, setActive] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -377,7 +377,7 @@ function ModuleSummary() {
     {
       label: "Data and tools",
       title: "Support engagement and outcomes",
-      preview: "Use suitable tools and learning data to support learning safely and responsibly, then check the information, output and oversight.",
+      preview: "Use suitable AI tools and learning data to support learning safely and responsibly, then check the information, output and oversight.",
       takeaway: "M365 Copilot is cleared up to OC-Restricted; Pair Chat is cleared up to OC-Sensitive Normal (OC-SN). Use every tool only for its approved information and purpose.",
       practice: "Use AI output or learning data as a starting point. You remain responsible for the teaching and learning decision that follows.",
       icon: ShieldCheck,
@@ -755,7 +755,7 @@ function OpeningVisual() {
     },
     {
       title: "Data and tools",
-      detail: "How tools and learning data can support learning—safely and responsibly",
+      detail: "How AI tools and learning data can support learning—safely and responsibly",
       icon: ShieldCheck,
     },
   ];
