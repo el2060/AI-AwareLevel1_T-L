@@ -358,9 +358,9 @@ function ThreeAsActivity() {
     },
   ];
   const lenses = [
-    { name: "Anchor", description: "Capabilities students must retain and demonstrate independently of AI." },
-    { name: "Augment", description: "Productive use of AI with disciplinary judgement and oversight." },
-    { name: "Advance", description: "New AI-enabled possibilities beyond established professional practice." },
+    { name: "Anchor", description: "Capabilities students must demonstrate independently of AI." },
+    { name: "Augment", description: "Productive use of AI with disciplinary judgement." },
+    { name: "Advance", description: "New AI-enabled possibilities beyond established practice." },
   ];
   const [active, setActive] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -599,23 +599,20 @@ function ThreeAsInfographic() {
     {
       key: "anchor",
       name: "Anchor",
-      tagline: "What students must retain and demonstrate independently of AI",
-      body: "Identify the disciplinary foundations, human qualities and professional judgement students must still demonstrate independently of AI.",
-      cue: "Human judgement · empathy · ethical reasoning · creativity · interpersonal skills · professional responsibility",
+      tagline: "What students must demonstrate independently of AI",
+      body: "Disciplinary foundations, human qualities and professional judgement.",
     },
     {
       key: "augment",
       name: "Augment",
       tagline: "How students should use AI productively",
-      body: "Develop and assess how well students use AI to improve the productivity and quality of their work while applying disciplinary judgement and oversight.",
-      cue: "Generate · compare · analyse · evaluate · improve",
+      body: "Use AI to improve the quality and efficiency of work while retaining disciplinary judgement.",
     },
     {
       key: "advance",
       name: "Advance",
       tagline: "What new possibilities AI may enable",
-      body: "In suitable modules, enable students to use AI to go beyond established pre-AI job boundaries—not only doing the same work faster, but creating new services, workflows or roles.",
-      cue: "New services · new workflows · new roles · future practice",
+      body: "Use AI to create new services, workflows or forms of professional practice.",
     },
   ];
   return (
@@ -629,7 +626,6 @@ function ThreeAsInfographic() {
           <section key={lens.key} className={`three-as-band ${lens.key}-band`}>
             <div className="three-as-label"><i aria-hidden="true">A</i><div><b>{lens.name}</b><small>{lens.tagline}</small></div></div>
             <p>{lens.body}</p>
-            <em>{lens.cue}</em>
           </section>
         ))}
       </div>

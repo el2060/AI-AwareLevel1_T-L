@@ -95,33 +95,31 @@ As you work through the package, consider:
 
 # Part 2: Curriculum — What Should Students Learn?
 
-AI can now perform tasks that students previously completed independently. This may change professional practice, but students still need strong disciplinary foundations and judgement to recognise when AI output is wrong, unsafe or unsuitable.
-
-All students receive a common foundation in AI literacy. The 3As help course and module teams consider how discipline-specific learning should build on that foundation.
+AI may change what students need to learn and demonstrate, but strong disciplinary foundations and judgement remain essential.
 
 ## Consider Your Module
 
-Choose one learning outcome from a module you teach, lead or support.
+Choose one learning outcome.
 
 - What must students understand, judge or do independently of AI?
 - How should students use AI productively?
-- What new AI-enabled practice might be worth exploring?
+- Is there any new AI-enabled practice worth exploring?
 
 Then ask:
 
 > Do the learning activities provide suitable practice, and does the assessment make the intended learning visible?
 
-At Level 1, the aim is to recognise where further review may be needed.
+At Level 1, the aim is to identify where further review may be needed.
 
 ## Key Takeaway
 
-Use the 3As to consider:
+Use the 3As to review:
 
 - what students must demonstrate independently of AI;
 - how they should use AI productively;
-- where AI may enable new forms of professional practice.
+- where AI may enable new professional practice.
 
-Then check that learning outcomes, activities and assessment remain aligned.
+Then check that outcomes, activities and assessment remain aligned.
 
 ---
 
