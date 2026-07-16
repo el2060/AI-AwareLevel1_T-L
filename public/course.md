@@ -6,10 +6,10 @@ AI is already part of how students learn and how many workplaces operate. You ma
 
 This module helps you:
 
-- **Recognise** how AI is changing what students need to learn and how they are taught in your discipline.
-- **Describe** the benefits, limitations and risks of facilitating learning with AI.
-- **Describe** how AI affects assessment design, validity and academic integrity, and how NP’s GenAI requirements apply.
-- **Recognise** where AI tools and learning data can legally, safely and responsibly support your T&L work.
+- **Recognise** how AI is changing what students need to learn and how you teach it in your discipline.
+- **Understand** the benefits, limitations and risks of facilitating learning with AI.
+- **Understand** how AI affects assessment design, validity and academic integrity, and what NP’s GenAI requirements mean for you.
+- **Analyse** where AI tools and learning data can legally, safely and responsibly support your T&L work.
 
 ### Learning time
 
