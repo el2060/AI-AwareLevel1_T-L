@@ -360,7 +360,7 @@ function ModuleSummary() {
       label: "Learning design",
       title: "3As and PAIR",
       preview: "Use the 3As to review aligned learning outcomes, activities and assessment; use PAIR to structure learning with AI.",
-      takeaway: "Anchor foundations, Augment authentic work and Advance new possibilities. The 3As guide a review of what students should learn, how they will practise it and how they will demonstrate it. NP has adopted and adapted PAIR as a process for learning with AI.",
+      takeaway: "Anchor what AI can't replace, Augment productivity and quality with AI, and Advance by redefining what the job looks like. The 3As guide a review of what students should learn, how they will practise it and how they will demonstrate it. NP has adopted and adapted PAIR as a process for learning with AI.",
       practice: "Check that your learning outcome, learning activity and assessment are aligned. Use AI to support practice and learning—not to take over the thinking.",
       icon: Sparkles,
       tone: "purple",
@@ -469,9 +469,9 @@ function ThreeAsActivity() {
     },
   ];
   const lenses = [
-    { name: "Anchor", description: "Core domain, professional and human capability, valued in the field and demonstrated independently of AI." },
+    { name: "Anchor", description: "Core domain, professional and human capability, valued in the field and demonstrated independently of AI. The benchmark is simple: if AI can already do it well, it isn't an Anchor." },
     { name: "Augment", description: "Use AI to improve the productivity and quality of domain work." },
-    { name: "Advance", description: "Use AI to innovate or transform professional practice." },
+    { name: "Advance", description: "Use AI to go beyond the pre-AI job—redefining what's possible, not just doing it faster." },
   ];
   const [active, setActive] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -785,22 +785,22 @@ function ThreeAsInfographic() {
     {
       key: "anchor",
       name: "Anchor",
-      tagline: "Independent of AI",
-      body: "Core disciplinary and professional competencies valued by the profession and industry—plus the human qualities, such as judgement and integrity, that industry values just as highly. Demonstrated without AI.",
+      tagline: "AI is the benchmark",
+      body: "Human skills and professional judgement that AI cannot replace or replicate—capabilities your students need in spite of AI. If AI can already do it well, it isn't an Anchor.",
       cue: "Knowledge · skills · reasoning · judgement · human qualities",
     },
     {
       key: "augment",
       name: "Augment",
-      tagline: "Improve authentic practice",
-      body: "AI-enabled practice that strengthens a real professional workflow.",
+      tagline: "Improve productivity and quality",
+      body: "Using AI to work more productively, and to raise the quality of what students produce, in a real professional workflow.",
       cue: "Generate · compare · analyse · improve",
     },
     {
       key: "advance",
       name: "Advance",
-      tagline: "Explore what becomes possible",
-      body: "Emerging or transformative AI applications within the discipline.",
+      tagline: "Redefine the job, not just speed it up",
+      body: "Recognising students whose use of AI lets them go beyond the pre-AI job—not just doing the old role faster, but changing what the role can be.",
       cue: "New services · new workflows · future practice",
     },
   ];

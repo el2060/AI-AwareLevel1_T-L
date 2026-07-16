@@ -93,7 +93,7 @@ Use the infographic with one module in mind:
 
 Use the lens—or combination of lenses—that best represents the capability students need to develop. Not every learning outcome or module will require all three.
 
-A useful benchmark when defining Anchors: whatever AI can already do well in your discipline should **not** be treated as an Anchor. The question is what your graduates must do that AI cannot.
+AI is the benchmark for defining Anchors: whatever it can already do well in your discipline should **not** be treated as an Anchor. The question is what your graduates must do that AI cannot.
 
 ## Examples Across Disciplines
 
@@ -129,7 +129,7 @@ The 3As help course and module teams review:
 
 Use these questions to keep learning outcomes, activities and assessment constructively aligned as AI changes the discipline.
 
-To maximise employability: what must your students do that AI **cannot** do (Anchor), **with** AI (Augment), and **beyond current job boundaries** (Advance)?
+To maximise employability: what must your students do that AI **cannot** do (Anchor), do **better with** AI (Augment), and do to **redefine the job** (Advance)?
 
 ---
 
