@@ -280,7 +280,7 @@ const sectionBridges = [
   "Explore PAIR, a simple framework for helping students use AI purposefully, critically and responsibly in their learning.",
   "Consider how to set clear GenAI conditions and design assessment that provides authentic, credible evidence of students’ learning and contribution.",
   "Explore how AI tools and learning data can be used purposefully to support learning, while protecting information, verifying outputs and retaining human oversight.",
-  "Bring the four areas together for a module you teach, lead or support.",
+  "Bring the four areas together by reviewing one module you teach, lead or support.",
 ];
 
 function ChoiceCheck({ question, eyebrow, choices }: { question: string; eyebrow: string; choices: Choice[] }) {
@@ -503,20 +503,20 @@ function UseCaseExplorer() {
       </div>
       <div className="use-case-detail" aria-live="polite">
         <div className="use-case-title"><span><Icon size={22} aria-hidden="true" /></span><div><small>Suggested tool</small><strong>{selected.tool}</strong></div></div>
+        {selected.tool.startsWith("M365 Copilot") && <p className="use-case-classification">Available within NP’s environment for approved use with information classified up to <strong>Official (Closed) – Restricted</strong>, subject to NP’s current data-handling requirements and approved use conditions.</p>}
         <h3>{selected.title}</h3><p>{selected.use}</p>
         <div className="prompt-starter"><strong>Prompt starter</strong><p>{selected.prompt}</p></div>
         <div className="use-case-checks"><div><b>Check</b><p>{selected.check}</p></div><div><b>Your judgement</b><p>{selected.judgement}</p></div></div>
       </div>
-      <p className="use-case-reminder"><strong>The pattern:</strong> give relevant context, set a bounded task, state the constraints, then check the output. The tool drafts, flags or summarises. You interpret the output, decide what action to take and review whether it helped.</p>
     </section>
   );
 }
 
 function ToolChecksActivity() {
-  return <ChoiceCheck eyebrow="Four checks in practice" question="LMS data shows that one group of students repeatedly skips an online activity. An approved AI tool suggests that they are disengaged and recommends sending them additional remedial work. Before deciding what to do, which response best applies the four checks?" choices={[
-    { label: "Check whether the activity supports an important learning outcome, review the underlying data and possible explanations, consider the students’ context, then decide on an appropriate response and review whether it helps.", correct: true, feedback: "The data may indicate a possible need, but it does not explain why the pattern occurred or determine the appropriate response. The lecturer must interpret the evidence in context and review the impact of any intervention." },
-    { label: "Send the remedial work because the approved tool identified a clear pattern.", correct: false, feedback: "The data may indicate a possible need, but it does not explain why the pattern occurred or determine the appropriate response. The lecturer must interpret the evidence in context and review the impact of any intervention." },
-    { label: "Ask the tool to identify which students are most likely to fail and prioritise them.", correct: false, feedback: "The data may indicate a possible need, but it does not explain why the pattern occurred or determine the appropriate response. The lecturer must interpret the evidence in context and review the impact of any intervention." },
+  return <ChoiceCheck eyebrow="Four checks in practice" question="LMS data shows that one group of students repeatedly skips an online activity. An approved AI tool suggests that they are disengaged and recommends additional remedial work. Before deciding what to do, which response best applies the four checks?" choices={[
+    { label: "Check whether the activity supports an important learning outcome, review the underlying data and possible explanations, consider the students’ context, then decide on an appropriate response and review whether it helps.", correct: true, feedback: "The data indicates a possible need, but does not explain the cause or determine the appropriate response. The lecturer must interpret the evidence in context and retain responsibility for the decision." },
+    { label: "Send the remedial work because the approved tool identified a clear pattern.", correct: false, feedback: "The data indicates a possible need, but does not explain the cause or determine the appropriate response. The lecturer must interpret the evidence in context and retain responsibility for the decision." },
+    { label: "Ask the tool to identify which students are most likely to fail and prioritise them.", correct: false, feedback: "The data indicates a possible need, but does not explain the cause or determine the appropriate response. The lecturer must interpret the evidence in context and retain responsibility for the decision." },
   ]} />;
 }
 
@@ -755,7 +755,7 @@ function SectionVisual({ title }: { title: string }) {
   if (title.startsWith("Part 2")) return <ThreeAsInfographic />;
   if (title.startsWith("Part 3")) return null;
   if (title.startsWith("Part 4")) return null;
-  if (title.startsWith("Part 5")) return <ToolChecksVisual />;
+  if (title.startsWith("Part 5")) return null;
   if (title.startsWith("Part 6")) return <BringTogetherVisual />;
   return null;
 }
@@ -817,17 +817,20 @@ export default function Home() {
   const moduleReviewMarker = "<!--module-review-->";
   const actionInfographicMarker = "<!--assessment-actions-infographic-->";
   const modulePreviewMarker = "<!--module-preview-->";
+  const toolChecksMarker = "<!--tool-checks-visual-->";
   const sectionMarkdown = withoutTitle(current.markdown);
-  const hasUseCaseExplorer = current.title.startsWith("Part 5") && sectionMarkdown.includes(useCaseMarker);
-  const hasPairInfographic = current.title.startsWith("Part 3") && sectionMarkdown.includes(pairInfographicMarker);
-  const hasModuleReview = current.title.startsWith("Part 6") && sectionMarkdown.includes(moduleReviewMarker);
-  const hasActionInfographic = current.title.startsWith("Part 4") && sectionMarkdown.includes(actionInfographicMarker);
-  const hasModulePreview = current.title.startsWith("Part 1") && sectionMarkdown.includes(modulePreviewMarker);
+  const hasModuleReview = sectionMarkdown.includes(moduleReviewMarker);
   const hasInlineNextPrompt = /^\s*(\*\*Next\*\*|#{1,4}\s+Next)\s*$/m.test(sectionMarkdown);
-  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairInfographic ? pairInfographicMarker : hasModuleReview ? moduleReviewMarker : hasActionInfographic ? actionInfographicMarker : hasModulePreview ? modulePreviewMarker : "";
-  const [contentBeforeInteractive, contentAfterInteractive = ""] = activeMarker
-    ? sectionMarkdown.split(activeMarker)
-    : [sectionMarkdown];
+  const markerRenderers = {
+    [useCaseMarker]: <UseCaseExplorer />,
+    [pairInfographicMarker]: <PairInfographic />,
+    [actionInfographicMarker]: <AssessmentActionsInfographic />,
+    [modulePreviewMarker]: <ModulePreviewVisual />,
+    [toolChecksMarker]: <ToolChecksVisual />,
+    [moduleReviewMarker]: <FourLensReview value={activityNotes.snapshotcheck ?? ""} onChange={(value) => setActivityValue("snapshotcheck", value)} />,
+  };
+  const markerPattern = new RegExp(`(${Object.keys(markerRenderers).join("|")})`, "g");
+  const contentSegments = sectionMarkdown.split(markerPattern).filter((segment) => segment !== "");
 
   return (
     <div className="site-shell">
@@ -883,22 +886,17 @@ export default function Home() {
           </h1>
         ) : <h1 className="page-title">{current.shortTitle}</h1>}
         {active === 0 ? <OpeningVisual /> : <SectionVisual title={current.title} />}
-        <article
-          key={`${current.id}-before`}
-          className="course-content"
-          dangerouslySetInnerHTML={{ __html: markdownToHtml(contentBeforeInteractive) }}
-        />
-
-        {hasUseCaseExplorer && <UseCaseExplorer />}
-        {hasPairInfographic && <PairInfographic />}
-        {hasActionInfographic && <AssessmentActionsInfographic />}
-        {hasModulePreview && <ModulePreviewVisual />}
-        {hasModuleReview && <FourLensReview value={activityNotes.snapshotcheck ?? ""} onChange={(value) => setActivityValue("snapshotcheck", value)} />}
-        {contentAfterInteractive && <article
-          key={`${current.id}-after`}
-          className="course-content course-content-continuation"
-          dangerouslySetInnerHTML={{ __html: markdownToHtml(contentAfterInteractive) }}
-        />}
+        {contentSegments.map((segment, index) =>
+          markerRenderers[segment] ? (
+            <div key={`${current.id}-marker-${index}`}>{markerRenderers[segment]}</div>
+          ) : (
+            <article
+              key={`${current.id}-text-${index}`}
+              className={index === 0 ? "course-content" : "course-content course-content-continuation"}
+              dangerouslySetInnerHTML={{ __html: markdownToHtml(segment) }}
+            />
+          )
+        )}
 
         {hasModuleReview && <NextStepActivity value={activityNotes.nextstep ?? ""} onChange={(value) => setActivityValue("nextstep", value)} />}
 

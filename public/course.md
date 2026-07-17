@@ -261,15 +261,19 @@ Begin with the learning outcome. Clarify how AI may be used, state the condition
 
 # Part 5: Data and Tech-Enhanced T&L — How Can AI Tools and Learning Data Improve Learning?
 
+## Apply Four Checks
+
 AI tools and learning data can help lecturers prepare learning, provide support and identify where students may need intervention. Their value depends on how well they serve the intended learning—not simply on what the technology can do.
 
-> Start with the learning need—not the tool. Apply the four checks below before adopting a tool, interpreting learning data or acting on AI-generated information.
+Start with the learning need, not the tool. Before adopting a tool, interpreting learning data or acting on AI-generated information, apply four checks:
+
+<!--tool-checks-visual-->
 
 ## Two Ways AI and Data May Support T&L
 
 ### Use AI Tools to Support Teaching and Learning
 
-AI may provide a useful first pass for tasks such as:
+AI can provide a useful first pass for tasks such as:
 
 - reviewing module materials;
 - drafting practice examples;
@@ -278,8 +282,6 @@ AI may provide a useful first pass for tasks such as:
 - checking assignment clarity.
 
 The lecturer provides the context and constraints, then checks, adapts and decides what to use.
-
-<!--use-case-explorer-->
 
 ### Use Learning Data to Inform Support
 
@@ -292,9 +294,25 @@ Learning data may help lecturers:
 
 AI-generated patterns and predictions are starting points, not decisions. Check the source data, consider the learner and context and, where appropriate, speak with the student before acting.
 
+## Explore Common T&L Uses
+
+Choose one use case and notice the boundary between what the tool can provide and the judgement that remains yours.
+
+<!--use-case-explorer-->
+
+## A Simple Way to Work With AI
+
+1. Provide relevant context.
+2. Set a clear, bounded task.
+3. State the constraints.
+4. Check the output.
+5. Decide what to use and review whether it helped.
+
+> The tool drafts, flags or summarises. You interpret, adapt and decide.
+
 ## Choose Tools Purposefully
 
-M365 Copilot is the primary AI assistant provided to NP staff. Other AI tools may also be encountered by staff and students, but naming a tool does not mean it is suitable or approved for every use.
+M365 Copilot is the primary AI assistant provided to NP staff. Staff and students may encounter other AI tools, but naming a tool does not mean it is suitable or approved for every use.
 
 Choose a tool based on:
 
@@ -315,7 +333,7 @@ These tools complement—not replace—facilitation. Lecturers still determine t
 
 Choose one small, low-risk T&L need.
 
-> What could AI or learning data contribute, what information would be involved, what would you need to verify, and how would you know whether the support helped?
+> What could AI or learning data contribute, what would need checking, and how would you know whether it helped?
 
 ## Key Takeaway
 
