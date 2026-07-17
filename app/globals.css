@@ -46,7 +46,7 @@ button { color: inherit; }
   backdrop-filter: blur(18px);
 }
 .topbar-inner {
-  width: min(920px, calc(100% - 40px));
+  width: min(1120px, calc(100% - 40px));
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -84,7 +84,9 @@ button { color: inherit; }
 }
 .np-logo { width: 126px; height: auto; display: block; }
 .brand-divider { width: 1px; height: 28px; background: var(--line); }
+.course-identity { min-width: 0; display: grid; gap: 2px; }
 .course-name { font-size: 14px; font-weight: 650; letter-spacing: -.01em; white-space: nowrap; }
+.course-programme { overflow: hidden; color: var(--muted); font-size: 10.5px; font-weight: 520; line-height: 1.25; text-overflow: ellipsis; white-space: nowrap; }
 .top-actions { gap: 8px; }
 .level-badge {
   padding: 6px 9px;
@@ -610,7 +612,10 @@ button { color: inherit; }
 
 .strategy-map { margin: 12px 0 42px; padding: 27px; border: 1px solid var(--line); border-radius: 12px; background: #fff; box-shadow: var(--shadow-soft); }
 .strategy-heading { max-width: 580px; }.strategy-heading > span { color: var(--blue); font-size: 12px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }.strategy-heading h2 { margin: 7px 0 8px; font-size: 28px; line-height: 1.16; letter-spacing: -.035em; }.strategy-heading p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.5; }
-.strategy-goal { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 13px; margin-top: 22px; padding: 17px 18px; border-radius: 11px; background: var(--indigo); color: #fff; }.strategy-goal strong { font-size: 17px; }.strategy-goal span { color: #d9dcf4; font-size: 13px; }
+.strategy-goal { display: grid; grid-template-columns: minmax(175px,.75fr) minmax(0,2fr); align-items: stretch; gap: 0; margin-top: 22px; overflow: hidden; border-radius: 12px; background: var(--indigo); color: #fff; box-shadow: 0 12px 28px rgba(30,40,87,.16); }
+.graduate-core { display: flex; align-items: center; gap: 12px; padding: 20px; background: rgba(255,255,255,.07); }.graduate-core > i { width: 50px; height: 50px; flex: 0 0 auto; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.28); border-radius: 50%; background: rgba(255,255,255,.11); color: #fff; }.graduate-core div { display: grid; gap: 3px; }.graduate-core small { color: #bfc6ef; font-size: 10px; font-weight: 750; letter-spacing: .11em; text-transform: uppercase; }.graduate-core strong { font-size: 17px; line-height: 1.25; }
+.graduate-capabilities { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); }.graduate-capabilities > div { position: relative; display: grid; grid-template-columns: 32px minmax(0,1fr); align-items: center; gap: 9px; padding: 18px 14px; border-left: 1px solid rgba(255,255,255,.14); animation: graduate-rise .42s ease both; }.graduate-capabilities > div:nth-child(2) { animation-delay: .07s; }.graduate-capabilities > div:nth-child(3) { animation-delay: .14s; }.graduate-capabilities i { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 9px; background: rgba(255,255,255,.12); color: #fff; transition: transform .18s ease, background .18s ease; }.graduate-capabilities > div:hover i { transform: translateY(-2px); background: rgba(255,255,255,.2); }.graduate-capabilities span { color: #eef0ff; font-size: 12px; font-weight: 650; line-height: 1.35; }
+@keyframes graduate-rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 .strategy-path { position: relative; display: grid; gap: 8px; margin-top: 10px; padding-left: 21px; }
 .strategy-path::before { content: ""; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; border-radius: 9px; background: #dde6f0; }
 .strategy-path button { position: relative; display: grid; grid-template-columns: 40px minmax(0,1fr); gap: 13px; width: 100%; padding: 15px; border: 1px solid transparent; border-radius: 10px; background: transparent; text-align: left; cursor: pointer; transition: background .18s ease, border-color .18s ease; }
@@ -654,10 +659,14 @@ button { color: inherit; }
 .loading-mark { width: 28px; height: 28px; margin: auto; border-radius: 7px; background: var(--blue); animation: pulse 1.2s ease-in-out infinite; }
 @keyframes pulse { 50% { opacity: .45; transform: scale(.92); } }
 
+@media (max-width: 880px) and (min-width: 701px) {
+  .course-programme { display: none; }
+}
+
 @media (max-width: 700px) {
   .topbar-inner { width: calc(100% - 28px); }
   .np-logo { width: 104px; }
-  .course-name { display: none; }
+  .course-identity { display: none; }
   .brand-divider { display: none; }
   .level-badge { display: none; }
   .chapter-nav { top: 68px; }
@@ -697,7 +706,7 @@ button { color: inherit; }
   .brief-clauses { grid-template-columns: 1fr; }.brief-clauses button { min-height: 0; }.roleplay-scene { grid-template-columns: 34px minmax(0, 1fr); }.roleplay-avatar { width: 34px; height: 34px; }
   .tap-check-grid, .domain-spotter-options { grid-template-columns: 1fr; }
   .use-case-explorer { padding: 22px 18px; }.use-case-tabs { grid-template-columns: 1fr; }.use-case-tabs button { min-height: 58px; }.use-case-checks { grid-template-columns: 1fr; }.use-case-detail { padding: 17px; }
-  .strategy-map { padding: 22px 18px; }.strategy-goal { grid-template-columns: 1fr; gap: 5px; }.strategy-path { padding-left: 16px; }.strategy-path button { grid-template-columns: 34px minmax(0,1fr); padding: 12px 10px; }.strategy-path button::before { left: -13px; }
+  .strategy-map { padding: 22px 18px; }.strategy-goal { grid-template-columns: 1fr; }.graduate-core { padding: 17px; }.graduate-capabilities { grid-template-columns: 1fr; }.graduate-capabilities > div { padding: 13px 17px; border-top: 1px solid rgba(255,255,255,.14); border-left: 0; }.strategy-path { padding-left: 16px; }.strategy-path button { grid-template-columns: 34px minmax(0,1fr); padding: 12px 10px; }.strategy-path button::before { left: -13px; }
   .contents-panel { padding: 22px 17px; }.contents-list { grid-template-columns: 1fr; }
 }
 

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI in T&L Essentials: Level 1 (AI-Aware)",
+  title: "AI T&L Essentials: Level 1 (AI-Aware)",
   description: "A practical AI-aware learning package for Ngee Ann Polytechnic academic staff.",
 };
 

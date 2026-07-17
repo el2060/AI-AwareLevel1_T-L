@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useMemo, useState } from "react";
-import { BookOpen, Bot, CheckCircle2, ClipboardCheck, Database, Eye, Lightbulb, LockKeyhole, MessageCircle, Scale, ShieldCheck, Sparkles, Target, Users } from "lucide-react";
+import { BookOpen, Bot, CheckCircle2, ClipboardCheck, Database, Eye, Lightbulb, LockKeyhole, MessageCircle, Scale, ShieldCheck, Sparkles, Target, UserRound, Users } from "lucide-react";
 
 type Section = {
   id: string;
@@ -223,7 +223,7 @@ function makeId(title: string, index: number) {
 }
 
 function shortTitle(title: string) {
-  if (title === "AI in T&L Essentials: Level 1 (AI-Aware)") return "Start here";
+  if (title === "AI T&L Essentials: Level 1 (AI-Aware)") return "Start here";
   return title.replace(/^Part \d+:\s*/, "");
 }
 
@@ -437,14 +437,21 @@ function StrategyMap() {
   const items = [
     { name: "Embed AI-Integrated Pedagogy · PAIR", question: "How can students learn and solve problems with AI while developing judgement, transferable skills and responsible use?", icon: MessageCircle },
     { name: "Transform the Curriculum · 3As", question: "What should students learn and demonstrate as AI changes professional practice?", icon: Sparkles },
-    { name: "Redesign Assessment", question: "How can assessment provide authentic and credible evidence of learning when AI is used?", icon: ClipboardCheck },
+    { name: "Redesign Assessment", question: "How can assessment provide authentic and credible evidence of learning in an AI-enabled context?", icon: ClipboardCheck },
     { name: "Enable Personalised Learning", question: "How can AI extend practice, feedback and coaching?", icon: Bot },
-    { name: "Strengthen Human Skills and Resilience", question: "How can we strengthen the human qualities, resilience and judgement students need alongside AI?", icon: Users },
+    { name: "Strengthen Human Skills and Resilience", question: "How can we strengthen the human qualities, resilience and judgement students need in an AI-enabled world?", icon: Users },
   ];
   return (
     <section className="strategy-map" aria-label="How NP approaches connect across this package">
       <div className="strategy-heading"><h2>NP’s Five Strategies at a Glance</h2></div>
-      <div className="strategy-goal"><strong>AI-ready graduates</strong><span>Strong human qualities · deep domain expertise · effective use of AI</span></div>
+      <div className="strategy-goal" aria-label="AI-ready graduates combine strong human qualities, deep domain expertise and effective use of AI">
+        <div className="graduate-core"><i><UserRound size={27} strokeWidth={2} aria-hidden="true" /></i><div><small>Outcome</small><strong>AI-ready graduates</strong></div></div>
+        <div className="graduate-capabilities">
+          <div><i><Users size={18} strokeWidth={2.1} aria-hidden="true" /></i><span>Strong human qualities</span></div>
+          <div><i><BookOpen size={18} strokeWidth={2.1} aria-hidden="true" /></i><span>Deep domain expertise</span></div>
+          <div><i><Bot size={18} strokeWidth={2.1} aria-hidden="true" /></i><span>Effective use of AI</span></div>
+        </div>
+      </div>
       <div className="strategy-path">
         {items.map(({ name, question, icon: Icon }, index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
           <i><Icon size={18} strokeWidth={2.2} aria-hidden="true" /></i><span><strong>Strategy {index + 1} · {name}</strong><small>{question}</small></span>
@@ -543,7 +550,7 @@ function ToolChecksActivity() {
 }
 
 function SectionInteractive({ title, notes, onChange }: { title: string; notes: ActivityNotes; onChange: (key: string, value: string) => void }) {
-  if (title === "AI in T&L Essentials: Level 1 (AI-Aware)") return null;
+  if (title === "AI T&L Essentials: Level 1 (AI-Aware)") return null;
   if (title.startsWith("Part 1")) return null;
   if (title.startsWith("Part 2")) return <ThreeAsActivity />;
   if (title.startsWith("Part 3")) return null;
@@ -895,7 +902,10 @@ export default function Home() {
           >
             <img className="np-logo" src="/np-logo.png" alt="Ngee Ann Polytechnic" />
             <span className="brand-divider" aria-hidden="true" />
-            <span className="course-name">AI in T&amp;L Essentials</span>
+            <span className="course-identity">
+              <span className="course-name">AI T&amp;L Essentials</span>
+              <small className="course-programme">Mandatory 2-hour programme for teaching staff as part of NP’s Level 1 AI-Aware baseline</small>
+            </span>
           </button>
           <div className="top-actions">
             <span className="level-badge">Level 1 · AI-Aware</span>
@@ -926,7 +936,7 @@ export default function Home() {
       <main className="reader">
         {active === 0 ? (
           <h1 className="page-title home-title">
-            <span>AI in T&amp;L Essentials</span>
+            <span>AI T&amp;L Essentials</span>
             <small>Level 1 <i aria-hidden="true">·</i> AI-Aware</small>
           </h1>
         ) : <h1 className="page-title">{current.shortTitle}</h1>}
