@@ -396,13 +396,13 @@ function ThreeAsActivity() {
       label: "Example 2",
       capability: "Students use AI-assisted development to create and test a new workflow that extends what the role previously involved.",
       answer: "Advance",
-      feedback: "AI enables a new workflow that goes beyond the role’s previous scope.",
+      feedback: "AI enables students to create a new workflow that extends the role beyond its previous scope.",
     },
   ];
   const lenses = [
-    { name: "Anchor", description: "A capability students must demonstrate without AI." },
-    { name: "Augment", description: "Using AI to improve the quality or productivity of work." },
-    { name: "Advance", description: "Using AI to extend work beyond established job boundaries." },
+    { name: "Anchor", description: "What students must demonstrate independently of AI." },
+    { name: "Augment", description: "How students use AI to improve the quality or productivity of their work." },
+    { name: "Advance", description: "How students use AI to extend practice beyond established job boundaries." },
   ];
   const [active, setActive] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -615,13 +615,13 @@ function ThreeAsInfographic() {
       key: "augment",
       name: "Augment",
       tagline: "How students should use AI productively",
-      body: "Use AI to improve the quality and efficiency of work while retaining disciplinary judgement.",
+      body: "Use AI to improve the quality or productivity of work while applying disciplinary judgement.",
     },
     {
       key: "advance",
       name: "Advance",
       tagline: "What new possibilities AI may enable",
-      body: "Use AI to create new services, workflows or forms of professional practice.",
+      body: "Use AI to create new services, workflows or forms of professional practice beyond established job boundaries.",
     },
   ];
   return (
