@@ -452,31 +452,6 @@ function ThreeAsActivity() {
   );
 }
 
-function FacilitationRolePlay() {
-  const scenario = {
-    context: "A lecturer plans to let students use AI for an existing assignment. The intended learning is for students to analyse a situation, apply disciplinary concepts and justify a recommended course of action.",
-    choices: [
-      { label: "Allow students to use any AI tool and submit the final answer with an AI declaration.", good: false, feedback: "Disclosure matters, but this gives little learning structure. Students still need to define the task, justify tool use, verify output and show their judgement." },
-      { label: "Ask students to define the task and criteria, justify their choice of AI tool, document significant interactions, verify and adapt the output using disciplinary knowledge, and reflect on where their judgement affected the final recommendation.", good: true, feedback: "This applies the full PAIR process while keeping disciplinary analysis and judgement visible." },
-      { label: "Provide students with a standard prompt that generates the required analysis, then ask them to improve its wording.", good: false, feedback: "This focuses mainly on prompting and risks allowing AI to perform the central analysis students are meant to develop." },
-    ],
-  };
-  const [picked, setPicked] = useState<number | null>(null);
-  const answer = picked === null ? null : scenario.choices[picked];
-  return (
-    <section className="activity-block facilitation-roleplay">
-      <div className="roleplay-header"><span className="activity-eyebrow">Facilitation scenario</span><span className="roleplay-step">One teaching judgement</span></div>
-      <h2>Which approach best applies PAIR?</h2>
-      <div className="roleplay-scene"><span className="roleplay-avatar" aria-hidden="true">L</span><div><small>Lecturer context</small><p>{scenario.context}</p></div></div>
-      <p className="roleplay-prompt">Choose the response that best supports the learning.</p>
-      <div className="roleplay-moves">
-        {scenario.choices.map((choice, index) => <button key={choice.label} type="button" className={picked === index ? `${choice.good ? "good" : "caution"} selected` : ""} onClick={() => setPicked(index)}><span>{String.fromCharCode(65 + index)}</span><strong>{choice.label}</strong></button>)}
-      </div>
-      {answer && <div className={`activity-feedback ${answer.good ? "" : "try-again"}`}><strong>{answer.good ? "B applies PAIR" : "Pause and reconsider"}</strong><p>{answer.feedback}</p></div>}
-    </section>
-  );
-}
-
 function AssessmentBriefBuilder() {
   return <ChoiceCheck eyebrow="Briefing challenge" question="Which instruction gives students clearer guidance?" choices={[
     { label: "You may use AI appropriately.", correct: false, feedback: "This is too vague. It does not state the permitted use, the student’s required contribution, or the evidence and declaration expectations." },
@@ -598,7 +573,7 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
   if (title === "AI in T&L Essentials: Level 1 (AI-Aware)") return null;
   if (title.startsWith("Part 1")) return null;
   if (title.startsWith("Part 2")) return <ThreeAsActivity />;
-  if (title.startsWith("Part 3")) return <FacilitationRolePlay />;
+  if (title.startsWith("Part 3")) return null;
   if (title.startsWith("Part 4")) return <AssessmentBriefBuilder />;
   return null;
 }
@@ -691,8 +666,8 @@ function PairInfographic() {
   const stages = [
     { letter: "P", name: "Problem", action: "Define the task or challenge", detail: "Clarify the intended outcome, requirements, constraints and success criteria.", cue: "What must we understand before using AI?", tone: "problem" },
     { letter: "A", name: "AI", action: "Select a suitable AI tool", detail: "Consider what support is needed, what the tool can do and whether its use is permitted.", cue: "What could AI contribute?", tone: "ai" },
-    { letter: "I", name: "Interaction", action: "Experiment, evaluate and refine", detail: "Question outputs, check relevance and accuracy, and compare with trusted sources.", cue: "How will we improve the output?", tone: "interaction" },
-    { letter: "R", name: "Reflection", action: "Examine the process and learning", detail: "Consider what AI helped or hindered and where human judgement mattered.", cue: "What did we learn about the task, tool and judgement?", tone: "reflection" },
+    { letter: "I", name: "Interaction", action: "Experiment, evaluate and refine", detail: "Question outputs, check relevance and accuracy, and compare with trusted sources.", cue: "How will we test and improve the output?", tone: "interaction" },
+    { letter: "R", name: "Reflection", action: "Examine the process and learning", detail: "Consider what AI helped or hindered and where human judgement mattered.", cue: "What did we learn about the task, tool and our judgement?", tone: "reflection" },
   ];
   return (
     <figure className="concept-visual pair-infographic" aria-labelledby="pair-title">

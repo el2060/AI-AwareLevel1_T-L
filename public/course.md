@@ -95,42 +95,28 @@ Students remain accountable for how they use AI and for the quality and integrit
 
 PAIR is adaptable across disciplines and can be incorporated into an existing learning activity or used to structure a new one.
 
-*Adapted from: Acar, O. A. (2023). “Are Your Students Ready for AI? A 4-Step Framework for a ChatGPT World.” HBP Education.*
+*Adapted from Acar, O. A. (2023), “Are Your Students Ready for AI? A 4-Step Framework for a ChatGPT World.”*
+
+## The PAIR Process
 
 <!--pair-infographic-->
 
 ## Applying PAIR to Design an AI-Enabled Learning Experience
 
-PAIR can also help lecturers design the learning experience. For each stage, clarify what learners will do and what facilitation or scaffolding they may need.
+PAIR helps lecturers consider both what learners will do and what facilitation or scaffolding they may need.
 
-|                        | **Problem**                                                            | **AI**                                                             | **Interaction**                                                                                 | **Reflection**                                                                     |
-| ---------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| **Learners will**      | Define the task, its components, constraints and intended outcome.      | Explore and select a suitable GenAI tool for the task.             | Experiment with AI, critically evaluate its outputs and integrate useful inputs into their work. | Evaluate how AI helped or hindered the task and reflect on learning and judgement. |
-| **Lecturers consider** | What is the context, task and intended learning? What must students produce? | Which tools are suitable and accessible? How will students justify their choice? | How will students use AI to generate ideas, compare approaches, refine work or receive feedback? How will they verify outputs? | What prompts or evidence will help students reflect on decisions, learning, limitations and responsible use? |
+|                        | **Problem**                                                               | **AI**                                                                             | **Interaction**                                                                  | **Reflection**                                                                           |
+| ---------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| **Learners will**      | Define the task, constraints and intended outcome.                        | Explore and select a suitable GenAI tool.                                          | Experiment with AI, evaluate outputs and integrate useful inputs into their work. | Evaluate how AI helped or hindered the task and reflect on their learning and judgement. |
+| **Lecturers consider** | What is the intended learning? How open or structured should the task be? | Which tools are suitable and accessible? How should students justify their choice? | How should students use AI, and how will they evaluate and verify its outputs?    | What prompts or evidence will make students' decisions, learning and judgement visible?  |
 
-The level of structure can vary. Less experienced learners may need a defined task, suggested tools and guided reflection, while more experienced learners may take greater responsibility for framing the problem and selecting tools.
-
-## PAIR in Practice
-
-A lecturer asks students to complete a module-related analysis, design or problem-solving task using PAIR.
-
-Students:
-
-1. define the task, intended outcome and constraints;
-2. identify where AI may be useful and justify their choice of tool;
-3. experiment with the tool and critically evaluate its outputs;
-4. verify relevant claims or recommendations against module knowledge and credible evidence;
-5. adapt or reject the AI output using disciplinary judgement;
-6. explain how AI influenced the final work;
-7. reflect on its value, limitations and implications for future practice.
-
-The focus is not on producing a better prompt alone. It is on developing students' ability to make informed and responsible decisions throughout the task.
+The level of scaffolding should reflect students' readiness. Less experienced learners may need a defined task, suggested tools and guided reflection. More experienced learners may take greater responsibility for framing the task and selecting tools.
 
 ## Does AI Support the Intended Learning?
 
 AI may support learning when students use it to:
 
-- explore possible approaches;
+- explore approaches;
 - compare explanations or perspectives;
 - generate material for critique;
 - practise and receive feedback;
@@ -144,18 +130,15 @@ For a lighter activity, use:
 
 ## Apply It to Your Module
 
-Consider one learning activity or formative task.
+Consider one learning activity:
 
-- What task or challenge should students first understand?
-- What decisions should they make when selecting and using AI?
-- What should they evaluate, verify or improve?
-- What reflection would make their learning and judgement visible?
+> How could AI support students' learning while keeping the intended thinking, judgement or performance visible?
 
 ## Key Takeaway
 
-PAIR is more than a prompting process. It structures how students define a task, choose an appropriate tool, interact critically with AI and reflect on their learning and responsibility.
+PAIR helps lecturers structure an effective learning experience in which students define the task, select an appropriate tool, interact critically with AI and reflect on their learning.
 
-AI should support the intended learning, not substitute for it.
+AI should support the intended learning—not substitute for it.
 
 ---
 
