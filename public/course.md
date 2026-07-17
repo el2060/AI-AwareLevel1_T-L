@@ -10,10 +10,10 @@ The package will help you consider these implications across four areas of your 
 
 By the end of this module, you will be able to:
 
-- identify how AI is changing the competencies students need and the implications for curriculum design;
+- identify the competencies students need in an AI-enabled professional context and the implications for curriculum design;
 - explain how AI can support learning without replacing the intended thinking, judgement or performance;
 - apply NP’s key GenAI requirements to keep assessment authentic, credible and visible;
-- identify appropriate uses of AI tools and learning data, and apply basic checks for safe and responsible use.
+- recognise appropriate uses of AI tools and learning data, and apply basic checks for safe and responsible use.
 
 ### Learning Time
 
@@ -33,23 +33,66 @@ The four sections explore:
 
 ---
 
-# Part 2: Curriculum Design and Development — What Competencies do Students Need?
-
-## Student AI Baseline Competencies
-
-NP's student AI baseline sets out the foundational competencies students should develop across their learning. Individual modules may contribute to different areas; not every module is expected to address all of them.
-
-<!--student-baseline-visual-->
-
-Lecturers should consider which of these competencies are relevant to their discipline, module level and intended learning outcomes.
-
-### Bridge to the 3As
-
-The 3As help lecturers connect these baseline AI competencies to disciplinary learning: what remains distinctly human, how students should use AI productively and what new AI-enabled practice may emerge.
+# Part 2: Curriculum Design and Development — What Competencies Do Students Need?
 
 ## The 3As
 
+**Guiding lenses for reviewing and adjusting the competencies students need as AI changes professional practice**
+
 <!--three-as-visual-->
+
+### Anchor
+
+**Distinctly human capabilities**
+
+Develop the human qualities, disciplinary judgement and essential capabilities students need even as AI becomes more capable.
+
+### Augment
+
+**Productive use of AI**
+
+Develop students' ability to use AI effectively to improve the quality, productivity or effectiveness of their work while exercising appropriate judgement and oversight.
+
+### Advance
+
+**New AI-enabled practice**
+
+Develop students' ability to use AI to create new possibilities, workflows or forms of professional practice beyond established pre-AI job boundaries.
+
+> A learning outcome or module may emphasise one or combine several, depending on the intended competency and professional context.
+
+## A Common AI Foundation for Students
+
+Alongside discipline-specific competencies, the POLITE sector AI baseline identifies foundational AI competencies that students should progressively develop across their learning.
+
+<!--student-baseline-visual-->
+
+**Learn About AI**
+
+Understand key AI terms, approaches, capabilities and limitations.
+
+**Learn With AI**
+
+Use AI as a learning partner to break down problems, identify gaps and deepen understanding.
+
+**Learn to Use AI**
+
+Apply AI to create value, and evaluate outputs for accuracy, relevance, bias and suitability.
+
+**Learn Beyond AI**
+
+Consider the societal, ethical and legal implications of AI, and exercise human judgement and oversight.
+
+> Individual modules may contribute to different areas. Not every module is expected to address all four.
+
+## Connecting the Two
+
+The 3As guide how curriculum responds within the discipline and profession. The sector baseline provides a common foundation for students' AI literacy and use.
+
+When reviewing a module, consider both:
+
+- the disciplinary and professional competencies students need;
+- the foundational AI competencies the module can appropriately develop.
 
 ## Illustrative Applications
 
@@ -67,17 +110,19 @@ Lecturers should interpret and apply the 3As according to their disciplinary exp
 
 Choose one learning outcome from a module you teach, lead or support.
 
-Consider whether it remains relevant as professional practice changes, and whether students need to develop:
+Consider whether it remains relevant as professional practice changes and whether it should develop:
 
 - distinctly human capabilities;
 - productive use of AI;
 - new AI-enabled professional practice.
 
-Then check whether the learning activities provide suitable practice and whether the assessment makes the intended competency visible.
+Also consider whether the learning activities provide opportunities to develop any relevant sector baseline AI competencies.
+
+Then check whether the assessment makes the intended competencies visible.
 
 ## Key Takeaway
 
-Use the 3As to review what competencies students need, how learning activities develop them and how assessment makes them visible.
+Use the 3As to review discipline-specific competencies, supported by the sector AI baseline as a common foundation for students' learning and use of AI.
 
 ---
 
