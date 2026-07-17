@@ -23,23 +23,21 @@ Allow about **2 hours** to complete the package, its activities and the completi
 
 # Part 1: NP’s Direction for AI-Enabled T&L
 
-NP aims to prepare AI-ready graduates who combine strong human qualities, domain knowledge and skills, and responsible use of AI. The aim is not simply to add AI tools into modules. It is to help students keep learning, judgement and professional responsibility visible as AI becomes part of study and work.
+NP aims for every graduate to be an AI-ready professional who combines strong human qualities, deep domain expertise and effective use of AI in professional practice.
 
-This direction comes through three connected shifts in teaching and learning.
+This is supported through three connected commitments:
 
 **AI-relevant curriculum**
 
-Knowledge and skills stay relevant to the discipline and profession as AI changes what graduates may need to understand, judge and do.
+Learning remains aligned to changing disciplinary and professional practice.
 
-**AI-integrated learning and assessment**
+**AI-integrated pedagogy and authentic assessment**
 
-Students learn to work with AI where appropriate, while still demonstrating what they know, can do and are responsible for.
+Students learn to work with AI while still demonstrating what they know, can do and judge.
 
-**AI-enabled learning support**
+**AI-enabled personalised learning**
 
-AI can provide practice, feedback and personalised support, with lecturers still deciding what good learning looks like.
-
-The five strategies above show how NP turns this direction into teaching practice. They connect pedagogy, curriculum, assessment, learning support and human skills, with human judgement running through all five.
+AI extends practice, feedback and support, while lecturers remain responsible for the learning design.
 
 ## Keep One Module in Mind
 

@@ -434,16 +434,16 @@ function AssessmentBriefBuilder() {
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
-    { name: "Pedagogy · PAIR", question: "Help students learn with AI", detail: "PAIR gives students a visible process for learning and problem-solving with AI.", icon: MessageCircle },
-    { name: "Curriculum · 3As", question: "Review what students need to learn and demonstrate", detail: "The 3As help course and module teams review curriculum and assessment as AI changes the discipline, then align outcomes, activities and evidence of learning.", icon: Sparkles },
-    { name: "Assessment", question: "Keep learning visible", detail: "Assessment conditions should show what students must demonstrate and how AI may be used.", icon: ClipboardCheck },
-    { name: "Personalised learning", question: "Scaffold practice and feedback", detail: "AI-enabled tutors and learning assistants can support practice, feedback and different learning needs.", icon: Bot },
-    { name: "Human Skills and Resilience", question: "Build the human edge", detail: "Develop purpose, resilience, human judgement and the ability to relate, think and act effectively in an AI-enabled world.", icon: Users },
+    { name: "Embed AI-Integrated Pedagogy · PAIR", question: "Structure learning and problem-solving with AI", detail: "Develop transferable skills, critical judgement and responsible use.", icon: MessageCircle },
+    { name: "Transform the Curriculum · 3As", question: "Review AI-relevant outcomes, experiences and assessments", detail: "Use the 3As to consider what students must demonstrate independently, productively with AI, or through new AI-enabled practice.", icon: Sparkles },
+    { name: "Redesign Assessment", question: "Assure authentic learning", detail: "Design assessment so students demonstrate credible evidence of learning for AI-enabled professional practice.", icon: ClipboardCheck },
+    { name: "Enable Personalised Learning", question: "Provide personalised practice, feedback and coaching", detail: "Use AI-enabled support to extend practice and feedback while retaining lecturer responsibility for the learning design.", icon: Bot },
+    { name: "Strengthen Human Skills and Resilience", question: "Build human skills, resilience and judgement", detail: "Keep the human edge visible as students learn and work with AI.", icon: Users },
   ];
   return (
     <section className="strategy-map" aria-label="How NP approaches connect across this package">
-      <div className="strategy-heading"><span>NP’s approach</span><h2>NP’s five strategies at a glance</h2><p>These provide context for the package. Explore how each connects to your T&amp;L work.</p></div>
-      <div className="strategy-goal"><strong>AI-ready graduates</strong><span>Human qualities · domain expertise · responsible use of AI</span></div>
+      <div className="strategy-heading"><span>NP’s approach</span><h2>NP’s Five Strategies at a Glance</h2><p>Explore how each strategy connects to AI-enabled T&amp;L.</p></div>
+      <div className="strategy-goal"><strong>AI-ready graduates</strong><span>Strong human qualities · deep domain expertise · effective use of AI</span></div>
       <div className="strategy-path">
         {items.map(({ name, question, detail, icon: Icon }, index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
           <i><Icon size={18} strokeWidth={2.2} aria-hidden="true" /></i><span><strong>Strategy {index + 1} · {name}</strong><b>{question}</b>{active === index && <small>{detail}</small>}</span>
@@ -799,7 +799,7 @@ export default function Home() {
     return (
       <main className="loading-shell">
         <div className="loading-mark" />
-        <p>Preparing your learning package…</p>
+        <p>Loading course content…</p>
       </main>
     );
   }
