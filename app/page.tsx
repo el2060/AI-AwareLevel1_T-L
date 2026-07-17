@@ -609,8 +609,8 @@ function PairInfographic() {
   const stages = [
     { letter: "P", name: "Problem", action: "Students define the task or challenge", detail: "Clarify the intended outcome, requirements, constraints and success criteria.", cue: "What must we understand before using AI?", tone: "problem" },
     { letter: "A", name: "AI", action: "Students select a suitable AI tool", detail: "Consider what support is needed, what the tool can do and whether its use is permitted.", cue: "What could AI contribute?", tone: "ai" },
-    { letter: "I", name: "Interaction", action: "Students experiment, evaluate and refine", detail: "Question outputs, check relevance and accuracy, and compare with trusted sources.", cue: "How will we test and improve the output?", tone: "interaction" },
-    { letter: "R", name: "Reflection", action: "Students examine the process and learning", detail: "Consider what AI helped or hindered and where human judgement mattered.", cue: "What did we learn about the task, tool and our judgement?", tone: "reflection" },
+    { letter: "I", name: "Interaction", action: "Students experiment, evaluate and refine", detail: "Critically evaluate outputs for relevance and accuracy, and verify important claims against trusted sources.", cue: "How will we test and improve the output?", tone: "interaction" },
+    { letter: "R", name: "Reflection", action: "Students examine the process and learning", detail: "Evaluate how AI supported or hindered the learning process, and identify where human judgement was necessary.", cue: "What did we learn about the task, the tool and our own judgement?", tone: "reflection" },
   ];
   return (
     <figure className="concept-visual pair-infographic" aria-labelledby="pair-title">
@@ -631,7 +631,7 @@ function PairInfographic() {
           </div>
         ))}
       </div>
-      <div className="infographic-note pair-loop"><span aria-hidden="true">↔</span><p><strong>PAIR is not a one-pass sequence.</strong> Students may revisit the problem, reconsider the tool and refine their interactions as their understanding develops.</p></div>
+      <div className="infographic-note pair-loop"><span aria-hidden="true">↔</span><p>Students may revisit the problem, reconsider the tool and refine their interactions as their understanding develops.</p></div>
     </figure>
   );
 }
