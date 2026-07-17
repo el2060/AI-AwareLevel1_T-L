@@ -533,22 +533,22 @@ function OpeningVisual() {
   const areas = [
     {
       title: "Curriculum Design and Development",
-      detail: "How AI may change what students need to learn and demonstrate",
+      detail: "What competencies students need as AI changes professional practice.",
       icon: BookOpen,
     },
     {
       title: "Facilitation of Learning",
-      detail: "How AI can support learning, practice and feedback",
+      detail: "How AI can support learning without replacing the intended thinking, judgement or performance.",
       icon: Lightbulb,
     },
     {
       title: "Assessment",
-      detail: "How learning remains valid, authentic and credible when AI is used",
+      detail: "How assessment keeps learning authentic, credible and visible in an AI-enabled context.",
       icon: ClipboardCheck,
     },
     {
       title: "Data and Tech-Enhanced T&L",
-      detail: "How AI tools and learning data can support learning safely and responsibly",
+      detail: "How AI tools and learning data can improve learning safely and responsibly.",
       icon: ShieldCheck,
     },
   ];
