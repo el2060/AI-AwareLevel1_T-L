@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useMemo, useState } from "react";
-import { Anchor, BookOpen, Bot, CheckCircle2, ClipboardCheck, Database, Eye, Lightbulb, LockKeyhole, MessageCircle, Rocket, Scale, ShieldCheck, Sparkles, Target, UserRound, Users, Zap } from "lucide-react";
+import { Anchor, BookOpen, Bot, CheckCircle2, ClipboardCheck, Eye, Lightbulb, LockKeyhole, MessageCircle, Rocket, Scale, ShieldCheck, Target, UserRound, Users, Zap } from "lucide-react";
 
 type Section = {
   id: string;
@@ -124,6 +124,23 @@ function markdownToHtml(markdown: string) {
       if (i < lines.length && lines[i].trim() === ":::") i += 1;
       output.push(
         `<details class="policy-detail"><summary>${inlineMarkdown(details[1])}</summary><div>${markdownToHtml(body.join("\n"))}</div></details>`,
+      );
+      continue;
+    }
+
+    const callout = trimmed.match(/^:::(warning|note)\s+(.+)$/);
+    if (callout) {
+      const [, kind, title] = callout;
+      const body: string[] = [];
+      i += 1;
+      while (i < lines.length && lines[i].trim() !== ":::") {
+        body.push(lines[i]);
+        i += 1;
+      }
+      if (i < lines.length && lines[i].trim() === ":::") i += 1;
+      const glyph = kind === "warning" ? "⚠" : "ℹ";
+      output.push(
+        `<div class="callout callout-${kind}"><p class="callout-head"><span aria-hidden="true">${glyph}</span>${inlineMarkdown(title)}</p>${markdownToHtml(body.join("\n"))}</div>`,
       );
       continue;
     }
@@ -384,8 +401,8 @@ function FourLensReview({ value, onChange }: { value: string; onChange: (value: 
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
-    { name: "Embed AI-Integrated Pedagogy · PAIR", question: "How can students learn and solve problems with AI while developing judgement, transferable skills and responsible use?", icon: MessageCircle },
-    { name: "Transform the Curriculum · 3As", question: "What should students learn and demonstrate as AI changes professional practice?", icon: Sparkles },
+    { name: "Embed AI-Integrated Pedagogy · PAIR", question: "How can students learn and solve problems with AI while developing judgement, transferable skills and responsible use?", icon: Lightbulb },
+    { name: "Transform the Curriculum · 3As", question: "What should students learn and demonstrate as AI changes professional practice?", icon: BookOpen },
     { name: "Redesign Assessment", question: "How can assessment provide authentic and credible evidence of learning in an AI-enabled context?", icon: ClipboardCheck },
     { name: "Enable Personalised Learning", question: "How can AI extend practice, feedback and coaching?", icon: Bot },
     { name: "Strengthen Human Skills and Resilience", question: "How can we strengthen the human qualities, resilience and judgement students need in an AI-enabled world?", icon: Users },
@@ -403,7 +420,7 @@ function StrategyMap() {
       </div>
       <div className="strategy-path">
         {items.map(({ name, question, icon: Icon }, index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
-          <i><Icon size={18} strokeWidth={2.2} aria-hidden="true" /></i><span><strong>Strategy {index + 1} · {name}</strong><small>{question}</small></span>
+          <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i><span><strong>Strategy {index + 1} · {name}</strong><small>{question}</small></span>
         </button>)}
       </div>
     </section>
@@ -542,7 +559,7 @@ function OpeningVisual() {
         {areas.map((area, index) => {
           const Icon = area.icon;
           return <div className={`overview-area overview-area-static area-${index + 1}`} key={area.title}>
-            <span><Icon size={20} strokeWidth={2.2} aria-hidden="true" /></span>
+            <span><Icon size={20} strokeWidth={2.1} aria-hidden="true" /></span>
             <div><strong>{area.title}</strong><small>{area.detail}</small></div>
           </div>;
         })}
@@ -591,7 +608,7 @@ function ThreeAsInfographic() {
             <section key={lens.key} className={`three-as-band ${lens.key}-band`}>
               <Icon className="three-as-watermark" size={92} strokeWidth={1.5} aria-hidden="true" />
               <div className="three-as-top">
-                <div className="three-as-icon"><Icon size={21} strokeWidth={2.2} aria-hidden="true" /></div>
+                <div className="three-as-icon"><Icon size={21} strokeWidth={2.1} aria-hidden="true" /></div>
                 <span className="three-as-tag">{lens.tag}</span>
               </div>
               <b>{lens.name}</b>
@@ -637,73 +654,6 @@ function PairInfographic() {
   );
 }
 
-function LecturerPracticeMap() {
-  const [active, setActive] = useState(0);
-  const areas = [
-    {
-      title: "Curriculum",
-      domain: "Curriculum Design & Development",
-      work: "Learning outcomes, activities and assessment",
-      question: "What is AI changing in what students need to learn and how they are taught?",
-      detail: "Consider how learning outcomes, activities and assessment may need to remain aligned as AI changes disciplinary and professional practice.",
-      icon: BookOpen,
-      tone: "design",
-    },
-    {
-      title: "Facilitation",
-      domain: "Facilitation of Learning",
-      work: "Explanations, practice and student AI use",
-      question: "Where might AI support learning without replacing it?",
-      detail: "Use AI where it gives students a useful explanation, practice or feedback without doing the learning for them.",
-      icon: Lightbulb,
-      tone: "facilitate",
-    },
-    {
-      title: "Assessment",
-      domain: "Assessment",
-      work: "Assessment design, validity and GenAI conditions",
-      question: "How will assessment provide authentic evidence of students’ learning?",
-      detail: "Decide what evidence is needed from students independently and, where relevant, with AI. Then make the GenAI conditions clear and aligned to that evidence.",
-      icon: ClipboardCheck,
-      tone: "assess",
-    },
-    {
-      title: "Data and Tools",
-      domain: "Data & Tech-Enhanced T&L",
-      work: "AI-supported learning, feedback and learning data",
-      question: "Where could AI tools or learning data improve engagement or support a learning outcome—and what needs checking before use?",
-      detail: "Consider how an AI tool or learning information could support engagement, an activity or a teaching decision. Then check the information involved, the output and the judgement needed before acting.",
-      icon: Database,
-      tone: "review",
-    },
-  ];
-  const selected = areas[active];
-  const SelectedIcon = selected.icon;
-  return (
-    <figure className="concept-visual lecturer-practice-visual" aria-labelledby="lecturer-practice-title">
-      <figcaption><span>In your module</span><strong id="lecturer-practice-title">Four AI-aware questions for your teaching work</strong></figcaption>
-      <p className="practice-map-intro">Select an area to explore one key AI-aware question for your teaching practice.</p>
-      <div className="lecturer-practice-map">
-        <div className="practice-map-label"><span>AI-aware</span><strong>teaching practice</strong></div>
-        <div className="practice-map-options">
-          {areas.map((area, index) => {
-            const Icon = area.icon;
-            return <button key={area.title} type="button" className={`practice-map-option ${area.tone} ${active === index ? "active" : ""}`} onClick={() => setActive(index)} aria-pressed={active === index}>
-              <i><Icon size={18} strokeWidth={2.2} aria-hidden="true" /></i>
-              <span><strong>{area.title}</strong><small>{area.work}</small></span>
-            </button>;
-          })}
-        </div>
-        <div className={`practice-map-detail ${selected.tone}`}>
-          <i><SelectedIcon size={21} strokeWidth={2.2} aria-hidden="true" /></i>
-          <div><span>{selected.domain}</span><strong>{selected.question}</strong><p>{selected.detail}</p></div>
-        </div>
-        <p className="practice-map-footnote"><b>Across all four:</b> use professional judgement when AI is involved and keep the learning purpose in view.</p>
-      </div>
-    </figure>
-  );
-}
-
 function AssessmentFocusVisual() {
   const items = [
     {
@@ -726,6 +676,34 @@ function AssessmentFocusVisual() {
             <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
             <div><b>{title}</b><small>{detail}</small></div>
           </section>
+        ))}
+      </div>
+    </figure>
+  );
+}
+
+function AssessmentActionsInfographic() {
+  const steps = [
+    { number: "1", title: "Start With the Learning Outcome", detail: "Identify the capability being measured, and check AI cannot complete it unassisted." },
+    { number: "2", title: "State the GenAI Conditions Clearly", detail: "Declare whether AI use is allowed, restricted or prohibited for each component." },
+    { number: "3", title: "Make Learning and Contribution Visible", detail: "Set specific conditions and design evidence of the student's own contribution." },
+    { number: "4", title: "Prepare Students and Require Declaration", detail: "Explain conditions early and require a GenAI Use Declaration." },
+  ];
+  return (
+    <figure className="concept-visual action-infographic" aria-labelledby="action-title">
+      <figcaption>
+        <span>Four lecturer actions</span>
+        <strong id="action-title">A practical sequence for assessment design</strong>
+      </figcaption>
+      <div className="action-journey">
+        {steps.map((step, index) => (
+          <div className="action-step-wrap" key={step.number}>
+            <section className="action-stage">
+              <div className="action-stage-head"><i aria-hidden="true">{step.number}</i><b>{step.title}</b></div>
+              <p>{step.detail}</p>
+            </section>
+            {index < steps.length - 1 && <span className="action-connector" aria-hidden="true">→</span>}
+          </div>
         ))}
       </div>
     </figure>
@@ -757,7 +735,7 @@ function ToolChecksVisual() {
 function BringTogetherVisual() {
   const lenses = [
     { icon: BookOpen, title: "Curriculum", detail: "What may need review?" },
-    { icon: MessageCircle, title: "Facilitation", detail: "Where should students check and improve?" },
+    { icon: Lightbulb, title: "Facilitation", detail: "Where should students check and improve?" },
     { icon: ClipboardCheck, title: "Assessment", detail: "What evidence keeps learning visible?" },
     { icon: ShieldCheck, title: "Data and Tools", detail: "What needs checking before use?" },
   ];
@@ -842,11 +820,13 @@ export default function Home() {
   const useCaseMarker = "<!--use-case-explorer-->";
   const pairInfographicMarker = "<!--pair-infographic-->";
   const moduleReviewMarker = "<!--module-review-->";
+  const actionInfographicMarker = "<!--assessment-actions-infographic-->";
   const sectionMarkdown = withoutTitle(current.markdown);
   const hasUseCaseExplorer = current.title.startsWith("Part 5") && sectionMarkdown.includes(useCaseMarker);
   const hasPairInfographic = current.title.startsWith("Part 3") && sectionMarkdown.includes(pairInfographicMarker);
   const hasModuleReview = current.title.startsWith("Part 6") && sectionMarkdown.includes(moduleReviewMarker);
-  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairInfographic ? pairInfographicMarker : hasModuleReview ? moduleReviewMarker : "";
+  const hasActionInfographic = current.title.startsWith("Part 4") && sectionMarkdown.includes(actionInfographicMarker);
+  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairInfographic ? pairInfographicMarker : hasModuleReview ? moduleReviewMarker : hasActionInfographic ? actionInfographicMarker : "";
   const [contentBeforeInteractive, contentAfterInteractive = ""] = activeMarker
     ? sectionMarkdown.split(activeMarker)
     : [sectionMarkdown];
@@ -913,6 +893,7 @@ export default function Home() {
 
         {hasUseCaseExplorer && <UseCaseExplorer />}
         {hasPairInfographic && <PairInfographic />}
+        {hasActionInfographic && <AssessmentActionsInfographic />}
         {hasModuleReview && <FourLensReview value={activityNotes.snapshotcheck ?? ""} onChange={(value) => setActivityValue("snapshotcheck", value)} />}
         {contentAfterInteractive && <article
           key={`${current.id}-after`}

@@ -176,6 +176,8 @@ Assessment should provide credible evidence of learning. A polished final produc
 
 ## Four Lecturer Actions
 
+<!--assessment-actions-infographic-->
+
 ### 1. Start With the Learning Outcome
 
 Ask:
@@ -202,6 +204,8 @@ For example, a restricted-use condition might:
 - allow GenAI for research, ideation and preparing materials, but prohibit it during a live presentation or Q&A; or
 - allow GenAI to generate actual content, such as images, provided students identify the problem, select and refine the output, and are questioned on their choices at presentation.
 
+:::warning Always-Prohibited Uses
+
 Students must not:
 
 - submit purely AI-generated content as their own;
@@ -210,6 +214,8 @@ Students must not:
 - use GenAI to simulate an interview, observation or interaction that must involve a real person.
 
 Declaring prohibited use does not make it acceptable.
+
+:::
 
 ### 3. Make Learning and Contribution Visible
 
@@ -235,15 +241,19 @@ Module leaders are responsible for setting the GenAI conditions, explaining them
 
 ## Important Policy Reminders
 
-### Staff Use of GenAI in Grading
+:::note Staff Use of GenAI in Grading
 
 Staff must not use GenAI to determine grades independently. Any approved use as a grading assistant requires management approval, appropriate quality assurance, disclosure to students and full human review of every grade and feedback decision.
 
-### Suspected Misuse
+:::
+
+:::note Suspected Misuse
 
 AI-detection reports, changes in writing style or unusually sophisticated language may indicate a need for further inquiry, but are not proof of misconduct.
 
 Interview the student, request relevant evidence of the work process and compare the declared use with the available evidence before following NP's Academic Integrity procedures.
+
+:::
 
 ## When Further Review May Be Needed
 
