@@ -23,27 +23,11 @@ Set aside about **2 hours** to work through the package, consider the implicatio
 
 # Part 1: NP’s Approach to AI-Enabled T&L
 
-NP aims for every graduate to be an AI-ready professional who combines strong human qualities, deep domain expertise and effective use of AI in professional practice.
-
-This is supported through three connected commitments:
-
-**AI-relevant curriculum**
-
-Learning remains aligned to changing disciplinary and professional practice.
-
-**AI-integrated pedagogy and authentic assessment**
-
-Students learn to work with AI while still demonstrating what they know, can do and judge.
-
-**AI-enabled personalised learning**
-
-AI extends practice, feedback and support, while lecturers remain responsible for the learning design.
-
 ## Keep One Module in Mind
 
 As you work through the package, consider:
 
-> What should students do themselves, what might AI support, and what safeguards are needed?
+> What should students learn and demonstrate, where might AI support them, and what safeguards are needed?
 
 ---
 
