@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useMemo, useState } from "react";
+import { ReactElement, useEffect, useLayoutEffect, useMemo, useState } from "react";
 import { BookOpen, Bot, CheckCircle2, ClipboardCheck, Eye, Lightbulb, LockKeyhole, MessageCircle, Rocket, Scale, ShieldCheck, Target, UserRound, Users, Zap } from "lucide-react";
 
 type Section = {
@@ -833,7 +833,7 @@ export default function Home() {
   const sectionMarkdown = withoutTitle(current.markdown);
   const hasModuleReview = sectionMarkdown.includes(moduleReviewMarker);
   const hasInlineNextPrompt = /^\s*(\*\*Next\*\*|#{1,4}\s+Next)\s*$/m.test(sectionMarkdown);
-  const markerRenderers: Record<string, JSX.Element> = {
+  const markerRenderers: Record<string, ReactElement> = {
     [useCaseMarker]: <UseCaseExplorer />,
     [pairInfographicMarker]: <PairInfographic />,
     [actionInfographicMarker]: <AssessmentActionsInfographic />,
