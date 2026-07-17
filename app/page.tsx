@@ -402,14 +402,17 @@ function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
     { name: "Embed AI-Integrated Pedagogy · PAIR", question: "How can students learn and solve problems with AI while developing judgement, transferable skills and responsible use?", icon: Lightbulb },
-    { name: "Transform the Curriculum · 3As", question: "What should students learn and demonstrate as AI changes professional practice?", icon: BookOpen },
+    { name: "Transform the Curriculum · 3As", question: "What competencies should students develop and demonstrate as AI changes professional practice?", icon: BookOpen },
     { name: "Redesign Assessment", question: "How can assessment provide authentic and credible evidence of learning in an AI-enabled context?", icon: ClipboardCheck },
-    { name: "Enable Personalised Learning", question: "How can AI extend practice, feedback and coaching?", icon: Bot },
+    { name: "Enable Personalised Learning", question: "How can AI extend opportunities for practice, feedback and coaching?", icon: Bot },
     { name: "Strengthen Human Skills and Resilience", question: "How can we strengthen the human qualities, resilience and judgement students need in an AI-enabled world?", icon: Users },
   ];
   return (
     <section className="strategy-map" aria-label="How NP approaches connect across this package">
-      <div className="strategy-heading"><h2>NP’s Five Strategies at a Glance</h2></div>
+      <div className="strategy-heading">
+        <h2>NP’s Five Strategies at a Glance</h2>
+        <p>NP’s five strategies bring together curriculum, pedagogy, assessment, personalised learning and human capabilities to support one intended outcome:</p>
+      </div>
       <div className="strategy-goal" aria-label="AI-ready graduates combine strong human qualities, deep domain expertise and effective use of AI">
         <div className="graduate-core"><i><UserRound size={27} strokeWidth={2} aria-hidden="true" /></i><div><small>Outcome</small><strong>AI-ready graduates</strong></div></div>
         <div className="graduate-capabilities">

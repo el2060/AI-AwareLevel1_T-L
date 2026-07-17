@@ -25,13 +25,16 @@ Set aside about **2 hours** to work through the package, consider the implicatio
 
 ## Keep One Module in Mind
 
-As you work through the package, consider:
+As you work through the package, consider one module you teach, lead or support.
 
-> What should students learn and demonstrate, how might AI support their learning, what evidence will keep learning visible, and what needs to be checked before using AI tools or learning data?
+> What competencies should students develop and demonstrate? How might AI support their learning? What evidence will keep learning visible? What must be checked before using AI tools or learning data?
+
+**Next**
+Begin with curriculum: what competencies should students develop and demonstrate as AI changes professional practice?
 
 ---
 
-# Part 2: Curriculum Design and Development — What Should Students Learn?
+# Part 2: Curriculum Design and Development — What Competencies do Students Need?
 
 ## Illustrative Applications
 
