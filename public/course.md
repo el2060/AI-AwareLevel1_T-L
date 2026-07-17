@@ -260,21 +260,33 @@ Begin with the learning outcome. Then decide what students must demonstrate, whe
 
 # Part 5: Data and Tools — Purposeful and Responsible Use
 
-AI tools and learning data can support engagement, learning outcomes and different learning needs when used purposefully and responsibly. Start with the T&L need—not the tool.
+AI tools and learning data can support engagement, learning outcomes and different learning needs when used purposefully and responsibly.
+
+> Start with the T&L need—not the tool.
+
+Use learning data to identify possible needs, inform appropriate interventions and evaluate whether the support is helping.
 
 Use these four checks before adopting an AI tool or acting on AI-generated information.
 
 ## How AI May Support Your T&L Work
 
-- **Prepare learning:** draft examples, review materials or create alternative formats.
-- **Support learning:** provide practice, feedback or personalised support.
-- **Understand learning:** summarise feedback or identify patterns that may warrant further review.
+**Prepare learning**
+
+Draft examples, review materials or create alternative formats.
+
+**Support learning**
+
+Provide practice, feedback or personalised support.
+
+**Understand and improve learning**
+
+Summarise feedback, identify patterns, inform interventions and review whether the support is helping.
 
 The tool provides a first pass. You check, adapt and decide.
 
 ## Start With an Approved Tool
 
-M365 Copilot is the primary AI assistant provided to NP staff. It can support tasks such as reviewing module materials, drafting learning resources and summarising suitable feedback.
+M365 Copilot is the primary AI assistant provided to NP staff. It can support tasks such as reviewing module materials, drafting learning resources and summarising appropriate feedback.
 
 Use AI tools only where the tool, information and purpose are covered by NP’s current guidance. Approved uses and clearance may change, so check the latest guidance before entering information.
 
@@ -286,17 +298,22 @@ Use AI tools only where the tool, information and purpose are covered by NP’s 
 
 Remind students to apply the same care in class, on internship and at work.
 
-## Treat AI-Generated Insights as Starting Points
+## Use AI-Generated Insights Carefully
 
-AI may summarise comments, group themes or suggest patterns in learning data. It should not decide what action to take.
+AI may summarise comments, group themes or suggest patterns in learning data. These are starting points, not decisions.
 
-Check the source information, consider the learning context and apply your professional judgement before acting.
+Before acting:
+
+- check the source information;
+- consider the learner and learning context;
+- decide whether an intervention is appropriate;
+- review whether the intervention has helped.
 
 ## AI-Enabled Learning Support
 
-NP is introducing AI-enabled tutors and learning assistants that can provide summaries, practice, feedback and personalised support outside class time.
+NP is introducing AI-enabled tutors and learning assistants that can provide summaries, practice, feedback and personalised support beyond class time.
 
-These tools complement—not replace—your facilitation. You still decide what good learning looks like and how the tool supports it.
+These tools complement—not replace—your facilitation. You still decide what good learning looks like, how the tool supports it and whether it is helping.
 
 ## Apply It to Your Module
 
@@ -304,11 +321,15 @@ Think of one small, low-risk use.
 
 > What T&L need could it support?
 
+> What information would be involved?
+
 > What would you need to check before using the output?
+
+> How would you know whether it helped?
 
 ## Key Takeaway
 
-A suitable AI use has a clear learning purpose, an appropriate tool, safe handling of information, checked output and human oversight.
+Use AI tools and learning data for a clear learning purpose. Select an appropriate tool, handle information safely, check the output, apply professional judgement and review the impact.
 
 ---
 

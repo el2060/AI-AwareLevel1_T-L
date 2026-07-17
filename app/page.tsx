@@ -531,10 +531,10 @@ function UseCaseExplorer() {
       title: "Summarise feedback themes",
       tool: "M365 Copilot",
       icon: MessageCircle,
-      use: "Group feedback that is appropriate for the tool into themes so you can review it more efficiently.",
+      use: "Group feedback that is appropriate for the tool into themes so you can review possible needs and decide what support may help.",
       prompt: "Summarise these feedback comments into themes. For each, give a short label and approximate number of related comments. List minority views separately. Do not infer causes or recommend actions.",
       check: "Read a sample of original comments. Look for omissions, minority views and identifying details.",
-      judgement: "How to interpret the feedback and what action, if any, is appropriate.",
+      judgement: "How to interpret the feedback, what intervention is appropriate and how you will review whether it helped.",
     },
     {
       title: "Test assignment clarity",
@@ -549,10 +549,10 @@ function UseCaseExplorer() {
       title: "Spot patterns in quiz results",
       tool: "M365 Copilot in Excel",
       icon: Scale,
-      use: "Identify low-success questions or topic patterns in a de-identified question-level results export.",
+      use: "Identify low-success questions or topic patterns in a de-identified question-level results export so you can review possible teaching or support needs.",
       prompt: "This sheet contains de-identified question-level quiz results. Identify low-success questions, possible flawed questions and weak topic areas. Make no claims about individual students or causes.",
       check: "Verify the figures and consider context: a weak result may reflect a flawed question, timing or teaching sequence.",
-      judgement: "What to revisit in teaching. Decisions about individual students remain with you.",
+      judgement: "What to revisit in teaching, what support to provide and how to check whether the support improved learning.",
     },
     {
       title: "Create alternative formats",
@@ -581,16 +581,16 @@ function UseCaseExplorer() {
         <div className="prompt-starter"><strong>Prompt starter</strong><p>{selected.prompt}</p></div>
         <div className="use-case-checks"><div><b>Check</b><p>{selected.check}</p></div><div><b>Your judgement</b><p>{selected.judgement}</p></div></div>
       </div>
-      <p className="use-case-reminder"><strong>The pattern:</strong> give relevant context, set a bounded task, state the constraints, then check the output. The tool drafts, flags or summarises. You decide.</p>
+      <p className="use-case-reminder"><strong>The pattern:</strong> give relevant context, set a bounded task, state the constraints, then check the output. The tool drafts, flags or summarises. You interpret, decide and review impact.</p>
     </section>
   );
 }
 
 function ToolChecksActivity() {
-  return <ChoiceCheck eyebrow="Four checks in practice" question="An approved AI tool summarises results and flags three students for possible early intervention. The data use is approved and the figures are accurate. What should you do before acting?" choices={[
-    { label: "Review the students’ context and make the decision yourself.", correct: true, feedback: "The AI-generated flags are inputs, not decisions. Review the context and apply your professional judgement before acting." },
+  return <ChoiceCheck eyebrow="Four checks in practice" question="An approved AI tool summarises assessment results and flags three students for possible early intervention. The data use is approved and the figures are accurate. What should you do before acting?" choices={[
+    { label: "Review the students’ learning context and other available evidence, decide whether support is needed, and later review whether it helped.", correct: true, feedback: "The tool can highlight a possible need, but the lecturer must interpret the evidence, decide on the intervention and review its impact." },
     { label: "Act on the flags because the tool and data use are approved.", correct: false, feedback: "Approval does not make the AI output a decision. A person must review the context and decide what action, if any, is appropriate." },
-    { label: "Ask the tool to choose the most urgent student first.", correct: false, feedback: "AI should not make student-support decisions. Human oversight remains essential even when the figures are accurate." },
+    { label: "Ask the tool to rank the students and intervene with the highest-ranked student first.", correct: false, feedback: "AI should not rank students for support decisions. Human oversight remains essential even when the figures are accurate." },
   ]} />;
 }
 
@@ -815,10 +815,10 @@ function AssessmentFocusVisual() {
 
 function ToolChecksVisual() {
   const items = [
-    { icon: Target, title: "Learning value", detail: "Does it help learning?" },
-    { icon: CheckCircle2, title: "Output quality", detail: "Is it checked?" },
-    { icon: LockKeyhole, title: "Data and ethics", detail: "Is the use safe?" },
-    { icon: Eye, title: "Human oversight", detail: "Who decides?" },
+    { icon: Target, title: "Learning value", detail: "Does it support the intended learning?" },
+    { icon: CheckCircle2, title: "Output quality", detail: "Is the output accurate and suitable?" },
+    { icon: LockKeyhole, title: "Data, privacy and ethics", detail: "Is the information safe and appropriate to use?" },
+    { icon: Eye, title: "Human oversight", detail: "Who reviews, decides and remains responsible?" },
   ];
   return (
     <figure className="concept-visual tool-visual" aria-label="Four checks for responsible AI tool use">
