@@ -67,11 +67,11 @@ Then ask:
 
 Use the 3As to review:
 
-- the knowledge, skills, human qualities and professional judgement students must retain independently of AI;
-- how they should use AI productively;
-- what new professional practice AI may enable.
+- what students must know, do and judge without relying on AI;
+- how they should use AI to improve the quality or productivity of their work;
+- what new forms of professional practice AI may enable.
 
-Then check that learning outcomes, activities and assessment remain aligned.
+Then ensure the learning outcomes, activities and assessment are aligned.
 
 ---
 
