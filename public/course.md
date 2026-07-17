@@ -73,11 +73,10 @@ Develop students' ability to use AI to create new possibilities, workflows or fo
 
 > A learning outcome or module may emphasise one or combine several, depending on the intended learning and professional context.
 
-The 3As help lecturers consider how curriculum should respond as AI changes professional practice: what remains distinctly human, how students should work productively with AI, and what new forms of practice may emerge.
 
 ## Illustrative Applications
 
-The examples below are intentionally broad. They illustrate possible applications of the 3As and are not intended to prescribe outcomes or practices for any discipline.
+The examples below are intentionally broad and are not intended to prescribe outcomes or practices for any discipline.
 
 |                                                  | Anchor                                                                           | Augment                                                                                                    | Advance                                                                            |
 | ------------------------------------------------ | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
@@ -97,17 +96,14 @@ Consider whether students need to develop and demonstrate:
 - productive use of AI; or
 - new AI-enabled professional practice.
 
-Then check whether the learning activities provide suitable opportunities to develop these competencies and whether the assessment makes them visible.
+Then check whether the learning activities provide suitable practice and whether the assessment makes the intended competency visible.
 
 ## Key Takeaway
 
-The 3As help lecturers review the competencies students need for an AI-enabled professional context:
+Use the 3As to align the competencies students need, the learning experiences that develop them and the assessment evidence that makes them visible.
 
-- **Anchor** focuses on distinctly human capabilities;
-- **Augment** focuses on using AI to improve work;
-- **Advance** focuses on using AI to extend or redefine professional practice.
-
-Learning outcomes, activities and assessment should then be aligned to the intended competencies.
+**Next**
+Consider how PAIR can structure students' learning with AI while keeping the intended thinking, judgement and responsibility visible.
 
 ---
 
