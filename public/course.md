@@ -55,9 +55,9 @@ AI may change what students need to learn and demonstrate, but strong disciplina
 
 Choose one learning outcome.
 
-- What must students understand, judge or do independently of AI?
-- How should students use AI productively?
-- What new AI-enabled practice might be worth exploring?
+- What knowledge, skills, human qualities or professional judgement must students demonstrate independently of AI?
+- How should students use AI to improve their work?
+- What new AI-enabled practice might be worth developing?
 
 Then ask:
 
@@ -67,7 +67,7 @@ Then ask:
 
 Use the 3As to review:
 
-- what students must demonstrate independently of AI;
+- the knowledge, skills, human qualities and professional judgement students must retain independently of AI;
 - how they should use AI productively;
 - what new professional practice AI may enable.
 

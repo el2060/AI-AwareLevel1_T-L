@@ -259,7 +259,7 @@ const sectionMeta = [
 const sectionBridges = [
   "See how these four areas connect to NP’s direction for AI-enabled T&L.",
   "Begin with curriculum: what must students learn and demonstrate as AI changes professional practice?",
-  "Then consider how AI can support learning and practice—and use PAIR to give that learning a clear structure.",
+  "Consider how AI can support learning and practice, and how PAIR can structure the student learning process.",
   "Next, consider how assessment keeps learning authentic, credible and visible.",
   "Then choose suitable tools and data uses, checking information, output and human oversight.",
   "Bring the four areas together for a module you teach, lead or support.",
@@ -388,13 +388,13 @@ function ThreeAsActivity() {
       label: "Example 1",
       capability: "Students use AI to compare options, then evaluate the evidence and justify a recommendation for a client.",
       answer: "Augment",
-      feedback: "Students use AI to strengthen the work, while retaining responsibility for evaluating the evidence and making the final recommendation.",
+      feedback: "Students use AI to strengthen the work, while retaining responsibility for evaluating the evidence and justifying the recommendation.",
     },
   ];
   const lenses = [
-    { name: "Anchor", description: "What students must demonstrate independently of AI." },
+    { name: "Anchor", description: "Knowledge, skills, human qualities and professional judgement students must demonstrate independently of AI." },
     { name: "Augment", description: "How students use AI to improve the quality or productivity of their work." },
-    { name: "Advance", description: "How students use AI to extend practice beyond established job boundaries." },
+    { name: "Advance", description: "How students use AI to create new forms of professional practice beyond established job boundaries." },
   ];
   const [active, setActive] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -409,13 +409,13 @@ function ThreeAsActivity() {
         </div>
         <span className="activity-count">{cases.length} example</span>
       </div>
-      <p>Choose the 3A that best describes each capability.</p>
+      <p>Choose the 3A that best describes each capability being developed.</p>
       <div className="competency-case-tabs" role="tablist" aria-label="Professional contexts">
         {cases.map((item, index) => <button key={item.id} type="button" role="tab" aria-selected={active === index} className={active === index ? "active" : ""} onClick={() => setActive(index)}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.label} · {item.domain}</strong></button>)}
       </div>
       <div className="competency-case" role="tabpanel">
         <span>{current.domain}</span>
-        <h3>Capability being assessed</h3>
+        <h3>Capability being developed</h3>
         <p>{current.capability}</p>
       </div>
       <p className="competency-question">Which 3A best describes this capability?</p>
@@ -600,19 +600,19 @@ function ThreeAsInfographic() {
     {
       key: "anchor",
       name: "Anchor",
-      tagline: "What students must demonstrate independently of AI",
-      body: "Disciplinary foundations, human qualities and professional judgement.",
+      tagline: "What students must retain and demonstrate independently of AI",
+      body: "Core disciplinary knowledge and skills, human qualities and professional judgement.",
     },
     {
       key: "augment",
       name: "Augment",
       tagline: "How students should use AI productively",
-      body: "Use AI to improve the quality or productivity of work while applying disciplinary judgement.",
+      body: "Use AI to improve the quality or productivity of work while applying disciplinary judgement and oversight.",
     },
     {
       key: "advance",
       name: "Advance",
-      tagline: "What new possibilities AI may enable",
+      tagline: "What new AI-enabled practice students may develop",
       body: "Use AI to create new services, workflows or forms of professional practice beyond established job boundaries.",
     },
   ];
@@ -620,7 +620,7 @@ function ThreeAsInfographic() {
     <figure className="concept-visual three-as-infographic" aria-labelledby="three-as-title">
       <figcaption>
         <span>The 3As</span>
-        <strong id="three-as-title">Three lenses for reviewing curriculum and assessment</strong>
+        <strong id="three-as-title">Three lenses for reviewing learning outcomes, activities and assessment</strong>
       </figcaption>
       <div className="three-as-path">
         {lenses.map((lens) => (
