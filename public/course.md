@@ -10,10 +10,10 @@ This package applies an AI lens across four T&L Competency Framework domains.
 
 By the end of this module, you will be able to:
 
-- recognise how AI may affect learning outcomes, activities and assessment;
-- identify ways AI can support learning without replacing it;
-- explain NP’s key GenAI assessment requirements;
-- apply basic checks when using AI tools and learning data.
+- identify how AI may change the competencies students need and the implications for curriculum design;
+- explain how AI can support learning without replacing the intended thinking, judgement or performance;
+- apply NP’s key GenAI requirements to keep assessment authentic, credible and transparent;
+- identify appropriate uses of AI tools and learning data, and apply basic checks for safe and responsible use.
 
 ### Learning Time
 
@@ -34,6 +34,22 @@ The four sections explore:
 ---
 
 # Part 2: Curriculum Design and Development — What Competencies do Students Need?
+
+## Student AI Baseline Competencies
+
+NP's student AI baseline sets out the foundational competencies students should develop across their learning. Individual modules may contribute to different areas; not every module is expected to address all of them.
+
+<!--student-baseline-visual-->
+
+Lecturers should consider which of these competencies are relevant to their discipline, module level and intended learning outcomes.
+
+### Bridge to the 3As
+
+The 3As help lecturers connect these baseline AI competencies to disciplinary learning: what remains distinctly human, how students should use AI productively and what new AI-enabled practice may emerge.
+
+## The 3As
+
+<!--three-as-visual-->
 
 ## Illustrative Applications
 
@@ -72,6 +88,8 @@ Use the 3As to review what competencies students need, how learning activities d
 NP uses the PAIR framework to help students learn and solve problems with AI purposefully, critically and responsibly.
 
 Students carry out the PAIR process. Lecturers design the task, determine the degree of openness and provide the scaffolding students need.
+
+PAIR gives students structured practice in several baseline AI competencies, including problem formulation, tool selection, critical evaluation of outputs, reflection and responsible use.
 
 PAIR is:
 
@@ -151,6 +169,8 @@ Use the 3As to clarify:
 - what human or disciplinary capabilities students must demonstrate;
 - how they should use AI productively;
 - where new AI-enabled practice may be assessed.
+
+Where relevant, assessment should also make visible students’ ability to evaluate AI outputs, apply AI for value creation and exercise appropriate human judgement and oversight.
 
 Assessment should provide credible evidence of learning. A polished final product alone may not show what the student knows, can do, judge or contribute.
 
@@ -355,9 +375,9 @@ Choose a module you teach, lead or support. Consider each question once.
 
 Human qualities, domain expertise and responsible AI capability.
 
-**3As and PAIR**
+**Student AI competencies, 3As and PAIR**
 
-Use the 3As to review what students need to learn and demonstrate, and PAIR to structure learning with AI.
+Use the student AI baseline to identify foundational competencies, the 3As to connect them to disciplinary practice, and PAIR to structure learning with AI.
 
 **Authentic evidence**
 

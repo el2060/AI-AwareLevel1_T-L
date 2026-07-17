@@ -561,6 +561,28 @@ function OpeningVisual() {
   );
 }
 
+function StudentBaselineVisual() {
+  const items = [
+    { icon: BookOpen, title: "Learn About AI", detail: "Understand key AI terms, approaches, capabilities and limitations." },
+    { icon: Bot, title: "Learn With AI", detail: "Use AI as a learning partner to break down problems, compare explanations, identify gaps and deepen understanding." },
+    { icon: Rocket, title: "Learn to Use AI", detail: "Apply AI to create value, and evaluate outputs for accuracy, relevance, bias and suitability before using them." },
+    { icon: Scale, title: "Learn Beyond AI", detail: "Consider the societal, ethical and legal implications of AI, and exercise human judgement and oversight." },
+  ];
+  return (
+    <figure className="concept-visual student-baseline-visual" aria-label="NP’s student AI baseline competencies">
+      <div className="lens-strip">
+        {items.map(({ icon: Icon, title, detail }) => (
+          <section key={title}>
+            <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
+            <b>{title}</b>
+            <small>{detail}</small>
+          </section>
+        ))}
+      </div>
+    </figure>
+  );
+}
+
 function ThreeAsInfographic() {
   const lenses = [
     {
@@ -740,7 +762,7 @@ function ModulePreviewVisual() {
 
 function SectionVisual({ title }: { title: string }) {
   if (title.startsWith("Part 1")) return <StrategyMap />;
-  if (title.startsWith("Part 2")) return <ThreeAsInfographic />;
+  if (title.startsWith("Part 2")) return null;
   if (title.startsWith("Part 3")) return null;
   if (title.startsWith("Part 4")) return null;
   if (title.startsWith("Part 5")) return null;
@@ -806,6 +828,8 @@ export default function Home() {
   const actionInfographicMarker = "<!--assessment-actions-infographic-->";
   const modulePreviewMarker = "<!--module-preview-->";
   const toolChecksMarker = "<!--tool-checks-visual-->";
+  const studentBaselineMarker = "<!--student-baseline-visual-->";
+  const threeAsMarker = "<!--three-as-visual-->";
   const sectionMarkdown = withoutTitle(current.markdown);
   const hasModuleReview = sectionMarkdown.includes(moduleReviewMarker);
   const hasInlineNextPrompt = /^\s*(\*\*Next\*\*|#{1,4}\s+Next)\s*$/m.test(sectionMarkdown);
@@ -815,6 +839,8 @@ export default function Home() {
     [actionInfographicMarker]: <AssessmentActionsInfographic />,
     [modulePreviewMarker]: <ModulePreviewVisual />,
     [toolChecksMarker]: <ToolChecksVisual />,
+    [studentBaselineMarker]: <StudentBaselineVisual />,
+    [threeAsMarker]: <ThreeAsInfographic />,
     [moduleReviewMarker]: <FourLensReview value={activityNotes.snapshotcheck ?? ""} onChange={(value) => setActivityValue("snapshotcheck", value)} />,
   };
   const markerPattern = new RegExp(`(${Object.keys(markerRenderers).join("|")})`, "g");
