@@ -2,9 +2,9 @@
 
 ## Welcome
 
-AI, particularly Generative AI (GenAI), is increasingly shaping how students learn and how work is carried out across many professions. As students use AI to learn, create and solve problems, educators need to understand the opportunities and challenges it brings to teaching, learning and assessment.
+AI, particularly Gen AI, is increasingly shaping how students learn and how work is carried out across many professions. As students use AI to learn, create and solve problems, educators need to understand the opportunities and challenges it brings to teaching, learning and assessment.
 
-This package builds awareness of these considerations across four familiar T&L domains.
+This package applies an AI lens across four T&L Competency Framework domains.
 
 ### What You Will Learn
 
