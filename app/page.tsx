@@ -746,7 +746,7 @@ function AssessmentFocusVisual() {
     {
       icon: ClipboardCheck,
       title: "Apply NP’s GenAI requirements",
-      detail: "GenAI is allowed by default. State any restrictions or prohibitions clearly, and require students to cite and declare their use as instructed.",
+      detail: "GenAI is allowed by default in summative assessment unless restricted or prohibited. Students must cite and declare their use.",
     },
     {
       icon: Scale,

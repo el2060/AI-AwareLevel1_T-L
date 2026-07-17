@@ -159,11 +159,17 @@ If AI can produce the final output without students demonstrating the intended c
 
 ### 2. State the GenAI Conditions Clearly
 
-GenAI is allowed by default. Where use is restricted or prohibited, state the scope and conditions clearly.
+GenAI is allowed by default in summative assessment unless it is explicitly restricted or prohibited in the assessment brief. Students must cite and declare their use.
+
+For each assessment component, state whether GenAI use is:
+
+- allowed;
+- restricted; or
+- prohibited.
 
 :::details Detailed requirements for restricted use
 
-For each assessment component, specify:
+Where use is restricted, specify:
 
 - what GenAI may be used for;
 - what must be the student’s own contribution;
@@ -197,25 +203,21 @@ Depending on the intended outcome, evidence may include drafts, checkpoints, pro
 
 ### 4. Prepare Students and Require Declaration
 
-Explain the conditions early and discuss examples with students. Use formative activities, checkpoints or mock runs where useful to develop appropriate AI use.
+Explain the conditions early and discuss examples with students. Use formative activities, checkpoints or mock runs where useful.
 
-All relevant submission cover pages must include the required **GenAI Use Declaration**. Where use is restricted, students must retain or produce the required evidence of their AI use.
+All relevant submission cover pages must include the required **GenAI Use Declaration**. Where use is restricted, students must retain or produce the required evidence of their use.
 
-:::details Suspected misuse
+Module leaders are responsible for stating the GenAI stance, explaining the conditions, ensuring declaration and designing for authentic evidence of learning.
 
-Undeclared use, breach of stated conditions, purely AI-generated work and simulated human interactions may constitute academic misconduct.
+## Important Policy Reminders
 
-Follow NP’s process for interviewing a student suspected of cheating with AI and the established Academic Integrity procedures. Do not make a decision based on suspicion alone.
+**Staff use of GenAI in grading**
 
-:::
+Staff must not use GenAI to determine grades independently. Any approved use as a grading assistant requires management approval, full human review of every grade and feedback decision, appropriate quality assurance and disclosure to students.
 
-:::details Staff use of GenAI in grading
+**Suspected misuse**
 
-Staff must not independently use GenAI to determine grades.
-
-Any use as a grading assistant requires prior management approval, an approved environment, quality assurance, student disclosure and human review of every grade and feedback decision. Staff remain fully responsible.
-
-:::
+Follow NP’s established process for interviewing students and handling academic misconduct. Do not decide based on suspicion alone.
 
 ## Where Further Review May Be Needed
 
@@ -232,7 +234,7 @@ An assessment may need review or redesign when:
 Consider one assessment:
 
 - What capability must students demonstrate?
-- Where is AI use appropriate, restricted or prohibited?
+- Where is AI use allowed, restricted or prohibited?
 - What evidence will make their learning and contribution visible?
 
 ## Key Takeaway
