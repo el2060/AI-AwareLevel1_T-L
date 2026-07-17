@@ -144,9 +144,9 @@ AI should support the intended learning—not substitute for it.
 
 # Part 4: Assessment — Authentic and Credible Evidence
 
-Assessment must provide credible evidence that students have achieved the intended learning outcomes. A polished final product alone may not show what the student knows, can do or contributed to the work.
+Assessment should provide credible evidence that students have achieved the intended learning outcomes. A polished final product alone may not show what the student knows, can do or contributed.
 
-At Level 1, focus on applying NP’s current requirements and recognising where an assessment may need further review.
+> At Level 1, focus on applying NP's requirements and recognising where an assessment may need further review or redesign.
 
 ## Four Lecturer Actions
 
@@ -156,25 +156,23 @@ Ask:
 
 - What capability is the assessment intended to measure?
 - What must students demonstrate independently of AI?
-- Where might AI use reflect authentic professional practice?
-- What evidence will make the student’s contribution visible?
+- Where should students use AI as part of authentic professional practice?
+- What evidence will make their contribution and judgement visible?
 
-If AI can produce the final output without the student demonstrating the intended capability, the assessment may need clearer conditions or further review.
+If AI can produce the final output without students demonstrating the intended capability, the assessment may need clearer conditions or redesign.
 
 ### 2. State the GenAI Conditions Clearly
 
-GenAI is allowed by default. Where use is restricted or prohibited, the scope and conditions must be stated clearly.
+GenAI is allowed by default. Where use is restricted or prohibited, state the scope and conditions clearly.
 
 :::details Detailed requirements for restricted use
 
-Where use is restricted, state:
+For each assessment component, specify:
 
 - what GenAI may be used for;
 - what must be the student’s own contribution;
-- what evidence of the student’s process and contribution must be retained or produced;
-- how AI output should be checked, cited and declared.
-
-Where use is prohibited, state clearly which component or activity is covered.
+- what evidence of process must be retained or produced;
+- how outputs must be checked, cited and declared.
 
 :::
 
@@ -189,26 +187,21 @@ Students must not:
 
 Declaring a prohibited use does not make it acceptable.
 
-### 3. Make Student Learning Visible
+### 3. Make Learning and Contribution Visible
 
 Avoid vague instructions such as:
 
 > You may use AI appropriately.
 
-State clearly:
-
-- what AI may be used for;
-- what students must contribute;
-- what evidence of their process is required;
-- how AI use must be checked, cited and declared.
-
-Then give students a specific example:
+Use specific conditions instead:
 
 > You may use GenAI to brainstorm possible approaches and receive feedback on an early draft. Your final analysis, selection of evidence and recommendation must be your own. Check AI-generated claims, retain evidence of your interaction, and cite and declare your use.
 
+Depending on the intended outcome, evidence may include drafts, checkpoints, process records, demonstrations, explanations or questioning.
+
 ### 4. Prepare Students and Require Declaration
 
-Explain the conditions early and discuss examples with students. Use formative activities or mock runs where useful to clarify acceptable practice.
+Explain the conditions early and discuss examples with students. Use formative activities, checkpoints or mock runs where useful to develop appropriate AI use.
 
 All relevant submission cover pages must include the required **GenAI Use Declaration**. Where use is restricted, students must retain or produce the required evidence of their AI use.
 
@@ -228,16 +221,27 @@ Any use as a grading assistant requires prior management approval, an approved e
 
 :::
 
+## Where Further Review May Be Needed
+
+An assessment may need review or redesign when:
+
+- AI can complete the central task without the intended capability being demonstrated;
+- the student’s own contribution is difficult to establish;
+- the task no longer reflects current professional practice;
+- GenAI conditions are vague or difficult to apply consistently;
+- learning activities do not prepare students for the required use or non-use of AI.
+
 ## Apply It to Your Module
 
-Consider:
+Consider one assessment:
 
-- One capability students must demonstrate independently of AI is…
-- One GenAI condition that may need clarification is…
+- What capability must students demonstrate?
+- Where is AI use appropriate, restricted or prohibited?
+- What evidence will make their learning and contribution visible?
 
 ## Key Takeaway
 
-Begin with the learning outcome. Then decide what students must demonstrate, where GenAI may be appropriate and what conditions will keep the learning visible.
+Begin with the learning outcome. Use the 3As to decide what students should demonstrate independently, with AI or through new AI-enabled practice. Then set clear conditions and design credible evidence of learning.
 
 ---
 

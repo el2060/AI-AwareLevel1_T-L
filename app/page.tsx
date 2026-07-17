@@ -452,13 +452,6 @@ function ThreeAsActivity() {
   );
 }
 
-function AssessmentBriefBuilder() {
-  return <ChoiceCheck eyebrow="Briefing challenge" question="Which instruction gives students clearer guidance?" choices={[
-    { label: "You may use AI appropriately.", correct: false, feedback: "This is too vague. It does not state the permitted use, the student’s required contribution, or the evidence and declaration expectations." },
-    { label: "You may use GenAI to brainstorm possible approaches and receive feedback on an early draft. Your final analysis and recommendation must be your own. Check AI-generated claims, retain evidence of your interaction, and cite and declare your use.", correct: true, feedbackTitle: "B is clearer.", feedback: "It states the permitted use, the student’s required contribution, the checks to perform, and the citation and declaration expectations." },
-  ]} />;
-}
-
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
@@ -574,7 +567,7 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
   if (title.startsWith("Part 1")) return null;
   if (title.startsWith("Part 2")) return <ThreeAsActivity />;
   if (title.startsWith("Part 3")) return null;
-  if (title.startsWith("Part 4")) return <AssessmentBriefBuilder />;
+  if (title.startsWith("Part 4")) return null;
   return null;
 }
 
@@ -764,13 +757,13 @@ function AssessmentFocusVisual() {
   const items = [
     {
       icon: ClipboardCheck,
-      title: "Apply NP’s current GenAI requirements",
+      title: "Apply NP’s GenAI requirements",
       detail: "GenAI is allowed by default. State any restrictions or prohibitions clearly, and require students to cite and declare their use as instructed.",
     },
     {
       icon: Scale,
       title: "Protect the intended learning",
-      detail: "Use the 3As to clarify what students demonstrate independently of AI, with AI, or through new AI-enabled practice.",
+      detail: "Use the 3As to clarify what students demonstrate independently, how they should use AI, and where new AI-enabled practice may be assessed.",
     },
   ];
   return (
