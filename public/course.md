@@ -102,9 +102,6 @@ Then check whether the learning activities provide suitable practice and whether
 
 Use the 3As to align the competencies students need, the learning experiences that develop them and the assessment evidence that makes them visible.
 
-**Next**
-Consider how PAIR can structure students' learning with AI while keeping the intended thinking, judgement and responsibility visible.
-
 ---
 
 # Part 3: Facilitation of Learning — How Can AI Support Learning?
