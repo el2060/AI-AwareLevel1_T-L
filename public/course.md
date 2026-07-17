@@ -89,14 +89,7 @@ The 3As help lecturers adjust learning outcomes and assessment for an AI-enabled
 
 NP uses the PAIR framework to guide **students** in using AI purposefully and responsibly as part of learning.
 
-Students use PAIR to:
-
-- frame the task or challenge;
-- identify and select a suitable AI tool;
-- interact critically with AI;
-- reflect on the process, output and learning.
-
-Lecturers design the task, decide the degree of openness and provide the scaffolding students need to carry out PAIR.
+Students carry out the PAIR process. Lecturers design the task, decide the degree of openness and provide the scaffolding students need.
 
 PAIR is:
 
@@ -118,24 +111,20 @@ PAIR is adaptable across disciplines and can be incorporated into an existing le
 
 ## The PAIR Process
 
-**Students carry out each stage of PAIR.**
-
 <!--pair-infographic-->
 
-## Applying PAIR to Design an AI-Enabled Learning Experience
+## Designing the Scaffolding
 
-Students carry out the PAIR process. Lecturers design the conditions, prompts and scaffolding that enable them to do so.
+Students carry out PAIR. Lecturers design the conditions that enable them to do so.
 
-|                        | **Problem**                                                               | **AI**                                                                             | **Interaction**                                                                  | **Reflection**                                                                           |
-| ---------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| **Students do**        | Define the task, constraints and intended outcome.                        | Explore and select a suitable GenAI tool.                                          | Experiment with AI, evaluate outputs and integrate useful inputs into their work. | Evaluate how AI helped or hindered the task and reflect on their learning and judgement. |
-| **Lecturers design for** | The level of openness, task boundaries and intended learning.           | Suitable and accessible choices, and how students justify selection.               | Opportunities to test, evaluate and verify outputs.                              | Prompts or evidence that make students' decisions, learning and judgement visible.       |
+|                 | Lecturers design for                                                                          |
+| --------------- | ----------------------------------------------------------------------------------------------- |
+| **Problem**     | The intended learning, task boundaries and degree of openness.                                  |
+| **AI**          | Suitable and accessible tool choices, and whether students need to justify their selection.     |
+| **Interaction** | Opportunities to test, challenge and verify AI-generated outputs.                                |
+| **Reflection**  | Prompts or evidence that make students’ decisions, learning and judgement visible.               |
 
-The degree of student choice should reflect readiness and the intended learning. Less experienced students may work with a defined task, suggested tools and guided reflection. More experienced students may take greater responsibility for framing the task, selecting tools and shaping their interaction with AI. Lecturers may define or constrain parts of PAIR for less experienced students, but should not automatically make all the decisions for them.
-
-### Why Verification Matters
-
-AI tools tend to draw on widely available information and may overlook specialised, niche or authoritative sources. During Interaction, students should check important claims—especially official, regulatory, technical or safety-related information—against primary or authoritative sources, not just the most convenient AI-generated answer.
+The degree of student choice should reflect readiness and the intended learning. Less experienced students may work with a defined task, suggested tools and guided reflection. More experienced students may take greater responsibility for framing the task, selecting tools and shaping their interaction with AI.
 
 ## Does AI Support the Intended Learning?
 
@@ -149,9 +138,7 @@ AI may support learning when students use it to:
 
 It substitutes for learning when it completes the analysis, judgement, creation or performance students are meant to develop.
 
-### When AI Has Substituted for Learning
-
-Where students have used AI to complete a task without developing the intended learning—for example, using AI to finish pre-class or asynchronous work—use a follow-up activity that requires them to examine their own use of AI, identify what they missed, and apply the underlying concepts themselves.
+Where this happens, use a follow-up activity that requires students to identify what they missed, examine how they used AI and apply the underlying concepts themselves.
 
 ## Apply It to Your Module
 
@@ -161,9 +148,9 @@ Consider one learning activity:
 
 ## Key Takeaway
 
-PAIR is a process students carry out: they define the task, select an appropriate tool, interact critically with AI and reflect on their learning. Lecturers design the task and provide the level of structure, choice and support appropriate to their students.
+PAIR structures how students learn with AI: they define the task, select a suitable tool, interact critically with its outputs and reflect on their learning.
 
-AI should support the intended learning—not substitute for it.
+Lecturers design the task and provide the appropriate level of structure, choice and support. AI should support the intended learning—not substitute for it.
 
 ---
 

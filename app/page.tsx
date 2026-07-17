@@ -260,7 +260,7 @@ const sectionBridges = [
   "See how these four areas connect to NP’s direction for AI-enabled T&L.",
   "Begin with curriculum: what should students learn and demonstrate as AI changes professional practice?",
   "Consider how PAIR can structure students’ learning with AI while keeping the intended thinking, judgement and responsibility visible.",
-  "Next, consider how assessment keeps learning authentic, credible and visible.",
+  "Consider how assessment keeps learning authentic, credible and visible.",
   "Then choose suitable tools and data uses, checking information, output and human oversight.",
   "Bring the four areas together for a module you teach, lead or support.",
 ];
@@ -609,7 +609,7 @@ function PairInfographic() {
   const stages = [
     { letter: "P", name: "Problem", action: "Students define the task or challenge", detail: "Clarify the intended outcome, requirements, constraints and success criteria.", cue: "What must we understand before using AI?", tone: "problem" },
     { letter: "A", name: "AI", action: "Students select a suitable AI tool", detail: "Consider what support is needed, what the tool can do and whether its use is permitted.", cue: "What could AI contribute?", tone: "ai" },
-    { letter: "I", name: "Interaction", action: "Students experiment, evaluate and refine", detail: "Critically evaluate outputs for relevance and accuracy, and verify important claims against trusted sources.", cue: "How will we test and improve the output?", tone: "interaction" },
+    { letter: "I", name: "Interaction", action: "Students experiment, evaluate and refine", detail: "Critically evaluate outputs for relevance and accuracy, and verify important claims against trusted or authoritative sources.", cue: "How will we test and improve the output?", tone: "interaction" },
     { letter: "R", name: "Reflection", action: "Students examine the process and learning", detail: "Evaluate how AI supported or hindered the learning process, and identify where human judgement was necessary.", cue: "What did we learn about the task, the tool and our own judgement?", tone: "reflection" },
   ];
   return (
