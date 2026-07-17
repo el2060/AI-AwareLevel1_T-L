@@ -401,7 +401,7 @@ function FourLensReview({ value, onChange }: { value: string; onChange: (value: 
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
-    { name: "Embed AI-Integrated Pedagogy · PAIR", question: "How can students learn and solve problems with AI while developing judgement, transferable skills and responsible use?", icon: Lightbulb },
+    { name: "Embed AI-Integrated Pedagogy · PAIR", question: "How can students learn and work with AI while developing judgement, transferable skills and responsible use?", icon: Lightbulb },
     { name: "Transform the Curriculum · 3As", question: "What competencies should students develop and demonstrate as AI changes professional practice?", icon: BookOpen },
     { name: "Redesign Assessment", question: "How can assessment provide authentic and credible evidence of learning in an AI-enabled context?", icon: ClipboardCheck },
     { name: "Enable Personalised Learning", question: "How can AI extend opportunities for practice, feedback and coaching?", icon: Bot },
@@ -413,12 +413,14 @@ function StrategyMap() {
         <h2>NP’s Five Strategies at a Glance</h2>
         <p>NP’s five strategies bring together curriculum, pedagogy, assessment, personalised learning and human capabilities to support one intended outcome:</p>
       </div>
-      <div className="strategy-goal" aria-label="AI-ready graduates combine strong human qualities, deep domain expertise and effective use of AI">
-        <div className="graduate-core"><i><UserRound size={27} strokeWidth={2} aria-hidden="true" /></i><div><small>Outcome</small><strong>AI-ready graduates</strong></div></div>
-        <div className="graduate-capabilities">
-          <div><i><Users size={18} strokeWidth={2.1} aria-hidden="true" /></i><span>Strong human qualities</span></div>
-          <div><i><BookOpen size={18} strokeWidth={2.1} aria-hidden="true" /></i><span>Deep domain expertise</span></div>
-          <div><i><Bot size={18} strokeWidth={2.1} aria-hidden="true" /></i><span>Effective use of AI</span></div>
+      <div className="strategy-goal" aria-label="Outcome: AI-ready graduates who combine strong human qualities, deep domain expertise and effective use of AI in professional practice">
+        <div className="graduate-core">
+          <i><UserRound size={34} strokeWidth={2} aria-hidden="true" /></i>
+          <div>
+            <small>Outcome</small>
+            <strong>AI-ready graduates</strong>
+            <span>Strong human qualities · Deep domain expertise · Effective use of AI in professional practice</span>
+          </div>
         </div>
       </div>
       <div className="strategy-path">
@@ -726,6 +728,28 @@ function BringTogetherVisual() {
   );
 }
 
+function ModulePreviewVisual() {
+  const areas = [
+    { icon: BookOpen, title: "Curriculum Design and Development", detail: "The competencies students need as professional practice changes." },
+    { icon: Lightbulb, title: "Facilitation of Learning", detail: "How AI may support learning and practice without replacing the intended learning." },
+    { icon: ClipboardCheck, title: "Assessment", detail: "How assessment keeps learning and student contribution authentic, credible and visible." },
+    { icon: ShieldCheck, title: "Data and Tech-Enhanced T&L", detail: "How AI tools and learning data can improve learning safely and responsibly." },
+  ];
+  return (
+    <figure className="concept-visual module-preview-visual" aria-label="What the next four sections cover">
+      <div className="lens-strip">
+        {areas.map(({ icon: Icon, title, detail }) => (
+          <section key={title}>
+            <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
+            <b>{title}</b>
+            <small>{detail}</small>
+          </section>
+        ))}
+      </div>
+    </figure>
+  );
+}
+
 function SectionVisual({ title }: { title: string }) {
   if (title.startsWith("Part 1")) return <StrategyMap />;
   if (title.startsWith("Part 2")) return <ThreeAsInfographic />;
@@ -792,13 +816,15 @@ export default function Home() {
   const pairInfographicMarker = "<!--pair-infographic-->";
   const moduleReviewMarker = "<!--module-review-->";
   const actionInfographicMarker = "<!--assessment-actions-infographic-->";
+  const modulePreviewMarker = "<!--module-preview-->";
   const sectionMarkdown = withoutTitle(current.markdown);
   const hasUseCaseExplorer = current.title.startsWith("Part 5") && sectionMarkdown.includes(useCaseMarker);
   const hasPairInfographic = current.title.startsWith("Part 3") && sectionMarkdown.includes(pairInfographicMarker);
   const hasModuleReview = current.title.startsWith("Part 6") && sectionMarkdown.includes(moduleReviewMarker);
   const hasActionInfographic = current.title.startsWith("Part 4") && sectionMarkdown.includes(actionInfographicMarker);
+  const hasModulePreview = current.title.startsWith("Part 1") && sectionMarkdown.includes(modulePreviewMarker);
   const hasInlineNextPrompt = /^\s*(\*\*Next\*\*|#{1,4}\s+Next)\s*$/m.test(sectionMarkdown);
-  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairInfographic ? pairInfographicMarker : hasModuleReview ? moduleReviewMarker : hasActionInfographic ? actionInfographicMarker : "";
+  const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairInfographic ? pairInfographicMarker : hasModuleReview ? moduleReviewMarker : hasActionInfographic ? actionInfographicMarker : hasModulePreview ? modulePreviewMarker : "";
   const [contentBeforeInteractive, contentAfterInteractive = ""] = activeMarker
     ? sectionMarkdown.split(activeMarker)
     : [sectionMarkdown];
@@ -866,6 +892,7 @@ export default function Home() {
         {hasUseCaseExplorer && <UseCaseExplorer />}
         {hasPairInfographic && <PairInfographic />}
         {hasActionInfographic && <AssessmentActionsInfographic />}
+        {hasModulePreview && <ModulePreviewVisual />}
         {hasModuleReview && <FourLensReview value={activityNotes.snapshotcheck ?? ""} onChange={(value) => setActivityValue("snapshotcheck", value)} />}
         {contentAfterInteractive && <article
           key={`${current.id}-after`}

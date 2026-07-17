@@ -21,13 +21,13 @@ Set aside about **2 hours** to work through the package, consider the implicatio
 
 ---
 
-# Part 1: NP’s Approach to AI-Enabled T&L
+# Part 1: NP’s Approach to AI-Enabled Teaching & Learning
 
 ## Keep One Module in Mind
 
-As you work through the package, consider one module you teach, lead or support.
+The next four sections will help you review one module through four lenses:
 
-> What competencies should students develop and demonstrate? How might AI support their learning? What evidence will keep learning visible? What must be checked before using AI tools or learning data?
+<!--module-preview-->
 
 **Next**
 Begin with curriculum: what competencies should students develop and demonstrate as AI changes professional practice?
