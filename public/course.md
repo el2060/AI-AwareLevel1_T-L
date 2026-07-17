@@ -1,8 +1,8 @@
-# AI T&L Essentials: Level 1 (AI-Aware)
+# AI in T&L Essentials: Level 1 (AI-Aware)
 
 ## Welcome
 
-AI is shaping how students learn and how work is done across many professions. Students may use GenAI to explain concepts, generate ideas or support assignment work, raising new considerations for teaching, learning and assessment.
+AI, particularly Generative AI (GenAI), is increasingly shaping how students learn and how work is carried out across many professions. As students use AI to learn, create and solve problems, educators need to understand the opportunities and challenges it brings to teaching, learning and assessment.
 
 This package builds awareness of these considerations across four familiar T&L domains.
 
@@ -260,11 +260,7 @@ Begin with the learning outcome. Use the 3As to decide what students should demo
 
 AI tools and learning data can support engagement, learning outcomes and different learning needs when used purposefully and responsibly.
 
-> Start with the T&L need—not the tool.
-
-Use learning data to identify possible needs, inform appropriate interventions and evaluate whether the support is helping.
-
-Use these four checks before adopting an AI tool or acting on AI-generated information.
+> Start with the T&L need—not the tool. Use the four checks before adopting a tool, interpreting learning data or acting on AI-generated information.
 
 ## How AI May Support Your T&L Work
 
@@ -327,7 +323,7 @@ Think of one small, low-risk use.
 
 ## Key Takeaway
 
-Use AI tools and learning data for a clear learning purpose. Select an appropriate tool, handle information safely, check the output, apply professional judgement and review the impact.
+Start with the learning goal. Use AI tools and learning data responsibly, verify outputs, and apply professional judgement before deciding what action will best support learners.
 
 ---
 

@@ -223,7 +223,7 @@ function makeId(title: string, index: number) {
 }
 
 function shortTitle(title: string) {
-  if (title === "AI T&L Essentials: Level 1 (AI-Aware)") return "Start here";
+  if (title === "AI in T&L Essentials: Level 1 (AI-Aware)") return "Start here";
   return title.replace(/^Part \d+:\s*/, "");
 }
 
@@ -258,7 +258,7 @@ const sectionMeta = [
 
 const sectionBridges = [
   "See how these four areas connect to NP’s direction for AI-enabled T&L.",
-  "Begin with curriculum: what must students learn and demonstrate as AI changes professional practice?",
+  "Begin with curriculum: what should students learn and demonstrate as AI changes professional practice?",
   "Consider how AI can support learning and practice, and how PAIR can structure the student learning process.",
   "Next, consider how assessment keeps learning authentic, credible and visible.",
   "Then choose suitable tools and data uses, checking information, output and human oversight.",
@@ -435,15 +435,15 @@ function ThreeAsActivity() {
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
-    { name: "Embed AI-Integrated Pedagogy · PAIR", question: "Structure learning and problem-solving with AI while developing transferable skills, critical judgement and responsible use.", icon: MessageCircle },
-    { name: "Transform the Curriculum · 3As", question: "Review AI-relevant learning outcomes, experiences and assessments.", icon: Sparkles },
-    { name: "Redesign Assessment", question: "Assure authentic learning for AI-enabled professional practice.", icon: ClipboardCheck },
-    { name: "Enable Personalised Learning", question: "Provide personalised practice, feedback and coaching.", icon: Bot },
-    { name: "Strengthen Human Skills and Resilience", question: "Build human skills, resilience and judgement.", icon: Users },
+    { name: "Embed AI-Integrated Pedagogy · PAIR", question: "How can students learn and solve problems with AI while developing judgement, transferable skills and responsible use?", icon: MessageCircle },
+    { name: "Transform the Curriculum · 3As", question: "What should students learn and demonstrate as AI changes professional practice?", icon: Sparkles },
+    { name: "Redesign Assessment", question: "How can assessment provide authentic and credible evidence of learning when AI is used?", icon: ClipboardCheck },
+    { name: "Enable Personalised Learning", question: "How can AI extend practice, feedback and coaching?", icon: Bot },
+    { name: "Strengthen Human Skills and Resilience", question: "How can we strengthen the human qualities, resilience and judgement students need alongside AI?", icon: Users },
   ];
   return (
     <section className="strategy-map" aria-label="How NP approaches connect across this package">
-      <div className="strategy-heading"><h2>NP’s Five Strategies at a Glance</h2><p>Explore how each strategy connects to AI-enabled T&amp;L.</p></div>
+      <div className="strategy-heading"><h2>NP’s Five Strategies at a Glance</h2></div>
       <div className="strategy-goal"><strong>AI-ready graduates</strong><span>Strong human qualities · deep domain expertise · effective use of AI</span></div>
       <div className="strategy-path">
         {items.map(({ name, question, icon: Icon }, index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
@@ -529,7 +529,7 @@ function UseCaseExplorer() {
         <div className="prompt-starter"><strong>Prompt starter</strong><p>{selected.prompt}</p></div>
         <div className="use-case-checks"><div><b>Check</b><p>{selected.check}</p></div><div><b>Your judgement</b><p>{selected.judgement}</p></div></div>
       </div>
-      <p className="use-case-reminder"><strong>The pattern:</strong> give relevant context, set a bounded task, state the constraints, then check the output. The tool drafts, flags or summarises. You interpret, decide and review impact.</p>
+      <p className="use-case-reminder"><strong>The pattern:</strong> give relevant context, set a bounded task, state the constraints, then check the output. The tool drafts, flags or summarises. You interpret the output, decide what action to take and review whether it helped.</p>
     </section>
   );
 }
@@ -543,7 +543,7 @@ function ToolChecksActivity() {
 }
 
 function SectionInteractive({ title, notes, onChange }: { title: string; notes: ActivityNotes; onChange: (key: string, value: string) => void }) {
-  if (title === "AI T&L Essentials: Level 1 (AI-Aware)") return null;
+  if (title === "AI in T&L Essentials: Level 1 (AI-Aware)") return null;
   if (title.startsWith("Part 1")) return null;
   if (title.startsWith("Part 2")) return <ThreeAsActivity />;
   if (title.startsWith("Part 3")) return null;
@@ -570,7 +570,7 @@ function OpeningVisual() {
     },
     {
       title: "Data and Tech-Enhanced T&L",
-      detail: "How AI tools and learning data may support learning safely and responsibly",
+      detail: "How AI tools and learning data can support learning safely and responsibly",
       icon: ShieldCheck,
     },
   ];
@@ -895,7 +895,7 @@ export default function Home() {
           >
             <img className="np-logo" src="/np-logo.png" alt="Ngee Ann Polytechnic" />
             <span className="brand-divider" aria-hidden="true" />
-            <span className="course-name">AI T&amp;L Essentials</span>
+            <span className="course-name">AI in T&amp;L Essentials</span>
           </button>
           <div className="top-actions">
             <span className="level-badge">Level 1 · AI-Aware</span>
@@ -926,7 +926,7 @@ export default function Home() {
       <main className="reader">
         {active === 0 ? (
           <h1 className="page-title home-title">
-            <span>AI T&amp;L Essentials</span>
+            <span>AI in T&amp;L Essentials</span>
             <small>Level 1 <i aria-hidden="true">·</i> AI-Aware</small>
           </h1>
         ) : <h1 className="page-title">{current.shortTitle}</h1>}
