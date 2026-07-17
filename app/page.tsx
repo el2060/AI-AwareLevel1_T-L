@@ -390,14 +390,6 @@ function ThreeAsActivity() {
       answer: "Augment",
       feedback: "Students use AI to strengthen the work, while retaining responsibility for evaluating the evidence and making the final recommendation.",
     },
-    {
-      id: "engineering",
-      domain: "Engineering and Technology",
-      label: "Example 2",
-      capability: "Students use AI-assisted development to create and test a new workflow that extends what the role previously involved.",
-      answer: "Advance",
-      feedback: "AI enables students to create a new workflow that extends the role beyond its previous scope.",
-    },
   ];
   const lenses = [
     { name: "Anchor", description: "What students must demonstrate independently of AI." },
@@ -415,7 +407,7 @@ function ThreeAsActivity() {
           <span className="activity-eyebrow">Quick check</span>
           <h2>Which 3A best fits?</h2>
         </div>
-        <span className="activity-count">{cases.length} examples</span>
+        <span className="activity-count">{cases.length} example</span>
       </div>
       <p>Choose the 3A that best describes each capability.</p>
       <div className="competency-case-tabs" role="tablist" aria-label="Professional contexts">

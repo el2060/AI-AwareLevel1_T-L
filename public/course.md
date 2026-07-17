@@ -61,15 +61,17 @@ Choose one learning outcome.
 
 Then ask:
 
-> Do the learning activities provide suitable practice, and does the assessment make the intended learning visible?
-
-At Level 1, the aim is to identify where further review may be needed.
+> How do the learning activities provide suitable practice, and how does the assessment make the intended learning visible?
 
 ## Key Takeaway
 
-Use the 3As to review what students must demonstrate independently, how they should use AI productively and what new professional practice AI may enable.
+Use the 3As to review:
 
-Then check that outcomes, activities and assessment remain aligned.
+- what students must demonstrate independently of AI;
+- how they should use AI productively;
+- what new professional practice AI may enable.
+
+Then check that learning outcomes, activities and assessment remain aligned.
 
 ---
 
