@@ -49,31 +49,6 @@ As you work through the package, consider:
 
 # Part 2: Curriculum Design and Development — What Should Students Learn?
 
-## The 3As
-
-**Guiding lenses for reviewing the competencies students need in an AI-enabled professional context**
-
-### Anchor
-
-**Distinctly human capabilities**
-
-Develop the human qualities, disciplinary judgement and essential capabilities students need even as AI becomes more capable.
-
-### Augment
-
-**Productive use of AI**
-
-Develop students' ability to use AI effectively to improve the quality, productivity or effectiveness of their work while exercising appropriate judgement and oversight.
-
-### Advance
-
-**New AI-enabled practice**
-
-Develop students' ability to use AI to create new possibilities, workflows or forms of professional practice beyond established pre-AI job boundaries.
-
-> A learning outcome or module may emphasise one or combine several, depending on the intended learning and professional context.
-
-
 ## Illustrative Applications
 
 The examples below are intentionally broad and are not intended to prescribe outcomes or practices for any discipline.
@@ -90,17 +65,17 @@ Lecturers should interpret and apply the 3As according to their disciplinary exp
 
 Choose one learning outcome from a module you teach, lead or support.
 
-Consider whether students need to develop and demonstrate:
+Consider whether it should develop:
 
 - distinctly human capabilities;
-- productive use of AI; or
+- productive use of AI;
 - new AI-enabled professional practice.
 
 Then check whether the learning activities provide suitable practice and whether the assessment makes the intended competency visible.
 
 ## Key Takeaway
 
-Use the 3As to align the competencies students need, the learning experiences that develop them and the assessment evidence that makes them visible.
+Use the 3As to align what students need to learn, how they develop it and how it is demonstrated.
 
 ---
 

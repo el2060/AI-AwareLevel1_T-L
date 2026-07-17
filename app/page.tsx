@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useMemo, useState } from "react";
-import { Anchor, BookOpen, Bot, CheckCircle2, ClipboardCheck, Eye, Lightbulb, LockKeyhole, MessageCircle, Rocket, Scale, ShieldCheck, Target, UserRound, Users, Zap } from "lucide-react";
+import { BookOpen, Bot, CheckCircle2, ClipboardCheck, Eye, Lightbulb, LockKeyhole, MessageCircle, Rocket, Scale, ShieldCheck, Target, UserRound, Users, Zap } from "lucide-react";
 
 type Section = {
   id: string;
@@ -573,7 +573,7 @@ function ThreeAsInfographic() {
     {
       key: "anchor",
       name: "Anchor",
-      icon: Anchor,
+      icon: UserRound,
       tagline: "Distinctly human capabilities",
       body: "Develop the human qualities, disciplinary judgement and essential capabilities students need even as AI becomes more capable.",
     },
