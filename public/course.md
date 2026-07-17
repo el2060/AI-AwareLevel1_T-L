@@ -17,7 +17,7 @@ By the end of this module, you will be able to:
 
 ### Learning Time
 
-Allow about **2 hours** to complete the package, its activities and the completion quiz.
+Set aside about **2 hours** to work through the package, reflect on the implications for a module you teach or support, complete the activities and take the completion quiz.
 
 ---
 
