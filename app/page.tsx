@@ -383,37 +383,26 @@ function FourLensReview({ value, onChange }: { value: string; onChange: (value: 
 function ThreeAsActivity() {
   const cases = [
     {
-      id: "health",
-      domain: "Health and life sciences",
-      role: "A health professional",
-      capability: "Interpret observed evidence, decide when to escalate, and explain the reasoning behind a safe course of action.",
-      answer: "Anchor",
-      feedback: "This capability centres on disciplinary judgement, safe decision-making and reasoning that students must demonstrate independently of AI.",
-      alignment: "Where will students practise making and explaining this judgement without relying on an AI-generated answer?",
-    },
-    {
       id: "business",
-      domain: "Business, design and media",
-      role: "A business or creative professional",
-      capability: "Use AI to compare options, then evaluate the evidence and justify a recommendation for a client.",
+      domain: "Business and Creative Practice",
+      label: "Example 1",
+      capability: "Students use AI to compare options, then evaluate the evidence and justify a recommendation for a client.",
       answer: "Augment",
-      feedback: "The capability uses AI to extend the work while students retain responsibility for evaluating evidence and justifying the final recommendation.",
-      alignment: "How will students practise evaluating AI output and show why their final recommendation is appropriate?",
+      feedback: "Students use AI to strengthen the work, while retaining responsibility for evaluating the evidence and making the final recommendation.",
     },
     {
       id: "engineering",
-      domain: "Engineering and ICT",
-      role: "An engineering or technology professional",
-      capability: "Use AI-assisted development to create and test a new workflow or solution beyond the previous scope of the role.",
+      domain: "Engineering and Technology",
+      label: "Example 2",
+      capability: "Students use AI-assisted development to create and test a new workflow that extends what the role previously involved.",
       answer: "Advance",
-      feedback: "The capability uses AI to create a new workflow or solution that extends professional practice beyond the role’s previous scope.",
-      alignment: "What learning activity and assessment would let students explore the new possibility while testing its value, limits and risks?",
+      feedback: "AI enables a new workflow that goes beyond the role’s previous scope.",
     },
   ];
   const lenses = [
-    { name: "Anchor", description: "Capabilities students must demonstrate independently of AI." },
-    { name: "Augment", description: "Productive use of AI with disciplinary judgement." },
-    { name: "Advance", description: "New AI-enabled possibilities beyond established practice." },
+    { name: "Anchor", description: "A capability students must demonstrate without AI." },
+    { name: "Augment", description: "Using AI to improve the quality or productivity of work." },
+    { name: "Advance", description: "Using AI to extend work beyond established job boundaries." },
   ];
   const [active, setActive] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -423,18 +412,18 @@ function ThreeAsActivity() {
     <section className="activity-block three-as-activity competency-studio">
       <div className="activity-head-row">
         <div>
-          <span className="activity-eyebrow">Competency studio</span>
-          <h2>Identify the capability before choosing the 3A</h2>
+          <span className="activity-eyebrow">Quick check</span>
+          <h2>Which 3A best fits?</h2>
         </div>
-        <span className="activity-count">{cases.length} contexts to explore</span>
+        <span className="activity-count">{cases.length} examples</span>
       </div>
-      <p>Choose a professional context, then decide which 3A best describes the capability being developed.</p>
+      <p>Choose the 3A that best describes each capability.</p>
       <div className="competency-case-tabs" role="tablist" aria-label="Professional contexts">
-        {cases.map((item, index) => <button key={item.id} type="button" role="tab" aria-selected={active === index} className={active === index ? "active" : ""} onClick={() => setActive(index)}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.domain}</strong></button>)}
+        {cases.map((item, index) => <button key={item.id} type="button" role="tab" aria-selected={active === index} className={active === index ? "active" : ""} onClick={() => setActive(index)}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.label} · {item.domain}</strong></button>)}
       </div>
       <div className="competency-case" role="tabpanel">
-        <span>{current.role}</span>
-        <h3>Students need to be able to…</h3>
+        <span>{current.domain}</span>
+        <h3>Capability being assessed</h3>
         <p>{current.capability}</p>
       </div>
       <p className="competency-question">Which 3A best describes this capability?</p>
@@ -443,9 +432,8 @@ function ThreeAsActivity() {
       </div>
       {selected && (
         <div className={`activity-feedback ${selected !== current.answer ? "try-again" : ""}`}>
-          <strong>{selected === current.answer ? `${current.answer}.` : "Look again"}</strong>
+          <strong>{selected === current.answer ? `Correct answer: ${current.answer}` : `Correct answer: ${current.answer}`}</strong>
           <p>{selected === current.answer ? current.feedback : `This capability is best framed as ${current.answer}. ${current.feedback}`}</p>
-          <p className="alignment-cue"><b>Alignment question:</b> {current.alignment}</p>
         </div>
       )}
     </section>

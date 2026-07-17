@@ -124,10 +124,6 @@ AI may support learning when students use it to:
 
 It substitutes for learning when it completes the analysis, judgement, creation or performance students are meant to develop.
 
-For a lighter activity, use:
-
-> **Generate → Compare → Check → Improve**
-
 ## Apply It to Your Module
 
 Consider one learning activity:
@@ -136,7 +132,7 @@ Consider one learning activity:
 
 ## Key Takeaway
 
-PAIR helps lecturers structure an effective learning experience in which students define the task, select an appropriate tool, interact critically with AI and reflect on their learning.
+PAIR helps lecturers structure learning in which students define the task, select an appropriate tool, interact critically with AI and reflect on their learning.
 
 AI should support the intended learning—not substitute for it.
 
