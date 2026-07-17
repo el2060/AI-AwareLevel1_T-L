@@ -4,7 +4,7 @@
 
 AI is shaping how students learn and how work is done across many professions. Students may use GenAI to explain concepts, generate ideas or support assignment work, raising new considerations for teaching, learning and assessment.
 
-This package applies an AI lens to four T&L Competency Framework domains: Curriculum Design and Development, Facilitation of Learning, Assessment, and Data and Tech-Enhanced T&L.
+This package builds awareness of these considerations across four familiar T&L domains.
 
 ### What You Will Learn
 
@@ -17,7 +17,7 @@ By the end of this module, you will be able to:
 
 ### Learning Time
 
-Set aside about **2 hours** to work through the package, reflect on the implications for a module you teach or support, complete the activities and take the completion quiz.
+Set aside about **2 hours** to work through the package, consider the implications for a module you teach or support, complete the activities and take the completion quiz.
 
 ---
 
@@ -47,7 +47,7 @@ As you work through the package, consider:
 
 ---
 
-# Part 2: Curriculum — What Should Students Learn?
+# Part 2: Curriculum Design and Development — What Should Students Learn?
 
 AI may change what students need to learn and demonstrate, but strong disciplinary foundations and judgement remain essential.
 
@@ -73,7 +73,7 @@ Then check that outcomes, activities and assessment remain aligned.
 
 ---
 
-# Part 3: Facilitation — Supporting Learning With AI
+# Part 3: Facilitation of Learning — How Can AI Support Learning?
 
 ## PAIR: A Structured Process for Learning With AI
 
@@ -138,7 +138,7 @@ AI should support the intended learning—not substitute for it.
 
 ---
 
-# Part 4: Assessment — Authentic and Credible Evidence
+# Part 4: Assessment — How Do We Keep Learning Authentic and Credible?
 
 Assessment should provide credible evidence that students have achieved the intended learning outcomes. A polished final product alone may not show what the student knows, can do or contributed.
 
@@ -243,7 +243,7 @@ Begin with the learning outcome. Use the 3As to decide what students should demo
 
 ---
 
-# Part 5: Data and Tools — Purposeful and Responsible Use
+# Part 5: Data and Tech-Enhanced T&L — How Can AI Tools and Learning Data Support Learning?
 
 AI tools and learning data can support engagement, learning outcomes and different learning needs when used purposefully and responsibly.
 

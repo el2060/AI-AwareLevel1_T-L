@@ -562,22 +562,22 @@ function SectionInteractive({ title, notes, onChange }: { title: string; notes: 
 function OpeningVisual() {
   const areas = [
     {
-      title: "Curriculum",
-      detail: "How AI may change what students need to learn",
+      title: "Curriculum Design and Development",
+      detail: "How AI may change what students need to learn and demonstrate",
       icon: BookOpen,
     },
     {
-      title: "Facilitation",
+      title: "Facilitation of Learning",
       detail: "How AI can support learning, practice and feedback",
       icon: Lightbulb,
     },
     {
       title: "Assessment",
-      detail: "How assessment remains valid, authentic and credible",
+      detail: "How learning remains valid, authentic and credible when AI is used",
       icon: ClipboardCheck,
     },
     {
-      title: "Data and Tools",
+      title: "Data and Tech-Enhanced T&L",
       detail: "How AI tools and learning data may support learning safely and responsibly",
       icon: ShieldCheck,
     },
@@ -586,9 +586,9 @@ function OpeningVisual() {
   return (
     <section className="opening-visual" aria-label="What this package covers">
       <div className="overview-heading">
-        <span>At a glance</span>
-        <h2>Four areas of AI-aware T&amp;L</h2>
-        <p>This package applies an AI lens to four familiar areas of teaching practice.</p>
+        <span>At a Glance</span>
+        <h2>Four Areas of AI-Aware T&amp;L</h2>
+        <p>This package applies an AI lens to four T&amp;L Competency Framework domains.</p>
       </div>
       <div className="overview-areas">
         {areas.map((area, index) => {
