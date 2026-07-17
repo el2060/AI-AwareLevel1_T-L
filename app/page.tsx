@@ -277,8 +277,8 @@ const sectionMeta = [
 const sectionBridges = [
   "See how these four areas connect to NP’s direction for AI-enabled T&L.",
   "Begin with curriculum: what should students learn and demonstrate as AI changes professional practice?",
-  "Consider how PAIR can structure students’ learning with AI while keeping the intended thinking, judgement and responsibility visible.",
-  "Consider how assessment keeps learning authentic, credible and visible.",
+  "Explore PAIR, a simple framework for helping students use AI purposefully, critically and responsibly in their learning.",
+  "Consider how to set clear GenAI conditions and design assessment that provides authentic, credible evidence of students’ learning and contribution.",
   "Consider how AI tools and learning data can support learning safely and responsibly.",
   "Bring the four areas together for a module you teach, lead or support.",
 ];
@@ -599,7 +599,7 @@ function ThreeAsInfographic() {
     <figure className="concept-visual three-as-infographic" aria-labelledby="three-as-title">
       <figcaption>
         <span>The 3As</span>
-        <strong id="three-as-title">Guiding lenses for reviewing the competencies students need in an AI-enabled professional context</strong>
+        <strong id="three-as-title">Guiding lenses for reviewing and adjusting the competencies students need as AI changes professional practice</strong>
       </figcaption>
       <div className="three-as-path">
         {lenses.map((lens) => {
@@ -617,7 +617,7 @@ function ThreeAsInfographic() {
           );
         })}
       </div>
-      <div className="infographic-note"><span aria-hidden="true">↔</span><p>A learning outcome or module may emphasise one or combine several, depending on the intended learning and professional context.</p></div>
+      <div className="infographic-note"><span aria-hidden="true">↔</span><p>A learning outcome or module may emphasise one or combine several, depending on the intended competency and professional context.</p></div>
     </figure>
   );
 }
@@ -626,7 +626,7 @@ function PairInfographic() {
   const stages = [
     { letter: "P", name: "Problem", action: "Students define the task or challenge", detail: "Clarify the intended outcome, requirements, constraints and success criteria.", cue: "What must we understand before using AI?", tone: "problem" },
     { letter: "A", name: "AI", action: "Students select a suitable AI tool", detail: "Consider what support is needed, what the tool can do and whether its use is permitted.", cue: "What could AI contribute?", tone: "ai" },
-    { letter: "I", name: "Interaction", action: "Students experiment, evaluate and refine", detail: "Critically evaluate outputs for relevance and accuracy. AI tends to favour popular, widely available information over niche or authoritative sources, so verify important claims independently.", cue: "How will we test and improve the output?", tone: "interaction" },
+    { letter: "I", name: "Interaction", action: "Students experiment, evaluate and refine", detail: "Critically evaluate outputs for relevance and accuracy, and verify important claims against primary, official or trusted sources. AI-generated responses may be incomplete, outdated or based on less authoritative information.", cue: "How will we test and improve the output?", tone: "interaction" },
     { letter: "R", name: "Reflection", action: "Students examine the process and learning", detail: "Evaluate how AI supported or hindered the learning process, and identify where human judgement was necessary.", cue: "What did we learn about the task, the tool and our own judgement?", tone: "reflection" },
   ];
   return (
@@ -649,34 +649,6 @@ function PairInfographic() {
         ))}
       </div>
       <div className="infographic-note pair-loop"><span aria-hidden="true">↔</span><p>Students may revisit the problem, reconsider the tool and refine their interactions as their understanding develops.</p></div>
-    </figure>
-  );
-}
-
-function AssessmentFocusVisual() {
-  const items = [
-    {
-      icon: ClipboardCheck,
-      title: "Apply NP’s GenAI requirements",
-      detail: "GenAI is allowed by default in summative assessment unless restricted or prohibited. Students must cite and declare their use.",
-    },
-    {
-      icon: Scale,
-      title: "Protect the intended learning",
-      detail: "Use the 3As to clarify what students demonstrate independently, how they should use AI, and where new AI-enabled practice may be assessed.",
-    },
-  ];
-  return (
-    <figure className="concept-visual assessment-visual" aria-label="What every AI-enabled assessment needs">
-      <figcaption><span>Assessment focus</span><strong>Two assessment priorities</strong></figcaption>
-      <div className="icon-panel-grid compact">
-        {items.map(({ icon: Icon, title, detail }) => (
-          <section key={title}>
-            <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
-            <div><b>{title}</b><small>{detail}</small></div>
-          </section>
-        ))}
-      </div>
     </figure>
   );
 }
@@ -758,7 +730,7 @@ function SectionVisual({ title }: { title: string }) {
   if (title.startsWith("Part 1")) return <StrategyMap />;
   if (title.startsWith("Part 2")) return <ThreeAsInfographic />;
   if (title.startsWith("Part 3")) return null;
-  if (title.startsWith("Part 4")) return <AssessmentFocusVisual />;
+  if (title.startsWith("Part 4")) return null;
   if (title.startsWith("Part 5")) return <ToolChecksVisual />;
   if (title.startsWith("Part 6")) return <BringTogetherVisual />;
   return null;

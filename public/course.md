@@ -52,7 +52,7 @@ Lecturers should interpret and apply the 3As according to their disciplinary exp
 
 Choose one learning outcome from a module you teach, lead or support.
 
-Consider whether it should develop:
+Consider whether it remains relevant as professional practice changes, and whether students need to develop:
 
 - distinctly human capabilities;
 - productive use of AI;
@@ -62,17 +62,17 @@ Then check whether the learning activities provide suitable practice and whether
 
 ## Key Takeaway
 
-Use the 3As to align what students need to learn, how they develop it and how it is demonstrated.
+Use the 3As to review what competencies students need, how learning activities develop them and how assessment makes them visible.
 
 ---
 
 # Part 3: Facilitation of Learning — How Can AI Support Learning?
 
-## PAIR: A Structured Process for Students Learning With AI
+## PAIR: Structuring Students’ Learning With AI
 
-NP uses the PAIR framework to guide **students** in using AI purposefully and responsibly as part of learning.
+NP uses the PAIR framework to help students learn and solve problems with AI purposefully, critically and responsibly.
 
-Students carry out the PAIR process. Lecturers design the task, decide the degree of openness and provide the scaffolding students need.
+Students carry out the PAIR process. Lecturers design the task, determine the degree of openness and provide the scaffolding students need.
 
 PAIR is:
 
@@ -88,7 +88,7 @@ Students develop transferable capabilities such as problem formulation, explorat
 
 Students remain accountable for how they use AI and for the quality and integrity of their work.
 
-PAIR is adaptable across disciplines and can be incorporated into an existing learning activity or used to structure a new one.
+PAIR can be applied across disciplines, either within an existing learning activity or when designing a new one.
 
 *Adapted from Acar, O. A. (2023), “Are Your Students Ready for AI? A 4-Step Framework for a ChatGPT World.”*
 
@@ -100,14 +100,14 @@ PAIR is adaptable across disciplines and can be incorporated into an existing le
 
 Students carry out PAIR. Lecturers design the conditions that enable them to do so.
 
-|                 | Lecturers design for                                                                          |
+| PAIR stage      | Lecturers design for                                                                          |
 | --------------- | ----------------------------------------------------------------------------------------------- |
 | **Problem**     | The intended learning, task boundaries and degree of openness.                                  |
-| **AI**          | Suitable and accessible tool choices, and whether students need to justify their selection.     |
+| **AI**          | Suitable and accessible tool choices, and whether students should justify their selection.     |
 | **Interaction** | Opportunities to test, challenge and verify AI-generated outputs.                                |
 | **Reflection**  | Prompts or evidence that make students’ decisions, learning and judgement visible.               |
 
-The degree of student choice should reflect readiness and the intended learning. Less experienced students may work with a defined task, suggested tools and guided reflection. More experienced students may take greater responsibility for framing the task, selecting tools and shaping their interaction with AI.
+The degree of student choice should reflect their readiness and the intended learning. Less experienced students may need a defined task, suggested tools and guided reflection. More experienced students may take greater responsibility for framing the task, selecting tools and shaping their interaction with AI.
 
 ## Does AI Support the Intended Learning?
 
@@ -119,7 +119,7 @@ AI may support learning when students use it to:
 - practise and receive feedback;
 - test and refine their thinking.
 
-It substitutes for learning when it completes the analysis, judgement, creation or performance students are meant to develop.
+AI may undermine the intended learning when it completes the analysis, judgement, creation or performance students are meant to develop.
 
 Where this happens, use a follow-up activity that requires students to identify what they missed, examine how they used AI and apply the underlying concepts themselves.
 
@@ -127,13 +127,13 @@ Where this happens, use a follow-up activity that requires students to identify 
 
 Consider one learning activity:
 
-> How could AI support students' learning while keeping the intended thinking, judgement or performance visible?
+> How could AI support one learning activity while keeping the intended thinking, judgement or performance visible?
 
 ## Key Takeaway
 
 PAIR structures how students learn with AI: they define the task, select a suitable tool, interact critically with its outputs and reflect on their learning.
 
-Lecturers design the task and provide the appropriate level of structure, choice and support. AI should support the intended learning—not substitute for it.
+Lecturers design the conditions and provide the appropriate level of structure, choice and support. AI should support the intended learning—not replace it.
 
 ---
 
@@ -149,7 +149,7 @@ GenAI is allowed by default in summative assessment unless its use is explicitly
 
 Use the 3As to clarify:
 
-- what students must demonstrate as human or disciplinary capability;
+- what human or disciplinary capabilities students must demonstrate;
 - how they should use AI productively;
 - where new AI-enabled practice may be assessed.
 
@@ -163,12 +163,12 @@ Assessment should provide credible evidence of learning. A polished final produc
 
 ### 1. Start With the Learning Outcome
 
-Ask:
+Identify:
 
-- What capability is the assessment intended to measure?
-- What must students demonstrate themselves?
-- Where is AI use part of authentic professional practice?
-- What evidence will make their contribution and judgement visible?
+- the capability the assessment is intended to measure;
+- what students must demonstrate themselves;
+- where AI use reflects authentic professional practice;
+- what evidence will make their contribution and judgement visible.
 
 If AI can complete the task without the intended capability being demonstrated, the assessment may need clearer conditions or redesign.
 
@@ -182,10 +182,10 @@ For each assessment component, state whether GenAI use is:
 
 This applies to all summative tasks that contribute to the module grade, including take-home assignments.
 
-For example, a restricted-use condition might:
+A restricted-use condition might:
 
-- allow GenAI for research, ideation and preparing materials, but prohibit it during a live presentation or Q&A; or
-- allow GenAI to generate actual content, such as images, provided students identify the problem, select and refine the output, and are questioned on their choices at presentation.
+- allow GenAI for research, ideation or preparing materials, but prohibit its use during a live presentation or question-and-answer session; or
+- allow GenAI-generated content, such as images, provided students frame the task, select and refine the output, and explain their choices.
 
 :::warning Always-Prohibited Uses
 
@@ -220,7 +220,7 @@ Explain the conditions early and use formative activities or mock runs where hel
 
 All relevant submission cover pages must include the required GenAI Use Declaration. Any additional evidence should be proportionate to the assessment and clearly stated in the brief.
 
-Module leaders are responsible for setting the GenAI conditions, explaining them to students and ensuring that the assessment provides credible evidence of learning.
+Module leaders are responsible for setting the GenAI conditions, explaining them to students and ensuring the assessment provides credible evidence of learning.
 
 ## Important Policy Reminders
 
@@ -256,7 +256,7 @@ Consider one assessment:
 
 ## Key Takeaway
 
-Begin with the learning outcome. Use the 3As to clarify what students should demonstrate, how AI may support the work and where new AI-enabled practice may be assessed. Then state clear conditions and design credible evidence of learning.
+Begin with the learning outcome. Clarify how AI may be used, state the conditions clearly and design evidence that makes students’ learning, judgement and contribution visible.
 
 ---
 
