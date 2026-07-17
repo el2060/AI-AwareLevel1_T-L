@@ -383,12 +383,12 @@ function FourLensReview({ value, onChange }: { value: string; onChange: (value: 
 function ThreeAsActivity() {
   const cases = [
     {
-      id: "business",
-      domain: "Business and Creative Practice",
-      label: "Example 1",
-      capability: "Students use AI to compare options, then evaluate the evidence and justify a recommendation for a client.",
+      id: "cross-disciplinary",
+      domain: "Cross-Disciplinary",
+      label: "Example",
+      capability: "Students use AI to generate or compare possible approaches, then evaluate the output using disciplinary evidence and justify their final decision.",
       answer: "Augment",
-      feedback: "Students use AI to strengthen the work, while retaining responsibility for evaluating the evidence and justifying the recommendation.",
+      feedback: "Students use AI to support the work, while disciplinary evaluation and the final decision remain their responsibility.",
     },
   ];
   const lenses = [
@@ -637,7 +637,7 @@ function ThreeAsInfographic() {
           </section>
         ))}
       </div>
-      <div className="infographic-note"><span aria-hidden="true">↔</span><p><strong>The 3As are lenses, not a sequence.</strong> Not every learning outcome needs all three, but a module may combine them—for example, Anchor for core judgement, Augment as the assessment baseline for productive AI use, and Advance where AI enables new practice.</p></div>
+      <div className="infographic-note"><span aria-hidden="true">↔</span><p><strong>The 3As are lenses, not a sequence.</strong> A learning outcome or module may emphasise one or combine several, depending on the intended learning and professional context.</p></div>
     </figure>
   );
 }

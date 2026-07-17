@@ -63,10 +63,6 @@ Then ask:
 
 > How do the learning activities provide suitable practice, and how does the assessment make the intended learning visible?
 
-### The 3As May Combine
-
-A module often needs more than one A, not just one. Anchor protects the disciplinary knowledge, skills, human qualities and judgement students must demonstrate independently of AI. Augment may be the expected standard—the assessment baseline—where using AI productively is part of authentic professional practice. Advance is included where AI enables new or transformed practice beyond established job boundaries. Not every learning outcome needs all three, but a module may reasonably require all three at once.
-
 ## Key Takeaway
 
 Use the 3As to review:
