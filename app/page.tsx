@@ -580,7 +580,7 @@ function ThreeAsInfographic() {
     {
       key: "augment",
       name: "Augment",
-      icon: Zap,
+      icon: Bot,
       tagline: "Productive use of AI",
       body: "Develop students' ability to use AI effectively to improve the quality, productivity or effectiveness of their work while exercising appropriate judgement and oversight.",
     },
