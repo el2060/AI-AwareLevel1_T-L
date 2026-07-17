@@ -444,7 +444,7 @@ function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
     { name: "Embed AI-Integrated Pedagogy · PAIR", question: "Structure learning and problem-solving with AI while developing transferable skills, critical judgement and responsible use.", icon: MessageCircle },
-    { name: "Transform the Curriculum · 3As", question: "Review AI-relevant outcomes, learning experiences and assessments.", icon: Sparkles },
+    { name: "Transform the Curriculum · 3As", question: "Review AI-relevant learning outcomes, experiences and assessments.", icon: Sparkles },
     { name: "Redesign Assessment", question: "Assure authentic learning for AI-enabled professional practice.", icon: ClipboardCheck },
     { name: "Enable Personalised Learning", question: "Provide personalised practice, feedback and coaching.", icon: Bot },
     { name: "Strengthen Human Skills and Resilience", question: "Build human skills, resilience and judgement.", icon: Users },

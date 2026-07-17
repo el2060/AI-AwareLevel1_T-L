@@ -43,7 +43,7 @@ AI extends practice, feedback and support, while lecturers remain responsible fo
 
 As you work through the package, consider:
 
-> For this learning purpose, what should the student do, what might AI support, and what safeguards are needed?
+> What should students do themselves, what might AI support, and what safeguards are needed?
 
 ---
 
