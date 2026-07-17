@@ -109,9 +109,6 @@ The 3As help lecturers review the competencies students need for an AI-enabled p
 
 Learning outcomes, activities and assessment should then be aligned to the intended competencies.
 
-**Next**
-Consider how PAIR can structure students' learning with AI while keeping the intended thinking, judgement and responsibility visible.
-
 ---
 
 # Part 3: Facilitation of Learning — How Can AI Support Learning?
