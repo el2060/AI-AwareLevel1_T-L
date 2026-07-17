@@ -833,7 +833,7 @@ export default function Home() {
   const sectionMarkdown = withoutTitle(current.markdown);
   const hasModuleReview = sectionMarkdown.includes(moduleReviewMarker);
   const hasInlineNextPrompt = /^\s*(\*\*Next\*\*|#{1,4}\s+Next)\s*$/m.test(sectionMarkdown);
-  const markerRenderers = {
+  const markerRenderers: Record<string, JSX.Element> = {
     [useCaseMarker]: <UseCaseExplorer />,
     [pairInfographicMarker]: <PairInfographic />,
     [actionInfographicMarker]: <AssessmentActionsInfographic />,
