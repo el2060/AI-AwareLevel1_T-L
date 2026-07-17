@@ -63,6 +63,10 @@ Then ask:
 
 > How do the learning activities provide suitable practice, and how does the assessment make the intended learning visible?
 
+### The 3As May Combine
+
+A module often needs more than one A, not just one. Anchor protects the disciplinary knowledge, skills, human qualities and judgement students must demonstrate independently of AI. Augment may be the expected standard—the assessment baseline—where using AI productively is part of authentic professional practice. Advance is included where AI enables new or transformed practice beyond established job boundaries. Not every learning outcome needs all three, but a module may reasonably require all three at once.
+
 ## Key Takeaway
 
 Use the 3As to review:
@@ -125,6 +129,10 @@ Students carry out the PAIR process. Lecturers design the conditions, prompts an
 
 The degree of student choice should reflect readiness and the intended learning. Less experienced students may work with a defined task, suggested tools and guided reflection. More experienced students may take greater responsibility for framing the task, selecting tools and shaping their interaction with AI. Lecturers may define or constrain parts of PAIR for less experienced students, but should not automatically make all the decisions for them.
 
+### Why Verification Matters
+
+AI tools tend to draw on widely available information and may overlook specialised, niche or authoritative sources. During Interaction, students should check important claims—especially official, regulatory, technical or safety-related information—against primary or authoritative sources, not just the most convenient AI-generated answer.
+
 ## Does AI Support the Intended Learning?
 
 AI may support learning when students use it to:
@@ -136,6 +144,10 @@ AI may support learning when students use it to:
 - test and refine their thinking.
 
 It substitutes for learning when it completes the analysis, judgement, creation or performance students are meant to develop.
+
+### When AI Has Substituted for Learning
+
+Where students have used AI to complete a task without developing the intended learning—for example, using AI to finish pre-class or asynchronous work—use a follow-up activity that requires them to examine their own use of AI, identify what they missed, and apply the underlying concepts themselves.
 
 ## Apply It to Your Module
 
@@ -154,8 +166,6 @@ AI should support the intended learning—not substitute for it.
 # Part 4: Assessment — How Do We Keep Learning Authentic and Credible?
 
 Assessment should provide credible evidence that students have achieved the intended learning outcomes. A polished final product alone may not show what the student knows, can do or contributed.
-
-> At Level 1, focus on applying NP's requirements and recognising where an assessment may need further review or redesign.
 
 ## Four Lecturer Actions
 
@@ -189,6 +199,10 @@ Where use is restricted, specify:
 - what evidence of process must be retained or produced;
 - how outputs must be checked, cited and declared.
 
+**Example**
+
+GenAI may be used for research, ideation and preparing presentation materials, but not during the assessed live presentation or question-and-answer session. Students must cite and declare how GenAI was used.
+
 :::
 
 #### Always-prohibited uses
@@ -214,11 +228,15 @@ Use specific conditions instead:
 
 Depending on the intended outcome, evidence may include drafts, checkpoints, process records, demonstrations, explanations or questioning.
 
+Students should be able to explain how GenAI contributed to their work and show evidence of their own contribution where required. Suitable evidence may include drafts, selected interaction records or the changes made to AI-generated output; a complete AI chat history is not automatically required.
+
 ### 4. Prepare Students and Require Declaration
 
 Explain the conditions early and discuss examples with students. Use formative activities, checkpoints or mock runs where useful.
 
 All relevant submission cover pages must include the required **GenAI Use Declaration**. Where use is restricted, students must retain or produce the required evidence of their use.
+
+The declaration and supporting evidence should be proportionate to the assessment. Where a presentation and question-and-answer session already reveal students' judgement and contribution directly, a brief declaration may be sufficient unless the assessment brief requires additional evidence.
 
 Module leaders are responsible for stating the GenAI stance, explaining the conditions, ensuring declaration and designing for authentic evidence of learning.
 
@@ -230,7 +248,7 @@ Staff must not use GenAI to determine grades independently. Any approved use as 
 
 **Suspected misuse**
 
-Follow NP’s established process for interviewing students and handling academic misconduct. Do not decide based on suspicion alone.
+AI-detection reports, an unfamiliar writing style or unusually sophisticated language may indicate a need for further inquiry, but they are not proof of misconduct on their own. Interview the student, ask for evidence of their writing or work process, and compare their declared GenAI use with what the evidence shows before proceeding under NP’s academic integrity procedures.
 
 ## Where Further Review May Be Needed
 
@@ -274,7 +292,9 @@ Provide practice, feedback or personalised support.
 
 **Understand and improve learning**
 
-Summarise feedback, identify patterns, inform interventions and review whether the support is helping.
+Summarise feedback, identify patterns, propose targeted learning activities for different needs, inform interventions and review whether the support is helping.
+
+AI may suggest possible activities or interventions. The lecturer reviews, adapts and decides what is appropriate for the learners and context.
 
 The tool provides a first pass. You check, adapt and decide.
 
@@ -282,7 +302,11 @@ The tool provides a first pass. You check, adapt and decide.
 
 M365 Copilot is the primary AI assistant provided to NP staff. It can support tasks such as reviewing module materials, drafting learning resources and summarising appropriate feedback.
 
+NP’s guidance for students names examples such as ChatGPT, GitHub Copilot and Gamma.App. These are examples of GenAI tools, not blanket approval for every task or type of information—the same checks apply to student use as to staff use.
+
 Use AI tools only where the tool, information and purpose are covered by NP’s current guidance. Approved uses and clearance may change, so check the latest guidance before entering information.
+
+Approval is necessary but not sufficient. Choose a tool that fits the learning purpose, is suitable and accessible, works efficiently for the task, and is approved for the type of information involved. Draw on your own testing and, where relevant, what students learn through PAIR activities.
 
 <!--use-case-explorer-->
 

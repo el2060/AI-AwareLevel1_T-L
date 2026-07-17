@@ -637,7 +637,7 @@ function ThreeAsInfographic() {
           </section>
         ))}
       </div>
-      <div className="infographic-note"><span aria-hidden="true">↔</span><p><strong>The 3As are lenses, not a sequence.</strong> Not every learning outcome or module will require all three.</p></div>
+      <div className="infographic-note"><span aria-hidden="true">↔</span><p><strong>The 3As are lenses, not a sequence.</strong> Not every learning outcome needs all three, but a module may combine them—for example, Anchor for core judgement, Augment as the assessment baseline for productive AI use, and Advance where AI enables new practice.</p></div>
     </figure>
   );
 }
