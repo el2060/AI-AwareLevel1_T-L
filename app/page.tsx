@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useMemo, useState } from "react";
-import { BookOpen, Bot, ClipboardCheck, Database, Lightbulb, MessageCircle, Scale, ShieldCheck, Sparkles, Users } from "lucide-react";
+import { BookOpen, Bot, CheckCircle2, ClipboardCheck, Database, Eye, Lightbulb, LockKeyhole, MessageCircle, Scale, ShieldCheck, Sparkles, Target, Users } from "lucide-react";
 
 type Section = {
   id: string;
@@ -124,6 +124,44 @@ function markdownToHtml(markdown: string) {
       output.push(
         `<details class="policy-detail"><summary>${inlineMarkdown(details[1])}</summary><div>${markdownToHtml(body.join("\n"))}</div></details>`,
       );
+      continue;
+    }
+
+    const labelOnly = trimmed.match(/^\*\*(.+?)\*\*$/);
+    if (labelOnly) {
+      const cards: string[] = [];
+      while (i < lines.length) {
+        const currentLabel = lines[i].trim().match(/^\*\*(.+?)\*\*$/);
+        if (!currentLabel) break;
+        i += 1;
+        while (i < lines.length && !lines[i].trim()) i += 1;
+
+        const body: string[] = [];
+        while (
+          i < lines.length &&
+          lines[i].trim() &&
+          !/^(#{1,4})\s+/.test(lines[i].trim()) &&
+          !/^---+$/.test(lines[i].trim()) &&
+          !/^>\s?/.test(lines[i].trim()) &&
+          !/^-\s+/.test(lines[i].trim()) &&
+          !/^\d+\.\s+/.test(lines[i].trim()) &&
+          !lines[i].trim().startsWith("|") &&
+          !/^:::details\s+/.test(lines[i].trim()) &&
+          !/^\*\*(.+?)\*\*$/.test(lines[i].trim())
+        ) {
+          body.push(lines[i].trim());
+          i += 1;
+        }
+
+        if (!body.length) {
+          output.push(`<p><strong>${inlineMarkdown(currentLabel[1])}</strong></p>`);
+          continue;
+        }
+
+        cards.push(`<section><strong>${inlineMarkdown(currentLabel[1])}</strong><p>${inlineMarkdown(body.join(" "))}</p></section>`);
+        while (i < lines.length && !lines[i].trim()) i += 1;
+      }
+      output.push(`<div class="definition-grid">${cards.join("")}</div>`);
       continue;
     }
 
@@ -747,23 +785,86 @@ function LecturerPracticeMap() {
   );
 }
 
+function AssessmentFocusVisual() {
+  const items = [
+    {
+      icon: ClipboardCheck,
+      title: "Apply NP’s current GenAI requirements",
+      detail: "GenAI is allowed by default. State any restrictions or prohibitions clearly, and require students to cite and declare their use as instructed.",
+    },
+    {
+      icon: Scale,
+      title: "Protect the intended learning",
+      detail: "Use the 3As to clarify what students demonstrate independently of AI, with AI, or through new AI-enabled practice.",
+    },
+  ];
+  return (
+    <figure className="concept-visual assessment-visual" aria-label="What every AI-enabled assessment needs">
+      <figcaption><span>Assessment focus</span><strong>Two assessment priorities</strong></figcaption>
+      <div className="icon-panel-grid compact">
+        {items.map(({ icon: Icon, title, detail }) => (
+          <section key={title}>
+            <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
+            <div><b>{title}</b><small>{detail}</small></div>
+          </section>
+        ))}
+      </div>
+    </figure>
+  );
+}
+
+function ToolChecksVisual() {
+  const items = [
+    { icon: Target, title: "Learning value", detail: "Does it help learning?" },
+    { icon: CheckCircle2, title: "Output quality", detail: "Is it checked?" },
+    { icon: LockKeyhole, title: "Data and ethics", detail: "Is the use safe?" },
+    { icon: Eye, title: "Human oversight", detail: "Who decides?" },
+  ];
+  return (
+    <figure className="concept-visual tool-visual" aria-label="Four checks for responsible AI tool use">
+      <figcaption><span>Before you use a tool</span><strong>Apply four checks</strong></figcaption>
+      <div className="icon-panel-grid">
+        {items.map(({ icon: Icon, title, detail }) => (
+          <section key={title}>
+            <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
+            <div><b>{title}</b><small>{detail}</small></div>
+          </section>
+        ))}
+      </div>
+    </figure>
+  );
+}
+
+function BringTogetherVisual() {
+  const lenses = [
+    { icon: BookOpen, title: "Curriculum", detail: "What may need review?" },
+    { icon: MessageCircle, title: "Facilitation", detail: "Where should students check and improve?" },
+    { icon: ClipboardCheck, title: "Assessment", detail: "What evidence keeps learning visible?" },
+    { icon: ShieldCheck, title: "Data and Tools", detail: "What needs checking before use?" },
+  ];
+  return (
+    <figure className="concept-visual bring-together-visual" aria-label="Four lenses for reviewing one module">
+      <figcaption><span>Bring it together</span><strong>Review one module through four lenses</strong></figcaption>
+      <div className="lens-strip">
+        {lenses.map(({ icon: Icon, title, detail }) => (
+          <section key={title}>
+            <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
+            <b>{title}</b>
+            <small>{detail}</small>
+          </section>
+        ))}
+      </div>
+    </figure>
+  );
+}
+
 function SectionVisual({ title }: { title: string }) {
   if (title.startsWith("Part 1")) return <StrategyMap />;
   if (title.startsWith("Part 2")) return <ThreeAsInfographic />;
   if (title.startsWith("Part 3")) return null;
-  if (title.startsWith("Part 4")) return (
-    <figure className="concept-visual assessment-visual" aria-label="What every AI-enabled assessment needs">
-      <figcaption><span>Assessment focus</span><strong>Two assessment priorities</strong></figcaption>
-      <div className="tool-checks"><div><i>1</i><b>Apply NP’s current GenAI requirements</b><small>GenAI is allowed by default. State any restrictions or prohibitions clearly, and require students to cite and declare their use as instructed.</small></div><div><i>2</i><b>Protect the intended learning</b><small>Use the 3As to clarify what students demonstrate independently of AI, with AI, or through new AI-enabled practice.</small></div></div>
-    </figure>
-  );
-  if (title.startsWith("Part 5")) return (
-    <figure className="concept-visual tool-visual" aria-label="Four checks for responsible AI tool use">
-      <figcaption><span>Before you use a tool</span><strong>Apply four checks</strong></figcaption>
-      <div className="tool-checks"><div><i>01</i><b>Learning value</b><small>Does it help learning?</small></div><div><i>02</i><b>Output quality</b><small>Is it checked?</small></div><div><i>03</i><b>Data and ethics</b><small>Is the use safe?</small></div><div><i>04</i><b>Human oversight</b><small>Who decides?</small></div></div>
-    </figure>
-  );
-  if (title.startsWith("Part 6")) return null;
+  if (title.startsWith("Part 4")) return <AssessmentFocusVisual />;
+  if (title.startsWith("Part 5")) return <ToolChecksVisual />;
+  if (title.startsWith("Part 6")) return <BringTogetherVisual />;
   return null;
 }
 
