@@ -574,32 +574,29 @@ function ThreeAsInfographic() {
       key: "anchor",
       name: "Anchor",
       icon: Anchor,
-      tag: "Retain & judge",
-      tagline: "Distinctly human capability",
-      body: "Assess the human qualities, disciplinary judgement and essential capabilities students must demonstrate even as AI becomes more capable.",
+      tagline: "Distinctly human capabilities",
+      body: "Develop the human qualities, disciplinary judgement and essential capabilities students need even as AI becomes more capable.",
     },
     {
       key: "augment",
       name: "Augment",
       icon: Zap,
-      tag: "Improve & oversee",
       tagline: "Productive use of AI",
-      body: "Assess how well students use AI to improve the quality, productivity or effectiveness of their work while applying appropriate judgement and oversight.",
+      body: "Develop students' ability to use AI effectively to improve the quality, productivity or effectiveness of their work while exercising appropriate judgement and oversight.",
     },
     {
       key: "advance",
       name: "Advance",
       icon: Rocket,
-      tag: "Create & extend",
       tagline: "New AI-enabled practice",
-      body: "Assess how students use AI to create new possibilities, workflows or forms of professional practice beyond established pre-AI job boundaries.",
+      body: "Develop students' ability to use AI to create new possibilities, workflows or forms of professional practice beyond established pre-AI job boundaries.",
     },
   ];
   return (
     <figure className="concept-visual three-as-infographic" aria-labelledby="three-as-title">
       <figcaption>
         <span>The 3As</span>
-        <strong id="three-as-title">Guiding lenses for reviewing learning outcomes, learning activities and assessment in an AI-enabled context</strong>
+        <strong id="three-as-title">Guiding lenses for reviewing the competencies students need in an AI-enabled professional context</strong>
       </figcaption>
       <div className="three-as-path">
         {lenses.map((lens) => {
@@ -609,7 +606,6 @@ function ThreeAsInfographic() {
               <Icon className="three-as-watermark" size={92} strokeWidth={1.5} aria-hidden="true" />
               <div className="three-as-top">
                 <div className="three-as-icon"><Icon size={21} strokeWidth={2.1} aria-hidden="true" /></div>
-                <span className="three-as-tag">{lens.tag}</span>
               </div>
               <b>{lens.name}</b>
               <small>{lens.tagline}</small>
@@ -618,7 +614,7 @@ function ThreeAsInfographic() {
           );
         })}
       </div>
-      <div className="infographic-note"><span aria-hidden="true">↔</span><p>A learning outcome or module may emphasise one or combine several, depending on the intended learning and professional context. Many modules will reasonably develop and assess all three together.</p></div>
+      <div className="infographic-note"><span aria-hidden="true">↔</span><p>A learning outcome or module may emphasise one or combine several, depending on the intended learning and professional context.</p></div>
     </figure>
   );
 }

@@ -49,6 +49,32 @@ As you work through the package, consider:
 
 # Part 2: Curriculum Design and Development — What Should Students Learn?
 
+## The 3As
+
+**Guiding lenses for reviewing the competencies students need in an AI-enabled professional context**
+
+### Anchor
+
+**Distinctly human capabilities**
+
+Develop the human qualities, disciplinary judgement and essential capabilities students need even as AI becomes more capable.
+
+### Augment
+
+**Productive use of AI**
+
+Develop students' ability to use AI effectively to improve the quality, productivity or effectiveness of their work while exercising appropriate judgement and oversight.
+
+### Advance
+
+**New AI-enabled practice**
+
+Develop students' ability to use AI to create new possibilities, workflows or forms of professional practice beyond established pre-AI job boundaries.
+
+> A learning outcome or module may emphasise one or combine several, depending on the intended learning and professional context.
+
+The 3As help lecturers consider how curriculum should respond as AI changes professional practice: what remains distinctly human, how students should work productively with AI, and what new forms of practice may emerge.
+
 ## Illustrative Applications
 
 The examples below are intentionally broad. They illustrate possible applications of the 3As and are not intended to prescribe outcomes or practices for any discipline.
@@ -65,21 +91,26 @@ Lecturers should interpret and apply the 3As according to their disciplinary exp
 
 Choose one learning outcome from a module you teach, lead or support.
 
-Identify whether it should primarily assess:
+Consider whether students need to develop and demonstrate:
 
-- a distinctly human capability;
+- distinctly human capabilities;
 - productive use of AI; or
 - new AI-enabled professional practice.
 
-Then check whether the learning activities provide suitable practice and whether the assessment measures the intended capability.
+Then check whether the learning activities provide suitable opportunities to develop these competencies and whether the assessment makes them visible.
 
 ## Key Takeaway
 
-The 3As help lecturers adjust learning outcomes and assessment for an AI-enabled context. Many modules will reasonably develop and assess all three together, not only one:
+The 3As help lecturers review the competencies students need for an AI-enabled professional context:
 
-- **Anchor** measures distinctly human capabilities;
-- **Augment** measures how well students use AI to improve their work;
-- **Advance** measures how students use AI to extend or redefine professional practice.
+- **Anchor** focuses on distinctly human capabilities;
+- **Augment** focuses on using AI to improve work;
+- **Advance** focuses on using AI to extend or redefine professional practice.
+
+Learning outcomes, activities and assessment should then be aligned to the intended competencies.
+
+**Next**
+Consider how PAIR can structure students' learning with AI while keeping the intended thinking, judgement and responsibility visible.
 
 ---
 
