@@ -2,25 +2,9 @@
 
 ## Welcome
 
-AI is shaping how students learn and how work is done across many professions. Students may use GenAI to explain concepts, generate ideas or support assignment work—raising new considerations for teaching, learning and assessment.
+AI is shaping how students learn and how work is done across many professions. Students may use GenAI to explain concepts, generate ideas or support assignment work, raising new considerations for teaching, learning and assessment.
 
-This package adds an AI lens to four familiar T&L Competency Framework domains:
-
-**Curriculum**
-
-How AI may change what students need to learn and how outcomes, learning activities and assessment remain aligned.
-
-**Facilitation**
-
-How AI may support explanation, practice, feedback and active learning without replacing the intended learning.
-
-**Assessment**
-
-How assessment can remain valid, authentic and credible when students use AI.
-
-**Data and Tools**
-
-How AI tools and learning data may support engagement and learning safely, responsibly and with human oversight.
+This package builds awareness across four T&L Competency Framework domains: Curriculum Design and Development, Facilitation of Learning, Assessment, and Data and Tech-Enhanced T&L.
 
 ### What You Will Learn
 
@@ -31,8 +15,6 @@ By the end of this module, you will be able to:
 - explain NP’s key GenAI assessment requirements;
 - apply basic checks when using AI tools and learning data.
 
-Level 1 focuses on key considerations across four TLCF domains: Curriculum Design and Development, Facilitation of Learning, Assessment, and Data and Tech-Enhanced T&L.
-
 ### Learning Time
 
 Allow about **2 hours** to complete the package, its activities and the completion quiz.
@@ -41,49 +23,23 @@ Allow about **2 hours** to complete the package, its activities and the completi
 
 # Part 1: NP’s Direction for AI-Enabled T&L
 
-NP aims to prepare AI-ready graduates who combine:
+NP aims to prepare AI-ready graduates who combine strong human qualities, domain knowledge and skills, and responsible use of AI. The aim is not simply to add AI tools into modules. It is to help students keep learning, judgement and professional responsibility visible as AI becomes part of study and work.
 
-- strong human qualities;
-- domain knowledge and skills;
-- responsible and effective use of AI.
-
-This is supported through:
+This direction comes through three connected shifts in teaching and learning.
 
 **AI-relevant curriculum**
 
-Knowledge and skills remain relevant to the discipline and profession.
+Knowledge and skills stay relevant to the discipline and profession as AI changes what graduates may need to understand, judge and do.
 
 **AI-integrated learning and assessment**
 
-Students learn to work with AI while still demonstrating what they know and can do.
+Students learn to work with AI where appropriate, while still demonstrating what they know, can do and are responsible for.
 
 **AI-enabled learning support**
 
-AI provides appropriate practice, feedback and personalised support.
+AI can provide practice, feedback and personalised support, with lecturers still deciding what good learning looks like.
 
-## NP’s Five Strategies
-
-**Strategy 1 · Adopt a Pedagogy · PAIR**
-
-Develop transferable skills for learning and problem-solving with AI.
-
-**Strategy 2 · Transform the Curriculum · 3As**
-
-Review AI-relevant outcomes, learning experiences and assessments.
-
-**Strategy 3 · Redesign Assessment**
-
-Assure authentic AI-relevant learning and professional practice.
-
-**Strategy 4 · Personalised and Adaptive Learning**
-
-Provide scaffolded practice, feedback and personalised support.
-
-**Strategy 5 · Human Skills and Resilience**
-
-Build the human edge.
-
-Human judgement runs through all five strategies.
+The five strategies above show how NP turns this direction into teaching practice. They connect pedagogy, curriculum, assessment, learning support and human skills, with human judgement running through all five.
 
 ## Keep One Module in Mind
 

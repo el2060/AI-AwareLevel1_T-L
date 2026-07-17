@@ -554,7 +554,7 @@ function OpeningVisual() {
   const areas = [
     {
       title: "Curriculum",
-      detail: "How AI is changing what students learn and how they are taught",
+      detail: "How AI may change what students need to learn",
       icon: BookOpen,
     },
     {
@@ -564,12 +564,12 @@ function OpeningVisual() {
     },
     {
       title: "Assessment",
-      detail: "How AI changes assessment—and how it can remain authentic and credible",
+      detail: "How assessment remains valid, authentic and credible",
       icon: ClipboardCheck,
     },
     {
       title: "Data and Tools",
-      detail: "How AI tools and learning data can support learning—safely and responsibly",
+      detail: "How AI tools and learning data may support learning safely and responsibly",
       icon: ShieldCheck,
     },
   ];
@@ -579,7 +579,7 @@ function OpeningVisual() {
       <div className="overview-heading">
         <span>At a glance</span>
         <h2>Four areas of AI-aware T&amp;L</h2>
-        <p>This package explores AI across four areas of your teaching practice.</p>
+        <p>This package applies an AI lens to four familiar areas of teaching practice.</p>
       </div>
       <div className="overview-areas">
         {areas.map((area, index) => {
@@ -733,7 +733,7 @@ function LecturerPracticeMap() {
 }
 
 function SectionVisual({ title }: { title: string }) {
-  if (title.startsWith("Part 1")) return null;
+  if (title.startsWith("Part 1")) return <StrategyMap />;
   if (title.startsWith("Part 2")) return <ThreeAsInfographic />;
   if (title.startsWith("Part 3")) return null;
   if (title.startsWith("Part 4")) return (
