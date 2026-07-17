@@ -21,7 +21,7 @@ Set aside about **2 hours** to work through the package, reflect on the implicat
 
 ---
 
-# Part 1: NP’s Direction for AI-Enabled T&L
+# Part 1: NP’s Approach to AI-Enabled T&L
 
 NP aims for every graduate to be an AI-ready professional who combines strong human qualities, deep domain expertise and effective use of AI in professional practice.
 
