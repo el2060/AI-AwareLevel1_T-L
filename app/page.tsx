@@ -381,53 +381,68 @@ function FourLensReview({ value, onChange }: { value: string; onChange: (value: 
 }
 
 function ThreeAsActivity() {
-  const cases = [
-    {
-      id: "cross-disciplinary",
-      domain: "Cross-Disciplinary",
-      label: "Example",
-      capability: "Students use AI to generate or compare possible approaches, then evaluate the output using disciplinary evidence and justify their final decision.",
-      answer: "Augment",
-      feedback: "Students use AI to support the work, while disciplinary evaluation and the final decision remain their responsibility.",
-    },
-  ];
   const lenses = [
-    { name: "Anchor", description: "Knowledge, skills, human qualities and professional judgement students must demonstrate independently of AI." },
-    { name: "Augment", description: "How students use AI to improve the quality or productivity of their work." },
-    { name: "Advance", description: "How students use AI to create new forms of professional practice beyond established job boundaries." },
+    { name: "Anchor", description: "Essential knowledge, human qualities and judgement students must demonstrate independently of AI." },
+    { name: "Augment", description: "Productive use of AI to improve the quality or efficiency of work." },
+    { name: "Advance", description: "AI-enabled practice that extends or redefines established job boundaries." },
+  ];
+  const outcomes = [
+    {
+      id: "outcome-1",
+      label: "Outcome 1",
+      context: "Students independently evaluate evidence, exercise professional judgement and justify a responsible recommendation.",
+      answer: "Anchor",
+      feedback: "The emphasis is on judgement and responsibility that students must retain independently of AI.",
+    },
+    {
+      id: "outcome-2",
+      label: "Outcome 2",
+      context: "Students use AI to compare options, improve the quality of their analysis and justify how they evaluated and adapted the output.",
+      answer: "Augment",
+      feedback: "Students are assessed on how effectively they use AI to improve the work while retaining oversight.",
+    },
+    {
+      id: "outcome-3",
+      label: "Outcome 3",
+      context: "Students use AI to create a new workflow or service that extends what the professional role previously involved.",
+      answer: "Advance",
+      feedback: "AI enables a new form of practice beyond the role’s previous boundaries.",
+    },
   ];
   const [active, setActive] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  const current = cases[active];
-  const selected = answers[current.id];
+  const current = outcomes[active];
+  const picked = answers[current.id];
+  const solved = Object.keys(answers).length;
   return (
-    <section className="activity-block three-as-activity competency-studio">
+    <section className="activity-block three-as-activity">
       <div className="activity-head-row">
         <div>
           <span className="activity-eyebrow">Quick check</span>
-          <h2>Which 3A best fits?</h2>
+          <h2>How would the 3As change the learning outcome?</h2>
         </div>
-        <span className="activity-count">{cases.length} example</span>
+        <span className="activity-count">{solved} / {outcomes.length} matched</span>
       </div>
-      <p>Choose the 3A that best describes each capability being developed.</p>
-      <div className="competency-case-tabs" role="tablist" aria-label="Professional contexts">
-        {cases.map((item, index) => <button key={item.id} type="button" role="tab" aria-selected={active === index} className={active === index ? "active" : ""} onClick={() => setActive(index)}><span>{String(index + 1).padStart(2, "0")}</span><strong>{item.label} · {item.domain}</strong></button>)}
+      <p>A module prepares students to make a professional recommendation. Match each learning outcome to the most appropriate 3A.</p>
+      <div className="domain-spotter-tabs" role="tablist" aria-label="Learning outcomes">
+        {outcomes.map((outcome, index) => {
+          const a = answers[outcome.id];
+          const state = !a ? "" : a === outcome.answer ? "solved" : "attempted";
+          return <button key={outcome.id} type="button" role="tab" aria-selected={active === index} className={`${active === index ? "active" : ""} ${state}`} onClick={() => setActive(index)}>{a ? (a === outcome.answer ? "✓" : "•") : index + 1}</button>;
+        })}
       </div>
-      <div className="competency-case" role="tabpanel">
-        <span>{current.domain}</span>
-        <h3>Capability being developed</h3>
-        <p>{current.capability}</p>
-      </div>
-      <p className="competency-question">Which 3A best describes this capability?</p>
+      <div className="domain-spotter-case"><p><strong>{current.label}.</strong> {current.context}</p></div>
+      <p className="competency-question">Which 3A best describes this outcome?</p>
       <div className="competency-lenses">
-        {lenses.map((lens) => <button key={lens.name} type="button" className={selected === lens.name ? "selected" : ""} onClick={() => setAnswers((items) => ({ ...items, [current.id]: lens.name }))}><strong>{lens.name}</strong><small>{lens.description}</small></button>)}
+        {lenses.map((lens) => <button key={lens.name} type="button" className={picked === lens.name ? (lens.name === current.answer ? "selected correct" : "selected wrong") : ""} onClick={() => setAnswers((items) => ({ ...items, [current.id]: lens.name }))}><strong>{lens.name}</strong><small>{lens.description}</small></button>)}
       </div>
-      {selected && (
-        <div className={`activity-feedback ${selected !== current.answer ? "try-again" : ""}`}>
-          <strong>{selected === current.answer ? `Correct answer: ${current.answer}` : `Correct answer: ${current.answer}`}</strong>
-          <p>{selected === current.answer ? current.feedback : `This capability is best framed as ${current.answer}. ${current.feedback}`}</p>
+      {picked && (
+        <div className={`activity-feedback ${picked !== current.answer ? "try-again" : ""}`}>
+          <strong>{current.label} · {current.answer}</strong>
+          <p>{current.feedback}</p>
         </div>
       )}
+      {solved === outcomes.length && <blockquote>Which of these outcomes is most relevant to a module you teach or support?</blockquote>}
     </section>
   );
 }
