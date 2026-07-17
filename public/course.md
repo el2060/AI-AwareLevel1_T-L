@@ -4,7 +4,7 @@
 
 AI, particularly Gen AI, is increasingly shaping how students learn and how work is carried out across many professions. As students use AI to learn, create and solve problems, educators need to understand the opportunities and challenges it brings to teaching, learning and assessment.
 
-This package applies an AI lens across four T&L Competency Framework domains.
+The package will help you consider these implications across four areas of your T&L practice.
 
 ### What You Will Learn
 
@@ -12,7 +12,7 @@ By the end of this module, you will be able to:
 
 - identify how AI may change the competencies students need and the implications for curriculum design;
 - explain how AI can support learning without replacing the intended thinking, judgement or performance;
-- apply NP’s key GenAI requirements to keep assessment authentic, credible and transparent;
+- apply NP’s key GenAI requirements to keep assessment authentic, credible and visible;
 - identify appropriate uses of AI tools and learning data, and apply basic checks for safe and responsible use.
 
 ### Learning Time
