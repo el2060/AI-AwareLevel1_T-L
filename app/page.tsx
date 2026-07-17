@@ -223,7 +223,7 @@ function makeId(title: string, index: number) {
 }
 
 function shortTitle(title: string) {
-  if (title === "AI in T&L Essentials: Level 1 (AI-Aware)") return "Start here";
+  if (title === "AI T&L Essentials: Level 1 (AI-Aware)") return "Start here";
   return title.replace(/^Part \d+:\s*/, "");
 }
 
@@ -551,7 +551,7 @@ function ToolChecksActivity() {
 }
 
 function SectionInteractive({ title, notes, onChange }: { title: string; notes: ActivityNotes; onChange: (key: string, value: string) => void }) {
-  if (title === "AI in T&L Essentials: Level 1 (AI-Aware)") return null;
+  if (title === "AI T&L Essentials: Level 1 (AI-Aware)") return null;
   if (title.startsWith("Part 1")) return null;
   if (title.startsWith("Part 2")) return <ThreeAsActivity />;
   if (title.startsWith("Part 3")) return null;
@@ -903,7 +903,7 @@ export default function Home() {
           >
             <img className="np-logo" src="/np-logo.png" alt="Ngee Ann Polytechnic" />
             <span className="brand-divider" aria-hidden="true" />
-            <span className="course-name">AI in T&amp;L Essentials</span>
+            <span className="course-name">AI T&amp;L Essentials</span>
           </button>
           <div className="top-actions">
             <span className="level-badge">Level 1 · AI-Aware</span>
@@ -934,7 +934,7 @@ export default function Home() {
       <main className="reader">
         {active === 0 ? (
           <h1 className="page-title home-title">
-            <span>AI in T&amp;L Essentials</span>
+            <span>AI T&amp;L Essentials</span>
             <small>Level 1 <i aria-hidden="true">·</i> AI-Aware</small>
           </h1>
         ) : <h1 className="page-title">{current.shortTitle}</h1>}

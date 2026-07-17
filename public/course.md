@@ -1,4 +1,4 @@
-# AI in T&L Essentials: Level 1 (AI-Aware)
+# AI T&L Essentials: Level 1 (AI-Aware)
 
 ## Welcome
 
