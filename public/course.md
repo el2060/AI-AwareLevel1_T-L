@@ -27,7 +27,7 @@ Set aside about **2 hours** to work through the package, consider the implicatio
 
 As you work through the package, consider:
 
-> What should students learn and demonstrate, where might AI support them, and what safeguards are needed?
+> What should students learn and demonstrate, how might AI support their learning, what evidence will keep learning visible, and what needs to be checked before using AI tools or learning data?
 
 ---
 
