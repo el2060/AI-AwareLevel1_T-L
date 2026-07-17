@@ -294,6 +294,23 @@ button { color: inherit; }
   font-size: 14px;
   line-height: 1.55;
 }
+.definition-grid section:only-child {
+  grid-column: 1 / -1;
+  padding: 18px 20px;
+  border-radius: 12px;
+  border-color: #c8d4e3;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+.definition-grid section:only-child strong {
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: -.02em;
+}
+.definition-grid section:only-child p {
+  margin-top: 10px;
+  font-size: 17px;
+  line-height: 1.62;
+}
 .overview-heading > span {
   color: var(--blue);
   font-size: 11px;

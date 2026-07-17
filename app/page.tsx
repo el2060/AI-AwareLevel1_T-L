@@ -822,6 +822,7 @@ export default function Home() {
   const hasPairInfographic = current.title.startsWith("Part 3") && sectionMarkdown.includes(pairInfographicMarker);
   const hasModuleReview = current.title.startsWith("Part 6") && sectionMarkdown.includes(moduleReviewMarker);
   const hasActionInfographic = current.title.startsWith("Part 4") && sectionMarkdown.includes(actionInfographicMarker);
+  const hasInlineNextPrompt = /^\s*(\*\*Next\*\*|#{1,4}\s+Next)\b/m.test(sectionMarkdown);
   const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairInfographic ? pairInfographicMarker : hasModuleReview ? moduleReviewMarker : hasActionInfographic ? actionInfographicMarker : "";
   const [contentBeforeInteractive, contentAfterInteractive = ""] = activeMarker
     ? sectionMarkdown.split(activeMarker)
@@ -902,7 +903,7 @@ export default function Home() {
         {!current.title.startsWith("Part 1") && !hasModuleReview && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
         {current.title.startsWith("Part 5") && <ToolChecksActivity />}
 
-        {sectionBridges[active] && active < sections.length - 1 && (
+        {sectionBridges[active] && active < sections.length - 1 && !hasInlineNextPrompt && (
           <div className="section-bridge">
             <span>Next</span>
             <p>{sectionBridges[active]}</p>
