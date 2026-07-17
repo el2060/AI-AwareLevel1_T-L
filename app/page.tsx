@@ -822,7 +822,7 @@ export default function Home() {
   const hasPairInfographic = current.title.startsWith("Part 3") && sectionMarkdown.includes(pairInfographicMarker);
   const hasModuleReview = current.title.startsWith("Part 6") && sectionMarkdown.includes(moduleReviewMarker);
   const hasActionInfographic = current.title.startsWith("Part 4") && sectionMarkdown.includes(actionInfographicMarker);
-  const hasInlineNextPrompt = /^\s*(\*\*Next\*\*|#{1,4}\s+Next)\b/m.test(sectionMarkdown);
+  const hasInlineNextPrompt = /^\s*(\*\*Next\*\*|#{1,4}\s+Next)\s*$/m.test(sectionMarkdown);
   const activeMarker = hasUseCaseExplorer ? useCaseMarker : hasPairInfographic ? pairInfographicMarker : hasModuleReview ? moduleReviewMarker : hasActionInfographic ? actionInfographicMarker : "";
   const [contentBeforeInteractive, contentAfterInteractive = ""] = activeMarker
     ? sectionMarkdown.split(activeMarker)
