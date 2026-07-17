@@ -10,13 +10,6 @@ type Section = {
   markdown: string;
 };
 
-type Choice = {
-  label: string;
-  correct?: boolean;
-  feedback: string;
-  feedbackTitle?: string;
-};
-
 type ActivityNotes = Record<string, string>;
 
 function escapeHtml(value: string) {
@@ -283,35 +276,6 @@ const sectionBridges = [
   "Bring the four areas together by reviewing one module you teach, lead or support.",
 ];
 
-function ChoiceCheck({ question, eyebrow, choices }: { question: string; eyebrow: string; choices: Choice[] }) {
-  const [selected, setSelected] = useState<number | null>(null);
-  const choice = selected === null ? null : choices[selected];
-  return (
-    <section className="activity-block">
-      <span className="activity-eyebrow">{eyebrow}</span>
-      <h2>{question}</h2>
-      <div className="choice-grid">
-        {choices.map((item, index) => (
-          <button
-            key={item.label}
-            className={`choice-button ${selected === index ? "selected" : ""}`}
-            onClick={() => setSelected(index)}
-          >
-            <span>{String.fromCharCode(65 + index)}</span>
-            {item.label}
-          </button>
-        ))}
-      </div>
-      {choice && (
-        <div className={`activity-feedback ${choice.correct === false ? "try-again" : ""}`}>
-          <strong>{choice.feedbackTitle ?? (choice.correct === false ? "Consider this" : "Good call")}</strong>
-          <p>{choice.feedback}</p>
-        </div>
-      )}
-    </section>
-  );
-}
-
 function DomainSpotter() {
   const domains = ["Curriculum", "Facilitation", "Assessment", "Data and Tools"];
   const scenarios = [
@@ -405,7 +369,7 @@ function StrategyMap() {
     { name: "Transform the Curriculum · 3As", question: "What competencies should students develop and demonstrate as AI changes professional practice?", icon: BookOpen },
     { name: "Redesign Assessment", question: "How can assessment provide authentic and credible evidence of learning in an AI-enabled context?", icon: ClipboardCheck },
     { name: "Enable Personalised Learning", question: "How can AI extend opportunities for practice, feedback and coaching?", icon: Bot },
-    { name: "Strengthen Human Skills and Resilience", question: "How can we strengthen the human qualities, resilience and judgement students need in an AI-enabled world?", icon: Users },
+    { name: "Strengthen Human Skills and Resilience", question: "How can we strengthen students’ purpose, resilience, collaboration and judgement in an AI-enabled world?", icon: Users },
   ];
   return (
     <section className="strategy-map" aria-label="How NP approaches connect across this package">
@@ -415,11 +379,12 @@ function StrategyMap() {
       </div>
       <div className="strategy-goal" aria-label="Outcome: AI-ready graduates who combine strong human qualities, deep domain expertise and effective use of AI in professional practice">
         <div className="graduate-core">
-          <i><UserRound size={34} strokeWidth={2} aria-hidden="true" /></i>
+          <i><UserRound size={36} strokeWidth={2} aria-hidden="true" /></i>
           <div>
             <small>Outcome</small>
             <strong>AI-ready graduates</strong>
             <span>Strong human qualities · Deep domain expertise · Effective use of AI in professional practice</span>
+            <p>Graduates who combine deep domain expertise with purpose, resilience, collaboration and sound judgement, and who use AI productively and responsibly without losing the human capabilities that distinguish professional practice.</p>
           </div>
         </div>
       </div>
@@ -512,12 +477,35 @@ function UseCaseExplorer() {
   );
 }
 
-function ToolChecksActivity() {
-  return <ChoiceCheck eyebrow="Four checks in practice" question="LMS data shows that one group of students repeatedly skips an online activity. An approved AI tool suggests that they are disengaged and recommends additional remedial work. Before deciding what to do, which response best applies the four checks?" choices={[
-    { label: "Check whether the activity supports an important learning outcome, review the underlying data and possible explanations, consider the students’ context, then decide on an appropriate response and review whether it helps.", correct: true, feedback: "The data indicates a possible need, but does not explain the cause or determine the appropriate response. The lecturer must interpret the evidence in context and retain responsibility for the decision." },
-    { label: "Send the remedial work because the approved tool identified a clear pattern.", correct: false, feedback: "The data indicates a possible need, but does not explain the cause or determine the appropriate response. The lecturer must interpret the evidence in context and retain responsibility for the decision." },
-    { label: "Ask the tool to identify which students are most likely to fail and prioritise them.", correct: false, feedback: "The data indicates a possible need, but does not explain the cause or determine the appropriate response. The lecturer must interpret the evidence in context and retain responsibility for the decision." },
-  ]} />;
+function QuickSenseCheck() {
+  const [revealed, setRevealed] = useState<number[]>([]);
+  const items = [
+    { situation: "The tool suggests that several students are disengaged.", reveal: "Check the underlying data and context before deciding whether support is needed." },
+    { situation: "An AI-generated summary of student feedback sounds plausible.", reveal: "Verify that the themes are supported by the original comments." },
+    { situation: "You want to upload assessment results into an AI tool.", reveal: "Check whether the tool is approved for that information and purpose." },
+    { situation: "An AI tool recommends a learning intervention.", reveal: "Use professional judgement to decide whether it is appropriate, then review whether it helped." },
+  ];
+  function toggle(index: number) {
+    setRevealed((current) => (current.includes(index) ? current.filter((item) => item !== index) : [...current, index]));
+  }
+  return (
+    <section className="activity-block quick-sense-check">
+      <div className="activity-head-row"><div><span className="activity-eyebrow">Quick sense check</span><h2>Before You Act</h2></div></div>
+      <p>Tap each situation to reveal what to consider.</p>
+      <div className="sense-check-grid">
+        {items.map((item, index) => {
+          const isRevealed = revealed.includes(index);
+          return (
+            <button key={item.situation} type="button" className={isRevealed ? "revealed" : ""} onClick={() => toggle(index)} aria-expanded={isRevealed}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <div><strong>{item.situation}</strong>{isRevealed && <small>{item.reveal}</small>}</div>
+            </button>
+          );
+        })}
+      </div>
+      <p className="sense-check-closing"><strong>AI can flag, summarise and suggest.</strong> The lecturer checks, interprets and decides.</p>
+    </section>
+  );
 }
 
 function SectionInteractive({ title, notes, onChange }: { title: string; notes: ActivityNotes; onChange: (key: string, value: string) => void }) {
@@ -901,7 +889,7 @@ export default function Home() {
         {hasModuleReview && <NextStepActivity value={activityNotes.nextstep ?? ""} onChange={(value) => setActivityValue("nextstep", value)} />}
 
         {!current.title.startsWith("Part 1") && !hasModuleReview && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
-        {current.title.startsWith("Part 5") && <ToolChecksActivity />}
+        {current.title.startsWith("Part 5") && <QuickSenseCheck />}
 
         {sectionBridges[active] && active < sections.length - 1 && !hasInlineNextPrompt && (
           <div className="section-bridge">
