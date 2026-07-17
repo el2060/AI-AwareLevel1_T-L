@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useMemo, useState } from "react";
-import { BookOpen, Bot, CheckCircle2, ClipboardCheck, Database, Eye, Lightbulb, LockKeyhole, MessageCircle, Scale, ShieldCheck, Sparkles, Target, UserRound, Users } from "lucide-react";
+import { Anchor, BookOpen, Bot, CheckCircle2, ClipboardCheck, Database, Eye, Lightbulb, LockKeyhole, MessageCircle, Rocket, Scale, ShieldCheck, Sparkles, Target, UserRound, Users, Zap } from "lucide-react";
 
 type Section = {
   id: string;
@@ -622,18 +622,24 @@ function ThreeAsInfographic() {
     {
       key: "anchor",
       name: "Anchor",
-      tagline: "What students must retain and demonstrate independently of AI",
+      icon: Anchor,
+      tag: "Retain & judge",
+      tagline: "What students must retain and demonstrate without relying on AI",
       body: "Core disciplinary knowledge and skills, human qualities and professional judgement.",
     },
     {
       key: "augment",
       name: "Augment",
+      icon: Zap,
+      tag: "Improve & oversee",
       tagline: "How students should use AI productively",
       body: "Use AI to improve the quality or productivity of work while applying disciplinary judgement and oversight.",
     },
     {
       key: "advance",
       name: "Advance",
+      icon: Rocket,
+      tag: "Create & extend",
       tagline: "What new AI-enabled practice students may develop",
       body: "Use AI to create new services, workflows or forms of professional practice beyond established job boundaries.",
     },
@@ -642,15 +648,24 @@ function ThreeAsInfographic() {
     <figure className="concept-visual three-as-infographic" aria-labelledby="three-as-title">
       <figcaption>
         <span>The 3As</span>
-        <strong id="three-as-title">Three lenses for reviewing learning outcomes, activities and assessment</strong>
+        <strong id="three-as-title">Guiding lenses for reviewing learning outcomes, activities and assessment</strong>
       </figcaption>
       <div className="three-as-path">
-        {lenses.map((lens) => (
-          <section key={lens.key} className={`three-as-band ${lens.key}-band`}>
-            <div className="three-as-label"><i aria-hidden="true">A</i><div><b>{lens.name}</b><small>{lens.tagline}</small></div></div>
-            <p>{lens.body}</p>
-          </section>
-        ))}
+        {lenses.map((lens) => {
+          const Icon = lens.icon;
+          return (
+            <section key={lens.key} className={`three-as-band ${lens.key}-band`}>
+              <Icon className="three-as-watermark" size={92} strokeWidth={1.5} aria-hidden="true" />
+              <div className="three-as-top">
+                <div className="three-as-icon"><Icon size={21} strokeWidth={2.2} aria-hidden="true" /></div>
+                <span className="three-as-tag">{lens.tag}</span>
+              </div>
+              <b>{lens.name}</b>
+              <small>{lens.tagline}</small>
+              <p>{lens.body}</p>
+            </section>
+          );
+        })}
       </div>
       <div className="infographic-note"><span aria-hidden="true">↔</span><p><strong>The 3As are lenses, not a sequence.</strong> A learning outcome or module may emphasise one or combine several, depending on the intended learning and professional context.</p></div>
     </figure>

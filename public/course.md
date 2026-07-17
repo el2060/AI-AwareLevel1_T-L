@@ -55,8 +55,8 @@ AI may change what students need to learn and demonstrate, but strong disciplina
 
 Choose one learning outcome.
 
-- What knowledge, skills, human qualities or professional judgement must students demonstrate independently of AI?
-- How should students use AI to improve their work?
+- What knowledge, skills, human qualities or professional judgement must students retain and demonstrate without relying on AI?
+- How should students use AI to improve the quality or productivity of their work?
 - What new AI-enabled practice might be worth developing?
 
 Then ask:
