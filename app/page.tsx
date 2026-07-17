@@ -265,13 +265,13 @@ function withoutTitle(markdown: string) {
 }
 
 const sectionMeta = [
-  { mark: "✦", label: "Start", tone: "blue" },
-  { mark: "01", label: "NP direction", tone: "blue" },
-  { mark: "02", label: "Curriculum", tone: "orange" },
-  { mark: "03", label: "Facilitation", tone: "teal" },
-  { mark: "04", label: "Assessment", tone: "blue" },
-  { mark: "05", label: "Data and Tools", tone: "purple" },
-  { mark: "06", label: "Bring together", tone: "green" },
+  { mark: "✦", label: "4 domains · 2 hours", tone: "blue" },
+  { mark: "01", label: "5 strategies · PAIR · 3As", tone: "blue" },
+  { mark: "02", label: "Anchor · Augment · Advance", tone: "orange" },
+  { mark: "03", label: "The PAIR framework", tone: "teal" },
+  { mark: "04", label: "GenAI conditions & policy", tone: "blue" },
+  { mark: "05", label: "M365 Copilot & four checks", tone: "purple" },
+  { mark: "06", label: "Four-lens module review", tone: "green" },
 ];
 
 const sectionBridges = [
