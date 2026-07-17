@@ -260,82 +260,67 @@ Begin with the learning outcome. Clarify how AI may be used, state the condition
 
 ---
 
-# Part 5: Data and Tech-Enhanced T&L — How Can AI Tools and Learning Data Support Learning?
+# Part 5: Data and Tech-Enhanced T&L — How Can AI Tools and Learning Data Improve Learning?
 
-AI tools and learning data can support engagement, learning outcomes and different learning needs when used purposefully and responsibly.
+AI tools and learning data can help lecturers prepare learning, provide support and identify where students may need intervention. Their value depends on how well they serve the intended learning—not simply on what the technology can do.
 
-> Start with the T&L need—not the tool. Use the four checks before adopting a tool, interpreting learning data or acting on AI-generated information.
+> Start with the learning need—not the tool. Apply the four checks below before adopting a tool, interpreting learning data or acting on AI-generated information.
 
-## How AI May Support Your T&L Work
+## Two Ways AI and Data May Support T&L
 
-**Prepare learning**
+### Use AI Tools to Support Teaching and Learning
 
-Draft examples, review materials or create alternative formats.
+AI may provide a useful first pass for tasks such as:
 
-**Support learning**
+- reviewing module materials;
+- drafting practice examples;
+- creating alternative formats;
+- summarising feedback themes;
+- checking assignment clarity.
 
-Provide practice, feedback or personalised support.
-
-**Understand and improve learning**
-
-Summarise feedback, identify patterns, propose targeted learning activities for different needs, inform interventions and review whether the support is helping.
-
-AI may suggest possible activities or interventions. The lecturer reviews, adapts and decides what is appropriate for the learners and context.
-
-The tool provides a first pass. You check, adapt and decide.
-
-## Start With an Approved Tool
-
-M365 Copilot is the primary AI assistant provided to NP staff. It can support tasks such as reviewing module materials, drafting learning resources and summarising appropriate feedback.
-
-NP’s guidance for students names examples such as ChatGPT, GitHub Copilot and Gamma.App. These are examples of GenAI tools, not blanket approval for every task or type of information—the same checks apply to student use as to staff use.
-
-Use AI tools only where the tool, information and purpose are covered by NP’s current guidance. Approved uses and clearance may change, so check the latest guidance before entering information.
-
-Approval is necessary but not sufficient. Choose a tool that fits the learning purpose, is suitable and accessible, works efficiently for the task, and is approved for the type of information involved. Draw on your own testing and, where relevant, what students learn through PAIR activities.
+The lecturer provides the context and constraints, then checks, adapts and decides what to use.
 
 <!--use-case-explorer-->
 
-## Protect Sensitive Information
+### Use Learning Data to Inform Support
+
+Learning data may help lecturers:
+
+- identify patterns in participation or performance;
+- distinguish different learning needs;
+- plan targeted activities or interventions;
+- review whether the support is helping.
+
+AI-generated patterns and predictions are starting points, not decisions. Check the source data, consider the learner and context and, where appropriate, speak with the student before acting.
+
+## Choose Tools Purposefully
+
+M365 Copilot is the primary AI assistant provided to NP staff. Other AI tools may also be encountered by staff and students, but naming a tool does not mean it is suitable or approved for every use.
+
+Choose a tool based on:
+
+- the learning purpose;
+- its suitability and accessibility;
+- the quality and limitations of its outputs;
+- whether it is approved for the information involved.
 
 > Do not enter personal, sensitive or proprietary information into a public AI tool unless it is approved for that information and purpose. This includes student identifiers, grades, personal circumstances, confidential assessments, employer information and unreleased research.
 
-Remind students to apply the same care in class, on internship and at work.
-
-## Use AI-Generated Insights Carefully
-
-AI may summarise comments, group themes or suggest patterns in learning data. These are starting points, not decisions.
-
-Before acting:
-
-- check the source information;
-- consider the learner and learning context;
-- decide whether an intervention is appropriate;
-- review whether the intervention has helped.
-
-Checking the data is a necessary first step, not the decision itself. Use professional judgement—and where appropriate, talk with the student directly—before deciding what action, if any, to take.
-
 ## AI-Enabled Learning Support
 
-NP is introducing AI-enabled tutors and learning assistants that can provide summaries, practice, feedback and personalised support beyond class time.
+NP is introducing AI-enabled tutors and learning assistants that can provide practice, feedback and personalised support beyond class time.
 
-These tools complement—not replace—your facilitation. You still decide what good learning looks like, how the tool supports it and whether it is helping.
+These tools complement—not replace—facilitation. Lecturers still determine the intended learning, how the tool should support it and whether the support is effective.
 
 ## Apply It to Your Module
 
-Think of one small, low-risk use.
+Choose one small, low-risk T&L need.
 
-> What T&L need could it support?
-
-> What information would be involved?
-
-> What would you need to check before using the output?
-
-> How would you know whether it helped?
+> What could AI or learning data contribute, what information would be involved, what would you need to verify, and how would you know whether the support helped?
 
 ## Key Takeaway
 
-Start with the learning goal. Use AI tools and learning data responsibly, verify outputs, and apply professional judgement before deciding what action will best support learners.
+Start with the learning need. Choose an appropriate tool, protect the information involved, verify the output and apply professional judgement before deciding what will best support learners.
 
 ---
 

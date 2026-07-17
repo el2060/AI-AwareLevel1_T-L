@@ -279,7 +279,7 @@ const sectionBridges = [
   "Begin with curriculum: what should students learn and demonstrate as AI changes professional practice?",
   "Explore PAIR, a simple framework for helping students use AI purposefully, critically and responsibly in their learning.",
   "Consider how to set clear GenAI conditions and design assessment that provides authentic, credible evidence of students’ learning and contribution.",
-  "Consider how AI tools and learning data can support learning safely and responsibly.",
+  "Explore how AI tools and learning data can be used purposefully to support learning, while protecting information, verifying outputs and retaining human oversight.",
   "Bring the four areas together for a module you teach, lead or support.",
 ];
 
@@ -511,10 +511,10 @@ function UseCaseExplorer() {
 }
 
 function ToolChecksActivity() {
-  return <ChoiceCheck eyebrow="Four checks in practice" question="An approved AI tool summarises assessment results and flags three students for possible early intervention. The data use is approved and the figures are accurate. What should you do before acting?" choices={[
-    { label: "Review the students’ learning context and other available evidence, decide whether support is needed, and later review whether it helped.", correct: true, feedback: "The tool can highlight a possible need, but the lecturer must interpret the evidence, decide on the intervention and review its impact." },
-    { label: "Act on the flags because the tool and data use are approved.", correct: false, feedback: "Approval does not make the AI output a decision. A person must review the context and decide what action, if any, is appropriate." },
-    { label: "Ask the tool to rank the students and intervene with the highest-ranked student first.", correct: false, feedback: "AI should not rank students for support decisions. Human oversight remains essential even when the figures are accurate." },
+  return <ChoiceCheck eyebrow="Four checks in practice" question="LMS data shows that one group of students repeatedly skips an online activity. An approved AI tool suggests that they are disengaged and recommends sending them additional remedial work. Before deciding what to do, which response best applies the four checks?" choices={[
+    { label: "Check whether the activity supports an important learning outcome, review the underlying data and possible explanations, consider the students’ context, then decide on an appropriate response and review whether it helps.", correct: true, feedback: "The data may indicate a possible need, but it does not explain why the pattern occurred or determine the appropriate response. The lecturer must interpret the evidence in context and review the impact of any intervention." },
+    { label: "Send the remedial work because the approved tool identified a clear pattern.", correct: false, feedback: "The data may indicate a possible need, but it does not explain why the pattern occurred or determine the appropriate response. The lecturer must interpret the evidence in context and review the impact of any intervention." },
+    { label: "Ask the tool to identify which students are most likely to fail and prioritise them.", correct: false, feedback: "The data may indicate a possible need, but it does not explain why the pattern occurred or determine the appropriate response. The lecturer must interpret the evidence in context and review the impact of any intervention." },
   ]} />;
 }
 
@@ -683,10 +683,10 @@ function AssessmentActionsInfographic() {
 
 function ToolChecksVisual() {
   const items = [
-    { icon: Target, title: "Learning value", detail: "Does it support the intended learning?" },
-    { icon: CheckCircle2, title: "Output quality", detail: "Is the output accurate and suitable?" },
-    { icon: LockKeyhole, title: "Data, privacy and ethics", detail: "Is the information safe and appropriate to use?" },
-    { icon: Eye, title: "Human oversight", detail: "Who reviews, decides and remains responsible?" },
+    { icon: Target, title: "Learning value", detail: "Does it support the intended learning or learner need?" },
+    { icon: CheckCircle2, title: "Output quality", detail: "Is the output accurate, relevant and suitable?" },
+    { icon: LockKeyhole, title: "Data, privacy and ethics", detail: "Is the information appropriate to use in this tool and for this purpose?" },
+    { icon: Eye, title: "Human oversight", detail: "Who reviews the output, decides what action to take and remains responsible?" },
   ];
   return (
     <figure className="concept-visual tool-visual" aria-label="Four checks for responsible AI tool use">

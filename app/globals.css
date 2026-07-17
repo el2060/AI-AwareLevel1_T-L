@@ -430,19 +430,20 @@ button { color: inherit; }
 
 .pair-journey { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 22px; margin-top: 28px; }
 .pair-step-wrap { position: relative; min-width: 0; display: flex; }
-.pair-stage { width: 100%; min-height: 232px; display: flex; flex-direction: column; padding: 16px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
-.pair-stage-head { display: flex; align-items: center; gap: 9px; }
-.pair-stage-head i { width: 36px; height: 36px; flex: 0 0 36px; display: grid; place-items: center; border-radius: 10px; color: #fff; font-size: 18px; font-style: normal; font-weight: 780; }
+.pair-stage { position: relative; overflow: hidden; width: 100%; min-height: 232px; display: flex; flex-direction: column; padding: 16px; border: 1px solid var(--line); border-radius: 10px; background: #fff; transition: transform .2s ease, box-shadow .2s ease; }
+.pair-stage:hover { transform: translateY(-2px); border-color: #c9d2dd; box-shadow: 0 10px 24px rgba(0,0,0,.06); }
+.pair-stage::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+.pair-stage-head { position: relative; z-index: 1; display: flex; align-items: center; gap: 9px; }
+.pair-stage-head i { width: 36px; height: 36px; flex: 0 0 36px; display: grid; place-items: center; border-radius: 10px; font-size: 16px; font-style: normal; font-weight: 780; }
 .pair-stage-head b { font-size: 16px; }
-.pair-stage > strong { margin-top: 19px; font-size: 15px; line-height: 1.28; }
-.pair-stage p { margin: 8px 0 14px; color: var(--ink-soft); font-size: 13px; line-height: 1.5; }
-.pair-stage small { margin-top: auto; padding-top: 11px; border-top: 1px solid rgba(17,17,15,.12); color: var(--muted); font-size: 11px; line-height: 1.4; }
-.pair-problem .pair-stage-head i { background: #d96518; }
-.pair-ai .pair-stage-head i { background: #23773f; }
-.pair-interaction .pair-stage-head i { background: #1185ad; }
-.pair-reflection .pair-stage-head i { background: #6b3f7a; }
+.pair-stage > strong { position: relative; z-index: 1; margin-top: 19px; font-size: 15px; line-height: 1.28; }
+.pair-stage p { position: relative; z-index: 1; margin: 8px 0 14px; color: var(--ink-soft); font-size: 13px; line-height: 1.5; }
+.pair-stage small { position: relative; z-index: 1; margin-top: auto; padding-top: 11px; border-top: 1px solid rgba(17,17,15,.12); color: var(--muted); font-size: 11px; line-height: 1.4; }
+.pair-problem { background: #fffaf3; }.pair-problem::before { background: #a95512; }.pair-problem .pair-stage-head i { background: #fff0df; color: #a95512; }
+.pair-ai { background: #fbfcfe; }.pair-ai::before { background: #004088; }.pair-ai .pair-stage-head i { background: #e7edf6; color: #004088; }
+.pair-interaction { background: #fafefd; }.pair-interaction::before { background: #08776e; }.pair-interaction .pair-stage-head i { background: #e1f5f2; color: #08776e; }
+.pair-reflection { background: #fdfcff; }.pair-reflection::before { background: #6b4f8a; }.pair-reflection .pair-stage-head i { background: #efe9f5; color: #6b4f8a; }
 .pair-connector { position: absolute; z-index: 2; right: -18px; top: 50%; width: 14px; color: var(--faint); font-size: 18px; line-height: 1; transform: translateY(-50%); }
-.pair-loop > span { background: #6b3f7a; }
 
 .action-journey { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 18px; margin-top: 28px; }
 .action-step-wrap { position: relative; min-width: 0; display: flex; }
