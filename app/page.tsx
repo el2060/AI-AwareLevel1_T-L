@@ -28,6 +28,7 @@ function escapeHtml(value: string) {
 
 function inlineMarkdown(value: string) {
   return escapeHtml(value)
+    .replace(/\[(.+?)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
     .replace(/\*(.+?)\*/g, "<em>$1</em>")
     .replace(/`(.+?)`/g, "<code>$1</code>")
@@ -600,7 +601,7 @@ function ThreeAsInfographic() {
           );
         })}
       </div>
-      <div className="infographic-note"><span aria-hidden="true">↔</span><p>A learning outcome or module may emphasise one or combine several, depending on the intended learning and professional context.</p></div>
+      <div className="infographic-note"><span aria-hidden="true">↔</span><p>A learning outcome or module may emphasise one or combine several, depending on the intended learning and professional context. Many modules will reasonably develop and assess all three together.</p></div>
     </figure>
   );
 }
@@ -609,7 +610,7 @@ function PairInfographic() {
   const stages = [
     { letter: "P", name: "Problem", action: "Students define the task or challenge", detail: "Clarify the intended outcome, requirements, constraints and success criteria.", cue: "What must we understand before using AI?", tone: "problem" },
     { letter: "A", name: "AI", action: "Students select a suitable AI tool", detail: "Consider what support is needed, what the tool can do and whether its use is permitted.", cue: "What could AI contribute?", tone: "ai" },
-    { letter: "I", name: "Interaction", action: "Students experiment, evaluate and refine", detail: "Critically evaluate outputs for relevance and accuracy, and verify important claims against trusted or authoritative sources.", cue: "How will we test and improve the output?", tone: "interaction" },
+    { letter: "I", name: "Interaction", action: "Students experiment, evaluate and refine", detail: "Critically evaluate outputs for relevance and accuracy. AI tends to favour popular, widely available information over niche or authoritative sources, so verify important claims independently.", cue: "How will we test and improve the output?", tone: "interaction" },
     { letter: "R", name: "Reflection", action: "Students examine the process and learning", detail: "Evaluate how AI supported or hindered the learning process, and identify where human judgement was necessary.", cue: "What did we learn about the task, the tool and our own judgement?", tone: "reflection" },
   ];
   return (

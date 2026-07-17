@@ -75,7 +75,7 @@ Then check whether the learning activities provide suitable practice and whether
 
 ## Key Takeaway
 
-The 3As help lecturers adjust learning outcomes and assessment for an AI-enabled context:
+The 3As help lecturers adjust learning outcomes and assessment for an AI-enabled context. Many modules will reasonably develop and assess all three together, not only one:
 
 - **Anchor** measures distinctly human capabilities;
 - **Augment** measures how well students use AI to improve their work;
@@ -158,6 +158,8 @@ Lecturers design the task and provide the appropriate level of structure, choice
 
 Assessment should provide credible evidence that students have achieved the intended learning outcomes. A polished final product alone may not show what the student knows, can do or contributed.
 
+> This section summarises NP's requirements. For the full policy, including detailed processes and appendices, refer to the [Gen AI in Summative Assessment Policy & Guidance](https://connectnpedu.sharepoint.com/sites/DigitalLearning/AIinLearning/SitePages/Policy-%26-Guidance.aspx).
+
 ## Four Lecturer Actions
 
 ### 1. Start With the Learning Outcome
@@ -173,7 +175,7 @@ If AI can produce the final output without students demonstrating the intended c
 
 ### 2. State the GenAI Conditions Clearly
 
-GenAI is allowed by default in summative assessment unless it is explicitly restricted or prohibited in the assessment brief. Students must cite and declare their use.
+GenAI is allowed by default in summative assessment unless it is explicitly restricted or prohibited in the assessment brief. Students must cite and declare their use. This applies to any assessed task that contributes to the module grade—including take-home assignments—not only major examinations or projects.
 
 For each assessment component, state whether GenAI use is:
 
@@ -190,9 +192,13 @@ Where use is restricted, specify:
 - what evidence of process must be retained or produced;
 - how outputs must be checked, cited and declared.
 
-**Example**
+**Example: Presentation and Q&A**
 
 GenAI may be used for research, ideation and preparing presentation materials, but not during the assessed live presentation or question-and-answer session. Students must cite and declare how GenAI was used.
+
+**Example: Creative Content Generation**
+
+Students may use GenAI, such as an AI image generator, to create actual content for a project—not only for research or ideation. Students identify the problem, select and use the tool, and interact with and refine its output. At presentation, the lecturer questions students on their choices to assess their judgement and contribution.
 
 :::
 
@@ -239,7 +245,7 @@ Staff must not use GenAI to determine grades independently. Any approved use as 
 
 **Suspected misuse**
 
-AI-detection reports, an unfamiliar writing style or unusually sophisticated language may indicate a need for further inquiry, but they are not proof of misconduct on their own. Interview the student, ask for evidence of their writing or work process, and compare their declared GenAI use with what the evidence shows before proceeding under NP’s academic integrity procedures.
+AI-detection reports, an unfamiliar writing style or unusually sophisticated language may indicate a need for further inquiry, but they are not proof of misconduct on their own. Interview the student, ask for evidence of their writing or work process, and compare their declared GenAI use with what the evidence shows, following the process in Appendix 3 of the [Gen AI in Summative Assessment Policy & Guidance](https://connectnpedu.sharepoint.com/sites/DigitalLearning/AIinLearning/SitePages/Policy-%26-Guidance.aspx).
 
 ## Where Further Review May Be Needed
 
@@ -317,6 +323,8 @@ Before acting:
 - consider the learner and learning context;
 - decide whether an intervention is appropriate;
 - review whether the intervention has helped.
+
+Checking the data is a necessary first step, not the decision itself. Use professional judgement—and where appropriate, talk with the student directly—before deciding what action, if any, to take.
 
 ## AI-Enabled Learning Support
 

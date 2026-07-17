@@ -241,6 +241,8 @@ button { color: inherit; }
 .course-content .course-list-long > li::before { top: 24px; }
 .course-content .course-list-long strong { color: var(--blue-active); }
 .course-content strong { color: var(--ink); font-weight: 650; }
+.course-content a { color: var(--blue); font-weight: 650; text-decoration: underline; text-underline-offset: 2px; }
+.course-content a:hover { color: var(--blue-active); }
 .course-content hr { margin: 46px 0; border: 0; border-top: 1px solid var(--line); }
 .course-content blockquote {
   margin: 22px 0 26px;
