@@ -259,7 +259,7 @@ const sectionMeta = [
 const sectionBridges = [
   "See how these four areas connect to NP’s direction for AI-enabled T&L.",
   "Begin with curriculum: what should students learn and demonstrate as AI changes professional practice?",
-  "Consider how AI can support learning and practice, and how PAIR can structure the student learning process.",
+  "Consider how PAIR can structure students’ learning with AI while keeping the intended thinking, judgement and responsibility visible.",
   "Next, consider how assessment keeps learning authentic, credible and visible.",
   "Then choose suitable tools and data uses, checking information, output and human oversight.",
   "Bring the four areas together for a module you teach, lead or support.",
@@ -378,73 +378,6 @@ function NextStepActivity({ value, onChange }: { value: string; onChange: (value
 
 function FourLensReview({ value, onChange }: { value: string; onChange: (value: string) => void }) {
   return <TapChecklist eyebrow="Review one module" title="Four-Lens Review" prompt="Tap each question after considering it for your module." items={["Curriculum: What may need review in the learning outcomes, activities or assessment?", "Facilitation: Where could students compare, check or improve AI-generated output?", "Assessment: What must students demonstrate independently, and where might GenAI use be appropriate?", "Data and Tools: What T&L need could a tool support, and what would need checking before use?"]} tips={["Use the 3As to consider whether the capability is Anchor, Augment or Advance.", "Use PAIR to keep students evaluating, refining and reflecting.", "Check that the conditions and evidence of learning are clear.", "Consider learning value, output quality, data and ethics, and human oversight."]} value={value} onChange={onChange} />;
-}
-
-function ThreeAsActivity() {
-  const lenses = [
-    { name: "Anchor", description: "Essential knowledge, human qualities and judgement students must demonstrate independently of AI." },
-    { name: "Augment", description: "Productive use of AI to improve the quality or efficiency of work." },
-    { name: "Advance", description: "AI-enabled practice that extends or redefines established job boundaries." },
-  ];
-  const outcomes = [
-    {
-      id: "outcome-1",
-      label: "Outcome 1",
-      context: "Students independently evaluate evidence, exercise professional judgement and justify a responsible recommendation.",
-      answer: "Anchor",
-      feedback: "The emphasis is on judgement and responsibility that students must retain independently of AI.",
-    },
-    {
-      id: "outcome-2",
-      label: "Outcome 2",
-      context: "Students use AI to compare options, improve the quality of their analysis and justify how they evaluated and adapted the output.",
-      answer: "Augment",
-      feedback: "Students are assessed on how effectively they use AI to improve the work while retaining oversight.",
-    },
-    {
-      id: "outcome-3",
-      label: "Outcome 3",
-      context: "Students use AI to create a new workflow or service that extends what the professional role previously involved.",
-      answer: "Advance",
-      feedback: "AI enables a new form of practice beyond the role’s previous boundaries.",
-    },
-  ];
-  const [active, setActive] = useState(0);
-  const [answers, setAnswers] = useState<Record<string, string>>({});
-  const current = outcomes[active];
-  const picked = answers[current.id];
-  const solved = Object.keys(answers).length;
-  return (
-    <section className="activity-block three-as-activity">
-      <div className="activity-head-row">
-        <div>
-          <span className="activity-eyebrow">Quick check</span>
-          <h2>How would the 3As change the learning outcome?</h2>
-        </div>
-        <span className="activity-count">{solved} / {outcomes.length} matched</span>
-      </div>
-      <p>A module prepares students to make a professional recommendation. Match each learning outcome to the most appropriate 3A.</p>
-      <div className="domain-spotter-tabs" role="tablist" aria-label="Learning outcomes">
-        {outcomes.map((outcome, index) => {
-          const a = answers[outcome.id];
-          const state = !a ? "" : a === outcome.answer ? "solved" : "attempted";
-          return <button key={outcome.id} type="button" role="tab" aria-selected={active === index} className={`${active === index ? "active" : ""} ${state}`} onClick={() => setActive(index)}>{a ? (a === outcome.answer ? "✓" : "•") : index + 1}</button>;
-        })}
-      </div>
-      <div className="domain-spotter-case"><p><strong>{current.label}.</strong> {current.context}</p></div>
-      <p className="competency-question">Which 3A best describes this outcome?</p>
-      <div className="competency-lenses">
-        {lenses.map((lens) => <button key={lens.name} type="button" className={picked === lens.name ? (lens.name === current.answer ? "selected correct" : "selected wrong") : ""} onClick={() => setAnswers((items) => ({ ...items, [current.id]: lens.name }))}><strong>{lens.name}</strong><small>{lens.description}</small></button>)}
-      </div>
-      {picked && (
-        <div className={`activity-feedback ${picked !== current.answer ? "try-again" : ""}`}>
-          <strong>{current.label} · {current.answer}</strong>
-          <p>{current.feedback}</p>
-        </div>
-      )}
-      {solved === outcomes.length && <blockquote>Which of these outcomes is most relevant to a module you teach or support?</blockquote>}
-    </section>
-  );
 }
 
 function StrategyMap() {
@@ -567,7 +500,7 @@ function ToolChecksActivity() {
 function SectionInteractive({ title, notes, onChange }: { title: string; notes: ActivityNotes; onChange: (key: string, value: string) => void }) {
   if (title === "AI T&L Essentials: Level 1 (AI-Aware)") return null;
   if (title.startsWith("Part 1")) return null;
-  if (title.startsWith("Part 2")) return <ThreeAsActivity />;
+  if (title.startsWith("Part 2")) return null;
   if (title.startsWith("Part 3")) return null;
   if (title.startsWith("Part 4")) return null;
   return null;
@@ -624,31 +557,31 @@ function ThreeAsInfographic() {
       name: "Anchor",
       icon: Anchor,
       tag: "Retain & judge",
-      tagline: "What students must retain and demonstrate without relying on AI",
-      body: "Core disciplinary knowledge and skills, human qualities and professional judgement.",
+      tagline: "Distinctly human capability",
+      body: "Assess the human qualities, disciplinary judgement and essential capabilities students must demonstrate even as AI becomes more capable.",
     },
     {
       key: "augment",
       name: "Augment",
       icon: Zap,
       tag: "Improve & oversee",
-      tagline: "How students should use AI productively",
-      body: "Use AI to improve the quality or productivity of work while applying disciplinary judgement and oversight.",
+      tagline: "Productive use of AI",
+      body: "Assess how well students use AI to improve the quality, productivity or effectiveness of their work while applying appropriate judgement and oversight.",
     },
     {
       key: "advance",
       name: "Advance",
       icon: Rocket,
       tag: "Create & extend",
-      tagline: "What new AI-enabled practice students may develop",
-      body: "Use AI to create new services, workflows or forms of professional practice beyond established job boundaries.",
+      tagline: "New AI-enabled practice",
+      body: "Assess how students use AI to create new possibilities, workflows or forms of professional practice beyond established pre-AI job boundaries.",
     },
   ];
   return (
     <figure className="concept-visual three-as-infographic" aria-labelledby="three-as-title">
       <figcaption>
         <span>The 3As</span>
-        <strong id="three-as-title">Guiding lenses for reviewing learning outcomes, activities and assessment</strong>
+        <strong id="three-as-title">Guiding lenses for reviewing learning outcomes, learning activities and assessment in an AI-enabled context</strong>
       </figcaption>
       <div className="three-as-path">
         {lenses.map((lens) => {
@@ -667,7 +600,7 @@ function ThreeAsInfographic() {
           );
         })}
       </div>
-      <div className="infographic-note"><span aria-hidden="true">↔</span><p><strong>The 3As are lenses, not a sequence.</strong> A learning outcome or module may emphasise one or combine several, depending on the intended learning and professional context.</p></div>
+      <div className="infographic-note"><span aria-hidden="true">↔</span><p>A learning outcome or module may emphasise one or combine several, depending on the intended learning and professional context.</p></div>
     </figure>
   );
 }

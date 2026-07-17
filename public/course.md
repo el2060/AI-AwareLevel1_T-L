@@ -49,29 +49,37 @@ As you work through the package, consider:
 
 # Part 2: Curriculum Design and Development — What Should Students Learn?
 
-AI may change what students need to learn and demonstrate, but strong disciplinary foundations and judgement remain essential.
+## Illustrative Applications
 
-## Consider Your Module
+The examples below are intentionally broad. They illustrate possible applications of the 3As and are not intended to prescribe outcomes or practices for any discipline.
 
-Choose one learning outcome.
+|                                                  | Anchor                                                                           | Augment                                                                                                    | Advance                                                                            |
+| ------------------------------------------------ | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| **Technical or scientific practice**             | Exercise safety-critical judgement and apply essential disciplinary reasoning.    | Use AI to analyse data, test options or improve a solution while checking the output.                        | Develop an AI-enabled workflow or application that extends established practice.     |
+| **People-centred practice**                      | Demonstrate empathy, ethical judgement and appropriate professional interaction.  | Use AI to support planning, analysis or personalised support while retaining professional responsibility.    | Develop a new AI-enabled approach to service, care or support.                       |
+| **Business, creative or communication practice** | Evaluate evidence, understand context and justify a responsible decision.         | Use AI to generate, compare or refine possibilities while judging their quality and suitability.              | Create an AI-enabled service, experience or workflow beyond established practice.    |
 
-- What knowledge, skills, human qualities or professional judgement must students retain and demonstrate without relying on AI?
-- How should students use AI to improve the quality or productivity of their work?
-- What new AI-enabled practice might be worth developing?
+Lecturers should interpret and apply the 3As according to their disciplinary expertise, intended learning outcomes and professional context.
 
-Then ask:
+## Apply the 3As
 
-> How do the learning activities provide suitable practice, and how does the assessment make the intended learning visible?
+Choose one learning outcome from a module you teach, lead or support.
+
+Identify whether it should primarily assess:
+
+- a distinctly human capability;
+- productive use of AI; or
+- new AI-enabled professional practice.
+
+Then check whether the learning activities provide suitable practice and whether the assessment measures the intended capability.
 
 ## Key Takeaway
 
-Use the 3As to review:
+The 3As help lecturers adjust learning outcomes and assessment for an AI-enabled context:
 
-- what students must know, do and judge without relying on AI;
-- how they should use AI to improve the quality or productivity of their work;
-- what new forms of professional practice AI may enable.
-
-Then ensure the learning outcomes, activities and assessment are aligned.
+- **Anchor** measures distinctly human capabilities;
+- **Augment** measures how well students use AI to improve their work;
+- **Advance** measures how students use AI to extend or redefine professional practice.
 
 ---
 
