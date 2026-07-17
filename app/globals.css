@@ -410,6 +410,12 @@ button { color: inherit; }
 .response { margin: 17px 0 25px; border: 1px solid #e8dcc2; border-radius: 10px; background: #fffaf0; }
 .response summary { padding: 14px 16px; cursor: pointer; font-size: 15px; font-weight: 650; }
 .response p { padding: 0 16px 15px; margin: 0; font-size: 15px; }
+.policy-detail { margin: 18px 0 24px; border: 1px solid #c9d6e8; border-radius: 10px; background: #f7f9fc; overflow: hidden; }
+.policy-detail summary { padding: 15px 17px; cursor: pointer; color: var(--blue-active); font-size: 15px; font-weight: 700; }
+.policy-detail summary:hover { background: var(--blue-soft); }
+.policy-detail > div { padding: 0 17px 16px; border-top: 1px solid #dce5f0; }
+.policy-detail .course-list, .policy-detail .course-list-long { margin-bottom: 0; }
+.policy-detail p, .policy-detail li { font-size: 15px; line-height: 1.62; }
 
 .activity-block {
   position: relative;

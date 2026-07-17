@@ -4,7 +4,7 @@
 
 AI is shaping how students learn and how work is done across many professions. Students may use GenAI to explain concepts, generate ideas or support assignment work, raising new considerations for teaching, learning and assessment.
 
-This package builds awareness across four T&L Competency Framework domains: Curriculum Design and Development, Facilitation of Learning, Assessment, and Data and Tech-Enhanced T&L.
+This package applies an AI lens to four T&L Competency Framework domains: Curriculum Design and Development, Facilitation of Learning, Assessment, and Data and Tech-Enhanced T&L.
 
 ### What You Will Learn
 
@@ -57,7 +57,7 @@ Choose one learning outcome.
 
 - What must students understand, judge or do independently of AI?
 - How should students use AI productively?
-- Is there any new AI-enabled practice worth exploring?
+- What new AI-enabled practice might be worth exploring?
 
 Then ask:
 
@@ -67,11 +67,7 @@ At Level 1, the aim is to identify where further review may be needed.
 
 ## Key Takeaway
 
-Use the 3As to review:
-
-- what students must demonstrate independently of AI;
-- how they should use AI productively;
-- where AI may enable new professional practice.
+Use the 3As to review what students must demonstrate independently, how they should use AI productively and what new professional practice AI may enable.
 
 Then check that outcomes, activities and assessment remain aligned.
 
@@ -79,69 +75,87 @@ Then check that outcomes, activities and assessment remain aligned.
 
 # Part 3: Facilitation — Supporting Learning With AI
 
-## PAIR: A Visible Process for Learning With AI
+## PAIR: A Structured Process for Learning With AI
 
-NP uses the PAIR framework to structure learning and problem-solving with AI. PAIR positions AI as a tool that supports students' thinking and judgement—not a substitute for them.
+NP uses the PAIR framework to guide students in using AI purposefully and responsibly as part of learning.
 
-It is:
+PAIR is:
 
-- **Human-centred:** Human judgement remains essential.
-- **Skill-focused:** Students practise problem formulation, evaluation and reflection.
-- **Responsibility-centred:** Students remain accountable for their choices, AI outputs and learning.
+**Human-centred**
+
+AI augments rather than replaces human insight, judgement and creativity.
+
+**Skill-centred**
+
+Students develop transferable capabilities such as problem formulation, exploration, experimentation, critical evaluation and reflection.
+
+**Responsibility-centred**
+
+Students remain accountable for how they use AI and for the quality and integrity of their work.
+
+PAIR is adaptable across disciplines and can be incorporated into an existing learning activity or used to structure a new one.
 
 *Adapted from: Acar, O. A. (2023). “Are Your Students Ready for AI? A 4-Step Framework for a ChatGPT World.” HBP Education.*
 
 <!--pair-infographic-->
 
+## Applying PAIR to Design an AI-Enabled Learning Experience
+
+PAIR can also help lecturers design the learning experience. For each stage, clarify what learners will do and what facilitation or scaffolding they may need.
+
+|                        | **Problem**                                                            | **AI**                                                             | **Interaction**                                                                                 | **Reflection**                                                                     |
+| ---------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **Learners will**      | Define the task, its components, constraints and intended outcome.      | Explore and select a suitable GenAI tool for the task.             | Experiment with AI, critically evaluate its outputs and integrate useful inputs into their work. | Evaluate how AI helped or hindered the task and reflect on learning and judgement. |
+| **Lecturers consider** | What is the context, task and intended learning? What must students produce? | Which tools are suitable and accessible? How will students justify their choice? | How will students use AI to generate ideas, compare approaches, refine work or receive feedback? How will they verify outputs? | What prompts or evidence will help students reflect on decisions, learning, limitations and responsible use? |
+
+The level of structure can vary. Less experienced learners may need a defined task, suggested tools and guided reflection, while more experienced learners may take greater responsibility for framing the problem and selecting tools.
+
 ## PAIR in Practice
 
-A hospitality lecturer asks students to use AI to suggest responses to a dissatisfied guest.
+A lecturer asks students to complete a module-related analysis, design or problem-solving task using PAIR.
 
 Students:
 
-- identify weaknesses in the generated responses;
-- adapt the language to the guest and situation;
-- explain where empathy and professional judgement matter;
-- role-play the interaction with another person.
+1. define the task, intended outcome and constraints;
+2. identify where AI may be useful and justify their choice of tool;
+3. experiment with the tool and critically evaluate its outputs;
+4. verify relevant claims or recommendations against module knowledge and credible evidence;
+5. adapt or reject the AI output using disciplinary judgement;
+6. explain how AI influenced the final work;
+7. reflect on its value, limitations and implications for future practice.
 
-AI supports initial exploration. It does not replace the judgement, empathy or human interaction students need to practise.
+The focus is not on producing a better prompt alone. It is on developing students' ability to make informed and responsible decisions throughout the task.
+
+## Does AI Support the Intended Learning?
+
+AI may support learning when students use it to:
+
+- explore possible approaches;
+- compare explanations or perspectives;
+- generate material for critique;
+- practise and receive feedback;
+- test and refine their thinking.
+
+It substitutes for learning when it completes the analysis, judgement, creation or performance students are meant to develop.
 
 For a lighter activity, use:
 
 > **Generate → Compare → Check → Improve**
 
-## Does AI Support or Replace the Learning?
-
-AI may support learning when it provides:
-
-- another explanation;
-- opportunities for practice;
-- feedback to act on;
-- ideas to compare or critique.
-
-It replaces learning when it completes the thinking or performance students are meant to develop.
-
-### Example
-
-A student asks AI for a simpler explanation, checks it against the module materials and then attempts a practice task.
-
-This may support learning because the student still checks, thinks and practises.
-
-## Guiding Students' Everyday Use
-
-Encourage students to:
-
-- begin with the learning purpose;
-- check and adapt AI outputs;
-- remain responsible for the work and follow module instructions on AI use.
-
 ## Apply It to Your Module
 
-> Where could students **compare, check or improve** AI-generated output rather than simply accept it?
+Consider one learning activity or formative task.
+
+- What task or challenge should students first understand?
+- What decisions should they make when selecting and using AI?
+- What should they evaluate, verify or improve?
+- What reflection would make their learning and judgement visible?
 
 ## Key Takeaway
 
-PAIR keeps the focus on problem formulation, suitable tool selection, critical interaction and reflection. AI should support learning—not substitute for it.
+PAIR is more than a prompting process. It structures how students define a task, choose an appropriate tool, interact critically with AI and reflect on their learning and responsibility.
+
+AI should support the intended learning, not substitute for it.
 
 ---
 
@@ -168,6 +182,8 @@ If AI can produce the final output without the student demonstrating the intende
 
 GenAI is allowed by default. Where use is restricted or prohibited, the scope and conditions must be stated clearly.
 
+:::details Detailed requirements for restricted use
+
 Where use is restricted, state:
 
 - what GenAI may be used for;
@@ -176,6 +192,8 @@ Where use is restricted, state:
 - how AI output should be checked, cited and declared.
 
 Where use is prohibited, state clearly which component or activity is covered.
+
+:::
 
 #### Always-prohibited uses
 
@@ -194,17 +212,16 @@ Avoid vague instructions such as:
 
 > You may use AI appropriately.
 
-Be specific:
+State clearly:
+
+- what AI may be used for;
+- what students must contribute;
+- what evidence of their process is required;
+- how AI use must be checked, cited and declared.
+
+Then give students a specific example:
 
 > You may use GenAI to brainstorm possible approaches and receive feedback on an early draft. Your final analysis, selection of evidence and recommendation must be your own. Check AI-generated claims, retain evidence of your interaction, and cite and declare your use.
-
-A clear assessment brief should state:
-
-- permitted purposes;
-- any restrictions or prohibitions;
-- the student’s required contribution;
-- evidence of process;
-- verification, citation and declaration requirements.
 
 ### 4. Prepare Students and Require Declaration
 
@@ -212,17 +229,21 @@ Explain the conditions early and discuss examples with students. Use formative a
 
 All relevant submission cover pages must include the required **GenAI Use Declaration**. Where use is restricted, students must retain or produce the required evidence of their AI use.
 
-## Suspected Misuse
+:::details Suspected misuse
 
 Undeclared use, breach of stated conditions, purely AI-generated work and simulated human interactions may constitute academic misconduct.
 
 Follow NP’s process for interviewing a student suspected of cheating with AI and the established Academic Integrity procedures. Do not make a decision based on suspicion alone.
 
-## Staff Use of GenAI in Grading
+:::
+
+:::details Staff use of GenAI in grading
 
 Staff must not independently use GenAI to determine grades.
 
 Any use as a grading assistant requires prior management approval, an approved environment, quality assurance, student disclosure and human review of every grade and feedback decision. Staff remain fully responsible.
+
+:::
 
 ## Apply It to Your Module
 
@@ -241,12 +262,7 @@ Begin with the learning outcome. Then decide what students must demonstrate, whe
 
 AI tools and learning data can support engagement, learning outcomes and different learning needs when used purposefully and responsibly. Start with the T&L need—not the tool.
 
-## Before Using a Tool, Apply Four Checks
-
-- **Learning value:** Does it support the intended learning?
-- **Output quality:** Is the output accurate and suitable?
-- **Data and ethics:** Is the information safe and appropriate to use?
-- **Human oversight:** Who reviews, decides and remains responsible?
+Use these four checks before adopting an AI tool or acting on AI-generated information.
 
 ## How AI May Support Your T&L Work
 

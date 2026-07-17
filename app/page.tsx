@@ -112,6 +112,21 @@ function markdownToHtml(markdown: string) {
       continue;
     }
 
+    const details = trimmed.match(/^:::details\s+(.+)$/);
+    if (details) {
+      const body: string[] = [];
+      i += 1;
+      while (i < lines.length && lines[i].trim() !== ":::") {
+        body.push(lines[i]);
+        i += 1;
+      }
+      if (i < lines.length && lines[i].trim() === ":::") i += 1;
+      output.push(
+        `<details class="policy-detail"><summary>${inlineMarkdown(details[1])}</summary><div>${markdownToHtml(body.join("\n"))}</div></details>`,
+      );
+      continue;
+    }
+
     if (/^-\s+/.test(trimmed)) {
       const items: string[] = [];
       while (i < lines.length && /^-\s+/.test(lines[i].trim())) {
@@ -316,7 +331,7 @@ function NextStepActivity({ value, onChange }: { value: string; onChange: (value
       <div className="choice-grid">{options.map((option, index) => { const letter = String.fromCharCode(65 + index); const isSelected = value === option.label; return <button key={option.label} className={`choice-button ${isSelected ? "selected" : ""}`} onClick={() => onChange(option.label)}><span>{isSelected ? `✓ ${letter}` : letter}</span>{option.label}</button>; })}</div>
       {selected && <div className="activity-feedback"><strong>A Practical Place to Start</strong><p>{selected.feedback}</p></div>}
       <div className="final-next-step-closing">
-        <blockquote><strong>Being AI-aware means knowing what to consider, which NP approaches apply and when to seek guidance.</strong></blockquote>
+        <blockquote><strong>Being AI-aware means knowing what to consider, which NP approaches apply and when to seek further guidance.</strong></blockquote>
         <p>Complete the separately administered quiz to fulfil the programme requirements.</p>
       </div>
     </section>
@@ -401,11 +416,11 @@ function ThreeAsActivity() {
 
 function FacilitationRolePlay() {
   const scenario = {
-    context: "A Year 1 class has used AI to obtain a simpler explanation of a difficult concept.",
+    context: "A lecturer plans to let students use AI for an existing assignment. The intended learning is for students to analyse a situation, apply disciplinary concepts and justify a recommended course of action.",
     choices: [
-      { label: "Ask students to compare it with the module material, identify one limitation and attempt a practice task.", good: true, feedback: "This keeps students actively checking, evaluating and applying the explanation. AI supports the learning process without replacing the practice students need." },
-      { label: "Accept the AI explanation and move to the next topic.", good: false, feedback: "Students still need to verify the explanation and practise applying the concept. Moving on would leave the intended learning untested." },
-      { label: "Prohibit the use of AI for explanations.", good: false, feedback: "The key question is whether AI supports the intended learning with suitable checks—not whether it is used at all." },
+      { label: "Allow students to use any AI tool and submit the final answer with an AI declaration.", good: false, feedback: "Disclosure matters, but this gives little learning structure. Students still need to define the task, justify tool use, verify output and show their judgement." },
+      { label: "Ask students to define the task and criteria, justify their choice of AI tool, document significant interactions, verify and adapt the output using disciplinary knowledge, and reflect on where their judgement affected the final recommendation.", good: true, feedback: "This applies the full PAIR process while keeping disciplinary analysis and judgement visible." },
+      { label: "Provide students with a standard prompt that generates the required analysis, then ask them to improve its wording.", good: false, feedback: "This focuses mainly on prompting and risks allowing AI to perform the central analysis students are meant to develop." },
     ],
   };
   const [picked, setPicked] = useState<number | null>(null);
@@ -413,13 +428,13 @@ function FacilitationRolePlay() {
   return (
     <section className="activity-block facilitation-roleplay">
       <div className="roleplay-header"><span className="activity-eyebrow">Facilitation scenario</span><span className="roleplay-step">One teaching judgement</span></div>
-      <h2>What should the lecturer do next?</h2>
+      <h2>Which approach best applies PAIR?</h2>
       <div className="roleplay-scene"><span className="roleplay-avatar" aria-hidden="true">L</span><div><small>Lecturer context</small><p>{scenario.context}</p></div></div>
       <p className="roleplay-prompt">Choose the response that best supports the learning.</p>
       <div className="roleplay-moves">
         {scenario.choices.map((choice, index) => <button key={choice.label} type="button" className={picked === index ? `${choice.good ? "good" : "caution"} selected` : ""} onClick={() => setPicked(index)}><span>{String.fromCharCode(65 + index)}</span><strong>{choice.label}</strong></button>)}
       </div>
-      {answer && <div className={`activity-feedback ${answer.good ? "" : "try-again"}`}><strong>{answer.good ? "A supports the learning" : "Pause and reconsider"}</strong><p>{answer.feedback}</p></div>}
+      {answer && <div className={`activity-feedback ${answer.good ? "" : "try-again"}`}><strong>{answer.good ? "B applies PAIR" : "Pause and reconsider"}</strong><p>{answer.feedback}</p></div>}
     </section>
   );
 }
@@ -434,19 +449,19 @@ function AssessmentBriefBuilder() {
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
-    { name: "Embed AI-Integrated Pedagogy · PAIR", question: "Structure learning and problem-solving with AI", detail: "Develop transferable skills, critical judgement and responsible use.", icon: MessageCircle },
-    { name: "Transform the Curriculum · 3As", question: "Review AI-relevant outcomes, experiences and assessments", detail: "Use the 3As to consider what students must demonstrate independently, productively with AI, or through new AI-enabled practice.", icon: Sparkles },
-    { name: "Redesign Assessment", question: "Assure authentic learning", detail: "Design assessment so students demonstrate credible evidence of learning for AI-enabled professional practice.", icon: ClipboardCheck },
-    { name: "Enable Personalised Learning", question: "Provide personalised practice, feedback and coaching", detail: "Use AI-enabled support to extend practice and feedback while retaining lecturer responsibility for the learning design.", icon: Bot },
-    { name: "Strengthen Human Skills and Resilience", question: "Build human skills, resilience and judgement", detail: "Keep the human edge visible as students learn and work with AI.", icon: Users },
+    { name: "Embed AI-Integrated Pedagogy · PAIR", question: "Structure learning and problem-solving with AI while developing transferable skills, critical judgement and responsible use.", icon: MessageCircle },
+    { name: "Transform the Curriculum · 3As", question: "Review AI-relevant outcomes, learning experiences and assessments.", icon: Sparkles },
+    { name: "Redesign Assessment", question: "Assure authentic learning for AI-enabled professional practice.", icon: ClipboardCheck },
+    { name: "Enable Personalised Learning", question: "Provide personalised practice, feedback and coaching.", icon: Bot },
+    { name: "Strengthen Human Skills and Resilience", question: "Build human skills, resilience and judgement.", icon: Users },
   ];
   return (
     <section className="strategy-map" aria-label="How NP approaches connect across this package">
-      <div className="strategy-heading"><span>NP’s approach</span><h2>NP’s Five Strategies at a Glance</h2><p>Explore how each strategy connects to AI-enabled T&amp;L.</p></div>
+      <div className="strategy-heading"><h2>NP’s Five Strategies at a Glance</h2><p>Explore how each strategy connects to AI-enabled T&amp;L.</p></div>
       <div className="strategy-goal"><strong>AI-ready graduates</strong><span>Strong human qualities · deep domain expertise · effective use of AI</span></div>
       <div className="strategy-path">
-        {items.map(({ name, question, detail, icon: Icon }, index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
-          <i><Icon size={18} strokeWidth={2.2} aria-hidden="true" /></i><span><strong>Strategy {index + 1} · {name}</strong><b>{question}</b>{active === index && <small>{detail}</small>}</span>
+        {items.map(({ name, question, icon: Icon }, index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
+          <i><Icon size={18} strokeWidth={2.2} aria-hidden="true" /></i><span><strong>Strategy {index + 1} · {name}</strong><small>{question}</small></span>
         </button>)}
       </div>
     </section>
@@ -636,16 +651,16 @@ function ThreeAsInfographic() {
 
 function PairInfographic() {
   const stages = [
-    { letter: "P", name: "Problem", action: "Define the problem", detail: "Clarify the context and constraints.", cue: "What are we trying to solve?", tone: "problem" },
-    { letter: "A", name: "AI", action: "Select a suitable AI tool", detail: "Choose a tool that fits the learning purpose.", cue: "What can the tool help with?", tone: "ai" },
-    { letter: "I", name: "Interaction", action: "Experiment and evaluate", detail: "Test, evaluate and refine the output.", cue: "How will we test and use it?", tone: "interaction" },
-    { letter: "R", name: "Reflection", action: "Learn from the process", detail: "Consider what helped, what did not and where human judgement mattered.", cue: "What did we learn?", tone: "reflection" },
+    { letter: "P", name: "Problem", action: "Define the task or challenge", detail: "Clarify the intended outcome, requirements, constraints and success criteria.", cue: "What must we understand before using AI?", tone: "problem" },
+    { letter: "A", name: "AI", action: "Select a suitable AI tool", detail: "Consider what support is needed, what the tool can do and whether its use is permitted.", cue: "What could AI contribute?", tone: "ai" },
+    { letter: "I", name: "Interaction", action: "Experiment, evaluate and refine", detail: "Question outputs, check relevance and accuracy, and compare with trusted sources.", cue: "How will we improve the output?", tone: "interaction" },
+    { letter: "R", name: "Reflection", action: "Examine the process and learning", detail: "Consider what AI helped or hindered and where human judgement mattered.", cue: "What did we learn about the task, tool and judgement?", tone: "reflection" },
   ];
   return (
     <figure className="concept-visual pair-infographic" aria-labelledby="pair-title">
       <figcaption>
         <span>PAIR</span>
-        <strong id="pair-title">A visible process for learning and problem-solving with AI</strong>
+        <strong id="pair-title">A structured process for learning and problem-solving with AI</strong>
       </figcaption>
       <div className="pair-journey">
         {stages.map((stage, index) => (
@@ -660,7 +675,7 @@ function PairInfographic() {
           </div>
         ))}
       </div>
-      <div className="infographic-note pair-loop"><span aria-hidden="true">↔</span><p><strong>Interaction is iterative.</strong> Students should question, refine and check AI outputs rather than rely on a single response.</p></div>
+      <div className="infographic-note pair-loop"><span aria-hidden="true">↔</span><p><strong>PAIR is not a one-pass sequence.</strong> Students may revisit the problem, reconsider the tool and refine their interactions as their understanding develops.</p></div>
     </figure>
   );
 }
