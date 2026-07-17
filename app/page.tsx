@@ -276,7 +276,7 @@ const sectionMeta = [
 
 const sectionBridges = [
   "See how these four areas connect to NP’s direction for AI-enabled T&L.",
-  "Begin with curriculum: what should students learn and demonstrate as AI changes professional practice?",
+  "Begin with curriculum: what competencies should students develop and demonstrate as AI changes professional practice?",
   "Explore PAIR, a simple framework for helping students use AI purposefully, critically and responsibly in their learning.",
   "Consider how to set clear GenAI conditions and design assessment that provides authentic, credible evidence of students’ learning and contribution.",
   "Explore how AI tools and learning data can be used purposefully to support learning, while protecting information, verifying outputs and retaining human oversight.",

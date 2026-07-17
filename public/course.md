@@ -31,9 +31,6 @@ The four sections will examine the module through these lenses:
 
 <!--module-preview-->
 
-**Next**
-Begin with curriculum: what competencies should students develop and demonstrate as AI changes professional practice?
-
 ---
 
 # Part 2: Curriculum Design and Development — What Competencies do Students Need?
