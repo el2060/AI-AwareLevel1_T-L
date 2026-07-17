@@ -262,7 +262,7 @@ const sectionBridges = [
   "Begin with curriculum: what should students learn and demonstrate as AI changes professional practice?",
   "Consider how PAIR can structure students’ learning with AI while keeping the intended thinking, judgement and responsibility visible.",
   "Consider how assessment keeps learning authentic, credible and visible.",
-  "Then choose suitable tools and data uses, checking information, output and human oversight.",
+  "Consider how AI tools and learning data can support learning safely and responsibly.",
   "Bring the four areas together for a module you teach, lead or support.",
 ];
 
