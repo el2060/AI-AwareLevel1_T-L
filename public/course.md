@@ -23,9 +23,11 @@ Set aside about **2 hours** to work through the package, consider the implicatio
 
 # Part 1: NP’s Approach to AI-Enabled Teaching & Learning
 
-## Keep One Module in Mind
+## Use One Module as a Reference Point
 
-The next four sections will help you review one module through four lenses:
+As you work through the next four sections, keep in mind one module that you teach, lead or support. Use it as a practical reference point for considering how AI may affect different parts of its design and delivery.
+
+The four sections will examine the module through these lenses:
 
 <!--module-preview-->
 

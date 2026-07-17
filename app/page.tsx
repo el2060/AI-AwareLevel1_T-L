@@ -425,7 +425,7 @@ function StrategyMap() {
       </div>
       <div className="strategy-path">
         {items.map(({ name, question, icon: Icon }, index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
-          <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i><span><strong>Strategy {index + 1} · {name}</strong><small>{question}</small></span>
+          <i><Icon size={22} strokeWidth={2} aria-hidden="true" /></i><span><strong>Strategy {index + 1} · {name}</strong><small>{question}</small></span>
         </button>)}
       </div>
     </section>
