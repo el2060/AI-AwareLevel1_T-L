@@ -4,20 +4,20 @@
 
 AI, particularly Gen AI, is increasingly shaping how students learn and how work is carried out across many professions. As students use AI to learn, create and solve problems, educators need to understand the opportunities and challenges it brings to teaching, learning and assessment.
 
-The package will help you consider these implications across four areas of your T&L practice.
+This package will help you consider these implications across four areas of your T&L practice.
 
 ### What You Will Learn
 
 By the end of this module, you will be able to:
 
-- identify the competencies students need in an AI-enabled professional context and the implications for curriculum design;
+- recognise the competencies students need in an AI-enabled professional context and the implications for curriculum design;
 - explain how AI can support learning without replacing the intended thinking, judgement or performance;
 - apply NP’s key GenAI requirements to keep assessment authentic, credible and visible;
-- recognise appropriate uses of AI tools and learning data, and apply basic checks for safe and responsible use.
+- describe appropriate uses of AI tools and learning data, and apply basic checks for safe and responsible use.
 
 ### Learning Time
 
-Set aside about **2 hours** to work through the package, consider the implications for a module you teach or support, complete the activities and take the completion quiz.
+Set aside about **2 hours** to work through the package, relate the ideas to a module you teach, lead or support, complete the activities and take the completion quiz.
 
 ---
 
