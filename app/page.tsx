@@ -850,6 +850,7 @@ export default function Home() {
 
   const sections = useMemo(() => splitSections(course), [course]);
   const current = sections[active];
+  const isHome = active === 0;
   const progress = sections.length
     ? Math.round((completed.length / sections.length) * 100)
     : 0;
@@ -938,11 +939,12 @@ export default function Home() {
             <span className="brand-divider" aria-hidden="true" />
             <span className="course-identity">
               <span className="course-name">AI T&amp;L Essentials</span>
-              <small className="course-programme">Mandatory 2-hour programme for teaching staff as part of NP’s Level 1 AI-Aware baseline</small>
+              <small className="course-programme">Mandatory 2-hour programme for teaching staff</small>
             </span>
           </button>
           <div className="top-actions">
-            <span className="level-badge">Level 1 · AI-Aware</span>
+            {!isHome && <span className="level-badge">Level 1 · AI-Aware</span>}
+            {isHome && <span className="level-badge">2 hours</span>}
           </div>
         </div>
       </header>
@@ -968,13 +970,13 @@ export default function Home() {
       </nav>
 
       <main className="reader">
-        {active === 0 ? (
+        {isHome ? (
           <h1 className="page-title home-title">
-            <span>AI T&amp;L Essentials</span>
-            <small>Level 1 <i aria-hidden="true">·</i> AI-Aware</small>
+            <span>Welcome</span>
+            <small>Apply an AI-aware lens across curriculum, facilitation, assessment, and data-enabled teaching and learning.</small>
           </h1>
         ) : <h1 className="page-title">{current.shortTitle}</h1>}
-        {active === 0 ? <OpeningVisual /> : <SectionVisual title={current.title} />}
+        {isHome ? <OpeningVisual /> : <SectionVisual title={current.title} />}
         {contentSegments.map((segment, index) =>
           markerRenderers[segment] ? (
             <div key={`${current.id}-marker-${index}`}>{markerRenderers[segment]}</div>
