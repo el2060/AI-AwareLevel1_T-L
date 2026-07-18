@@ -571,6 +571,62 @@ function OpeningVisual() {
   );
 }
 
+function HomeFlow() {
+  const outcomes = [
+    "recognise the competencies students need in an AI-enabled professional context and the implications for curriculum design",
+    "explain how AI can support learning without replacing the intended thinking, judgement or performance",
+    "apply NP's key GenAI requirements to keep assessment authentic, credible and visible",
+    "describe appropriate uses of AI tools and learning data, and apply basic checks for safe and responsible use",
+  ];
+
+  return (
+    <section className="home-flow" aria-label="Welcome and module outcomes">
+      <article className="home-intro-card">
+        <span>Welcome</span>
+        <h2>Build AI-aware teaching and learning judgement for practice.</h2>
+        <p>
+          AI, particularly Gen AI, is increasingly shaping how students learn and
+          how work is carried out across many professions. As students use AI to
+          learn, create and solve problems, educators need to understand the
+          opportunities and challenges it brings to teaching, learning and
+          assessment.
+        </p>
+        <p>
+          This package helps you consider these implications across four areas of
+          your T&amp;L practice.
+        </p>
+      </article>
+
+      <div className="home-learn-grid">
+        <article className="home-outcome-card">
+          <header>
+            <span>What You Will Learn</span>
+            <p>By the end of this module, you will be able to:</p>
+          </header>
+          <ol>
+            {outcomes.map((outcome) => (
+              <li key={outcome}>
+                <CheckCircle2 size={16} aria-hidden="true" />
+                <span>{outcome}</span>
+              </li>
+            ))}
+          </ol>
+        </article>
+
+        <aside className="home-time-card" aria-label="Learning time">
+          <span>Learning Time</span>
+          <strong>About 2 hours</strong>
+          <p>
+            Set aside time to work through the package, relate the ideas to a
+            module you teach, lead or support, complete the activities and take
+            the completion quiz.
+          </p>
+        </aside>
+      </div>
+    </section>
+  );
+}
+
 function StudentBaselineVisual() {
   const items = [
     { icon: BookOpen, title: "Learn About AI", detail: "Understand key AI terms, approaches, capabilities and limitations." },
@@ -977,15 +1033,19 @@ export default function Home() {
           </h1>
         ) : <h1 className="page-title">{current.shortTitle}</h1>}
         {isHome ? <OpeningVisual /> : <SectionVisual title={current.title} />}
-        {contentSegments.map((segment, index) =>
-          markerRenderers[segment] ? (
-            <div key={`${current.id}-marker-${index}`}>{markerRenderers[segment]}</div>
-          ) : (
-            <article
-              key={`${current.id}-text-${index}`}
-              className={index === 0 ? "course-content" : "course-content course-content-continuation"}
-              dangerouslySetInnerHTML={{ __html: markdownToHtml(segment) }}
-            />
+        {isHome ? (
+          <HomeFlow />
+        ) : (
+          contentSegments.map((segment, index) =>
+            markerRenderers[segment] ? (
+              <div key={`${current.id}-marker-${index}`}>{markerRenderers[segment]}</div>
+            ) : (
+              <article
+                key={`${current.id}-text-${index}`}
+                className={index === 0 ? "course-content" : "course-content course-content-continuation"}
+                dangerouslySetInnerHTML={{ __html: markdownToHtml(segment) }}
+              />
+            )
           )
         )}
 
