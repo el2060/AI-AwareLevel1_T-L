@@ -45,26 +45,19 @@ Alongside discipline-specific competencies, the POLITE sector AI baseline identi
 
 > Individual modules may contribute to different areas. Not every module is expected to address all four.
 
-## Connecting the Two
-
-The 3As guide how curriculum responds within the discipline and profession. The sector baseline provides a common foundation for students' AI literacy and use.
-
-When reviewing a module, consider both:
-
-- the disciplinary and professional competencies students need;
-- the foundational AI competencies the module can appropriately develop.
+The sector baseline provides a common AI foundation, while the 3As help lecturers connect it to disciplinary and professional competencies.
 
 ## Illustrative Applications
 
-The examples below are intentionally broad and are not intended to prescribe outcomes or practices for any discipline.
+These broad examples show how the 3As might look across different forms of practice. They are not intended to prescribe outcomes for any discipline.
 
-|                                                  | Anchor                                                                           | Augment                                                                                                    | Advance                                                                            |
-| ------------------------------------------------ | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| **Technical or scientific practice**             | Exercise safety-critical judgement and apply essential disciplinary reasoning.    | Use AI to analyse data, test options or improve a solution while checking the output.                        | Develop an AI-enabled workflow or application that extends established practice.     |
-| **People-centred practice**                      | Demonstrate empathy, ethical judgement and appropriate professional interaction.  | Use AI to support planning, analysis or personalised support while retaining professional responsibility.    | Develop a new AI-enabled approach to service, care or support.                       |
-| **Business, creative or communication practice** | Evaluate evidence, understand context and justify a responsible decision.         | Use AI to generate, compare or refine possibilities while judging their quality and suitability.              | Create an AI-enabled service, experience or workflow beyond established practice.    |
+|                                          | **Anchor**                                                   | **Augment**                                                  | **Advance**                                                   |
+| ----------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------ |
+| **Technical or scientific**               | Apply **core reasoning** and safety-critical judgement.          | **Use AI to analyse**, test or improve a solution.               | Develop a **new AI-enabled workflow** or application.              |
+| **People-centred**                        | Demonstrate **empathy**, ethics and professional judgement.      | **Use AI to support** planning or personalised support.          | Develop a **new AI-enabled service** or care approach.             |
+| **Business, creative or communication**   | Evaluate **evidence**, context and audience needs.               | **Use AI to generate**, compare or refine possibilities.         | Create a **new AI-enabled service**, experience or workflow.       |
 
-Lecturers should interpret and apply the 3As according to their disciplinary expertise, intended learning outcomes and professional context.
+> Lecturers should interpret the 3As according to their disciplinary expertise, intended learning outcomes and professional context.
 
 ## Apply the 3As
 
@@ -76,13 +69,13 @@ Consider whether it remains relevant as professional practice changes and whethe
 - productive use of AI;
 - new AI-enabled professional practice.
 
-Also consider whether the learning activities provide opportunities to develop any relevant sector baseline AI competencies.
+Also consider which sector baseline AI competencies the learning activities can appropriately develop.
 
 Then check whether the assessment makes the intended competencies visible.
 
 ## Key Takeaway
 
-Use the 3As to review discipline-specific competencies, supported by the sector AI baseline as a common foundation for students' learning and use of AI.
+Use the 3As to review discipline-specific competencies, while drawing on the sector baseline as a common foundation for students' AI literacy and use.
 
 ---
 
