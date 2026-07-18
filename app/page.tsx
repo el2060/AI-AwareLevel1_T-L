@@ -261,9 +261,9 @@ const sectionMeta = [
   { mark: "✦", label: "4 domains · 2 hours", tone: "blue" },
   { mark: "01", label: "5 strategies · PAIR · 3As", tone: "blue" },
   { mark: "02", label: "Anchor · Augment · Advance", tone: "orange" },
-  { mark: "03", label: "The PAIR framework", tone: "teal" },
+  { mark: "03", label: "PAIR framework", tone: "teal" },
   { mark: "04", label: "GenAI conditions & policy", tone: "blue" },
-  { mark: "05", label: "AI tools · Learning support · Learning analytics", tone: "purple" },
+  { mark: "05", label: "AI tools · learning support · learning analytics", tone: "purple" },
   { mark: "06", label: "Four-lens module review", tone: "green" },
 ];
 
@@ -273,7 +273,7 @@ const contentsMeta = [
   { title: "Curriculum competencies", label: "Anchor · Augment · Advance" },
   { title: "Facilitation with PAIR", label: "PAIR framework" },
   { title: "Assessment design", label: "GenAI conditions" },
-  { title: "Data, tools and analytics", label: "AI tools · Learning support · Learning analytics" },
+  { title: "Data, tools and analytics", label: "AI tools · learning support · learning analytics" },
   { title: "Bring it together", label: "Four-lens module review" },
 ];
 
