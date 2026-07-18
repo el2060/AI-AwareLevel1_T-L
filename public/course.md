@@ -344,7 +344,7 @@ Begin with the learning outcome. Clarify how GenAI may be used, state the condit
 
 ## How AI Extends Data and Tech-Enhanced T&L
 
-AI creates new opportunities to integrate technology into learning and use data to understand and respond to learner needs.
+AI extends how lecturers integrate technology into learning and use data to understand and respond to learner needs.
 
 This involves two connected practices:
 
@@ -354,7 +354,7 @@ Use appropriate AI tools to enhance learning activities, practice, feedback and 
 
 ### Apply Learning Data and Analytics
 
-Use learning data to identify possible needs, inform appropriate action and review whether the support is helping.
+Use learning data to identify possible needs, inform action and review whether support is helping.
 
 > Start with the learning need—not the technology.
 
@@ -376,23 +376,18 @@ The lecturer provides the context and intended learning, then checks, adapts and
 
 AI-enabled tutors and learning assistants can extend opportunities for practice, feedback and support beyond class time.
 
-Within NP, these may include tools such as:
+Within NP, these may include:
 
 **Brightspace Lumi Tutor**
 Uses module content to support explanations, summaries, practice questions, flashcards and revision.
 
-**Adaptive learning assistants or course-specific AI tutors**
+**Adaptive or course-specific AI tutors**
 Provide targeted practice, feedback or coaching based on the intended learning.
 
 **Student AI tools**
-Students may use appropriate AI tools for learning, creation, research or problem-solving, subject to the task conditions and responsible-use requirements.
+May support learning, creation, research or problem-solving, subject to task conditions and responsible-use requirements.
 
-These tools complement—not replace—facilitation. Lecturers still determine:
-
-- the intended learning;
-- the source materials and boundaries;
-- how students should use the tool;
-- whether the support is helping students learn.
+These tools complement facilitation. Lecturers still determine the intended learning, source materials, boundaries and how the support fits within the module.
 
 ### 3. Use Learning Data to Inform Support
 
@@ -403,34 +398,15 @@ Learning data can help lecturers:
 - plan targeted activities or interventions;
 - review whether the support is helping.
 
-AI-generated summaries, patterns or predictions are starting points—not decisions. Lecturers interpret the information in context and decide what action, if any, is appropriate.
+AI-generated summaries, patterns or predictions are starting points—not decisions. Lecturers interpret the information in context before deciding what action is appropriate.
 
-## Explore Common T&L Uses
-
-### Start With a Task You Already Do
-
-Choose a use case and notice the boundary between what the tool can provide and the judgement that remains yours.
-
-**Review module materials · Draft practice examples · Summarise feedback themes · Test assignment clarity · Spot patterns in learning data · Create alternative formats**
+## Example · Create Alternative Formats
 
 <!--use-case-explorer-->
 
-> **Tool note:** M365 Copilot is available within NP's environment for approved staff use. Other NP-supported or approved tools may be more suitable depending on the learning purpose, user and information involved.
+## Use AI and Data Purposefully
 
-## A Simple Way to Work With AI
-
-1. Start with the learning need.
-2. Select a suitable tool or data source.
-3. Provide relevant context and constraints.
-4. Check the information and output.
-5. Adapt and decide what to use.
-6. Review whether it helped.
-
-> AI may draft, flag, personalise or suggest. The lecturer interprets, adapts and decides.
-
-## Choose and Use Tools Purposefully
-
-Rather than using a separate compliance checklist, apply four decision areas:
+Apply four considerations:
 
 ### Learning fit
 
@@ -442,7 +418,7 @@ Is it appropriate and accessible for the task and learners?
 
 ### Information and output
 
-Is the information approved for use, and is the output accurate, relevant and suitable?
+Is the information approved for use, and is the output accurate and suitable?
 
 ### Oversight and impact
 
@@ -458,14 +434,9 @@ Choose one small T&L need from a module you teach, lead or support.
 
 Consider:
 
-- whether an AI tool or learning data could contribute;
-- how it would improve the learning experience;
-- what information and outputs would need checking;
+- what an AI tool or learning data could contribute;
+- what would need checking;
 - how you would know whether it helped.
-
-## Key Takeaway
-
-Use AI tools and learning data to enhance learning—not simply to introduce more technology. Start with the learning need, select an appropriate approach, check the information and outputs, and retain professional judgement and responsibility.
 
 ---
 

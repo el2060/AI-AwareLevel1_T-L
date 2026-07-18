@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactElement, useEffect, useLayoutEffect, useMemo, useState } from "react";
-import { ArrowLeft, ArrowLeftRight, ArrowRight, BookOpen, Bot, Check, CheckCircle2, ChevronRight, ClipboardCheck, Compass, Eye, Layers, Lightbulb, MessageCircle, RefreshCw, Rocket, Scale, ShieldCheck, Target, UserRound, Users } from "lucide-react";
+import { ArrowLeft, ArrowLeftRight, ArrowRight, BookOpen, Bot, Check, CheckCircle2, ChevronRight, ClipboardCheck, Compass, Eye, Layers, Lightbulb, RefreshCw, Rocket, Scale, ShieldCheck, Target, UserRound, Users } from "lucide-react";
 
 type Section = {
   id: string;
@@ -460,79 +460,13 @@ function StrategyMap() {
 }
 
 function UseCaseExplorer() {
-  const [active, setActive] = useState(0);
-  const useCases = [
-    {
-      title: "Review module materials",
-      tool: "Approved AI assistant (e.g., M365 Copilot)",
-      icon: BookOpen,
-      use: "Flag outdated references, duplicated content, misalignment or inconsistent instructions across module documents.",
-      prompt: "Review these module documents. List outdated references, duplicated content, misalignment with learning outcomes and inconsistent student instructions. Name the source document. Do not rewrite.",
-      check: "Verify each finding against the original material.",
-      judgement: "Decide what, if anything, should change.",
-    },
-    {
-      title: "Draft practice examples",
-      tool: "Approved AI assistant (e.g., M365 Copilot)",
-      icon: Lightbulb,
-      use: "Generate a first set of worked examples, scenarios or practice questions in an authentic context.",
-      prompt: "Draft three Year [1/2/3] practice examples for [concept] in [diploma]. Include a common misconception to spot. Use plain English for a first exposure.",
-      check: "Check accuracy, learner level, tone and whether the context is realistic.",
-      judgement: "What is technically and professionally correct, and what goes in front of students.",
-    },
-    {
-      title: "Summarise feedback themes",
-      tool: "Approved AI assistant (e.g., M365 Copilot)",
-      icon: MessageCircle,
-      use: "Group feedback that is appropriate for the tool into themes so you can review possible needs and decide what support may help.",
-      prompt: "Summarise these feedback comments into themes. For each, give a short label and approximate number of related comments. List minority views separately. Do not infer causes or recommend actions.",
-      check: "Read a sample of original comments. Look for omissions, minority views and identifying details.",
-      judgement: "How to interpret the feedback, what intervention is appropriate and how you will review whether it helped.",
-    },
-    {
-      title: "Test assignment clarity",
-      tool: "Approved AI assistant (e.g., M365 Copilot)",
-      icon: ClipboardCheck,
-      use: "Surface instructions or GenAI conditions that a student may read in more than one way.",
-      prompt: "Read this assignment brief as a Year 2 student. Identify unclear instructions, marking expectations and GenAI conditions. Then ask five questions a confused student may ask.",
-      check: "Compare with questions students actually ask. The tool simulates a reader; it does not know your students.",
-      judgement: "The assessment design and how you will explain the conditions in class.",
-    },
-    {
-      title: "Spot patterns in quiz results",
-      tool: "Excel analytics + approved AI assistant",
-      icon: Scale,
-      use: "Identify low-success questions or topic patterns in a de-identified question-level results export so you can review possible teaching or support needs.",
-      prompt: "This sheet contains de-identified question-level quiz results. Identify low-success questions, possible flawed questions and weak topic areas. Make no claims about individual students or causes.",
-      check: "Verify the figures and consider context: a weak result may reflect a flawed question, timing or teaching sequence.",
-      judgement: "What to revisit in teaching, what support to provide and how to check whether the support improved learning.",
-    },
-    {
-      title: "Create alternative formats",
-      tool: "Approved AI assistant (e.g., M365 Copilot)",
-      icon: Users,
-      use: "Create a simpler explanation, step-by-step version or short self-check activity from the same source material.",
-      prompt: "Create a simpler explanation, a step-by-step worksheet version and five self-check questions for [concept]. Keep the technical meaning identical and flag anything you were unsure how to simplify.",
-      check: "Check that the meaning and learning standard are preserved, and that examples are inclusive and accessible.",
-      judgement: "How to support your learners without replacing appropriate human or institutional support.",
-    },
-  ];
-  const selected = useCases[active];
-  const Icon = selected.icon;
   return (
-    <section className="use-case-explorer" aria-label="Explore common AI-supported teaching and learning tasks">
-      <div className="use-case-tabs">
-        {useCases.map((item, index) => {
-          const ItemIcon = item.icon;
-          return <button key={item.title} type="button" className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}><ItemIcon size={18} aria-hidden="true" /><span>{item.title}</span></button>;
-        })}
-      </div>
+    <section className="use-case-explorer" aria-label="Worked example: create alternative learning formats">
       <div className="use-case-detail" aria-live="polite">
-        <div className="use-case-title"><span><Icon size={22} aria-hidden="true" /></span><div><small>Suggested tool</small><strong>{selected.tool}</strong></div></div>
-        {selected.tool.includes("M365 Copilot") && <p className="use-case-classification">M365 Copilot is available within NP's environment for approved use with information classified up to <strong>Official (Closed) - Restricted</strong>, subject to NP's current data-handling requirements and approved-use conditions.</p>}
-        <h3>{selected.title}</h3><p>{selected.use}</p>
-        <div className="prompt-starter"><strong>Prompt starter</strong><p>{selected.prompt}</p></div>
-        <div className="use-case-checks"><div><b>Check</b><p>{selected.check}</p></div><div><b>Your judgement</b><p>{selected.judgement}</p></div></div>
+        <div className="use-case-context"><div><strong>Possible tool</strong><p>An approved AI assistant, such as M365 Copilot.</p></div><div><strong>Task</strong><p>Create a simpler explanation, step-by-step worksheet or short self-check activity from the same source material.</p></div></div>
+        <div className="prompt-starter"><strong>Prompt starter</strong><p>Create a simpler explanation, a step-by-step worksheet and five self-check questions for [concept]. Preserve the technical meaning and intended learning standard. Flag anything you were uncertain how to simplify.</p></div>
+        <div className="use-case-checks"><div><b>Check</b><p>Confirm that the content is accurate, the intended learning standard is preserved, and the examples are inclusive and accessible.</p></div><div><b>Lecturer decision</b><p>Decide which format is suitable for your learners and whether additional support is needed.</p></div></div>
+        <p className="use-case-tool-note"><strong>Tool note:</strong> M365 Copilot is available within NP&rsquo;s environment for approved staff use. Other NP-supported or approved tools may be more suitable depending on the learning purpose and information involved.</p>
       </div>
     </section>
   );
@@ -541,10 +475,10 @@ function UseCaseExplorer() {
 function QuickSenseCheck() {
   const [revealed, setRevealed] = useState<number[]>([]);
   const items = [
-    { situation: "An AI tutor gives a student an explanation that differs from the module materials.", reveal: "Check the source content and accuracy, then clarify the intended explanation or adjust the materials supporting the tutor." },
+    { situation: "An AI tutor gives an explanation that differs from the module materials.", reveal: "Check the source content and accuracy before deciding whether the materials or tutor setup need adjustment." },
     { situation: "An AI-generated summary of student feedback sounds plausible.", reveal: "Verify that the themes are supported by the original comments." },
     { situation: "You want to upload assessment results into an AI tool.", reveal: "Check whether the tool is approved for that information and purpose." },
-    { situation: "Learning data suggests that several students may need support.", reveal: "Review the underlying evidence and learner context before deciding what action is appropriate." },
+    { situation: "Learning data suggests that several students may need support.", reveal: "Review the evidence and learner context before deciding what action is appropriate." },
   ];
   function toggle(index: number) {
     setRevealed((current) => (current.includes(index) ? current.filter((item) => item !== index) : [...current, index]));
@@ -1138,6 +1072,13 @@ export default function Home() {
         )}
 
         {current.title.startsWith("Part 5") && <QuickSenseCheck />}
+
+        {current.title.startsWith("Part 5") && (
+          <div className="key-takeaway part-five-takeaway">
+            <p className="key-takeaway-head"><CheckCircle2 size={18} aria-hidden="true" /><span>Key Takeaway</span></p>
+            <p>Use AI tools and learning data where they add learning value. Select an appropriate approach, check the information and outputs, and retain professional judgement and responsibility.</p>
+          </div>
+        )}
 
         {sectionBridges[active] && active < sections.length - 1 && !hasInlineNextPrompt && (
           <div className="section-bridge">
