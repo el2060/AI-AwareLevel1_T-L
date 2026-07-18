@@ -598,9 +598,9 @@ function AlignmentFlowVisual() {
   return (
     <figure className="concept-visual alignment-story" aria-label="Flow from competency to assessment evidence">
       <p className="alignment-sentence">
-        A <span className="alignment-chip alignment-competency">competency</span> becomes a{" "}
-        <span className="alignment-chip alignment-outcome">learning outcome</span>, is practised through{" "}
-        <span className="alignment-chip alignment-activities">learning activities</span>, and is shown through{" "}
+        A <span className="alignment-chip alignment-competency">competency</span> is expressed through a{" "}
+        <span className="alignment-chip alignment-outcome">learning outcome</span>, developed through{" "}
+        <span className="alignment-chip alignment-activities">learning activities</span> and demonstrated through{" "}
         <span className="alignment-chip alignment-evidence">assessment evidence</span>.
       </p>
       <div className="alignment-captions">

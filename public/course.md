@@ -47,13 +47,13 @@ The 3As provide a simple lens for doing this.
 
 <!--three-as-visual-->
 
-## From Competency to Aligned Learning Design
+## Aligning Competencies, Learning Activities and Assessment
 
 Once the intended competency is clear, ensure the rest of the module supports it.
 
 <!--alignment-flow-visual-->
 
-> Learning outcomes, activities and assessment should work together. Students should not be expected to demonstrate productive AI use in assessment without suitable opportunities to practise it during learning.
+> Learning outcomes, activities and assessment should work together. Students should have suitable opportunities to practise productive AI use before they are expected to demonstrate it in assessment.
 
 ## Illustrative Applications
 
@@ -73,9 +73,9 @@ Choose one learning outcome from a module you teach, lead or support.
 
 ### Step 1 · Review the Competency
 
-Does the outcome remain relevant as professional practice changes?
+Does the learning outcome still reflect the competencies students need as professional practice changes?
 
-Should it develop:
+Should it emphasise:
 
 - distinctly human capabilities;
 - productive use of AI;
@@ -87,13 +87,13 @@ Should it develop:
 
 ### Step 3 · Identify One Adjustment
 
-What is one change that may be needed to the learning outcome, activity or assessment?
+What is one adjustment that would improve the alignment between the learning outcome, activities and assessment?
 
 ## Supporting Context: A Common AI Foundation for Students
 
 <!--student-baseline-visual-->
 
-The sector baseline provides a common AI foundation, while the 3As guide how each discipline develops and assesses AI-relevant professional competencies.
+The sector baseline provides a common foundation for students' AI literacy and use, while the 3As guide how these capabilities connect to disciplinary and professional practice.
 
 ## Key Takeaway
 
