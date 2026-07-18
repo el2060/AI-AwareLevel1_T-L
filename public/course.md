@@ -11,7 +11,7 @@ This package will help you consider these implications across four areas of your
 By the end of this module, you will be able to:
 
 - recognise how AI is changing the competencies students need and the implications for curriculum design;
-- explain how AI can support learning without replacing the intended thinking, judgement or performance;
+- explain how AI can support learning and practice without replacing the intended thinking, judgement or performance;
 - apply NP’s GenAI policy requirements for summative assessment to clarify conditions and make students’ learning and contribution visible;
 - identify appropriate uses of AI tools and learning data, and apply basic considerations for safe and responsible use.
 
@@ -29,9 +29,22 @@ The programme includes the learning content, activities and completion quiz. You
 
 As you work through the next four sections, think of one module you teach, lead or support. Use it to connect the ideas in each section to your own T&L practice.
 
+<!--strategy-map-->
+
 The four sections explore:
 
 <!--module-preview-->
+
+## The Four Areas Work Together
+
+A single T&L decision may involve more than one area. For example, introducing an AI-supported activity may require consideration of:
+
+- the competency students should develop;
+- how students will learn with AI;
+- how learning and student contribution will be assessed;
+- which tool or learning data is appropriate.
+
+Changes in one area may therefore have implications for the others.
 
 ---
 
@@ -166,16 +179,15 @@ AI may undermine learning when it completes the analysis, judgement, creation or
 
 **If AI has replaced the intended learning:** use a follow-up activity that requires students to identify gaps, examine how they used AI and apply the underlying concepts themselves.
 
+<!--support-or-replace-->
+
 ## Apply PAIR to One Learning Activity
 
 Choose one activity from a module you teach, lead or support.
 
 Consider:
 
-- what students should understand or do before using AI;
-- what role AI should play;
-- how students will evaluate and improve the output;
-- what reflection or evidence will make their learning and judgement visible.
+<!--pair-apply-checklist-->
 
 Then decide what level of structure and choice your students need.
 
@@ -284,15 +296,17 @@ All relevant submission cover pages must include the required GenAI Use Declarat
 
 Module leaders are responsible for setting and communicating the conditions, ensuring declarations are completed and designing assessments that provide credible evidence of learning.
 
+<!--genai-conditions-check-->
+
 ## Important Policy Reminders
 
-:::note Staff Use of GenAI in Grading
+:::details Staff Use of GenAI in Grading
 
 Staff must not use GenAI to determine grades independently. Any approved use as a grading assistant requires management approval, appropriate quality assurance, disclosure to students and full human review of every grade and feedback decision.
 
 :::
 
-:::note Suspected Misuse
+:::details Suspected Misuse
 
 AI-detection reports, changes in writing style or unusually sophisticated language may indicate a need for further inquiry, but are not proof of misconduct.
 
@@ -302,7 +316,7 @@ Interview the student, request relevant evidence of the work process and compare
 
 ## When Further Review May Be Needed
 
-### When an Assessment May Need Review
+:::details When an Assessment May Need Review
 
 Review the assessment when:
 
@@ -311,6 +325,8 @@ Review the assessment when:
 - the task no longer reflects current professional practice;
 - the GenAI conditions are unclear;
 - students have not been prepared for the required use or non-use of AI.
+
+:::
 
 ## Apply It to Your Module
 
@@ -459,29 +475,7 @@ Use AI tools and learning data to enhance learning—not simply to introduce mor
 
 Choose a module you teach, lead or support. Consider each question once.
 
-### Curriculum
-
-What may need review in the learning outcomes, activities or assessment?
-
-Use the 3As to consider whether the intended capability is Anchor, Augment or Advance.
-
-### Facilitation
-
-Where could students compare, check, improve or explain their use of AI?
-
-Use PAIR to keep students evaluating, refining and reflecting.
-
-### Assessment
-
-What must students demonstrate themselves, and where might GenAI use be appropriate?
-
-Check that the conditions and evidence of learning are clear.
-
-### Data and Tech-Enhanced T&L
-
-What learning need could an AI tool or learning data support, and what would need checking before use?
-
-Consider learning value, suitability, information involved and human oversight.
+<!--module-review-->
 
 ## Four Ideas to Carry Forward
 
@@ -505,13 +499,7 @@ Use suitable AI tools and learning data where they add learning value, with appr
 
 ### Choose One Small Next Step
 
-A. Review one learning outcome, activity or assessment using the 3As.
-
-B. Try one Generate -> Compare -> Check -> Improve activity.
-
-C. Check one assessment's GenAI conditions.
-
-D. Explore one appropriate use of an AI tool, AI-enabled learning support or learning data.
+<!--next-step-->
 
 ## Closing
 

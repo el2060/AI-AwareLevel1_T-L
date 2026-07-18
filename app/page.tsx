@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactElement, useEffect, useLayoutEffect, useMemo, useState } from "react";
-import { BookOpen, Bot, CheckCircle2, ClipboardCheck, Eye, Lightbulb, LockKeyhole, MessageCircle, RefreshCw, Rocket, Scale, ShieldCheck, Target, UserRound, Users, Zap } from "lucide-react";
+import { ArrowLeft, ArrowLeftRight, ArrowRight, BookOpen, Bot, Check, CheckCircle2, ChevronRight, ClipboardCheck, Compass, Eye, Layers, Lightbulb, MessageCircle, RefreshCw, Rocket, Scale, ShieldCheck, Target, UserRound, Users } from "lucide-react";
 
 type Section = {
   id: string;
@@ -27,6 +27,13 @@ function inlineMarkdown(value: string) {
     .replace(/`(.+?)`/g, "<code>$1</code>")
     .replace(/  $/, "<br />");
 }
+
+const INFO_SVG =
+  '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>';
+const WARNING_SVG =
+  '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 20h16a2 2 0 0 0 1.73-2Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>';
+const CHECK_CIRCLE_SVG =
+  '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>';
 
 function isTableDivider(line: string) {
   return /^\|?[\s:|-]+\|[\s:|-]+\|?$/.test(line.trim());
@@ -64,6 +71,24 @@ function markdownToHtml(markdown: string) {
     const heading = trimmed.match(/^(#{1,4})\s+(.+)$/);
     if (heading) {
       const level = heading[1].length;
+      // "Key Takeaway" sections get a highlighted treatment keyed to the
+      // current part's accent colour, instead of a plain heading.
+      if (level === 2 && heading[2].trim() === "Key Takeaway") {
+        const body: string[] = [];
+        i += 1;
+        while (
+          i < lines.length &&
+          !/^#{1,4}\s+/.test(lines[i].trim()) &&
+          !/^---+$/.test(lines[i].trim())
+        ) {
+          body.push(lines[i]);
+          i += 1;
+        }
+        output.push(
+          `<div class="key-takeaway"><p class="key-takeaway-head">${CHECK_CIRCLE_SVG}<span>${inlineMarkdown(heading[2])}</span></p>${markdownToHtml(body.join("\n"))}</div>`,
+        );
+        continue;
+      }
       output.push(`<h${level}>${inlineMarkdown(heading[2])}</h${level}>`);
       i += 1;
       continue;
@@ -131,9 +156,9 @@ function markdownToHtml(markdown: string) {
         i += 1;
       }
       if (i < lines.length && lines[i].trim() === ":::") i += 1;
-      const glyph = kind === "warning" ? "⚠" : "ℹ";
+      const glyph = kind === "warning" ? WARNING_SVG : INFO_SVG;
       output.push(
-        `<div class="callout callout-${kind}"><p class="callout-head"><span aria-hidden="true">${glyph}</span>${inlineMarkdown(title)}</p>${markdownToHtml(body.join("\n"))}</div>`,
+        `<div class="callout callout-${kind}"><p class="callout-head">${glyph}${inlineMarkdown(title)}</p>${markdownToHtml(body.join("\n"))}</div>`,
       );
       continue;
     }
@@ -257,16 +282,6 @@ function withoutTitle(markdown: string) {
   return markdown.replace(/^# .+\r?\n?/, "").trim();
 }
 
-const sectionMeta = [
-  { mark: "✦", label: "4 domains · 2 hours", tone: "blue" },
-  { mark: "01", label: "5 strategies · PAIR · 3As", tone: "blue" },
-  { mark: "02", label: "Anchor · Augment · Advance", tone: "orange" },
-  { mark: "03", label: "PAIR framework", tone: "teal" },
-  { mark: "04", label: "GenAI conditions & policy", tone: "blue" },
-  { mark: "05", label: "AI tools · learning support · learning analytics", tone: "purple" },
-  { mark: "06", label: "Four-area module review", tone: "green" },
-];
-
 const contentsMeta = [
   { title: "Start here", label: "AI-enabled T&L overview · Up to 2 hours" },
   { title: "NP’s AI-enabled T&L approach", label: "5 strategies · 3As · PAIR" },
@@ -277,6 +292,17 @@ const contentsMeta = [
   { title: "Bring it together", label: "Four-area module review" },
 ];
 
+// Each part carries the accent colour of the T&L domain it covers, so the
+// four-colour code doubles as wayfinding across the package.
+const partIcons: Record<number, typeof BookOpen> = {
+  1: Compass,
+  2: BookOpen,
+  3: Lightbulb,
+  4: ClipboardCheck,
+  5: ShieldCheck,
+  6: Layers,
+};
+
 const sectionBridges = [
   "See how these four areas connect to NP’s direction for AI-enabled T&L.",
   "Begin with curriculum: what competencies should students develop and demonstrate as AI changes professional practice?",
@@ -286,36 +312,31 @@ const sectionBridges = [
   "Bring the four areas together by reviewing one module you teach, lead or support.",
 ];
 
-function DomainSpotter() {
-  const domains = ["Curriculum", "Facilitation", "Assessment", "Data and Tools"];
-  const scenarios = [
-    { id: "curriculum", context: "Your diploma team is reviewing which coding capabilities students must demonstrate independently of AI and which should include effective use of AI-assisted development.", answer: "Curriculum", feedback: "This is Curriculum: AI is changing what students need to learn and how it’s taught." },
-    { id: "facilitation", context: "A student asks an AI tutor to explain a concept a second way before attempting the practice questions.", answer: "Facilitation", feedback: "This is Facilitation: AI is supporting explanation and practice." },
-    { id: "assessment", context: "A student’s submission reads as clearly GenAI-polished, and you need to decide what still counts as their own work.", answer: "Assessment", feedback: "This is Assessment: providing authentic, credible evidence of learning." },
-    { id: "tools", context: "You want to use AI to summarise a term’s worth of student feedback comments to spot common themes.", answer: "Data and Tools", feedback: "This is Data and Tools: using AI and learning data safely and responsibly." },
-  ];
+type SorterScenario = { id: string; context: string; answer: string; feedback: string };
+
+function ScenarioSorter({ eyebrow, title, prompt, options, scenarios, countNoun, trio }: { eyebrow: string; title: string; prompt: string; options: string[]; scenarios: SorterScenario[]; countNoun: string; trio?: boolean }) {
   const [active, setActive] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const current = scenarios[active];
   const picked = answers[current.id];
-  const solved = Object.keys(answers).length;
+  const solved = scenarios.filter((scenario) => answers[scenario.id] === scenario.answer).length;
   return (
     <section className="activity-block domain-spotter">
       <div className="activity-head-row">
-        <div><span className="activity-eyebrow">Spot the domain</span><h2>Where does each moment belong?</h2></div>
-        <span className="activity-count">{solved} / {scenarios.length} spotted</span>
+        <div><span className="activity-eyebrow">{eyebrow}</span><h2>{title}</h2></div>
+        <span className="activity-count">{solved} / {scenarios.length} {countNoun}</span>
       </div>
-      <p>This package is organised around four familiar areas of your T&amp;L work. Read each moment, then tap the area it mainly touches.</p>
+      <p>{prompt}</p>
       <div className="domain-spotter-tabs" role="tablist" aria-label="Scenarios">
         {scenarios.map((s, index) => {
           const a = answers[s.id];
           const state = !a ? "" : a === s.answer ? "solved" : "attempted";
-          return <button key={s.id} type="button" role="tab" aria-selected={active === index} className={`${active === index ? "active" : ""} ${state}`} onClick={() => setActive(index)}>{a ? (a === s.answer ? "✓" : "•") : index + 1}</button>;
+          return <button key={s.id} type="button" role="tab" aria-selected={active === index} className={`${active === index ? "active" : ""} ${state}`} onClick={() => setActive(index)}>{a ? (a === s.answer ? <Check size={14} strokeWidth={2.8} aria-hidden="true" /> : "•") : index + 1}</button>;
         })}
       </div>
       <div className="domain-spotter-case"><p>{current.context}</p></div>
-      <div className="domain-spotter-options">
-        {domains.map((d) => <button key={d} type="button" className={picked === d ? (d === current.answer ? "selected correct" : "selected wrong") : ""} onClick={() => setAnswers((a) => ({ ...a, [current.id]: d }))}>{d}</button>)}
+      <div className={`domain-spotter-options${trio ? " trio" : ""}`}>
+        {options.map((d) => <button key={d} type="button" className={picked === d ? (d === current.answer ? "selected correct" : "selected wrong") : ""} onClick={() => setAnswers((a) => ({ ...a, [current.id]: d }))}>{d}</button>)}
       </div>
       {picked && (
         <div className={`activity-feedback ${picked !== current.answer ? "try-again" : ""}`}>
@@ -327,17 +348,53 @@ function DomainSpotter() {
   );
 }
 
-function TapChecklist({ eyebrow, title, prompt, items, tips, value, onChange, completionTitle, completionText }: { eyebrow: string; title: string; prompt: string; items: string[]; tips?: string[]; value: string; onChange: (value: string) => void; completionTitle?: string; completionText?: string }) {
+function SupportReplaceSorter() {
+  return <ScenarioSorter
+    eyebrow="Quick check"
+    title="Support or Replace?"
+    prompt="Read each situation and decide whether AI is supporting the intended learning or replacing it."
+    options={["Supports the intended learning", "Replaces the intended learning"]}
+    countNoun="sorted"
+    scenarios={[
+      { id: "compare", context: "Students ask AI for a different worked example of a concept, then attempt the practice set on their own.", answer: "Supports the intended learning", feedback: "Comparing explanations before practising keeps students doing the thinking — AI is extending practice and feedback." },
+      { id: "submit", context: "A student pastes the assignment brief into GenAI and submits a lightly edited version of the response.", answer: "Replaces the intended learning", feedback: "AI has completed the analysis, judgement and creation the task was meant to develop. A follow-up activity that requires students to identify gaps and apply the concepts themselves may be needed." },
+      { id: "critique", context: "Students generate three AI draft answers, then critique and rank them against the success criteria.", answer: "Supports the intended learning", feedback: "Generating material for critique keeps the evaluating and judging with students." },
+      { id: "reflection", context: "A student asks AI to write their reflection on what they learned from the project.", answer: "Replaces the intended learning", feedback: "The reflection is meant to make the student’s own learning and judgement visible — asking AI to write it bypasses exactly that." },
+    ]}
+  />;
+}
+
+function GenAiConditionsSorter() {
+  return <ScenarioSorter
+    eyebrow="Check the conditions"
+    title="Allowed, Restricted or Prohibited?"
+    prompt="Decide how each situation sits under NP's GenAI policy for summative assessment."
+    options={["Allowed", "Restricted", "Prohibited"]}
+    countNoun="checked"
+    trio
+    scenarios={[
+      { id: "default", context: "The brief states nothing about GenAI, and a student uses it to brainstorm approaches for a take-home assignment.", answer: "Allowed", feedback: "GenAI use is allowed by default in summative assessment unless it is explicitly restricted or prohibited. The student must still cite and declare the use." },
+      { id: "live", context: "Students may use GenAI to prepare, but must complete the live presentation and question-and-answer session without it.", answer: "Restricted", feedback: "This is a restricted-use condition: GenAI is allowed for preparation but prohibited during the live component. State the condition clearly for each component." },
+      { id: "declared", context: "A student submits a fully AI-generated report and declares the use on the cover page.", answer: "Prohibited", feedback: "Submitting purely AI-generated content as one's own is always prohibited — declaring prohibited use does not make it acceptable." },
+      { id: "images", context: "Students may include GenAI-generated images provided they frame the task, select and refine the output, and explain their choices.", answer: "Restricted", feedback: "This is a restricted-use condition: GenAI content is permitted provided students shape, refine and explain it." },
+    ]}
+  />;
+}
+
+function TapChecklist({ eyebrow, title, prompt, items, tips, value, onChange, completionTitle, completionText }: { eyebrow?: string; title?: string; prompt: string; items: string[]; tips?: string[]; value: string; onChange: (value: string) => void; completionTitle?: string; completionText?: string }) {
   const selected = value ? value.split("|") : [];
   return (
     <section className="activity-block tap-checklist">
-      <div className="activity-head-row"><div><span className="activity-eyebrow">{eyebrow}</span><h2>{title}</h2></div><span className="activity-count">{selected.length} / {items.length}</span></div>
+      <div className="activity-head-row">
+        {(eyebrow || title) ? <div>{eyebrow && <span className="activity-eyebrow">{eyebrow}</span>}{title && <h2>{title}</h2>}</div> : <div />}
+        <span className="activity-count">{selected.length} / {items.length}</span>
+      </div>
       <p>{prompt}</p>
       <div className="tap-check-grid">{items.map((item, index) => {
         const isSelected = selected.includes(item);
         return (
           <button key={item} className={isSelected ? "selected" : ""} onClick={() => onChange((isSelected ? selected.filter((x) => x !== item) : [...selected, item]).join("|"))}>
-            <span>{isSelected ? "✓" : String(index + 1).padStart(2, "0")}</span>
+            <span>{isSelected ? <Check size={16} strokeWidth={2.8} aria-hidden="true" /> : String(index + 1).padStart(2, "0")}</span>
             <div><strong>{item}</strong>{isSelected && tips?.[index] && <small className="tap-check-tip">{tips[index]}</small>}</div>
           </button>
         );
@@ -349,37 +406,32 @@ function TapChecklist({ eyebrow, title, prompt, items, tips, value, onChange, co
 
 function NextStepActivity({ value, onChange }: { value: string; onChange: (value: string) => void }) {
   const options = [
-    { label: "Identify one outcome, activity or assessment for further 3As review", feedback: "A single 3As review is a manageable way to begin identifying what may need attention." },
-    { label: "Try one Generate → Compare → Check → Improve activity", feedback: "A structured activity gives students practice in evaluating and improving AI output rather than accepting the first response." },
-    { label: "Check one assessment’s GenAI conditions", feedback: "Checking one assessment’s GenAI conditions is a focused way to put Level 1 awareness into practice." },
-    { label: "Explore one small, appropriate use of M365 Copilot or another approved tool", feedback: "Start with a clear teaching and learning need, then check the output, data considerations and your oversight." },
+    { label: "Review one learning outcome, activity or assessment using the 3As.", feedback: "A single 3As review is a manageable way to begin identifying what may need attention." },
+    { label: "Try one Generate → Compare → Check → Improve activity.", feedback: "A structured activity gives students practice in evaluating and improving AI output rather than accepting the first response." },
+    { label: "Check one assessment's GenAI conditions.", feedback: "Checking one assessment’s GenAI conditions is a focused way to put Level 1 awareness into practice." },
+    { label: "Explore one appropriate use of an AI tool, AI-enabled learning support or learning data.", feedback: "Start with a clear teaching and learning need, then check the output, data considerations and your oversight." },
   ];
   const selected = options.find((option) => option.label === value);
   return (
     <section className="activity-block next-step-block">
-      <span className="activity-eyebrow">Before you leave</span><h2>Choose one small next step</h2>
-      <div className="choice-grid">{options.map((option, index) => { const letter = String.fromCharCode(65 + index); const isSelected = value === option.label; return <button key={option.label} className={`choice-button ${isSelected ? "selected" : ""}`} onClick={() => onChange(option.label)}><span>{isSelected ? `✓ ${letter}` : letter}</span>{option.label}</button>; })}</div>
+      <div className="choice-grid">{options.map((option, index) => { const letter = String.fromCharCode(65 + index); const isSelected = value === option.label; return <button key={option.label} className={`choice-button ${isSelected ? "selected" : ""}`} onClick={() => onChange(option.label)}><span>{isSelected ? <Check size={14} strokeWidth={2.8} aria-hidden="true" /> : letter}</span>{option.label}</button>; })}</div>
       {selected && <div className="activity-feedback"><strong>A Practical Place to Start</strong><p>{selected.feedback}</p></div>}
-      <div className="final-next-step-closing">
-        <blockquote><strong>Being AI-aware means knowing what to consider, which NP approaches apply and when to seek further guidance.</strong></blockquote>
-        <p>Complete the separately administered quiz to fulfil the programme requirements.</p>
-      </div>
     </section>
   );
 }
 
 function FourLensReview({ value, onChange }: { value: string; onChange: (value: string) => void }) {
-  return <TapChecklist eyebrow="Review one module" title="Four-Lens Review" prompt="Tap each question after considering it for your module." items={["Curriculum: What may need review in the learning outcomes, activities or assessment?", "Facilitation: Where could students compare, check or improve AI-generated output?", "Assessment: What must students demonstrate independently, and where might GenAI use be appropriate?", "Data and Tools: What T&L need could a tool support, and what would need checking before use?"]} tips={["Use the 3As to consider whether the capability is Anchor, Augment or Advance.", "Use PAIR to keep students evaluating, refining and reflecting.", "Check that the conditions and evidence of learning are clear.", "Consider learning value, output quality, data and ethics, and human oversight."]} value={value} onChange={onChange} />;
+  return <TapChecklist prompt="Tap each question after considering it for your module." items={["Curriculum: What may need review in the learning outcomes, activities or assessment?", "Facilitation: Where could students compare, check, improve or explain their use of AI?", "Assessment: What must students demonstrate themselves, and where might GenAI use be appropriate?", "Data and Tech-Enhanced T&L: What learning need could an AI tool or learning data support, and what would need checking before use?"]} tips={["Use the 3As to consider whether the intended capability is Anchor, Augment or Advance.", "Use PAIR to keep students evaluating, refining and reflecting.", "Check that the conditions and evidence of learning are clear.", "Consider learning value, suitability, information involved and human oversight."]} value={value} onChange={onChange} />;
 }
 
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
-    { name: "Embed AI-Integrated Pedagogy · PAIR", question: "How can students learn and work with AI while developing judgement, transferable skills and responsible use?", icon: Lightbulb },
-    { name: "Transform the Curriculum · 3As", question: "What competencies should students develop and demonstrate as AI changes professional practice?", icon: BookOpen },
-    { name: "Redesign Assessment", question: "How can assessment provide authentic and credible evidence of learning in an AI-enabled context?", icon: ClipboardCheck },
-    { name: "Enable Personalised Learning", question: "How can AI extend opportunities for practice, feedback and coaching?", icon: Bot },
-    { name: "Strengthen Human Skills and Resilience", question: "How can we strengthen students’ purpose, resilience, collaboration and judgement in an AI-enabled world?", icon: Users },
+    { name: "Embed AI-Integrated Pedagogy · PAIR", question: "How can students learn and work with AI purposefully, critically and responsibly?", icon: Lightbulb, covers: "Part 3 · Facilitation of Learning", coversTone: 3 },
+    { name: "Transform the Curriculum · 3As", question: "What competencies should students develop and demonstrate as AI changes professional practice?", icon: BookOpen, covers: "Part 2 · Curriculum Design and Development", coversTone: 2 },
+    { name: "Redesign Assessment", question: "How can assessment provide authentic and credible evidence of learning in an AI-enabled context?", icon: ClipboardCheck, covers: "Part 4 · Assessment", coversTone: 4 },
+    { name: "Enable Personalised Learning", question: "How can AI extend opportunities for practice, feedback and coaching?", icon: Bot, covers: "Part 5 · Data and Tech-Enhanced T&L", coversTone: 5 },
+    { name: "Strengthen Human Skills and Resilience", question: "How can we strengthen the human qualities students need in an AI-enabled world?", icon: Users, covers: "Woven through all four parts", coversTone: 0 },
   ];
   return (
     <section className="strategy-map" aria-label="How NP approaches connect across this package">
@@ -394,13 +446,13 @@ function StrategyMap() {
             <small>Outcome</small>
             <strong>AI-ready graduates</strong>
             <span>Strong human qualities · Deep domain expertise · Effective use of AI in professional practice</span>
-            <p>Graduates who combine deep domain expertise with purpose, resilience, collaboration and sound judgement, and who use AI productively and responsibly without losing the human capabilities that distinguish professional practice.</p>
+            <p>Graduates who combine deep domain expertise with strong human qualities and the ability to use AI effectively and responsibly in professional practice.</p>
           </div>
         </div>
       </div>
       <div className="strategy-path">
-        {items.map(({ name, question, icon: Icon }, index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
-          <i><Icon size={22} strokeWidth={2} aria-hidden="true" /></i><span><strong>Strategy {index + 1} · {name}</strong><small>{question}</small></span>
+        {items.map(({ name, question, icon: Icon, covers, coversTone }, index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
+          <i><Icon size={22} strokeWidth={2} aria-hidden="true" /></i><span><strong>Strategy {index + 1} · {name}</strong><small>{question}</small><em className={`strategy-covers covers-tone-${coversTone}`}>{covers}</em></span>
         </button>)}
       </div>
     </section>
@@ -469,7 +521,6 @@ function UseCaseExplorer() {
   const Icon = selected.icon;
   return (
     <section className="use-case-explorer" aria-label="Explore common AI-supported teaching and learning tasks">
-      <div className="use-case-heading"><span>Explore a common T&amp;L use</span><h2>Start with a task you already do</h2><p>Choose a use case and notice the boundary between what the tool can provide and the judgement that remains yours.</p></div>
       <div className="use-case-tabs">
         {useCases.map((item, index) => {
           const ItemIcon = item.icon;
@@ -518,15 +569,6 @@ function QuickSenseCheck() {
   );
 }
 
-function SectionInteractive({ title, notes, onChange }: { title: string; notes: ActivityNotes; onChange: (key: string, value: string) => void }) {
-  if (title === "AI T&L Essentials: Level 1 (AI-Aware)") return null;
-  if (title.startsWith("Part 1")) return null;
-  if (title.startsWith("Part 2")) return null;
-  if (title.startsWith("Part 3")) return null;
-  if (title.startsWith("Part 4")) return null;
-  return null;
-}
-
 function OpeningVisual() {
   const areas = [
     {
@@ -536,7 +578,7 @@ function OpeningVisual() {
     },
     {
       title: "Facilitation of Learning",
-      detail: "How AI can support learning without replacing the intended thinking, judgement or performance.",
+      detail: "How AI can support learning and practice without replacing the intended thinking, judgement or performance.",
       icon: Lightbulb,
     },
     {
@@ -574,7 +616,7 @@ function OpeningVisual() {
 function HomeFlow() {
   const outcomes = [
     "recognise how AI is changing the competencies students need and the implications for curriculum design",
-    "explain how AI can support learning without replacing the intended thinking, judgement or performance",
+    "explain how AI can support learning and practice without replacing the intended thinking, judgement or performance",
     "apply NP's GenAI policy requirements for summative assessment to clarify conditions and make students' learning and contribution visible",
     "identify appropriate uses of AI tools and learning data, and apply basic considerations for safe and responsible use",
   ];
@@ -583,7 +625,7 @@ function HomeFlow() {
     <section className="home-flow" aria-label="Welcome and module outcomes">
       <article className="home-intro-card">
         <span>Welcome</span>
-        <h2>T&amp;L in an AI-enabled Context</h2>
+        <h2>T&amp;L in an AI-Enabled Context</h2>
         <p>
           AI, particularly Gen AI, is increasingly shaping how students learn,
           how professional work is carried out and the capabilities graduates
@@ -653,7 +695,7 @@ function StudentBaselineVisual() {
       <summary>View the sector AI baseline competencies</summary>
       <div>
         <p>The POLITE sector AI baseline identifies foundational AI competencies that students should progressively develop across their learning.</p>
-        <div className="lens-strip">
+        <div className="lens-strip baseline-strip">
           {items.map(({ icon: Icon, title, detail }) => (
             <section key={title}>
               <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
@@ -678,15 +720,15 @@ function AlignmentFlowVisual() {
   return (
     <figure className="concept-visual alignment-story" aria-label="Flow from competency to assessment evidence">
       <p className="alignment-sentence">
-        A <span className="alignment-chip alignment-competency">competency</span> is expressed through a{" "}
-        <span className="alignment-chip alignment-outcome">learning outcome</span>, developed through{" "}
-        <span className="alignment-chip alignment-activities">learning activities</span> and demonstrated through{" "}
-        <span className="alignment-chip alignment-evidence">assessment evidence</span>.
+        A <span className="alignment-chip"><i aria-hidden="true">1</i>competency</span> is expressed through a{" "}
+        <span className="alignment-chip"><i aria-hidden="true">2</i>learning outcome</span>, developed through{" "}
+        <span className="alignment-chip"><i aria-hidden="true">3</i>learning activities</span> and demonstrated through{" "}
+        <span className="alignment-chip"><i aria-hidden="true">4</i>assessment evidence</span>.
       </p>
       <div className="alignment-captions">
-        {steps.map((step) => (
-          <div className={`alignment-caption alignment-${step.key}`} key={step.key}>
-            <span aria-hidden="true" />
+        {steps.map((step, index) => (
+          <div className="alignment-caption" key={step.key}>
+            <span aria-hidden="true">{index + 1}</span>
             <div>
               <b>{step.label}</b>
               <p>{step.detail}</p>
@@ -744,7 +786,7 @@ function ThreeAsInfographic() {
           );
         })}
       </div>
-      <div className="infographic-note"><span aria-hidden="true">↔</span><p>A learning outcome or module may emphasise one or combine several, depending on the intended competency and professional context.</p></div>
+      <div className="infographic-note"><span aria-hidden="true"><ArrowLeftRight size={14} strokeWidth={2.2} /></span><p>A learning outcome or module may emphasise one or combine several, depending on the intended competency and professional context.</p></div>
     </figure>
   );
 }
@@ -781,7 +823,7 @@ function PairInfographic() {
           );
         })}
       </div>
-      <div className="infographic-note pair-loop"><span aria-hidden="true">↔</span><p>Students may revisit the problem, reconsider the tool and refine their interactions as their understanding develops.</p></div>
+      <div className="infographic-note pair-loop"><span aria-hidden="true"><ArrowLeftRight size={14} strokeWidth={2.2} /></span><p>Students may revisit the problem, reconsider the tool and refine their interactions as their understanding develops.</p></div>
     </figure>
   );
 }
@@ -806,7 +848,7 @@ function AssessmentActionsInfographic() {
               <div className="action-stage-head"><i aria-hidden="true">{step.number}</i><b>{step.title}</b></div>
               <p>{step.detail}</p>
             </section>
-            {index < steps.length - 1 && <span className="action-connector" aria-hidden="true">→</span>}
+            {index < steps.length - 1 && <span className="action-connector" aria-hidden="true"><ArrowRight size={15} strokeWidth={2.2} /></span>}
           </div>
         ))}
       </div>
@@ -848,28 +890,6 @@ function AssessmentFocusVisual() {
   );
 }
 
-function ToolChecksVisual() {
-  const items = [
-    { icon: Target, title: "Learning value", detail: "Does it support the intended learning or learner need?" },
-    { icon: CheckCircle2, title: "Output quality", detail: "Is the output accurate, relevant and suitable?" },
-    { icon: LockKeyhole, title: "Data, privacy and ethics", detail: "Is the information appropriate to use in this tool and for this purpose?" },
-    { icon: Eye, title: "Human oversight", detail: "Who reviews the output, decides what action to take and remains responsible?" },
-  ];
-  return (
-    <figure className="concept-visual tool-visual" aria-label="Four checks for responsible AI tool use">
-      <figcaption><span>Before you use a tool</span><strong>Apply four checks</strong></figcaption>
-      <div className="icon-panel-grid">
-        {items.map(({ icon: Icon, title, detail }) => (
-          <section key={title}>
-            <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
-            <div><b>{title}</b><small>{detail}</small></div>
-          </section>
-        ))}
-      </div>
-    </figure>
-  );
-}
-
 function AlignmentCheckVisual() {
   const items = [
     { icon: Target, title: "Learning outcome", detail: "Is the intended competency stated clearly?" },
@@ -878,7 +898,7 @@ function AlignmentCheckVisual() {
   ];
   return (
     <figure className="concept-visual" aria-label="Check constructive alignment across learning outcome, activities and assessment">
-      <div className="icon-panel-grid trio">
+      <div className="icon-panel-grid trio alignment-trio">
         {items.map(({ icon: Icon, title, detail }) => (
           <section key={title}>
             <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
@@ -916,9 +936,9 @@ function BringTogetherVisual() {
 function ModulePreviewVisual() {
   const areas = [
     { icon: BookOpen, title: "Curriculum Design and Development", detail: "The competencies students need as professional practice changes." },
-    { icon: Lightbulb, title: "Facilitation of Learning", detail: "How AI may support learning and practice without replacing the intended learning." },
+    { icon: Lightbulb, title: "Facilitation of Learning", detail: "How AI can support learning and practice without replacing the intended thinking, judgement or performance." },
     { icon: ClipboardCheck, title: "Assessment", detail: "How assessment keeps learning and student contribution authentic, credible and visible." },
-    { icon: ShieldCheck, title: "Data and Tech-Enhanced T&L", detail: "How AI tools and learning data can improve learning safely and responsibly." },
+    { icon: ShieldCheck, title: "Data and Tech-Enhanced T&L", detail: "How AI tools and learning data can enhance learning safely and responsibly." },
   ];
   return (
     <figure className="concept-visual module-preview-visual" aria-label="What the next four sections cover">
@@ -936,11 +956,6 @@ function ModulePreviewVisual() {
 }
 
 function SectionVisual({ title }: { title: string }) {
-  if (title.startsWith("Part 1")) return <StrategyMap />;
-  if (title.startsWith("Part 2")) return null;
-  if (title.startsWith("Part 3")) return null;
-  if (title.startsWith("Part 4")) return null;
-  if (title.startsWith("Part 5")) return null;
   if (title.startsWith("Part 6")) return <BringTogetherVisual />;
   return null;
 }
@@ -979,9 +994,9 @@ export default function Home() {
   function goNext() {
     if (!current) return;
     const nextIndex = Math.min(active + 1, sections.length - 1);
-    const nextSection = sections[nextIndex];
-    const completedIds = nextSection ? [current.id, nextSection.id] : [current.id];
-    setCompleted((items) => Array.from(new Set([...items, ...completedIds])));
+    // Only the section being left counts as complete; arriving at a section
+    // should not mark it done.
+    setCompleted((items) => Array.from(new Set([...items, current.id])));
     setActive(nextIndex);
   }
 
@@ -1004,13 +1019,16 @@ export default function Home() {
   const actionInfographicMarker = "<!--assessment-actions-infographic-->";
   const assessmentFocusMarker = "<!--assessment-focus-visual-->";
   const modulePreviewMarker = "<!--module-preview-->";
-  const toolChecksMarker = "<!--tool-checks-visual-->";
   const studentBaselineMarker = "<!--student-baseline-visual-->";
   const threeAsMarker = "<!--three-as-visual-->";
   const alignmentCheckMarker = "<!--alignment-check-visual-->";
   const alignmentFlowMarker = "<!--alignment-flow-visual-->";
+  const strategyMapMarker = "<!--strategy-map-->";
+  const supportReplaceMarker = "<!--support-or-replace-->";
+  const genAiConditionsMarker = "<!--genai-conditions-check-->";
+  const nextStepMarker = "<!--next-step-->";
+  const pairApplyMarker = "<!--pair-apply-checklist-->";
   const sectionMarkdown = withoutTitle(current.markdown);
-  const hasModuleReview = sectionMarkdown.includes(moduleReviewMarker);
   const hasInlineNextPrompt = /^\s*(\*\*Next\*\*|#{1,4}\s+Next)\s*$/m.test(sectionMarkdown);
   const markerRenderers: Record<string, ReactElement> = {
     [useCaseMarker]: <UseCaseExplorer />,
@@ -1020,13 +1038,22 @@ export default function Home() {
     [alignmentCheckMarker]: <AlignmentCheckVisual />,
     [alignmentFlowMarker]: <AlignmentFlowVisual />,
     [modulePreviewMarker]: <ModulePreviewVisual />,
-    [toolChecksMarker]: <ToolChecksVisual />,
     [studentBaselineMarker]: <StudentBaselineVisual />,
     [threeAsMarker]: <ThreeAsInfographic />,
+    [strategyMapMarker]: <StrategyMap />,
+    [supportReplaceMarker]: <SupportReplaceSorter />,
+    [genAiConditionsMarker]: <GenAiConditionsSorter />,
     [moduleReviewMarker]: <FourLensReview value={activityNotes.snapshotcheck ?? ""} onChange={(value) => setActivityValue("snapshotcheck", value)} />,
+    [nextStepMarker]: <NextStepActivity value={activityNotes.nextstep ?? ""} onChange={(value) => setActivityValue("nextstep", value)} />,
+    [pairApplyMarker]: <TapChecklist prompt="Tap each prompt once you have considered it for your activity." items={["what students should understand or do before using AI;", "what role AI should play;", "how students will evaluate and improve the output;", "what reflection or evidence will make their learning and judgement visible."]} value={activityNotes.pairapply ?? ""} onChange={(value) => setActivityValue("pairapply", value)} />,
   };
   const markerPattern = new RegExp(`(${Object.keys(markerRenderers).join("|")})`, "g");
   const contentSegments = sectionMarkdown.split(markerPattern).filter((segment) => segment !== "");
+  const partNumber = current.title.match(/^Part (\d+)/)?.[1];
+  const partClass = partNumber ? `part-tone-${partNumber}` : "";
+  const PartIcon = partNumber ? partIcons[Number(partNumber)] : null;
+  const [titleMain, ...titleRest] = current.shortTitle.split(" — ");
+  const titleSubtitle = titleRest.join(" — ") || null;
 
   return (
     <div className="site-shell">
@@ -1059,7 +1086,7 @@ export default function Home() {
       <nav className="chapter-nav" aria-label="Course navigation">
         <div className="chapter-nav-inner">
           <div className="chapter-nav-left">
-            {active > 0 && <button className="chapter-icon" onClick={() => setActive((index) => Math.max(0, index - 1))} aria-label="Previous section" title="Previous section"><span aria-hidden="true">←</span></button>}
+            {active > 0 && <button className="chapter-icon" onClick={() => setActive((index) => Math.max(0, index - 1))} aria-label="Previous section" title="Previous section"><ArrowLeft size={16} strokeWidth={2.2} aria-hidden="true" /></button>}
             <span className="chapter-position" aria-live="polite">{active + 1} <i aria-hidden="true">/</i> {sections.length}</span>
           </div>
           <div className="chapter-nav-actions">
@@ -1071,21 +1098,31 @@ export default function Home() {
             >
               Contents
             </button>
-            {active < sections.length - 1 && <button className="chapter-icon" onClick={goNext} aria-label="Next section" title="Next section"><span aria-hidden="true">→</span></button>}
+            {active < sections.length - 1 && <button className="chapter-icon" onClick={goNext} aria-label="Next section" title="Next section"><ArrowRight size={16} strokeWidth={2.2} aria-hidden="true" /></button>}
           </div>
         </div>
       </nav>
 
-      <main className="reader">
+      <main className={`reader ${partClass}`}>
         {isHome ? (
           <h1 className="page-title home-title">
             <span>AI T&amp;L Essentials</span>
             <small>Level 1 <i aria-hidden="true">·</i> AI-Aware</small>
           </h1>
-        ) : <h1 className="page-title">{current.shortTitle}</h1>}
-        {isHome ? <OpeningVisual /> : <SectionVisual title={current.title} />}
+        ) : (
+          <div className="section-head">
+            {partNumber && <span className="part-eyebrow">Part {partNumber}</span>}
+            <h1 className="page-title part-title">{titleMain}</h1>
+            {titleSubtitle && <p className="page-subtitle">{titleSubtitle}</p>}
+            {PartIcon && <PartIcon className="section-watermark" size={116} strokeWidth={1.4} aria-hidden="true" />}
+          </div>
+        )}
+        {!isHome && <SectionVisual title={current.title} />}
         {isHome ? (
-          <HomeFlow />
+          <>
+            <HomeFlow />
+            <OpeningVisual />
+          </>
         ) : (
           contentSegments.map((segment, index) =>
             markerRenderers[segment] ? (
@@ -1100,9 +1137,6 @@ export default function Home() {
           )
         )}
 
-        {hasModuleReview && <NextStepActivity value={activityNotes.nextstep ?? ""} onChange={(value) => setActivityValue("nextstep", value)} />}
-
-        {!current.title.startsWith("Part 1") && !hasModuleReview && <SectionInteractive title={current.title} notes={activityNotes} onChange={setActivityValue} />}
         {current.title.startsWith("Part 5") && <QuickSenseCheck />}
 
         {sectionBridges[active] && active < sections.length - 1 && !hasInlineNextPrompt && (
@@ -1140,12 +1174,12 @@ export default function Home() {
               {sections.map((section, index) => {
                 const concise = contentsMeta[index];
                 const title = concise?.title ?? section.shortTitle;
-                const label = concise?.label ?? sectionMeta[index]?.label ?? "Learn";
+                const label = concise?.label ?? "";
                 return (
                 <button key={section.id} className={index === active ? "active" : ""} onClick={() => selectSection(index)} aria-current={index === active ? "page" : undefined}>
-                  <span className={`contents-number ${completed.includes(section.id) ? "done" : ""}`}>{completed.includes(section.id) ? "✓" : String(index + 1).padStart(2, "0")}</span>
-                  <span><strong>{title}</strong><small>{label}</small></span>
-                  <i aria-hidden="true">→</i>
+                  <span className={`contents-number ${completed.includes(section.id) ? "done" : ""}`}>{completed.includes(section.id) ? <Check size={15} strokeWidth={2.8} aria-hidden="true" /> : String(index + 1).padStart(2, "0")}</span>
+                  <span><strong>{title}</strong>{label && <small>{label}</small>}</span>
+                  <i aria-hidden="true"><ChevronRight size={15} strokeWidth={2.2} /></i>
                 </button>
                 );
               })}
