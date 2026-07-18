@@ -35,53 +35,13 @@ The four sections explore:
 
 # Part 2: Curriculum Design and Development — What Competencies Do Students Need?
 
-## The 3As
-
-**Guiding lenses for reviewing and adjusting the competencies students need as AI changes professional practice**
-
 <!--three-as-visual-->
-
-### Anchor
-
-**Distinctly human capabilities**
-
-Develop the human qualities, disciplinary judgement and essential capabilities students need even as AI becomes more capable.
-
-### Augment
-
-**Productive use of AI**
-
-Develop students' ability to use AI effectively to improve the quality, productivity or effectiveness of their work while exercising appropriate judgement and oversight.
-
-### Advance
-
-**New AI-enabled practice**
-
-Develop students' ability to use AI to create new possibilities, workflows or forms of professional practice beyond established pre-AI job boundaries.
-
-> A learning outcome or module may emphasise one or combine several, depending on the intended competency and professional context.
 
 ## A Common AI Foundation for Students
 
 Alongside discipline-specific competencies, the POLITE sector AI baseline identifies foundational AI competencies that students should progressively develop across their learning.
 
 <!--student-baseline-visual-->
-
-**Learn About AI**
-
-Understand key AI terms, approaches, capabilities and limitations.
-
-**Learn With AI**
-
-Use AI as a learning partner to break down problems, identify gaps and deepen understanding.
-
-**Learn to Use AI**
-
-Apply AI to create value, and evaluate outputs for accuracy, relevance, bias and suitability.
-
-**Learn Beyond AI**
-
-Consider the societal, ethical and legal implications of AI, and exercise human judgement and oversight.
 
 > Individual modules may contribute to different areas. Not every module is expected to address all four.
 
