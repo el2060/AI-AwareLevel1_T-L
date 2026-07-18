@@ -583,7 +583,7 @@ function HomeFlow() {
     <section className="home-flow" aria-label="Welcome and module outcomes">
       <article className="home-intro-card">
         <span>Welcome</span>
-        <h2>Teaching and Learning in an AI-Enabled Context</h2>
+        <h2>T&amp;L in an AI-enabled Context</h2>
         <p>
           AI, particularly Gen AI, is increasingly shaping how students learn,
           how professional work is carried out and the capabilities graduates

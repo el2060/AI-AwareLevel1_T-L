@@ -269,34 +269,41 @@ button { color: inherit; }
 
 .home-learn-stack { display: grid; gap: 22px; }
 .home-outcome-card {
-  border: 1px solid var(--line);
-  border-radius: var(--surface-radius);
-  background: #fff;
-  box-shadow: var(--shadow-soft);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
-.home-outcome-card { padding: 30px 30px 24px; }
+.home-outcome-card { padding: 2px 2px 0; }
 .home-outcome-card header p {
   margin: 10px 0 0;
   color: var(--ink-soft);
   font-size: 16px;
   line-height: 1.55;
 }
-.home-outcome-card ol { margin: 20px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.home-outcome-card ol {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0;
+}
 .home-outcome-card li {
   display: grid;
   grid-template-columns: 20px minmax(0, 1fr);
   align-items: start;
   gap: 12px;
-  padding: 13px 14px;
-  border: 1px solid #dde5ef;
-  border-radius: 10px;
-  background: #fbfdff;
+  padding: 14px 0;
+  border-bottom: 1px solid #dbe2ea;
+  border-radius: 0;
+  background: transparent;
 }
-.home-outcome-card li svg { margin-top: 3px; color: #1e7e49; }
+.home-outcome-card li:first-child { border-top: 1px solid #dbe2ea; }
+.home-outcome-card li svg { margin-top: 3px; color: var(--blue); }
 .home-outcome-card li span {
   color: #334253;
-  font-size: 15px;
-  line-height: 1.5;
+  font-size: 15.5px;
+  line-height: 1.56;
 }
 
 .home-time-note {
@@ -886,8 +893,8 @@ button { color: inherit; }
   .home-intro-card blockquote { font-size: 14px; padding: 13px 14px; }
   .home-intro-credit { font-size: 12px !important; }
   .home-learn-stack { gap: 16px; }
-  .home-outcome-card { padding: 20px 16px 16px; }
-  .home-outcome-card li { grid-template-columns: 16px minmax(0, 1fr); gap: 8px; padding: 10px; }
+  .home-outcome-card { padding: 0; }
+  .home-outcome-card li { grid-template-columns: 16px minmax(0, 1fr); gap: 8px; padding: 12px 0; }
   .home-outcome-card li span { font-size: 14px; }
   .home-time-note { padding-top: 10px; }
   .home-time-note strong { font-size: 16px; }
