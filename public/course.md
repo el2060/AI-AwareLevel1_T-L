@@ -53,7 +53,7 @@ Once the intended competency is clear, ensure the rest of the module supports it
 
 <!--alignment-flow-visual-->
 
-> Learning outcomes, activities and assessment should work together. Students should have suitable opportunities to practise productive AI use before they are expected to demonstrate it in assessment.
+> Learning outcomes, activities and assessment should work together. Whether the focus is distinctly human capability, productive AI use or new AI-enabled practice, students need suitable opportunities to practise before they are assessed.
 
 ## Illustrative Applications
 
@@ -73,7 +73,7 @@ Choose one learning outcome from a module you teach, lead or support.
 
 ### Step 1 · Review the Competency
 
-Does the learning outcome still reflect the competencies students need as professional practice changes?
+Does the learning outcome still reflect the competencies students need in current and emerging professional practice?
 
 Should it emphasise:
 
@@ -89,7 +89,7 @@ Should it emphasise:
 
 What is one adjustment that would improve the alignment between the learning outcome, activities and assessment?
 
-## Supporting Context: A Common AI Foundation for Students
+## Supporting Context · A Common AI Foundation for Students
 
 <!--student-baseline-visual-->
 

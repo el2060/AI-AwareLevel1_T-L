@@ -590,10 +590,10 @@ function StudentBaselineVisual() {
 
 function AlignmentFlowVisual() {
   const steps = [
-    { key: "competency", label: "competency", detail: "What students need to develop." },
-    { key: "outcome", label: "learning outcome", detail: "What students should be able to demonstrate." },
-    { key: "activities", label: "learning activities", detail: "How students practise and develop it." },
-    { key: "evidence", label: "assessment evidence", detail: "How achievement and student contribution are made visible." },
+    { key: "competency", label: "Competency", detail: "What students need to develop." },
+    { key: "outcome", label: "Learning outcome", detail: "What students should be able to demonstrate." },
+    { key: "activities", label: "Learning activities", detail: "How students practise and develop it." },
+    { key: "evidence", label: "Assessment evidence", detail: "How achievement and student contribution are made visible." },
   ];
   return (
     <figure className="concept-visual alignment-story" aria-label="Flow from competency to assessment evidence">
@@ -607,7 +607,10 @@ function AlignmentFlowVisual() {
         {steps.map((step) => (
           <div className={`alignment-caption alignment-${step.key}`} key={step.key}>
             <span aria-hidden="true" />
-            <p>{step.detail}</p>
+            <div>
+              <b>{step.label}</b>
+              <p>{step.detail}</p>
+            </div>
           </div>
         ))}
       </div>
@@ -757,7 +760,7 @@ function AlignmentCheckVisual() {
   const items = [
     { icon: Target, title: "Learning outcome", detail: "Is the intended competency stated clearly?" },
     { icon: BookOpen, title: "Learning activities", detail: "Do students have suitable opportunities to practise and develop it?" },
-    { icon: ClipboardCheck, title: "Assessment", detail: "Does the assessment make the intended competency and the student's contribution visible?" },
+    { icon: ClipboardCheck, title: "Assessment", detail: "Does the assessment provide credible evidence of the intended competency and the student's own contribution?" },
   ];
   return (
     <figure className="concept-visual" aria-label="Check constructive alignment across learning outcome, activities and assessment">

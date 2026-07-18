@@ -587,6 +587,7 @@ button { color: inherit; }
 .alignment-captions { display: flex; flex-wrap: wrap; gap: 16px 30px; margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line); }
 .alignment-caption { flex: 1 1 190px; min-width: 0; display: flex; align-items: flex-start; gap: 10px; }
 .alignment-caption > span { flex: 0 0 8px; width: 8px; height: 8px; margin-top: 6px; border-radius: 50%; }
+.alignment-caption b { display: block; margin: 0 0 2px; color: var(--ink); font-size: 13px; line-height: 1.4; font-weight: 650; }
 .alignment-caption p { margin: 0; color: var(--ink-soft); font-size: 13.5px; line-height: 1.5; }
 .alignment-caption.alignment-competency > span { background: #054a80; }
 .alignment-caption.alignment-outcome > span { background: #6b4f8a; }
