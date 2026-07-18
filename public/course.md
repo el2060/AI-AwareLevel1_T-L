@@ -455,26 +455,68 @@ Use AI tools and learning data to enhance learning—not simply to introduce mor
 
 # Part 6: Bring It Together
 
-## Review One Module Through Four Lenses
+## Review One Module Through Four Areas
 
 Choose a module you teach, lead or support. Consider each question once.
 
-<!--module-review-->
+### Curriculum
+
+What may need review in the learning outcomes, activities or assessment?
+
+Use the 3As to consider whether the intended capability is Anchor, Augment or Advance.
+
+### Facilitation
+
+Where could students compare, check, improve or explain their use of AI?
+
+Use PAIR to keep students evaluating, refining and reflecting.
+
+### Assessment
+
+What must students demonstrate themselves, and where might GenAI use be appropriate?
+
+Check that the conditions and evidence of learning are clear.
+
+### Data and Tech-Enhanced T&L
+
+What learning need could an AI tool or learning data support, and what would need checking before use?
+
+Consider learning value, suitability, information involved and human oversight.
 
 ## Four Ideas to Carry Forward
 
-**AI-ready graduates**
+### AI-Ready Graduates
 
-Human qualities, domain expertise and responsible AI capability.
+Develop strong human qualities, disciplinary expertise and the ability to use AI effectively and responsibly.
 
-**Student AI competencies, 3As and PAIR**
+### Curriculum and Learning Design
 
-Use the student AI baseline to identify foundational competencies, the 3As to connect them to disciplinary practice, and PAIR to structure learning with AI.
+Use the student AI baseline to identify foundational competencies, the 3As to connect them to disciplinary practice and PAIR to structure learning with AI.
 
-**Authentic evidence**
+### Authentic Evidence of Learning
 
-Start with the learning outcome and make visible what students can do independently and with AI.
+Begin with the learning outcome and make visible what students can do themselves and with AI.
 
-**Purposeful use**
+### Purposeful Use of Tools and Data
 
-Use suitable tools and learning data safely, check the output and retain human oversight.
+Use suitable AI tools and learning data where they add learning value, with appropriate checks and human oversight.
+
+## Before You Leave
+
+### Choose One Small Next Step
+
+A. Review one learning outcome, activity or assessment using the 3As.
+
+B. Try one Generate -> Compare -> Check -> Improve activity.
+
+C. Check one assessment's GenAI conditions.
+
+D. Explore one appropriate use of an AI tool, AI-enabled learning support or learning data.
+
+## Closing
+
+> **Being AI-Aware means recognising what AI changes in T&L, applying NP's key approaches and requirements, and knowing when further guidance is needed.**
+
+AI-enabled T&L is not about using AI everywhere. It is about making deliberate choices that strengthen learning and prepare students for professional practice in an AI-enabled world.
+
+Complete the separately administered quiz to fulfil the programme requirements.
