@@ -788,10 +788,10 @@ function PairInfographic() {
 
 function AssessmentActionsInfographic() {
   const steps = [
-    { number: "1", title: "Start With the Learning Outcome", detail: "Identify the capability being measured, and check AI cannot complete it unassisted." },
+    { number: "1", title: "Start With the Learning Outcome", detail: "Identify the capability being assessed and what students must still demonstrate themselves." },
     { number: "2", title: "State the GenAI Conditions Clearly", detail: "Declare whether AI use is allowed, restricted or prohibited for each component." },
-    { number: "3", title: "Make Learning and Contribution Visible", detail: "Set specific conditions and design evidence of the student's own contribution." },
-    { number: "4", title: "Prepare Students and Require Declaration", detail: "Explain conditions early and require a GenAI Use Declaration." },
+    { number: "3", title: "Make Learning and Contribution Visible", detail: "State what students must do themselves and what evidence is required." },
+    { number: "4", title: "Prepare Students and Require Declaration", detail: "Explain conditions early, provide suitable practice and require the GenAI Use Declaration." },
   ];
   return (
     <figure className="concept-visual action-infographic" aria-labelledby="action-title">
@@ -809,6 +809,40 @@ function AssessmentActionsInfographic() {
             {index < steps.length - 1 && <span className="action-connector" aria-hidden="true">→</span>}
           </div>
         ))}
+      </div>
+    </figure>
+  );
+}
+
+function AssessmentFocusVisual() {
+  return (
+    <figure className="concept-visual assessment-focus-visual" aria-labelledby="assessment-focus-title">
+      <figcaption>
+        <span>Assessment framing</span>
+        <strong id="assessment-focus-title">Policy compliance and assessment design work together</strong>
+      </figcaption>
+      <div className="assessment-focus-grid">
+        <section className="assessment-focus-card policy">
+          <i><ShieldCheck size={18} strokeWidth={2.1} aria-hidden="true" /></i>
+          <div>
+            <b>Policy requirement</b>
+            <p>State GenAI conditions clearly, require declaration and follow required processes.</p>
+          </div>
+        </section>
+        <section className="assessment-focus-card design">
+          <i><ClipboardCheck size={18} strokeWidth={2.1} aria-hidden="true" /></i>
+          <div>
+            <b>Assessment design</b>
+            <p>Ensure the intended capability and student contribution remain visible in evidence.</p>
+          </div>
+        </section>
+      </div>
+      <div className="assessment-focus-flow" aria-label="Assessment page flow">
+        <span>Default policy position</span>
+        <span>Protect intended learning</span>
+        <span>Four actions</span>
+        <span>Policy reminders</span>
+        <span>Apply to one assessment</span>
       </div>
     </figure>
   );
@@ -968,6 +1002,7 @@ export default function Home() {
   const pairInfographicMarker = "<!--pair-infographic-->";
   const moduleReviewMarker = "<!--module-review-->";
   const actionInfographicMarker = "<!--assessment-actions-infographic-->";
+  const assessmentFocusMarker = "<!--assessment-focus-visual-->";
   const modulePreviewMarker = "<!--module-preview-->";
   const toolChecksMarker = "<!--tool-checks-visual-->";
   const studentBaselineMarker = "<!--student-baseline-visual-->";
@@ -981,6 +1016,7 @@ export default function Home() {
     [useCaseMarker]: <UseCaseExplorer />,
     [pairInfographicMarker]: <PairInfographic />,
     [actionInfographicMarker]: <AssessmentActionsInfographic />,
+    [assessmentFocusMarker]: <AssessmentFocusVisual />,
     [alignmentCheckMarker]: <AlignmentCheckVisual />,
     [alignmentFlowMarker]: <AlignmentFlowVisual />,
     [modulePreviewMarker]: <ModulePreviewVisual />,
