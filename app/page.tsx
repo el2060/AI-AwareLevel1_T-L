@@ -590,21 +590,24 @@ function StudentBaselineVisual() {
 
 function AlignmentFlowVisual() {
   const steps = [
-    { title: "Competency", detail: "What students need to develop." },
-    { title: "Learning Outcome", detail: "What students should be able to demonstrate." },
-    { title: "Learning Activities", detail: "How students practise and develop it." },
-    { title: "Assessment Evidence", detail: "How achievement and student contribution are made visible." },
+    { key: "competency", label: "competency", detail: "What students need to develop." },
+    { key: "outcome", label: "learning outcome", detail: "What students should be able to demonstrate." },
+    { key: "activities", label: "learning activities", detail: "How students practise and develop it." },
+    { key: "evidence", label: "assessment evidence", detail: "How achievement and student contribution are made visible." },
   ];
   return (
-    <figure className="concept-visual" aria-label="Flow from competency to assessment evidence">
-      <div className="alignment-flow">
-        {steps.map((step, index) => (
-          <div className="alignment-step-wrap" key={step.title}>
-            <section className="alignment-stage">
-              <b>{step.title}</b>
-              <p>{step.detail}</p>
-            </section>
-            {index < steps.length - 1 && <span className="alignment-connector" aria-hidden="true">→</span>}
+    <figure className="concept-visual alignment-story" aria-label="Flow from competency to assessment evidence">
+      <p className="alignment-sentence">
+        A <span className="alignment-chip alignment-competency">competency</span> becomes a{" "}
+        <span className="alignment-chip alignment-outcome">learning outcome</span>, is practised through{" "}
+        <span className="alignment-chip alignment-activities">learning activities</span>, and is shown through{" "}
+        <span className="alignment-chip alignment-evidence">assessment evidence</span>.
+      </p>
+      <div className="alignment-captions">
+        {steps.map((step) => (
+          <div className={`alignment-caption alignment-${step.key}`} key={step.key}>
+            <span aria-hidden="true" />
+            <p>{step.detail}</p>
           </div>
         ))}
       </div>
