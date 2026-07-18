@@ -37,7 +37,7 @@ The four sections explore:
 
 ## Review Curriculum for an AI-Enabled Profession
 
-As AI changes professional practice, lecturers need to review not only what students should know and do, but also:
+As AI changes professional practice, lecturers need to review the competencies students should develop and demonstrate, including:
 
 - which human and disciplinary capabilities remain essential;
 - how students should use AI productively;
@@ -53,7 +53,7 @@ Once the intended competency is clear, ensure the rest of the module supports it
 
 <!--alignment-flow-visual-->
 
-> The learning outcomes, activities and assessment should work together. For example, students cannot be expected to demonstrate productive AI use in assessment if they have had little opportunity to practise it during learning.
+> Learning outcomes, activities and assessment should work together. Students should not be expected to demonstrate productive AI use in assessment without suitable opportunities to practise it during learning.
 
 ## Illustrative Applications
 
@@ -73,7 +73,9 @@ Choose one learning outcome from a module you teach, lead or support.
 
 ### Step 1 · Review the Competency
 
-Does the outcome remain relevant as professional practice changes? Should it develop:
+Does the outcome remain relevant as professional practice changes?
+
+Should it develop:
 
 - distinctly human capabilities;
 - productive use of AI;
@@ -85,9 +87,9 @@ Does the outcome remain relevant as professional practice changes? Should it dev
 
 ### Step 3 · Identify One Adjustment
 
-> What is one change that may be needed — to the outcome, the learning activity or the assessment?
+What is one change that may be needed to the learning outcome, activity or assessment?
 
-## Additional Context: A Common AI Foundation for Students
+## Supporting Context: A Common AI Foundation for Students
 
 <!--student-baseline-visual-->
 

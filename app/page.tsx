@@ -590,10 +590,10 @@ function StudentBaselineVisual() {
 
 function AlignmentFlowVisual() {
   const steps = [
-    { title: "Competency", detail: "The capability the 3As identify as needed." },
+    { title: "Competency", detail: "What students need to develop." },
     { title: "Learning Outcome", detail: "What students should be able to demonstrate." },
-    { title: "Learning Activities", detail: "What opportunities help them practise and develop it." },
-    { title: "Assessment Evidence", detail: "What shows they have achieved it." },
+    { title: "Learning Activities", detail: "How students practise and develop it." },
+    { title: "Assessment Evidence", detail: "How achievement and student contribution are made visible." },
   ];
   return (
     <figure className="concept-visual" aria-label="Flow from competency to assessment evidence">
@@ -640,7 +640,7 @@ function ThreeAsInfographic() {
     <figure className="concept-visual three-as-infographic" aria-labelledby="three-as-title">
       <figcaption>
         <span>The 3As</span>
-        <strong id="three-as-title">Guiding lenses for reviewing and aligning learning outcomes, learning activities and assessment as AI changes professional practice</strong>
+        <strong id="three-as-title">Guiding lenses for reviewing the competencies students need and aligning learning outcomes, activities and assessment</strong>
       </figcaption>
       <div className="three-as-path">
         {lenses.map((lens) => {
