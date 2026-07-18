@@ -267,6 +267,16 @@ const sectionMeta = [
   { mark: "06", label: "Four-lens module review", tone: "green" },
 ];
 
+const contentsMeta = [
+  { title: "Start here", label: "4 domains · 2 hours" },
+  { title: "NP AI-enabled T&L approach", label: "5 strategies · PAIR · 3As" },
+  { title: "Curriculum competencies", label: "Anchor · Augment · Advance" },
+  { title: "Facilitation with PAIR", label: "PAIR framework" },
+  { title: "Assessment design", label: "GenAI conditions" },
+  { title: "Data and tools", label: "M365 Copilot · 4 checks" },
+  { title: "Bring it together", label: "Four-lens module review" },
+];
+
 const sectionBridges = [
   "See how these four areas connect to NP’s direction for AI-enabled T&L.",
   "Begin with curriculum: what competencies should students develop and demonstrate as AI changes professional practice?",
@@ -1006,17 +1016,26 @@ export default function Home() {
         <div className="contents-overlay" role="presentation" onClick={() => setContentsOpen(false)}>
           <section className="contents-panel" role="dialog" aria-modal="true" aria-label="Course contents" onClick={(event) => event.stopPropagation()}>
             <div className="contents-heading">
-              <div><span className="eyebrow">{completed.length} of {sections.length} complete</span><h2>Course contents</h2></div>
+              <div>
+                <span className="eyebrow">{completed.length} of {sections.length} complete</span>
+                <h2>Course outline</h2>
+                <p>Jump to a section</p>
+              </div>
               <button className="close-button" onClick={() => setContentsOpen(false)} aria-label="Close course contents">×</button>
             </div>
             <div className="contents-list">
-              {sections.map((section, index) => (
+              {sections.map((section, index) => {
+                const concise = contentsMeta[index];
+                const title = concise?.title ?? section.shortTitle;
+                const label = concise?.label ?? sectionMeta[index]?.label ?? "Learn";
+                return (
                 <button key={section.id} className={index === active ? "active" : ""} onClick={() => selectSection(index)} aria-current={index === active ? "page" : undefined}>
                   <span className={`contents-number ${completed.includes(section.id) ? "done" : ""}`}>{completed.includes(section.id) ? "✓" : String(index + 1).padStart(2, "0")}</span>
-                  <span><strong>{section.shortTitle}</strong><small>{sectionMeta[index]?.label ?? "Learn"}</small></span>
+                  <span><strong>{title}</strong><small>{label}</small></span>
                   <i aria-hidden="true">→</i>
                 </button>
-              ))}
+                );
+              })}
             </div>
           </section>
         </div>
