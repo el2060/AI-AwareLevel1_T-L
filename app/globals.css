@@ -222,12 +222,10 @@ button { color: inherit; }
   position: relative;
   overflow: hidden;
   padding: 30px;
-  border: 1px solid #cad6e6;
+  border: 1px solid var(--line);
   border-radius: var(--surface-radius);
-  background:
-    radial-gradient(circle at 88% 14%, rgba(0, 64, 136, .09), transparent 35%),
-    linear-gradient(150deg, #ffffff 0%, #f6f9fc 100%);
-  box-shadow: 0 14px 30px rgba(12, 28, 57, .08);
+  background: var(--paper);
+  box-shadow: var(--shadow-soft);
 }
 .home-intro-card p {
   margin: 0;
