@@ -13,7 +13,7 @@ By the end of this module, you will be able to:
 - recognise the competencies students need in an AI-enabled professional context and the implications for curriculum design;
 - explain how AI can support learning without replacing the intended thinking, judgement or performance;
 - apply NP’s key GenAI requirements to keep assessment authentic, credible and visible;
-- describe appropriate uses of AI tools and learning data, and apply basic checks for safe and responsible use.
+- identify appropriate uses of AI tools and learning data, and apply basic checks for safe and responsible use.
 
 ### Learning Time
 

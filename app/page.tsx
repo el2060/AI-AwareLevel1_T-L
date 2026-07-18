@@ -576,14 +576,17 @@ function HomeFlow() {
     "recognise the competencies students need in an AI-enabled professional context and the implications for curriculum design",
     "explain how AI can support learning without replacing the intended thinking, judgement or performance",
     "apply NP's key GenAI requirements to keep assessment authentic, credible and visible",
-    "describe appropriate uses of AI tools and learning data, and apply basic checks for safe and responsible use",
+    "identify appropriate uses of AI tools and learning data, and apply basic checks for safe and responsible use",
   ];
 
   return (
     <section className="home-flow" aria-label="Welcome and module outcomes">
       <article className="home-intro-card">
         <span>Welcome</span>
-        <h2>Build AI-aware teaching and learning judgement for practice.</h2>
+        <p>
+          Apply an AI-aware lens across curriculum, facilitation, assessment,
+          and data and technology-enhanced T&amp;L.
+        </p>
         <p>
           AI, particularly Gen AI, is increasingly shaping how students learn and
           how work is carried out across many professions. As students use AI to
@@ -1028,8 +1031,8 @@ export default function Home() {
       <main className="reader">
         {isHome ? (
           <h1 className="page-title home-title">
-            <span>Welcome</span>
-            <small>Apply an AI-aware lens across curriculum, facilitation, assessment, and data-enabled teaching and learning.</small>
+            <span>AI T&amp;L Essentials</span>
+            <small>Level 1 <i aria-hidden="true">·</i> AI-Aware</small>
           </h1>
         ) : <h1 className="page-title">{current.shortTitle}</h1>}
         {isHome ? <OpeningVisual /> : <SectionVisual title={current.title} />}

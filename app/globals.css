@@ -226,20 +226,19 @@ button { color: inherit; }
   letter-spacing: .09em;
   text-transform: uppercase;
 }
-.home-intro-card h2 {
-  margin: 12px 0 13px;
-  max-width: 670px;
-  color: #1a2c46;
-  font-size: clamp(27px, 3.2vw, 35px);
-  line-height: 1.18;
-  letter-spacing: -.03em;
-}
 .home-intro-card p {
   margin: 0;
   max-width: 720px;
   color: #445364;
   font-size: 16px;
   line-height: 1.72;
+}
+.home-intro-card p:first-of-type {
+  color: #1a2c46;
+  font-size: 20px;
+  font-weight: 620;
+  line-height: 1.5;
+  letter-spacing: -.015em;
 }
 .home-intro-card p + p { margin-top: 12px; }
 
@@ -874,7 +873,7 @@ button { color: inherit; }
   .page-title.home-title { font-size: 33px; }
   .home-flow { margin-top: 22px; }
   .home-intro-card { padding: 22px 18px; border-radius: 12px; }
-  .home-intro-card h2 { font-size: 27px; }
+  .home-intro-card p:first-of-type { font-size: 18px; }
   .home-intro-card p { font-size: 15px; line-height: 1.62; }
   .home-learn-grid { grid-template-columns: 1fr; gap: 12px; }
   .home-outcome-card { padding: 18px 16px 16px; }
