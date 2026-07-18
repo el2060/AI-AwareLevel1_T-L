@@ -10,10 +10,10 @@ This package will help you consider these implications across four areas of your
 
 By the end of this module, you will be able to:
 
-- recognise the competencies students need in an AI-enabled professional context and the implications for curriculum design;
+- recognise how AI is changing the competencies students need and the implications for curriculum design;
 - explain how AI can support learning without replacing the intended thinking, judgement or performance;
-- apply NP’s key GenAI requirements to keep assessment authentic, credible and visible;
-- identify appropriate uses of AI tools and learning data, and apply basic checks for safe and responsible use.
+- apply NP’s GenAI policy requirements for summative assessment to clarify conditions and make students’ learning and contribution visible;
+- identify appropriate uses of AI tools and learning data, and apply basic considerations for safe and responsible use.
 
 ### Learning Time
 
