@@ -264,17 +264,17 @@ const sectionMeta = [
   { mark: "03", label: "PAIR framework", tone: "teal" },
   { mark: "04", label: "GenAI conditions & policy", tone: "blue" },
   { mark: "05", label: "AI tools · learning support · learning analytics", tone: "purple" },
-  { mark: "06", label: "Four-lens module review", tone: "green" },
+  { mark: "06", label: "Four-area module review", tone: "green" },
 ];
 
 const contentsMeta = [
-  { title: "Start here", label: "4 domains · 2 hours" },
-  { title: "NP AI-enabled T&L approach", label: "5 strategies · PAIR · 3As" },
-  { title: "Curriculum competencies", label: "Anchor · Augment · Advance" },
-  { title: "Facilitation with PAIR", label: "PAIR framework" },
-  { title: "Assessment design", label: "GenAI conditions" },
-  { title: "Data, tools and analytics", label: "AI tools · learning support · learning analytics" },
-  { title: "Bring it together", label: "Four-lens module review" },
+  { title: "Start here", label: "AI-enabled T&L overview · Up to 2 hours" },
+  { title: "NP’s AI-enabled T&L approach", label: "5 strategies · 3As · PAIR" },
+  { title: "Curriculum design and competencies", label: "3As · Learning design alignment" },
+  { title: "Facilitation with PAIR", label: "AI-supported learning · Scaffolding" },
+  { title: "Assessment in a GenAI-enabled context", label: "Policy requirements · Conditions · Evidence" },
+  { title: "AI tools and learning analytics", label: "Lecturer support · AI tutors · Learning data" },
+  { title: "Bring it together", label: "Four-area module review" },
 ];
 
 const sectionBridges = [
@@ -1131,7 +1131,7 @@ export default function Home() {
             <div className="contents-heading">
               <div>
                 <span className="eyebrow">{completed.length} of {sections.length} complete</span>
-                <h2>Course outline</h2>
+                <h2>Learning package</h2>
                 <p>Jump to a section</p>
               </div>
               <button className="close-button" onClick={() => setContentsOpen(false)} aria-label="Close course contents">×</button>
