@@ -263,7 +263,7 @@ const sectionMeta = [
   { mark: "02", label: "Anchor · Augment · Advance", tone: "orange" },
   { mark: "03", label: "The PAIR framework", tone: "teal" },
   { mark: "04", label: "GenAI conditions & policy", tone: "blue" },
-  { mark: "05", label: "M365 Copilot & four checks", tone: "purple" },
+  { mark: "05", label: "AI tools · Learning support · Learning analytics", tone: "purple" },
   { mark: "06", label: "Four-lens module review", tone: "green" },
 ];
 
@@ -273,7 +273,7 @@ const contentsMeta = [
   { title: "Curriculum competencies", label: "Anchor · Augment · Advance" },
   { title: "Facilitation with PAIR", label: "PAIR framework" },
   { title: "Assessment design", label: "GenAI conditions" },
-  { title: "Data and tools", label: "M365 Copilot · 4 checks" },
+  { title: "Data, tools and analytics", label: "AI tools · Learning support · Learning analytics" },
   { title: "Bring it together", label: "Four-lens module review" },
 ];
 
@@ -412,7 +412,7 @@ function UseCaseExplorer() {
   const useCases = [
     {
       title: "Review module materials",
-      tool: "M365 Copilot",
+      tool: "Approved AI assistant (e.g., M365 Copilot)",
       icon: BookOpen,
       use: "Flag outdated references, duplicated content, misalignment or inconsistent instructions across module documents.",
       prompt: "Review these module documents. List outdated references, duplicated content, misalignment with learning outcomes and inconsistent student instructions. Name the source document. Do not rewrite.",
@@ -421,7 +421,7 @@ function UseCaseExplorer() {
     },
     {
       title: "Draft practice examples",
-      tool: "M365 Copilot",
+      tool: "Approved AI assistant (e.g., M365 Copilot)",
       icon: Lightbulb,
       use: "Generate a first set of worked examples, scenarios or practice questions in an authentic context.",
       prompt: "Draft three Year [1/2/3] practice examples for [concept] in [diploma]. Include a common misconception to spot. Use plain English for a first exposure.",
@@ -430,7 +430,7 @@ function UseCaseExplorer() {
     },
     {
       title: "Summarise feedback themes",
-      tool: "M365 Copilot",
+      tool: "Approved AI assistant (e.g., M365 Copilot)",
       icon: MessageCircle,
       use: "Group feedback that is appropriate for the tool into themes so you can review possible needs and decide what support may help.",
       prompt: "Summarise these feedback comments into themes. For each, give a short label and approximate number of related comments. List minority views separately. Do not infer causes or recommend actions.",
@@ -439,7 +439,7 @@ function UseCaseExplorer() {
     },
     {
       title: "Test assignment clarity",
-      tool: "M365 Copilot",
+      tool: "Approved AI assistant (e.g., M365 Copilot)",
       icon: ClipboardCheck,
       use: "Surface instructions or GenAI conditions that a student may read in more than one way.",
       prompt: "Read this assignment brief as a Year 2 student. Identify unclear instructions, marking expectations and GenAI conditions. Then ask five questions a confused student may ask.",
@@ -448,7 +448,7 @@ function UseCaseExplorer() {
     },
     {
       title: "Spot patterns in quiz results",
-      tool: "M365 Copilot in Excel",
+      tool: "Excel analytics + approved AI assistant",
       icon: Scale,
       use: "Identify low-success questions or topic patterns in a de-identified question-level results export so you can review possible teaching or support needs.",
       prompt: "This sheet contains de-identified question-level quiz results. Identify low-success questions, possible flawed questions and weak topic areas. Make no claims about individual students or causes.",
@@ -457,7 +457,7 @@ function UseCaseExplorer() {
     },
     {
       title: "Create alternative formats",
-      tool: "M365 Copilot",
+      tool: "Approved AI assistant (e.g., M365 Copilot)",
       icon: Users,
       use: "Create a simpler explanation, step-by-step version or short self-check activity from the same source material.",
       prompt: "Create a simpler explanation, a step-by-step worksheet version and five self-check questions for [concept]. Keep the technical meaning identical and flag anything you were unsure how to simplify.",
@@ -469,7 +469,7 @@ function UseCaseExplorer() {
   const Icon = selected.icon;
   return (
     <section className="use-case-explorer" aria-label="Explore common AI-supported teaching and learning tasks">
-      <div className="use-case-heading"><span>Explore common T&amp;L uses</span><h2>Start with a task you already do</h2><p>Choose one use case. Notice the boundary between a useful first pass and the judgement that remains yours.</p></div>
+      <div className="use-case-heading"><span>Explore a common T&amp;L use</span><h2>Start with a task you already do</h2><p>Choose a use case and notice the boundary between what the tool can provide and the judgement that remains yours.</p></div>
       <div className="use-case-tabs">
         {useCases.map((item, index) => {
           const ItemIcon = item.icon;
@@ -478,7 +478,7 @@ function UseCaseExplorer() {
       </div>
       <div className="use-case-detail" aria-live="polite">
         <div className="use-case-title"><span><Icon size={22} aria-hidden="true" /></span><div><small>Suggested tool</small><strong>{selected.tool}</strong></div></div>
-        {selected.tool.startsWith("M365 Copilot") && <p className="use-case-classification">Available within NP’s environment for approved use with information classified up to <strong>Official (Closed) – Restricted</strong>, subject to NP’s current data-handling requirements and approved use conditions.</p>}
+        {selected.tool.includes("M365 Copilot") && <p className="use-case-classification">M365 Copilot is available within NP's environment for approved use with information classified up to <strong>Official (Closed) - Restricted</strong>, subject to NP's current data-handling requirements and approved-use conditions.</p>}
         <h3>{selected.title}</h3><p>{selected.use}</p>
         <div className="prompt-starter"><strong>Prompt starter</strong><p>{selected.prompt}</p></div>
         <div className="use-case-checks"><div><b>Check</b><p>{selected.check}</p></div><div><b>Your judgement</b><p>{selected.judgement}</p></div></div>
@@ -490,17 +490,17 @@ function UseCaseExplorer() {
 function QuickSenseCheck() {
   const [revealed, setRevealed] = useState<number[]>([]);
   const items = [
-    { situation: "The tool suggests that several students are disengaged.", reveal: "Check the underlying data and context before deciding whether support is needed." },
+    { situation: "An AI tutor gives a student an explanation that differs from the module materials.", reveal: "Check the source content and accuracy, then clarify the intended explanation or adjust the materials supporting the tutor." },
     { situation: "An AI-generated summary of student feedback sounds plausible.", reveal: "Verify that the themes are supported by the original comments." },
     { situation: "You want to upload assessment results into an AI tool.", reveal: "Check whether the tool is approved for that information and purpose." },
-    { situation: "An AI tool recommends a learning intervention.", reveal: "Use professional judgement to decide whether it is appropriate, then review whether it helped." },
+    { situation: "Learning data suggests that several students may need support.", reveal: "Review the underlying evidence and learner context before deciding what action is appropriate." },
   ];
   function toggle(index: number) {
     setRevealed((current) => (current.includes(index) ? current.filter((item) => item !== index) : [...current, index]));
   }
   return (
     <section className="activity-block quick-sense-check">
-      <div className="activity-head-row"><div><span className="activity-eyebrow">Quick sense check</span><h2>Before You Act</h2></div></div>
+      <div className="activity-head-row"><div><span className="activity-eyebrow">Quick sense check</span><h2>What Would You Check?</h2></div></div>
       <p>Tap each situation to reveal what to consider.</p>
       <div className="sense-check-grid">
         {items.map((item, index) => {
@@ -513,7 +513,7 @@ function QuickSenseCheck() {
           );
         })}
       </div>
-      <p className="sense-check-closing"><strong>AI can flag, summarise and suggest.</strong> The lecturer checks, interprets and decides.</p>
+      <p className="sense-check-closing"><strong>AI can extend support, identify patterns and suggest possibilities.</strong> The lecturer checks, interprets and decides.</p>
     </section>
   );
 }
