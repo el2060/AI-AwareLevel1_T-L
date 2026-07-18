@@ -17,7 +17,9 @@ By the end of this module, you will be able to:
 
 ### Learning Time
 
-Set aside about **2 hours** to work through the package, relate the ideas to a module you teach, lead or support, complete the activities and take the completion quiz.
+**Up to 2 hours**
+
+The programme includes the learning content, activities and completion quiz. You may move through the sections at your own pace and spend more time on areas most relevant to your role or module.
 
 ---
 

@@ -600,7 +600,7 @@ function HomeFlow() {
         </p>
       </article>
 
-      <div className="home-learn-grid">
+      <div className="home-learn-stack">
         <article className="home-outcome-card">
           <header>
             <span>What You Will Learn</span>
@@ -616,13 +616,13 @@ function HomeFlow() {
           </ol>
         </article>
 
-        <aside className="home-time-card" aria-label="Learning time">
+        <aside className="home-time-note" aria-label="Learning time">
           <span>Learning Time</span>
-          <strong>About 2 hours</strong>
+          <strong>Up to 2 hours</strong>
           <p>
-            Set aside time to work through the package, relate the ideas to a
-            module you teach, lead or support, complete the activities and take
-            the completion quiz.
+            The programme includes the learning content, activities and
+            completion quiz. You may move through the sections at your own pace
+            and spend more time on areas most relevant to your role or module.
           </p>
         </aside>
       </div>
@@ -1003,7 +1003,7 @@ export default function Home() {
           </button>
           <div className="top-actions">
             {!isHome && <span className="level-badge">Level 1 · AI-Aware</span>}
-            {isHome && <span className="level-badge">2 hours</span>}
+            {isHome && <span className="level-badge">Up to 2 hours</span>}
           </div>
         </div>
       </header>
