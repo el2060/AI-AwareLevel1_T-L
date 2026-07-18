@@ -35,19 +35,25 @@ The four sections explore:
 
 # Part 2: Curriculum Design and Development — What Competencies Do Students Need?
 
+## Review Curriculum for an AI-Enabled Profession
+
+As AI changes professional practice, lecturers need to review not only what students should know and do, but also:
+
+- which human and disciplinary capabilities remain essential;
+- how students should use AI productively;
+- what new AI-enabled practice may emerge.
+
+The 3As provide a simple lens for doing this.
+
 <!--three-as-visual-->
 
-The 3As begin with the competencies students need, then help lecturers align what students are expected to learn, how they practise it and how it is assessed.
+## From Competency to Aligned Learning Design
 
-## A Common AI Foundation for Students
+Once the intended competency is clear, ensure the rest of the module supports it.
 
-Alongside discipline-specific competencies, the POLITE sector AI baseline identifies foundational AI competencies that students should progressively develop across their learning.
+<!--alignment-flow-visual-->
 
-<!--student-baseline-visual-->
-
-> Individual modules may contribute to different areas. Not every module is expected to address all four.
-
-The sector baseline provides a common AI foundation, while the 3As help lecturers connect it to disciplinary and professional competencies.
+> The learning outcomes, activities and assessment should work together. For example, students cannot be expected to demonstrate productive AI use in assessment if they have had little opportunity to practise it during learning.
 
 ## Illustrative Applications
 
@@ -61,25 +67,35 @@ These broad examples show how the 3As might look across different forms of pract
 
 > Lecturers should interpret the 3As according to their disciplinary expertise, intended learning outcomes and professional context.
 
-## Apply the 3As
+## Apply the 3As to One Learning Outcome
 
 Choose one learning outcome from a module you teach, lead or support.
 
-Consider:
+### Step 1 · Review the Competency
 
-- whether the outcome remains relevant as professional practice changes;
-- whether it should develop distinctly human capabilities, productive use of AI or new AI-enabled practice;
-- which sector baseline AI competencies are relevant.
+Does the outcome remain relevant as professional practice changes? Should it develop:
 
-Then check the alignment:
+- distinctly human capabilities;
+- productive use of AI;
+- new AI-enabled professional practice?
+
+### Step 2 · Check the Alignment
 
 <!--alignment-check-visual-->
 
+### Step 3 · Identify One Adjustment
+
+> What is one change that may be needed — to the outcome, the learning activity or the assessment?
+
+## Additional Context: A Common AI Foundation for Students
+
+<!--student-baseline-visual-->
+
+The sector baseline provides a common AI foundation, while the 3As guide how each discipline develops and assesses AI-relevant professional competencies.
+
 ## Key Takeaway
 
-Use the 3As to review the competencies students need, then align the learning outcomes, activities and assessment so students can develop and demonstrate them.
-
-Draw on the sector baseline as a common foundation for students' AI literacy and use.
+Use the 3As to identify the competencies students need, then align the learning outcomes, activities and assessment so students can develop and demonstrate them.
 
 ---
 

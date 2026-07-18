@@ -569,14 +569,43 @@ function StudentBaselineVisual() {
     { icon: Scale, title: "Learn Beyond AI", detail: "Consider the societal, ethical and legal implications of AI, and exercise human judgement and oversight." },
   ];
   return (
-    <figure className="concept-visual student-baseline-visual" aria-label="NP’s student AI baseline competencies">
-      <div className="lens-strip">
-        {items.map(({ icon: Icon, title, detail }) => (
-          <section key={title}>
-            <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
-            <b>{title}</b>
-            <small>{detail}</small>
-          </section>
+    <details className="policy-detail student-baseline-accordion">
+      <summary>View the sector AI baseline competencies</summary>
+      <div>
+        <p>The POLITE sector AI baseline identifies foundational AI competencies that students should progressively develop across their learning.</p>
+        <div className="lens-strip">
+          {items.map(({ icon: Icon, title, detail }) => (
+            <section key={title}>
+              <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
+              <b>{title}</b>
+              <small>{detail}</small>
+            </section>
+          ))}
+        </div>
+        <p className="baseline-note">Individual modules may contribute to different areas. Not every module is expected to address all four.</p>
+      </div>
+    </details>
+  );
+}
+
+function AlignmentFlowVisual() {
+  const steps = [
+    { title: "Competency", detail: "The capability the 3As identify as needed." },
+    { title: "Learning Outcome", detail: "What students should be able to demonstrate." },
+    { title: "Learning Activities", detail: "What opportunities help them practise and develop it." },
+    { title: "Assessment Evidence", detail: "What shows they have achieved it." },
+  ];
+  return (
+    <figure className="concept-visual" aria-label="Flow from competency to assessment evidence">
+      <div className="alignment-flow">
+        {steps.map((step, index) => (
+          <div className="alignment-step-wrap" key={step.title}>
+            <section className="alignment-stage">
+              <b>{step.title}</b>
+              <p>{step.detail}</p>
+            </section>
+            {index < steps.length - 1 && <span className="alignment-connector" aria-hidden="true">→</span>}
+          </div>
         ))}
       </div>
     </figure>
@@ -851,6 +880,7 @@ export default function Home() {
   const studentBaselineMarker = "<!--student-baseline-visual-->";
   const threeAsMarker = "<!--three-as-visual-->";
   const alignmentCheckMarker = "<!--alignment-check-visual-->";
+  const alignmentFlowMarker = "<!--alignment-flow-visual-->";
   const sectionMarkdown = withoutTitle(current.markdown);
   const hasModuleReview = sectionMarkdown.includes(moduleReviewMarker);
   const hasInlineNextPrompt = /^\s*(\*\*Next\*\*|#{1,4}\s+Next)\s*$/m.test(sectionMarkdown);
@@ -859,6 +889,7 @@ export default function Home() {
     [pairInfographicMarker]: <PairInfographic />,
     [actionInfographicMarker]: <AssessmentActionsInfographic />,
     [alignmentCheckMarker]: <AlignmentCheckVisual />,
+    [alignmentFlowMarker]: <AlignmentFlowVisual />,
     [modulePreviewMarker]: <ModulePreviewVisual />,
     [toolChecksMarker]: <ToolChecksVisual />,
     [studentBaselineMarker]: <StudentBaselineVisual />,
