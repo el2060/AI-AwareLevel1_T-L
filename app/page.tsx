@@ -1045,13 +1045,14 @@ export default function Home() {
             <span className="brand-divider" aria-hidden="true" />
             <span className="course-identity">
               <span className="course-name">AI T&amp;L Essentials</span>
-              <small className="course-programme">Mandatory 2-hour programme for teaching staff</small>
+              <small className="course-programme">Mandatory programme for NP teaching staff</small>
             </span>
           </button>
-          <div className="top-actions">
-            {!isHome && <span className="level-badge">Level 1 · AI-Aware</span>}
-            {isHome && <span className="level-badge">Up to 2 hours</span>}
-          </div>
+          {!isHome && (
+            <div className="top-actions">
+              <span className="level-badge">Level 1 · AI-Aware</span>
+            </div>
+          )}
         </div>
       </header>
 
