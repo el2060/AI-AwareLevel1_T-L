@@ -227,21 +227,45 @@ button { color: inherit; }
   background: var(--paper);
   box-shadow: var(--shadow-soft);
 }
+.home-intro-card h2 {
+  margin: 12px 0 14px;
+  max-width: 700px;
+  color: #1a2c46;
+  font-size: clamp(28px, 3.4vw, 36px);
+  line-height: 1.2;
+  letter-spacing: -.03em;
+}
 .home-intro-card p {
   margin: 0;
-  max-width: 720px;
+  max-width: 740px;
   color: #445364;
   font-size: 16px;
-  line-height: 1.72;
+  line-height: 1.7;
 }
 .home-intro-card p:first-of-type {
-  color: #1a2c46;
-  font-size: 20px;
-  font-weight: 620;
-  line-height: 1.5;
-  letter-spacing: -.015em;
+  color: #233954;
+  font-size: 17px;
+  font-weight: 560;
+  line-height: 1.66;
 }
 .home-intro-card p + p { margin-top: 12px; }
+.home-intro-card blockquote {
+  margin: 16px 0 0;
+  padding: 16px 18px;
+  border-left: 3px solid var(--blue);
+  border-radius: 0 10px 10px 0;
+  background: #eef3f9;
+  color: #123a67;
+  font-size: 16px;
+  line-height: 1.62;
+}
+.home-intro-credit {
+  margin-top: 10px !important;
+  color: #4b6178 !important;
+  font-size: 13px !important;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
 
 .home-learn-stack { display: grid; gap: 22px; }
 .home-outcome-card {
@@ -856,8 +880,11 @@ button { color: inherit; }
   .page-title.home-title { font-size: 33px; }
   .home-flow { margin-top: 22px; }
   .home-intro-card { padding: 22px 18px; border-radius: 12px; }
+  .home-intro-card h2 { font-size: 27px; margin-top: 10px; }
   .home-intro-card p:first-of-type { font-size: 18px; }
   .home-intro-card p { font-size: 15px; line-height: 1.62; }
+  .home-intro-card blockquote { font-size: 14px; padding: 13px 14px; }
+  .home-intro-credit { font-size: 12px !important; }
   .home-learn-stack { gap: 16px; }
   .home-outcome-card { padding: 20px 16px 16px; }
   .home-outcome-card li { grid-template-columns: 16px minmax(0, 1fr); gap: 8px; padding: 10px; }

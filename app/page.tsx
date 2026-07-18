@@ -583,20 +583,31 @@ function HomeFlow() {
     <section className="home-flow" aria-label="Welcome and module outcomes">
       <article className="home-intro-card">
         <span>Welcome</span>
+        <h2>Teaching and Learning in an AI-Enabled Context</h2>
         <p>
-          Apply an AI-aware lens across curriculum, facilitation, assessment,
-          and data and technology-enhanced T&amp;L.
+          AI, particularly Gen AI, is increasingly shaping how students learn,
+          how professional work is carried out and the capabilities graduates
+          will need.
         </p>
         <p>
-          AI, particularly Gen AI, is increasingly shaping how students learn and
-          how work is carried out across many professions. As students use AI to
-          learn, create and solve problems, educators need to understand the
-          opportunities and challenges it brings to teaching, learning and
-          assessment.
+          Used purposefully, AI can extend opportunities for practice, feedback
+          and personalised support. It can also help lecturers develop learning
+          resources, understand learning needs and respond more effectively. At
+          the same time, AI may become a shortcut that bypasses the thinking,
+          judgement or performance students are meant to develop.
+        </p>
+        <blockquote>
+          If we treat AI as a shortcut, to simply bypass thinking, we will
+          diminish the very purpose of education. But if we treat AI as a
+          catalyst, a tool to sharpen what truly matters in education, it can
+          strengthen our IHLs and strengthen our people.
+        </blockquote>
+        <p className="home-intro-credit">
+          Mr Desmond Lee, Minister for Education · April 2026
         </p>
         <p>
-          This package helps you consider these implications across four areas of
-          your T&amp;L practice.
+          This package helps you consider what AI means for curriculum,
+          facilitation, assessment and data and technology-enhanced T&amp;L.
         </p>
       </article>
 
