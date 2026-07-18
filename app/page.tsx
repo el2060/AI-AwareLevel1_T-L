@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactElement, useEffect, useLayoutEffect, useMemo, useState } from "react";
-import { BookOpen, Bot, CheckCircle2, ClipboardCheck, Eye, Lightbulb, LockKeyhole, MessageCircle, Rocket, Scale, ShieldCheck, Target, UserRound, Users, Zap } from "lucide-react";
+import { BookOpen, Bot, CheckCircle2, ClipboardCheck, Eye, Lightbulb, LockKeyhole, MessageCircle, RefreshCw, Rocket, Scale, ShieldCheck, Target, UserRound, Users, Zap } from "lucide-react";
 
 type Section = {
   id: string;
@@ -271,7 +271,7 @@ const sectionBridges = [
   "See how these four areas connect to NP’s direction for AI-enabled T&L.",
   "Begin with curriculum: what competencies should students develop and demonstrate as AI changes professional practice?",
   "Explore PAIR, a simple framework for helping students use AI purposefully, critically and responsibly in their learning.",
-  "Consider how to set clear GenAI conditions and design assessment that provides authentic, credible evidence of students’ learning and contribution.",
+  "Consider how clear GenAI conditions and assessment design can keep learning authentic, credible and visible.",
   "Explore how AI tools and learning data can be used purposefully to support learning, while protecting information, verifying outputs and retaining human oversight.",
   "Bring the four areas together by reviewing one module you teach, lead or support.",
 ];
@@ -665,10 +665,10 @@ function ThreeAsInfographic() {
 
 function PairInfographic() {
   const stages = [
-    { letter: "P", name: "Problem", action: "Students define the task or challenge", detail: "Clarify the intended outcome, requirements, constraints and success criteria.", cue: "What must we understand before using AI?", tone: "problem" },
-    { letter: "A", name: "AI", action: "Students select a suitable AI tool", detail: "Consider what support is needed, what the tool can do and whether its use is permitted.", cue: "What could AI contribute?", tone: "ai" },
-    { letter: "I", name: "Interaction", action: "Students experiment, evaluate and refine", detail: "Critically evaluate outputs for relevance and accuracy, and verify important claims against primary, official or trusted sources. AI-generated responses may be incomplete, outdated or based on less authoritative information.", cue: "How will we test and improve the output?", tone: "interaction" },
-    { letter: "R", name: "Reflection", action: "Students examine the process and learning", detail: "Evaluate how AI supported or hindered the learning process, and identify where human judgement was necessary.", cue: "What did we learn about the task, the tool and our own judgement?", tone: "reflection" },
+    { letter: "P", name: "Problem", icon: Target, action: "Students define the task or challenge", detail: "Clarify the intended outcome, requirements, constraints and success criteria.", cue: "What must we understand before using AI?", tone: "problem" },
+    { letter: "A", name: "AI", icon: Bot, action: "Students select a suitable AI tool", detail: "Consider what support is needed, what the tool can do and whether its use is permitted.", cue: "What could AI contribute?", tone: "ai" },
+    { letter: "I", name: "Interaction", icon: RefreshCw, action: "Students experiment, evaluate and refine", detail: "Evaluate outputs for relevance and accuracy, and verify important claims against primary, official or trusted sources.", cue: "How will we test and improve the output?", tone: "interaction" },
+    { letter: "R", name: "Reflection", icon: Eye, action: "Students examine the process and learning", detail: "Evaluate how AI supported or hindered the learning process, and identify where human judgement was necessary.", cue: "What did we learn about the task, the tool and our own judgement?", tone: "reflection" },
   ];
   return (
     <figure className="concept-visual pair-infographic" aria-labelledby="pair-title">
@@ -676,18 +676,24 @@ function PairInfographic() {
         <span>PAIR</span>
         <strong id="pair-title">A structured process for learning and problem-solving with AI</strong>
       </figcaption>
-      <div className="pair-journey">
-        {stages.map((stage, index) => (
-          <div className="pair-step-wrap" key={stage.name}>
-            <section className={`pair-stage pair-${stage.tone}`}>
-              <div className="pair-stage-head"><i aria-hidden="true">{stage.letter}</i><b>{stage.name}</b></div>
-              <strong>{stage.action}</strong>
-              <p>{stage.detail}</p>
-              <small>{stage.cue}</small>
-            </section>
-            {index < stages.length - 1 && <span className="pair-connector" aria-hidden="true">→</span>}
-          </div>
-        ))}
+      <div className="pair-flow">
+        {stages.map((stage, index) => {
+          const Icon = stage.icon;
+          return (
+            <div className={`pair-flow-row pair-${stage.tone}`} key={stage.name}>
+              <div className="pair-flow-rail">
+                <div className="pair-flow-node"><Icon size={19} strokeWidth={2.1} aria-hidden="true" /></div>
+                {index < stages.length - 1 && <span className="pair-flow-line" aria-hidden="true" />}
+              </div>
+              <div className="pair-flow-body">
+                <div className="pair-flow-kicker">{stage.letter} · {stage.name}</div>
+                <strong>{stage.action}</strong>
+                <p>{stage.detail}</p>
+                <small>{stage.cue}</small>
+              </div>
+            </div>
+          );
+        })}
       </div>
       <div className="infographic-note pair-loop"><span aria-hidden="true">↔</span><p>Students may revisit the problem, reconsider the tool and refine their interactions as their understanding develops.</p></div>
     </figure>

@@ -107,9 +107,7 @@ Use the 3As to identify the competencies students need, then align the learning 
 
 NP uses the PAIR framework to help students learn and solve problems with AI purposefully, critically and responsibly.
 
-Students carry out the PAIR process. Lecturers design the task, determine the degree of openness and provide the scaffolding students need.
-
-PAIR gives students structured practice in several baseline AI competencies, including problem formulation, tool selection, critical evaluation of outputs, reflection and responsible use.
+Students carry out the PAIR process. Lecturers design the task and provide the level of structure, choice and support appropriate to students' readiness and the intended learning.
 
 PAIR is:
 
@@ -144,11 +142,15 @@ Students carry out PAIR. Lecturers design the conditions that enable them to do 
 | **Interaction** | Opportunities to test, challenge and verify AI-generated outputs.                                |
 | **Reflection**  | Prompts or evidence that make students’ decisions, learning and judgement visible.               |
 
-The degree of student choice should reflect their readiness and the intended learning. Less experienced students may need a defined task, suggested tools and guided reflection. More experienced students may take greater responsibility for framing the task, selecting tools and shaping their interaction with AI.
+The degree of student choice should reflect their readiness and the intended learning.
 
-## Does AI Support the Intended Learning?
+Less experienced students may need a defined task, suggested tools and guided reflection. More experienced students may take greater responsibility for framing the task, selecting tools and shaping their interaction with AI.
 
-AI may support learning when students use it to:
+## Check That AI Supports the Intended Learning
+
+After designing the activity, check whether AI is helping students practise the intended capability.
+
+AI can support learning when students use it to:
 
 - explore approaches;
 - compare explanations or perspectives;
@@ -156,21 +158,30 @@ AI may support learning when students use it to:
 - practise and receive feedback;
 - test and refine their thinking.
 
-AI may undermine the intended learning when it completes the analysis, judgement, creation or performance students are meant to develop.
+AI may undermine learning when it completes the analysis, judgement, creation or performance students are meant to develop.
 
-Where this happens, use a follow-up activity that requires students to identify what they missed, examine how they used AI and apply the underlying concepts themselves.
+> The key question is not whether AI is used, but whether students are still doing the thinking, judging or performing that the activity is intended to develop.
 
-## Apply It to Your Module
+**If AI has replaced the intended learning:** use a follow-up activity that requires students to identify gaps, examine how they used AI and apply the underlying concepts themselves.
 
-Consider one learning activity:
+## Apply PAIR to One Learning Activity
 
-> How could AI support one learning activity while keeping the intended thinking, judgement or performance visible?
+Choose one activity from a module you teach, lead or support.
+
+Consider:
+
+- what students should understand or do before using AI;
+- what role AI should play;
+- how students will evaluate and improve the output;
+- what reflection or evidence will make their learning and judgement visible.
+
+Then decide what level of structure and choice your students need.
 
 ## Key Takeaway
 
-PAIR structures how students learn with AI: they define the task, select a suitable tool, interact critically with its outputs and reflect on their learning.
+PAIR helps students define the task, select a suitable tool, interact critically with AI and reflect on their learning.
 
-Lecturers design the conditions and provide the appropriate level of structure, choice and support. AI should support the intended learning—not replace it.
+Lecturers design the conditions and scaffolding. AI should support the intended learning—not replace it.
 
 ---
 
