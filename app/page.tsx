@@ -611,7 +611,7 @@ function ThreeAsInfographic() {
     <figure className="concept-visual three-as-infographic" aria-labelledby="three-as-title">
       <figcaption>
         <span>The 3As</span>
-        <strong id="three-as-title">Guiding lenses for reviewing and adjusting the competencies students need as AI changes professional practice</strong>
+        <strong id="three-as-title">Guiding lenses for reviewing and aligning learning outcomes, learning activities and assessment as AI changes professional practice</strong>
       </figcaption>
       <div className="three-as-path">
         {lenses.map((lens) => {
@@ -704,6 +704,26 @@ function ToolChecksVisual() {
     <figure className="concept-visual tool-visual" aria-label="Four checks for responsible AI tool use">
       <figcaption><span>Before you use a tool</span><strong>Apply four checks</strong></figcaption>
       <div className="icon-panel-grid">
+        {items.map(({ icon: Icon, title, detail }) => (
+          <section key={title}>
+            <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
+            <div><b>{title}</b><small>{detail}</small></div>
+          </section>
+        ))}
+      </div>
+    </figure>
+  );
+}
+
+function AlignmentCheckVisual() {
+  const items = [
+    { icon: Target, title: "Learning outcome", detail: "Is the intended competency stated clearly?" },
+    { icon: BookOpen, title: "Learning activities", detail: "Do students have suitable opportunities to practise and develop it?" },
+    { icon: ClipboardCheck, title: "Assessment", detail: "Does the assessment make the intended competency and the student's contribution visible?" },
+  ];
+  return (
+    <figure className="concept-visual" aria-label="Check constructive alignment across learning outcome, activities and assessment">
+      <div className="icon-panel-grid trio">
         {items.map(({ icon: Icon, title, detail }) => (
           <section key={title}>
             <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
@@ -830,6 +850,7 @@ export default function Home() {
   const toolChecksMarker = "<!--tool-checks-visual-->";
   const studentBaselineMarker = "<!--student-baseline-visual-->";
   const threeAsMarker = "<!--three-as-visual-->";
+  const alignmentCheckMarker = "<!--alignment-check-visual-->";
   const sectionMarkdown = withoutTitle(current.markdown);
   const hasModuleReview = sectionMarkdown.includes(moduleReviewMarker);
   const hasInlineNextPrompt = /^\s*(\*\*Next\*\*|#{1,4}\s+Next)\s*$/m.test(sectionMarkdown);
@@ -837,6 +858,7 @@ export default function Home() {
     [useCaseMarker]: <UseCaseExplorer />,
     [pairInfographicMarker]: <PairInfographic />,
     [actionInfographicMarker]: <AssessmentActionsInfographic />,
+    [alignmentCheckMarker]: <AlignmentCheckVisual />,
     [modulePreviewMarker]: <ModulePreviewVisual />,
     [toolChecksMarker]: <ToolChecksVisual />,
     [studentBaselineMarker]: <StudentBaselineVisual />,

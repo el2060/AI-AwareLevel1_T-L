@@ -37,6 +37,8 @@ The four sections explore:
 
 <!--three-as-visual-->
 
+The 3As begin with the competencies students need, then help lecturers align what students are expected to learn, how they practise it and how it is assessed.
+
 ## A Common AI Foundation for Students
 
 Alongside discipline-specific competencies, the POLITE sector AI baseline identifies foundational AI competencies that students should progressively develop across their learning.
@@ -63,19 +65,21 @@ These broad examples show how the 3As might look across different forms of pract
 
 Choose one learning outcome from a module you teach, lead or support.
 
-Consider whether it remains relevant as professional practice changes and whether it should develop:
+Consider:
 
-- distinctly human capabilities;
-- productive use of AI;
-- new AI-enabled professional practice.
+- whether the outcome remains relevant as professional practice changes;
+- whether it should develop distinctly human capabilities, productive use of AI or new AI-enabled practice;
+- which sector baseline AI competencies are relevant.
 
-Also consider which sector baseline AI competencies the learning activities can appropriately develop.
+Then check the alignment:
 
-Then check whether the assessment makes the intended competencies visible.
+<!--alignment-check-visual-->
 
 ## Key Takeaway
 
-Use the 3As to review discipline-specific competencies, while drawing on the sector baseline as a common foundation for students' AI literacy and use.
+Use the 3As to review the competencies students need, then align the learning outcomes, activities and assessment so students can develop and demonstrate them.
+
+Draw on the sector baseline as a common foundation for students' AI literacy and use.
 
 ---
 
