@@ -356,45 +356,17 @@ AI tools and learning data can extend learning opportunities and help lecturers 
 
 ## Four Practical Uses
 
-### 1. Prepare and Improve Learning Resources
+<!--tandl-uses-->
 
-AI can provide a useful starting point when you are reviewing module materials, drafting practice examples, creating alternative formats, checking assignment clarity or summarising feedback themes.
-
-You provide the context and intended learning. You then check, adapt and decide what to use.
-
-### 2. Extend Learning Support
-
-AI-enabled tutors and learning assistants can extend opportunities for explanations, practice and feedback beyond class time.
-
-Within NP, this may include:
-
-**Brightspace Lumi Tutor** — uses module content to support explanations, summaries, practice questions, flashcards and revision.
-
-**Adaptive or course-specific AI tutors** — provide targeted practice, feedback or coaching based on the intended learning.
-
-**Student AI tools** — may support learning, creation, research or problem-solving, subject to the activity or assessment conditions.
-
-These tools complement facilitation. Lecturers still set the intended learning, source materials, boundaries and role of the support in the module.
-
-### 3. Support Disciplinary and Professional Practice
-
-AI may also be embedded in tools and workflows that are specific to a course, module or profession. Examples include AI-assisted coding and testing, design and media tools, data analysis and visualisation, simulation, and research or evidence-review tools.
-
-The educational value is not simply in operating a tool. It lies in helping students apply disciplinary knowledge, evaluate outputs and exercise appropriate judgement.
-
-### 4. Use Learning Data to Inform Support
-
-Learning data can reveal patterns in participation or performance, help identify possible learner needs, inform targeted support and show whether support is helping.
-
-AI-generated summaries, patterns or predictions are starting points—not decisions. Review the evidence and learner context before deciding what action is appropriate.
-
-## Explore Common T&L Uses
+## Explore a Common T&L Use
 
 <!--use-case-explorer-->
 
-## Make a Purposeful Choice
+## Choose Tools for the T&L Purpose
 
-Before using an AI tool or learning data, consider four questions:
+Different needs may call for different tools. NP-provided tools may support lecturer productivity, learning resources, student support or learning analytics. Course- or discipline-specific tools may reflect authentic professional practice. Students may use suitable tools where the learning activity or assessment permits this.
+
+Before using a tool or learning data, consider four questions:
 
 ### Learning fit
 
@@ -406,39 +378,24 @@ Is it appropriate and accessible for the task and learners?
 
 ### Information and output
 
-Is the information approved for use, and is the output accurate and suitable?
+Is the information appropriate to use, and is the output accurate, relevant and suitable for learners?
 
 ### Oversight and impact
 
 Who reviews the output, decides what action to take and checks whether it helped?
 
-## Choose Tools for the T&L Purpose
-
-Different T&L needs may call for different tools.
-
-### NP-Provided Tools
-
-M365 Copilot, Brightspace Lumi Tutor and other institutional platforms may support lecturer productivity, learning resources, student support or learning analytics.
-
-### Course- or Discipline-Specific Tools
-
-Modules may use AI-enabled tools that reflect professional or disciplinary practice, such as tools for coding, design, simulation, data analysis, research or content creation.
-
-### Student-Selected Tools
-
-Students may use suitable AI tools where the learning activity or assessment permits this.
-
-Select a tool according to the intended learning or professional practice, learners’ needs and readiness, accessibility, the information involved, and the quality and limitations of its output.
-
 ### Tool and Information Guidance
 
-**M365 Copilot** is available in NP’s Microsoft 365 environment and is cleared for up to **Official (Closed) – Restricted** content. **Pair Chat (pair.gov.sg)** is cleared for up to **Official (Closed) – Sensitive Normal** content.
-
-Use both according to NP’s current guidance for the information and purpose involved. Do not enter personal, sensitive or proprietary information into a public AI tool unless it is approved for that information and purpose.
+<!--tool-guidance-->
 
 ## Keep in Mind
 
-Choose one small T&L need from a module you teach, lead or support. Consider what type of AI tool or learning data could contribute, what you would need to check and how you would know whether it helped.
+Choose one small T&L need from a module you teach, lead or support. Consider:
+
+- what type of AI tool or learning data could contribute;
+- how it would support the intended learning;
+- what would need checking;
+- how you would know whether it helped.
 
 ---
 
