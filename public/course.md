@@ -25,6 +25,12 @@ The programme includes the learning content, activities and completion quiz. You
 
 # Part 1: NP’s Approach to AI-Enabled Teaching & Learning
 
+## Where This Package Sits
+
+<!--roadmap-strip-->
+
+> This Level 1 package establishes the awareness foundation for teaching staff. Further development will focus on applying and integrating AI in T&L practice.
+
 <!--strategy-map-->
 
 ## How the Strategies Connect to T&L Practice
@@ -35,16 +41,11 @@ The five strategies are applied through four connected areas of T&L practice:
 
 > Together, these four areas provide a practical way to apply NP’s AI-enabled T&L strategies within a module.
 
-## The Four Areas Work Together
+:::note The four areas are connected
 
-A single T&L decision may involve more than one area. For example, introducing an AI-supported activity may require consideration of:
+A change in one area may have implications for the others—for example, an AI-supported activity may affect the intended competency, learning design, assessment evidence and choice of tool.
 
-- the competency students should develop;
-- how students will learn with AI;
-- how learning and student contribution will be assessed;
-- which tool or learning data is appropriate.
-
-Changes in one area may therefore have implications for the others.
+:::
 
 ## Keep One of Your Modules in Mind
 

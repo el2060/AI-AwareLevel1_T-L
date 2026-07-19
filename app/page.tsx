@@ -424,6 +424,37 @@ function FourLensReview({ value, onChange }: { value: string; onChange: (value: 
   return <TapChecklist prompt="Tap each question after considering it for your module." items={["Curriculum: What may need review in the learning outcomes, activities or assessment?", "Facilitation: Where could students compare, check, improve or explain their use of AI?", "Assessment: What must students demonstrate themselves, and where might GenAI use be appropriate?", "Data and Tech-Enhanced T&L: What learning need could an AI tool or learning data support, and what would need checking before use?"]} tips={["Use the 3As to consider whether the intended capability is Anchor, Augment or Advance.", "Use PAIR to keep students evaluating, refining and reflecting.", "Check that the conditions and evidence of learning are clear.", "Consider learning value, suitability, information involved and human oversight."]} value={value} onChange={onChange} />;
 }
 
+function RoadmapStrip() {
+  const stages = [
+    { key: "awareness", icon: Eye, name: "Gen AI Awareness", tag: "I Know", detail: "Understand how AI affects learning, teaching and curriculum.", current: true },
+    { key: "integration", icon: Bot, name: "Gen AI Integration", tag: "I Use", detail: "Apply AI purposefully in learning, teaching and assessment.", current: false },
+    { key: "innovation", icon: Rocket, name: "Gen AI Innovation", tag: "I Innovate", detail: "Develop and scale new AI-enabled practices and solutions.", current: false },
+  ];
+  return (
+    <figure className="concept-visual roadmap-strip" aria-label="NP's AI in T&L Roadmap, progressing from awareness to integration to innovation">
+      <figcaption>
+        <strong>NP&rsquo;s AI in T&amp;L Roadmap</strong>
+      </figcaption>
+      <div className="roadmap-path">
+        {stages.map((stage, index) => {
+          const Icon = stage.icon;
+          return (
+            <div className="roadmap-stage-wrap" key={stage.key}>
+              <section className={`roadmap-stage${stage.current ? " current" : ""}`}>
+                {stage.current && <span className="roadmap-current-tag">This package</span>}
+                <div className="roadmap-stage-head"><i><Icon size={20} strokeWidth={2.1} aria-hidden="true" /></i><b>{stage.name}</b></div>
+                <small>{stage.tag}</small>
+                <p>{stage.detail}</p>
+              </section>
+              {index < stages.length - 1 && <span className="roadmap-connector" aria-hidden="true"><ArrowRight size={15} strokeWidth={2.2} /></span>}
+            </div>
+          );
+        })}
+      </div>
+    </figure>
+  );
+}
+
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
@@ -531,8 +562,7 @@ function OpeningVisual() {
     <section className="opening-visual" aria-label="What this package covers">
       <div className="overview-heading">
         <span>At a Glance</span>
-        <h2>Four Areas of AI-Aware T&amp;L</h2>
-        <p>This package applies an AI lens to four T&amp;L Competency Framework domains.</p>
+        <h2>Four TLCF Domains in an AI-Enabled Context</h2>
       </div>
       <div className="overview-areas">
         {areas.map((area, index) => {
@@ -934,6 +964,7 @@ export default function Home() {
   const alignmentCheckMarker = "<!--alignment-check-visual-->";
   const alignmentFlowMarker = "<!--alignment-flow-visual-->";
   const strategyMapMarker = "<!--strategy-map-->";
+  const roadmapStripMarker = "<!--roadmap-strip-->";
   const supportReplaceMarker = "<!--support-or-replace-->";
   const genAiConditionsMarker = "<!--genai-conditions-check-->";
   const nextStepMarker = "<!--next-step-->";
@@ -950,6 +981,7 @@ export default function Home() {
     [studentBaselineMarker]: <StudentBaselineVisual />,
     [threeAsMarker]: <ThreeAsInfographic />,
     [strategyMapMarker]: <StrategyMap />,
+    [roadmapStripMarker]: <RoadmapStrip />,
     [supportReplaceMarker]: <SupportReplaceSorter />,
     [genAiConditionsMarker]: <GenAiConditionsSorter />,
     [moduleReviewMarker]: <FourLensReview value={activityNotes.snapshotcheck ?? ""} onChange={(value) => setActivityValue("snapshotcheck", value)} />,
