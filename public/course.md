@@ -406,8 +406,6 @@ Is the information approved for use, and is the output accurate and suitable?
 
 Who reviews the output, decides what action to take and checks whether it helped?
 
-> A tool may be approved and still not be the best choice for the learning purpose.
-
 ## Use Tools Appropriately
 
 **M365 Copilot** is available in NP’s Microsoft 365 environment and is cleared for up to **Official (Closed) – Restricted** content. **Pair Chat (pair.gov.sg)** is cleared for up to **Official (Closed) – Sensitive Normal** content.
