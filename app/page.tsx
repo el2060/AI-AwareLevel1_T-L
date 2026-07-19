@@ -407,7 +407,7 @@ function TapChecklist({ eyebrow, title, prompt, items, tips, value, onChange, co
 function NextStepActivity({ value, onChange }: { value: string; onChange: (value: string) => void }) {
   const options = [
     { label: "Review one learning outcome, activity or assessment using the 3As.", feedback: "A single 3As review is a manageable way to begin identifying what may need attention." },
-    { label: "Try one Generate → Compare → Check → Improve activity.", feedback: "A structured activity gives students practice in evaluating and improving AI output rather than accepting the first response." },
+    { label: "Apply PAIR to one learning activity.", feedback: "Applying PAIR to a single activity is a focused way to check that AI is supporting, rather than replacing, the intended learning." },
     { label: "Check one assessment's GenAI conditions.", feedback: "Checking one assessment’s GenAI conditions is a focused way to put Level 1 awareness into practice." },
     { label: "Explore one appropriate use of an AI tool, AI-enabled learning support or learning data.", feedback: "Start with a clear teaching and learning need, then check the output, data considerations and your oversight." },
   ];
@@ -421,7 +421,7 @@ function NextStepActivity({ value, onChange }: { value: string; onChange: (value
 }
 
 function FourLensReview({ value, onChange }: { value: string; onChange: (value: string) => void }) {
-  return <TapChecklist prompt="Tap each question after considering it for your module." items={["Curriculum: What may need review in the learning outcomes, activities or assessment?", "Facilitation: How could students use AI purposefully while still doing the intended thinking, judging or performing?", "Assessment: What must students demonstrate themselves, and where might GenAI use be appropriate?", "Data and Tech-Enhanced T&L: What learning need could an AI tool or learning data support, and what would need checking before use?"]} tips={["Use the 3As to consider whether the intended capability is Anchor, Augment or Advance.", "Use PAIR to structure students' use of AI so it supports, rather than replaces, the intended learning.", "Check that the conditions and evidence of learning are clear.", "Consider learning value, suitability, information involved and human oversight."]} value={value} onChange={onChange} />;
+  return <TapChecklist prompt="Tap each question after considering it for your module." items={["Curriculum: What may need review in the learning outcomes, activities or assessment?", "Facilitation: How could students use AI purposefully while still doing the intended thinking, judging or performing?", "Assessment: What must students demonstrate themselves, and where might GenAI use be appropriate?", "Data and Tech-Enhanced T&L: What learning need could an AI tool or learning data support, and what would need checking before use?"]} tips={["Use the 3As to consider whether the intended capability is Anchor, Augment or Advance.", "Use PAIR to structure students' use of AI so it supports, rather than replaces, the intended learning.", "Check that the GenAI conditions and evidence of learning are clear.", "Consider learning fit, suitability, the information involved, output quality and human oversight."]} value={value} onChange={onChange} />;
 }
 
 function RoadmapStrip() {
@@ -889,6 +889,86 @@ function BringTogetherVisual() {
   );
 }
 
+function FourIdeasVisual() {
+  const ideas = [
+    { icon: UserRound, title: "AI-Ready Graduates", detail: "Develop strong human qualities, disciplinary expertise and the ability to use AI effectively and responsibly." },
+    { icon: BookOpen, title: "Curriculum and Learning Design", detail: "Use the 3As to review the competencies students need, and PAIR to structure purposeful learning with AI." },
+    { icon: Target, title: "Authentic Evidence of Learning", detail: "Begin with the learning outcome and make visible what students can do themselves and with AI." },
+    { icon: Bot, title: "Purposeful Use of Tools and Data", detail: "Use suitable AI tools and learning data where they add learning value, with appropriate checks and human oversight." },
+  ];
+  return (
+    <figure className="concept-visual four-ideas-visual" aria-label="Four ideas to carry forward">
+      <div className="lens-strip">
+        {ideas.map(({ icon: Icon, title, detail }) => (
+          <section key={title}>
+            <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
+            <b>{title}</b>
+            <small>{detail}</small>
+          </section>
+        ))}
+      </div>
+    </figure>
+  );
+}
+
+function QuizReadinessRecap() {
+  return (
+    <details className="policy-detail quiz-recap-accordion">
+      <summary>View Key Points to Remember</summary>
+      <div className="quiz-recap">
+        <section className="recap-panel recap-tone-2">
+          <div className="recap-panel-head"><i><BookOpen size={18} strokeWidth={2.1} aria-hidden="true" /></i><h4>Curriculum · 3As</h4></div>
+          <div className="recap-chip-row">
+            <div className="recap-chip"><b>Anchor</b><p>Capabilities students need to demonstrate through human and disciplinary judgement.</p></div>
+            <div className="recap-chip"><b>Augment</b><p>Productive use of AI to improve the quality or effectiveness of work, with appropriate oversight.</p></div>
+            <div className="recap-chip"><b>Advance</b><p>New AI-enabled possibilities, workflows or forms of professional practice.</p></div>
+          </div>
+          <p className="recap-note">Begin with the intended competency, then align the learning outcome, activities and assessment.</p>
+        </section>
+
+        <section className="recap-panel recap-tone-3">
+          <div className="recap-panel-head"><i><Lightbulb size={18} strokeWidth={2.1} aria-hidden="true" /></i><h4>Facilitation · PAIR</h4></div>
+          <div className="recap-pair-row">
+            <div className="recap-pair-step"><b>Problem</b><p>Define the task, requirements and intended outcome.</p></div>
+            <ArrowRight className="recap-pair-arrow" size={14} strokeWidth={2.2} aria-hidden="true" />
+            <div className="recap-pair-step"><b>AI</b><p>Select a suitable and permitted tool.</p></div>
+            <ArrowRight className="recap-pair-arrow" size={14} strokeWidth={2.2} aria-hidden="true" />
+            <div className="recap-pair-step"><b>Interaction</b><p>Test, evaluate, verify and refine the output.</p></div>
+            <ArrowRight className="recap-pair-arrow" size={14} strokeWidth={2.2} aria-hidden="true" />
+            <div className="recap-pair-step"><b>Reflection</b><p>Consider what was learnt and where human judgement was needed.</p></div>
+          </div>
+          <p className="recap-note">AI should support the intended thinking, judging or performing—not replace it.</p>
+        </section>
+
+        <section className="recap-panel recap-tone-4">
+          <div className="recap-panel-head"><i><ClipboardCheck size={18} strokeWidth={2.1} aria-hidden="true" /></i><h4>Assessment · NP&rsquo;s GenAI Policy</h4></div>
+          <ul className="recap-list">
+            <li>GenAI is allowed by default in summative assessment unless explicitly restricted or prohibited.</li>
+            <li>State any conditions clearly. Students must cite and declare their use.</li>
+            <li>For restricted use, specify what AI may support, what students must do themselves and what evidence is required.</li>
+            <li>Evidence should be proportionate; a complete AI chat history is not required by default.</li>
+            <li>AI-detection results or changes in writing style are not proof of misconduct.</li>
+            <li>Staff remain responsible for every grade and feedback decision.</li>
+          </ul>
+          <p className="recap-warning"><strong>Always prohibited:</strong> submitting purely AI-generated work as one&rsquo;s own; disguising AI content as original; relying solely on AI for insights or reflection; and simulating human interactions where real interaction is required.</p>
+        </section>
+
+        <section className="recap-panel recap-tone-5">
+          <div className="recap-panel-head"><i><ShieldCheck size={18} strokeWidth={2.1} aria-hidden="true" /></i><h4>Data and Tech-Enhanced T&amp;L</h4></div>
+          <p className="recap-lead">Start with the learning need, then consider:</p>
+          <ul className="recap-list">
+            <li>whether the tool or data use is suitable;</li>
+            <li>whether the information is approved for that tool and purpose;</li>
+            <li>whether the output is accurate and appropriate;</li>
+            <li>who interprets the information and decides what action to take.</li>
+          </ul>
+          <p className="recap-note">AI may draft, identify patterns or suggest possibilities. We retain professional judgement and responsibility.</p>
+        </section>
+      </div>
+    </details>
+  );
+}
+
 function ModulePreviewVisual() {
   const areas = [
     { icon: BookOpen, title: "Curriculum Design and Development", detail: "Use the 3As to review the competencies students need as professional practice changes." },
@@ -984,6 +1064,8 @@ export default function Home() {
   const genAiConditionsMarker = "<!--genai-conditions-check-->";
   const nextStepMarker = "<!--next-step-->";
   const pairApplyMarker = "<!--pair-apply-checklist-->";
+  const fourIdeasMarker = "<!--four-ideas-visual-->";
+  const quizRecapMarker = "<!--quiz-readiness-recap-->";
   const sectionMarkdown = withoutTitle(current.markdown);
   const hasInlineNextPrompt = /^\s*(\*\*Next\*\*|#{1,4}\s+Next)\s*$/m.test(sectionMarkdown);
   const markerRenderers: Record<string, ReactElement> = {
@@ -1002,6 +1084,8 @@ export default function Home() {
     [moduleReviewMarker]: <FourLensReview value={activityNotes.snapshotcheck ?? ""} onChange={(value) => setActivityValue("snapshotcheck", value)} />,
     [nextStepMarker]: <NextStepActivity value={activityNotes.nextstep ?? ""} onChange={(value) => setActivityValue("nextstep", value)} />,
     [pairApplyMarker]: <TapChecklist prompt="Tap each prompt once you have considered it for your activity." items={["what students should understand or do before using AI;", "what role AI should play;", "how students will evaluate and improve the output;", "what reflection or evidence will make their learning and judgement visible."]} value={activityNotes.pairapply ?? ""} onChange={(value) => setActivityValue("pairapply", value)} />,
+    [fourIdeasMarker]: <FourIdeasVisual />,
+    [quizRecapMarker]: <QuizReadinessRecap />,
   };
   const markerPattern = new RegExp(`(${Object.keys(markerRenderers).join("|")})`, "g");
   const contentSegments = sectionMarkdown.split(markerPattern).filter((segment) => segment !== "");

@@ -456,25 +456,19 @@ Choose a module you teach, lead or support. Consider each question once.
 
 ## Four Ideas to Carry Forward
 
-### AI-Ready Graduates
+<!--four-ideas-visual-->
 
-Develop strong human qualities, disciplinary expertise and the ability to use AI effectively and responsibly.
+## Before the Quiz
 
-### Curriculum and Learning Design
+The completion quiz checks your understanding of the key ideas introduced in this package.
 
-Use the 3As to review the competencies students need, and PAIR to structure purposeful learning with AI.
+<!--quiz-readiness-recap-->
 
-### Authentic Evidence of Learning
+You may revisit any section before attempting the quiz.
 
-Begin with the learning outcome and make visible what students can do themselves and with AI.
+## Choose One Small Next Step
 
-### Purposeful Use of Tools and Data
-
-Use suitable AI tools and learning data where they add learning value, with appropriate checks and human oversight.
-
-## Before You Leave
-
-### Choose One Small Next Step
+Before you leave, identify one practical action to take forward.
 
 <!--next-step-->
 
@@ -482,4 +476,4 @@ Use suitable AI tools and learning data where they add learning value, with appr
 
 AI-enabled T&L is not about using AI everywhere. It is about making deliberate choices that strengthen learning, preserve the capabilities students need to develop and prepare them for professional practice in an AI-enabled world.
 
-Complete the separately administered quiz to fulfil the package requirements.
+When you are ready, complete the separately administered quiz to fulfil the package requirements.
