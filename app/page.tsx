@@ -614,9 +614,6 @@ function HomeFlow() {
           continuing to develop strong disciplinary foundations, independent
           thinking and human judgement.
         </p>
-        <p className="home-quote-lead">
-          As Minister for Education Mr Desmond Lee noted:
-        </p>
         <figure className="home-quote">
           <blockquote>
             &ldquo;If we treat AI as a shortcut&hellip; we will diminish the
