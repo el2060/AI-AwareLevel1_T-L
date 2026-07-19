@@ -683,8 +683,7 @@ button { color: inherit; }
   50% { box-shadow: 0 0 0 9px var(--blue-soft); }
 }
 .roadmap-node-body { margin-top: 14px; max-width: 230px; }
-.roadmap-node small { display: block; color: var(--muted); font-size: 11px; font-weight: 750; letter-spacing: .06em; text-transform: uppercase; }
-.roadmap-node b { display: block; margin-top: 3px; font-size: 14.5px; line-height: 1.25; letter-spacing: -.012em; }
+.roadmap-node b { display: block; font-size: 14.5px; line-height: 1.25; letter-spacing: -.012em; }
 .roadmap-node p { margin: 6px 0 0; color: var(--ink-soft); font-size: 12.5px; line-height: 1.48; }
 
 .icon-panel-grid {
