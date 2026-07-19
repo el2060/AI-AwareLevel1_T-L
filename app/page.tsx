@@ -499,13 +499,44 @@ function StrategyMap() {
 }
 
 function UseCaseExplorer() {
+  const [active, setActive] = useState(0);
+  const uses = [
+    {
+      label: "Learning resource",
+      tool: "An approved AI assistant, such as M365 Copilot.",
+      task: "Create a simpler explanation, a step-by-step worksheet or a short self-check from the same source material.",
+      starter: "Create a simpler explanation and five self-check questions for [concept]. Preserve the technical meaning and intended learning standard. Flag anything you are uncertain how to simplify.",
+      check: "Check accuracy, the intended learning standard, and whether the examples are inclusive and accessible.",
+      decision: "Choose and adapt the format that is most useful for your learners.",
+    },
+    {
+      label: "Student practice",
+      tool: "Brightspace Lumi Tutor or a course-specific AI tutor.",
+      task: "Extend practice and feedback beyond class time using material and boundaries set for the module.",
+      starter: "Decide which topic needs additional practice, what sources the tutor can use, and when students should seek support from a lecturer instead.",
+      check: "Check that the tutor's explanations and feedback align with the module materials and intended learning.",
+      decision: "Set the role of the tool clearly so it complements, rather than replaces, facilitation.",
+    },
+    {
+      label: "Learning data",
+      tool: "An approved analytics view or approved AI-supported summary process.",
+      task: "Look for a pattern in participation, performance or feedback that may indicate a need for support.",
+      starter: "Review the original evidence and learner context before deciding whether a pattern needs action.",
+      check: "Check that the information and process are appropriate, and that the apparent pattern is supported by the evidence.",
+      decision: "Use your judgement to decide whether an intervention is needed and whether it helped.",
+    },
+  ];
+  const selected = uses[active];
   return (
-    <section className="use-case-explorer" aria-label="Worked example: create alternative learning formats">
+    <section className="use-case-explorer" aria-label="Three practical uses of AI tools and learning data">
+      <div className="use-case-picker" role="group" aria-label="Choose a teaching and learning use">
+        {uses.map((use, index) => <button key={use.label} type="button" aria-pressed={active === index} className={active === index ? "active" : ""} onClick={() => setActive(index)}>{use.label}</button>)}
+      </div>
       <div className="use-case-detail" aria-live="polite">
-        <div className="use-case-context"><div><strong>Possible tool</strong><p>An approved AI assistant, such as M365 Copilot.</p></div><div><strong>Task</strong><p>Create a simpler explanation, step-by-step worksheet or short self-check activity from the same source material.</p></div></div>
-        <div className="prompt-starter"><strong>Prompt starter</strong><p>Create a simpler explanation, a step-by-step worksheet and five self-check questions for [concept]. Preserve the technical meaning and intended learning standard. Flag anything you were uncertain how to simplify.</p></div>
-        <div className="use-case-checks"><div><b>Check</b><p>Confirm that the content is accurate, the intended learning standard is preserved, and the examples are inclusive and accessible.</p></div><div><b>Lecturer decision</b><p>Decide which format is suitable for your learners and whether additional support is needed.</p></div></div>
-        <p className="use-case-tool-note"><strong>Tool note:</strong> M365 Copilot is available within NP&rsquo;s environment for approved staff use. Other NP-supported or approved tools may be more suitable depending on the learning purpose and information involved.</p>
+        <div className="use-case-context"><div><strong>Possible approach</strong><p>{selected.tool}</p></div><div><strong>T&L purpose</strong><p>{selected.task}</p></div></div>
+        <div className="prompt-starter"><strong>Start here</strong><p>{selected.starter}</p></div>
+        <div className="use-case-checks"><div><b>Check</b><p>{selected.check}</p></div><div><b>Lecturer decision</b><p>{selected.decision}</p></div></div>
+        <p className="use-case-tool-note"><strong>Keep the purpose in view:</strong> a suitable tool supports a clear learning need; it does not determine the learning activity or decision for you.</p>
       </div>
     </section>
   );

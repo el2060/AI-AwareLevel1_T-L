@@ -951,6 +951,10 @@ button:focus-visible, summary:focus-visible, a:focus-visible {
 .activity-count { padding: 5px 8px; border-radius: 6px; background: var(--canvas); color: var(--muted); font-size: 11px; }
 
 .use-case-explorer { margin: var(--surface-space) 0; padding: 28px; border: 1px solid var(--line); border-radius: var(--surface-radius); background: #fff; box-shadow: var(--shadow-soft); }
+.use-case-picker { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-bottom: 14px; }
+.use-case-picker button { padding: 11px 12px; border: 1px solid var(--line); border-radius: 9px; background: #fff; color: var(--ink-soft); font: inherit; font-size: 13px; font-weight: 700; line-height: 1.25; text-align: left; cursor: pointer; transition: border-color .18s ease, background .18s ease, color .18s ease, transform .18s ease; }
+.use-case-picker button:hover { transform: translateY(-2px); border-color: #7f9dc7; }
+.use-case-picker button.active { border-color: #3f7dbd; background: var(--blue-soft); color: var(--blue-active); }
 .use-case-detail { padding: 20px; border: 1px solid #c9d6e8; border-radius: 13px; background: #f7f9fc; animation: feedback-in .22s ease both; }
 .use-case-context { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.6fr); gap: 10px; }
 .use-case-context > div { padding: 13px 14px; border: 1px solid var(--line); border-radius: 9px; background: #fff; }
@@ -1087,7 +1091,7 @@ button:focus-visible, summary:focus-visible, a:focus-visible {
   .recap-pair-arrow { transform: rotate(90deg); align-self: flex-start; margin-left: 8px; }
   .activity-block { padding: 22px 18px; }
   .tap-check-grid, .domain-spotter-options, .domain-spotter-options.trio { grid-template-columns: 1fr; }
-  .use-case-explorer { padding: 22px 18px; }.use-case-context, .use-case-checks { grid-template-columns: 1fr; }.use-case-detail { padding: 17px; }
+  .use-case-explorer { padding: 22px 18px; }.use-case-picker, .use-case-context, .use-case-checks { grid-template-columns: 1fr; }.use-case-detail { padding: 17px; }
   .strategy-map { padding: 22px 18px; }.graduate-core { flex-direction: column; align-items: flex-start; gap: 14px; padding: 22px 20px; }.strategy-path { gap: 14px; padding-left: 18px; }.strategy-path button { grid-template-columns: 40px minmax(0,1fr); gap: 14px; padding: 16px 14px; }.strategy-path i { width: 40px; height: 40px; }.strategy-path button::before { left: -15px; }
   .contents-panel { padding: 20px 15px; }
   .contents-heading h2 { font-size: 22px; }
