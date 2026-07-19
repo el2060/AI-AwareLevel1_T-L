@@ -426,9 +426,9 @@ function FourLensReview({ value, onChange }: { value: string; onChange: (value: 
 
 function RoadmapStrip() {
   const stages = [
-    { key: "awareness", icon: Eye, name: "Gen AI Awareness", tag: "I Know", detail: "Understand how AI affects learning, teaching and curriculum.", current: true },
-    { key: "integration", icon: Bot, name: "Gen AI Integration", tag: "I Use", detail: "Apply AI purposefully in learning, teaching and assessment.", current: false },
-    { key: "innovation", icon: Rocket, name: "Gen AI Innovation", tag: "I Innovate", detail: "Develop and scale new AI-enabled practices and solutions.", current: false },
+    { key: "awareness", icon: Eye, name: "AI Awareness", tag: "I Know", detail: "Understand how AI affects learning, teaching and curriculum.", current: true },
+    { key: "integration", icon: Bot, name: "AI Integration", tag: "I Use", detail: "Apply AI purposefully in learning, teaching and assessment.", current: false },
+    { key: "innovation", icon: Rocket, name: "AI Innovation", tag: "I Innovate", detail: "Develop and scale new AI-enabled practices and solutions.", current: false },
   ];
   return (
     <figure className="concept-visual roadmap-strip" aria-label="NP's AI in T&L Roadmap, progressing from awareness to integration to innovation">
@@ -443,7 +443,7 @@ function RoadmapStrip() {
             <div className={`roadmap-node${stage.current ? " current" : ""}`} key={stage.key}>
               <span className="roadmap-dot"><Icon size={stage.current ? 20 : 16} strokeWidth={2.1} aria-hidden="true" /></span>
               <div className="roadmap-node-body">
-                {stage.current && <span className="roadmap-current-tag">This package</span>}
+                {stage.current && <span className="roadmap-current-tag">You are here</span>}
                 <small>{stage.tag}</small>
                 <b>{stage.name}</b>
                 <p>{stage.detail}</p>
@@ -618,11 +618,12 @@ function HomeFlow() {
           lecturers&rsquo; T&amp;L practice. This package builds on the TLCF by
           applying an AI lens to four domains:
         </p>
-        <p className="home-domain-list">
-          Curriculum Design and Development <i aria-hidden="true">·</i> Facilitation
-          of Learning <i aria-hidden="true">·</i> Assessment <i aria-hidden="true">·</i> Data
-          and Tech-Enhanced T&amp;L
-        </p>
+        <div className="home-domain-chips">
+          <span className="home-domain-chip chip-1"><BookOpen size={14} strokeWidth={2.2} aria-hidden="true" />Curriculum Design and Development</span>
+          <span className="home-domain-chip chip-2"><Lightbulb size={14} strokeWidth={2.2} aria-hidden="true" />Facilitation of Learning</span>
+          <span className="home-domain-chip chip-3"><ClipboardCheck size={14} strokeWidth={2.2} aria-hidden="true" />Assessment</span>
+          <span className="home-domain-chip chip-4"><ShieldCheck size={14} strokeWidth={2.2} aria-hidden="true" />Data and Tech-Enhanced T&amp;L</span>
+        </div>
         <p>
           It considers how AI affects what students need to learn, how learning
           is facilitated and assessed, and how tools and learning data are used.
