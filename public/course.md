@@ -41,7 +41,7 @@ The next four sections show how NP’s five strategies connect to four TLCF doma
 
 <!--module-preview-->
 
-> The four areas connect. A decision in one area may also shape the others.
+> Together, these four areas provide a practical way to review one module in an AI-enabled context.
 
 ## Keep One of Your Modules in Mind
 
