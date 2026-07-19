@@ -642,7 +642,7 @@ button { color: inherit; }
 .roadmap-node { position: relative; flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 8px; }
 .roadmap-current-tag {
   position: absolute;
-  top: 0;
+  top: -28px;
   left: 50%;
   transform: translateX(-50%);
   padding: 3px 8px;
@@ -986,7 +986,7 @@ button { color: inherit; }
   .roadmap-dot-wrap { height: auto; }
   .roadmap-dot { flex: 0 0 30px; }
   .roadmap-node.current .roadmap-dot { flex-basis: 38px; }
-  .roadmap-current-tag { left: 44px; transform: none; }
+  .roadmap-current-tag { top: -22px; left: 0; transform: none; }
   .assessment-focus-grid { grid-template-columns: 1fr; }
   .assessment-focus-card { grid-template-columns: 36px minmax(0,1fr); gap: 10px; padding: 13px; }
   .assessment-focus-card i { width: 36px; height: 36px; }
