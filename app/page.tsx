@@ -305,7 +305,7 @@ const partIcons: Record<number, typeof BookOpen> = {
 
 const sectionBridges = [
   "See how these four areas connect to NP’s direction for AI-enabled T&L.",
-  "Begin with curriculum: what competencies should your students develop and demonstrate as professional practice changes?",
+  "Begin with curriculum: what competencies should our students develop and demonstrate as professional practice changes?",
   "Explore PAIR, a simple framework for helping students use AI purposefully, critically and responsibly in their learning.",
   "Consider how clear GenAI conditions and assessment design can keep learning authentic, credible and visible.",
   "Explore how AI tools and learning data can be used purposefully to support learning, while protecting information, verifying outputs and retaining human oversight.",
@@ -466,11 +466,11 @@ function RoadmapAccordion() {
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
-    { name: "Embed AI-Integrated Pedagogy · PAIR", question: "How can you help students learn and work with AI purposefully, critically and responsibly?", icon: Lightbulb, covers: "Part 3 · Facilitation of Learning", coversTone: 3 },
-    { name: "Transform the Curriculum · 3As", question: "What competencies should your students develop and demonstrate as professional practice changes?", icon: BookOpen, covers: "Part 2 · Curriculum Design and Development", coversTone: 2 },
-    { name: "Redesign Assessment", question: "How can you design assessment that provides authentic and credible evidence of learning in an AI-enabled context?", icon: ClipboardCheck, covers: "Part 4 · Assessment", coversTone: 4 },
-    { name: "Enable Personalised Learning", question: "How can AI extend opportunities for practice, feedback and coaching in your module?", icon: Bot, covers: "Part 5 · Data and Tech-Enhanced T&L", coversTone: 5 },
-    { name: "Strengthen Human Skills and Resilience", question: "How can you strengthen the human qualities students need in an AI-enabled world?", icon: Users, covers: "Woven through all four parts", coversTone: 0 },
+    { name: "Embed AI-Integrated Pedagogy · PAIR", question: "How can we help students learn and work with AI purposefully, critically and responsibly?", icon: Lightbulb, covers: "Part 3 · Facilitation of Learning", coversTone: 3 },
+    { name: "Transform the Curriculum · 3As", question: "What competencies should our students develop and demonstrate as professional practice changes?", icon: BookOpen, covers: "Part 2 · Curriculum Design and Development", coversTone: 2 },
+    { name: "Redesign Assessment", question: "How can we design assessment that provides authentic and credible evidence of learning in an AI-enabled context?", icon: ClipboardCheck, covers: "Part 4 · Assessment", coversTone: 4 },
+    { name: "Enable Personalised Learning", question: "How can AI extend opportunities for practice, feedback and coaching in our modules?", icon: Bot, covers: "Part 5 · Data and Tech-Enhanced T&L", coversTone: 5 },
+    { name: "Strengthen Human Skills and Resilience", question: "How can we strengthen the human qualities students need in an AI-enabled world?", icon: Users, covers: "Woven through all four parts", coversTone: 0 },
   ];
   return (
     <section className="strategy-map" aria-label="How NP approaches connect across this package">
@@ -599,30 +599,38 @@ function HomeFlow() {
         <span>Welcome</span>
         <h2>T&amp;L in an AI-Enabled Context</h2>
         <p>
-          AI is increasingly shaping how your students learn, how professional
+          AI is increasingly shaping how our students learn, how professional
           practice is changing and the capabilities NP graduates will need.
         </p>
         <p>
           Used purposefully, AI can extend opportunities for practice, feedback
-          and personalised support. It can also help you develop learning
+          and personalised support. It can also help us develop learning
           resources, identify learning needs and provide more responsive
-          support. At the same time, AI can become a shortcut that bypasses the
+          support. But AI can also become a shortcut that bypasses the
           thinking, judgement or performance students are meant to develop.
+        </p>
+        <p>
+          This is the central challenge for teaching and learning in an
+          AI-enabled context: helping students benefit from AI while continuing
+          to develop strong disciplinary foundations, independent thinking and
+          human judgement.
+        </p>
+        <p className="home-quote-lead">
+          As Minister for Education Mr Desmond Lee noted:
         </p>
         <figure className="home-quote">
           <blockquote>
-            If we treat AI as a shortcut, to simply bypass thinking, we will
-            diminish the very purpose of education. But if we treat AI as a
-            catalyst, a tool to sharpen what truly matters in education, it can
-            strengthen our IHLs and strengthen our people.
+            &ldquo;If we treat AI as a shortcut&hellip; we will diminish the
+            very purpose of education. But if we treat AI as a catalyst&hellip;
+            it can strengthen our IHLs and strengthen our people.&rdquo;
           </blockquote>
           <figcaption>
-            <cite>Mr Desmond Lee</cite>, Minister for Education <i aria-hidden="true">·</i> April 2026
+            Mr Desmond Lee, Minister for Education <i aria-hidden="true">·</i> April 2026
           </figcaption>
         </figure>
         <p>
           The T&amp;L Competency Framework (TLCF) sets out the core domains of
-          your T&amp;L practice. This package builds on the TLCF by applying an
+          our T&amp;L practice. This package builds on the TLCF by applying an
           AI lens to four domains:
         </p>
         <div className="home-domain-chips">
@@ -632,9 +640,9 @@ function HomeFlow() {
           <span className="home-domain-chip chip-4"><ShieldCheck size={14} strokeWidth={2.2} aria-hidden="true" />Data and Tech-Enhanced T&amp;L</span>
         </div>
         <p>
-          You will consider how AI affects what students need to learn, how you
-          facilitate and assess learning, and how AI tools and learning data can
-          be used purposefully and responsibly.
+          Across these areas, we will consider how AI affects what students
+          need to learn, how learning is facilitated and assessed, and how AI
+          tools and learning data can be used purposefully and responsibly.
         </p>
       </article>
 
@@ -885,7 +893,7 @@ function BringTogetherVisual() {
 
 function ModulePreviewVisual() {
   const areas = [
-    { icon: BookOpen, title: "Curriculum Design and Development", detail: "Use the 3As to review the competencies your students need as professional practice changes." },
+    { icon: BookOpen, title: "Curriculum Design and Development", detail: "Use the 3As to review the competencies our students need as professional practice changes." },
     { icon: Lightbulb, title: "Facilitation of Learning", detail: "Use PAIR and personalised learning approaches to help students learn and work with AI purposefully." },
     { icon: ClipboardCheck, title: "Assessment", detail: "Apply NP's GenAI assessment requirements and design approaches to keep learning and students' own contribution authentic, credible and visible." },
     { icon: ShieldCheck, title: "Data and Tech-Enhanced T&L", detail: "Use suitable AI tools and learning data to enhance learning support, with appropriate checks and human oversight." },

@@ -290,6 +290,13 @@ button { color: inherit; }
 .home-domain-chip.chip-3 { background: var(--orange); color: #70340b; }
 .home-domain-chip.chip-4 { background: var(--teal); color: #155c58; }
 .home-domain-chips + p { margin-top: 22px; }
+.home-intro-card .home-quote-lead {
+  margin-top: 18px;
+  color: #445364;
+  font-size: 15px;
+  font-weight: 620;
+}
+.home-quote-lead + .home-quote { margin-top: 10px; }
 .home-quote { margin: 26px 0; }
 .home-quote blockquote {
   margin: 0;
@@ -303,12 +310,11 @@ button { color: inherit; }
 }
 .home-quote figcaption {
   margin-top: 12px;
-  color: #4b6178;
+  color: #3a4c63;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: .01em;
 }
-.home-quote figcaption cite { font-style: normal; }
 .home-quote figcaption i { margin: 0 6px; color: #9fb9d1; font-style: normal; }
 
 .home-learn-stack { display: grid; gap: 22px; }
