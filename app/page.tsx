@@ -609,11 +609,10 @@ function HomeFlow() {
           support. But AI can also become a shortcut that bypasses the
           thinking, judgement or performance students are meant to develop.
         </p>
-        <p>
-          This is the central challenge for teaching and learning in an
-          AI-enabled context: helping students benefit from AI while continuing
-          to develop strong disciplinary foundations, independent thinking and
-          human judgement.
+        <p className="home-challenge">
+          The challenge for T&amp;L is to help students benefit from AI while
+          continuing to develop strong disciplinary foundations, independent
+          thinking and human judgement.
         </p>
         <p className="home-quote-lead">
           As Minister for Education Mr Desmond Lee noted:
@@ -628,6 +627,7 @@ function HomeFlow() {
             Mr Desmond Lee, Minister for Education <i aria-hidden="true">·</i> April 2026
           </figcaption>
         </figure>
+        <h3>Building on the TLCF</h3>
         <p>
           The T&amp;L Competency Framework (TLCF) sets out the core domains of
           our T&amp;L practice. This package builds on the TLCF by applying an
