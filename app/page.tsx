@@ -544,7 +544,7 @@ function UseCaseExplorer() {
         <div className="use-case-context"><div><strong>Possible approach</strong><p>{selected.tool}</p></div><div><strong>T&L purpose</strong><p>{selected.task}</p></div></div>
         <div className="prompt-starter"><strong>Start here</strong><p>{selected.starter}</p></div>
         <div className="use-case-checks"><div><b>Check</b><p>{selected.check}</p></div><div><b>Lecturer decision</b><p>{selected.decision}</p></div></div>
-        <p className="use-case-tool-note"><strong>Keep the purpose in view:</strong> a suitable tool supports a clear learning need; it does not determine the learning activity or decision for you.</p>
+        <p className="use-case-tool-note"><strong>Keep the learning purpose in view.</strong> The tool supports the activity; the lecturer determines how it is used.</p>
       </div>
     </section>
   );
@@ -586,7 +586,7 @@ function TandlUsesExplorer() {
   const Icon = selected.icon;
   return (
     <section className="tandl-uses-explorer" aria-label="Four practical uses of AI tools and learning data">
-      <div className="tandl-uses-intro"><span>Choose a use to explore</span><p>Each use starts with a T&L purpose and ends with lecturer judgement.</p></div>
+      <div className="tandl-uses-intro"><span>Choose a use to explore</span><p>Explore how each use can support a T&L purpose and what the lecturer still needs to decide.</p></div>
       <div className="tandl-use-nav" role="group" aria-label="Choose a practical use">
         {uses.map((use, index) => {
           const UseIcon = use.icon;
@@ -604,13 +604,15 @@ function TandlUsesExplorer() {
 
 function ToolGuidance() {
   return (
-    <details className="policy-detail tool-guidance-detail">
-      <summary>Open current tool and information guidance</summary>
-      <div>
-        <p>When using student information, institutional data or other protected materials, follow NP’s current guidance on suitable tools and information handling.</p>
-        <p>Refer to the latest NP guidance for details on M365 Copilot, Pair Chat and other supported tools.</p>
+    <section className="tool-information-guidance" aria-label="Using information in AI tools">
+      <p className="tool-information-intro">The information you may enter depends on the tool being used.</p>
+      <div className="tool-information-list">
+        <div><strong>M365 Copilot</strong><span>Up to <b>Official (Closed) – Restricted</b> within NP’s Microsoft 365 environment.</span></div>
+        <div><strong>Pair Chat <small>pair.gov.sg</small></strong><span>Up to <b>Official (Closed) – Sensitive Normal</b>.</span></div>
+        <div><strong>Public or personal-account AI tools</strong><span>Do not enter personal, sensitive, confidential or proprietary information.</span></div>
       </div>
-    </details>
+      <p className="tool-information-closing">Check that the tool is suitable for the information involved, and review its outputs before use.</p>
+    </section>
   );
 }
 

@@ -384,7 +384,7 @@ Is the information appropriate to use, and is the output accurate, relevant and 
 
 Who reviews the output, decides what action to take and checks whether it helped?
 
-### Tool and Information Guidance
+### Using Information in AI Tools
 
 <!--tool-guidance-->
 
