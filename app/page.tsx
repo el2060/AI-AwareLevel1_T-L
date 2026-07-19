@@ -426,9 +426,9 @@ function FourLensReview({ value, onChange }: { value: string; onChange: (value: 
 
 function RoadmapStrip() {
   const stages = [
-    { key: "awareness", icon: Eye, name: "AI Awareness", tag: "I Know", detail: "Understand how AI affects learning, teaching and curriculum.", current: true },
-    { key: "integration", icon: Bot, name: "AI Integration", tag: "I Use", detail: "Apply AI purposefully in learning, teaching and assessment.", current: false },
-    { key: "innovation", icon: Rocket, name: "AI Innovation", tag: "I Innovate", detail: "Develop and scale new AI-enabled practices and solutions.", current: false },
+    { key: "awareness", icon: Eye, name: "AI Awareness", detail: "Understand how AI affects learning, teaching and curriculum.", current: true },
+    { key: "integration", icon: Bot, name: "AI Integration", detail: "Apply AI purposefully in learning, teaching and assessment.", current: false },
+    { key: "innovation", icon: Rocket, name: "AI Innovation", detail: "Develop and scale new AI-enabled practices and solutions.", current: false },
   ];
   return (
     <figure className="concept-visual roadmap-strip" aria-label="NP's AI in T&L Roadmap, progressing from awareness to integration to innovation">
@@ -438,12 +438,11 @@ function RoadmapStrip() {
           const Icon = stage.icon;
           return (
             <div className={`roadmap-node${stage.current ? " current" : ""}`} key={stage.key}>
-              {stage.current && <span className="roadmap-current-tag">You are here</span>}
+              {stage.current && <span className="roadmap-current-tag">You are here: {stage.name}</span>}
               <span className="roadmap-dot-wrap">
                 <span className="roadmap-dot"><Icon size={stage.current ? 20 : 16} strokeWidth={2.1} aria-hidden="true" /></span>
               </span>
               <div className="roadmap-node-body">
-                <small>{stage.tag}</small>
                 <b>{stage.name}</b>
                 <p>{stage.detail}</p>
               </div>
@@ -557,7 +556,7 @@ function OpeningVisual() {
     },
     {
       title: "Assessment",
-      detail: "How assessment keeps learning and student contribution authentic, credible and visible.",
+      detail: "How assessment keeps learning and students' own contribution authentic, credible and visible.",
       icon: ClipboardCheck,
     },
     {
@@ -591,7 +590,7 @@ function HomeFlow() {
     "recognise how AI is changing the competencies students need and the implications for curriculum design",
     "explain how AI can support learning and practice without replacing the intended thinking, judgement or performance",
     "apply NP's GenAI policy requirements for summative assessment to clarify conditions and make students' learning and contribution visible",
-    "identify appropriate uses of AI tools and learning data, and apply basic considerations for purposeful and responsible use",
+    "identify appropriate uses of AI tools and learning data, and apply key considerations for purposeful and responsible use",
   ];
 
   return (
@@ -606,9 +605,9 @@ function HomeFlow() {
         <p>
           Used purposefully, AI can extend opportunities for practice, feedback
           and personalised support. It can also help you develop learning
-          resources, understand learning needs and respond more effectively. At
-          the same time, AI can become a shortcut that bypasses the thinking,
-          judgement or performance students are meant to develop.
+          resources, identify learning needs and provide more responsive
+          support. At the same time, AI can become a shortcut that bypasses the
+          thinking, judgement or performance students are meant to develop.
         </p>
         <figure className="home-quote">
           <blockquote>
@@ -643,7 +642,7 @@ function HomeFlow() {
         <article className="home-outcome-card">
           <header>
             <span>What You Will Learn</span>
-            <p>By the end of this module, you will be able to:</p>
+            <p>By the end of this package, you will be able to:</p>
           </header>
           <ol>
             {outcomes.map((outcome) => (
@@ -659,7 +658,7 @@ function HomeFlow() {
           <span>Learning Time</span>
           <strong>Up to 2 hours</strong>
           <p>
-            The programme includes the learning content, activities and
+            The package includes the learning content, activities and
             completion quiz. You may move through the sections at your own pace
             and spend more time on areas most relevant to your role or module.
           </p>
@@ -888,8 +887,8 @@ function ModulePreviewVisual() {
   const areas = [
     { icon: BookOpen, title: "Curriculum Design and Development", detail: "Use the 3As to review the competencies your students need as professional practice changes." },
     { icon: Lightbulb, title: "Facilitation of Learning", detail: "Use PAIR and personalised learning approaches to help students learn and work with AI purposefully." },
-    { icon: ClipboardCheck, title: "Assessment", detail: "Apply NP's assessment approach to keep learning and student contribution authentic, credible and visible." },
-    { icon: ShieldCheck, title: "Data and Tech-Enhanced T&L", detail: "Use suitable AI tools and learning data to enhance support, with appropriate checks and human oversight." },
+    { icon: ClipboardCheck, title: "Assessment", detail: "Apply NP's GenAI assessment requirements and design approaches to keep learning and students' own contribution authentic, credible and visible." },
+    { icon: ShieldCheck, title: "Data and Tech-Enhanced T&L", detail: "Use suitable AI tools and learning data to enhance learning support, with appropriate checks and human oversight." },
   ];
   return (
     <figure className="concept-visual module-preview-visual" aria-label="What the next four sections cover">

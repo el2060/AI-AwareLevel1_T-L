@@ -27,7 +27,7 @@ The programme includes the learning content, activities and completion quiz. You
 
 ## Where This Package Sits
 
-This Level 1 package provides the AI-Aware foundation for NP teaching staff.
+This Level 1 package introduces the AI-Aware foundation for NP teaching staff.
 
 It helps you understand how AI affects curriculum, facilitation, assessment, and data and technology-enhanced T&L. Further development will focus on applying and integrating AI more deeply in your teaching practice.
 
@@ -37,7 +37,7 @@ It helps you understand how AI affects curriculum, facilitation, assessment, and
 
 ## How the Strategies Connect to Your T&L Practice
 
-The five strategies are applied through four connected TLCF domains.
+The next four sections show how NP’s five strategies connect to four TLCF domains in your T&L practice.
 
 <!--module-preview-->
 
@@ -45,7 +45,7 @@ The five strategies are applied through four connected TLCF domains.
 
 ## Keep One of Your Modules in Mind
 
-As you work through the next four sections, keep one module you teach, lead or support in mind. Use it to relate the ideas to your own T&L practice.
+As you work through the next four sections, keep one module you teach, lead or support in mind. Use it to connect the ideas to your own T&L practice.
 
 ---
 
