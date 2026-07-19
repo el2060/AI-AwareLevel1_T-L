@@ -53,7 +53,7 @@ As you work through the next four sections, keep one module you teach, lead or s
 
 ## Review Curriculum for AI-Enabled Professional Practice
 
-As AI changes professional practice, lecturers need to review the competencies students should develop and demonstrate, including:
+As AI changes professional practice, review the competencies students should develop and demonstrate, including:
 
 - which human and disciplinary capabilities remain essential;
 - how students should use AI productively;
@@ -123,7 +123,7 @@ Use the 3As to identify the competencies students need, then align the learning 
 
 NP uses the PAIR framework to help students learn and solve problems with AI purposefully, critically and responsibly.
 
-Students carry out the PAIR process. Lecturers design the task and provide the level of structure, choice and support appropriate to students' readiness and the intended learning.
+Students carry out the PAIR process. You design the task and provide the level of structure, choice and support appropriate to students' readiness and the intended learning.
 
 PAIR is:
 
@@ -149,9 +149,9 @@ PAIR can be applied across disciplines, either within an existing learning activ
 
 ## Designing the Scaffolding
 
-Students carry out PAIR. Lecturers design the conditions that enable them to do so.
+Students carry out PAIR. You design the conditions that enable them to do so.
 
-| PAIR stage      | Lecturers design for                                                                          |
+| PAIR stage      | You design for                                                                                |
 | --------------- | ----------------------------------------------------------------------------------------------- |
 | **Problem**     | The intended learning, task boundaries and degree of openness.                                  |
 | **AI**          | Suitable and accessible tool choices, and whether students should justify their selection.     |
@@ -196,7 +196,7 @@ Then decide what level of structure and choice your students need.
 
 PAIR helps students define the task, select a suitable tool, interact critically with AI and reflect on their learning.
 
-Lecturers design the conditions and scaffolding. AI should support the intended learning—not replace it.
+You design the conditions and scaffolding. AI should support the intended learning—not replace it.
 
 ---
 
@@ -204,7 +204,7 @@ Lecturers design the conditions and scaffolding. AI should support the intended 
 
 ## Applying an AI Lens to Assessment
 
-The TLCF Assessment domain focuses on implementing assessment and ensuring its quality. In a GenAI-enabled context, lecturers also need to clarify how AI may be used while ensuring that the intended learning and the student’s own contribution remain visible.
+The TLCF Assessment domain focuses on implementing assessment and ensuring its quality. In a GenAI-enabled context, clarify how AI may be used while ensuring that the intended learning and students’ own contribution remain visible.
 
 ## Two Assessment Priorities
 
@@ -350,7 +350,7 @@ Begin with the learning outcome and use the 3As to clarify the intended capabili
 
 ## How AI Extends Data and Tech-Enhanced T&L
 
-AI extends how lecturers integrate technology into learning and use data to understand and respond to learner needs.
+AI extends how we can integrate technology into learning and use data to understand and respond to learner needs.
 
 This involves two connected practices:
 
@@ -376,7 +376,7 @@ AI can provide a useful first pass for tasks such as:
 - checking assignment clarity;
 - summarising feedback themes.
 
-The lecturer provides the context and intended learning, then checks, adapts and decides what to use.
+You provide the context and intended learning, then check, adapt and decide what to use.
 
 ### 2. Extend Student Learning Support
 
@@ -404,7 +404,7 @@ Learning data can help lecturers:
 - plan targeted activities or interventions;
 - review whether the support is helping.
 
-AI-generated summaries, patterns or predictions are starting points—not decisions. Lecturers interpret the information in context before deciding what action is appropriate.
+AI-generated summaries, patterns or predictions are starting points—not decisions. Interpret the information in context before deciding what action is appropriate.
 
 ## Example · Create Alternative Formats
 
@@ -462,7 +462,7 @@ Develop strong human qualities, disciplinary expertise and the ability to use AI
 
 ### Curriculum and Learning Design
 
-Use the student AI baseline to identify foundational competencies, the 3As to connect them to disciplinary practice and PAIR to structure learning with AI.
+Use the student AI baseline and 3As to review competencies, and PAIR to structure purposeful learning with AI.
 
 ### Authentic Evidence of Learning
 
@@ -480,8 +480,6 @@ Use suitable AI tools and learning data where they add learning value, with appr
 
 ## Closing
 
-> **Being AI-Aware means recognising what AI changes in T&L, applying NP's key approaches and requirements, and knowing when further guidance is needed.**
+AI-enabled T&L is not about using AI everywhere. It is about making deliberate choices that strengthen learning, preserve the intended thinking and capabilities, and prepare students for professional practice in an AI-enabled world.
 
-AI-enabled T&L is not about using AI everywhere. It is about making deliberate choices that strengthen learning and prepare students for professional practice in an AI-enabled world.
-
-Complete the separately administered quiz to fulfil the programme requirements.
+Complete the separately administered quiz to fulfil the package requirements.

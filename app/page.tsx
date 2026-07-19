@@ -537,7 +537,7 @@ function QuickSenseCheck() {
           );
         })}
       </div>
-      <p className="sense-check-closing"><strong>AI can extend support, identify patterns and suggest possibilities.</strong> The lecturer checks, interprets and decides.</p>
+      <p className="sense-check-closing"><strong>AI can extend support, identify patterns and suggest possibilities.</strong> You check, interpret and decide.</p>
     </section>
   );
 }
@@ -590,7 +590,7 @@ function HomeFlow() {
     "recognise how AI is changing the competencies students need and the implications for curriculum design",
     "explain how AI can support learning and practice without replacing the intended thinking, judgement or performance",
     "apply NP's GenAI policy requirements for summative assessment to clarify conditions and make students' learning and contribution visible",
-    "identify appropriate uses of AI tools and learning data, and apply key considerations for purposeful and responsible use",
+    "identify appropriate uses of AI tools and learning data and apply key considerations for purposeful and responsible use",
   ];
 
   return (
@@ -626,9 +626,10 @@ function HomeFlow() {
         </figure>
         <h3>Building on the TLCF</h3>
         <p>
-          The T&amp;L Competency Framework (TLCF) sets out the core domains of
-          our T&amp;L practice. This package builds on the TLCF by applying an
-          AI lens to four domains:
+          The T&amp;L Competency Framework (TLCF) sets out six domains of
+          T&amp;L practice. This package applies an AI lens to four selected
+          domains: the three functional T&amp;L domains and Data and
+          Tech-Enhanced T&amp;L.
         </p>
         <div className="home-domain-chips">
           <span className="home-domain-chip chip-1"><BookOpen size={14} strokeWidth={2.2} aria-hidden="true" />Curriculum Design and Development</span>
@@ -873,8 +874,8 @@ function BringTogetherVisual() {
     { icon: ShieldCheck, title: "Data and Tools", detail: "What needs checking before use?" },
   ];
   return (
-    <figure className="concept-visual bring-together-visual" aria-label="Four lenses for reviewing one module">
-      <figcaption><span>Bring it together</span><strong>Review one module through four lenses</strong></figcaption>
+    <figure className="concept-visual bring-together-visual" aria-label="Four areas for reviewing one module">
+      <figcaption><span>Bring it together</span><strong>Review one module through four areas</strong></figcaption>
       <div className="lens-strip">
         {lenses.map(({ icon: Icon, title, detail }) => (
           <section key={title}>
@@ -890,7 +891,7 @@ function BringTogetherVisual() {
 
 function ModulePreviewVisual() {
   const areas = [
-    { icon: BookOpen, title: "Curriculum Design and Development", detail: "Use the 3As to review the competencies our students need as professional practice changes." },
+    { icon: BookOpen, title: "Curriculum Design and Development", detail: "Use the 3As to review the competencies students need as professional practice changes." },
     { icon: Lightbulb, title: "Facilitation of Learning", detail: "Use PAIR and personalised learning approaches to help students learn and work with AI purposefully." },
     { icon: ClipboardCheck, title: "Assessment", detail: "Apply NP's GenAI assessment requirements and design approaches to keep learning and students' own contribution authentic, credible and visible." },
     { icon: ShieldCheck, title: "Data and Tech-Enhanced T&L", detail: "Use suitable AI tools and learning data to enhance learning support, with appropriate checks and human oversight." },
