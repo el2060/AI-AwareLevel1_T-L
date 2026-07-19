@@ -25,15 +25,15 @@ The programme includes the learning content, activities and completion quiz. You
 
 # Part 1: NP’s Approach to AI-Enabled Teaching & Learning
 
-## Keep One of Your Modules in Mind
-
-As you work through the next four sections, think of one module you teach, lead or support. Use it to connect the ideas in each section to your own T&L practice.
-
 <!--strategy-map-->
 
-The four sections explore:
+## How the Strategies Connect to T&L Practice
+
+The five strategies are applied through four connected areas of T&L practice:
 
 <!--module-preview-->
+
+> Together, these four areas provide a practical way to apply NP’s AI-enabled T&L strategies within a module.
 
 ## The Four Areas Work Together
 
@@ -46,11 +46,17 @@ A single T&L decision may involve more than one area. For example, introducing a
 
 Changes in one area may therefore have implications for the others.
 
+## Keep One of Your Modules in Mind
+
+As you work through the next four sections, think of one module you teach, lead or support. Use it to connect the ideas to your own T&L practice.
+
+**Next:** Begin with curriculum — what competencies should students develop and demonstrate as professional practice changes?
+
 ---
 
 # Part 2: Curriculum Design and Development — What Competencies Do Students Need?
 
-## Review Curriculum for an AI-Enabled Profession
+## Review Curriculum for AI-Enabled Professional Practice
 
 As AI changes professional practice, lecturers need to review the competencies students should develop and demonstrate, including:
 
@@ -68,7 +74,7 @@ Once the intended competency is clear, ensure the rest of the module supports it
 
 <!--alignment-flow-visual-->
 
-> Learning outcomes, activities and assessment should work together. Whether the focus is distinctly human capability, productive AI use or new AI-enabled practice, students need suitable opportunities to practise before they are assessed.
+> Whether the focus is Anchor, Augment or Advance, the learning outcome, activities and assessment should work together so that students can develop and demonstrate the intended competency.
 
 ## Illustrative Applications
 

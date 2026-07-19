@@ -826,9 +826,9 @@ function AssessmentFocusVisual() {
 
 function AlignmentCheckVisual() {
   const items = [
-    { icon: Target, title: "Learning outcome", detail: "Is the intended competency stated clearly?" },
-    { icon: BookOpen, title: "Learning activities", detail: "Do students have suitable opportunities to practise and develop it?" },
-    { icon: ClipboardCheck, title: "Assessment", detail: "Does the assessment provide credible evidence of the intended competency and the student's own contribution?" },
+    { icon: Target, title: "Learning outcome", detail: "Does it state the intended competency clearly?" },
+    { icon: BookOpen, title: "Learning activities", detail: "Do they help students develop the intended competency?" },
+    { icon: ClipboardCheck, title: "Assessment", detail: "Does it provide credible evidence of the intended competency and the student's own contribution?" },
   ];
   return (
     <figure className="concept-visual" aria-label="Check constructive alignment across learning outcome, activities and assessment">
@@ -869,10 +869,10 @@ function BringTogetherVisual() {
 
 function ModulePreviewVisual() {
   const areas = [
-    { icon: BookOpen, title: "Curriculum Design and Development", detail: "The competencies students need as professional practice changes." },
-    { icon: Lightbulb, title: "Facilitation of Learning", detail: "How AI can support learning and practice without replacing the intended thinking, judgement or performance." },
-    { icon: ClipboardCheck, title: "Assessment", detail: "How assessment keeps learning and student contribution authentic, credible and visible." },
-    { icon: ShieldCheck, title: "Data and Tech-Enhanced T&L", detail: "How AI tools and learning data can enhance learning safely and responsibly." },
+    { icon: BookOpen, title: "Curriculum Design and Development", detail: <>Translates <strong>Transform the Curriculum</strong> into the competencies students need as professional practice changes, while strengthening essential human and disciplinary capabilities.</> },
+    { icon: Lightbulb, title: "Facilitation of Learning", detail: <>Applies <strong>PAIR</strong> and personalised learning approaches to help students learn and work with AI purposefully, critically and responsibly.</> },
+    { icon: ClipboardCheck, title: "Assessment", detail: <>Puts <strong>Redesign Assessment</strong> into practice by ensuring learning and student contribution remain authentic, credible and visible.</> },
+    { icon: ShieldCheck, title: "Data and Tech-Enhanced T&L", detail: <>Supports <strong>personalised learning</strong> through suitable AI tools and learning data, with appropriate checking and human oversight.</> },
   ];
   return (
     <figure className="concept-visual module-preview-visual" aria-label="What the next four sections cover">
