@@ -305,7 +305,7 @@ const partIcons: Record<number, typeof BookOpen> = {
 
 const sectionBridges = [
   "See how these four areas connect to NP’s direction for AI-enabled T&L.",
-  "Begin with curriculum: what competencies should students develop and demonstrate as AI changes professional practice?",
+  "Begin with curriculum: what competencies should your students develop and demonstrate as professional practice changes?",
   "Explore PAIR, a simple framework for helping students use AI purposefully, critically and responsibly in their learning.",
   "Consider how clear GenAI conditions and assessment design can keep learning authentic, credible and visible.",
   "Explore how AI tools and learning data can be used purposefully to support learning, while protecting information, verifying outputs and retaining human oversight.",
@@ -432,18 +432,17 @@ function RoadmapStrip() {
   ];
   return (
     <figure className="concept-visual roadmap-strip" aria-label="NP's AI in T&L Roadmap, progressing from awareness to integration to innovation">
-      <figcaption>
-        <strong>NP&rsquo;s AI in T&amp;L Roadmap</strong>
-      </figcaption>
       <div className="roadmap-flow">
         <span className="roadmap-track" aria-hidden="true" />
         {stages.map((stage) => {
           const Icon = stage.icon;
           return (
             <div className={`roadmap-node${stage.current ? " current" : ""}`} key={stage.key}>
-              <span className="roadmap-dot"><Icon size={stage.current ? 20 : 16} strokeWidth={2.1} aria-hidden="true" /></span>
+              {stage.current && <span className="roadmap-current-tag">You are here</span>}
+              <span className="roadmap-dot-wrap">
+                <span className="roadmap-dot"><Icon size={stage.current ? 20 : 16} strokeWidth={2.1} aria-hidden="true" /></span>
+              </span>
               <div className="roadmap-node-body">
-                {stage.current && <span className="roadmap-current-tag">You are here</span>}
                 <small>{stage.tag}</small>
                 <b>{stage.name}</b>
                 <p>{stage.detail}</p>
@@ -456,14 +455,23 @@ function RoadmapStrip() {
   );
 }
 
+function RoadmapAccordion() {
+  return (
+    <details className="policy-detail">
+      <summary>View NP&rsquo;s AI in T&amp;L Roadmap</summary>
+      <div><RoadmapStrip /></div>
+    </details>
+  );
+}
+
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
-    { name: "Embed AI-Integrated Pedagogy · PAIR", question: "How can students learn and work with AI purposefully, critically and responsibly?", icon: Lightbulb, covers: "Part 3 · Facilitation of Learning", coversTone: 3 },
-    { name: "Transform the Curriculum · 3As", question: "What competencies should students develop and demonstrate as AI changes professional practice?", icon: BookOpen, covers: "Part 2 · Curriculum Design and Development", coversTone: 2 },
-    { name: "Redesign Assessment", question: "How can assessment provide authentic and credible evidence of learning in an AI-enabled context?", icon: ClipboardCheck, covers: "Part 4 · Assessment", coversTone: 4 },
-    { name: "Enable Personalised Learning", question: "How can AI extend opportunities for practice, feedback and coaching?", icon: Bot, covers: "Part 5 · Data and Tech-Enhanced T&L", coversTone: 5 },
-    { name: "Strengthen Human Skills and Resilience", question: "How can we strengthen the human qualities students need in an AI-enabled world?", icon: Users, covers: "Woven through all four parts", coversTone: 0 },
+    { name: "Embed AI-Integrated Pedagogy · PAIR", question: "How can you help students learn and work with AI purposefully, critically and responsibly?", icon: Lightbulb, covers: "Part 3 · Facilitation of Learning", coversTone: 3 },
+    { name: "Transform the Curriculum · 3As", question: "What competencies should your students develop and demonstrate as professional practice changes?", icon: BookOpen, covers: "Part 2 · Curriculum Design and Development", coversTone: 2 },
+    { name: "Redesign Assessment", question: "How can you design assessment that provides authentic and credible evidence of learning in an AI-enabled context?", icon: ClipboardCheck, covers: "Part 4 · Assessment", coversTone: 4 },
+    { name: "Enable Personalised Learning", question: "How can AI extend opportunities for practice, feedback and coaching in your module?", icon: Bot, covers: "Part 5 · Data and Tech-Enhanced T&L", coversTone: 5 },
+    { name: "Strengthen Human Skills and Resilience", question: "How can you strengthen the human qualities students need in an AI-enabled world?", icon: Users, covers: "Woven through all four parts", coversTone: 0 },
   ];
   return (
     <section className="strategy-map" aria-label="How NP approaches connect across this package">
@@ -478,7 +486,7 @@ function StrategyMap() {
             <small>Outcome</small>
             <strong>AI-ready graduates</strong>
             <span>Strong human qualities · Deep domain expertise · Effective use of AI in professional practice</span>
-            <p>Graduates who combine deep domain expertise with strong human qualities and the ability to use AI effectively and responsibly in professional practice.</p>
+            <p>NP graduates should combine deep domain expertise with strong human qualities and the ability to use AI effectively and responsibly in professional practice.</p>
           </div>
         </div>
       </div>
@@ -539,7 +547,7 @@ function OpeningVisual() {
   const areas = [
     {
       title: "Curriculum Design and Development",
-      detail: "What competencies students need as AI changes professional practice.",
+      detail: "What competencies your students need as professional practice changes.",
       icon: BookOpen,
     },
     {
@@ -583,7 +591,7 @@ function HomeFlow() {
     "recognise how AI is changing the competencies students need and the implications for curriculum design",
     "explain how AI can support learning and practice without replacing the intended thinking, judgement or performance",
     "apply NP's GenAI policy requirements for summative assessment to clarify conditions and make students' learning and contribution visible",
-    "identify appropriate uses of AI tools and learning data, and apply basic considerations for safe and responsible use",
+    "identify appropriate uses of AI tools and learning data, and apply basic considerations for purposeful and responsible use",
   ];
 
   return (
@@ -592,12 +600,12 @@ function HomeFlow() {
         <span>Welcome</span>
         <h2>T&amp;L in an AI-Enabled Context</h2>
         <p>
-          AI is increasingly shaping how NP students learn, how professional
-          practice is changing and the capabilities our graduates will need.
+          AI is increasingly shaping how your students learn, how professional
+          practice is changing and the capabilities NP graduates will need.
         </p>
         <p>
           Used purposefully, AI can extend opportunities for practice, feedback
-          and personalised support. It can also help lecturers develop learning
+          and personalised support. It can also help you develop learning
           resources, understand learning needs and respond more effectively. At
           the same time, AI can become a shortcut that bypasses the thinking,
           judgement or performance students are meant to develop.
@@ -615,8 +623,8 @@ function HomeFlow() {
         </figure>
         <p>
           The T&amp;L Competency Framework (TLCF) sets out the core domains of
-          lecturers&rsquo; T&amp;L practice. This package builds on the TLCF by
-          applying an AI lens to four domains:
+          your T&amp;L practice. This package builds on the TLCF by applying an
+          AI lens to four domains:
         </p>
         <div className="home-domain-chips">
           <span className="home-domain-chip chip-1"><BookOpen size={14} strokeWidth={2.2} aria-hidden="true" />Curriculum Design and Development</span>
@@ -625,8 +633,9 @@ function HomeFlow() {
           <span className="home-domain-chip chip-4"><ShieldCheck size={14} strokeWidth={2.2} aria-hidden="true" />Data and Tech-Enhanced T&amp;L</span>
         </div>
         <p>
-          It considers how AI affects what students need to learn, how learning
-          is facilitated and assessed, and how tools and learning data are used.
+          You will consider how AI affects what students need to learn, how you
+          facilitate and assess learning, and how AI tools and learning data can
+          be used purposefully and responsibly.
         </p>
       </article>
 
@@ -877,10 +886,10 @@ function BringTogetherVisual() {
 
 function ModulePreviewVisual() {
   const areas = [
-    { icon: BookOpen, title: "Curriculum Design and Development", detail: "Applies the 3As to review the competencies students need as professional practice changes." },
-    { icon: Lightbulb, title: "Facilitation of Learning", detail: "Applies PAIR and personalised learning approaches to help students learn and work with AI purposefully." },
-    { icon: ClipboardCheck, title: "Assessment", detail: "Applies NP's assessment approach to keep learning and student contribution authentic, credible and visible." },
-    { icon: ShieldCheck, title: "Data and Tech-Enhanced T&L", detail: "Uses suitable AI tools and learning data to enhance support, with appropriate checks and human oversight." },
+    { icon: BookOpen, title: "Curriculum Design and Development", detail: "Use the 3As to review the competencies your students need as professional practice changes." },
+    { icon: Lightbulb, title: "Facilitation of Learning", detail: "Use PAIR and personalised learning approaches to help students learn and work with AI purposefully." },
+    { icon: ClipboardCheck, title: "Assessment", detail: "Apply NP's assessment approach to keep learning and student contribution authentic, credible and visible." },
+    { icon: ShieldCheck, title: "Data and Tech-Enhanced T&L", detail: "Use suitable AI tools and learning data to enhance support, with appropriate checks and human oversight." },
   ];
   return (
     <figure className="concept-visual module-preview-visual" aria-label="What the next four sections cover">
@@ -965,7 +974,7 @@ export default function Home() {
   const alignmentCheckMarker = "<!--alignment-check-visual-->";
   const alignmentFlowMarker = "<!--alignment-flow-visual-->";
   const strategyMapMarker = "<!--strategy-map-->";
-  const roadmapStripMarker = "<!--roadmap-strip-->";
+  const roadmapAccordionMarker = "<!--roadmap-accordion-->";
   const supportReplaceMarker = "<!--support-or-replace-->";
   const genAiConditionsMarker = "<!--genai-conditions-check-->";
   const nextStepMarker = "<!--next-step-->";
@@ -982,7 +991,7 @@ export default function Home() {
     [studentBaselineMarker]: <StudentBaselineVisual />,
     [threeAsMarker]: <ThreeAsInfographic />,
     [strategyMapMarker]: <StrategyMap />,
-    [roadmapStripMarker]: <RoadmapStrip />,
+    [roadmapAccordionMarker]: <RoadmapAccordion />,
     [supportReplaceMarker]: <SupportReplaceSorter />,
     [genAiConditionsMarker]: <GenAiConditionsSorter />,
     [moduleReviewMarker]: <FourLensReview value={activityNotes.snapshotcheck ?? ""} onChange={(value) => setActivityValue("snapshotcheck", value)} />,
