@@ -213,7 +213,7 @@ The TLCF Assessment domain focuses on implementing assessment and ensuring its q
 
 ### Apply NP's GenAI Policy Requirements
 
-GenAI use is allowed by default in summative assessment unless it is explicitly restricted or prohibited. Lecturers must state the conditions clearly, and students must cite and declare their use.
+GenAI use is allowed by default in summative assessment unless it is explicitly restricted or prohibited. Lecturers must state any conditions clearly, and students must cite and declare their use.
 
 ### Protect the Intended Learning
 
@@ -225,9 +225,9 @@ Use the 3As to clarify:
 
 Where relevant, assessment should make visible students’ ability to evaluate AI outputs, use AI meaningfully and exercise appropriate judgement and oversight.
 
-> Assessment should provide credible evidence of learning. A polished final product alone may not show what the student knows, can do, judge or contribute.
+> Assessment should provide credible evidence of learning. A polished final product alone may not show what the student knows, can do or has contributed.
 
-:::note Policy reference
+:::note Policy Reference
 
 This section summarises the main requirements. Refer to the [Gen AI in Summative Assessment Policy & Guidance](https://connectnpedu.sharepoint.com/sites/DigitalLearning/AIinLearning/SitePages/Policy-%26-Guidance.aspx) for the full policy, processes and appendices.
 
@@ -252,9 +252,9 @@ Identify:
 
 For each assessment component, make clear whether GenAI use is:
 
-- **allowed under the default policy position;**
-- **restricted by stated conditions;** or
-- **prohibited**.
+- allowed, where no restriction or prohibition has been stated;
+- restricted, subject to stated conditions; or
+- prohibited.
 
 This applies to all summative tasks that contribute to the module grade, including take-home assignments.
 
@@ -325,8 +325,6 @@ Interview the student, request relevant evidence of the work process and compare
 
 :::
 
-## When Further Review May Be Needed
-
 :::details When an Assessment May Need Review
 
 Review the assessment when:
@@ -347,7 +345,7 @@ Consider one assessment:
 
 ## Key Takeaway
 
-Begin with the learning outcome. Clarify how GenAI may be used, state the conditions clearly and design proportionate evidence that makes students’ learning and contribution visible.
+Begin with the learning outcome and use the 3As to clarify the intended capability. State how GenAI may be used and design proportionate evidence that makes students’ learning and contribution visible.
 
 ---
 

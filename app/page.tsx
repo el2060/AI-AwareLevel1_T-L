@@ -765,15 +765,14 @@ function PairInfographic() {
 function AssessmentActionsInfographic() {
   const steps = [
     { number: "1", title: "Start With the Learning Outcome", detail: "Identify the capability being assessed and what students must still demonstrate themselves." },
-    { number: "2", title: "State the GenAI Conditions Clearly", detail: "Declare whether AI use is allowed, restricted or prohibited for each component." },
+    { number: "2", title: "State the GenAI Conditions Clearly", detail: "Clarify whether GenAI use is allowed, restricted or prohibited for each component." },
     { number: "3", title: "Make Learning and Contribution Visible", detail: "State what students must do themselves and what evidence is required." },
-    { number: "4", title: "Prepare Students and Require Declaration", detail: "Explain conditions early, provide suitable practice and require the GenAI Use Declaration." },
+    { number: "4", title: "Prepare Students and Require Declaration", detail: "Explain the conditions early, provide suitable formative preparation and require the GenAI Use Declaration." },
   ];
   return (
     <figure className="concept-visual action-infographic" aria-labelledby="action-title">
       <figcaption>
-        <span>Four lecturer actions</span>
-        <strong id="action-title">A practical sequence for assessment design</strong>
+        <strong id="action-title">A Practical Sequence for Assessment Design</strong>
       </figcaption>
       <div className="action-journey">
         {steps.map((step, index) => (
