@@ -50,8 +50,6 @@ Changes in one area may therefore have implications for the others.
 
 As you work through the next four sections, think of one module you teach, lead or support. Use it to connect the ideas to your own T&L practice.
 
-**Next:** Begin with curriculum — what competencies should students develop and demonstrate as professional practice changes?
-
 ---
 
 # Part 2: Curriculum Design and Development — What Competencies Do Students Need?
@@ -207,6 +205,10 @@ Lecturers design the conditions and scaffolding. AI should support the intended 
 
 # Part 4: Assessment — How Do We Keep Learning Authentic and Credible?
 
+## Applying an AI Lens to Assessment
+
+The TLCF Assessment domain focuses on implementing assessment and ensuring its quality. In a GenAI-enabled context, lecturers also need to clarify how AI may be used while ensuring that the intended learning and the student’s own contribution remain visible.
+
 ## Two Assessment Priorities
 
 ### Apply NP's GenAI Policy Requirements
@@ -223,15 +225,13 @@ Use the 3As to clarify:
 
 Where relevant, assessment should make visible students’ ability to evaluate AI outputs, use AI meaningfully and exercise appropriate judgement and oversight.
 
-Assessment should provide credible evidence of learning. A polished final product alone may not show what the student knows, can do, judge or contribute.
+> Assessment should provide credible evidence of learning. A polished final product alone may not show what the student knows, can do, judge or contribute.
 
 :::note Policy reference
 
 This section summarises the main requirements. Refer to the [Gen AI in Summative Assessment Policy & Guidance](https://connectnpedu.sharepoint.com/sites/DigitalLearning/AIinLearning/SitePages/Policy-%26-Guidance.aspx) for the full policy, processes and appendices.
 
 :::
-
-<!--assessment-focus-visual-->
 
 ## Four Lecturer Actions
 
@@ -246,7 +246,7 @@ Identify:
 - where AI use reflects authentic professional practice;
 - what evidence will make their learning and contribution visible.
 
-> If AI can complete the central task without the intended capability being demonstrated, the assessment may need clearer conditions or redesign.
+> If AI can complete the central task without the intended capability being demonstrated, review the learning outcome and assessment using the 3As. The assessment may need clearer conditions or redesign.
 
 ### 2. State the GenAI Conditions Clearly
 
@@ -296,11 +296,16 @@ Evidence may include drafts, checkpoints, selected interaction records, demonstr
 
 ### 4. Prepare Students and Require Declaration
 
-Explain the conditions early and provide formative practice, checkpoints or mock runs where helpful.
+Explain the conditions early and provide suitable formative preparation, checkpoints or mock runs where helpful.
 
 All relevant submission cover pages must include the required GenAI Use Declaration. Any additional evidence should be proportionate to the assessment and clearly stated in the brief.
 
-Module leaders are responsible for setting and communicating the conditions, ensuring declarations are completed and designing assessments that provide credible evidence of learning.
+Module leaders are responsible for:
+
+- setting and communicating the conditions;
+- ensuring declarations are completed;
+- preparing students for the expected use or non-use of AI;
+- designing assessments that provide credible evidence of learning.
 
 <!--genai-conditions-check-->
 

@@ -790,40 +790,6 @@ function AssessmentActionsInfographic() {
   );
 }
 
-function AssessmentFocusVisual() {
-  return (
-    <figure className="concept-visual assessment-focus-visual" aria-labelledby="assessment-focus-title">
-      <figcaption>
-        <span>Assessment framing</span>
-        <strong id="assessment-focus-title">Policy compliance and assessment design work together</strong>
-      </figcaption>
-      <div className="assessment-focus-grid">
-        <section className="assessment-focus-card policy">
-          <i><ShieldCheck size={18} strokeWidth={2.1} aria-hidden="true" /></i>
-          <div>
-            <b>Policy requirement</b>
-            <p>State GenAI conditions clearly, require declaration and follow required processes.</p>
-          </div>
-        </section>
-        <section className="assessment-focus-card design">
-          <i><ClipboardCheck size={18} strokeWidth={2.1} aria-hidden="true" /></i>
-          <div>
-            <b>Assessment design</b>
-            <p>Ensure the intended capability and student contribution remain visible in evidence.</p>
-          </div>
-        </section>
-      </div>
-      <div className="assessment-focus-flow" aria-label="Assessment page flow">
-        <span>Default policy position</span>
-        <span>Protect intended learning</span>
-        <span>Four actions</span>
-        <span>Policy reminders</span>
-        <span>Apply to one assessment</span>
-      </div>
-    </figure>
-  );
-}
-
 function AlignmentCheckVisual() {
   const items = [
     { icon: Target, title: "Learning outcome", detail: "Does it state the intended competency clearly?" },
@@ -951,7 +917,6 @@ export default function Home() {
   const pairInfographicMarker = "<!--pair-infographic-->";
   const moduleReviewMarker = "<!--module-review-->";
   const actionInfographicMarker = "<!--assessment-actions-infographic-->";
-  const assessmentFocusMarker = "<!--assessment-focus-visual-->";
   const modulePreviewMarker = "<!--module-preview-->";
   const studentBaselineMarker = "<!--student-baseline-visual-->";
   const threeAsMarker = "<!--three-as-visual-->";
@@ -968,7 +933,6 @@ export default function Home() {
     [useCaseMarker]: <UseCaseExplorer />,
     [pairInfographicMarker]: <PairInfographic />,
     [actionInfographicMarker]: <AssessmentActionsInfographic />,
-    [assessmentFocusMarker]: <AssessmentFocusVisual />,
     [alignmentCheckMarker]: <AlignmentCheckVisual />,
     [alignmentFlowMarker]: <AlignmentFlowVisual />,
     [modulePreviewMarker]: <ModulePreviewVisual />,
