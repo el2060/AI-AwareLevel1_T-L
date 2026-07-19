@@ -561,29 +561,41 @@ function HomeFlow() {
         <span>Welcome</span>
         <h2>T&amp;L in an AI-Enabled Context</h2>
         <p>
-          AI, particularly Gen AI, is increasingly shaping how students learn,
-          how professional work is carried out and the capabilities graduates
-          will need.
+          AI is increasingly shaping how NP students learn, how professional
+          practice is changing and the capabilities our graduates will need.
         </p>
         <p>
           Used purposefully, AI can extend opportunities for practice, feedback
           and personalised support. It can also help lecturers develop learning
           resources, understand learning needs and respond more effectively. At
-          the same time, AI may become a shortcut that bypasses the thinking,
+          the same time, AI can become a shortcut that bypasses the thinking,
           judgement or performance students are meant to develop.
         </p>
-        <blockquote>
-          If we treat AI as a shortcut, to simply bypass thinking, we will
-          diminish the very purpose of education. But if we treat AI as a
-          catalyst, a tool to sharpen what truly matters in education, it can
-          strengthen our IHLs and strengthen our people.
-        </blockquote>
-        <p className="home-intro-credit">
-          Mr Desmond Lee, Minister for Education · April 2026
+        <figure className="home-quote">
+          <blockquote>
+            If we treat AI as a shortcut, to simply bypass thinking, we will
+            diminish the very purpose of education. But if we treat AI as a
+            catalyst, a tool to sharpen what truly matters in education, it can
+            strengthen our IHLs and strengthen our people.
+          </blockquote>
+          <figcaption>
+            <cite>Mr Desmond Lee</cite>, Minister for Education <i aria-hidden="true">·</i> April 2026
+          </figcaption>
+        </figure>
+        <p>
+          The T&amp;L Competency Framework (TLCF) sets out the core domains of
+          lecturers&rsquo; T&amp;L practice. This package builds on the TLCF by
+          applying an AI lens to four domains:
+        </p>
+        <p className="home-domain-list">
+          Curriculum Design and Development <i aria-hidden="true">·</i> Facilitation
+          of Learning <i aria-hidden="true">·</i> Assessment <i aria-hidden="true">·</i> Data
+          and Tech-Enhanced T&amp;L
         </p>
         <p>
-          This package helps you consider what AI means for curriculum,
-          facilitation, assessment and data and technology-enhanced T&amp;L.
+          It helps you consider how AI affects what students need to learn, how
+          learning is facilitated and assessed, and how tools and learning data
+          can be used purposefully and responsibly.
         </p>
       </article>
 

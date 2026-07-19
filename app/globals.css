@@ -267,23 +267,49 @@ button { color: inherit; }
   line-height: 1.66;
 }
 .home-intro-card p + p { margin-top: 12px; }
-.home-intro-card blockquote {
-  margin: 16px 0 0;
-  padding: 16px 18px;
-  border-left: 3px solid var(--blue);
-  border-radius: 0 10px 10px 0;
-  background: #eef3f9;
+.home-intro-card .home-domain-list {
   color: #123a67;
-  font-size: 16px;
-  line-height: 1.62;
+  font-weight: 620;
 }
-.home-intro-credit {
-  margin-top: 10px !important;
-  color: #4b6178 !important;
-  font-size: 13px !important;
+.home-intro-card .home-domain-list i { margin: 0 8px; color: #9fb9d1; font-style: normal; }
+.home-quote {
+  position: relative;
+  margin: 18px 0 0;
+  padding: 20px 24px 18px 52px;
+  border-radius: 12px;
+  background: #eef3f9;
+  box-shadow: inset 3px 0 0 var(--blue);
+}
+.home-quote::before {
+  content: "\201C";
+  position: absolute;
+  left: 12px;
+  top: 2px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 56px;
+  line-height: 1;
+  color: var(--blue);
+  opacity: .35;
+}
+.home-quote blockquote {
+  margin: 0;
+  color: #123a67;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 540;
+  line-height: 1.62;
+  letter-spacing: -.005em;
+}
+.home-quote figcaption {
+  margin-top: 12px;
+  color: #4b6178;
+  font-size: 13px;
   font-weight: 600;
+  font-style: normal;
   letter-spacing: .01em;
 }
+.home-quote figcaption cite { font-style: normal; }
+.home-quote figcaption i { margin: 0 6px; color: #9fb9d1; font-style: normal; }
 
 .home-learn-stack { display: grid; gap: 22px; }
 .home-outcome-card {
@@ -923,8 +949,10 @@ button { color: inherit; }
   .home-intro-card h2 { font-size: 27px; margin-top: 10px; }
   .home-intro-card p:first-of-type { font-size: 18px; }
   .home-intro-card p { font-size: 15px; line-height: 1.62; }
-  .home-intro-card blockquote { font-size: 14px; padding: 13px 14px; }
-  .home-intro-credit { font-size: 12px !important; }
+  .home-quote { padding: 16px 16px 14px 42px; }
+  .home-quote::before { font-size: 42px; left: 10px; }
+  .home-quote blockquote { font-size: 14px; }
+  .home-quote figcaption { font-size: 12px; }
   .home-learn-stack { gap: 16px; }
   .home-outcome-card { padding: 0; }
   .home-outcome-card li { grid-template-columns: 16px minmax(0, 1fr); gap: 8px; padding: 12px 0; }
