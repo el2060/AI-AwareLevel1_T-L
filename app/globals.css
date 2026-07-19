@@ -951,7 +951,7 @@ button:focus-visible, summary:focus-visible, a:focus-visible {
 .activity-count { padding: 5px 8px; border-radius: 6px; background: var(--canvas); color: var(--muted); font-size: 11px; }
 
 .use-case-explorer { margin: var(--surface-space) 0; padding: 28px; border: 1px solid var(--line); border-radius: var(--surface-radius); background: #fff; box-shadow: var(--shadow-soft); }
-.use-case-picker { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-bottom: 14px; }
+.use-case-picker { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-bottom: 14px; }
 .use-case-picker button { padding: 11px 12px; border: 1px solid var(--line); border-radius: 9px; background: #fff; color: var(--ink-soft); font: inherit; font-size: 13px; font-weight: 700; line-height: 1.25; text-align: left; cursor: pointer; transition: border-color .18s ease, background .18s ease, color .18s ease, transform .18s ease; }
 .use-case-picker button:hover { transform: translateY(-2px); border-color: #7f9dc7; }
 .use-case-picker button.active { border-color: #3f7dbd; background: var(--blue-soft); color: var(--blue-active); }

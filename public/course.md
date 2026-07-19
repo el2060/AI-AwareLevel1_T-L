@@ -350,11 +350,11 @@ Begin with the learning outcome and use the 3As to clarify the intended capabili
 
 ## Start with a T&L Need
 
-AI tools and learning data can help lecturers extend support and respond to learner needs. At Level 1, the starting point is not the technology: it is a clear T&L purpose.
+AI tools and learning data can extend learning opportunities and help lecturers respond to learner needs. The starting point is not the technology: it is a clear T&L purpose.
 
 > What could help students learn more effectively—and what would you need to check before using it?
 
-## Three Practical Uses
+## Four Practical Uses
 
 ### 1. Prepare and Improve Learning Resources
 
@@ -376,13 +376,19 @@ Within NP, this may include:
 
 These tools complement facilitation. Lecturers still set the intended learning, source materials, boundaries and role of the support in the module.
 
-### 3. Use Learning Data to Inform Support
+### 3. Support Disciplinary and Professional Practice
+
+AI may also be embedded in tools and workflows that are specific to a course, module or profession. Examples include AI-assisted coding and testing, design and media tools, data analysis and visualisation, simulation, and research or evidence-review tools.
+
+The educational value is not simply in operating a tool. It lies in helping students apply disciplinary knowledge, evaluate outputs and exercise appropriate judgement.
+
+### 4. Use Learning Data to Inform Support
 
 Learning data can reveal patterns in participation or performance, help identify possible learner needs, inform targeted support and show whether support is helping.
 
 AI-generated summaries, patterns or predictions are starting points—not decisions. Review the evidence and learner context before deciding what action is appropriate.
 
-## Explore Three T&L Uses
+## Explore Common T&L Uses
 
 <!--use-case-explorer-->
 
@@ -406,7 +412,25 @@ Is the information approved for use, and is the output accurate and suitable?
 
 Who reviews the output, decides what action to take and checks whether it helped?
 
-## Use Tools Appropriately
+## Choose Tools for the T&L Purpose
+
+Different T&L needs may call for different tools.
+
+### NP-Provided Tools
+
+M365 Copilot, Brightspace Lumi Tutor and other institutional platforms may support lecturer productivity, learning resources, student support or learning analytics.
+
+### Course- or Discipline-Specific Tools
+
+Modules may use AI-enabled tools that reflect professional or disciplinary practice, such as tools for coding, design, simulation, data analysis, research or content creation.
+
+### Student-Selected Tools
+
+Students may use suitable AI tools where the learning activity or assessment permits this.
+
+Select a tool according to the intended learning or professional practice, learners’ needs and readiness, accessibility, the information involved, and the quality and limitations of its output.
+
+### Tool and Information Guidance
 
 **M365 Copilot** is available in NP’s Microsoft 365 environment and is cleared for up to **Official (Closed) – Restricted** content. **Pair Chat (pair.gov.sg)** is cleared for up to **Official (Closed) – Sensitive Normal** content.
 
@@ -414,7 +438,7 @@ Use both according to NP’s current guidance for the information and purpose in
 
 ## Keep in Mind
 
-Choose one small T&L need from a module you teach, lead or support. Consider what a tool or learning data could contribute, what you would need to check and how you would know whether it helped.
+Choose one small T&L need from a module you teach, lead or support. Consider what type of AI tool or learning data could contribute, what you would need to check and how you would know whether it helped.
 
 ---
 

@@ -518,6 +518,14 @@ function UseCaseExplorer() {
       decision: "Set the role of the tool clearly so it complements, rather than replaces, facilitation.",
     },
     {
+      label: "Disciplinary practice",
+      tool: "A suitable course- or profession-specific AI tool.",
+      task: "Help students apply disciplinary knowledge through an authentic AI-supported workflow, such as coding, design, simulation or data analysis.",
+      starter: "Clarify the capability students should develop and what they must still understand, decide or perform themselves.",
+      check: "Check that the tool supports the intended learning and that students can evaluate and explain its output.",
+      decision: "Decide how the tool fits within the activity, what scaffolding students need and what evidence will show their learning.",
+    },
+    {
       label: "Learning data",
       tool: "An approved analytics view or approved AI-supported summary process.",
       task: "Look for a pattern in participation, performance or feedback that may indicate a need for support.",
@@ -528,7 +536,7 @@ function UseCaseExplorer() {
   ];
   const selected = uses[active];
   return (
-    <section className="use-case-explorer" aria-label="Three practical uses of AI tools and learning data">
+    <section className="use-case-explorer" aria-label="Four practical uses of AI tools and learning data">
       <div className="use-case-picker" role="group" aria-label="Choose a teaching and learning use">
         {uses.map((use, index) => <button key={use.label} type="button" aria-pressed={active === index} className={active === index ? "active" : ""} onClick={() => setActive(index)}>{use.label}</button>)}
       </div>
@@ -546,7 +554,7 @@ function QuickSenseCheck() {
   const [revealed, setRevealed] = useState<number[]>([]);
   const items = [
     { situation: "An AI tutor gives an explanation that differs from the module materials.", reveal: "Check the source content and accuracy before deciding whether the materials or tutor setup need adjustment." },
-    { situation: "An AI-generated summary of student feedback sounds plausible.", reveal: "Verify that the themes are supported by the original comments." },
+    { situation: "Students use a discipline-specific AI tool to produce a technically strong solution.", reveal: "Check whether they can explain, evaluate and apply the underlying disciplinary knowledge." },
     { situation: "You want to upload assessment results into an AI tool.", reveal: "Check whether the tool is approved for that information and purpose." },
     { situation: "Learning data suggests that several students may need support.", reveal: "Review the evidence and learner context before deciding what action is appropriate." },
   ];
@@ -1213,7 +1221,7 @@ export default function Home() {
         {current.title.startsWith("Part 5") && (
           <div className="key-takeaway part-five-takeaway">
             <p className="key-takeaway-head"><CheckCircle2 size={18} aria-hidden="true" /><span>Key Takeaway</span></p>
-            <p>Use AI tools and learning data where they add learning value. Select an appropriate approach, check the information and outputs, and retain professional judgement and responsibility.</p>
+            <p>Use AI tools and learning data where they add learning value or support authentic disciplinary practice. Select an appropriate approach, check the information and outputs, and retain professional judgement and responsibility.</p>
           </div>
         )}
 
