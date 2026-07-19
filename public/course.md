@@ -462,7 +462,7 @@ Develop strong human qualities, disciplinary expertise and the ability to use AI
 
 ### Curriculum and Learning Design
 
-Use the student AI baseline and 3As to review competencies, and PAIR to structure purposeful learning with AI.
+Use the 3As to review the competencies students need, and PAIR to structure purposeful learning with AI.
 
 ### Authentic Evidence of Learning
 
@@ -480,6 +480,6 @@ Use suitable AI tools and learning data where they add learning value, with appr
 
 ## Closing
 
-AI-enabled T&L is not about using AI everywhere. It is about making deliberate choices that strengthen learning, preserve the intended thinking and capabilities, and prepare students for professional practice in an AI-enabled world.
+AI-enabled T&L is not about using AI everywhere. It is about making deliberate choices that strengthen learning, preserve the capabilities students need to develop and prepare them for professional practice in an AI-enabled world.
 
 Complete the separately administered quiz to fulfil the package requirements.

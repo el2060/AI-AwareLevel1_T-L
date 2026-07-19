@@ -421,7 +421,7 @@ function NextStepActivity({ value, onChange }: { value: string; onChange: (value
 }
 
 function FourLensReview({ value, onChange }: { value: string; onChange: (value: string) => void }) {
-  return <TapChecklist prompt="Tap each question after considering it for your module." items={["Curriculum: What may need review in the learning outcomes, activities or assessment?", "Facilitation: Where could students compare, check, improve or explain their use of AI?", "Assessment: What must students demonstrate themselves, and where might GenAI use be appropriate?", "Data and Tech-Enhanced T&L: What learning need could an AI tool or learning data support, and what would need checking before use?"]} tips={["Use the 3As to consider whether the intended capability is Anchor, Augment or Advance.", "Use PAIR to keep students evaluating, refining and reflecting.", "Check that the conditions and evidence of learning are clear.", "Consider learning value, suitability, information involved and human oversight."]} value={value} onChange={onChange} />;
+  return <TapChecklist prompt="Tap each question after considering it for your module." items={["Curriculum: What may need review in the learning outcomes, activities or assessment?", "Facilitation: How could students use AI purposefully while still doing the intended thinking, judging or performing?", "Assessment: What must students demonstrate themselves, and where might GenAI use be appropriate?", "Data and Tech-Enhanced T&L: What learning need could an AI tool or learning data support, and what would need checking before use?"]} tips={["Use the 3As to consider whether the intended capability is Anchor, Augment or Advance.", "Use PAIR to structure students' use of AI so it supports, rather than replaces, the intended learning.", "Check that the conditions and evidence of learning are clear.", "Consider learning value, suitability, information involved and human oversight."]} value={value} onChange={onChange} />;
 }
 
 function RoadmapStrip() {
@@ -869,7 +869,7 @@ function AlignmentCheckVisual() {
 function BringTogetherVisual() {
   const lenses = [
     { icon: BookOpen, title: "Curriculum", detail: "What may need review?" },
-    { icon: Lightbulb, title: "Facilitation", detail: "Where should students check and improve?" },
+    { icon: Lightbulb, title: "Facilitation", detail: "Does AI support the intended learning?" },
     { icon: ClipboardCheck, title: "Assessment", detail: "What evidence keeps learning visible?" },
     { icon: ShieldCheck, title: "Data and Tools", detail: "What needs checking before use?" },
   ];
