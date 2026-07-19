@@ -239,14 +239,14 @@ button { color: inherit; }
 .home-intro-card {
   position: relative;
   overflow: hidden;
-  padding: 30px;
+  padding: 38px 40px;
   border: 1px solid var(--line);
   border-radius: var(--surface-radius);
   background: var(--paper);
   box-shadow: var(--shadow-soft);
 }
 .home-intro-card h2 {
-  margin: 12px 0 14px;
+  margin: 14px 0 18px;
   max-width: 700px;
   color: #1a2c46;
   font-size: clamp(28px, 3.4vw, 36px);
@@ -258,20 +258,20 @@ button { color: inherit; }
   max-width: 740px;
   color: #445364;
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 .home-intro-card p:first-of-type {
   color: #233954;
   font-size: 17px;
   font-weight: 560;
-  line-height: 1.66;
+  line-height: 1.68;
 }
-.home-intro-card p + p { margin-top: 12px; }
+.home-intro-card p + p { margin-top: 18px; }
 .home-domain-chips {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 14px 0 4px;
+  margin: 22px 0 10px;
 }
 .home-domain-chip {
   display: inline-flex;
@@ -289,20 +289,20 @@ button { color: inherit; }
 .home-domain-chip.chip-2 { background: var(--purple); color: #3c2a52; }
 .home-domain-chip.chip-3 { background: var(--orange); color: #70340b; }
 .home-domain-chip.chip-4 { background: var(--teal); color: #155c58; }
-.home-domain-chips + p { margin-top: 14px; }
-.home-quote { margin: 18px 0 0; }
+.home-domain-chips + p { margin-top: 22px; }
+.home-quote { margin: 26px 0; }
 .home-quote blockquote {
   margin: 0;
-  padding: 17px 19px;
+  padding: 20px 24px;
   border-left: 3px solid var(--blue);
   border-radius: 0 8px 8px 0;
   background: var(--blue-soft);
   color: var(--blue-active);
   font-size: 17px;
-  line-height: 1.65;
+  line-height: 1.68;
 }
 .home-quote figcaption {
-  margin-top: 10px;
+  margin-top: 12px;
   color: #4b6178;
   font-size: 13px;
   font-weight: 600;
