@@ -435,18 +435,19 @@ function RoadmapStrip() {
       <figcaption>
         <strong>NP&rsquo;s AI in T&amp;L Roadmap</strong>
       </figcaption>
-      <div className="roadmap-path">
-        {stages.map((stage, index) => {
+      <div className="roadmap-flow">
+        <span className="roadmap-track" aria-hidden="true" />
+        {stages.map((stage) => {
           const Icon = stage.icon;
           return (
-            <div className="roadmap-stage-wrap" key={stage.key}>
-              <section className={`roadmap-stage${stage.current ? " current" : ""}`}>
+            <div className={`roadmap-node${stage.current ? " current" : ""}`} key={stage.key}>
+              <span className="roadmap-dot"><Icon size={stage.current ? 20 : 16} strokeWidth={2.1} aria-hidden="true" /></span>
+              <div className="roadmap-node-body">
                 {stage.current && <span className="roadmap-current-tag">This package</span>}
-                <div className="roadmap-stage-head"><i><Icon size={20} strokeWidth={2.1} aria-hidden="true" /></i><b>{stage.name}</b></div>
                 <small>{stage.tag}</small>
+                <b>{stage.name}</b>
                 <p>{stage.detail}</p>
-              </section>
-              {index < stages.length - 1 && <span className="roadmap-connector" aria-hidden="true"><ArrowRight size={15} strokeWidth={2.2} /></span>}
+              </div>
             </div>
           );
         })}
@@ -548,12 +549,12 @@ function OpeningVisual() {
     },
     {
       title: "Assessment",
-      detail: "How assessment keeps learning authentic, credible and visible in an AI-enabled context.",
+      detail: "How assessment keeps learning and student contribution authentic, credible and visible.",
       icon: ClipboardCheck,
     },
     {
       title: "Data and Tech-Enhanced T&L",
-      detail: "How AI tools and learning data can improve learning safely and responsibly.",
+      detail: "How AI tools and learning data can enhance learning purposefully and responsibly.",
       icon: ShieldCheck,
     },
   ];
@@ -562,7 +563,7 @@ function OpeningVisual() {
     <section className="opening-visual" aria-label="What this package covers">
       <div className="overview-heading">
         <span>At a Glance</span>
-        <h2>Four TLCF Domains in an AI-Enabled Context</h2>
+        <h2>Applying an AI Lens to Four TLCF Domains</h2>
       </div>
       <div className="overview-areas">
         {areas.map((area, index) => {
@@ -623,9 +624,8 @@ function HomeFlow() {
           and Tech-Enhanced T&amp;L
         </p>
         <p>
-          It helps you consider how AI affects what students need to learn, how
-          learning is facilitated and assessed, and how tools and learning data
-          can be used purposefully and responsibly.
+          It considers how AI affects what students need to learn, how learning
+          is facilitated and assessed, and how tools and learning data are used.
         </p>
       </article>
 
@@ -876,10 +876,10 @@ function BringTogetherVisual() {
 
 function ModulePreviewVisual() {
   const areas = [
-    { icon: BookOpen, title: "Curriculum Design and Development", detail: <>Translates <strong>Transform the Curriculum</strong> into the competencies students need as professional practice changes, while strengthening essential human and disciplinary capabilities.</> },
-    { icon: Lightbulb, title: "Facilitation of Learning", detail: <>Applies <strong>PAIR</strong> and personalised learning approaches to help students learn and work with AI purposefully, critically and responsibly.</> },
-    { icon: ClipboardCheck, title: "Assessment", detail: <>Puts <strong>Redesign Assessment</strong> into practice by ensuring learning and student contribution remain authentic, credible and visible.</> },
-    { icon: ShieldCheck, title: "Data and Tech-Enhanced T&L", detail: <>Supports <strong>personalised learning</strong> through suitable AI tools and learning data, with appropriate checking and human oversight.</> },
+    { icon: BookOpen, title: "Curriculum Design and Development", detail: "Applies the 3As to review the competencies students need as professional practice changes." },
+    { icon: Lightbulb, title: "Facilitation of Learning", detail: "Applies PAIR and personalised learning approaches to help students learn and work with AI purposefully." },
+    { icon: ClipboardCheck, title: "Assessment", detail: "Applies NP's assessment approach to keep learning and student contribution authentic, credible and visible." },
+    { icon: ShieldCheck, title: "Data and Tech-Enhanced T&L", detail: "Uses suitable AI tools and learning data to enhance support, with appropriate checks and human oversight." },
   ];
   return (
     <figure className="concept-visual module-preview-visual" aria-label="What the next four sections cover">

@@ -29,7 +29,7 @@ The programme includes the learning content, activities and completion quiz. You
 
 <!--roadmap-strip-->
 
-> This Level 1 package establishes the awareness foundation for teaching staff. Further development will focus on applying and integrating AI in T&L practice.
+> This Level 1 package provides the awareness foundation. Subsequent development will focus on applying and integrating AI in T&L practice.
 
 <!--strategy-map-->
 
@@ -39,17 +39,11 @@ The five strategies are applied through four connected areas of T&L practice:
 
 <!--module-preview-->
 
-> Together, these four areas provide a practical way to apply NP’s AI-enabled T&L strategies within a module.
-
-:::note The four areas are connected
-
-A change in one area may have implications for the others—for example, an AI-supported activity may affect the intended competency, learning design, assessment evidence and choice of tool.
-
-:::
+> The four areas are connected. Together, they provide a practical way to apply NP’s AI-enabled T&L strategies within a module. A change in one area may have implications for the others.
 
 ## Keep One of Your Modules in Mind
 
-As you work through the next four sections, think of one module you teach, lead or support. Use it to connect the ideas to your own T&L practice.
+As you work through the next four sections, keep one module you teach, lead or support in mind. Use it to relate the ideas to your own T&L practice.
 
 ---
 
