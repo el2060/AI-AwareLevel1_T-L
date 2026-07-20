@@ -186,9 +186,7 @@ Where the intended learning outcome includes productive use of AI, assessment ma
 
 The final output and an appropriate explanation or reflection may form part of the assessment evidence.
 
-> Marks should be awarded for demonstrated learning and capability—not simply for using an AI tool or completing the PAIR steps.
-
-<!--pair-assessment-check-->
+> Marks should reflect the quality of the learning demonstrated—not simply the use of AI or completion of the PAIR steps.
 
 ## Check That AI Supports the Intended Learning
 

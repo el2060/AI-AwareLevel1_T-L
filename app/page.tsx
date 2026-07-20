@@ -364,21 +364,6 @@ function SupportReplaceSorter() {
   />;
 }
 
-function PairAssessmentCheck() {
-  return <ScenarioSorter
-    eyebrow="Assessment Check"
-    title="What Should Earn Marks?"
-    prompt="For each example, decide whether the evidence demonstrates the intended capability or merely shows that a PAIR activity was completed."
-    options={["Demonstrated capability", "Completion only"]}
-    countNoun="checked"
-    scenarios={[
-      { id: "tool", context: "Students receive marks for attaching a screenshot showing that they used an AI tool, regardless of how they used or evaluated it.", answer: "Completion only", feedback: "The screenshot confirms that AI was used, but it does not demonstrate learning, evaluation or judgement." },
-      { id: "process", context: "Students submit a proposal developed with AI and explain how they framed the problem, tested and refined the output against disciplinary criteria, and made their final decisions.", answer: "Demonstrated capability", feedback: "The evidence shows problem framing, evaluation and disciplinary judgement. These may be relevant where the learning outcome includes productive use of AI." },
-      { id: "stages", context: "Students receive marks for completing all four PAIR stages in a worksheet, even though the quality of their decisions and evaluation is not assessed.", answer: "Completion only", feedback: "Completing the stages does not by itself demonstrate the intended capability. The quality of students’ reasoning, evaluation and judgement must be assessed." },
-    ]}
-  />;
-}
-
 function GenAiConditionsSorter() {
   return <ScenarioSorter
     eyebrow="Check the conditions"
@@ -1184,7 +1169,6 @@ export default function Home() {
   const genAiConditionsMarker = "<!--genai-conditions-check-->";
   const nextStepMarker = "<!--next-step-->";
   const pairApplyMarker = "<!--pair-apply-checklist-->";
-  const pairAssessmentMarker = "<!--pair-assessment-check-->";
   const fourIdeasMarker = "<!--four-ideas-visual-->";
   const quizRecapMarker = "<!--quiz-readiness-recap-->";
   const sectionMarkdown = withoutTitle(current.markdown);
@@ -1207,7 +1191,6 @@ export default function Home() {
     [moduleReviewMarker]: <FourLensReview value={activityNotes.snapshotcheck ?? ""} onChange={(value) => setActivityValue("snapshotcheck", value)} />,
     [nextStepMarker]: <NextStepActivity value={activityNotes.nextstep ?? ""} onChange={(value) => setActivityValue("nextstep", value)} />,
     [pairApplyMarker]: <TapChecklist prompt="Tap each prompt once you have considered it for your activity." items={["what students should understand or do before using AI;", "what role AI should play;", "how students will evaluate and improve the output;", "what reflection or evidence will make their learning and judgement visible."]} value={activityNotes.pairapply ?? ""} onChange={(value) => setActivityValue("pairapply", value)} />,
-    [pairAssessmentMarker]: <PairAssessmentCheck />,
     [fourIdeasMarker]: <FourIdeasVisual />,
     [quizRecapMarker]: <QuizReadinessRecap />,
   };
