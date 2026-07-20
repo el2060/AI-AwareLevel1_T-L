@@ -419,58 +419,9 @@ AI tools and learning data can extend learning opportunities and help lecturers 
 
 > What could help students learn more effectively—and what would you need to check before using it?
 
-## Four Practical Uses
-
-<!--tandl-uses-->
-
-<<<<<<< HEAD
-### Apply Learning Data and Analytics
-
-Use learning data to identify possible needs, inform action and review whether support is helping.
-
-> Start with the learning need—not the technology.
-
 ## How AI and Data Can Help
 
-### 1. Support Lecturers' T&L Work
-
-AI can provide a useful first pass for tasks such as:
-
-- reviewing module materials;
-- drafting practice examples;
-- creating alternative formats;
-- checking assignment clarity;
-- summarising feedback themes.
-
-You provide the context and intended learning, then check, adapt and decide what to use.
-
-### 2. Extend Student Learning Support
-
-AI-enabled tutors and learning assistants can extend opportunities for practice, feedback and support beyond class time.
-
-Within NP, these may include:
-
-**Brightspace Lumi Tutor**
-Uses module content to support explanations, summaries, practice questions, flashcards and revision.
-
-**Adaptive or course-specific AI tutors**
-Provide targeted practice, feedback or coaching based on the intended learning.
-
-**Student AI tools**
-May support learning, creation, research or problem-solving, subject to task conditions and responsible-use requirements.
-
-These tools complement facilitation. Lecturers still determine the intended learning, source materials, boundaries and how the support fits within the module.
-
-### 3. Use Learning Data to Inform Support
-
-Learning data can help lecturers:
-
-- identify patterns in participation or performance;
-- understand different learning needs;
-- plan targeted activities or interventions;
-- review whether the support is helping.
-
-AI-generated summaries, patterns or predictions are starting points—not decisions. Interpret the information in context before deciding what action is appropriate.
+<!--tandl-uses-->
 
 ### Using Learning Data Responsibly
 
@@ -491,10 +442,7 @@ Learning data and assessment feedback may reveal that different groups of studen
 
 The lecturer reviews and adapts the suggestions, checks that they address the identified learning needs and decides how they should be used. AI should not rewrite students’ work for them, independently predict their final results or replace direct engagement with students.
 
-## Example · Create Alternative Formats
-=======
 ## Explore a Common T&L Use
->>>>>>> 461291c0cd3d3aaa11f602b88be490f04087d7d1
 
 <!--use-case-explorer-->
 
@@ -520,7 +468,6 @@ Is the information appropriate to use, and is the output accurate, relevant and 
 
 Who reviews the output, decides what action to take and checks whether it helped?
 
-<<<<<<< HEAD
 Tool selection should therefore consider:
 
 1. the intended T&L purpose;
@@ -532,9 +479,8 @@ Tool selection should therefore consider:
 An NP-provided tool is not automatically the best tool for every learning activity, and no single AI tool is required for all modules.
 
 > A tool may be approved and still not be the best choice for the learning purpose.
-=======
+
 ### Using Information in AI Tools
->>>>>>> 461291c0cd3d3aaa11f602b88be490f04087d7d1
 
 <!--tool-guidance-->
 
