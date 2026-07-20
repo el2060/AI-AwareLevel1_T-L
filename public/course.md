@@ -25,19 +25,17 @@ The programme includes the learning content, activities and completion quiz. You
 
 # Part 1: NP’s Approach to AI-Enabled Teaching & Learning
 
-## Where This Package Sits
+## NP’s Approach to AI-Enabled T&L
 
-This Level 1 package introduces the AI-Aware foundation for NP teaching staff.
+AI is changing what students need to learn, how they learn and how their learning is assessed.
 
-It helps us understand how AI affects curriculum, facilitation, assessment, and data and technology-enhanced T&L. Further development will focus on applying and integrating AI more deeply in our teaching practice.
-
-<!--roadmap-accordion-->
+NP’s approach brings together curriculum, pedagogy, assessment, personalised learning and human capabilities to help prepare students for professional practice in an AI-enabled world.
 
 <!--strategy-map-->
 
-## How the Strategies Connect to Our T&L Practice
+## Applying the Strategies to Our T&L Practice
 
-The next four sections show how NP’s five strategies connect to four TLCF domains in our T&L practice.
+The next four sections apply NP’s strategies across four TLCF domains.
 
 <!--module-preview-->
 

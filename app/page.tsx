@@ -424,45 +424,6 @@ function FourLensReview({ value, onChange }: { value: string; onChange: (value: 
   return <TapChecklist prompt="Tap each question after considering it for your module." items={["Curriculum: What may need review in the learning outcomes, activities or assessment?", "Facilitation: How could students use AI purposefully while still doing the intended thinking, judging or performing?", "Assessment: What must students demonstrate themselves, and where might GenAI use be appropriate?", "Data and Tech-Enhanced T&L: What learning need could an AI tool or learning data support, and what would need checking before use?"]} tips={["Use the 3As to consider whether the intended capability is Anchor, Augment or Advance.", "Use PAIR to structure students' use of AI so it supports, rather than replaces, the intended learning.", "Check that the GenAI conditions and evidence of learning are clear.", "Consider learning fit, suitability, the information involved, output quality and human oversight."]} value={value} onChange={onChange} />;
 }
 
-function RoadmapStrip() {
-  const stages = [
-    { key: "awareness", icon: Eye, name: "AI Awareness", detail: "Understand how AI affects learning, teaching and curriculum.", current: true },
-    { key: "integration", icon: Bot, name: "AI Integration", detail: "Apply AI purposefully in learning, teaching and assessment.", current: false },
-    { key: "innovation", icon: Rocket, name: "AI Innovation", detail: "Develop and scale new AI-enabled practices and solutions.", current: false },
-  ];
-  return (
-    <figure className="concept-visual roadmap-strip" aria-label="NP's AI in T&L Roadmap, progressing from awareness to integration to innovation">
-      <div className="roadmap-flow">
-        <span className="roadmap-track" aria-hidden="true" />
-        {stages.map((stage) => {
-          const Icon = stage.icon;
-          return (
-            <div className={`roadmap-node${stage.current ? " current" : ""}`} key={stage.key}>
-              {stage.current && <span className="roadmap-current-tag">You are here: {stage.name}</span>}
-              <span className="roadmap-dot-wrap">
-                <span className="roadmap-dot"><Icon size={stage.current ? 20 : 16} strokeWidth={2.1} aria-hidden="true" /></span>
-              </span>
-              <div className="roadmap-node-body">
-                <b>{stage.name}</b>
-                <p>{stage.detail}</p>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </figure>
-  );
-}
-
-function RoadmapAccordion() {
-  return (
-    <details className="policy-detail">
-      <summary>View NP&rsquo;s AI in T&amp;L Roadmap</summary>
-      <div><RoadmapStrip /></div>
-    </details>
-  );
-}
-
 function StrategyMap() {
   const [active, setActive] = useState(0);
   const items = [
@@ -1164,7 +1125,6 @@ export default function Home() {
   const alignmentCheckMarker = "<!--alignment-check-visual-->";
   const alignmentFlowMarker = "<!--alignment-flow-visual-->";
   const strategyMapMarker = "<!--strategy-map-->";
-  const roadmapAccordionMarker = "<!--roadmap-accordion-->";
   const supportReplaceMarker = "<!--support-or-replace-->";
   const genAiConditionsMarker = "<!--genai-conditions-check-->";
   const nextStepMarker = "<!--next-step-->";
@@ -1185,7 +1145,6 @@ export default function Home() {
     [studentBaselineMarker]: <StudentBaselineVisual />,
     [threeAsMarker]: <ThreeAsInfographic />,
     [strategyMapMarker]: <StrategyMap />,
-    [roadmapAccordionMarker]: <RoadmapAccordion />,
     [supportReplaceMarker]: <SupportReplaceSorter />,
     [genAiConditionsMarker]: <GenAiConditionsSorter />,
     [moduleReviewMarker]: <FourLensReview value={activityNotes.snapshotcheck ?? ""} onChange={(value) => setActivityValue("snapshotcheck", value)} />,
