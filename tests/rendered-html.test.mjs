@@ -49,6 +49,7 @@ test("keeps the course source and Part 5 content intact", async () => {
   assert.match(course, /## How AI and Data Can Help/);
   assert.match(course, /### Using Learning Data Responsibly/);
   assert.match(course, /### Design More Targeted Learning Support/);
-  assert.match(course, /Tool selection should therefore consider:/);
+  assert.match(course, /Before using a tool or learning data, consider four questions:/);
+  assert.doesNotMatch(course, /Tool selection should therefore consider:/);
   assert.doesNotMatch(course, /^(<<<<<<<|=======|>>>>>>>)$/m);
 });

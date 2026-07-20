@@ -437,7 +437,7 @@ function StrategyMap() {
     <section className="strategy-map" aria-label="How NP approaches connect across this package">
       <div className="strategy-heading">
         <h2>NP’s Five Strategies at a Glance</h2>
-        <p>NP’s five strategies bring together curriculum, pedagogy, assessment, personalised learning and human capabilities to support one intended outcome:</p>
+        <p>NP’s five strategies support one intended outcome:</p>
       </div>
       <div className="strategy-goal" aria-label="Outcome: AI-ready graduates who combine strong human qualities, deep domain expertise and effective use of AI in professional practice">
         <div className="graduate-core">
@@ -622,7 +622,7 @@ function OpeningVisual() {
     },
     {
       title: "Assessment",
-      detail: "How assessment keeps learning and students' own contribution authentic, credible and visible.",
+      detail: "How assessment can provide authentic and credible evidence of learning and students’ own contribution.",
       icon: ClipboardCheck,
     },
     {
@@ -666,7 +666,7 @@ function HomeFlow() {
         <h2>T&amp;L in an AI-Enabled Context</h2>
         <p>
           AI is increasingly shaping how our students learn, how professional
-          practice is changing and the capabilities NP graduates will need.
+          practice is changing and what NP graduates will need to be able to do.
         </p>
         <p>
           Used purposefully, AI can extend opportunities for practice, feedback
@@ -915,7 +915,7 @@ function AlignmentCheckVisual() {
   const items = [
     { icon: Target, title: "Learning outcome", detail: "Does it state the intended competency clearly?" },
     { icon: BookOpen, title: "Learning activities", detail: "Do they help students develop the intended competency?" },
-    { icon: ClipboardCheck, title: "Assessment", detail: "Does it provide credible evidence of the intended competency and the student's own contribution?" },
+    { icon: ClipboardCheck, title: "Assessment", detail: "Does it provide credible evidence of the intended competency and students’ own contribution?" },
   ];
   return (
     <figure className="concept-visual" aria-label="Check constructive alignment across learning outcome, activities and assessment">

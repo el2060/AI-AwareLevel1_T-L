@@ -39,8 +39,6 @@ The next four sections apply NP’s strategies across four TLCF domains.
 
 <!--module-preview-->
 
-> Together, these four areas provide a practical way to review one module in an AI-enabled context.
-
 ## Keep One of Your Modules in Mind
 
 As you work through the next four sections, keep one module you teach, lead or support in mind. Use it to connect the ideas to your own T&L practice.
@@ -172,17 +170,9 @@ Less experienced students may need a defined task, suggested tools and guided re
 
 ## Can Learning Through PAIR Be Assessed?
 
-PAIR can be used in formative or summative learning activities.
+PAIR can be used in formative or summative activities.
 
-Where the intended learning outcome includes productive use of AI, assessment may examine how students:
-
-- frame or understand the problem;
-- select and use AI appropriately;
-- evaluate and refine its outputs;
-- apply disciplinary criteria; and
-- exercise human judgement.
-
-The final output and an appropriate explanation or reflection may form part of the assessment evidence.
+Where productive use of AI is part of the intended learning, assessment may consider how students frame the task, use AI, evaluate its outputs, apply disciplinary criteria and exercise judgement.
 
 > Marks should reflect the intended learning demonstrated—not simply the use of AI or completion of the PAIR stages.
 
@@ -330,7 +320,7 @@ For example:
 
 Evidence may include drafts, checkpoints, selected interaction records, demonstrations, explanations or questioning. A complete AI chat history should not be required by default.
 
-### Assessing Augment Capabilities
+:::details Assessing Augment Capabilities
 
 Where students are expected to use AI to augment their work, the assessment should make their use of AI and their own judgement visible.
 
@@ -346,17 +336,13 @@ Evidence may be gathered through the final output, selected process evidence, de
 
 For example, students using an AI image generator in a design project could explain how they framed the task, selected and refined outputs, addressed design requirements and made the final creative decisions.
 
+:::
+
 ### 4. Prepare Students and Require Declaration
 
 Explain the conditions early and provide suitable formative preparation, checkpoints or mock runs where helpful.
 
-All relevant submission cover pages must include the required GenAI Use Declaration. Any additional evidence should be proportionate to the assessment and clearly stated in the brief.
-
-The declaration and supporting evidence should be proportionate to the assessment design.
-
-Where students’ use of AI is directly examined through a demonstration, presentation or question-and-answer session, a brief declaration may be sufficient. More detailed process evidence should only be required where it is necessary to establish the intended learning or student contribution.
-
-A full prompt-and-response log or reflective essay should not be required by default.
+All relevant submission cover pages must include the required GenAI Use Declaration. Any additional evidence should be proportionate to the assessment and necessary to establish the intended learning or student contribution. A complete interaction log or reflective essay should not be required by default.
 
 Module leaders are responsible for:
 
@@ -379,7 +365,7 @@ Staff must not use GenAI to determine grades independently. Any approved use as 
 
 AI-detection results, changes in writing style or unexpectedly sophisticated language may raise concerns, but they are not sufficient proof of misconduct.
 
-Where misuse is suspected, follow the process in Appendix 3 of the Gen AI in Summative Assessment Policy & Guidance:
+Where misuse is suspected, follow the process in the Gen AI in Summative Assessment Policy & Guidance:
 
 - review the submission and the student’s GenAI declaration;
 - interview the student and ask them to explain the content and how the work was produced;
@@ -471,18 +457,6 @@ Is the information appropriate to use, and is the output accurate, relevant and 
 
 Who reviews the output, decides what action to take and checks whether it helped?
 
-Tool selection should therefore consider:
-
-1. the intended T&L purpose;
-2. whether the tool is approved for the type and sensitivity of information involved;
-3. whether it is suitable and accessible for the intended users;
-4. whether it is efficient and effective for the task; and
-5. what lecturers and students have learnt through appropriate testing, experimentation or PAIR activities.
-
-An NP-provided tool is not automatically the best tool for every learning activity, and no single AI tool is required for all modules.
-
-> A tool may be approved and still not be the best choice for the learning purpose.
-
 ### Using Information in AI Tools
 
 <!--tool-guidance-->
@@ -522,6 +496,6 @@ Identify one practical action to take forward:
 
 ## Closing
 
-The key is to begin with the intended learning, then make deliberate choices about curriculum, facilitation, assessment, and the use of tools and data.
+The key is to begin with the intended learning, then make deliberate choices about curriculum, facilitation, assessment and the use of tools and data.
 
 When you are ready, complete the separately administered quiz to fulfil the package requirements.
