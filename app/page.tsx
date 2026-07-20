@@ -372,7 +372,7 @@ function PairAssessmentCheck() {
     options={["Demonstrated capability", "PAIR completion only"]}
     countNoun="checked"
     scenarios={[
-      { id: "process", context: "Students submit an AI-generated proposal with a short explanation of how they framed the problem, tested the output against disciplinary criteria and made their final decisions.", answer: "Demonstrated capability", feedback: "The evidence makes visible framing, evaluation and human judgement — capabilities that may be relevant to an Augment outcome." },
+      { id: "process", context: "Students submit a proposal developed with AI and explain how they framed the problem, tested and refined the output against disciplinary criteria, and made their final decisions.", answer: "Demonstrated capability", feedback: "The evidence makes visible framing, evaluation and human judgement — capabilities that may be relevant to an Augment outcome." },
       { id: "tool", context: "Students receive marks for attaching a screenshot showing that they used an AI tool, regardless of how they used or evaluated it.", answer: "PAIR completion only", feedback: "Using a tool is not, by itself, evidence of learning. Marks should recognise the relevant capability demonstrated through the process, output and explanation." },
       { id: "reflection", context: "Students compare two AI-generated approaches, justify which they adopted using module concepts and explain the limitation they needed to address.", answer: "Demonstrated capability", feedback: "The task assesses evaluation, disciplinary reasoning and responsible AI use rather than rewarding AI use alone." },
     ]}

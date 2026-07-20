@@ -188,9 +188,9 @@ Less experienced students may need a defined task, suggested tools and guided re
 
 PAIR may be used in formative or summative learning activities.
 
-Where the intended learning outcome includes **Augment** capabilities, assessment should examine relevant aspects of how students frame the problem, select and use AI, evaluate its outputs and exercise human judgement. The resulting output and appropriate reflection or explanation may therefore form part of the assessment evidence.
+Where the intended learning outcome includes Augment capabilities, assessment should examine relevant aspects of how students frame the problem, select and use AI, evaluate its outputs and exercise human judgement. The resulting output and appropriate reflection or explanation should form part of the assessment evidence.
 
-Marks should recognise demonstrated learning and capability—not simply reward students for completing a PAIR activity or using an AI tool.
+Marks should recognise demonstrated learning and capability—not simply reward students for completing a PAIR activity, showing effort or using an AI tool.
 
 <!--pair-assessment-check-->
 
