@@ -65,25 +65,15 @@ The 3As provide a simple lens for doing this.
 
 ## Applying the 3As Across a Module
 
-Review all three As when considering what graduates may need in an AI-enabled profession. This does not mean that every module, lesson or assessment must address Anchor, Augment and Advance equally.
+Use the 3As to consider which competencies are relevant to the discipline, module level and intended learning outcomes.
 
-The balance depends on the discipline, module level and intended learning outcomes:
+**Anchor** may be emphasised where human judgement, empathy, ethics, safety or disciplinary reasoning must be demonstrated.
 
-- **Anchor** capabilities remain essential, particularly where human judgement, empathy, ethics, safety or disciplinary reasoning must be demonstrated.
-- **Augment** is the baseline for developing students’ ability to work effectively and responsibly with AI where this is relevant to professional practice.
-- **Advance** may be developed where students are ready to explore new AI-enabled services, workflows or forms of practice.
+**Augment** may be emphasised where students need to use AI effectively and responsibly as part of learning or professional practice.
 
-A module may therefore develop all three while placing greater emphasis on one or two of them.
+**Advance** may be emphasised where students are ready to explore new AI-enabled services, workflows or forms of practice.
 
-### Example · Applying the 3As in a Module
-
-A nursing module on patient care planning might develop:
-
-- **Anchor:** empathy, ethical decision-making and professional clinical judgement;
-- **Augment:** using AI appropriately to review or optimise a care plan while retaining human oversight; and
-- **Advance:** exploring new AI-assisted approaches to patient monitoring or care delivery.
-
-The three As need not receive equal emphasis. Where AI use is relevant to professional practice, **Augment provides the assessment baseline**, while Anchor capabilities remain essential and Advance may be developed where appropriate to the module level and context.
+A module may focus on one or combine several of the 3As. They do not need to be addressed equally.
 
 ## Aligning Competencies, Learning Activities and Assessment
 
@@ -99,8 +89,8 @@ These broad examples show how the 3As might look across different forms of pract
 
 |                                          | **Anchor**                                                   | **Augment**                                                  | **Advance**                                                   |
 | ----------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------ |
-| **Technical or scientific**               | Apply **core reasoning** and safety-critical judgement.          | **Use AI to analyse**, test or improve a solution.               | Develop a **new AI-enabled workflow** or application.              |
-| **People-centred**                        | Demonstrate **empathy**, ethics and professional judgement.      | **Use AI to support** planning or personalised support.          | Develop a **new AI-enabled service** or care approach.             |
+| **Technical, scientific or engineering**  | Apply **core reasoning** and safety-critical judgement.          | **Use AI to analyse**, test or improve a solution.               | Develop a **new AI-enabled workflow** or application.              |
+| **People-centred or service-based**       | Demonstrate **empathy**, ethics and professional judgement.      | **Use AI to support** planning or personalised support.          | Develop a **new AI-enabled service** or care approach.             |
 | **Business, creative or communication**   | Evaluate **evidence**, context and audience needs.               | **Use AI to generate**, compare or refine possibilities.         | Create a **new AI-enabled service**, experience or workflow.       |
 
 > Lecturers should interpret the 3As according to their disciplinary expertise, intended learning outcomes and professional context.
