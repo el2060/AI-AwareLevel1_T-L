@@ -176,15 +176,9 @@ The degree of student choice should reflect their readiness and the intended lea
 
 Less experienced students may need a defined task, suggested tools and guided reflection. More experienced students may take greater responsibility for framing the task, selecting tools and shaping their interaction with AI.
 
-## Using PAIR in Assessment
-
-PAIR can be used in formative or summative activities.
-
-Where productive use of AI is part of the intended learning, assessment may consider how students frame the task, use AI, evaluate its outputs, apply disciplinary criteria and exercise judgement.
-
-> Marks should reflect the intended learning demonstrated—not simply the use of AI or completion of the PAIR stages.
-
 ## Check That AI Supports the Intended Learning
+
+Good scaffolding should keep students engaged in the capability the activity is intended to develop.
 
 AI can support learning when students use it to:
 
@@ -197,6 +191,8 @@ AI can support learning when students use it to:
 AI may undermine learning when it completes the thinking, judgement, creation or performance students are meant to develop.
 
 > Check whether students are still practising the intended capability.
+
+This bridge is much more natural because it directly links scaffolding to its purpose.
 
 ## When AI Has Bypassed the Learning
 
@@ -211,7 +207,23 @@ A follow-up activity can require students to:
 
 For example, after an AI-completed OAL activity, an IPL lesson could require students to identify gaps and apply the concepts to a new situation.
 
+## Quick Check
+
+### Is AI Supporting the Learning?
+
+For each situation, decide whether AI supports students in developing the intended capability or does the work they are meant to do.
+
 <!--support-or-replace-->
+
+## Using PAIR in Assessment
+
+PAIR may also be used in formative or summative activities.
+
+Where productive use of AI is part of the intended learning, assessment may consider how students frame the task, use AI, evaluate its outputs, apply disciplinary criteria and exercise judgement.
+
+> Marks should reflect the intended learning demonstrated—not simply the use of AI or completion of the PAIR stages.
+
+This brief section can be presented as a short accordion or note, since assessment is not the main focus of Part 3. It serves as a natural bridge into Part 4.
 
 ## Apply PAIR to One Learning Activity
 
