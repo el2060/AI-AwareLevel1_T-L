@@ -522,6 +522,6 @@ Identify one practical action to take forward:
 
 ## Closing
 
-AI-enabled T&L is not about using AI everywhere. It is about making deliberate choices that strengthen learning, preserve the capabilities students need to develop and prepare them for professional practice in an AI-enabled world.
+The key is to begin with the intended learning, then make deliberate choices about curriculum, facilitation, assessment, and the use of tools and data.
 
 When you are ready, complete the separately administered quiz to fulfil the package requirements.
