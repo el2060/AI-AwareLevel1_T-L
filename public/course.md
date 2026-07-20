@@ -237,7 +237,11 @@ You determine the task, scaffolding and degree of student choice so that AI supp
 
 ## Applying an AI Lens to Assessment
 
-The TLCF Assessment domain focuses on implementing assessment and ensuring its quality. In a GenAI-enabled context, clarify how AI may be used while ensuring that the intended learning and students’ own contribution remain visible.
+In a GenAI-enabled context, assessment should make clear:
+
+- what students must demonstrate;
+- how AI may be used; and
+- what evidence will make their learning and contribution visible.
 
 ## Two Assessment Priorities
 
@@ -255,7 +259,7 @@ Use the 3As to clarify:
 
 Where relevant, assessment should make visible students’ ability to evaluate AI outputs, use AI meaningfully and exercise appropriate judgement and oversight.
 
-> Assessment should provide credible evidence of learning. A polished final product alone may not show what the student knows, can do or has contributed.
+> A polished final product alone may not show what the student knows, can do or has contributed.
 
 :::note Policy Reference
 
