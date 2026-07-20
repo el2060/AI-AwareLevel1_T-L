@@ -127,11 +127,9 @@ Should it emphasise:
 
 What is one adjustment that would improve the alignment between the learning outcome, activities and assessment?
 
-## Supporting Context · A Common AI Foundation for Students
+## Supporting Context · Sector AI Baseline Competencies
 
 <!--student-baseline-visual-->
-
-The sector baseline provides a common foundation for students' AI literacy and use, while the 3As guide how these capabilities connect to disciplinary and professional practice.
 
 ## Key Takeaway
 

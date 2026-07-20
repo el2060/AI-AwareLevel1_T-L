@@ -485,7 +485,7 @@ function StrategyMap() {
     { name: "Transform the Curriculum · 3As", question: "What competencies should our students develop and demonstrate as professional practice changes?", icon: BookOpen, covers: "Part 2 · Curriculum Design and Development", coversTone: 2 },
     { name: "Redesign Assessment", question: "How can we design assessment that provides authentic and credible evidence of learning in an AI-enabled context?", icon: ClipboardCheck, covers: "Part 4 · Assessment", coversTone: 4 },
     { name: "Enable Personalised Learning", question: "How can AI extend opportunities for practice, feedback and coaching in our modules?", icon: Bot, covers: "Part 5 · Data and Tech-Enhanced T&L", coversTone: 5 },
-    { name: "Strengthen Human Skills and Resilience", question: "How can we strengthen the human qualities students need in an AI-enabled world?", icon: Users, covers: "Woven through all four parts", coversTone: 0 },
+    { name: "Strengthen Human Skills and Resilience", question: "How can we strengthen the human qualities students need in an AI-enabled world?", icon: Users },
   ];
   return (
     <section className="strategy-map" aria-label="How NP approaches connect across this package">
@@ -506,7 +506,7 @@ function StrategyMap() {
       </div>
       <div className="strategy-path">
         {items.map(({ name, question, icon: Icon, covers, coversTone }, index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
-          <i><Icon size={22} strokeWidth={2} aria-hidden="true" /></i><span><strong>Strategy {index + 1} · {name}</strong><small>{question}</small><em className={`strategy-covers covers-tone-${coversTone}`}>{covers}</em></span>
+          <i><Icon size={22} strokeWidth={2} aria-hidden="true" /></i><span><strong>Strategy {index + 1} · {name}</strong><small>{question}</small>{covers && <em className={`strategy-covers covers-tone-${coversTone}`}>{covers}</em>}</span>
         </button>)}
       </div>
     </section>
@@ -796,7 +796,7 @@ function HomeFlow() {
 
 function StudentBaselineVisual() {
   const items = [
-    { icon: BookOpen, title: "Learn About AI", detail: "Understand key AI terms, approaches, capabilities and limitations." },
+    { icon: BookOpen, title: "Learn About AI", detail: "Understand key AI terms, approaches, fields, capabilities and limitations." },
     { icon: Bot, title: "Learn With AI", detail: "Use AI as a learning partner to break down problems, compare explanations, identify gaps and deepen understanding." },
     { icon: Rocket, title: "Learn to Use AI", detail: "Apply AI to create value, and evaluate outputs for accuracy, relevance, bias and suitability before using them." },
     { icon: Scale, title: "Learn Beyond AI", detail: "Consider the societal, ethical and legal implications of AI, and exercise human judgement and oversight." },
@@ -805,7 +805,7 @@ function StudentBaselineVisual() {
     <details className="policy-detail student-baseline-accordion">
       <summary>View the sector AI baseline competencies</summary>
       <div>
-        <p>The POLITE sector AI baseline identifies foundational AI competencies that students should progressively develop across their learning.</p>
+        <p>The POLITE sector AI baseline sets out foundational AI competencies for students across four broad areas.</p>
         <div className="lens-strip baseline-strip">
           {items.map(({ icon: Icon, title, detail }) => (
             <section key={title}>
@@ -815,7 +815,7 @@ function StudentBaselineVisual() {
             </section>
           ))}
         </div>
-        <p className="baseline-note">Individual modules may contribute to different areas. Not every module is expected to address all four.</p>
+        <p className="baseline-note">This baseline is included here for awareness. NP is developing how these competencies will be supported across the student learning journey.</p>
       </div>
     </details>
   );
