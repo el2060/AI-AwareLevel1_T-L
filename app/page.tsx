@@ -312,7 +312,7 @@ const sectionBridges = [
   "Bring the four areas together by reviewing one module you teach, lead or support.",
 ];
 
-type SorterScenario = { id: string; context: string; answer: string; feedback: string };
+type SorterScenario = { id: string; context: string; answer: string; feedback: string; incorrectTitle?: string };
 
 function ScenarioSorter({ eyebrow, title, prompt, options, scenarios, countNoun, trio }: { eyebrow: string; title: string; prompt: string; options: string[]; scenarios: SorterScenario[]; countNoun: string; trio?: boolean }) {
   const [active, setActive] = useState(0);
@@ -323,7 +323,7 @@ function ScenarioSorter({ eyebrow, title, prompt, options, scenarios, countNoun,
   return (
     <section className="activity-block domain-spotter">
       <div className="activity-head-row">
-        <div><span className="activity-eyebrow">{eyebrow}</span><h2>{title}</h2></div>
+        <div><span className="activity-eyebrow">{eyebrow}</span><h3>{title}</h3></div>
         <span className="activity-count">{solved} / {scenarios.length} {countNoun}</span>
       </div>
       <p>{prompt}</p>
@@ -340,7 +340,7 @@ function ScenarioSorter({ eyebrow, title, prompt, options, scenarios, countNoun,
       </div>
       {picked && (
         <div className={`activity-feedback ${picked !== current.answer ? "try-again" : ""}`}>
-          <strong>{picked === current.answer ? current.answer : `This one is ${current.answer}`}</strong>
+          <strong>{picked === current.answer ? current.answer : current.incorrectTitle ?? `This is ${current.answer}.`}</strong>
           <p>{current.feedback}</p>
         </div>
       )}
@@ -350,7 +350,7 @@ function ScenarioSorter({ eyebrow, title, prompt, options, scenarios, countNoun,
 
 function SupportReplaceSorter() {
   return <ScenarioSorter
-    eyebrow="Quick check"
+    eyebrow="Quick Check"
     title="Support or Replace?"
     prompt="Read each situation and decide whether AI is supporting the intended learning or replacing it."
     options={["Supports the intended learning", "Replaces the intended learning"]}
@@ -366,15 +366,15 @@ function SupportReplaceSorter() {
 
 function PairAssessmentCheck() {
   return <ScenarioSorter
-    eyebrow="Assessment check"
-    title="What Should the Mark Recognise?"
-    prompt="For each example, decide whether the assessment is recognising demonstrated capability or merely completion of a PAIR activity."
-    options={["Demonstrated capability", "PAIR completion only"]}
+    eyebrow="Assessment Check"
+    title="What Should Earn Marks?"
+    prompt="For each example, decide whether the evidence demonstrates the intended capability or merely shows that a PAIR activity was completed."
+    options={["Demonstrated capability", "Completion only"]}
     countNoun="checked"
     scenarios={[
-      { id: "process", context: "Students submit a proposal developed with AI and explain how they framed the problem, tested and refined the output against disciplinary criteria, and made their final decisions.", answer: "Demonstrated capability", feedback: "The evidence makes visible framing, evaluation and human judgement — capabilities that may be relevant to an Augment outcome." },
-      { id: "tool", context: "Students receive marks for attaching a screenshot showing that they used an AI tool, regardless of how they used or evaluated it.", answer: "PAIR completion only", feedback: "Using a tool is not, by itself, evidence of learning. Marks should recognise the relevant capability demonstrated through the process, output and explanation." },
-      { id: "reflection", context: "Students compare two AI-generated approaches, justify which they adopted using module concepts and explain the limitation they needed to address.", answer: "Demonstrated capability", feedback: "The task assesses evaluation, disciplinary reasoning and responsible AI use rather than rewarding AI use alone." },
+      { id: "tool", context: "Students receive marks for attaching a screenshot showing that they used an AI tool, regardless of how they used or evaluated it.", answer: "Completion only", feedback: "The screenshot confirms that AI was used, but it does not demonstrate learning, evaluation or judgement." },
+      { id: "process", context: "Students submit a proposal developed with AI and explain how they framed the problem, tested and refined the output against disciplinary criteria, and made their final decisions.", answer: "Demonstrated capability", incorrectTitle: "This demonstrates capability—not completion only.", feedback: "The evidence shows problem framing, evaluation and disciplinary judgement. These may be relevant capabilities where the learning outcome includes productive use of AI." },
+      { id: "stages", context: "Students receive marks for completing all four PAIR stages in a worksheet, even though the quality of their decisions and evaluation is not assessed.", answer: "Completion only", feedback: "Completing the stages does not by itself demonstrate the intended capability. The quality of students’ reasoning, evaluation and judgement must be assessed." },
     ]}
   />;
 }
@@ -905,8 +905,8 @@ function PairInfographic() {
   const stages = [
     { letter: "P", name: "Problem", icon: Target, action: "Students define the task or challenge", detail: "Clarify the intended outcome, requirements, constraints and success criteria.", cue: "What must we understand before using AI?", tone: "problem" },
     { letter: "A", name: "AI", icon: Bot, action: "Students select a suitable AI tool", detail: "Consider what support is needed, what the tool can do and whether its use is permitted.", cue: "What could AI contribute?", tone: "ai" },
-    { letter: "I", name: "Interaction", icon: RefreshCw, action: "Students experiment, evaluate and refine", detail: <>Evaluate AI outputs for relevance and accuracy. Test, challenge and refine the output, and verify important claims against primary, official or trusted sources.<br /><br />AI may favour information that is common, prominent or easy to retrieve while overlooking a less well-known but more authoritative source. This is especially important for legal, regulatory, technical or specialised information.</>, cue: "How will we test and improve the output?", tone: "interaction" },
-    { letter: "R", name: "Reflection", icon: Eye, action: "Students examine the process and learning", detail: "Evaluate how AI supported or hindered the learning process, and identify where human judgement was necessary.", cue: "What did we learn about the task, the tool and our own judgement?", tone: "reflection" },
+    { letter: "I", name: "Interaction", icon: RefreshCw, action: "Students experiment, evaluate and refine", detail: <>Evaluate AI outputs for relevance and accuracy. Test, challenge and refine the output.<br /><br />AI may surface common or prominent information rather than the most authoritative source. Students should verify important claims against primary, official or trusted sources, particularly for legal, regulatory, technical or specialised information.</>, cue: "How will we test and improve the output?", tone: "interaction" },
+    { letter: "R", name: "Reflection", icon: Eye, action: "Students examine the process and learning", detail: "Consider how AI supported or hindered the work, what was learnt and where human judgement was needed.", cue: "What did we learn about the task, the tool and our own judgement?", tone: "reflection" },
   ];
   return (
     <figure className="concept-visual pair-infographic" aria-labelledby="pair-title">
