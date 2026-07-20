@@ -506,10 +506,6 @@ Choose a module you teach, lead or support. Consider each question once.
 
 <!--module-review-->
 
-## Four Ideas to Carry Forward
-
-<!--four-ideas-visual-->
-
 ## Before the Quiz
 
 The completion quiz checks your understanding of the key ideas introduced in this package.
@@ -520,7 +516,7 @@ You may revisit any section before attempting the quiz.
 
 ## Choose One Small Next Step
 
-Before you leave, identify one practical action to take forward.
+Identify one practical action to take forward:
 
 <!--next-step-->
 
