@@ -307,7 +307,7 @@ const sectionBridges = [
   "See how these four areas connect to NP’s direction for AI-enabled T&L.",
   "Begin with curriculum: what competencies should our students develop and demonstrate as professional practice changes?",
   "Explore PAIR, a simple framework for helping students use AI purposefully, critically and responsibly in their learning.",
-  "Consider how clear GenAI conditions and assessment design can keep learning authentic, credible and visible.",
+  "Consider how clear GenAI conditions and assessment design can provide authentic and credible evidence of learning and students' own contribution.",
   "Explore how AI tools and learning data can be used purposefully to support learning, while protecting information, verifying outputs and retaining human oversight.",
   "Bring the four areas together by reviewing one module you teach, lead or support.",
 ];
@@ -670,9 +670,9 @@ function HomeFlow() {
         </p>
         <p>
           Used purposefully, AI can extend opportunities for practice, feedback
-          and personalised support. It can also help us develop learning
-          resources, identify learning needs and provide more responsive
-          support. But AI can also become a shortcut that bypasses the
+          and personalised learning. It can also help us develop learning
+          resources, identify learning needs and respond more effectively.
+          But AI can also become a shortcut that bypasses the
           thinking, judgement or performance students are meant to develop.
         </p>
         <p className="home-challenge">
@@ -999,7 +999,7 @@ function QuizReadinessRecap() {
 
         <section className="recap-panel recap-tone-5">
           <div className="recap-panel-head"><i><ShieldCheck size={18} strokeWidth={2.1} aria-hidden="true" /></i><h4>Data and Tech-Enhanced T&amp;L</h4></div>
-          <p className="recap-lead">Start with the learning need.</p>
+          <p className="recap-lead">Start with the learning need. Consider:</p>
           <ul className="recap-list">
             <li>Whether the tool or use of data supports the intended purpose.</li>
             <li>Whether it is suitable and accessible.</li>
@@ -1017,8 +1017,8 @@ function ModulePreviewVisual() {
   const areas = [
     { icon: BookOpen, title: "Curriculum Design and Development", detail: "Use the 3As to review the competencies students need as professional practice changes." },
     { icon: Lightbulb, title: "Facilitation of Learning", detail: "Use PAIR and personalised learning approaches to help students learn and work with AI purposefully." },
-    { icon: ClipboardCheck, title: "Assessment", detail: "Apply NP's GenAI assessment requirements and design approaches to keep learning and students' own contribution authentic, credible and visible." },
-    { icon: ShieldCheck, title: "Data and Tech-Enhanced T&L", detail: "Use suitable AI tools and learning data to enhance learning support, with appropriate checks and human oversight." },
+    { icon: ClipboardCheck, title: "Assessment", detail: "Apply NP's GenAI assessment requirements and design approaches to provide authentic and credible evidence of learning and students' own contribution." },
+    { icon: ShieldCheck, title: "Data and Tech-Enhanced T&L", detail: "Use suitable AI tools and learning data to support learning and disciplinary practice, with appropriate checks and human oversight." },
   ];
   return (
     <figure className="concept-visual module-preview-visual" aria-label="What the next four sections cover">

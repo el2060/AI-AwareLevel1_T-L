@@ -4,7 +4,7 @@
 
 AI is increasingly shaping how our students learn, how professional practice is changing and what NP graduates will need to be able to do.
 
-Used purposefully, AI can extend opportunities for practice, feedback and personalised support. It can also help us develop learning resources, identify learning needs and provide more responsive support. But AI can also become a shortcut that bypasses the thinking, judgement or performance students are meant to develop.
+Used purposefully, AI can extend opportunities for practice, feedback and personalised learning. It can also help us develop learning resources, identify learning needs and respond more effectively. But AI can also become a shortcut that bypasses the thinking, judgement or performance students are meant to develop.
 
 The challenge for T&L is to help students benefit from AI while continuing to develop strong disciplinary foundations, independent thinking and human judgement.
 
@@ -111,7 +111,7 @@ Which of these may be relevant?
 
 - distinctly human capabilities;
 - productive use of AI;
-- new AI-enabled professional practice?
+- new AI-enabled professional practice.
 
 ### Step 2 · Check the Alignment
 
@@ -176,7 +176,7 @@ The degree of student choice should reflect their readiness and the intended lea
 
 Less experienced students may need a defined task, suggested tools and guided reflection. More experienced students may take greater responsibility for framing the task, selecting tools and shaping their interaction with AI.
 
-## Can Learning Through PAIR Be Assessed?
+## Using PAIR in Assessment
 
 PAIR can be used in formative or summative activities.
 
@@ -239,7 +239,7 @@ In a GenAI-enabled context, assessment should make clear:
 
 - what students must demonstrate;
 - how AI may be used; and
-- what evidence will make their learning and contribution visible.
+- what evidence will make the intended learning and students’ own contribution visible.
 
 ## Two Assessment Priorities
 
@@ -257,7 +257,7 @@ Use the 3As to clarify:
 
 Where relevant, assessment should make visible students’ ability to evaluate AI outputs, use AI meaningfully and exercise appropriate judgement and oversight.
 
-> A polished final product alone may not show what the student knows, can do or has contributed.
+> A polished final product alone may not show what students know, can do or have contributed.
 
 :::note Policy Reference
 
@@ -276,7 +276,7 @@ Identify:
 - the capability the assessment is intended to measure;
 - what students must demonstrate themselves;
 - where AI use reflects authentic professional practice;
-- what evidence will make their learning and contribution visible.
+- what evidence will make the intended learning and students’ own contribution visible.
 
 > If AI can complete an assessment to a passing standard without the intended competency being demonstrated, first review the competency and learning outcome using the 3As. Then review the learning activities and assessment so that students must demonstrate the intended human, disciplinary or AI-augmented capability.
 
@@ -400,7 +400,7 @@ Review the assessment when:
 
 Consider one assessment:
 
-> What capability must students demonstrate, how may GenAI be used, and what evidence will make their learning and contribution visible?
+> What capability must students demonstrate, how may GenAI be used, and what evidence will make the intended learning and students’ own contribution visible?
 
 ## Key Takeaway
 
@@ -412,7 +412,7 @@ Begin with the learning outcome and use the 3As to clarify the intended capabili
 
 ## Start with a T&L Need
 
-AI tools and learning data can extend learning opportunities and help lecturers respond to learner needs. The starting point is not the technology: it is a clear T&L purpose.
+AI tools and learning data can extend learning opportunities and help us respond to learner needs. The starting point is not the technology: it is a clear T&L purpose.
 
 > What could help students learn more effectively—and what would you need to check before using it?
 
@@ -437,7 +437,7 @@ Learning data should support timely intervention, not automatic decisions, label
 
 Learning data and assessment feedback may reveal that different groups of students have different learning needs. AI may help a lecturer propose differentiated explanations, practice activities, examples or feedback approaches for these groups.
 
-The lecturer reviews and adapts the suggestions, checks that they address the identified learning needs and decides how they should be used. AI should not rewrite students’ work for them, independently predict their final results or replace direct engagement with students.
+The lecturer reviews and adapts the suggestions, checks that they address the identified learning needs and decides how they should be used. AI-generated suggestions should be reviewed and adapted. They should not determine support decisions or replace direct engagement with students.
 
 ## Explore a Common T&L Use
 
