@@ -75,6 +75,16 @@ The balance depends on the discipline, module level and intended learning outcom
 
 A module may therefore develop all three while placing greater emphasis on one or two of them.
 
+### Example · Applying the 3As in a Module
+
+A nursing module on patient care planning might develop:
+
+- **Anchor:** empathy, ethical decision-making and professional clinical judgement;
+- **Augment:** using AI appropriately to review or optimise a care plan while retaining human oversight; and
+- **Advance:** exploring new AI-assisted approaches to patient monitoring or care delivery.
+
+The three As need not receive equal emphasis. Where AI use is relevant to professional practice, **Augment provides the assessment baseline**, while Anchor capabilities remain essential and Advance may be developed where appropriate to the module level and context.
+
 ## Aligning Competencies, Learning Activities and Assessment
 
 Once the intended competency is clear, ensure the rest of the module supports it.
@@ -373,17 +383,16 @@ Staff must not use GenAI to determine grades independently. Any approved use as 
 
 :::details Suspected GenAI Misuse
 
-An AI-detection result, a change in writing style or unusually sophisticated language may raise questions, but these are not conclusive proof of misconduct.
+AI-detection results, changes in writing style or unexpectedly sophisticated language may raise concerns, but they are not sufficient proof of misconduct.
 
-Where misuse is suspected, follow the process in Appendix 3 of the Gen AI in Summative Assessment Policy & Guidance. This includes:
+Where misuse is suspected, follow the process in Appendix 3 of the Gen AI in Summative Assessment Policy & Guidance:
 
-- reviewing the submission and the student’s declaration;
-- discussing the work with the student;
-- asking the student to explain the content and how it was produced;
-- requesting available evidence of the development process; and
-- checking whether the student’s actual use is consistent with the declared use.
+- review the submission and the student’s GenAI declaration;
+- interview the student and ask them to explain the content and how the work was produced;
+- request available evidence of the development or writing process; and
+- check for inconsistencies between the student’s declared and actual GenAI use.
 
-Do not assign a penalty or refer the case solely on the basis of an AI-detection score or personal impression.
+Do not assign a penalty or refer a case solely on the basis of an AI-detection result or personal impression.
 
 :::
 
