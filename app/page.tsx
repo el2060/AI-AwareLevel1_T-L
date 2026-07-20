@@ -798,7 +798,7 @@ function StudentBaselineVisual() {
   const items = [
     { icon: BookOpen, title: "Learn About AI", detail: "Understand key AI terms, approaches, fields, capabilities and limitations." },
     { icon: Bot, title: "Learn With AI", detail: "Use AI as a learning partner to break down problems, compare explanations, identify gaps and deepen understanding." },
-    { icon: Rocket, title: "Learn to Use AI", detail: "Apply AI to create value, and evaluate outputs for accuracy, relevance, bias and suitability before using them." },
+    { icon: Rocket, title: "Learn to Use AI", detail: "Apply AI to create value and evaluate its outputs for accuracy, relevance, bias and suitability before using them." },
     { icon: Scale, title: "Learn Beyond AI", detail: "Consider the societal, ethical and legal implications of AI, and exercise human judgement and oversight." },
   ];
   return (
@@ -826,7 +826,7 @@ function AlignmentFlowVisual() {
     { key: "competency", label: "Competency", detail: "What students need to develop." },
     { key: "outcome", label: "Learning outcome", detail: "What students should be able to demonstrate." },
     { key: "activities", label: "Learning activities", detail: "How students practise and develop it." },
-    { key: "evidence", label: "Assessment evidence", detail: "How achievement and student contribution are made visible." },
+    { key: "evidence", label: "Assessment evidence", detail: "How achievement and students’ own contribution are made visible." },
   ];
   return (
     <figure className="concept-visual alignment-story" aria-label="Flow from competency to assessment evidence">
@@ -879,7 +879,7 @@ function ThreeAsInfographic() {
     <figure className="concept-visual three-as-infographic" aria-labelledby="three-as-title">
       <figcaption>
         <span>The 3As</span>
-        <strong id="three-as-title">Guiding lenses for reviewing the competencies students need and aligning learning outcomes, activities and assessment</strong>
+        <strong id="three-as-title">A simple lens for reviewing the competencies students need and aligning learning outcomes, activities and assessment.</strong>
       </figcaption>
       <div className="three-as-path">
         {lenses.map((lens) => {
@@ -897,7 +897,6 @@ function ThreeAsInfographic() {
           );
         })}
       </div>
-      <div className="infographic-note"><span aria-hidden="true"><ArrowLeftRight size={14} strokeWidth={2.2} /></span><p>A learning outcome or module may emphasise one or combine several, depending on the intended competency and professional context.</p></div>
     </figure>
   );
 }

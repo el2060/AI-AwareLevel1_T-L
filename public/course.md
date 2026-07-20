@@ -103,7 +103,7 @@ Choose one learning outcome from a module you teach, lead or support.
 
 Does the learning outcome still reflect the competencies students need in current and emerging professional practice?
 
-Should it emphasise:
+Which of these may be relevant?
 
 - distinctly human capabilities;
 - productive use of AI;
