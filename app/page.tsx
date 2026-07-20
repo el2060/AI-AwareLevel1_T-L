@@ -408,7 +408,7 @@ function NextStepActivity({ value, onChange }: { value: string; onChange: (value
   const options = [
     { label: "Review one learning outcome, activity or assessment using the 3As.", feedback: "A single 3As review is a manageable way to begin identifying what may need attention." },
     { label: "Apply PAIR to one learning activity.", feedback: "Applying PAIR to a single activity is a focused way to check that AI is supporting, rather than replacing, the intended learning." },
-    { label: "Check one assessment's GenAI conditions.", feedback: "Checking one assessment’s GenAI conditions is a focused way to put Level 1 awareness into practice." },
+    { label: "Check one assessment's GenAI conditions.", feedback: "Checking one assessment’s GenAI conditions is a focused way to apply the guidance in practice." },
     { label: "Explore one suitable use of an AI tool or learning data.", feedback: "Start with a clear teaching and learning need, then check the output, data considerations and your oversight." },
   ];
   const selected = options.find((option) => option.label === value);
@@ -488,7 +488,7 @@ function UseCaseExplorer() {
     },
     {
       label: "Learning data",
-      tool: "An approved analytics view or approved AI-supported summary process.",
+      tool: "A suitable analytics view or AI-supported summary process.",
       task: "Look for a pattern in participation, performance or feedback that may indicate a need for support.",
       starter: "Review the original evidence and learner context before deciding whether a pattern needs action.",
       check: "Check that the information and process are appropriate, and that the apparent pattern is supported by the evidence.",
@@ -603,7 +603,7 @@ function QuickSenseCheck() {
           );
         })}
       </div>
-      <p className="sense-check-closing"><strong>AI can help create resources, extend learning support, enable disciplinary practice and identify patterns in learning data.</strong> You provide the context, check the outputs and decide how they should be used.</p>
+      <p className="sense-check-closing"><strong>AI can create resources, extend support, enable disciplinary practice and identify patterns.</strong> You provide the context, check the outputs and decide how they are used.</p>
     </section>
   );
 }
@@ -655,7 +655,7 @@ function HomeFlow() {
   const outcomes = [
     "recognise how AI is changing the competencies students need and the implications for curriculum design",
     "explain how AI can support learning and practice without replacing the intended thinking, judgement or performance",
-    "apply NP's GenAI policy requirements for summative assessment to clarify conditions and make students' learning and contribution visible",
+    "apply NP's GenAI policy requirements for summative assessment to clarify conditions and make the intended learning and students' own contribution visible",
     "identify appropriate uses of AI tools and learning data and apply key considerations for purposeful and responsible use",
   ];
 

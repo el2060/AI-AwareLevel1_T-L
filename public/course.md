@@ -2,9 +2,17 @@
 
 ## Welcome
 
-AI, particularly Gen AI, is increasingly shaping how students learn and how work is carried out across many professions. As students use AI to learn, create and solve problems, educators need to understand the opportunities and challenges it brings to teaching, learning and assessment.
+AI is increasingly shaping how our students learn, how professional practice is changing and what NP graduates will need to be able to do.
 
-This package will help you consider these implications across four areas of your T&L practice.
+Used purposefully, AI can extend opportunities for practice, feedback and personalised support. It can also help us develop learning resources, identify learning needs and provide more responsive support. But AI can also become a shortcut that bypasses the thinking, judgement or performance students are meant to develop.
+
+The challenge for T&L is to help students benefit from AI while continuing to develop strong disciplinary foundations, independent thinking and human judgement.
+
+### Building on the TLCF
+
+The T&L Competency Framework (TLCF) sets out six domains of T&L practice. This package applies an AI lens to four selected domains: the three functional T&L domains and Data and Tech-Enhanced T&L.
+
+Across these areas, we will consider how AI affects what students need to learn, how learning is facilitated and assessed, and how AI tools and learning data can be used purposefully and responsibly.
 
 ### What You Will Learn
 
@@ -12,14 +20,14 @@ By the end of this module, you will be able to:
 
 - recognise how AI is changing the competencies students need and the implications for curriculum design;
 - explain how AI can support learning and practice without replacing the intended thinking, judgement or performance;
-- apply NP’s GenAI policy requirements for summative assessment to clarify conditions and make students’ learning and contribution visible;
-- identify appropriate uses of AI tools and learning data, and apply basic considerations for safe and responsible use.
+- apply NP’s GenAI policy requirements for summative assessment to clarify conditions and make the intended learning and students’ own contribution visible;
+- identify appropriate uses of AI tools and learning data and apply key considerations for purposeful and responsible use.
 
 ### Learning Time
 
 **Up to 2 hours**
 
-The programme includes the learning content, activities and completion quiz. You may move through the sections at your own pace and spend more time on areas most relevant to your role or module.
+The package includes the learning content, activities and completion quiz. You may move through the sections at your own pace and spend more time on areas most relevant to your role or module.
 
 ---
 
@@ -342,7 +350,7 @@ For example, students using an AI image generator in a design project could expl
 
 Explain the conditions early and provide suitable formative preparation, checkpoints or mock runs where helpful.
 
-All relevant submission cover pages must include the required GenAI Use Declaration. Any additional evidence should be proportionate to the assessment and necessary to establish the intended learning or student contribution. A complete interaction log or reflective essay should not be required by default.
+All relevant submission cover pages must include the required GenAI Use Declaration. Any additional evidence should be proportionate to the assessment and necessary to establish the intended learning or students’ own contribution. A complete interaction log or reflective essay should not be required by default.
 
 Module leaders are responsible for:
 
