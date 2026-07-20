@@ -514,14 +514,119 @@ function StrategyMap() {
 }
 
 function UseCaseExplorer() {
+  const [active, setActive] = useState(0);
+  const uses = [
+    {
+      label: "Learning resource",
+      tool: "An AI assistant suitable for the task, such as M365 Copilot.",
+      task: "Create a simpler explanation, a step-by-step worksheet or a short self-check from the same source material.",
+      starter: "Create a simpler explanation and five self-check questions for [concept]. Preserve the technical meaning and intended learning standard. Flag anything you are uncertain how to simplify.",
+      check: "Check accuracy, the intended learning standard, and whether the examples are inclusive and accessible.",
+      decision: "Choose and adapt the format that is most useful for your learners.",
+    },
+    {
+      label: "Student practice",
+      tool: "Brightspace Lumi Tutor or a course-specific AI tutor.",
+      task: "Extend practice and feedback beyond class time using material and boundaries set for the module.",
+      starter: "Decide which topic needs additional practice, what sources the tutor can use, and when students should seek support from a lecturer instead.",
+      check: "Check that the tutor's explanations and feedback align with the module materials and intended learning.",
+      decision: "Set the role of the tool clearly so it complements, rather than replaces, facilitation.",
+    },
+    {
+      label: "Disciplinary practice",
+      tool: "A suitable course- or profession-specific AI tool.",
+      task: "Help students apply disciplinary knowledge through an authentic AI-supported workflow, such as coding, design, simulation or data analysis.",
+      starter: "Clarify the capability students should develop and what they must still understand, decide or perform themselves.",
+      check: "Check that the tool supports the intended learning and that students can evaluate and explain its output.",
+      decision: "Decide how the tool fits within the activity, what scaffolding students need and what evidence will show their learning.",
+    },
+    {
+      label: "Learning data",
+      tool: "An approved analytics view or approved AI-supported summary process.",
+      task: "Look for a pattern in participation, performance or feedback that may indicate a need for support.",
+      starter: "Review the original evidence and learner context before deciding whether a pattern needs action.",
+      check: "Check that the information and process are appropriate, and that the apparent pattern is supported by the evidence.",
+      decision: "Use your judgement to decide whether an intervention is needed and whether it helped.",
+    },
+  ];
+  const selected = uses[active];
   return (
-    <section className="use-case-explorer" aria-label="Worked example: create alternative learning formats">
-      <div className="use-case-detail" aria-live="polite">
-        <div className="use-case-context"><div><strong>Possible tool</strong><p>An approved AI assistant, such as M365 Copilot.</p></div><div><strong>Task</strong><p>Create a simpler explanation, step-by-step worksheet or short self-check activity from the same source material.</p></div></div>
-        <div className="prompt-starter"><strong>Prompt starter</strong><p>Create a simpler explanation, a step-by-step worksheet and five self-check questions for [concept]. Preserve the technical meaning and intended learning standard. Flag anything you were uncertain how to simplify.</p></div>
-        <div className="use-case-checks"><div><b>Check</b><p>Confirm that the content is accurate, the intended learning standard is preserved, and the examples are inclusive and accessible.</p></div><div><b>Lecturer decision</b><p>Decide which format is suitable for your learners and whether additional support is needed.</p></div></div>
-        <p className="use-case-tool-note"><strong>Tool note:</strong> M365 Copilot is available within NP&rsquo;s environment for approved staff use. Other NP-supported or approved tools may be more suitable depending on the learning purpose and information involved.</p>
+    <section className="use-case-explorer" aria-label="Four practical uses of AI tools and learning data">
+      <div className="use-case-picker" role="group" aria-label="Choose a teaching and learning use">
+        {uses.map((use, index) => <button key={use.label} type="button" aria-pressed={active === index} className={active === index ? "active" : ""} onClick={() => setActive(index)}>{use.label}</button>)}
       </div>
+      <div className="use-case-detail" aria-live="polite">
+        <div className="use-case-context"><div><strong>Possible approach</strong><p>{selected.tool}</p></div><div><strong>T&L purpose</strong><p>{selected.task}</p></div></div>
+        <div className="prompt-starter"><strong>Start here</strong><p>{selected.starter}</p></div>
+        <div className="use-case-checks"><div><b>Check</b><p>{selected.check}</p></div><div><b>Lecturer decision</b><p>{selected.decision}</p></div></div>
+        <p className="use-case-tool-note"><strong>Keep the learning purpose in view.</strong> The tool supports the activity; the lecturer determines how it is used.</p>
+      </div>
+    </section>
+  );
+}
+
+function TandlUsesExplorer() {
+  const [active, setActive] = useState(0);
+  const uses = [
+    {
+      label: "Learning resources",
+      icon: BookOpen,
+      title: "Prepare and improve learning resources",
+      detail: "Use AI as a starting point to review module materials, draft practice examples, create alternative formats, check assignment clarity or summarise feedback themes.",
+      focus: "You provide the context and intended learning, then check, adapt and decide what to use.",
+    },
+    {
+      label: "Learning support",
+      icon: Lightbulb,
+      title: "Extend learning support",
+      detail: "AI-enabled tutors and learning assistants can extend opportunities for explanation, practice and feedback beyond class time. This may include Brightspace Lumi Tutor, course-specific tutors or student AI tools used within clear conditions.",
+      focus: "Set the intended learning, source materials, boundaries and role of the support within the module.",
+    },
+    {
+      label: "Disciplinary practice",
+      icon: Target,
+      title: "Support disciplinary and professional practice",
+      detail: "AI may be embedded in authentic workflows such as coding and testing, design and media, data analysis, simulation, or research and evidence review.",
+      focus: "Help students apply disciplinary knowledge, evaluate outputs and exercise appropriate judgement—not simply operate the tool.",
+    },
+    {
+      label: "Learning data",
+      icon: ShieldCheck,
+      title: "Use learning data to inform support",
+      detail: "Learning data can reveal patterns in participation or performance, indicate possible learner needs, inform targeted support and help review whether support is working.",
+      focus: "Treat AI-generated summaries, patterns or predictions as starting points. Review the evidence and learner context before acting.",
+    },
+  ];
+  const selected = uses[active];
+  const Icon = selected.icon;
+  return (
+    <section className="tandl-uses-explorer" aria-label="Four practical uses of AI tools and learning data">
+      <div className="tandl-uses-intro"><span>Choose a use to explore</span><p>Explore how each use can support a T&L purpose and what the lecturer still needs to decide.</p></div>
+      <div className="tandl-use-nav" role="group" aria-label="Choose a practical use">
+        {uses.map((use, index) => {
+          const UseIcon = use.icon;
+          const isActive = active === index;
+          return <button key={use.label} type="button" aria-pressed={isActive} className={isActive ? "active" : ""} onClick={() => setActive(index)}><i><UseIcon size={17} strokeWidth={2.1} aria-hidden="true" /></i><span>{use.label}</span></button>;
+        })}
+      </div>
+      <div className="tandl-use-detail" aria-live="polite">
+        <i><Icon size={24} strokeWidth={2} aria-hidden="true" /></i>
+        <div><small>How AI and data can help</small><h3>{selected.title}</h3><p>{selected.detail}</p><strong>{selected.focus}</strong></div>
+      </div>
+    </section>
+  );
+}
+
+function ToolGuidance() {
+  return (
+    <section className="tool-information-guidance" aria-label="Using information in AI tools">
+      <p className="tool-information-intro">The information you may enter depends on the tool being used.</p>
+      <div className="tool-information-list">
+        <div><strong>M365 Copilot</strong><span>Up to <b>Official (Closed) – Restricted</b> within NP’s Microsoft 365 environment.</span></div>
+        <div><strong>Pair Chat <small>pair.gov.sg</small></strong><span>Up to <b>Official (Closed) – Sensitive Normal</b>.</span></div>
+        <div><strong>Public or personal-account AI tools</strong><span>Do not enter personal, sensitive, confidential or proprietary information.</span></div>
+      </div>
+      <p className="tool-information-closing">Check that the tool is suitable for the information involved, and review its outputs before use.</p>
     </section>
   );
 }
@@ -530,8 +635,8 @@ function QuickSenseCheck() {
   const [revealed, setRevealed] = useState<number[]>([]);
   const items = [
     { situation: "An AI tutor gives an explanation that differs from the module materials.", reveal: "Check the source content and accuracy before deciding whether the materials or tutor setup need adjustment." },
-    { situation: "An AI-generated summary of student feedback sounds plausible.", reveal: "Verify that the themes are supported by the original comments." },
-    { situation: "You want to upload assessment results into an AI tool.", reveal: "Check whether the tool is approved for that information and purpose." },
+    { situation: "Students use a discipline-specific AI tool to produce a technically strong solution.", reveal: "Check whether they can explain, evaluate and apply the underlying disciplinary knowledge." },
+    { situation: "You want to upload assessment results into an AI tool.", reveal: "Check whether the tool and process are appropriate for the information involved." },
     { situation: "Learning data suggests that several students may need support.", reveal: "Review the evidence and learner context before deciding what action is appropriate." },
   ];
   function toggle(index: number) {
@@ -552,7 +657,7 @@ function QuickSenseCheck() {
           );
         })}
       </div>
-      <p className="sense-check-closing"><strong>AI can extend support, identify patterns and suggest possibilities.</strong> You check, interpret and decide.</p>
+      <p className="sense-check-closing"><strong>AI can help create resources, extend learning support, enable disciplinary practice and identify patterns in learning data.</strong> You provide the context, check the outputs and decide how they should be used.</p>
     </section>
   );
 }
@@ -1064,6 +1169,8 @@ export default function Home() {
   }
 
   const useCaseMarker = "<!--use-case-explorer-->";
+  const tandlUsesMarker = "<!--tandl-uses-->";
+  const toolGuidanceMarker = "<!--tool-guidance-->";
   const pairInfographicMarker = "<!--pair-infographic-->";
   const moduleReviewMarker = "<!--module-review-->";
   const actionInfographicMarker = "<!--assessment-actions-infographic-->";
@@ -1085,6 +1192,8 @@ export default function Home() {
   const hasInlineNextPrompt = /^\s*(\*\*Next\*\*|#{1,4}\s+Next)\s*$/m.test(sectionMarkdown);
   const markerRenderers: Record<string, ReactElement> = {
     [useCaseMarker]: <UseCaseExplorer />,
+    [tandlUsesMarker]: <TandlUsesExplorer />,
+    [toolGuidanceMarker]: <ToolGuidance />,
     [pairInfographicMarker]: <PairInfographic />,
     [actionInfographicMarker]: <AssessmentActionsInfographic />,
     [alignmentCheckMarker]: <AlignmentCheckVisual />,
@@ -1198,7 +1307,7 @@ export default function Home() {
         {current.title.startsWith("Part 5") && (
           <div className="key-takeaway part-five-takeaway">
             <p className="key-takeaway-head"><CheckCircle2 size={18} aria-hidden="true" /><span>Key Takeaway</span></p>
-            <p>Use AI tools and learning data where they add learning value. Select an appropriate approach, check the information and outputs, and retain professional judgement and responsibility.</p>
+            <p>Use AI tools and learning data where they add learning value or support authentic disciplinary practice. Select an appropriate approach, check the information and outputs, and retain professional judgement and responsibility.</p>
           </div>
         )}
 

@@ -41,7 +41,7 @@ The next four sections show how NP’s five strategies connect to four TLCF doma
 
 <!--module-preview-->
 
-> The four areas connect. A decision in one area may also shape the others.
+> Together, these four areas provide a practical way to review one module in an AI-enabled context.
 
 ## Keep One of Your Modules in Mind
 
@@ -411,18 +411,19 @@ Begin with the learning outcome and use the 3As to clarify the intended capabili
 
 ---
 
-# Part 5: Data and Tech-Enhanced T&L — How Can AI Tools and Learning Data Improve Learning?
+# Part 5: Data and Tech-Enhanced T&L — Supporting Learning with AI Tools and Learning Data
 
-## How AI Extends Data and Tech-Enhanced T&L
+## Start with a T&L Need
 
-AI extends how we can integrate technology into learning and use data to understand and respond to learner needs.
+AI tools and learning data can extend learning opportunities and help lecturers respond to learner needs. The starting point is not the technology: it is a clear T&L purpose.
 
-This involves two connected practices:
+> What could help students learn more effectively—and what would you need to check before using it?
 
-### Integrate AI-Enabled Technology
+## Four Practical Uses
 
-Use appropriate AI tools to enhance learning activities, practice, feedback and access to support.
+<!--tandl-uses-->
 
+<<<<<<< HEAD
 ### Apply Learning Data and Analytics
 
 Use learning data to identify possible needs, inform action and review whether support is helping.
@@ -491,12 +492,17 @@ Learning data and assessment feedback may reveal that different groups of studen
 The lecturer reviews and adapts the suggestions, checks that they address the identified learning needs and decides how they should be used. AI should not rewrite students’ work for them, independently predict their final results or replace direct engagement with students.
 
 ## Example · Create Alternative Formats
+=======
+## Explore a Common T&L Use
+>>>>>>> 461291c0cd3d3aaa11f602b88be490f04087d7d1
 
 <!--use-case-explorer-->
 
 ## Choose Tools for the T&L Purpose
 
-Apply four considerations:
+Different needs may call for different tools. NP-provided tools may support lecturer productivity, learning resources, student support or learning analytics. Course- or discipline-specific tools may reflect authentic professional practice. Students may use suitable tools where the learning activity or assessment permits this.
+
+Before using a tool or learning data, consider four questions:
 
 ### Learning fit
 
@@ -508,12 +514,13 @@ Is it appropriate and accessible for the task and learners?
 
 ### Information and output
 
-Is the information approved for use, and is the output accurate and suitable?
+Is the information appropriate to use, and is the output accurate, relevant and suitable for learners?
 
 ### Oversight and impact
 
 Who reviews the output, decides what action to take and checks whether it helped?
 
+<<<<<<< HEAD
 Tool selection should therefore consider:
 
 1. the intended T&L purpose;
@@ -525,16 +532,18 @@ Tool selection should therefore consider:
 An NP-provided tool is not automatically the best tool for every learning activity, and no single AI tool is required for all modules.
 
 > A tool may be approved and still not be the best choice for the learning purpose.
+=======
+### Using Information in AI Tools
+>>>>>>> 461291c0cd3d3aaa11f602b88be490f04087d7d1
 
-Do not enter personal, sensitive or proprietary information into a public AI tool unless it is approved for that information and purpose.
+<!--tool-guidance-->
 
-## Apply It to Your Module
+## Keep in Mind
 
-Choose one small T&L need from a module you teach, lead or support.
+Choose one small T&L need from a module you teach, lead or support. Consider:
 
-Consider:
-
-- what an AI tool or learning data could contribute;
+- what type of AI tool or learning data could contribute;
+- how it would support the intended learning;
 - what would need checking;
 - how you would know whether it helped.
 
