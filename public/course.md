@@ -192,8 +192,6 @@ AI may undermine learning when it completes the thinking, judgement, creation or
 
 > Check whether students are still practising the intended capability.
 
-This bridge is much more natural because it directly links scaffolding to its purpose.
-
 ## When AI Has Bypassed the Learning
 
 Where students cannot demonstrate the intended understanding after using AI to complete an activity, address the learning gap directly.
@@ -211,19 +209,17 @@ For example, after an AI-completed OAL activity, an IPL lesson could require stu
 
 ### Is AI Supporting the Learning?
 
-For each situation, decide whether AI supports students in developing the intended capability or does the work they are meant to do.
+For each situation, decide whether AI supports students in developing the intended capability or does that work for them.
 
 <!--support-or-replace-->
 
 ## Using PAIR in Assessment
 
-PAIR may also be used in formative or summative activities.
+PAIR can be used in formative or summative activities.
 
 Where productive use of AI is part of the intended learning, assessment may consider how students frame the task, use AI, evaluate its outputs, apply disciplinary criteria and exercise judgement.
 
 > Marks should reflect the intended learning demonstrated—not simply the use of AI or completion of the PAIR stages.
-
-This brief section can be presented as a short accordion or note, since assessment is not the main focus of Part 3. It serves as a natural bridge into Part 4.
 
 ## Apply PAIR to One Learning Activity
 
@@ -231,7 +227,10 @@ Choose one activity from a module you teach, lead or support.
 
 Consider:
 
-<!--pair-apply-checklist-->
+1. what students should understand or do before using AI;
+2. what role AI should play;
+3. how students will evaluate and improve the output;
+4. what reflection or evidence will make their learning and judgement visible.
 
 Then decide what level of structure and choice your students need.
 
