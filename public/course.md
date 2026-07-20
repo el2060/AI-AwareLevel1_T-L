@@ -190,8 +190,6 @@ The final output and an appropriate explanation or reflection may form part of t
 
 ## Check That AI Supports the Intended Learning
 
-After designing the activity, check whether AI is helping students practise the intended capability.
-
 AI can support learning when students use it to:
 
 - explore approaches;
@@ -200,22 +198,22 @@ AI can support learning when students use it to:
 - practise and receive feedback;
 - test and refine their thinking.
 
-AI may undermine learning when it completes the analysis, judgement, creation or performance students are meant to develop.
+AI may undermine learning when it completes the thinking, judgement, creation or performance students are meant to develop.
 
-> The key question is not whether AI is used, but whether students are still doing the thinking, judging or performing that the activity is intended to develop.
+> Check whether students are still practising the intended capability.
 
 ## When AI Has Bypassed the Learning
 
-Where AI has completed an activity for students without developing the intended understanding, the learning gap may need to be addressed directly.
+Where students cannot demonstrate the intended understanding after using AI to complete an activity, address the learning gap directly.
 
 A follow-up activity can require students to:
 
-- examine how they used AI;
 - identify what they did not understand or verify;
-- correct weaknesses in the AI-supported work; and
-- apply the relevant concepts themselves.
+- examine weaknesses in the AI-supported work;
+- explain the relevant concepts; and
+- apply them to a new problem.
 
-For example, if students use AI to complete an OAL activity but cannot demonstrate the intended understanding, the subsequent IPL lesson could require them to analyse their AI use, identify gaps and apply the concepts to a new problem.
+For example, after an AI-completed OAL activity, an IPL lesson could require students to identify gaps and apply the concepts to a new situation.
 
 <!--support-or-replace-->
 

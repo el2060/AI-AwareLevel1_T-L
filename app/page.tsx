@@ -351,15 +351,15 @@ function ScenarioSorter({ eyebrow, title, prompt, options, scenarios, countNoun,
 function SupportReplaceSorter() {
   return <ScenarioSorter
     eyebrow="Quick Check"
-    title="Support or Replace?"
-    prompt="Read each situation and decide whether AI is supporting the intended learning or replacing it."
+    title="Is AI Supporting the Learning?"
+    prompt="For each situation, decide whether AI supports students in developing the intended capability or does the work they are meant to do."
     options={["Supports the intended learning", "Replaces the intended learning"]}
     countNoun="sorted"
     scenarios={[
-      { id: "compare", context: "Students ask AI for a different worked example of a concept, then attempt the practice set on their own.", answer: "Supports the intended learning", feedback: "Comparing explanations before practising keeps students doing the thinking — AI is extending practice and feedback." },
-      { id: "submit", context: "A student pastes the assignment brief into GenAI and submits a lightly edited version of the response.", answer: "Replaces the intended learning", feedback: "AI has completed the analysis, judgement and creation the task was meant to develop. A follow-up activity that requires students to identify gaps and apply the concepts themselves may be needed." },
+      { id: "compare", context: "Students ask AI for a different worked example of a concept, then attempt the practice set on their own.", answer: "Supports the intended learning", feedback: "AI provides an additional explanation, but students still apply the concept themselves in the practice set." },
+      { id: "submit", context: "A student pastes the assignment brief into GenAI and submits a lightly edited version of the response.", answer: "Replaces the intended learning", feedback: "AI has produced the response that the student was expected to develop. Light editing does not demonstrate the intended analysis, judgement or creation." },
       { id: "critique", context: "Students generate three AI draft answers, then critique and rank them against the success criteria.", answer: "Supports the intended learning", feedback: "Generating material for critique keeps the evaluating and judging with students." },
-      { id: "reflection", context: "A student asks AI to write their reflection on what they learned from the project.", answer: "Replaces the intended learning", feedback: "The reflection is meant to make the student’s own learning and judgement visible — asking AI to write it bypasses exactly that." },
+      { id: "reflection", context: "A student asks AI to write their reflection on what they learned from the project.", answer: "Replaces the intended learning", feedback: "The reflection is intended to make the student’s own learning and judgement visible. Asking AI to write it replaces that process." },
     ]}
   />;
 }
