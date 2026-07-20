@@ -133,7 +133,7 @@ Use the 3As to identify the competencies students need, then align the learning 
 
 NP uses the PAIR framework to help students learn and solve problems with AI purposefully, critically and responsibly.
 
-Students carry out the PAIR process. You design the task and provide the level of structure, choice and support appropriate to students' readiness and the intended learning.
+PAIR provides a simple and adaptable structure. You design the task and determine the level of guidance, choice and support according to the intended learning and students’ readiness.
 
 PAIR is:
 
@@ -143,15 +143,15 @@ AI augments rather than replaces human insight, judgement and creativity.
 
 **Skill-centred**
 
-Students develop transferable capabilities such as problem formulation, exploration, experimentation, critical evaluation and reflection.
+Students develop transferable capabilities such as problem formulation, exploration, experimentation, critical thinking and reflection.
 
 **Responsibility-centred**
 
-Students remain accountable for how they use AI and for the quality and integrity of their work.
+Students use AI effectively and responsibly and remain accountable for their decisions and final work.
 
-PAIR can be applied across disciplines, either within an existing learning activity or when designing a new one.
+PAIR can be adapted across disciplines and used within an existing learning activity or to design a new one.
 
-*Adapted from Acar, O. A. (2023), “Are Your Students Ready for AI? A 4-Step Framework for a ChatGPT World.”*
+*Adapted from Acar, O. A. (2023), “Are Your Students Ready for AI? A 4-Step Framework to Prepare Learners for a ChatGPT World.”*
 
 ## The PAIR Process
 
@@ -159,34 +159,34 @@ PAIR can be applied across disciplines, either within an existing learning activ
 
 ## Designing the Scaffolding
 
-Students carry out PAIR. You design the conditions that enable them to do so.
+You design the conditions that enable students to use PAIR in ways that support the intended learning.
 
 | PAIR stage      | You design for                                                                                |
 | --------------- | ----------------------------------------------------------------------------------------------- |
-| **Problem**     | The intended learning, task boundaries and degree of openness.                                  |
-| **AI**          | Suitable and accessible tool choices, and whether students should justify their selection.     |
-| **Interaction** | Opportunities to test, challenge and verify AI-generated outputs.                                |
+| **Problem**     | The intended learning, task boundaries and whether the inquiry is defined, guided or open.       |
+| **AI**          | Suitable and accessible tool choices, and whether students should explore or justify their selection. |
+| **Interaction** | Opportunities to experiment with, test, challenge and verify AI-generated outputs.               |
 | **Reflection**  | Prompts or evidence that make students’ decisions, learning and judgement visible.               |
 
 The degree of student choice should reflect their readiness and the intended learning.
 
 Less experienced students may need a defined task, suggested tools and guided reflection. More experienced students may take greater responsibility for framing the task, selecting tools and shaping their interaction with AI.
 
-## Can PAIR Be Assessed?
+## Can Learning Through PAIR Be Assessed?
 
-PAIR may be used in formative or summative learning activities.
+PAIR can be used in formative or summative learning activities.
 
 Where the intended learning outcome includes productive use of AI, assessment may examine how students:
 
-- frame the problem;
-- select and use AI;
+- frame or understand the problem;
+- select and use AI appropriately;
 - evaluate and refine its outputs;
 - apply disciplinary criteria; and
 - exercise human judgement.
 
 The final output and an appropriate explanation or reflection may form part of the assessment evidence.
 
-> Marks should reflect the quality of the learning demonstrated—not simply the use of AI or completion of the PAIR steps.
+> Marks should reflect the intended learning demonstrated—not simply the use of AI or completion of the PAIR stages.
 
 ## Check That AI Supports the Intended Learning
 
@@ -229,9 +229,9 @@ Then decide what level of structure and choice your students need.
 
 ## Key Takeaway
 
-PAIR helps students define the task, select a suitable tool, interact critically with AI and reflect on their learning.
+PAIR provides an adaptable structure for helping students clarify the task, select suitable AI support, interact critically with AI and reflect on their learning and judgement.
 
-You design the conditions and scaffolding so that AI supports the intended learning rather than replacing it.
+You determine the task, scaffolding and degree of student choice so that AI supports—not replaces—the intended learning.
 
 ---
 
