@@ -364,6 +364,21 @@ function SupportReplaceSorter() {
   />;
 }
 
+function PairAssessmentCheck() {
+  return <ScenarioSorter
+    eyebrow="Assessment check"
+    title="What Should the Mark Recognise?"
+    prompt="For each example, decide whether the assessment is recognising demonstrated capability or merely completion of a PAIR activity."
+    options={["Demonstrated capability", "PAIR completion only"]}
+    countNoun="checked"
+    scenarios={[
+      { id: "process", context: "Students submit an AI-generated proposal with a short explanation of how they framed the problem, tested the output against disciplinary criteria and made their final decisions.", answer: "Demonstrated capability", feedback: "The evidence makes visible framing, evaluation and human judgement — capabilities that may be relevant to an Augment outcome." },
+      { id: "tool", context: "Students receive marks for attaching a screenshot showing that they used an AI tool, regardless of how they used or evaluated it.", answer: "PAIR completion only", feedback: "Using a tool is not, by itself, evidence of learning. Marks should recognise the relevant capability demonstrated through the process, output and explanation." },
+      { id: "reflection", context: "Students compare two AI-generated approaches, justify which they adopted using module concepts and explain the limitation they needed to address.", answer: "Demonstrated capability", feedback: "The task assesses evaluation, disciplinary reasoning and responsible AI use rather than rewarding AI use alone." },
+    ]}
+  />;
+}
+
 function GenAiConditionsSorter() {
   return <ScenarioSorter
     eyebrow="Check the conditions"
@@ -786,7 +801,7 @@ function PairInfographic() {
   const stages = [
     { letter: "P", name: "Problem", icon: Target, action: "Students define the task or challenge", detail: "Clarify the intended outcome, requirements, constraints and success criteria.", cue: "What must we understand before using AI?", tone: "problem" },
     { letter: "A", name: "AI", icon: Bot, action: "Students select a suitable AI tool", detail: "Consider what support is needed, what the tool can do and whether its use is permitted.", cue: "What could AI contribute?", tone: "ai" },
-    { letter: "I", name: "Interaction", icon: RefreshCw, action: "Students experiment, evaluate and refine", detail: "Evaluate outputs for relevance and accuracy, and verify important claims against primary, official or trusted sources.", cue: "How will we test and improve the output?", tone: "interaction" },
+    { letter: "I", name: "Interaction", icon: RefreshCw, action: "Students experiment, evaluate and refine", detail: "AI may favour information that is common, prominent or easy to retrieve while overlooking a less well-known but more authoritative source. Verify important claims against the relevant primary or official source, particularly for legal, regulatory, technical or specialised information.", cue: "How will we test and improve the output?", tone: "interaction" },
     { letter: "R", name: "Reflection", icon: Eye, action: "Students examine the process and learning", detail: "Evaluate how AI supported or hindered the learning process, and identify where human judgement was necessary.", cue: "What did we learn about the task, the tool and our own judgement?", tone: "reflection" },
   ];
   return (
@@ -923,7 +938,7 @@ function QuizReadinessRecap() {
             <div className="recap-chip"><b>Augment</b><p>Productive use of AI to improve the quality or effectiveness of work, with appropriate oversight.</p></div>
             <div className="recap-chip"><b>Advance</b><p>New AI-enabled possibilities, workflows or forms of professional practice.</p></div>
           </div>
-          <p className="recap-note">Begin with the intended competency, then align the learning outcome, activities and assessment.</p>
+          <p className="recap-note">Consider all three As, but do not apply them equally by default. Anchor remains essential, Augment provides the baseline for appropriate AI-enabled professional practice, and Advance applies where new possibilities are relevant.</p>
         </section>
 
         <section className="recap-panel recap-tone-3">
@@ -937,17 +952,18 @@ function QuizReadinessRecap() {
             <ArrowRight className="recap-pair-arrow" size={14} strokeWidth={2.2} aria-hidden="true" />
             <div className="recap-pair-step"><b>Reflection</b><p>Consider what was learnt and where human judgement was needed.</p></div>
           </div>
-          <p className="recap-note">AI should support the intended thinking, judging or performing—not replace it.</p>
+          <p className="recap-note">PAIR may be formative or assessed. Where Augment is an intended outcome, relevant output, explanation and reflection should provide evidence of the student&rsquo;s capability.</p>
+          <p className="recap-note">AI may produce convincing answers while missing less prominent but more authoritative sources. Verify important claims against primary or official information.</p>
         </section>
 
         <section className="recap-panel recap-tone-4">
           <div className="recap-panel-head"><i><ClipboardCheck size={18} strokeWidth={2.1} aria-hidden="true" /></i><h4>Assessment · NP&rsquo;s GenAI Policy</h4></div>
           <ul className="recap-list">
             <li>GenAI is allowed by default in summative assessment unless explicitly restricted or prohibited.</li>
-            <li>State any conditions clearly. Students must cite and declare their use.</li>
+            <li>Different GenAI conditions may apply to different components of one assessment.</li>
             <li>For restricted use, specify what AI may support, what students must do themselves and what evidence is required.</li>
-            <li>Evidence should be proportionate; a complete AI chat history is not required by default.</li>
-            <li>AI-detection results or changes in writing style are not proof of misconduct.</li>
+            <li>When AI use is directly examined through a presentation, demonstration or Q&amp;A, a brief declaration may be sufficient.</li>
+            <li>For suspected misuse, discuss the work with the student and examine process evidence in accordance with Appendix 3. Detection results and changes in writing style are not proof by themselves.</li>
             <li>Staff remain responsible for every grade and feedback decision.</li>
           </ul>
           <p className="recap-warning"><strong>Always prohibited:</strong> submitting purely AI-generated work as one&rsquo;s own; disguising AI content as original; relying solely on AI for insights or reflection; and simulating human interactions where real interaction is required.</p>
@@ -955,12 +971,10 @@ function QuizReadinessRecap() {
 
         <section className="recap-panel recap-tone-5">
           <div className="recap-panel-head"><i><ShieldCheck size={18} strokeWidth={2.1} aria-hidden="true" /></i><h4>Data and Tech-Enhanced T&amp;L</h4></div>
-          <p className="recap-lead">Start with the learning need, then consider:</p>
+          <p className="recap-lead">Learning-data predictions are indicators, not conclusions. Speak with students where appropriate and use professional judgement before deciding what support is needed.</p>
           <ul className="recap-list">
-            <li>whether the tool or data use is suitable;</li>
-            <li>whether the information is approved for that tool and purpose;</li>
-            <li>whether the output is accurate and appropriate;</li>
-            <li>who interprets the information and decides what action to take.</li>
+            <li>Select tools based on the learning purpose, suitability, information classification, effectiveness and appropriate testing.</li>
+            <li>Institutional availability alone does not make a tool the right choice for every learning activity.</li>
           </ul>
           <p className="recap-note">AI may draft, identify patterns or suggest possibilities. We retain professional judgement and responsibility.</p>
         </section>
@@ -1064,6 +1078,7 @@ export default function Home() {
   const genAiConditionsMarker = "<!--genai-conditions-check-->";
   const nextStepMarker = "<!--next-step-->";
   const pairApplyMarker = "<!--pair-apply-checklist-->";
+  const pairAssessmentMarker = "<!--pair-assessment-check-->";
   const fourIdeasMarker = "<!--four-ideas-visual-->";
   const quizRecapMarker = "<!--quiz-readiness-recap-->";
   const sectionMarkdown = withoutTitle(current.markdown);
@@ -1084,6 +1099,7 @@ export default function Home() {
     [moduleReviewMarker]: <FourLensReview value={activityNotes.snapshotcheck ?? ""} onChange={(value) => setActivityValue("snapshotcheck", value)} />,
     [nextStepMarker]: <NextStepActivity value={activityNotes.nextstep ?? ""} onChange={(value) => setActivityValue("nextstep", value)} />,
     [pairApplyMarker]: <TapChecklist prompt="Tap each prompt once you have considered it for your activity." items={["what students should understand or do before using AI;", "what role AI should play;", "how students will evaluate and improve the output;", "what reflection or evidence will make their learning and judgement visible."]} value={activityNotes.pairapply ?? ""} onChange={(value) => setActivityValue("pairapply", value)} />,
+    [pairAssessmentMarker]: <PairAssessmentCheck />,
     [fourIdeasMarker]: <FourIdeasVisual />,
     [quizRecapMarker]: <QuizReadinessRecap />,
   };
