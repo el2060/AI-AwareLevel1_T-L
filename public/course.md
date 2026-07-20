@@ -176,7 +176,7 @@ Less experienced students may need a defined task, suggested tools and guided re
 
 PAIR may be used in formative or summative learning activities.
 
-Where an intended learning outcome includes **Augment** capabilities, assessment may examine how students:
+Where the intended learning outcome includes productive use of AI, assessment may examine how students:
 
 - frame the problem;
 - select and use AI;
@@ -217,7 +217,7 @@ A follow-up activity can require students to:
 - correct weaknesses in the AI-supported work; and
 - apply the relevant concepts themselves.
 
-For example, if students use AI to complete an OAL activity without learning the content, the subsequent IPL lesson could require them to analyse their AI use, identify gaps and apply the concepts to a new problem.
+For example, if students use AI to complete an OAL activity but cannot demonstrate the intended understanding, the subsequent IPL lesson could require them to analyse their AI use, identify gaps and apply the concepts to a new problem.
 
 <!--support-or-replace-->
 
@@ -235,7 +235,7 @@ Then decide what level of structure and choice your students need.
 
 PAIR helps students define the task, select a suitable tool, interact critically with AI and reflect on their learning.
 
-You design the conditions and scaffolding. AI should support the intended learning—not replace it.
+You design the conditions and scaffolding so that AI supports the intended learning rather than replacing it.
 
 ---
 
