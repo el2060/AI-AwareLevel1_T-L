@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactElement, useEffect, useLayoutEffect, useMemo, useState } from "react";
-import { ArrowLeft, ArrowLeftRight, ArrowRight, BookOpen, Bot, Check, CheckCircle2, ChevronRight, ClipboardCheck, Compass, Eye, Layers, Lightbulb, RefreshCw, Rocket, Scale, ShieldCheck, Target, UserRound, Users } from "lucide-react";
+import { ArrowLeft, ArrowLeftRight, ArrowRight, BookOpen, Bot, Check, CheckCircle2, ChevronRight, ClipboardCheck, Compass, Eye, Layers, Lightbulb, RefreshCw, Rocket, Scale, ShieldCheck, Target, UserRound, Users, X } from "lucide-react";
 
 type Section = {
   id: string;
@@ -324,14 +324,14 @@ function ScenarioSorter({ eyebrow, title, prompt, options, scenarios, countNoun,
     <section className="activity-block domain-spotter">
       <div className="activity-head-row">
         <div><span className="activity-eyebrow">{eyebrow}</span><h3>{title}</h3></div>
-        <span className="activity-count">{solved} / {scenarios.length} {countNoun}</span>
+        <span className={`activity-count${solved === scenarios.length ? " complete" : ""}`}>{solved} / {scenarios.length} {countNoun}</span>
       </div>
       <p>{prompt}</p>
       <div className="domain-spotter-tabs" role="tablist" aria-label="Scenarios">
         {scenarios.map((s, index) => {
           const a = answers[s.id];
           const state = !a ? "" : a === s.answer ? "solved" : "attempted";
-          return <button key={s.id} type="button" role="tab" aria-selected={active === index} className={`${active === index ? "active" : ""} ${state}`} onClick={() => setActive(index)}>{a ? (a === s.answer ? <Check size={14} strokeWidth={2.8} aria-hidden="true" /> : "•") : index + 1}</button>;
+          return <button key={s.id} type="button" role="tab" aria-selected={active === index} className={`${active === index ? "active" : ""} ${state}`} onClick={() => setActive(index)}>{a ? (a === s.answer ? <Check size={14} strokeWidth={2.8} aria-hidden="true" /> : <X size={14} strokeWidth={2.8} aria-hidden="true" />) : index + 1}</button>;
         })}
       </div>
       <div className="domain-spotter-case"><p>{current.context}</p></div>
@@ -404,7 +404,7 @@ function TapChecklist({ eyebrow, title, prompt, items, tips, value, onChange, co
     <section className="activity-block tap-checklist">
       <div className="activity-head-row">
         {(eyebrow || title) ? <div>{eyebrow && <span className="activity-eyebrow">{eyebrow}</span>}{title && <h2>{title}</h2>}</div> : <div />}
-        <span className="activity-count">{selected.length} / {items.length}</span>
+        <span className={`activity-count${selected.length === items.length ? " complete" : ""}`}>{selected.length} / {items.length}</span>
       </div>
       <p>{prompt}</p>
       <div className="tap-check-grid">{items.map((item, index) => {
