@@ -364,6 +364,23 @@ function SupportReplaceSorter() {
   />;
 }
 
+function ThreeAsMisconceptionCheck() {
+  return <ScenarioSorter
+    eyebrow="Quick Check"
+    title="Understanding the 3As"
+    prompt="For each statement, decide whether it is accurate or needs correction."
+    options={["Accurate", "Needs correction"]}
+    countNoun="checked"
+    scenarios={[
+      { id: "revise-all", context: "Every module must revise its learning outcomes and assessment to include GenAI.", answer: "Needs correction", feedback: "All modules should consider how AI may affect the competencies students need. Changes are only needed where the review identifies a gap or misalignment." },
+      { id: "no-change", context: "A module may emphasise one or several of the 3As, and the review may conclude that no change is needed.", answer: "Accurate", feedback: "The relevant emphasis depends on the discipline, module level, intended learning outcomes and professional context." },
+      { id: "tutor-augment", context: "Using an AI tutor or learning assistant in a module means the module is developing Augment capabilities.", answer: "Needs correction", feedback: "AI tutors and learning assistants support facilitation. Augment refers to students learning to use AI productively in disciplinary or professional work, with appropriate judgement and oversight." },
+      { id: "anchor-complex", context: "Anchor can involve complex human and disciplinary judgement, and is not a lower-order category.", answer: "Accurate", feedback: "Anchor includes capabilities such as professional judgement, empathy, ethics, creativity, safety-critical reasoning and other capabilities that remain distinctly human. To identify what should remain Anchor, lecturers need an informed view of what current AI tools can and cannot do." },
+      { id: "prohibit-simply", context: "A module that focuses on Anchor can simply prohibit AI without considering what current AI tools can do.", answer: "Needs correction", feedback: "Understanding current AI capabilities helps lecturers identify what students must genuinely demonstrate themselves and design learning activities and assessment accordingly. Lecturers may test relevant tools or use guided activities such as PAIR to understand how AI could support or bypass the intended learning." },
+    ]}
+  />;
+}
+
 function GenAiConditionsSorter() {
   return <ScenarioSorter
     eyebrow="Check the conditions"
@@ -1106,6 +1123,7 @@ export default function Home() {
   const alignmentFlowMarker = "<!--alignment-flow-visual-->";
   const strategyMapMarker = "<!--strategy-map-->";
   const supportReplaceMarker = "<!--support-or-replace-->";
+  const threeAsMisconceptionMarker = "<!--three-as-misconception-check-->";
   const genAiConditionsMarker = "<!--genai-conditions-check-->";
   const nextStepMarker = "<!--next-step-->";
   const pairApplyMarker = "<!--pair-apply-checklist-->";
@@ -1125,6 +1143,7 @@ export default function Home() {
     [threeAsMarker]: <ThreeAsInfographic />,
     [strategyMapMarker]: <StrategyMap />,
     [supportReplaceMarker]: <SupportReplaceSorter />,
+    [threeAsMisconceptionMarker]: <ThreeAsMisconceptionCheck />,
     [genAiConditionsMarker]: <GenAiConditionsSorter />,
     [moduleReviewMarker]: <FourLensReview value={activityNotes.snapshotcheck ?? ""} onChange={(value) => setActivityValue("snapshotcheck", value)} />,
     [nextStepMarker]: <NextStepActivity value={activityNotes.nextstep ?? ""} onChange={(value) => setActivityValue("nextstep", value)} />,

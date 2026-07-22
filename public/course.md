@@ -67,6 +67,8 @@ The 3As provide a simple lens for doing this.
 
 <!--three-as-visual-->
 
+The 3As describe the competencies students may need for AI-enabled professional practice. They are not categories of AI tools or levels of difficulty.
+
 ## Applying the 3As Across a Module
 
 Use the 3As to consider which competencies are relevant to the discipline, module level and intended learning outcomes.
@@ -78,6 +80,16 @@ Use the 3As to consider which competencies are relevant to the discipline, modul
 **Advance** may be emphasised where students are ready to explore new AI-enabled services, workflows or forms of practice.
 
 A module may focus on one or combine several of the 3As. They do not need to be addressed equally.
+
+Reviewing a module through the 3As does not automatically mean it must be changed. The review may confirm that the current learning outcomes, activities and assessment remain appropriate.
+
+## Quick Check
+
+### Understanding the 3As
+
+For each statement, decide whether it is accurate or needs correction.
+
+<!--three-as-misconception-check-->
 
 ## Aligning Competencies, Learning Activities and Assessment
 
