@@ -762,39 +762,38 @@ function StudentBaselineVisual() {
     {
       icon: BookOpen,
       title: "Learn About AI",
-      focus: "Understand what AI is, how it works and what it can do",
-      detail: "Recognise key AI terminology, how AI capabilities are evolving, and the main approaches and fields of AI. Understand the capabilities and limitations of different forms of AI.",
-      example: "Distinguish generative AI from other forms of AI and explain why an AI system may produce a plausible but inaccurate output.",
+      focus: "Understand AI and its capabilities",
+      detail: "Students should recognise different forms of AI, understand broadly what they can and cannot do, and be aware that AI outputs may be incomplete, biased or inaccurate.",
+      example: "Explain why a convincing AI-generated response may still be wrong.",
     },
     {
       icon: Bot,
       title: "Learn With AI",
-      focus: "Use AI to support problem-solving and deepen understanding",
-      detail: "Apply computational-thinking approaches with AI—for example, breaking down a complex problem, identifying patterns, simplifying key ideas and developing a step-by-step approach. Use iterative dialogue with AI while continuing to examine and regulate one’s own thinking.",
-      example: "Break a complex problem into smaller parts with AI, test each part and identify gaps in the proposed reasoning.",
+      focus: "Use AI to support thinking and problem-solving",
+      detail: "Students should be able to work with AI to break down problems, explore patterns, test explanations and identify gaps in their own reasoning—without handing over the thinking to AI.",
+      example: "Use AI to break a complex problem into parts, then examine and improve the proposed reasoning.",
     },
     {
       icon: Rocket,
       title: "Learn to Use AI",
-      focus: "Apply AI appropriately to create value",
-      detail: "Recognise the challenges involved in applying AI. Select suitable data, models, tools or services for a task, and evaluate AI outputs in context before using them to inform a product, action or decision.",
-      example: "Use an appropriate AI tool to produce an initial output, then assess its accuracy, coherence, bias and contextual suitability before deciding how it should be used.",
+      focus: "Apply AI purposefully and evaluate the result",
+      detail: "Students should select suitable tools and inputs, use AI to improve a task or outcome, and evaluate the output before relying on it.",
+      example: "Generate an initial output with AI, then check its accuracy, relevance, bias and suitability for the context.",
     },
     {
       icon: Scale,
       title: "Learn Beyond AI",
-      focus: "Consider AI’s wider impact and retain human responsibility",
-      detail: "Evaluate the societal value and impact of AI in domain-specific contexts. Apply relevant ethical, legal and governance considerations, and exercise human-centred judgement, oversight and accountability when using AI or AI-generated outputs.",
-      example: "Decide whether an AI-supported recommendation is appropriate, lawful and fair—and what human oversight is required before it is acted upon.",
+      focus: "Exercise judgement and responsibility",
+      detail: "Students should consider the ethical, legal and societal implications of AI, retain human oversight and remain accountable for AI-supported decisions and outputs.",
+      example: "Decide whether an AI-supported recommendation is fair, appropriate and safe to act on.",
     },
   ];
   return (
     <details className="policy-detail student-baseline-accordion">
-      <summary>View the foundational AI competencies students should progressively develop</summary>
+      <summary>What should students progressively be able to understand and do with AI?</summary>
       <div>
         <div className="baseline-intro">
-          <span>Shared reference</span>
-          <p>The POLITE student AI baseline sets out four broad areas of foundational AI competency that students should progressively develop across their learning journey.</p>
+          <p>The POLITE baseline identifies four broad areas.</p>
         </div>
         <ol className="baseline-map">
           {items.map(({ icon: Icon, title, focus, detail, example }, index) => (
@@ -805,20 +804,20 @@ function StudentBaselineVisual() {
                 <b>{title}</b>
                 <strong>{focus}</strong>
                 <p>{detail}</p>
-                <em><span>For example</span>{example}</em>
+                <em><span>In practice</span>{example}</em>
               </div>
             </li>
           ))}
         </ol>
         <section className="baseline-module-panel" aria-label="What this means for your module">
-          <div className="baseline-module-title"><span>In practice</span><h4>What This Means for Your Module</h4></div>
-          <p>Not every module is expected to teach or assess all four areas. The baseline provides a shared reference for considering:</p>
+          <h4>What This Means for Your Module</h4>
+          <p>You are not expected to teach or assess all four areas in every module. Consider:</p>
           <ul className="course-list">
-            <li>which student AI competencies are relevant to the discipline and module;</li>
-            <li>where they may be progressively developed across the course;</li>
-            <li>how students will continue to demonstrate their own reasoning, judgement and accountability.</li>
+            <li>which competencies are relevant to your discipline and module;</li>
+            <li>where students will progressively develop them across the course;</li>
+            <li>how students’ own reasoning, judgement and contribution will remain visible.</li>
           </ul>
-          <blockquote>The student AI baseline describes the broad foundational competencies students should progressively develop. The 3As help lecturers interpret what these may mean for disciplinary learning and AI-enabled professional practice.</blockquote>
+          <blockquote>The baseline describes the foundational AI competencies students should develop. The 3As help you interpret what these mean for disciplinary learning and AI-enabled professional practice.</blockquote>
         </section>
       </div>
     </details>
