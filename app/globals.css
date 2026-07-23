@@ -794,7 +794,59 @@ button:focus-visible, summary:focus-visible, a:focus-visible {
 .policy-detail .course-list, .policy-detail .course-list-long { margin-bottom: 0; }
 .policy-detail p, .policy-detail li { font-size: 15px; line-height: 1.62; }
 .policy-detail .lens-strip { margin-top: 18px; }
-.policy-detail .baseline-note { margin: 14px 0 0; padding: 12px 14px; border-radius: 8px; background: var(--canvas); color: var(--muted); font-size: 13.5px; }
+.baseline-strip { margin-top: 14px !important; }
+.baseline-strip section {
+  min-height: 278px;
+  gap: 8px;
+}
+.baseline-strip section strong {
+  display: block;
+  margin-top: -1px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #1d4f79;
+}
+.baseline-strip section em {
+  margin-top: auto;
+  display: block;
+  color: var(--ink-soft);
+  font-size: 12.25px;
+  font-style: normal;
+  line-height: 1.46;
+}
+.baseline-strip section em span {
+  color: var(--blue-active);
+  font-weight: 700;
+}
+.baseline-module-panel {
+  margin: 15px 0 0;
+  padding: 14px 15px;
+  border: 1px solid #d5e0ee;
+  border-radius: 10px;
+  background: #fdfefe;
+}
+.baseline-module-panel h4 {
+  margin: 0;
+  color: #1b3c61;
+  font-size: 15px;
+  font-weight: 760;
+  letter-spacing: -.01em;
+}
+.baseline-module-panel > p {
+  margin: 8px 0 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.baseline-module-panel .course-list { margin: 8px 0 0; }
+.baseline-module-panel blockquote {
+  margin: 11px 0 0;
+  padding: 0 0 0 12px;
+  border-left: 3px solid #9ab9d7;
+  color: #2a4f79;
+  font-size: 13px;
+  line-height: 1.52;
+}
 
 .recap-tone-2 { --recap-accent: #054a80; --recap-soft: #e2ecf6; }
 .recap-tone-3 { --recap-accent: #6b4f8a; --recap-soft: #f1ecf7; }
@@ -1080,6 +1132,7 @@ button:focus-visible, summary:focus-visible, a:focus-visible {
   .action-journey { grid-template-columns: 1fr; gap: 22px; }.action-stage { min-height: auto; }.action-connector { left: 50%; right: auto; top: auto; bottom: -19px; transform: translateX(-50%) rotate(90deg); }
   .alignment-story { padding: 22px 18px; }.alignment-sentence { font-size: 19px; line-height: 1.7; }.alignment-chip { font-size: 14.5px; padding: 2px 10px 2px 4px; }.alignment-chip i { width: 18px; height: 18px; font-size: 10px; }
   .icon-panel-grid, .icon-panel-grid.compact, .icon-panel-grid.trio, .lens-strip { grid-template-columns: 1fr; }
+  .baseline-strip section { min-height: 0; }
   .quiz-recap { grid-template-columns: 1fr; }
   .recap-chip-row { grid-template-columns: 1fr; }
   .recap-pair-row { flex-direction: column; }

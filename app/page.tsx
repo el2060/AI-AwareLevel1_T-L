@@ -759,27 +759,61 @@ function HomeFlow() {
 
 function StudentBaselineVisual() {
   const items = [
-    { icon: BookOpen, title: "Learn About AI", detail: "Understand key AI terms, evolving capabilities, and what different forms of AI can and cannot do." },
-    { icon: Bot, title: "Learn With AI", detail: "Use AI to break down problems, compare explanations, identify reasoning gaps and deepen understanding." },
-    { icon: Rocket, title: "Learn to Use AI", detail: "Select suitable tools, provide useful inputs, and evaluate outputs for accuracy, relevance, bias and fitness for purpose." },
-    { icon: Scale, title: "Learn Beyond AI", detail: "Consider ethical, legal and societal implications while exercising human judgement, oversight and accountability." },
+    {
+      icon: BookOpen,
+      title: "Learn About AI",
+      focus: "Understand AI and its capabilities",
+      detail: "Recognise key AI terms and approaches, how AI is evolving, and what different forms of AI can and cannot do.",
+      example: "Explain why an AI system may produce a plausible but inaccurate response.",
+    },
+    {
+      icon: Bot,
+      title: "Learn With AI",
+      focus: "Use AI to strengthen learning and thinking",
+      detail: "Use AI to break down problems, compare explanations, identify gaps in reasoning and deepen understanding.",
+      example: "Ask AI to explain a difficult concept in different ways, then evaluate which explanation is most accurate and useful.",
+    },
+    {
+      icon: Rocket,
+      title: "Learn to Use AI",
+      focus: "Apply AI purposefully and evaluate its outputs",
+      detail: "Select suitable tools, provide appropriate inputs and assess outputs for accuracy, relevance, bias and fitness for purpose.",
+      example: "Use AI to develop an initial solution, then verify, refine and adapt it for the intended context.",
+    },
+    {
+      icon: Scale,
+      title: "Learn Beyond AI",
+      focus: "Exercise judgement, responsibility and oversight",
+      detail: "Consider the ethical, legal and societal implications of AI while retaining human accountability for decisions and outputs.",
+      example: "Decide whether an AI-assisted recommendation is fair, appropriate and safe to use.",
+    },
   ];
   return (
     <details className="policy-detail student-baseline-accordion">
-      <summary>View the student AI baseline competencies</summary>
+      <summary>View what students should progressively be able to do with AI</summary>
       <div>
-        <p>The POLITE sector baseline sets out foundational AI competencies that students should progressively develop across their learning journey.</p>
+        <p>The POLITE student AI baseline sets out four complementary areas of foundational AI competency that students should progressively develop across their learning journey.</p>
         <div className="lens-strip baseline-strip">
-          {items.map(({ icon: Icon, title, detail }) => (
+          {items.map(({ icon: Icon, title, focus, detail, example }) => (
             <section key={title}>
               <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
               <b>{title}</b>
+              <strong>{focus}</strong>
               <small>{detail}</small>
+              <em><span>For example:</span> {example}</em>
             </section>
           ))}
         </div>
-        <p className="baseline-note">Not every module is expected to teach or assess all four areas. Use this baseline as a shared reference to identify which competencies are most relevant to your module and where students' thinking and judgement remain visible.</p>
-        <p className="baseline-note">The baseline describes what students should progressively develop. The 3As help lecturers interpret these competencies in relation to disciplinary learning and emerging professional practice.</p>
+        <section className="baseline-module-panel" aria-label="What this means for your module">
+          <h4>What This Means for Your Module</h4>
+          <p>Not every module is expected to teach or assess all four areas. Consider:</p>
+          <ul className="course-list">
+            <li>which competencies are relevant to your discipline and module;</li>
+            <li>where students will practise and progressively develop them;</li>
+            <li>how students' own thinking, judgement and contribution will remain visible.</li>
+          </ul>
+          <blockquote>The student AI baseline provides a common foundation. The 3As help lecturers interpret these competencies in relation to disciplinary learning and emerging professional practice.</blockquote>
+        </section>
       </div>
     </details>
   );
