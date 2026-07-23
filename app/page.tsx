@@ -759,16 +759,16 @@ function HomeFlow() {
 
 function StudentBaselineVisual() {
   const items = [
-    { icon: BookOpen, title: "Learn About AI", detail: "Understand key AI terms, approaches, fields, capabilities and limitations." },
-    { icon: Bot, title: "Learn With AI", detail: "Use AI as a learning partner to break down problems, compare explanations, identify gaps and deepen understanding." },
-    { icon: Rocket, title: "Learn to Use AI", detail: "Apply AI to create value and evaluate its outputs for accuracy, relevance, bias and suitability before using them." },
-    { icon: Scale, title: "Learn Beyond AI", detail: "Consider the societal, ethical and legal implications of AI, and exercise human judgement and oversight." },
+    { icon: BookOpen, title: "Learn About AI", detail: "Understand key AI terms, evolving capabilities, and what different forms of AI can and cannot do." },
+    { icon: Bot, title: "Learn With AI", detail: "Use AI to break down problems, compare explanations, identify reasoning gaps and deepen understanding." },
+    { icon: Rocket, title: "Learn to Use AI", detail: "Select suitable tools, provide useful inputs, and evaluate outputs for accuracy, relevance, bias and fitness for purpose." },
+    { icon: Scale, title: "Learn Beyond AI", detail: "Consider ethical, legal and societal implications while exercising human judgement, oversight and accountability." },
   ];
   return (
     <details className="policy-detail student-baseline-accordion">
-      <summary>View the sector AI baseline competencies</summary>
+      <summary>View the student AI baseline competencies</summary>
       <div>
-        <p>The POLITE sector AI baseline sets out foundational AI competencies for students across four broad areas.</p>
+        <p>The POLITE sector baseline sets out foundational AI competencies that students should progressively develop across their learning journey.</p>
         <div className="lens-strip baseline-strip">
           {items.map(({ icon: Icon, title, detail }) => (
             <section key={title}>
@@ -778,7 +778,8 @@ function StudentBaselineVisual() {
             </section>
           ))}
         </div>
-        <p className="baseline-note">This baseline is included here for awareness. NP is developing how these competencies will be supported across the student learning journey.</p>
+        <p className="baseline-note">Not every module is expected to teach or assess all four areas. Use this baseline as a shared reference to identify which competencies are most relevant to your module and where students' thinking and judgement remain visible.</p>
+        <p className="baseline-note">The baseline describes what students should progressively develop. The 3As help lecturers interpret these competencies in relation to disciplinary learning and emerging professional practice.</p>
       </div>
     </details>
   );

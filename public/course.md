@@ -133,9 +133,70 @@ Which of these may be relevant?
 
 What is one adjustment that would improve the alignment between the learning outcome, activities and assessment?
 
-## Supporting Context · Sector AI Baseline Competencies
+## Supporting Context · Student AI Baseline Competencies
+
+The POLITE sector baseline describes the foundational AI competencies that students should progressively develop across their learning journey.
 
 <!--student-baseline-visual-->
+
+### Learn About AI
+
+**Understand AI and what it can and cannot do.**
+
+Students should be able to:
+
+- recognise key AI terms, approaches and fields;
+- understand how AI capabilities are evolving;
+- recognise the capabilities and limitations of different forms of AI.
+
+### Learn With AI
+
+**Use AI to support thinking and learning.**
+
+Students should be able to use AI as a learning partner to:
+
+- break complex problems into manageable parts;
+- compare explanations and identify inconsistencies;
+- surface gaps in their reasoning;
+- deepen and regulate their own understanding.
+
+The aim is not merely to obtain an answer, but to use AI to strengthen the student's thinking.
+
+### Learn to Use AI
+
+**Apply AI purposefully to create value.**
+
+Students should be able to:
+
+- select suitable AI tools and approaches for a task;
+- provide appropriate information, data or instructions;
+- use AI to improve a process, product or outcome;
+- evaluate outputs for accuracy, relevance, bias and fitness for purpose before acting on them.
+
+### Learn Beyond AI
+
+**Understand AI's wider implications and retain human responsibility.**
+
+Students should be able to:
+
+- consider the societal, ethical and legal implications of AI;
+- apply relevant policies, safeguards and ethical principles;
+- exercise human-centred judgement and appropriate oversight;
+- remain accountable for decisions and AI-assisted outputs.
+
+### What This Means for Lecturers
+
+Not every module is expected to teach or assess all four areas.
+
+Lecturers should be aware of the baseline and consider:
+
+- which competencies are relevant to their discipline and module;
+- where students will progressively develop and practise them;
+- how students' own thinking, judgement and contribution will remain visible.
+
+The sector baseline describes foundational AI capabilities expected of students. The 3As help lecturers interpret these capabilities in relation to disciplinary learning and emerging professional practice.
+
+> Lecturers are not expected to address every competency within one module. The baseline provides a common reference for considering where each module contributes to students' progressive AI development.
 
 ## Key Takeaway
 
