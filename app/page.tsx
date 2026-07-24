@@ -672,7 +672,6 @@ function HomeFlow() {
   const outcomes = [
     "AI is changing the competencies students need and the implications for curriculum design, by reference to NP's 3As framework (Anchor, Augment and Advance)",
     "you might adjust your learning outcomes and designs for the impact of AI in your discipline, domain, course and/or module",
-    "AI can support learning and practice without replacing the intended thinking, judgement or performance",
     "you might redesign your summative assessments to efficiently and validly assess the achievement of those adjusted learning outcomes",
     "you could use AI tools and data purposefully and responsibly to improve students' learning experience and performance",
   ];
@@ -1066,10 +1065,9 @@ function QuizReadinessRecap() {
           <ul className="recap-list">
             <li>GenAI is allowed by default in summative assessment unless explicitly restricted or prohibited.</li>
             <li>State any conditions clearly for each assessment component.</li>
-            <li>Students must cite and declare relevant GenAI use.</li>
-            <li>For restricted use, specify what AI may support, what students must do themselves and what evidence is required.</li>
-            <li>Evidence should be proportionate; a complete AI interaction history is not required by default.</li>
-            <li>AI-detection results or changes in writing style are not proof of misconduct.</li>
+            <li>Students must declare GenAI use.</li>
+            <li>Evidence should be proportionate; for example a complete AI interaction history should be required by default.</li>
+            <li>AI-detection results or changes in writing style are not by themselves proof of misconduct.</li>
             <li>Staff remain responsible for every grade and feedback decision.</li>
           </ul>
           <p className="recap-warning"><strong>Always prohibited:</strong> submitting purely AI-generated work as one&rsquo;s own; disguising AI content as original; relying solely on AI for insights or reflection; and simulating human interactions where real interaction is required.</p>
