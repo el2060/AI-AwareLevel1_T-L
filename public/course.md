@@ -156,9 +156,11 @@ Use the 3As to identify the competencies students need, then align the learning 
 
 # Part 3: Facilitation of Learning — How Can AI Support Learning?
 
-## PAIR: A Structured Process for Learning With AI
+## PAIR: Structuring Students' Learning With AI
 
-NP uses the PAIR framework to guide students in using AI purposefully and responsibly as part of learning.
+NP uses the PAIR framework to help students learn and solve problems with AI purposefully, critically and responsibly.
+
+PAIR provides a simple and adaptable structure. You design the task and determine the level of guidance, choice and support according to the intended learning and students' readiness.
 
 PAIR is:
 
@@ -168,34 +170,44 @@ AI augments rather than replaces human insight, judgement and creativity.
 
 **Skill-centred**
 
-Students develop transferable capabilities such as problem formulation, exploration, experimentation, critical evaluation and reflection.
+Students develop transferable capabilities such as problem formulation, exploration, experimentation, critical thinking and reflection.
 
 **Responsibility-centred**
 
-Students remain accountable for how they use AI and for the quality and integrity of their work.
+Students use AI effectively and responsibly and remain accountable for their decisions and final work.
 
-PAIR is adaptable across disciplines and can be incorporated into an existing learning activity or used to structure a new one.
+PAIR can be adapted across disciplines and used within an existing learning activity or to design a new one.
 
-*Adapted from Acar, O. A. (2023), “Are Your Students Ready for AI? A 4-Step Framework for a ChatGPT World.”*
+*Adapted from Acar, O. A. (2023), "Are Your Students Ready for AI? A 4-Step Framework to Prepare Learners for a ChatGPT World."*
 
 ## The PAIR Process
 
+Concept visual — PAIR infographic
+
+A structured process for learning and problem-solving with AI.
+
 <!--pair-infographic-->
 
-## Applying PAIR to Design an AI-Enabled Learning Experience
+## Designing the Scaffolding
 
-PAIR helps lecturers consider both what learners will do and what facilitation or scaffolding they may need.
+You design the conditions that enable students to use PAIR in ways that support the intended learning.
 
-|                        | **Problem**                                                               | **AI**                                                                             | **Interaction**                                                                  | **Reflection**                                                                           |
-| ---------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| **Learners will**      | Define the task, constraints and intended outcome.                        | Explore and select a suitable GenAI tool.                                          | Experiment with AI, evaluate outputs and integrate useful inputs into their work. | Evaluate how AI helped or hindered the task and reflect on their learning and judgement. |
-| **Lecturers consider** | What is the intended learning? How open or structured should the task be? | Which tools are suitable and accessible? How should students justify their choice? | How should students use AI, and how will they evaluate and verify its outputs?    | What prompts or evidence will make students' decisions, learning and judgement visible?  |
+| PAIR stage      | You design for                                                                                |
+| --------------- | ----------------------------------------------------------------------------------------------- |
+| **Problem**     | The intended learning, task boundaries and whether the inquiry is defined, guided or open.       |
+| **AI**          | Suitable and accessible tool choices, and whether students should explore or justify their selection. |
+| **Interaction** | Opportunities to experiment with, test, challenge and verify AI-generated outputs.               |
+| **Reflection**  | Prompts or evidence that make students' decisions, learning and judgement visible.               |
 
-The level of scaffolding should reflect students' readiness. Less experienced learners may need a defined task, suggested tools and guided reflection. More experienced learners may take greater responsibility for framing the task and selecting tools.
+The degree of student choice should reflect their readiness and the intended learning.
 
-## Does AI Support the Intended Learning?
+Less experienced students may need a defined task, suggested tools and guided reflection. More experienced students may take greater responsibility for framing the task, selecting tools and shaping their interaction with AI.
 
-AI may support learning when students use it to:
+## Check That AI Supports the Intended Learning
+
+Good scaffolding should keep students engaged in the capability the activity is intended to develop.
+
+AI can support learning when students use it to:
 
 - explore approaches;
 - compare explanations or perspectives;
@@ -203,19 +215,59 @@ AI may support learning when students use it to:
 - practise and receive feedback;
 - test and refine their thinking.
 
-It substitutes for learning when it completes the analysis, judgement, creation or performance students are meant to develop.
+AI may undermine learning when it completes the thinking, judgement, creation or performance students are meant to develop.
 
-## Apply It to Your Module
+> Check whether students are still practising the intended capability.
 
-Consider one learning activity:
+## When AI Has Bypassed the Learning
 
-> How could AI support students' learning while keeping the intended thinking, judgement or performance visible?
+Where students cannot demonstrate the intended understanding after using AI to complete an activity, address the learning gap directly.
+
+A follow-up activity can require students to:
+
+- identify what they did not understand or verify;
+- examine weaknesses in the AI-supported work;
+- explain the relevant concepts; and
+- apply them to a new problem.
+
+For example, after an AI-completed OAL activity, an IPL lesson could require students to identify gaps and apply the concepts to a new situation.
+
+## Quick Check
+
+### Is AI Supporting the Learning?
+
+Interactive quiz — sort each scenario (4 statements).
+
+For each situation, decide whether AI supports students in developing the intended capability or does that work for them.
+
+<!--support-or-replace-->
+
+## Using PAIR in Assessment
+
+PAIR can be used in formative or summative activities.
+
+Where productive use of AI is part of the intended learning, assessment may consider how students frame the task, use AI, evaluate its outputs, apply disciplinary criteria and exercise judgement.
+
+> Marks should reflect the intended learning demonstrated—not simply the use of AI or completion of the PAIR stages.
+
+## Apply PAIR to One Learning Activity
+
+Choose one activity from a module you teach, lead or support. Consider:
+
+- what students should understand or do before using AI;
+- what role AI should play;
+- how students will evaluate and improve the output;
+- what reflection or evidence will make their learning and judgement visible.
+
+Then decide what level of structure and choice your students need.
+
+Tap checklist — all 4 prompts.
+
+<!--pair-apply-checklist-->
 
 ## Key Takeaway
 
-PAIR helps lecturers structure learning in which students define the task, select an appropriate tool, interact critically with AI and reflect on their learning.
-
-AI should support the intended learning—not substitute for it.
+PAIR provides an adaptable structure for helping students clarify the task, select suitable AI support, interact critically with AI and reflect on their learning and judgement. You determine the task, scaffolding and degree of student choice so that AI supports—not replaces—the intended learning.
 
 ---
 
