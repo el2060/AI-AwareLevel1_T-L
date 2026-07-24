@@ -283,13 +283,13 @@ function withoutTitle(markdown: string) {
 }
 
 const contentsMeta = [
-  { title: "Start here", label: "AI-enabled T&L overview · Up to 2 hours" },
-  { title: "NP’s AI-enabled T&L approach", label: "5 strategies · 3As · PAIR" },
-  { title: "Curriculum design and competencies", label: "3As · Learning design alignment" },
-  { title: "Facilitation with PAIR", label: "AI-supported learning · Scaffolding" },
-  { title: "Assessment in a GenAI-enabled context", label: "Policy requirements · Conditions · Evidence" },
-  { title: "AI tools and learning analytics", label: "Lecturer support · AI tutors · Learning data" },
-  { title: "Bring it together", label: "Four-area module review" },
+  { title: "Start here", label: "AI-enabled T&L context · Package overview" },
+  { title: "NP’s Approach to AI-Enabled T&L", label: "Five strategies · AI-ready graduates" },
+  { title: "Curriculum Design and Development", label: "3As · Competencies and learning outcomes" },
+  { title: "Facilitation of Learning", label: "PAIR · Scaffolding AI-supported learning" },
+  { title: "Assessment", label: "GenAI guidance · Conditions and evidence" },
+  { title: "Data and Tech-Enhanced T&L", label: "AI tools · Learning support and data" },
+  { title: "Bring It Together", label: "Four-area module review · Next step" },
 ];
 
 // Each part carries the accent colour of the T&L domain it covers, so the
