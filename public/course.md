@@ -56,6 +56,10 @@ As AI changes professional practice, review the competencies students should dev
 
 The 3As provide a simple lens for doing this.
 
+Concept visual — The 3As
+
+A simple lens for reviewing the competencies students need and aligning learning outcomes, activities and assessment.
+
 <!--three-as-visual-->
 
 The 3As describe the competencies students may need for AI-enabled professional practice. They are not categories of AI tools or levels of difficulty.
@@ -68,7 +72,7 @@ Use the 3As to consider which competencies are relevant to the discipline, modul
 
 **Augment** may be emphasised where students need to use AI effectively and responsibly as part of learning or professional practice.
 
-**Advance** may be emphasised where students are ready to explore new AI-enabled services, workflows or forms of practice.
+**Advance** may be emphasised where students are ready to explore new and innovative AI-enabled services, workflows or forms of practice.
 
 A module may focus on one or combine several of the 3As. They do not need to be addressed equally.
 
@@ -80,15 +84,21 @@ Reviewing a module through the 3As does not automatically mean it must be change
 
 For each statement, decide whether it is accurate or needs correction.
 
+Interactive quiz — Accurate or Needs correction? (5 statements)
+
 <!--three-as-misconception-check-->
 
 ## Aligning Competencies, Learning Activities and Assessment
 
-Once the intended competency is clear, ensure the rest of the module supports it.
+Once the required intended competency is clear, ensure the rest of the module supports its development.
+
+Concept visual — Alignment flow
+
+A competency is expressed through a learning outcome, developed through learning activities and demonstrated through assessment evidence.
 
 <!--alignment-flow-visual-->
 
-> Whether the focus is Anchor, Augment or Advance, the learning outcome, activities and assessment should work together so that students can develop and demonstrate the intended competency.
+> Whether the focus is Anchor, Augment or Advance, the learning outcome, activities and assessment should align so that students can develop and demonstrate the intended competency.
 
 ## Illustrative Applications
 
@@ -96,11 +106,11 @@ These broad examples show how the 3As might look across different forms of pract
 
 |                                          | **Anchor**                                                   | **Augment**                                                  | **Advance**                                                   |
 | ----------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------ |
-| **Technical, scientific or engineering**  | Apply **core reasoning** and safety-critical judgement.          | **Use AI to analyse**, test or improve a solution.               | Develop a **new AI-enabled workflow** or application.              |
-| **People-centred or service-based**       | Demonstrate **empathy**, ethics and professional judgement.      | **Use AI to support** planning or personalised support.          | Develop a **new AI-enabled service** or care approach.             |
-| **Business, creative or communication**   | Evaluate **evidence**, context and audience needs.               | **Use AI to generate**, compare or refine possibilities.         | Create a **new AI-enabled service**, experience or workflow.       |
+| **Technical, scientific or engineering**  | Apply **core conceptual reasoning** and safety-critical judgement. | **Use AI to analyse**, test or improve a solution.               | Develop a **new and innovative AI-enabled workflow** or application. |
+| **People-centred or service-based**       | Demonstrate **empathy**, ethics and sound professional judgement. | **Use AI to support** more efficient planning or more effective personalised support. | Develop a **new and innovative AI-enabled service** or care approach. |
+| **Business, creative or communication**   | Evaluate **evidence**, context and audience needs.               | **Use AI to generate**, compare or refine possibilities.         | Create a **new and innovative AI-enabled service**, experience or workflow. |
 
-> Lecturers should interpret the 3As according to their disciplinary expertise, intended learning outcomes and professional context.
+> Lecturers should apply the 3As according to their disciplinary expertise and current professional context, adjust intended learning outcomes if necessary, and then align learning activities and assessments accordingly.
 
 ## Apply the 3As to One Learning Outcome
 
@@ -114,9 +124,17 @@ Which of these may be relevant?
 
 - distinctly human capabilities;
 - productive use of AI;
-- new AI-enabled professional practice.
+- new, innovative AI-enabled professional practice.
 
 ### Step 2 · Check the Alignment
+
+Concept visual — Alignment check
+
+Learning outcome — Does it state the intended competency clearly?
+
+Learning activities — Do they help students develop and practise the intended competency?
+
+Assessment — Does it provide credible evidence of the intended competency and students' own contribution?
 
 <!--alignment-check-visual-->
 
