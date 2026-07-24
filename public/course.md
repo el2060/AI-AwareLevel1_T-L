@@ -22,49 +22,107 @@ By the end of this package, you will be able to describe how:
 
 ---
 
-# Part 1: NP’s Approach to AI-Enabled T&L
+# Part 1: NP’s Approach to AI-Enabled Teaching & Learning
 
-NP aims for every graduate to be an AI-ready professional who combines strong human qualities, deep domain expertise and effective use of AI in professional practice.
+## NP’s Approach to AI-Enabled T&L
 
-This is supported through three connected commitments:
+AI is changing what students need to learn, how they learn and how their learning is assessed.
 
-**AI-relevant curriculum**
+NP’s approach brings together curriculum, pedagogy, assessment, personalised learning and human capabilities to help prepare students for professional practice in an AI-enabled world.
 
-Learning remains aligned to changing disciplinary and professional practice.
+<!--strategy-map-->
 
-**AI-integrated pedagogy and authentic assessment**
+## Applying the Strategies to Our T&L Practice
 
-Students learn to work with AI while still demonstrating what they know, can do and judge.
+The next four sections apply NP’s strategies across four TLCF domains.
 
-**AI-enabled personalised learning**
+<!--module-preview-->
 
-AI extends practice, feedback and support, while lecturers remain responsible for the learning design.
+## Keep One of Your Modules in Mind
 
-## Keep One Module in Mind
-
-As you work through the package, consider:
-
-> What should students do themselves, what might AI support, and what safeguards are needed?
+As you work through the next four sections, keep one module you teach, lead or support in mind. Use it to connect the ideas to your own T&L practice.
 
 ---
 
-# Part 2: Curriculum Design and Development — What Should Students Learn?
+# Part 2: Curriculum Design and Development — What Competencies Do Students Need?
 
-AI may change what students need to learn and demonstrate, but strong disciplinary foundations and judgement remain essential.
+## Review Curriculum for AI-Enabled Professional Practice
 
-## Consider Your Module
+As AI changes professional practice, review the competencies students should develop and demonstrate, including:
 
-Choose one learning outcome.
+- which human and disciplinary capabilities remain essential;
+- how students should use AI productively;
+- what new AI-enabled practice may emerge.
 
-- What must students understand, judge or do independently of AI?
-- How should students use AI productively?
-- What new AI-enabled practice might be worth exploring?
+The 3As provide a simple lens for doing this.
 
-Then ask:
+<!--three-as-visual-->
 
-> Do the learning activities provide suitable practice, and does the assessment make the intended learning visible?
+The 3As describe the competencies students may need for AI-enabled professional practice. They are not categories of AI tools or levels of difficulty.
 
-At Level 1, the aim is to identify where further review may be needed.
+## Applying the 3As Across a Module
+
+Use the 3As to consider which competencies are relevant to the discipline, module level and intended learning outcomes.
+
+**Anchor** may be emphasised where human judgement, empathy, ethics, safety or disciplinary reasoning must be demonstrated.
+
+**Augment** may be emphasised where students need to use AI effectively and responsibly as part of learning or professional practice.
+
+**Advance** may be emphasised where students are ready to explore new AI-enabled services, workflows or forms of practice.
+
+A module may focus on one or combine several of the 3As. They do not need to be addressed equally.
+
+Reviewing a module through the 3As does not automatically mean it must be changed. The review may confirm that the current learning outcomes, activities and assessment remain appropriate.
+
+## Quick Check
+
+### Understanding the 3As
+
+For each statement, decide whether it is accurate or needs correction.
+
+<!--three-as-misconception-check-->
+
+## Aligning Competencies, Learning Activities and Assessment
+
+Once the intended competency is clear, ensure the rest of the module supports it.
+
+<!--alignment-flow-visual-->
+
+> Whether the focus is Anchor, Augment or Advance, the learning outcome, activities and assessment should work together so that students can develop and demonstrate the intended competency.
+
+## Illustrative Applications
+
+These broad examples show how the 3As might look across different forms of practice. They are not intended to prescribe outcomes for any discipline.
+
+|                                          | **Anchor**                                                   | **Augment**                                                  | **Advance**                                                   |
+| ----------------------------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------ |
+| **Technical, scientific or engineering**  | Apply **core reasoning** and safety-critical judgement.          | **Use AI to analyse**, test or improve a solution.               | Develop a **new AI-enabled workflow** or application.              |
+| **People-centred or service-based**       | Demonstrate **empathy**, ethics and professional judgement.      | **Use AI to support** planning or personalised support.          | Develop a **new AI-enabled service** or care approach.             |
+| **Business, creative or communication**   | Evaluate **evidence**, context and audience needs.               | **Use AI to generate**, compare or refine possibilities.         | Create a **new AI-enabled service**, experience or workflow.       |
+
+> Lecturers should interpret the 3As according to their disciplinary expertise, intended learning outcomes and professional context.
+
+## Apply the 3As to One Learning Outcome
+
+Choose one learning outcome from a module you teach, lead or support.
+
+### Step 1 · Review the Competency
+
+Does the learning outcome still reflect the competencies students need in current and emerging professional practice?
+
+Which of these may be relevant?
+
+- distinctly human capabilities;
+- productive use of AI;
+- new AI-enabled professional practice.
+
+### Step 2 · Check the Alignment
+
+<!--alignment-check-visual-->
+
+### Step 3 · Identify One Adjustment
+
+What is one adjustment that would improve the alignment between the learning outcome, activities and assessment?
 
 ## Supporting Context · Student AI Baseline Competencies
 
