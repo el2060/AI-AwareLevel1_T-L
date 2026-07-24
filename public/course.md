@@ -254,14 +254,6 @@ Examples of AI tools students may encounter or use in PAIR activities include th
 
 :::
 
-## Using PAIR in Assessment
-
-PAIR can be used in formative or summative activities.
-
-Where productive use of AI is part of the intended learning, assessment may consider how students frame the task, use AI, evaluate its outputs, apply disciplinary criteria and exercise judgement.
-
-> Marks should reflect the intended learning demonstrated—not simply the use of AI or completion of the PAIR stages.
-
 ## Apply PAIR to One Learning Activity
 
 Choose one activity from a module you teach, lead or support. Consider:
