@@ -580,6 +580,32 @@ function TandlUsesExplorer() {
   );
 }
 
+function ChooseToolsVisual() {
+  const items = [
+    { icon: Target, title: "Learning fit", detail: "Does the tool or data use support the intended learning or learner need?" },
+    { icon: CheckCircle2, title: "Suitability", detail: "Is it appropriate and accessible for the task and learners?" },
+    { icon: Eye, title: "Information and output", detail: "Is the information appropriate to use, and is the output accurate, relevant and suitable for learners?" },
+    { icon: ShieldCheck, title: "Oversight and impact", detail: "Who reviews the output, decides what action to take and checks whether it helped?" },
+  ];
+  return (
+    <figure className="concept-visual tool-fit-visual" aria-labelledby="tool-fit-title">
+      <figcaption>
+        <span>Before You Choose</span>
+        <strong id="tool-fit-title">Four questions to check before using a tool or learning data</strong>
+      </figcaption>
+      <div className="tool-fit-grid">
+        {items.map(({ icon: Icon, title, detail }) => (
+          <div className="tool-fit-card" key={title}>
+            <i><Icon size={20} strokeWidth={2} aria-hidden="true" /></i>
+            <strong>{title}</strong>
+            <p>{detail}</p>
+          </div>
+        ))}
+      </div>
+    </figure>
+  );
+}
+
 function ToolGuidance() {
   return (
     <section className="tool-information-guidance" aria-label="Using information in AI tools">
@@ -1171,6 +1197,7 @@ export default function Home() {
   const useCaseMarker = "<!--use-case-explorer-->";
   const tandlUsesMarker = "<!--tandl-uses-->";
   const toolGuidanceMarker = "<!--tool-guidance-->";
+  const toolFitMarker = "<!--tool-fit-visual-->";
   const pairInfographicMarker = "<!--pair-infographic-->";
   const moduleReviewMarker = "<!--module-review-->";
   const actionInfographicMarker = "<!--assessment-actions-infographic-->";
@@ -1192,6 +1219,7 @@ export default function Home() {
     [useCaseMarker]: <UseCaseExplorer />,
     [tandlUsesMarker]: <TandlUsesExplorer />,
     [toolGuidanceMarker]: <ToolGuidance />,
+    [toolFitMarker]: <ChooseToolsVisual />,
     [pairInfographicMarker]: <PairInfographic />,
     [actionInfographicMarker]: <AssessmentActionsInfographic />,
     [alignmentCheckMarker]: <AlignmentCheckVisual />,

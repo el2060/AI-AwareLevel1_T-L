@@ -480,7 +480,7 @@ AI tools and learning data can extend learning opportunities and help us respond
 
 <!--tandl-uses-->
 
-### Using Learning Data Responsibly
+:::note Using Learning Data Responsibly
 
 Learning analytics may identify patterns or indicate that a student could be at risk of disengagement or underachievement. Such indicators are probabilistic; they do NOT establish that a student will fail; whether or not and if so why a student is struggling; or determine what action should be taken.
 
@@ -492,6 +492,8 @@ Lecturers should:
 - use professional judgement to determine suitable support.
 
 Learning data should support timely intervention, not automatic decisions, labelling or public ranking of students.
+
+:::
 
 ### Design More Targeted Learning Support
 
@@ -509,21 +511,7 @@ Different needs may call for different tools. NP-provided tools may support lect
 
 Before using a tool or learning data, consider four questions:
 
-### Learning fit
-
-Does the tool or data use support the intended learning or learner need?
-
-### Suitability
-
-Is it appropriate and accessible for the task and learners?
-
-### Information and output
-
-Is the information appropriate to use, and is the output accurate, relevant and suitable for learners?
-
-### Oversight and impact
-
-Who reviews the output, decides what action to take and checks whether it helped?
+<!--tool-fit-visual-->
 
 ### Using Information in AI Tools
 
