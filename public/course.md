@@ -8,16 +8,17 @@ This package builds awareness of these considerations across four familiar T&L d
 
 ### What You Will Learn
 
-By the end of this module, you will be able to:
+By the end of this package, you will be able to describe how:
 
-- recognise how AI may affect learning outcomes, activities and assessment;
-- identify ways AI can support learning without replacing it;
-- explain NP’s key GenAI assessment requirements;
-- apply basic checks when using AI tools and learning data.
+- AI is changing the competencies students need and the implications for curriculum design, by reference to NP's 3As framework (Anchor, Augment and Advance);
+- you might adjust your learning outcomes and designs for the impact of AI in your discipline, domain, course and/or module;
+- AI can support learning and practice at industry-relevant intended levels of human thinking, judgement and/or performance;
+- you might redesign summative assessments to efficiently and validly assess the achievement of those adjusted learning outcomes; and
+- you could use AI tools and data purposefully and responsibly to improve students' learning experience and performance.
 
 ### Learning Time
 
-Set aside about **2 hours** to work through the package, consider the implications for a module you teach or support, complete the activities and take the completion quiz.
+**Up to 2 hours.** The package includes the learning content, activities and completion quiz. You may move through the sections at your own pace and spend more time on areas most relevant to your needs.
 
 ---
 

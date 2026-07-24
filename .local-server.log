@@ -1,0 +1,9 @@
+
+> site-creator-vinext-starter@0.1.0 dev
+> vinext dev --hostname 127.0.0.1
+
+
+  vinext dev  (Vite 8.0.13)
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m3000[22m/[39m
+  [32m➜[39m  [1mDebug[22m:   [2m[33mhttp://127.0.0.1:[1m3000[22m[2m/__debug[39m[22m
