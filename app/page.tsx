@@ -759,68 +759,42 @@ function HomeFlow() {
 }
 
 function StudentBaselineVisual() {
-  const items = [
-    {
-      icon: BookOpen,
-      title: "Learn About AI",
-      focus: "Understand AI and its capabilities",
-      detail: "Students should recognise different forms of AI, understand broadly what they can and cannot do, and be aware that AI outputs may be incomplete, biased or inaccurate.",
-      example: "Explain why a convincing AI-generated response may still be wrong. At NP: Learning About AI - for example through PAIR lessons - is necessary to develop or sharpen a 3As analysis.",
-    },
-    {
-      icon: Bot,
-      title: "Learn With AI",
-      focus: "Use AI to support thinking and problem-solving",
-      detail: "Students should be able to work with AI to break down problems, explore patterns, test explanations and identify gaps in their own reasoning—without handing over the thinking to AI.",
-      example: "Use AI to break a complex problem into parts, then examine and improve the proposed reasoning. At NP: examples of NP-supported Learn With AI tools include Lumi Tutor for PET modules, but students should also learn while at NP, from us their lecturers, to use any AI tool to help themselves learn when they need to.",
-    },
-    {
-      icon: Rocket,
-      title: "Learn to Use AI",
-      focus: "Apply AI purposefully and evaluate its outputs",
-      detail: "Students should select suitable tools and inputs, use AI to improve a task or outcome, and evaluate the output before relying on it.",
-      example: "Generate an initial output with AI, then check its accuracy, relevance, bias and suitability for the context. At NP: where the task or outcome is industry-relevant, a Learn to Use AI outcome is a 3As Augment outcome. Where the task or outcome creates new possibilities, workflows or forms of professional practice beyond established pre-AI job boundaries, it is a 3As Advance outcome.",
-    },
-    {
-      icon: Scale,
-      title: "Learn Beyond AI",
-      focus: "Exercise judgement and responsibility",
-      detail: "Students should consider the ethical, legal and societal implications of AI, retain human oversight and remain accountable for AI-supported decisions and outputs.",
-      example: "Decide whether an AI-supported recommendation is fair, appropriate and safe to act on. At NP: Learn Beyond AI translates into learning Anchor skills.",
-    },
+  const areas = [
+    { icon: BookOpen, title: "Learn About AI", detail: "Understand AI concepts, approaches, capabilities and limitations." },
+    { icon: Bot, title: "Learn With AI", detail: "Use AI to support thinking, problem-solving and learning without handing over the thinking." },
+    { icon: Rocket, title: "Learn to Use AI", detail: "Apply AI purposefully to create value and evaluate its outputs before use." },
+    { icon: Scale, title: "Learn Beyond AI", detail: "Consider the societal, ethical and legal implications of AI, and exercise human judgement and oversight." },
   ];
   return (
-    <details className="policy-detail student-baseline-accordion">
-      <summary>What should students progressively be able to understand and do with AI?</summary>
-      <div>
-        <div className="baseline-intro">
-          <p>The POLITE baseline identifies four broad areas.</p>
-        </div>
-        <ol className="baseline-map">
-          {items.map(({ icon: Icon, title, focus, detail, example }, index) => (
-            <li key={title}>
-              <span className="baseline-index" aria-hidden="true">0{index + 1}</span>
-              <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
-              <div className="baseline-copy">
-                <b>{title}</b>
-                <strong>{focus}</strong>
-                <p>{detail}</p>
-                <em><span>In practice</span>{example}</em>
-              </div>
-            </li>
-          ))}
-        </ol>
-        <section className="baseline-module-panel" aria-label="What this means for your module">
-          <h4>What This Means for Your Module</h4>
-          <p>You are expected to review your module for all four areas, although you may not need to adjust your module for all four areas after review. Consider:</p>
-          <ul className="course-list">
-            <li>which competencies are most relevant to your discipline and module;</li>
-            <li>where students will progressively develop them across the course;</li>
-            <li>how students’ own reasoning, judgement and contribution must be made visible.</li>
-          </ul>
-        </section>
+    <figure className="concept-visual student-baseline-visual" aria-labelledby="student-baseline-title">
+      <figcaption>
+        <span>Student AI Baseline</span>
+        <strong id="student-baseline-title">The sector student AI baseline provides a shared reference for the foundational AI competencies students should progressively develop across their course of study.</strong>
+      </figcaption>
+      <p>It covers four broad areas:</p>
+      <div className="lens-strip baseline-strip">
+        {areas.map(({ icon: Icon, title, detail }) => (
+          <section key={title}>
+            <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
+            <b>{title}</b>
+            <small>{detail}</small>
+          </section>
+        ))}
       </div>
-    </details>
+      <p>These competencies are developed progressively across the student learning journey. Individual modules should consider which are most relevant to their discipline, level and intended learning outcomes.</p>
+      <p><a href="https://nplms.polite.edu.sg/d2l/le/lessons/998763/topics/14624182" target="_blank" rel="noopener noreferrer">View the full sector AI baseline competencies and learning outcomes</a></p>
+      <div className="baseline-module-panel" aria-label="What this means for your module">
+        <h4>What This Means for Your Module</h4>
+        <p>Use the baseline as a reference when applying the 3As:</p>
+        <ul className="course-list">
+          <li>consider which student AI competencies are relevant to your module;</li>
+          <li>identify where they are developed across the course;</li>
+          <li>review whether the learning outcomes, activities or assessment need adjustment;</li>
+          <li>make students’ reasoning, judgement and contribution visible where relevant.</li>
+        </ul>
+        <p>Considering the baseline does not mean every module must address all four areas or be redesigned.</p>
+      </div>
+    </figure>
   );
 }
 
