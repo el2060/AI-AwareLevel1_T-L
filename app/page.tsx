@@ -358,7 +358,7 @@ function SupportReplaceSorter() {
     scenarios={[
       { id: "compare", context: "Students ask AI for a different worked example of a concept, then attempt the practice set on their own.", answer: "Supports the intended learning", feedback: "AI provides an additional explanation, but students still apply the concept themselves in the practice set." },
       { id: "submit", context: "A student pastes the assignment brief into GenAI and submits a lightly edited version of the response.", answer: "Replaces the intended learning", feedback: "AI has produced the response that the student was expected to develop. Light editing does not demonstrate the intended analysis, judgement or creation." },
-      { id: "critique", context: "Students generate three AI draft answers, then critique and rank them against the success criteria.", answer: "Supports the intended learning", feedback: "Generating material for critique keeps the evaluating and judging with students." },
+      { id: "critique", context: "Students generate three AI draft answers, then critique and rank them against the success criteria.", answer: "Supports the intended learning", feedback: "Generating material for critique keeps evaluation and judgment with students." },
       { id: "reflection", context: "A student asks AI to write their reflection on what they learned from the project.", answer: "Replaces the intended learning", feedback: "The reflection is intended to make the student’s own learning and judgement visible. Asking AI to write it replaces that process." },
     ]}
   />;
@@ -765,28 +765,28 @@ function StudentBaselineVisual() {
       title: "Learn About AI",
       focus: "Understand AI and its capabilities",
       detail: "Students should recognise different forms of AI, understand broadly what they can and cannot do, and be aware that AI outputs may be incomplete, biased or inaccurate.",
-      example: "Explain why a convincing AI-generated response may still be wrong.",
+      example: "Explain why a convincing AI-generated response may still be wrong. At NP: Learning About AI - for example through PAIR lessons - is necessary to develop or sharpen a 3As analysis.",
     },
     {
       icon: Bot,
       title: "Learn With AI",
       focus: "Use AI to support thinking and problem-solving",
       detail: "Students should be able to work with AI to break down problems, explore patterns, test explanations and identify gaps in their own reasoning—without handing over the thinking to AI.",
-      example: "Use AI to break a complex problem into parts, then examine and improve the proposed reasoning.",
+      example: "Use AI to break a complex problem into parts, then examine and improve the proposed reasoning. At NP: examples of NP-supported Learn With AI tools include Lumi Tutor for PET modules, but students should also learn while at NP, from us their lecturers, to use any AI tool to help themselves learn when they need to.",
     },
     {
       icon: Rocket,
       title: "Learn to Use AI",
       focus: "Apply AI purposefully and evaluate its outputs",
       detail: "Students should select suitable tools and inputs, use AI to improve a task or outcome, and evaluate the output before relying on it.",
-      example: "Generate an initial output with AI, then check its accuracy, relevance, bias and suitability for the context.",
+      example: "Generate an initial output with AI, then check its accuracy, relevance, bias and suitability for the context. At NP: where the task or outcome is industry-relevant, a Learn to Use AI outcome is a 3As Augment outcome. Where the task or outcome creates new possibilities, workflows or forms of professional practice beyond established pre-AI job boundaries, it is a 3As Advance outcome.",
     },
     {
       icon: Scale,
       title: "Learn Beyond AI",
       focus: "Exercise judgement and responsibility",
       detail: "Students should consider the ethical, legal and societal implications of AI, retain human oversight and remain accountable for AI-supported decisions and outputs.",
-      example: "Decide whether an AI-supported recommendation is fair, appropriate and safe to act on.",
+      example: "Decide whether an AI-supported recommendation is fair, appropriate and safe to act on. At NP: Learn Beyond AI translates into learning Anchor skills.",
     },
   ];
   return (
@@ -812,13 +812,12 @@ function StudentBaselineVisual() {
         </ol>
         <section className="baseline-module-panel" aria-label="What this means for your module">
           <h4>What This Means for Your Module</h4>
-          <p>You are not expected to teach or assess all four areas in every module. Consider:</p>
+          <p>You are expected to review your module for all four areas, although you may not need to adjust your module for all four areas after review. Consider:</p>
           <ul className="course-list">
             <li>which competencies are most relevant to your discipline and module;</li>
             <li>where students will progressively develop them across the course;</li>
-            <li>how students’ own reasoning, judgement and contribution will remain visible.</li>
+            <li>how students’ own reasoning, judgement and contribution must be made visible.</li>
           </ul>
-          <blockquote>The baseline describes the foundational AI competencies students should progressively develop. The 3As help you interpret what these mean for disciplinary learning and AI-enabled professional practice.</blockquote>
         </section>
       </div>
     </details>

@@ -201,7 +201,7 @@ You design the conditions that enable students to use PAIR in ways that support 
 
 The degree of student choice should reflect their readiness and the intended learning.
 
-Less experienced students may need a defined task, suggested tools and guided reflection. More experienced students may take greater responsibility for framing the task, selecting tools and shaping their interaction with AI.
+Less experienced students may need a more clearly-defined task, suggested tools and guided reflections. More experienced students may take greater responsibility for framing the task, selecting tools and shaping their interactions with AI.
 
 ## Check That AI Supports the Intended Learning
 
@@ -217,18 +217,18 @@ AI can support learning when students use it to:
 
 AI may undermine learning when it completes the thinking, judgement, creation or performance students are meant to develop.
 
-> Check whether students are still practising the intended capability.
+> Check whether students are still developing or practising the intended capability.
 
 ## When AI Has Bypassed the Learning
 
-Where students cannot demonstrate the intended understanding after using AI to complete an activity, address the learning gap directly.
+Where students cannot demonstrate the intended understanding after using AI to complete an activity, address the learning gap directly (“reverse-engineer” the AI output).
 
 A follow-up activity can require students to:
 
 - identify what they did not understand or verify;
 - examine weaknesses in the AI-supported work;
 - explain the relevant concepts; and
-- apply them to a new problem.
+- apply what they appear to have learnt from the completed activity to a new problem.
 
 For example, after an AI-completed OAL activity, an IPL lesson could require students to identify gaps and apply the concepts to a new situation.
 
@@ -241,6 +241,18 @@ Interactive quiz — sort each scenario (4 statements).
 For each situation, decide whether AI supports students in developing the intended capability or does that work for them.
 
 <!--support-or-replace-->
+
+:::note PAIR is a Teaching and Learning Aid to Develop AI Literacy
+
+PAIR activities are useful hands-on activities for students to learn, in the context of the module / discipline / domain, basic and very specific AI literacy skills, such as verifying important AI claims against primary, official and trusted sources before relying on them. For example, for emerging news and current affairs, and specialised legal, regulatory or technical information, students may not learn until their PAIR lesson that GenAI can convincingly produce WRONG answers based on popular or prominent sources but miss more accurate niche and/or official sources. Students may also misunderstand that AI “cutoff dates” do NOT block Internet-connected AI tools from retrieving information after the cutoff date. The concept of a cutoff date refers to the data used to *train* the tool.
+
+:::
+
+:::note AI Tools and Student Guidance on GenAI Use
+
+Examples of AI tools students may encounter or use in PAIR activities include the tools referenced in the student guidance which you can [read here](https://sway.cloud.microsoft/qLxKSTW1Ody963Po?ref=Link). They include ChatGPT, Github Copilot and Gamma.
+
+:::
 
 ## Using PAIR in Assessment
 
