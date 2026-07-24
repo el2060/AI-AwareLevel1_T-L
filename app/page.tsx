@@ -776,7 +776,7 @@ function StudentBaselineVisual() {
     {
       icon: Rocket,
       title: "Learn to Use AI",
-      focus: "Apply AI purposefully and evaluate the result",
+      focus: "Apply AI purposefully and evaluate its outputs",
       detail: "Students should select suitable tools and inputs, use AI to improve a task or outcome, and evaluate the output before relying on it.",
       example: "Generate an initial output with AI, then check its accuracy, relevance, bias and suitability for the context.",
     },
@@ -813,11 +813,11 @@ function StudentBaselineVisual() {
           <h4>What This Means for Your Module</h4>
           <p>You are not expected to teach or assess all four areas in every module. Consider:</p>
           <ul className="course-list">
-            <li>which competencies are relevant to your discipline and module;</li>
+            <li>which competencies are most relevant to your discipline and module;</li>
             <li>where students will progressively develop them across the course;</li>
             <li>how students’ own reasoning, judgement and contribution will remain visible.</li>
           </ul>
-          <blockquote>The baseline describes the foundational AI competencies students should develop. The 3As help you interpret what these mean for disciplinary learning and AI-enabled professional practice.</blockquote>
+          <blockquote>The baseline describes the foundational AI competencies students should progressively develop. The 3As help you interpret what these mean for disciplinary learning and AI-enabled professional practice.</blockquote>
         </section>
       </div>
     </details>

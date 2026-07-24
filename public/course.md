@@ -66,11 +66,15 @@ Then ask:
 
 At Level 1, the aim is to identify where further review may be needed.
 
+## Supporting Context · Student AI Baseline Competencies
+
+The sector student AI baseline provides a shared reference for the foundational AI competencies students should progressively develop.
+
+<!--student-baseline-visual-->
+
 ## Key Takeaway
 
-Use the 3As to review what students must demonstrate independently, how they should use AI productively and what new professional practice AI may enable.
-
-Then check that outcomes, activities and assessment remain aligned.
+Use the 3As to identify the competencies students need, then align the learning outcomes, activities and assessment so students can develop and demonstrate them.
 
 ---
 
