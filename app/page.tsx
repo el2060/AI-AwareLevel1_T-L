@@ -385,15 +385,15 @@ function GenAiConditionsSorter() {
   return <ScenarioSorter
     eyebrow="Check the conditions"
     title="Allowed, Restricted or Prohibited?"
-    prompt="Decide how each situation sits under NP's GenAI policy for summative assessment."
+    prompt="Decide how each situation sits under NP's GenAI guidance (policy from AY2027) for summative assessment."
     options={["Allowed", "Restricted", "Prohibited"]}
     countNoun="checked"
     trio
     scenarios={[
       { id: "default", context: "The brief states nothing about GenAI, and a student uses it to brainstorm approaches for a take-home assignment.", answer: "Allowed", feedback: "GenAI use is allowed by default in summative assessment unless it is explicitly restricted or prohibited. The student must still cite and declare the use." },
-      { id: "live", context: "Students may use GenAI to prepare, but must complete the live presentation and question-and-answer session without it.", answer: "Restricted", feedback: "This is a restricted-use condition: GenAI is allowed for preparation but prohibited during the live component. State the condition clearly for each component." },
-      { id: "declared", context: "A student submits a fully AI-generated report and declares the use on the cover page.", answer: "Prohibited", feedback: "Submitting purely AI-generated content as one's own is always prohibited — declaring prohibited use does not make it acceptable." },
-      { id: "images", context: "Students may include GenAI-generated images provided they frame the task, select and refine the output, and explain their choices.", answer: "Restricted", feedback: "This is a restricted-use condition: GenAI content is permitted provided students shape, refine and explain it." },
+      { id: "live", context: "Students may use GenAI to prepare, but must complete the live presentation and question-and-answer session without it.", answer: "Restricted", feedback: "This is a restricted-use condition: GenAI is allowed for preparation but prohibited during the live component. Is such a restriction necessary, effective and aligned to 3As outcomes?" },
+      { id: "declared", context: "A student submits a fully AI-generated report and declares the use on the cover page.", answer: "Allowed", feedback: "Submitting purely AI-generated content as one's own is always prohibited — but declaring AI use makes it honest - it is not “as one's own”. If you wish to punish lack of originality, do so in the grading rubric for the report." },
+      { id: "images", context: "Students must produce GenAI-generated images but must also frame the task, select and refine the output, and explain their choices.", answer: "Allowed", feedback: "GenAI is permitted provided students show they are masters of the tool. This is an example of assessment of an Augment learning outcome." },
     ]}
   />;
 }
@@ -542,7 +542,7 @@ function TandlUsesExplorer() {
       label: "Learning support",
       icon: Lightbulb,
       title: "Extend learning support",
-      detail: "AI-enabled tutors and learning assistants can extend opportunities for explanation, practice and feedback beyond class time. This may include Brightspace Lumi Tutor, course-specific tutors or student AI tools used within clear conditions.",
+      detail: "AI-enabled tutors and learning assistants can extend opportunities for explanation, practice and feedback during and beyond class time. This may include Brightspace Lumi Tutor, course-specific tutors or students’ AI tools used appropriately.",
       focus: "Set the intended learning, source materials, boundaries and role of the support within the module.",
     },
     {
@@ -585,8 +585,8 @@ function ToolGuidance() {
     <section className="tool-information-guidance" aria-label="Using information in AI tools">
       <p className="tool-information-intro">The information you may enter depends on the tool being used.</p>
       <div className="tool-information-list">
-        <div><strong>M365 Copilot</strong><span>Up to <b>Official (Closed) – Restricted</b> within NP’s Microsoft 365 environment.</span></div>
-        <div><strong>Pair Chat <small>pair.gov.sg</small></strong><span>Up to <b>Official (Closed) – Sensitive Normal</b>.</span></div>
+        <div><strong>M365 Copilot</strong><span>Up to <b>Official (Closed) – Sensitive Normal</b> within NP’s Microsoft 365 environment.</span></div>
+        <div><strong>Pair Chat <small>pair.gov.sg</small></strong><span>Up to <b>Restricted – Sensitive Normal</b>.</span></div>
         <div><strong>Public or personal-account AI tools</strong><span>Do not enter personal, sensitive, confidential or proprietary information.</span></div>
       </div>
       <p className="tool-information-closing">Check that the tool is suitable for the information involved, and review its outputs before use.</p>
@@ -943,10 +943,10 @@ function PairInfographic() {
 
 function AssessmentActionsInfographic() {
   const steps = [
-    { number: "1", title: "Start With the Learning Outcome", detail: "Identify the capability being assessed and what students must still demonstrate themselves." },
-    { number: "2", title: "State the GenAI Conditions Clearly", detail: "Clarify whether GenAI use is allowed, restricted or prohibited for each component." },
-    { number: "3", title: "Make Learning and Contribution Visible", detail: "State what students must do themselves and what evidence is required." },
-    { number: "4", title: "Prepare Students and Require Declaration", detail: "Explain the conditions early, provide suitable formative preparation and require the GenAI Use Declaration." },
+    { number: "1", title: "Start With the Learning Outcome", detail: "Describe the capability being assessed and what students must still demonstrate themselves." },
+    { number: "2", title: "State the GenAI Conditions Clearly", detail: "State whether GenAI use is restricted or prohibited for each component. If no GenAI use conditions are stipulated, GenAI is allowed - it is NP's default position - you would still need to inform students of the always-prohibited list of GenAI uses." },
+    { number: "3", title: "Make Students’ Contribution Visible", detail: "Describe how students will be expected to show you they have achieved the learning outcome." },
+    { number: "4", title: "Prepare Students and Require Declaration", detail: "Explain your conditions and other details to students early, provide suitable formative preparation and remind students if you are assessing an Augment or Advance outcome that GenAI use declarations are necessary." },
   ];
   return (
     <figure className="concept-visual action-infographic" aria-labelledby="action-title">

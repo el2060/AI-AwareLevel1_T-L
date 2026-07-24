@@ -267,23 +267,19 @@ PAIR provides an adaptable structure for helping students clarify the task, sele
 
 ---
 
-# Part 4: Assessment — How Do We Keep Learning Authentic and Credible?
+# Part 4: Assessment — How Do We Assess Learning in an AI-enabled World?
 
 ## Applying an AI Lens to Assessment
 
-In a GenAI-enabled context, assessment should make clear:
-
-- what students must demonstrate;
-- how AI may be used; and
-- what evidence will make the intended learning and students’ own contribution visible.
+In a GenAI-enabled context, assessment should validly and reliably measure students’ Anchor, Augment and/or Advance competencies.
 
 ## Two Assessment Priorities
 
-### Apply NP's GenAI Policy Requirements
+### Apply NP's GenAI-in-Assessment Guidance (Policy from AY2027)
 
-GenAI use is allowed by default in summative assessment unless it is explicitly restricted or prohibited. Lecturers must state any conditions clearly, and students must cite and declare their use.
+GenAI is allowed by default in summative assessments unless it is explicitly restricted or prohibited. Lecturers must describe their specific restrictions or prohibitions clearly, students must always declare their GenAI use, and in all cases students must be informed of the list of always-prohibited uses - in effect, students must be informed that they cannot use GenAI to cheat.
 
-### Protect the Intended Learning
+### Assess AI-adjusted Learning Outcomes
 
 Use the 3As to clarify:
 
@@ -310,11 +306,10 @@ This section summarises the main requirements. Refer to the [Gen AI in Summative
 Identify:
 
 - the capability the assessment is intended to measure;
-- what students must demonstrate themselves;
-- where AI use reflects authentic professional practice;
-- what evidence will make the intended learning and students’ own contribution visible.
+- what students must demonstrate themselves; and
+- where AI use reflects authentic professional practice.
 
-> If AI can complete an assessment to a passing standard without the intended competency being demonstrated, first review the competency and learning outcome using the 3As. Then review the learning activities and assessment so that students must demonstrate the intended human, disciplinary or AI-augmented capability.
+> You MUST amend your assessment design IF AI can complete that assessment to at least a passing standard and you cannot be certain how your students contributed to the completion of that assessment.
 
 ### 2. State the GenAI Conditions Clearly
 
@@ -324,25 +319,30 @@ For each assessment component, make clear whether GenAI use is:
 - restricted, subject to stated conditions; or
 - prohibited.
 
-This applies to all summative tasks that contribute to the module grade, including take-home assignments.
+This applies to all summative tasks that contribute to the module grade.
 
-Different conditions may apply to different components of the same assessment. For example, students may be allowed to use AI for research, ideation, slide structuring or visual development, but prohibited from using it during a live presentation or question-and-answer session. These conditions should be stated clearly, and students should declare the AI use that was permitted.
+:::note Did You Realise? In an AI-Pervasive World
 
-A restricted-use condition might:
+1. You MUST amend your assessment design IF AI can complete that assessment to at least a passing standard AND you cannot be certain how your students contributed to the completion of that assessment.
+2. A take-home assignment's final product does NOT usually provide sufficient evidence of the achievement of learning outcomes unless it is accompanied by a live-check element or elements. Consider interactive oral assessments, e-tests and other types of question-and-answer designs.
+3. If students' AI use can be directly assessed through e-tests, presentations, demonstrations and question-and-answer sessions, GenAI-use declarations can be brief. Generally, you should not need to analyse voluminous AI conversation and draft-work histories. You may not even need lengthy AI-use reflections unless you intend to rely on those for subsequent live interviews with students.
+4. AI rapidly evolves, so any AI-use restrictions you impose may become outdated, insufficient or irrelevant quickly.
+5. Many types of AI-use restrictions are impractical to enforce because lecturers do not supervise students 24/7; or, they are by themselves unnecessary to develop the competencies you wish students to develop.
 
-- allow GenAI for research, ideation or preparation, but prohibit its use during a live presentation, test or question-and-answer session; or
-- allow GenAI-generated content, such as images, provided students frame the task, select and refine the output, and explain their choices.
+**Example:**
+
+Even if you restrict AI use to preparation and prohibit AI for final presentations, students can use AI to prepare all the slides they will present including their presentation speeches (scripts). They can then just read off their own slides/scripts. How about designing the presentation's rules and marking rubric to reward the kinds of behaviour you desire? Impose restrictions on slide design so that students cannot read off AI-prepared slides; award most of the presentation grade for good answers to your higher-order-thinking questions following the presentation; grade students who do NOT read off scripts better than those who do; and so on.
+
+:::
 
 :::warning Always-Prohibited Uses
 
-Students must not:
+Always make clear to students that they must not:
 
 - submit purely AI-generated content as their own;
 - disguise AI-generated content as original work;
 - rely solely on GenAI for insights or reflections;
 - use GenAI to simulate an interview, observation or interaction that must involve a real person.
-
-Declaring prohibited use does not make it acceptable.
 
 :::
 
@@ -358,15 +358,11 @@ State:
 - what students must do themselves;
 - what evidence they must retain or provide.
 
-For example:
-
-> You may use GenAI to brainstorm approaches and obtain feedback on an early draft. You remain responsible for the final analysis, selection of evidence and recommendation. Check AI-generated claims, cite and declare your use, and retain any evidence required by the assessment brief.
-
-Evidence may include drafts, checkpoints, selected interaction records, demonstrations, explanations or questioning. A complete AI chat history should not be required by default.
+Evidence of students’ learning contributions may include drafts and selected interaction records, and would always include, at some point in the assessment process, “live” in-person demonstrations, explanations and answers to questions. Generally it is very inefficient and possibly also ineffective to analyse AI conversation histories for evidence of students’ learning, so it should not be necessary to require complete AI chat histories by default. Similarly for AI-use reflections, unless they are used for live interviews on AI use.
 
 :::details Assessing Augment Capabilities
 
-Where students are expected to use AI to augment their work, the assessment should make their use of AI and their own judgement visible.
+Where students are expected to use AI to Augment their work, the assessment should make their use of AI and their own judgement visible.
 
 Students may be required to:
 
@@ -378,22 +374,22 @@ Students may be required to:
 
 Evidence may be gathered through the final output, selected process evidence, demonstrations, presentations or question-and-answer sessions.
 
-For example, students using an AI image generator in a design project could explain how they framed the task, selected and refined outputs, addressed design requirements and made the final creative decisions.
+For example, students using an AI image generator in a design project could be directly observed during the process and then, at the final presentation, could explain how they framed the task, selected and refined outputs, addressed design requirements and made the final creative decisions in response to assessors’ questions.
 
 :::
 
 ### 4. Prepare Students and Require Declaration
 
-Explain the conditions early and provide suitable formative preparation, checkpoints or mock runs where helpful.
+Explain your AI use conditions early and provide suitable formative preparation, checkpoints or mock runs where helpful.
 
-All relevant submission cover pages must include the required GenAI Use Declaration. Any additional evidence should be proportionate to the assessment and necessary to establish the intended learning or students’ own contribution. A complete interaction log or reflective essay should not be required by default.
+All relevant project and assignment submission cover pages must include an appropriate GenAI Use Declaration (see Appendix 2B of the GenAI-in-Assessment guidance). Any evidence should be proportionate and necessary to establish the intended learning outcome, especially students’ own contributions. For reasons stated above, a complete AI interaction log or reflective essay is not generally evidence that you should require by default.
 
 Module leaders are responsible for:
 
 - setting and communicating the conditions;
 - ensuring declarations are completed;
-- preparing students for the expected use or non-use of AI;
-- designing assessments that provide credible evidence of learning.
+- preparing students for the expected use or non-use of AI; and
+- designing assessments that provide valid and reliable evidence of achievement of work-ready learning outcomes in an AI-pervasive world.
 
 <!--genai-conditions-check-->
 
@@ -409,14 +405,14 @@ Staff must not use GenAI to determine grades independently. Any approved use as 
 
 AI-detection results, changes in writing style or unexpectedly sophisticated language may raise concerns, but they are not sufficient proof of misconduct.
 
-Where misuse is suspected, follow the process in the Gen AI in Summative Assessment Policy & Guidance:
+Where misuse is suspected, follow the process in the Gen AI in Summative Assessment Guidance (Policy from AY2027):
 
 - review the submission and the student’s GenAI declaration;
-- interview the student and ask them to explain the content and how the work was produced;
+- interview the student to learn more about how the work was produced;
 - request available evidence of the development or writing process; and
 - check for inconsistencies between the student’s declared and actual GenAI use.
 
-Do not assign a penalty or refer a case solely on the basis of an AI-detection result or personal impression.
+Do not assign a penalty or refer a case solely on the basis of an AI-detection result or personal impression, without prior investigation.
 
 :::
 
@@ -436,15 +432,15 @@ Review the assessment when:
 
 Consider one assessment:
 
-> What capability must students demonstrate, how may GenAI be used, and what evidence will make the intended learning and students’ own contribution visible?
+> What capability must students demonstrate, how may GenAI be used, and what evidence will make students’ own contributions visible?
 
 ## Key Takeaway
 
-Begin with the learning outcome and use the 3As to clarify the intended capability. State how GenAI may be used and design proportionate evidence that makes students’ learning and contribution visible.
+Begin with the learning outcome and use the 3As to clarify what you should assess. State how GenAI may be used and design to validly and reliably collect the evidence necessary to make students’ own contributions visible.
 
 ---
 
-# Part 5: Data and Tech-Enhanced T&L — Supporting Learning with AI Tools and Learning Data
+# Part 5: Data and Tech-Enhanced T&L — Supporting Learning with AI Tools and Data
 
 ## Start with a T&L Need
 
@@ -458,12 +454,12 @@ AI tools and learning data can extend learning opportunities and help us respond
 
 ### Using Learning Data Responsibly
 
-Learning analytics may identify patterns or indicate that a student could be at risk of disengagement or underachievement. Such indicators are probabilistic; they do not establish why a student is struggling or determine what action should be taken.
+Learning analytics may identify patterns or indicate that a student could be at risk of disengagement or underachievement. Such indicators are probabilistic; they do NOT establish that a student will fail; whether or not and if so why a student is struggling; or determine what action should be taken.
 
 Lecturers should:
 
 - consider the quality and relevance of the data;
-- speak with the student where appropriate;
+- speak with the student when appropriate;
 - consider other contextual information; and
 - use professional judgement to determine suitable support.
 
