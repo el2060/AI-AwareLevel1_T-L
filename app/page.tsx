@@ -634,17 +634,17 @@ function OpeningVisual() {
     },
     {
       title: "Facilitation of Learning",
-      detail: "How AI can support learning and practice without replacing the intended thinking, judgement or performance.",
+      detail: "How AI can support the development of Anchor, Augment and Advance (3As) competencies in your lessons.",
       icon: Lightbulb,
     },
     {
       title: "Assessment",
-      detail: "How assessment can provide authentic and credible evidence of learning and students’ own contribution.",
+      detail: "How assessment can provide valid and reliable evidence of students’ achievement of 3As-adjusted learning outcomes.",
       icon: ClipboardCheck,
     },
     {
       title: "Data and Tech-Enhanced T&L",
-      detail: "How AI tools and learning data can enhance learning purposefully and responsibly.",
+      detail: "How AI tools and data can be used purposefully and responsibly to enhance learning experiences and performances.",
       icon: ShieldCheck,
     },
   ];
@@ -670,10 +670,11 @@ function OpeningVisual() {
 
 function HomeFlow() {
   const outcomes = [
-    "recognise how AI is changing the competencies students need and the implications for curriculum design",
-    "explain how AI can support learning and practice without replacing the intended thinking, judgement or performance",
-    "apply NP's GenAI policy requirements for summative assessment to clarify conditions and make the intended learning and students' own contribution visible",
-    "identify appropriate uses of AI tools and learning data and apply key considerations for purposeful and responsible use",
+    "AI is changing the competencies students need and the implications for curriculum design, by reference to NP's 3As framework (Anchor, Augment and Advance)",
+    "you might adjust your learning outcomes and designs for the impact of AI in your discipline, domain, course and/or module",
+    "AI can support learning and practice without replacing the intended thinking, judgement or performance",
+    "you might redesign your summative assessments to efficiently and validly assess the achievement of those adjusted learning outcomes",
+    "you could use AI tools and data purposefully and responsibly to improve students' learning experience and performance",
   ];
 
   return (
@@ -731,7 +732,7 @@ function HomeFlow() {
         <article className="home-outcome-card">
           <header>
             <span>What You Will Learn</span>
-            <p>By the end of this package, you will be able to:</p>
+            <p>By the end of this package, you will be able to describe how:</p>
           </header>
           <ol>
             {outcomes.map((outcome) => (
@@ -749,7 +750,7 @@ function HomeFlow() {
           <p>
             The package includes the learning content, activities and
             completion quiz. You may move through the sections at your own pace
-            and spend more time on areas most relevant to your role or module.
+            and spend more time on areas most relevant to your needs.
           </p>
         </aside>
       </div>
