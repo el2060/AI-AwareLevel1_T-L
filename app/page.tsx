@@ -307,7 +307,7 @@ const sectionBridges = [
   "See how these four areas connect to NP’s direction for AI-enabled T&L.",
   "Begin with curriculum: what competencies should our students develop and demonstrate as professional practice changes?",
   "Explore PAIR, a simple framework for helping students use AI purposefully, critically and responsibly in their learning.",
-  "Consider how clear GenAI conditions and assessment design can provide authentic and credible evidence of learning and students' own contribution.",
+  "Consider how clear GenAI conditions and assessment design can provide valid and reliable evidence of learning and students' own contribution.",
   "Explore how AI tools and learning data can be used purposefully to support learning, while protecting information, verifying outputs and retaining human oversight.",
   "Bring the four areas together by reviewing one module you teach, lead or support.",
 ];
@@ -446,7 +446,7 @@ function StrategyMap() {
   const items = [
     { name: "Embed AI-Integrated Pedagogy · PAIR", question: "How can we help students learn and work with AI purposefully, critically and responsibly?", icon: Lightbulb, covers: "Part 3 · Facilitation of Learning", coversTone: 3 },
     { name: "Transform the Curriculum · 3As", question: "What competencies should our students develop and demonstrate as professional practice changes?", icon: BookOpen, covers: "Part 2 · Curriculum Design and Development", coversTone: 2 },
-    { name: "Redesign Assessment", question: "How can we design assessment that provides authentic and credible evidence of learning in an AI-enabled context?", icon: ClipboardCheck, covers: "Part 4 · Assessment", coversTone: 4 },
+    { name: "Redesign Assessment", question: "How can we design assessment that provides valid and reliable evidence of learning in an AI-enabled context?", icon: ClipboardCheck, covers: "Part 4 · Assessment", coversTone: 4 },
     { name: "Enable Personalised Learning", question: "How can AI extend opportunities for practice, feedback and coaching in our modules?", icon: Bot, covers: "Part 5 · Data and Tech-Enhanced T&L", coversTone: 5 },
     { name: "Strengthen Human Skills and Resilience", question: "How can we strengthen the human qualities students need in an AI-enabled world?", icon: Users },
   ];
@@ -1095,7 +1095,7 @@ function ModulePreviewVisual() {
   const areas = [
     { icon: BookOpen, title: "Curriculum Design and Development", detail: "Use the 3As to review the competencies students need as professional practice changes." },
     { icon: Lightbulb, title: "Facilitation of Learning", detail: "Use PAIR and personalised learning approaches to help students learn and work with AI purposefully." },
-    { icon: ClipboardCheck, title: "Assessment", detail: "Apply NP's GenAI assessment requirements and design approaches to provide authentic and credible evidence of learning and students' own contribution." },
+    { icon: ClipboardCheck, title: "Assessment", detail: "Apply NP's GenAI assessment requirements and design approaches to provide valid and reliable evidence of learning and students' own contribution." },
     { icon: ShieldCheck, title: "Data and Tech-Enhanced T&L", detail: "Use suitable AI tools and learning data to support learning and disciplinary practice, with appropriate checks and human oversight." },
   ];
   return (
