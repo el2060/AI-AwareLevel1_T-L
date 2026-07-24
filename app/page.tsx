@@ -825,12 +825,12 @@ function StudentBaselineVisual() {
         </ol>
         <section className="baseline-module-panel">
           <h4>What This Means for Your Module</h4>
-          <p>You are expected to review your module for all four areas, although you may not need to adjust your module for all four areas after review.</p>
+          <p>Consider the four areas when reviewing your module, while recognising that not all will be equally relevant or require adjustment.</p>
           <p>Consider:</p>
           <ul className="course-list">
             <li>which competencies are most relevant to your discipline and module;</li>
-            <li>where students will progressively develop them across the course;</li>
-            <li>how students’ own reasoning, judgement and contribution must be made visible.</li>
+            <li>where students progressively develop them across the course;</li>
+            <li>how students’ reasoning, judgement and contribution should be made visible.</li>
           </ul>
         </section>
       </div>

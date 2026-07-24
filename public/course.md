@@ -140,6 +140,34 @@ The sector student AI baseline provides a shared reference for the foundational 
 
 <!--student-baseline-visual-->
 
+### How the Student Baseline Relates to the 3As
+
+The two frameworks serve different purposes:
+
+- The student AI baseline describes foundational AI competencies students should progressively develop.
+- The 3As help lecturers review the disciplinary and professional competencies required in their modules.
+
+They are related, but they do not map neatly one-to-one.
+
+**Learn About AI** — Helps students understand AI capabilities and limitations. This supports informed decisions about what should remain distinctly human, where AI may augment work and where new AI-enabled practice may emerge.
+
+**Learn With AI** — Focuses on using AI to support learning and thinking. This may be developed through PAIR activities or tools such as Lumi Tutor, but using an AI learning assistant is not itself an Augment outcome.
+
+**Learn to Use AI** — Most directly supports Augment where students use AI productively in authentic disciplinary or professional work. It may support Advance where students create new AI-enabled workflows, services or forms of practice.
+
+**Learn Beyond AI** — Strengthens the judgement, responsibility and oversight needed across Anchor, Augment and Advance.
+
+**What This Means for Your Module**
+
+Use the baseline as a reference when applying the 3As:
+
+- consider which student AI competencies are relevant to your module;
+- identify where they are progressively developed across the course;
+- review whether the learning outcomes, activities or assessment need adjustment;
+- make students’ reasoning, judgement and contribution visible where relevant.
+
+Considering the baseline does not mean every module must address all four areas or be redesigned.
+
 ## Key Takeaway
 
 Use the 3As to identify the competencies students need, then align the learning outcomes, activities and assessment so students can develop and demonstrate them.
