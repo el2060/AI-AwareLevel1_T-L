@@ -128,14 +128,6 @@ Which of these may be relevant?
 
 ### Step 2 · Check the Alignment
 
-Concept visual — Alignment check
-
-Learning outcome — Does it clearly describe how the revised competency is to be demonstrated?
-
-Learning activities — Do they help students to develop the revised competency?
-
-Assessment — Does it provide valid and reliable evidence of the achievement of the revised competency?
-
 <!--alignment-check-visual-->
 
 ### Step 3 · Identify One Adjustment

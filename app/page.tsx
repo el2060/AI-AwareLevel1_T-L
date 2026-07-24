@@ -975,13 +975,20 @@ function AlignmentCheckVisual() {
     { icon: ClipboardCheck, title: "Assessment", detail: "Does it provide valid and reliable evidence of the achievement of the revised competency?" },
   ];
   return (
-    <figure className="concept-visual" aria-label="Check constructive alignment across learning outcome, activities and assessment">
-      <div className="icon-panel-grid trio alignment-trio">
-        {items.map(({ icon: Icon, title, detail }) => (
-          <section key={title}>
-            <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
-            <div><b>{title}</b><small>{detail}</small></div>
-          </section>
+    <figure className="concept-visual" aria-labelledby="alignment-check-title">
+      <figcaption>
+        <span>Check the Alignment</span>
+        <strong id="alignment-check-title">Does each part still line up with the revised competency?</strong>
+      </figcaption>
+      <div className="alignment-check-journey">
+        {items.map(({ icon: Icon, title, detail }, index) => (
+          <div className="alignment-check-step" key={title}>
+            <section className="alignment-check-card">
+              <div className="alignment-check-head"><i><Icon size={16} strokeWidth={2.1} aria-hidden="true" /></i><b>{title}</b></div>
+              <p>{detail}</p>
+            </section>
+            {index < items.length - 1 && <span className="alignment-check-connector" aria-hidden="true"><ArrowRight size={15} strokeWidth={2.2} /></span>}
+          </div>
         ))}
       </div>
     </figure>
