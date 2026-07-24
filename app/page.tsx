@@ -424,7 +424,7 @@ function TapChecklist({ eyebrow, title, prompt, items, tips, value, onChange, co
 function NextStepActivity({ value, onChange }: { value: string; onChange: (value: string) => void }) {
   const options = [
     { label: "Review one learning outcome, activity or assessment using the 3As.", feedback: "A single 3As review is a manageable way to begin identifying what may need attention." },
-    { label: "Apply PAIR to one learning activity.", feedback: "Applying PAIR to a single activity is a focused way to check that AI is supporting, rather than replacing, the intended learning." },
+    { label: "Apply PAIR to one learning activity.", feedback: "Applying PAIR to a single activity is a focused way to check how AI can support, rather than replace learning." },
     { label: "Check one assessment's GenAI conditions.", feedback: "Checking one assessment’s GenAI conditions is a focused way to apply the guidance in practice." },
     { label: "Explore one suitable use of an AI tool or learning data.", feedback: "Start with a clear teaching and learning need, then check the output, data considerations and your oversight." },
   ];
@@ -1057,7 +1057,6 @@ function QuizReadinessRecap() {
             <ArrowRight className="recap-pair-arrow" size={14} strokeWidth={2.2} aria-hidden="true" />
             <div className="recap-pair-step"><b>Reflection</b><p>Consider what was learnt, where human judgement was needed and how the approach could improve.</p></div>
           </div>
-          <p className="recap-note">AI should support students in developing the intended capability rather than doing the work for them.</p>
         </section>
 
         <section className="recap-panel recap-tone-4">
