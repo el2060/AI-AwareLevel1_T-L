@@ -136,6 +136,8 @@ What is one adjustment that would improve the alignment between the learning out
 
 ## Supporting Context · Student AI Baseline Competencies
 
+The sector student AI baseline provides a shared reference for the foundational AI competencies students should progressively develop.
+
 <!--student-baseline-visual-->
 
 ## Key Takeaway
