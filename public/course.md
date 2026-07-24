@@ -90,7 +90,7 @@ Interactive quiz — Accurate or Needs correction? (5 statements)
 
 ## Aligning Competencies, Learning Activities and Assessment
 
-Once the required intended competency is clear, ensure the rest of the module supports its development.
+Once the required competencies are clear, align the rest of the course or module to support their development.
 
 Concept visual — Alignment flow
 
@@ -98,7 +98,7 @@ A competency is expressed through a learning outcome, developed through learning
 
 <!--alignment-flow-visual-->
 
-> Whether the focus is Anchor, Augment or Advance, the learning outcome, activities and assessment should align so that students can develop and demonstrate the intended competency.
+> Whether the focus is Anchor, Augment or Advance, the learning outcome, activities and assessment should align so that students can develop and demonstrate their achievement of the intended competency.
 
 ## Illustrative Applications
 
@@ -110,7 +110,7 @@ These broad examples show how the 3As might look across different forms of pract
 | **People-centred or service-based**       | Demonstrate **empathy**, ethics and sound professional judgement. | **Use AI to support** more efficient planning or more effective personalised support. | Develop a **new and innovative AI-enabled service** or care approach. |
 | **Business, creative or communication**   | Evaluate **evidence**, context and audience needs.               | **Use AI to generate**, compare or refine possibilities.         | Create a **new and innovative AI-enabled service**, experience or workflow. |
 
-> Lecturers should apply the 3As according to their disciplinary expertise and current professional context, adjust intended learning outcomes if necessary, and then align learning activities and assessments accordingly.
+> Lecturers should apply the 3As to analyse the current impact of AI on their professional context and disciplinary expertise, adjust intended learning outcomes if necessary, and then align learning activities and assessments accordingly.
 
 ## Apply the 3As to One Learning Outcome
 
@@ -130,11 +130,11 @@ Which of these may be relevant?
 
 Concept visual — Alignment check
 
-Learning outcome — Does it state the intended competency clearly?
+Learning outcome — Does it clearly describe how the revised competency is to be demonstrated?
 
-Learning activities — Do they help students develop and practise the intended competency?
+Learning activities — Do they help students to develop the revised competency?
 
-Assessment — Does it provide credible evidence of the intended competency and students' own contribution?
+Assessment — Does it provide valid and reliable evidence of the achievement of the revised competency?
 
 <!--alignment-check-visual-->
 

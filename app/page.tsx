@@ -376,7 +376,7 @@ function ThreeAsMisconceptionCheck() {
       { id: "no-change", context: "A module may emphasise one or several of the 3As, and the review may conclude that no change is needed.", answer: "Accurate", feedback: "The relevant emphasis depends on the discipline, module level, intended learning outcomes and professional context." },
       { id: "tutor-augment", context: "Using an AI tutor or learning assistant in a module means the module is developing Augment capabilities.", answer: "Needs correction", feedback: "AI tutors and learning assistants support facilitation. Augment refers to students learning to use AI productively in disciplinary or professional work, with appropriate judgement and oversight." },
       { id: "anchor-complex", context: "Anchor can involve complex human and disciplinary judgement, and is not a lower-order category.", answer: "Accurate", feedback: "Anchor includes capabilities such as professional judgement, empathy, ethics, creativity, safety-critical reasoning and other capabilities that remain distinctly human. To identify what should remain Anchor, lecturers need an informed view of what current AI tools can and cannot do." },
-      { id: "prohibit-simply", context: "A module that focuses on Anchor can simply prohibit AI without considering what current AI tools can do.", answer: "Needs correction", feedback: "Understanding current AI capabilities helps lecturers identify what students must genuinely be able to demonstrate themselves to be work-ready, and to design learning activities and assessments accordingly. Lecturers may test relevant tools or use guided activities such as PAIR to understand how AI changes the nature of the work for which the course or module prepares students, and therefore what students must be able to do independently of AI." },
+      { id: "prohibit-simply", context: "A module that focuses on Anchor can simply prohibit AI without considering what current AI tools can do.", answer: "Needs correction", feedback: "Understanding current AI capabilities helps lecturers identify what students must genuinely be able to do themselves to be work-ready, and to design learning activities and assessments accordingly. Lecturers may test relevant tools or use guided activities such as PAIR to understand how AI changes the nature of the work for which the course or module prepares students, and therefore what students must be able to do independently of AI." },
     ]}
   />;
 }
@@ -829,8 +829,8 @@ function AlignmentFlowVisual() {
   const steps = [
     { key: "competency", label: "Competency", detail: "What students need to develop." },
     { key: "outcome", label: "Learning outcome", detail: "What students should be able to demonstrate." },
-    { key: "activities", label: "Learning activities", detail: "How students practise and develop it." },
-    { key: "evidence", label: "Assessment evidence", detail: "How achievement and students’ own contribution are made visible." },
+    { key: "activities", label: "Learning activities", detail: "How students develop and practise the outcome." },
+    { key: "evidence", label: "Assessment evidence", detail: "How achievement of the outcome is made visible." },
   ];
   return (
     <figure className="concept-visual alignment-story" aria-label="Flow from competency to assessment evidence">
@@ -971,9 +971,9 @@ function AssessmentActionsInfographic() {
 
 function AlignmentCheckVisual() {
   const items = [
-    { icon: Target, title: "Learning outcome", detail: "Does it state the intended competency clearly?" },
-    { icon: BookOpen, title: "Learning activities", detail: "Do they help students develop the intended competency?" },
-    { icon: ClipboardCheck, title: "Assessment", detail: "Does it provide credible evidence of the intended competency and students’ own contribution?" },
+    { icon: Target, title: "Learning outcome", detail: "Does it clearly describe how the revised competency is to be demonstrated?" },
+    { icon: BookOpen, title: "Learning activities", detail: "Do they help students to develop the revised competency?" },
+    { icon: ClipboardCheck, title: "Assessment", detail: "Does it provide valid and reliable evidence of the achievement of the revised competency?" },
   ];
   return (
     <figure className="concept-visual" aria-label="Check constructive alignment across learning outcome, activities and assessment">
