@@ -585,7 +585,7 @@ function ToolGuidance() {
     <section className="tool-information-guidance" aria-label="Using information in AI tools">
       <p className="tool-information-intro">The information you may enter depends on the tool being used.</p>
       <div className="tool-information-list">
-        <div><strong>M365 Copilot</strong><span>Up to <b>Official (Closed) – Sensitive Normal</b> within NP’s Microsoft 365 environment.</span></div>
+        <div><strong>M365 Copilot</strong><span>Up to <b>Official (Closed) – Restricted</b> within NP’s Microsoft 365 environment.</span></div>
         <div><strong>Pair Chat <small>pair.gov.sg</small></strong><span>Up to <b>Restricted – Sensitive Normal</b>.</span></div>
         <div><strong>Public or personal-account AI tools</strong><span>Do not enter personal, sensitive, confidential or proprietary information.</span></div>
       </div>
