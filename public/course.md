@@ -273,45 +273,71 @@ PAIR provides an adaptable structure for helping students clarify the task, sele
 
 # Part 4: Assessment — How Do We Keep Learning Authentic and Credible?
 
-Assessment should provide credible evidence that students have achieved the intended learning outcomes. A polished final product alone may not show what the student knows, can do or contributed.
+## Applying an AI Lens to Assessment
 
-> At Level 1, focus on applying NP's requirements and recognising where an assessment may need further review or redesign.
+In a GenAI-enabled context, assessment should make clear:
 
-## Four Lecturer Actions
+- what students must demonstrate;
+- how AI may be used; and
+- what evidence will make the intended learning and students’ own contribution visible.
 
-### 1. Start With the Learning Outcome
+## Two Assessment Priorities
 
-Ask:
+### Apply NP's GenAI Policy Requirements
 
-- What capability is the assessment intended to measure?
-- What must students demonstrate independently of AI?
-- Where should students use AI as part of authentic professional practice?
-- What evidence will make their contribution and judgement visible?
+GenAI use is allowed by default in summative assessment unless it is explicitly restricted or prohibited. Lecturers must state any conditions clearly, and students must cite and declare their use.
 
-If AI can produce the final output without students demonstrating the intended capability, the assessment may need clearer conditions or redesign.
+### Protect the Intended Learning
 
-### 2. State the GenAI Conditions Clearly
+Use the 3As to clarify:
 
-GenAI is allowed by default in summative assessment unless it is explicitly restricted or prohibited in the assessment brief. Students must cite and declare their use.
+- what human or disciplinary capabilities students must demonstrate;
+- how AI may be used productively;
+- where new AI-enabled practice may be assessed.
 
-For each assessment component, state whether GenAI use is:
+Where relevant, assessment should make visible students’ ability to evaluate AI outputs, use AI meaningfully and exercise appropriate judgement and oversight.
 
-- allowed;
-- restricted; or
-- prohibited.
+> A polished final product alone may not show what students know, can do or have contributed.
 
-:::details Detailed requirements for restricted use
+:::note Policy Reference
 
-Where use is restricted, specify:
-
-- what GenAI may be used for;
-- what must be the student’s own contribution;
-- what evidence of process must be retained or produced;
-- how outputs must be checked, cited and declared.
+This section summarises the main requirements. Refer to the [Gen AI in Summative Assessment Policy & Guidance](https://connectnpedu.sharepoint.com/sites/DigitalLearning/AIinLearning/SitePages/Policy-%26-Guidance.aspx) for the full policy, processes and appendices.
 
 :::
 
-#### Always-prohibited uses
+## Four Lecturer Actions
+
+<!--assessment-actions-infographic-->
+
+### 1. Start With the Learning Outcome
+
+Identify:
+
+- the capability the assessment is intended to measure;
+- what students must demonstrate themselves;
+- where AI use reflects authentic professional practice;
+- what evidence will make the intended learning and students’ own contribution visible.
+
+> If AI can complete an assessment to a passing standard without the intended competency being demonstrated, first review the competency and learning outcome using the 3As. Then review the learning activities and assessment so that students must demonstrate the intended human, disciplinary or AI-augmented capability.
+
+### 2. State the GenAI Conditions Clearly
+
+For each assessment component, make clear whether GenAI use is:
+
+- allowed, where no restriction or prohibition has been stated;
+- restricted, subject to stated conditions; or
+- prohibited.
+
+This applies to all summative tasks that contribute to the module grade, including take-home assignments.
+
+Different conditions may apply to different components of the same assessment. For example, students may be allowed to use AI for research, ideation, slide structuring or visual development, but prohibited from using it during a live presentation or question-and-answer session. These conditions should be stated clearly, and students should declare the AI use that was permitted.
+
+A restricted-use condition might:
+
+- allow GenAI for research, ideation or preparation, but prohibit its use during a live presentation, test or question-and-answer session; or
+- allow GenAI-generated content, such as images, provided students frame the task, select and refine the output, and explain their choices.
+
+:::warning Always-Prohibited Uses
 
 Students must not:
 
@@ -320,7 +346,9 @@ Students must not:
 - rely solely on GenAI for insights or reflections;
 - use GenAI to simulate an interview, observation or interaction that must involve a real person.
 
-Declaring a prohibited use does not make it acceptable.
+Declaring prohibited use does not make it acceptable.
+
+:::
 
 ### 3. Make Learning and Contribution Visible
 
@@ -328,151 +356,194 @@ Avoid vague instructions such as:
 
 > You may use AI appropriately.
 
-Use specific conditions instead:
+State:
 
-> You may use GenAI to brainstorm possible approaches and receive feedback on an early draft. Your final analysis, selection of evidence and recommendation must be your own. Check AI-generated claims, retain evidence of your interaction, and cite and declare your use.
+- what AI may be used for;
+- what students must do themselves;
+- what evidence they must retain or provide.
 
-Depending on the intended outcome, evidence may include drafts, checkpoints, process records, demonstrations, explanations or questioning.
+For example:
+
+> You may use GenAI to brainstorm approaches and obtain feedback on an early draft. You remain responsible for the final analysis, selection of evidence and recommendation. Check AI-generated claims, cite and declare your use, and retain any evidence required by the assessment brief.
+
+Evidence may include drafts, checkpoints, selected interaction records, demonstrations, explanations or questioning. A complete AI chat history should not be required by default.
+
+:::details Assessing Augment Capabilities
+
+Where students are expected to use AI to augment their work, the assessment should make their use of AI and their own judgement visible.
+
+Students may be required to:
+
+- define the problem or intended outcome;
+- select an appropriate AI tool;
+- evaluate, refine or reject AI-generated material;
+- explain their choices and contribution; and
+- reflect on where human judgement was required.
+
+Evidence may be gathered through the final output, selected process evidence, demonstrations, presentations or question-and-answer sessions.
+
+For example, students using an AI image generator in a design project could explain how they framed the task, selected and refined outputs, addressed design requirements and made the final creative decisions.
+
+:::
 
 ### 4. Prepare Students and Require Declaration
 
-Explain the conditions early and discuss examples with students. Use formative activities, checkpoints or mock runs where useful.
+Explain the conditions early and provide suitable formative preparation, checkpoints or mock runs where helpful.
 
-All relevant submission cover pages must include the required **GenAI Use Declaration**. Where use is restricted, students must retain or produce the required evidence of their use.
+All relevant submission cover pages must include the required GenAI Use Declaration. Any additional evidence should be proportionate to the assessment and necessary to establish the intended learning or students’ own contribution. A complete interaction log or reflective essay should not be required by default.
 
-Module leaders are responsible for stating the GenAI stance, explaining the conditions, ensuring declaration and designing for authentic evidence of learning.
+Module leaders are responsible for:
+
+- setting and communicating the conditions;
+- ensuring declarations are completed;
+- preparing students for the expected use or non-use of AI;
+- designing assessments that provide credible evidence of learning.
+
+<!--genai-conditions-check-->
 
 ## Important Policy Reminders
 
-**Staff use of GenAI in grading**
+:::details Staff Use of GenAI in Grading
 
-Staff must not use GenAI to determine grades independently. Any approved use as a grading assistant requires management approval, full human review of every grade and feedback decision, appropriate quality assurance and disclosure to students.
+Staff must not use GenAI to determine grades independently. Any approved use as a grading assistant requires management approval, appropriate quality assurance, disclosure to students and full human review of every grade and feedback decision.
 
-**Suspected misuse**
+:::
 
-Follow NP’s established process for interviewing students and handling academic misconduct. Do not decide based on suspicion alone.
+:::details Suspected GenAI Misuse
 
-## Where Further Review May Be Needed
+AI-detection results, changes in writing style or unexpectedly sophisticated language may raise concerns, but they are not sufficient proof of misconduct.
 
-An assessment may need review or redesign when:
+Where misuse is suspected, follow the process in the Gen AI in Summative Assessment Policy & Guidance:
+
+- review the submission and the student’s GenAI declaration;
+- interview the student and ask them to explain the content and how the work was produced;
+- request available evidence of the development or writing process; and
+- check for inconsistencies between the student’s declared and actual GenAI use.
+
+Do not assign a penalty or refer a case solely on the basis of an AI-detection result or personal impression.
+
+:::
+
+:::details When an Assessment May Need Review
+
+Review the assessment when:
 
 - AI can complete the central task without the intended capability being demonstrated;
 - the student’s own contribution is difficult to establish;
 - the task no longer reflects current professional practice;
-- GenAI conditions are vague or difficult to apply consistently;
-- learning activities do not prepare students for the required use or non-use of AI.
+- the GenAI conditions are unclear;
+- students have not been prepared for the required use or non-use of AI.
+
+:::
 
 ## Apply It to Your Module
 
 Consider one assessment:
 
-- What capability must students demonstrate?
-- Where is AI use allowed, restricted or prohibited?
-- What evidence will make their learning and contribution visible?
+> What capability must students demonstrate, how may GenAI be used, and what evidence will make the intended learning and students’ own contribution visible?
 
 ## Key Takeaway
 
-Begin with the learning outcome. Use the 3As to decide what students should demonstrate independently, with AI or through new AI-enabled practice. Then set clear conditions and design credible evidence of learning.
+Begin with the learning outcome and use the 3As to clarify the intended capability. State how GenAI may be used and design proportionate evidence that makes students’ learning and contribution visible.
 
 ---
 
-# Part 5: Data and Tech-Enhanced T&L — How Can AI Tools and Learning Data Support Learning?
+# Part 5: Data and Tech-Enhanced T&L — Supporting Learning with AI Tools and Learning Data
 
-AI tools and learning data can support engagement, learning outcomes and different learning needs when used purposefully and responsibly.
+## Start with a T&L Need
 
-> Start with the T&L need—not the tool.
+AI tools and learning data can extend learning opportunities and help us respond to learner needs. The starting point is not the technology: it is a clear T&L purpose.
 
-Use learning data to identify possible needs, inform appropriate interventions and evaluate whether the support is helping.
+> What could help students learn more effectively—and what would you need to check before using it?
 
-Use these four checks before adopting an AI tool or acting on AI-generated information.
+## How AI and Data Can Help
 
-## How AI May Support Your T&L Work
+<!--tandl-uses-->
 
-**Prepare learning**
+### Using Learning Data Responsibly
 
-Draft examples, review materials or create alternative formats.
+Learning analytics may identify patterns or indicate that a student could be at risk of disengagement or underachievement. Such indicators are probabilistic; they do not establish why a student is struggling or determine what action should be taken.
 
-**Support learning**
+Lecturers should:
 
-Provide practice, feedback or personalised support.
+- consider the quality and relevance of the data;
+- speak with the student where appropriate;
+- consider other contextual information; and
+- use professional judgement to determine suitable support.
 
-**Understand and improve learning**
+Learning data should support timely intervention, not automatic decisions, labelling or public ranking of students.
 
-Summarise feedback, identify patterns, inform interventions and review whether the support is helping.
+### Design More Targeted Learning Support
 
-The tool provides a first pass. You check, adapt and decide.
+Learning data and assessment feedback may reveal that different groups of students have different learning needs. AI may help a lecturer propose differentiated explanations, practice activities, examples or feedback approaches for these groups.
 
-## Start With an Approved Tool
+The lecturer reviews and adapts the suggestions, checks that they address the identified learning needs and decides how they should be used. AI-generated suggestions should be reviewed and adapted. They should not determine support decisions or replace direct engagement with students.
 
-M365 Copilot is the primary AI assistant provided to NP staff. It can support tasks such as reviewing module materials, drafting learning resources and summarising appropriate feedback.
-
-Use AI tools only where the tool, information and purpose are covered by NP’s current guidance. Approved uses and clearance may change, so check the latest guidance before entering information.
+## Explore a Common T&L Use
 
 <!--use-case-explorer-->
 
-## Protect Sensitive Information
+## Choose Tools for the T&L Purpose
 
-> Do not enter personal, sensitive or proprietary information into a public AI tool unless it is approved for that information and purpose. This includes student identifiers, grades, personal circumstances, confidential assessments, employer information and unreleased research.
+Different needs may call for different tools. NP-provided tools may support lecturer productivity, learning resources, student support or learning analytics. Course- or discipline-specific tools may reflect authentic professional practice. Students may use suitable tools where the learning activity or assessment permits this.
 
-Remind students to apply the same care in class, on internship and at work.
+Before using a tool or learning data, consider four questions:
 
-## Use AI-Generated Insights Carefully
+### Learning fit
 
-AI may summarise comments, group themes or suggest patterns in learning data. These are starting points, not decisions.
+Does the tool or data use support the intended learning or learner need?
 
-Before acting:
+### Suitability
 
-- check the source information;
-- consider the learner and learning context;
-- decide whether an intervention is appropriate;
-- review whether the intervention has helped.
+Is it appropriate and accessible for the task and learners?
 
-## AI-Enabled Learning Support
+### Information and output
 
-NP is introducing AI-enabled tutors and learning assistants that can provide summaries, practice, feedback and personalised support beyond class time.
+Is the information appropriate to use, and is the output accurate, relevant and suitable for learners?
 
-These tools complement—not replace—your facilitation. You still decide what good learning looks like, how the tool supports it and whether it is helping.
+### Oversight and impact
 
-## Apply It to Your Module
+Who reviews the output, decides what action to take and checks whether it helped?
 
-Think of one small, low-risk use.
+### Using Information in AI Tools
 
-> What T&L need could it support?
+<!--tool-guidance-->
 
-> What information would be involved?
+## Keep in Mind
 
-> What would you need to check before using the output?
+Choose one small T&L need from a module you teach, lead or support. Consider:
 
-> How would you know whether it helped?
-
-## Key Takeaway
-
-Use AI tools and learning data for a clear learning purpose. Select an appropriate tool, handle information safely, check the output, apply professional judgement and review the impact.
+- what type of AI tool or learning data could contribute;
+- how it would support the intended learning;
+- what would need checking;
+- how you would know whether it helped.
 
 ---
 
 # Part 6: Bring It Together
 
-## Review One Module Through Four Lenses
+## Review One Module Through Four Areas
 
 Choose a module you teach, lead or support. Consider each question once.
 
 <!--module-review-->
 
-## Four Ideas to Carry Forward
+## Before the Quiz
 
-**AI-ready graduates**
+The completion quiz checks your understanding of the key ideas introduced in this package.
 
-Human qualities, domain expertise and responsible AI capability.
+<!--quiz-readiness-recap-->
 
-**3As and PAIR**
+You may revisit any section before attempting the quiz.
 
-Use the 3As to review what students need to learn and demonstrate, and PAIR to structure learning with AI.
+## Choose One Small Next Step
 
-**Authentic evidence**
+Identify one practical action to take forward:
 
-Start with the learning outcome and make visible what students can do independently and with AI.
+<!--next-step-->
 
-**Purposeful use**
+## Closing
 
-Use suitable tools and learning data safely, check the output and retain human oversight.
+The key is to begin with the intended learning, then make deliberate choices about curriculum, facilitation, assessment and the use of tools and data.
+
+When you are ready, complete the separately administered quiz to fulfil the package requirements.
