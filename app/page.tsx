@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactElement, useEffect, useLayoutEffect, useMemo, useState } from "react";
+import { ReactElement, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { ArrowLeft, ArrowLeftRight, ArrowRight, BookOpen, Bot, Check, CheckCircle2, ChevronRight, ClipboardCheck, Compass, Eye, Layers, Lightbulb, RefreshCw, Rocket, Scale, ShieldCheck, Target, UserRound, Users, X } from "lucide-react";
 
 type Section = {
@@ -11,6 +11,86 @@ type Section = {
 };
 
 type ActivityNotes = Record<string, string>;
+
+const STORAGE_PREFIX = "ai-tl-level1:";
+
+// Parsed values are cached per key so that repeated snapshot reads return the
+// same reference. useSyncExternalStore compares snapshots by identity, so
+// parsing afresh on every read would loop forever.
+const storageCache = new Map<string, { raw: string | null; parsed: unknown }>();
+const storageListeners = new Map<string, Set<() => void>>();
+
+function readStoredValue<T>(storageKey: string, fallback: T): T {
+  let raw: string | null = null;
+  try {
+    raw = window.localStorage.getItem(storageKey);
+  } catch {
+    // Storage blocked (private browsing); fall through to the default.
+  }
+  const cached = storageCache.get(storageKey);
+  if (cached && cached.raw === raw) return cached.parsed as T;
+
+  let parsed: unknown = fallback;
+  if (raw !== null) {
+    try {
+      parsed = JSON.parse(raw);
+    } catch {
+      parsed = fallback;
+    }
+  }
+  storageCache.set(storageKey, { raw, parsed });
+  return parsed as T;
+}
+
+// The package runs to two hours, so section position, completion and every
+// activity answer survive a reload. Backed by localStorage through
+// useSyncExternalStore, which also keeps two open tabs in step.
+function usePersistentState<T>(key: string, initial: T) {
+  const storageKey = STORAGE_PREFIX + key;
+  const fallbackRef = useRef(initial);
+
+  const subscribe = useCallback(
+    (onStoreChange: () => void) => {
+      let listeners = storageListeners.get(storageKey);
+      if (!listeners) {
+        listeners = new Set();
+        storageListeners.set(storageKey, listeners);
+      }
+      listeners.add(onStoreChange);
+      window.addEventListener("storage", onStoreChange);
+      return () => {
+        listeners.delete(onStoreChange);
+        window.removeEventListener("storage", onStoreChange);
+      };
+    },
+    [storageKey],
+  );
+
+  const value = useSyncExternalStore(
+    subscribe,
+    () => readStoredValue(storageKey, fallbackRef.current),
+    () => fallbackRef.current,
+  );
+
+  const setValue = useCallback(
+    (update: T | ((previous: T) => T)) => {
+      const previous = readStoredValue(storageKey, fallbackRef.current);
+      const next = typeof update === "function" ? (update as (previous: T) => T)(previous) : update;
+      const raw = JSON.stringify(next);
+      try {
+        window.localStorage.setItem(storageKey, raw);
+      } catch {
+        // Storage full or blocked: keep the value in the cache so the session
+        // still behaves normally, it just will not survive a reload.
+      }
+      storageCache.set(storageKey, { raw, parsed: next });
+      storageListeners.get(storageKey)?.forEach((listener) => listener());
+    },
+    [storageKey],
+  );
+
+  return [value, setValue] as const;
+}
 
 function escapeHtml(value: string) {
   return value
@@ -314,9 +394,9 @@ const sectionBridges = [
 
 type SorterScenario = { id: string; context: string; answer: string; feedback: string };
 
-function ScenarioSorter({ eyebrow, title, prompt, options, scenarios, countNoun, trio }: { eyebrow: string; title: string; prompt: string; options: string[]; scenarios: SorterScenario[]; countNoun: string; trio?: boolean }) {
+function ScenarioSorter({ eyebrow, title, prompt, options, scenarios, countNoun, trio, storageKey }: { eyebrow: string; title: string; prompt: string; options: string[]; scenarios: SorterScenario[]; countNoun: string; trio?: boolean; storageKey: string }) {
   const [active, setActive] = useState(0);
-  const [answers, setAnswers] = useState<Record<string, string>>({});
+  const [answers, setAnswers] = usePersistentState<Record<string, string>>(storageKey, {});
   const current = scenarios[active];
   const picked = answers[current.id];
   const solved = scenarios.filter((scenario) => answers[scenario.id] === scenario.answer).length;
@@ -355,6 +435,7 @@ function SupportReplaceSorter() {
     prompt="For each situation, decide whether AI supports students in developing the intended capability or does the work they are meant to do."
     options={["Supports the intended learning", "Replaces the intended learning"]}
     countNoun="sorted"
+    storageKey="quiz-support-replace"
     scenarios={[
       { id: "compare", context: "Students ask AI for a different worked example of a concept, then attempt the practice set on their own.", answer: "Supports the intended learning", feedback: "AI provides an additional explanation, but students still apply the concept themselves in the practice set." },
       { id: "submit", context: "A student pastes the assignment brief into GenAI and submits a lightly edited version of the response.", answer: "Replaces the intended learning", feedback: "AI has produced the response that the student was expected to develop. Light editing does not demonstrate the intended analysis, judgement or creation." },
@@ -371,6 +452,7 @@ function ThreeAsMisconceptionCheck() {
     prompt="For each statement, decide whether it is accurate or needs correction."
     options={["Accurate", "Needs correction"]}
     countNoun="checked"
+    storageKey="quiz-three-as"
     scenarios={[
       { id: "revise-all", context: "Every module must revise its learning outcomes and assessment to include GenAI.", answer: "Needs correction", feedback: "All modules should consider how AI may affect the competencies students need. Changes are only needed where the review identifies a gap or misalignment." },
       { id: "no-change", context: "A module may emphasise one or several of the 3As, and the review may conclude that no change is needed.", answer: "Accurate", feedback: "The relevant emphasis depends on the discipline, module level, intended learning outcomes and professional context." },
@@ -388,6 +470,7 @@ function GenAiConditionsSorter() {
     prompt="Decide how each situation sits under NP's GenAI guidance (policy from AY2027) for summative assessment."
     options={["Allowed", "Restricted", "Prohibited"]}
     countNoun="checked"
+    storageKey="quiz-genai-conditions"
     trio
     scenarios={[
       { id: "default", context: "The brief states nothing about GenAI, and a student uses it to brainstorm approaches for a take-home assignment.", answer: "Allowed", feedback: "GenAI use is allowed by default in summative assessment unless it is explicitly restricted or prohibited. The student must still cite and declare the use." },
@@ -621,7 +704,7 @@ function ToolGuidance() {
 }
 
 function QuickSenseCheck() {
-  const [revealed, setRevealed] = useState<number[]>([]);
+  const [revealed, setRevealed] = usePersistentState<number[]>("quiz-sense-check", []);
   const items = [
     { situation: "An AI tutor gives an explanation that differs from the module materials.", reveal: "Check the source content and accuracy before deciding whether the materials or tutor setup need adjustment." },
     { situation: "Students use a discipline-specific AI tool to produce a technically strong solution.", reveal: "Check whether they can explain, evaluate and apply the underlying disciplinary knowledge." },
@@ -1143,12 +1226,16 @@ function SectionVisual({ title }: { title: string }) {
 
 export default function Home() {
   const [course, setCourse] = useState("");
-  const [active, setActive] = useState(0);
-  const [completed, setCompleted] = useState<string[]>([]);
-  const [activityNotes, setActivityNotes] = useState<ActivityNotes>({});
+  const [storedActive, setActive] = usePersistentState<number>("active-section", 0);
+  const [completed, setCompleted] = usePersistentState<string[]>("completed-sections", []);
+  const [activityNotes, setActivityNotes] = usePersistentState<ActivityNotes>("activity-notes", {});
   const [contentsOpen, setContentsOpen] = useState(false);
+  const contentsPanelRef = useRef<HTMLElement | null>(null);
 
   const sections = useMemo(() => splitSections(course), [course]);
+  // A restored position is clamped in case the course content has since
+  // gained or lost sections.
+  const active = sections.length ? Math.min(Math.max(storedActive, 0), sections.length - 1) : 0;
   const current = sections[active];
   const isHome = active === 0;
   const progress = sections.length
@@ -1166,6 +1253,50 @@ export default function Home() {
     // replaying a long upward scroll whenever a lecturer moves on.
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, [active]);
+
+  // The contents panel announces itself as a modal, so it also has to behave
+  // as one: Escape closes it, Tab stays inside it, and focus returns to
+  // whatever opened it.
+  useEffect(() => {
+    if (!contentsOpen) return;
+    const opener = document.activeElement as HTMLElement | null;
+    const panel = contentsPanelRef.current;
+
+    function focusableItems() {
+      if (!panel) return [] as HTMLElement[];
+      return Array.from(
+        panel.querySelectorAll<HTMLElement>('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'),
+      ).filter((element) => !element.hasAttribute("disabled"));
+    }
+
+    focusableItems()[0]?.focus();
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setContentsOpen(false);
+        return;
+      }
+      if (event.key !== "Tab") return;
+      const items = focusableItems();
+      if (!items.length) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      opener?.focus();
+    };
+  }, [contentsOpen]);
 
   function selectSection(index: number) {
     setActive(index);
@@ -1357,7 +1488,7 @@ export default function Home() {
 
       {contentsOpen && (
         <div className="contents-overlay" role="presentation" onClick={() => setContentsOpen(false)}>
-          <section className="contents-panel" role="dialog" aria-modal="true" aria-label="Course contents" onClick={(event) => event.stopPropagation()}>
+          <section ref={contentsPanelRef} className="contents-panel" role="dialog" aria-modal="true" aria-label="Course contents" onClick={(event) => event.stopPropagation()}>
             <div className="contents-heading">
               <div>
                 <span className="eyebrow">{completed.length} of {sections.length} complete</span>

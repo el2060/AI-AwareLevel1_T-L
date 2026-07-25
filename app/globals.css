@@ -418,8 +418,8 @@ button:focus-visible, summary:focus-visible, a:focus-visible {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--blue);
-  box-shadow: 0 0 0 4px var(--blue-soft);
+  background: var(--part-accent);
+  box-shadow: 0 0 0 4px var(--part-soft);
 }
 .course-content ol > li { counter-increment: course-step; padding-left: 38px; }
 .course-content ol > li::before {
@@ -432,8 +432,8 @@ button:focus-visible, summary:focus-visible, a:focus-visible {
   display: grid;
   place-items: center;
   border-radius: 7px;
-  background: var(--blue-soft);
-  color: var(--blue-active);
+  background: var(--part-soft);
+  color: var(--part-accent);
   font-size: 11px;
   font-weight: 750;
 }
@@ -442,7 +442,7 @@ button:focus-visible, summary:focus-visible, a:focus-visible {
 .course-content .course-list-long { margin-top: 18px; border-top: 1px solid var(--line); }
 .course-content .course-list-long > li { min-height: 54px; margin: 0; padding: 15px 4px 15px 37px; border-bottom: 1px solid var(--line); }
 .course-content .course-list-long > li::before { top: 24px; }
-.course-content .course-list-long strong { color: var(--blue-active); }
+.course-content .course-list-long strong { color: var(--part-accent); }
 .course-content strong { color: var(--ink); font-weight: 650; }
 .course-content a { color: var(--blue); font-weight: 650; text-decoration: underline; text-underline-offset: 2px; }
 .course-content a:hover { color: var(--blue-active); }
@@ -450,10 +450,10 @@ button:focus-visible, summary:focus-visible, a:focus-visible {
 .course-content blockquote {
   margin: 22px 0 26px;
   padding: 17px 19px;
-  border-left: 3px solid var(--blue);
+  border-left: 3px solid var(--part-accent);
   border-radius: 0 8px 8px 0;
-  background: var(--blue-soft);
-  color: var(--blue-active);
+  background: var(--part-soft);
+  color: var(--part-accent);
   font-size: 17px;
   line-height: 1.65;
 }
@@ -930,8 +930,8 @@ button:focus-visible, summary:focus-visible, a:focus-visible {
 .callout p:last-child, .callout ul:last-child { margin-bottom: 0 !important; }
 .callout-warning { border-left: 3px solid var(--warning); background: var(--warning-soft); }
 .callout-warning .callout-head { color: var(--warning-ink); }
-.callout-note { border-left: 3px solid var(--blue); background: var(--blue-soft); }
-.callout-note .callout-head { color: var(--blue-active); }
+.callout-note { border-left: 3px solid var(--part-accent); background: var(--part-soft); }
+.callout-note .callout-head { color: var(--part-accent); }
 
 .activity-block {
   position: relative;
