@@ -397,8 +397,13 @@ type SorterScenario = { id: string; context: string; answer: string; feedback: s
 function ScenarioSorter({ eyebrow, title, prompt, options, scenarios, countNoun, trio, storageKey }: { eyebrow: string; title: string; prompt: string; options: string[]; scenarios: SorterScenario[]; countNoun: string; trio?: boolean; storageKey: string }) {
   const [active, setActive] = useState(0);
   const [answers, setAnswers] = usePersistentState<Record<string, string>>(storageKey, {});
+  // Counted per scenario so a first wrong pick prompts another attempt rather
+  // than handing over the answer, which would remove the point of the check.
+  const [wrongTries, setWrongTries] = useState<Record<string, number>>({});
   const current = scenarios[active];
   const picked = answers[current.id];
+  const isCorrect = picked === current.answer;
+  const revealAnswer = isCorrect || (wrongTries[current.id] ?? 0) >= 2;
   const solved = scenarios.filter((scenario) => answers[scenario.id] === scenario.answer).length;
   return (
     <section className="activity-block domain-spotter">
@@ -416,14 +421,22 @@ function ScenarioSorter({ eyebrow, title, prompt, options, scenarios, countNoun,
       </div>
       <div className="domain-spotter-case"><p>{current.context}</p></div>
       <div className={`domain-spotter-options${trio ? " trio" : ""}`}>
-        {options.map((d) => <button key={d} type="button" className={picked === d ? (d === current.answer ? "selected correct" : "selected wrong") : ""} onClick={() => setAnswers((a) => ({ ...a, [current.id]: d }))}>{d}</button>)}
+        {options.map((d) => <button key={d} type="button" className={picked === d ? (d === current.answer ? "selected correct" : "selected wrong") : ""} onClick={() => {
+          setAnswers((a) => ({ ...a, [current.id]: d }));
+          if (d !== current.answer) setWrongTries((tries) => ({ ...tries, [current.id]: (tries[current.id] ?? 0) + 1 }));
+        }}>{d}</button>)}
       </div>
-      {picked && (
-        <div className={`activity-feedback ${picked !== current.answer ? "try-again" : ""}`}>
+      {picked && (revealAnswer ? (
+        <div className={`activity-feedback ${!isCorrect ? "try-again" : ""}`}>
           <strong>{current.answer}</strong>
           <p>{current.feedback}</p>
         </div>
-      )}
+      ) : (
+        <div className="activity-feedback try-again">
+          <strong>Not quite — try again</strong>
+          <p>Re-read the situation and choose another option.</p>
+        </div>
+      ))}
     </section>
   );
 }
@@ -551,7 +564,7 @@ function StrategyMap() {
         </div>
       </div>
       <div className="strategy-path">
-        {items.map(({ name, question, icon: Icon, covers, coversTone }, index) => <button key={name} className={active === index ? "active" : ""} onClick={() => setActive(index)} aria-pressed={active === index}>
+        {items.map(({ name, question, icon: Icon, covers, coversTone }, index) => <button key={name} className={`${coversTone ? `strategy-tone-${coversTone}` : "strategy-tone-base"}${active === index ? " active" : ""}`} onClick={() => setActive(index)} aria-pressed={active === index}>
           <i><Icon size={22} strokeWidth={2} aria-hidden="true" /></i><span><strong>Strategy {index + 1} · {name}</strong><small>{question}</small>{covers && <em className={`strategy-covers covers-tone-${coversTone}`}>{covers}</em>}</span>
         </button>)}
       </div>
@@ -1238,6 +1251,10 @@ export default function Home() {
   const active = sections.length ? Math.min(Math.max(storedActive, 0), sections.length - 1) : 0;
   const current = sections[active];
   const isHome = active === 0;
+  // The final section has no "next", so it is completed explicitly. Without
+  // this the progress bar would stall one section short of full.
+  const isLastSection = sections.length > 0 && active === sections.length - 1;
+  const allComplete = sections.length > 0 && completed.length === sections.length;
   const progress = sections.length
     ? Math.round((completed.length / sections.length) * 100)
     : 0;
@@ -1310,6 +1327,11 @@ export default function Home() {
     // should not mark it done.
     setCompleted((items) => Array.from(new Set([...items, current.id])));
     setActive(nextIndex);
+  }
+
+  function finishPackage() {
+    if (!current) return;
+    setCompleted((items) => Array.from(new Set([...items, current.id])));
   }
 
   function setActivityValue(key: string, value: string) {
@@ -1473,6 +1495,16 @@ export default function Home() {
           </div>
         )}
 
+        {isLastSection && allComplete && (
+          <div className="completion-panel" role="status">
+            <i aria-hidden="true"><CheckCircle2 size={22} strokeWidth={2.2} /></i>
+            <div>
+              <strong>Package complete</strong>
+              <p>You have worked through every section. When you are ready, complete the separately administered quiz to fulfil the package requirements.</p>
+            </div>
+          </div>
+        )}
+
         <div className="section-actions">
           <div className="pager">
             <button
@@ -1482,6 +1514,7 @@ export default function Home() {
               Previous
             </button>
             {active < sections.length - 1 && <button className="next-button" onClick={goNext}>Next section</button>}
+            {isLastSection && !allComplete && <button className="next-button" onClick={finishPackage}>Mark package as complete</button>}
           </div>
         </div>
       </main>
