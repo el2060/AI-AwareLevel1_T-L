@@ -529,7 +529,7 @@ button:focus-visible, summary:focus-visible, a:focus-visible {
 }
 .definition-grid strong {
   display: block;
-  color: var(--blue-active);
+  color: var(--part-accent);
   font-size: 14px;
   line-height: 1.35;
 }
@@ -648,7 +648,7 @@ button:focus-visible, summary:focus-visible, a:focus-visible {
 .augment-band { background: #f9fbfe; }.augment-band::before { background: #3572a8; }.augment-band .three-as-icon { background: #d7e4f1; color: #2c5f8e; }.augment-band .three-as-watermark { color: #3572a8; }
 .advance-band { background: #fbfdff; }.advance-band::before { background: #7fa5c9; }.advance-band .three-as-icon { background: #e5edf6; color: #45719a; }.advance-band .three-as-watermark { color: #7fa5c9; }
 .infographic-note { display: flex; align-items: center; gap: 11px; margin-top: 14px; padding: 12px 14px; border-radius: 10px; background: var(--canvas); }
-.infographic-note > span { width: 30px; height: 30px; flex: 0 0 30px; display: grid; place-items: center; border-radius: 50%; background: var(--indigo); color: #fff; font-weight: 750; }
+.infographic-note > span { width: 30px; height: 30px; flex: 0 0 30px; display: grid; place-items: center; border-radius: 50%; background: var(--part-accent); color: #fff; font-weight: 750; }
 .infographic-note p { margin: 0; color: var(--ink-soft); font-size: 12px; line-height: 1.45; }
 
 .pair-flow { display: flex; flex-direction: column; margin-top: 26px; }
@@ -815,8 +815,8 @@ button:focus-visible, summary:focus-visible, a:focus-visible {
 .response summary { padding: 14px 16px; cursor: pointer; font-size: 15px; font-weight: 650; }
 .response p { padding: 0 16px 15px; margin: 0; font-size: 15px; }
 .policy-detail { margin: 18px 0 24px; border: 1px solid #c9d6e8; border-radius: 10px; background: #f7f9fc; overflow: hidden; }
-.policy-detail summary { padding: 15px 17px; cursor: pointer; color: var(--blue-active); font-size: 15px; font-weight: 700; }
-.policy-detail summary:hover { background: var(--blue-soft); }
+.policy-detail summary { padding: 15px 17px; cursor: pointer; color: var(--part-accent); font-size: 15px; font-weight: 700; }
+.policy-detail summary:hover { background: var(--part-soft); }
 .policy-detail > div { padding: 0 17px 16px; border-top: 1px solid #dce5f0; }
 .policy-detail[open] > div, .response[open] p { animation: feedback-in .24s ease both; }
 .policy-detail summary, .response summary {
