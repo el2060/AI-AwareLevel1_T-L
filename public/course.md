@@ -513,7 +513,7 @@ Before using a tool or learning data, consider four questions:
 
 <!--tool-fit-visual-->
 
-### Using Information in AI Tools
+### Using T&L Information in AI Tools
 
 <!--tool-guidance-->
 
