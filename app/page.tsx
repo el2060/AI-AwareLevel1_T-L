@@ -939,16 +939,6 @@ function StudentBaselineVisual() {
             </li>
           ))}
         </ol>
-        <section className="baseline-module-panel">
-          <h4>What This Means for Your Module</h4>
-          <p>Consider the four areas when reviewing your module, while recognising that not all will be equally relevant or require adjustment.</p>
-          <p>Consider:</p>
-          <ul className="course-list">
-            <li>which competencies are most relevant to your discipline and module;</li>
-            <li>where students progressively develop them across the course;</li>
-            <li>how students’ reasoning, judgement and contribution should be made visible.</li>
-          </ul>
-        </section>
       </div>
     </details>
   );
@@ -982,8 +972,14 @@ function BaselineThreeAsRelation() {
           ))}
         </ul>
         <section className="baseline-module-panel">
-          <h4>For your module</h4>
-          <p>Use the baseline as a reference when applying the 3As. Consider which competencies are relevant, where they are progressively developed, and whether any learning outcomes, activities or assessment need adjustment.</p>
+          <h4>Applying This to Your Module</h4>
+          <p>Use the student baseline as a reference when applying the 3As. Consider:</p>
+          <ul className="course-list">
+            <li>which AI competencies are relevant to your discipline and module;</li>
+            <li>where students progressively develop them across the course;</li>
+            <li>whether any learning outcomes, activities or assessment need adjustment; and</li>
+            <li>how students’ reasoning, judgement and contribution should be made visible.</li>
+          </ul>
           <p>Not every module needs to address all four areas or be redesigned.</p>
         </section>
       </div>

@@ -922,7 +922,29 @@ button:focus-visible, summary:focus-visible, a:focus-visible {
   font-size: 14px;
   line-height: 1.55;
 }
-.baseline-module-panel .course-list { margin: 6px 0 0; }
+/* Marker-rendered components sit outside .course-content, so the shared
+   bullet styling does not reach them — restate it here. */
+.baseline-module-panel .course-list { margin: 8px 0 0; padding: 0; list-style: none; }
+.baseline-module-panel .course-list li {
+  position: relative;
+  margin: 0;
+  padding: 3px 0 3px 20px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.55;
+}
+.baseline-module-panel .course-list li + li { margin-top: 3px; }
+.baseline-module-panel .course-list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue-active);
+  box-shadow: 0 0 0 3px var(--blue-soft);
+}
 
 .recap-tone-2 { --recap-accent: #054a80; --recap-soft: #e2ecf6; }
 .recap-tone-3 { --recap-accent: #6b4f8a; --recap-soft: #f1ecf7; }
