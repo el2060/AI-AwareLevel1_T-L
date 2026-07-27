@@ -617,8 +617,8 @@ function UseCaseExplorer() {
       <div className="use-case-detail" aria-live="polite">
         <div className="use-case-context"><div><strong>Possible approach</strong><p>{selected.tool}</p></div><div><strong>T&L purpose</strong><p>{selected.task}</p></div></div>
         <div className="prompt-starter"><strong>Start here</strong><p>{selected.starter}</p></div>
-        <div className="use-case-checks"><div><b>Check</b><p>{selected.check}</p></div><div><b>Lecturer decision</b><p>{selected.decision}</p></div></div>
-        <p className="use-case-tool-note"><strong>Keep the learning purpose in view.</strong> The tool supports the activity; the lecturer determines how it is used.</p>
+        <div className="use-case-checks"><div><b>Check</b><p>{selected.check}</p></div><div><b>Your decision</b><p>{selected.decision}</p></div></div>
+        <p className="use-case-tool-note"><strong>Keep the learning purpose in view.</strong> The tool supports the activity; you determine how it is used.</p>
       </div>
     </section>
   );
@@ -660,7 +660,7 @@ function TandlUsesExplorer() {
   const Icon = selected.icon;
   return (
     <section className="tandl-uses-explorer" aria-label="Four practical uses of AI tools and learning data">
-      <div className="tandl-uses-intro"><span>Choose a use to explore</span><p>Explore how each use can support a T&L purpose and what the lecturer still needs to decide.</p></div>
+      <div className="tandl-uses-intro"><span>Choose a use to explore</span><p>Explore how each use can support a T&L purpose and what you still need to decide.</p></div>
       <div className="tandl-use-nav" role="group" aria-label="Choose a practical use">
         {uses.map((use, index) => {
           const UseIcon = use.icon;
@@ -742,7 +742,7 @@ function QuickSenseCheck() {
           );
         })}
       </div>
-      <p className="sense-check-closing"><strong>AI can create resources, extend support, enable disciplinary practice and identify patterns.</strong> You provide the context, check the outputs and decide how they are used.</p>
+      <p className="sense-check-closing"><strong>AI can help you create resources, extend learning support, enable disciplinary practice and identify patterns.</strong> You provide the context, check the outputs and decide how they are used.</p>
     </section>
   );
 }

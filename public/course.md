@@ -456,24 +456,24 @@ AI tools and learning data can extend learning opportunities and help us respond
 
 :::note Using Learning Data Responsibly
 
-Learning analytics may identify patterns or indicate that a student could be at risk of disengagement or underachievement. Such indicators are probabilistic; they do NOT establish that a student will fail; whether or not and if so why a student is struggling; or determine what action should be taken.
+Learning analytics may identify patterns or indicate that a student could be at risk of disengagement or underachievement. Such indicators are probabilistic; they do not establish that a student will fail, explain whether or why a student is struggling, or determine what action should be taken.
 
-Lecturers should:
+You should:
 
 - consider the quality and relevance of the data;
 - speak with the student when appropriate;
 - consider other contextual information; and
 - use professional judgement to determine suitable support.
 
-Learning data should support timely intervention, not automatic decisions, labelling or public ranking of students.
+Use learning data to support timely intervention—not to make automatic decisions, label students or publicly rank them.
 
 :::
 
 ### Design More Targeted Learning Support
 
-Learning data and assessment feedback may reveal that different groups of students have different learning needs. AI may help a lecturer propose differentiated explanations, practice activities, examples or feedback approaches for these groups.
+Learning data and assessment feedback may reveal different learning needs among your students. AI may help you propose differentiated explanations, practice activities, examples or feedback approaches.
 
-The lecturer reviews and adapts the suggestions, checks that they address the identified learning needs and decides how they should be used. AI-generated suggestions should be reviewed and adapted. They should not determine support decisions or replace direct engagement with students.
+Review and adapt the suggestions, check that they address the identified learning needs, and decide how they should be used. AI-generated suggestions should not determine support decisions or replace direct engagement with students.
 
 ## Explore a Common T&L Use
 
