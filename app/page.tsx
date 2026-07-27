@@ -705,13 +705,13 @@ function ChooseToolsVisual() {
 function ToolGuidance() {
   return (
     <section className="tool-information-guidance" aria-label="Using information in AI tools">
-      <p className="tool-information-intro">The information you may enter depends on the tool being used.</p>
+      <p className="tool-information-intro">The type of information you may enter depends on the tool and account being used.</p>
       <div className="tool-information-list">
-        <div><strong>M365 Copilot</strong><span>Up to <b>Official (Closed) – Restricted</b> within NP’s Microsoft 365 environment.</span></div>
-        <div><strong>Pair Chat <small>pair.gov.sg</small></strong><span>Up to <b>Restricted – Sensitive Normal</b>.</span></div>
+        <div><strong>M365 Copilot <small>using your NP account</small></strong><span>May be used with information classified up to <b>Official (Closed) – Restricted</b> within NP’s Microsoft 365 environment.</span></div>
+        <div><strong>Pair Chat <small>pair.gov.sg</small></strong><span>May be used with information classified up to <b>Restricted – Sensitive Normal</b>.</span></div>
         <div><strong>Public or personal-account AI tools</strong><span>Do not enter personal, sensitive, confidential or proprietary information.</span></div>
       </div>
-      <p className="tool-information-closing">Check that the tool is suitable for the information involved, and review its outputs before use.</p>
+      <p className="tool-information-closing">Check that the tool is approved for the information involved, and review its outputs before use.</p>
     </section>
   );
 }
