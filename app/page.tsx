@@ -887,7 +887,6 @@ function StudentBaselineVisual() {
       focus: "Understand AI and its capabilities",
       detail: "Students should recognise different forms of AI, understand broadly what they can and cannot do, and be aware that AI outputs may be incomplete, biased or inaccurate.",
       practice: "Explain why a convincing AI-generated response may still be wrong.",
-      atNp: "Learning About AI — for example through PAIR lessons — is necessary to develop or sharpen a 3As analysis.",
     },
     {
       icon: Bot,
@@ -895,7 +894,6 @@ function StudentBaselineVisual() {
       focus: "Use AI to support thinking and problem-solving",
       detail: "Students should be able to work with AI to break down problems, explore patterns, test explanations and identify gaps in their own reasoning—without handing over the thinking to AI.",
       practice: "Use AI to break a complex problem into parts, then examine and improve the proposed reasoning.",
-      atNp: "Examples of NP-supported Learn With AI tools include Lumi Tutor for PET modules, but students should also learn while at NP, from us their lecturers, to use any AI tool to help themselves learn when they need to.",
     },
     {
       icon: Rocket,
@@ -903,7 +901,6 @@ function StudentBaselineVisual() {
       focus: "Apply AI purposefully and evaluate its outputs",
       detail: "Students should select suitable tools and inputs, use AI to improve a task or outcome, and evaluate the output before relying on it.",
       practice: "Generate an initial output with AI, then check its accuracy, relevance, bias and suitability for the context.",
-      atNp: "Where the task or outcome is industry-relevant, a Learn to Use AI outcome is a 3As Augment outcome. Where the task or outcome creates new possibilities, workflows or forms of professional practice beyond established pre-AI job boundaries, it is a 3As Advance outcome.",
     },
     {
       icon: Scale,
@@ -911,12 +908,11 @@ function StudentBaselineVisual() {
       focus: "Exercise judgement and responsibility",
       detail: "Students should consider the ethical, legal and societal implications of AI, retain human oversight and remain accountable for AI-supported decisions and outputs.",
       practice: "Decide whether an AI-supported recommendation is fair, appropriate and safe to act on.",
-      atNp: "Learn Beyond AI translates into learning Anchor skills.",
     },
   ];
   return (
     <details className="policy-detail student-baseline-accordion">
-      <summary>What should students progressively be able to understand and do with AI?</summary>
+      <summary>What should students progressively understand and be able to do with AI?</summary>
       <div>
         <div className="baseline-intro">
           <p>The POLITE baseline identifies four broad areas.</p>
@@ -927,7 +923,7 @@ function StudentBaselineVisual() {
           </p>
         </div>
         <ol className="baseline-map">
-          {items.map(({ icon: Icon, title, focus, detail, practice, atNp }, index) => (
+          {items.map(({ icon: Icon, title, focus, detail, practice }, index) => (
             <li key={title}>
               <span className="baseline-index" aria-hidden="true">0{index + 1}</span>
               <i><Icon size={18} strokeWidth={2.1} aria-hidden="true" /></i>
@@ -938,7 +934,6 @@ function StudentBaselineVisual() {
                 <div className="baseline-practice">
                   <span className="baseline-practice-label">In Practice</span>
                   <p>{practice}</p>
-                  <p className="baseline-at-np"><b>At NP</b> {atNp}</p>
                 </div>
               </div>
             </li>
@@ -953,6 +948,43 @@ function StudentBaselineVisual() {
             <li>where students progressively develop them across the course;</li>
             <li>how students’ reasoning, judgement and contribution should be made visible.</li>
           </ul>
+        </section>
+      </div>
+    </details>
+  );
+}
+
+function BaselineThreeAsRelation() {
+  const areas = [
+    { title: "Learn About AI", detail: <>Informs students&rsquo; understanding of what should remain distinctly human, where AI may augment work and where new AI-enabled practice may emerge.</> },
+    { title: "Learn With AI", detail: <>Supports learning and thinking. This may involve PAIR activities or tools such as Lumi Tutor, but using an AI learning assistant is not, by itself, an <b>Augment</b> curriculum outcome.</> },
+    { title: "Learn to Use AI", detail: <>Most directly supports <b>Augment</b> when students use AI productively in authentic disciplinary or professional work. It may support <b>Advance</b> when students develop new AI-enabled workflows, services or forms of practice.</> },
+    { title: "Learn Beyond AI", detail: <>Strengthens the judgement, responsibility and oversight needed across <b>Anchor</b>, <b>Augment</b> and <b>Advance</b>.</> },
+  ];
+  return (
+    <details className="policy-detail baseline-relation-accordion">
+      <summary>How does the student AI baseline relate to the 3As?</summary>
+      <div>
+        <div className="baseline-intro">
+          <p>The frameworks serve different purposes:</p>
+          <ul className="course-list">
+            <li>The <b>student AI baseline</b> describes the foundational AI competencies students should progressively develop.</li>
+            <li>The <b>3As</b> help lecturers review the disciplinary and professional competencies required in their modules.</li>
+          </ul>
+          <p>They are related but do not map one-to-one.</p>
+        </div>
+        <ul className="baseline-relation-list">
+          {areas.map(({ title, detail }) => (
+            <li key={title}>
+              <b>{title}</b>
+              <p>{detail}</p>
+            </li>
+          ))}
+        </ul>
+        <section className="baseline-module-panel">
+          <h4>For your module</h4>
+          <p>Use the baseline as a reference when applying the 3As. Consider which competencies are relevant, where they are progressively developed, and whether any learning outcomes, activities or assessment need adjustment.</p>
+          <p>Not every module needs to address all four areas or be redesigned.</p>
         </section>
       </div>
     </details>
@@ -1356,6 +1388,7 @@ export default function Home() {
   const actionInfographicMarker = "<!--assessment-actions-infographic-->";
   const modulePreviewMarker = "<!--module-preview-->";
   const studentBaselineMarker = "<!--student-baseline-visual-->";
+  const baselineRelationMarker = "<!--baseline-3as-relation-->";
   const threeAsMarker = "<!--three-as-visual-->";
   const alignmentCheckMarker = "<!--alignment-check-visual-->";
   const alignmentFlowMarker = "<!--alignment-flow-visual-->";
@@ -1379,6 +1412,7 @@ export default function Home() {
     [alignmentFlowMarker]: <AlignmentFlowVisual />,
     [modulePreviewMarker]: <ModulePreviewVisual />,
     [studentBaselineMarker]: <StudentBaselineVisual />,
+    [baselineRelationMarker]: <BaselineThreeAsRelation />,
     [threeAsMarker]: <ThreeAsInfographic />,
     [strategyMapMarker]: <StrategyMap />,
     [supportReplaceMarker]: <SupportReplaceSorter />,
