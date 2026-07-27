@@ -1187,7 +1187,7 @@ function QuizReadinessRecap() {
             <li>GenAI is allowed by default in summative assessment unless explicitly restricted or prohibited.</li>
             <li>State any conditions clearly for each assessment component.</li>
             <li>Students must declare GenAI use.</li>
-            <li>Evidence should be proportionate; for example a complete AI interaction history should be required by default.</li>
+            <li>Evidence should be proportionate; for example, complete AI interaction histories should not be required by default.</li>
             <li>AI-detection results or changes in writing style are not by themselves proof of misconduct.</li>
             <li>Staff remain responsible for every grade and feedback decision.</li>
           </ul>
