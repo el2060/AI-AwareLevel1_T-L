@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>AI T&amp;L Essentials: Level 1 (AI-Aware) — Full Content</title>
+<style>
+  @page { size: A4; margin: 22mm 18mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    color: #262229;
+    line-height: 1.5;
+    font-size: 11.5pt;
+  }
+  h1.doc-title { font-size: 22pt; color: #0a2342; margin-bottom: 2px; }
+  .doc-sub { color: #55515a; font-size: 11pt; margin-top: 0; margin-bottom: 26px; }
+  h1.part-title {
+    font-size: 17pt; color: #fff; background: #004088; padding: 10px 16px;
+    border-radius: 6px; margin-top: 40px; page-break-before: always;
+  }
+  body > h1.part-title:first-of-type { page-break-before: avoid; }
+  h2 { font-size: 14pt; color: #0a2342; border-bottom: 2px solid #dfe4ea; padding-bottom: 4px; margin-top: 26px; }
+  h3 { font-size: 12.5pt; color: #004088; margin-top: 18px; }
+  h4 { font-size: 11.5pt; color: #333; margin-top: 14px; }
+  p { margin: 8px 0; }
+  ul, ol { margin: 8px 0; padding-left: 22px; }
+  li { margin: 3px 0; }
+  blockquote {
+    border-left: 4px solid #c9bcdd; margin: 12px 0; padding: 6px 14px;
+    background: #f6f4fa; font-style: italic; color: #3d3745;
+  }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 10pt; }
+  th, td { border: 1px solid #dfe4ea; padding: 6px 8px; text-align: left; vertical-align: top; }
+  th { background: #e7edf6; }
+  code { background: #f0f0f2; padding: 1px 5px; border-radius: 3px; font-size: 10pt; }
+  hr { border: none; border-top: 1px solid #dfe4ea; margin: 24px 0; }
+  .callout {
+    border-radius: 6px; padding: 10px 14px; margin: 12px 0; border: 1px solid;
+  }
+  .callout-note { background: #e7edf6; border-color: #b7c9e6; }
+  .callout-warning { background: #fff3e8; border-color: #f0c090; }
+  .callout-head { font-weight: 700; margin: 0 0 6px 0; }
+  .key-takeaway {
+    background: #e8f5ec; border: 1px solid #b7dcc0; border-radius: 8px;
+    padding: 12px 16px; margin: 16px 0;
+  }
+  .key-takeaway-head { font-weight: 700; color: #198b34; margin: 0 0 6px 0; }
+
+  /* Interactive-element static rendering */
+  .activity {
+    border: 1.5px dashed #9aa1ac; border-radius: 10px; padding: 14px 18px;
+    margin: 18px 0; background: #fbfbfc; page-break-inside: avoid;
+  }
+  .activity-label {
+    display: inline-block; font-size: 8.5pt; font-weight: 700; letter-spacing: .04em;
+    text-transform: uppercase; color: #fff; background: #6b7280;
+    border-radius: 4px; padding: 2px 8px; margin-bottom: 8px;
+  }
+  .activity h5 { margin: 2px 0 8px 0; font-size: 12pt; color: #0a2342; }
+  .scenario { border-top: 1px solid #e5e5ea; padding: 8px 0; }
+  .scenario:first-of-type { border-top: none; }
+  .scenario .ctx { font-style: italic; }
+  .scenario .opts { margin: 4px 0; font-size: 10pt; color: #55515a; }
+  .scenario .ans { color: #198b34; font-weight: 700; }
+  .scenario .fb { margin: 2px 0 0 0; font-size: 10pt; }
+  .checklist-items { list-style: none; padding-left: 0; }
+  .checklist-items li { padding: 4px 0 4px 22px; position: relative; }
+  .checklist-items li::before { content: "☐"; position: absolute; left: 0; }
+  .infographic-steps { display: block; }
+  .infographic-step { margin: 8px 0; padding: 6px 0 6px 10px; border-left: 3px solid #004088; }
+  .infographic-step b { color: #004088; }
+  .in-practice { margin: 8px 0 0; padding: 8px 12px; border-radius: 6px; background: linear-gradient(180deg, #eef5fc 0%, #e4eff9 100%); }
+  .in-practice .label { display: block; margin-bottom: 3px; color: #004088; font-size: 8pt; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+  .in-practice p { margin: 0; font-size: 10.5pt; }
+  .tool-grid div.tool-row { margin: 6px 0; }
+  .use-case { border-top: 1px dotted #d0d0d5; padding: 8px 0; }
+  .use-case:first-of-type { border-top: none; }
+  .toc { background: #f6f7f9; border: 1px solid #dfe4ea; border-radius: 8px; padding: 14px 20px; margin-bottom: 30px; }
+  .toc h2 { border: none; margin-top: 0; }
+  .toc ol { padding-left: 20px; }
+</style>
+</head>
+<body>
+
+<h1 class="doc-title">AI T&amp;L Essentials: Level 1 (AI-Aware)</h1>
+<p class="doc-sub">Ngee Ann Polytechnic — Mandatory programme for NP teaching staff · Full content export (text + all interactive elements, expanded for print) · Learning time: up to 2 hours</p>
+
+<div class="toc">
+<h2>Contents</h2>
+<ol>
+<li>Start here — AI-enabled T&amp;L overview</li>
+<li>Part 1: NP's Approach to AI-Enabled Teaching &amp; Learning</li>
+<li>Part 2: Curriculum Design and Development</li>
+<li>Part 3: Facilitation of Learning — PAIR</li>
+<li>Part 4: Assessment</li>
+<li>Part 5: Data and Tech-Enhanced T&amp;L</li>
+<li>Part 6: Bring It Together</li>
+</ol>
+</div>
+
+<h1 class="part-title">Start Here — Welcome</h1>
+
+<h2>T&amp;L in an AI-Enabled Context</h2>
+<p>AI is increasingly shaping how our students learn, how professional practice is changing and what NP graduates will need to be able to do.</p>
+<p>Used purposefully, AI can extend opportunities for practice, feedback and personalised learning. It can also help us develop learning resources, identify learning needs and respond more effectively. But AI can also become a shortcut that bypasses the thinking, judgement or performance students are meant to develop.</p>
+<p><strong>The challenge for T&amp;L is to help students benefit from AI while continuing to develop strong disciplinary foundations, independent thinking and human judgement.</strong></p>
+
+<blockquote>
+"If we treat AI as a shortcut&hellip; we will diminish the very purpose of education. But if we treat AI as a catalyst&hellip; it can strengthen our IHLs and strengthen our people."
+<footer>— Mr Desmond Lee, Minister for Education · April 2026</footer>
+</blockquote>
+
+<h3>Building on the TLCF</h3>
+<p>The T&amp;L Competency Framework (TLCF) sets out six domains of T&amp;L practice. This package applies an AI lens to four selected domains: the three functional T&amp;L domains and Data and Tech-Enhanced T&amp;L.</p>
+<ul>
+<li>Curriculum Design and Development</li>
+<li>Facilitation of Learning</li>
+<li>Assessment</li>
+<li>Data and Tech-Enhanced T&amp;L</li>
+</ul>
+<p>Across these areas, we will consider how AI affects what students need to learn, how learning is facilitated and assessed, and how AI tools and learning data can be used purposefully and responsibly.</p>
+
+<h3>What You Will Learn</h3>
+<p>By the end of this package, you will be able to describe how:</p>
+<ol>
+<li>AI is changing the competencies students need and the implications for curriculum design, by reference to NP's 3As framework (Anchor, Augment and Advance);</li>
+<li>you might adjust your learning outcomes and designs for the impact of AI in your discipline, domain, course and/or module;</li>
+<li>you might redesign your summative assessments to efficiently and validly assess the achievement of those adjusted learning outcomes; and</li>
+<li>you could use AI tools and data purposefully and responsibly to improve students' learning experience and performance.</li>
+</ol>
+
+<h3>Learning Time</h3>
+<p><strong>Up to 2 hours.</strong> The package includes the learning content, activities and completion quiz. You may move through the sections at your own pace and spend more time on areas most relevant to your needs.</p>
+
+<div class="activity">
+  <span class="activity-label">Interactive visual — At a Glance</span>
+  <h5>Applying an AI Lens to Four TLCF Domains</h5>
+  <ul>
+    <li><strong>Curriculum Design and Development</strong> — What competencies your students need as professional practice changes.</li>
+    <li><strong>Facilitation of Learning</strong> — How AI can support the development of Anchor, Augment and Advance (3As) competencies in your lessons.</li>
+    <li><strong>Assessment</strong> — How assessment can provide valid and reliable evidence of students' achievement of 3As-adjusted learning outcomes.</li>
+    <li><strong>Data and Tech-Enhanced T&amp;L</strong> — How AI tools and data can be used purposefully and responsibly to enhance learning experiences and performances.</li>
+  </ul>
+</div>
+
+<h1 class="part-title">Part 1: NP's Approach to AI-Enabled Teaching &amp; Learning</h1>
+
+<h2>NP's Approach to AI-Enabled T&amp;L</h2>
+<p>AI is changing what students need to learn, how they learn and how their learning is assessed.</p>
+<p>NP's approach brings together curriculum, pedagogy, assessment, personalised learning and human capabilities to help prepare students for professional practice in an AI-enabled world.</p>
+
+<div class="activity">
+  <span class="activity-label">Interactive visual — Strategy map (click to explore each strategy)</span>
+  <h5>NP's Five Strategies at a Glance</h5>
+  <p><strong>Outcome — AI-ready graduates:</strong> Strong human qualities · Deep domain expertise · Effective use of AI in professional practice.</p>
+  <p>NP graduates should combine deep domain expertise with strong human qualities and the ability to use AI effectively and responsibly in professional practice.</p>
+  <div class="infographic-steps">
+    <div class="infographic-step"><b>Strategy 1 · Embed AI-Integrated Pedagogy · PAIR</b><br/>How can we help students learn and work with AI purposefully, critically and responsibly? <em>(Covers Part 3 · Facilitation of Learning)</em></div>
+    <div class="infographic-step"><b>Strategy 2 · Transform the Curriculum · 3As</b><br/>What competencies should our students develop and demonstrate as professional practice changes? <em>(Covers Part 2 · Curriculum Design and Development)</em></div>
+    <div class="infographic-step"><b>Strategy 3 · Redesign Assessment</b><br/>How can we design assessment that provides valid and reliable evidence of learning in an AI-enabled context? <em>(Covers Part 4 · Assessment)</em></div>
+    <div class="infographic-step"><b>Strategy 4 · Enable Personalised Learning</b><br/>How can AI extend opportunities for practice, feedback and coaching in our modules? <em>(Covers Part 5 · Data and Tech-Enhanced T&amp;L)</em></div>
+    <div class="infographic-step"><b>Strategy 5 · Strengthen Human Skills and Resilience</b><br/>How can we strengthen the human qualities students need in an AI-enabled world?</div>
+  </div>
+</div>
+
+<h2>Applying the Strategies to Our T&amp;L Practice</h2>
+<p>The next four sections apply NP's strategies across four TLCF domains.</p>
+
+<div class="activity">
+  <span class="activity-label">Interactive visual — Module preview</span>
+  <ul>
+    <li><strong>Curriculum Design and Development</strong> — Use the 3As to review the competencies students need as professional practice changes.</li>
+    <li><strong>Facilitation of Learning</strong> — Use PAIR and personalised learning approaches to help students learn and work with AI purposefully.</li>
+    <li><strong>Assessment</strong> — Apply NP's GenAI assessment requirements and design approaches to provide valid and reliable evidence of learning and students' own contribution.</li>
+    <li><strong>Data and Tech-Enhanced T&amp;L</strong> — Use suitable AI tools and learning data to support learning and disciplinary practice, with appropriate checks and human oversight.</li>
+  </ul>
+</div>
+
+<h2>Keep One of Your Modules in Mind</h2>
+<p>As you work through the next four sections, keep one module you teach, lead or support in mind. Use it to connect the ideas to your own T&amp;L practice.</p>
+
+<h1 class="part-title">Part 2: Curriculum Design and Development — What Competencies Do Students Need?</h1>
+
+<h2>Review Curriculum for AI-Enabled Professional Practice</h2>
+<p>As AI changes professional practice, review the competencies students should develop and demonstrate, including:</p>
+<ul>
+<li>which human and disciplinary capabilities remain essential;</li>
+<li>how students should use AI productively;</li>
+<li>what new AI-enabled practice may emerge.</li>
+</ul>
+<p>The 3As provide a simple lens for doing this.</p>
+
+<div class="activity">
+  <span class="activity-label">Concept visual — The 3As</span>
+  <h5>A simple lens for reviewing the competencies students need and aligning learning outcomes, activities and assessment.</h5>
+  <div class="infographic-steps">
+    <div class="infographic-step"><b>Anchor</b> — Distinctly human capabilities. Develop the human qualities, disciplinary judgement and essential capabilities students need even as AI becomes more capable.</div>
+    <div class="infographic-step"><b>Augment</b> — Productive use of AI. Develop students' ability to use AI effectively to improve the quality, productivity or effectiveness of their work while exercising appropriate judgement and oversight.</div>
+    <div class="infographic-step"><b>Advance</b> — New AI-enabled practice. Develop students' ability to use AI to create new possibilities, workflows or forms of professional practice beyond established pre-AI job boundaries.</div>
+  </div>
+</div>
+
+<p><em>The 3As describe the competencies students may need for AI-enabled professional practice. They are not categories of AI tools or levels of difficulty.</em></p>
+
+<h2>Applying the 3As Across a Module</h2>
+<p>Use the 3As to consider which competencies are relevant to the discipline, module level and intended learning outcomes.</p>
+<p><strong>Anchor</strong> may be emphasised where human judgement, empathy, ethics, safety or disciplinary reasoning must be demonstrated.</p>
+<p><strong>Augment</strong> may be emphasised where students need to use AI effectively and responsibly as part of learning or professional practice.</p>
+<p><strong>Advance</strong> may be emphasised where students are ready to explore new and innovative AI-enabled services, workflows or forms of practice.</p>
+<p>A module may focus on one or combine several of the 3As. They do not need to be addressed equally.</p>
+<p>Reviewing a module through the 3As does not automatically mean it must be changed. The review may confirm that the current learning outcomes, activities and assessment remain appropriate.</p>
+
+<h2>Quick Check — Understanding the 3As</h2>
+<div class="activity">
+  <span class="activity-label">Interactive quiz — Accurate or Needs correction? (all 5 shown with correct answer &amp; feedback)</span>
+  <p>For each statement, decide whether it is accurate or needs correction.</p>
+  <div class="scenario"><p class="ctx">1. Every module must revise its learning outcomes and assessment to include GenAI.</p><p class="opts">Options: Accurate / Needs correction</p><p class="ans">Answer: Needs correction</p><p class="fb">All modules should consider how AI may affect the competencies students need. Changes are only needed where the review identifies a gap or misalignment.</p></div>
+  <div class="scenario"><p class="ctx">2. A module may emphasise one or several of the 3As, and the review may conclude that no change is needed.</p><p class="opts">Options: Accurate / Needs correction</p><p class="ans">Answer: Accurate</p><p class="fb">The relevant emphasis depends on the discipline, module level, intended learning outcomes and professional context.</p></div>
+  <div class="scenario"><p class="ctx">3. Using an AI tutor or learning assistant in a module means the module is developing Augment capabilities.</p><p class="opts">Options: Accurate / Needs correction</p><p class="ans">Answer: Needs correction</p><p class="fb">AI tutors and learning assistants support facilitation. Augment refers to students learning to use AI productively in disciplinary or professional work, with appropriate judgement and oversight.</p></div>
+  <div class="scenario"><p class="ctx">4. Anchor can involve complex human and disciplinary judgement, and is not a lower-order category.</p><p class="opts">Options: Accurate / Needs correction</p><p class="ans">Answer: Accurate</p><p class="fb">Anchor includes capabilities such as professional judgement, empathy, ethics, creativity, safety-critical reasoning and other capabilities that remain distinctly human. To identify what should remain Anchor, lecturers need an informed view of what current AI tools can and cannot do.</p></div>
+  <div class="scenario"><p class="ctx">5. A module that focuses on Anchor can simply prohibit AI without considering what current AI tools can do.</p><p class="opts">Options: Accurate / Needs correction</p><p class="ans">Answer: Needs correction</p><p class="fb">Understanding current AI capabilities helps lecturers identify what students must genuinely be able to do themselves to be work-ready, and to design learning activities and assessments accordingly. Lecturers may test relevant tools or use guided activities such as PAIR to understand how AI changes the nature of the work for which the course or module prepares students, and therefore what students must be able to do independently of AI.</p></div>
+</div>
+
+<h2>Aligning Competencies, Learning Activities and Assessment</h2>
+<p>Once the required competencies are clear, align the rest of the course or module to support their development.</p>
+
+<div class="activity">
+  <span class="activity-label">Concept visual — Alignment flow</span>
+  <p>A <strong>competency</strong> is expressed through a <strong>learning outcome</strong>, developed through <strong>learning activities</strong> and demonstrated through <strong>assessment evidence</strong>.</p>
+  <div class="infographic-steps">
+    <div class="infographic-step"><b>1. Competency</b> — What students need to develop.</div>
+    <div class="infographic-step"><b>2. Learning outcome</b> — What students should be able to demonstrate.</div>
+    <div class="infographic-step"><b>3. Learning activities</b> — How students develop and practise the outcome.</div>
+    <div class="infographic-step"><b>4. Assessment evidence</b> — How achievement of the outcome is made visible.</div>
+  </div>
+</div>
+
+<blockquote>Whether the focus is Anchor, Augment or Advance, the learning outcome, activities and assessment should align so that students can develop and demonstrate their achievement of the intended competency.</blockquote>
+
+<h2>Illustrative Applications</h2>
+<p>These broad examples show how the 3As might look across different forms of practice. They are not intended to prescribe outcomes for any discipline.</p>
+<table>
+<thead><tr><th></th><th>Anchor</th><th>Augment</th><th>Advance</th></tr></thead>
+<tbody>
+<tr><td><strong>Technical, scientific or engineering</strong></td><td>Apply <strong>core conceptual reasoning</strong> and safety-critical judgement.</td><td><strong>Use AI to analyse</strong>, test or improve a solution.</td><td>Develop a <strong>new and innovative AI-enabled workflow</strong> or application.</td></tr>
+<tr><td><strong>People-centred or service-based</strong></td><td>Demonstrate <strong>empathy</strong>, ethics and sound professional judgement.</td><td><strong>Use AI to support</strong> more efficient planning or more effective personalised support.</td><td>Develop a <strong>new and innovative AI-enabled service</strong> or care approach.</td></tr>
+<tr><td><strong>Business, creative or communication</strong></td><td>Evaluate <strong>evidence</strong>, context and audience needs.</td><td><strong>Use AI to generate</strong>, compare or refine possibilities.</td><td>Create a <strong>new and innovative AI-enabled service</strong>, experience or workflow.</td></tr>
+</tbody>
+</table>
+<blockquote>Lecturers should apply the 3As to analyse the current impact of AI on their professional context and disciplinary expertise, adjust intended learning outcomes if necessary, and then align learning activities and assessments accordingly.</blockquote>
+
+<h2>Apply the 3As to One Learning Outcome</h2>
+<p>Choose one learning outcome from a module you teach, lead or support.</p>
+
+<h3>Step 1 · Review the Competency</h3>
+<p>Does the learning outcome still reflect the competencies students need in current and emerging professional practice? Which of these may be relevant?</p>
+<ul>
+<li>distinctly human capabilities;</li>
+<li>productive use of AI;</li>
+<li>new, innovative AI-enabled professional practice.</li>
+</ul>
+
+<h3>Step 2 · Check the Alignment</h3>
+<div class="activity">
+  <span class="activity-label">Concept visual — Alignment check</span>
+  <ul>
+    <li><strong>Learning outcome</strong> — Does it clearly describe how the revised competency is to be demonstrated?</li>
+    <li><strong>Learning activities</strong> — Do they help students to develop the revised competency?</li>
+    <li><strong>Assessment</strong> — Does it provide valid and reliable evidence of the achievement of the revised competency?</li>
+  </ul>
+</div>
+
+<h3>Step 3 · Identify One Adjustment</h3>
+<p>What is one adjustment that would improve the alignment between the learning outcome, activities and assessment?</p>
+
+<h2>Supporting Context · Student AI Baseline Competencies</h2>
+<p>The sector student AI baseline provides a shared reference for the foundational AI competencies students should progressively develop.</p>
+<div class="activity">
+  <span class="activity-label">Expandable 1 — "What should students progressively understand and be able to do with AI?"</span>
+  <p>The POLITE baseline identifies four broad areas.</p>
+  <p><em>The summary below highlights the key ideas and NP context. Refer to the <a href="https://nplms.polite.edu.sg/d2l/le/lessons/998763/topics/14624182">full sector AI baseline competencies and learning outcomes</a> for the detailed competency statements and descriptors.</em></p>
+  <div class="infographic-steps">
+    <div class="infographic-step">
+      <b>01 · Learn About AI</b> — <strong>Understand AI and its capabilities.</strong> Students should recognise different forms of AI, understand broadly what they can and cannot do, and be aware that AI outputs may be incomplete, biased or inaccurate.
+      <div class="in-practice"><span class="label">In Practice</span><p>Explain why a convincing AI-generated response may still be wrong.</p></div>
+    </div>
+    <div class="infographic-step">
+      <b>02 · Learn With AI</b> — <strong>Use AI to support thinking and problem-solving.</strong> Students should be able to work with AI to break down problems, explore patterns, test explanations and identify gaps in their own reasoning—without handing over the thinking to AI.
+      <div class="in-practice"><span class="label">In Practice</span><p>Use AI to break a complex problem into parts, then examine and improve the proposed reasoning.</p></div>
+    </div>
+    <div class="infographic-step">
+      <b>03 · Learn to Use AI</b> — <strong>Apply AI purposefully and evaluate its outputs.</strong> Students should select suitable tools and inputs, use AI to improve a task or outcome, and evaluate the output before relying on it.
+      <div class="in-practice"><span class="label">In Practice</span><p>Generate an initial output with AI, then check its accuracy, relevance, bias and suitability for the context.</p></div>
+    </div>
+    <div class="infographic-step">
+      <b>04 · Learn Beyond AI</b> — <strong>Exercise judgement and responsibility.</strong> Students should consider the ethical, legal and societal implications of AI, retain human oversight and remain accountable for AI-supported decisions and outputs.
+      <div class="in-practice"><span class="label">In Practice</span><p>Decide whether an AI-supported recommendation is fair, appropriate and safe to act on.</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="activity">
+  <span class="activity-label">Expandable 2 — "How does the student AI baseline relate to the 3As?"</span>
+  <p>The frameworks serve different purposes:</p>
+  <ul>
+    <li>The <strong>student AI baseline</strong> describes the foundational AI competencies students should progressively develop.</li>
+    <li>The <strong>3As</strong> help lecturers review the disciplinary and professional competencies required in their modules.</li>
+  </ul>
+  <p><strong>They are related but do not map one-to-one.</strong></p>
+  <div class="infographic-steps">
+    <div class="infographic-step"><b>Learn About AI</b> — Informs students' understanding of what should remain distinctly human, where AI may augment work and where new AI-enabled practice may emerge.</div>
+    <div class="infographic-step"><b>Learn With AI</b> — Supports learning and thinking. This may involve PAIR activities or tools such as Lumi Tutor, but using an AI learning assistant is not, by itself, an <b>Augment</b> curriculum outcome.</div>
+    <div class="infographic-step"><b>Learn to Use AI</b> — Most directly supports <b>Augment</b> when students use AI productively in authentic disciplinary or professional work. It may support <b>Advance</b> when students develop new AI-enabled workflows, services or forms of practice.</div>
+    <div class="infographic-step"><b>Learn Beyond AI</b> — Strengthens the judgement, responsibility and oversight needed across <b>Anchor</b>, <b>Augment</b> and <b>Advance</b>.</div>
+  </div>
+  <p><strong>Applying This to Your Module</strong></p>
+  <p>Use the student baseline as a reference when applying the 3As. Consider:</p>
+  <ul>
+    <li>which AI competencies are relevant to your discipline and module;</li>
+    <li>where students progressively develop them across the course;</li>
+    <li>whether any learning outcomes, activities or assessment need adjustment; and</li>
+    <li>how students' reasoning, judgement and contribution should be made visible.</li>
+  </ul>
+  <p>Not every module needs to address all four areas or be redesigned.</p>
+</div>
+
+<div class="key-takeaway">
+  <p class="key-takeaway-head">✔ Key Takeaway</p>
+  <p>Use the 3As to identify the competencies students need, then align the learning outcomes, activities and assessment so students can develop and demonstrate them.</p>
+</div>
+
+<h1 class="part-title">Part 3: Facilitation of Learning — How Can AI Support Learning?</h1>
+
+<h2>PAIR: Structuring Students' Learning With AI</h2>
+<p>NP uses the PAIR framework to help students learn and solve problems with AI purposefully, critically and responsibly.</p>
+<p>PAIR provides a simple and adaptable structure. You design the task and determine the level of guidance, choice and support according to the intended learning and students' readiness.</p>
+<p>PAIR is:</p>
+<p><strong>Human-centred</strong> — AI augments rather than replaces human insight, judgement and creativity.</p>
+<p><strong>Skill-centred</strong> — Students develop transferable capabilities such as problem formulation, exploration, experimentation, critical thinking and reflection.</p>
+<p><strong>Responsibility-centred</strong> — Students use AI effectively and responsibly and remain accountable for their decisions and final work.</p>
+<p>PAIR can be adapted across disciplines and used within an existing learning activity or to design a new one.</p>
+<p><em>Adapted from Acar, O. A. (2023), "Are Your Students Ready for AI? A 4-Step Framework to Prepare Learners for a ChatGPT World."</em></p>
+
+<h2>The PAIR Process</h2>
+<div class="activity">
+  <span class="activity-label">Concept visual — PAIR infographic</span>
+  <h5>A structured process for learning and problem-solving with AI</h5>
+  <div class="infographic-steps">
+    <div class="infographic-step"><b>P · Problem</b> — Students clarify or frame the task or challenge. Understand the intended outcome, requirements, constraints and success criteria. Depending on the activity, the problem may be provided, guided or defined by students. <em>Cue: What must we understand before using AI?</em></div>
+    <div class="infographic-step"><b>A · AI</b> — Students consider and select a suitable AI tool. Identify what support is needed and consider the tool's capabilities, limitations, accessibility and permitted use. <em>Cue: What could AI contribute, and which tool is suitable?</em></div>
+    <div class="infographic-step"><b>I · Interaction</b> — Students experiment, evaluate and refine. Interact with the tool, try different approaches and critically evaluate the outputs for relevance, accuracy, bias and suitability. Refine the interaction or output as needed. Important claims should be checked against primary, official or trusted sources, especially for legal, regulatory, technical or specialised information. <em>Cue: How will we test and improve the output?</em></div>
+    <div class="infographic-step"><b>R · Reflection</b> — Students examine the process, learning and implications. Consider how AI supported or hindered the work, what was learnt, where human judgement was needed and how their approach could improve. <em>Cue: What did we learn about the task, the tool and our own judgement?</em></div>
+  </div>
+  <p><em>Note: Students may revisit the problem, reconsider the tool and refine their interactions as their understanding develops.</em></p>
+</div>
+
+<h2>Designing the Scaffolding</h2>
+<p>You design the conditions that enable students to use PAIR in ways that support the intended learning.</p>
+<table>
+<thead><tr><th>PAIR stage</th><th>You design for</th></tr></thead>
+<tbody>
+<tr><td><strong>Problem</strong></td><td>The intended learning, task boundaries and whether the inquiry is defined, guided or open.</td></tr>
+<tr><td><strong>AI</strong></td><td>Suitable and accessible tool choices, and whether students should explore or justify their selection.</td></tr>
+<tr><td><strong>Interaction</strong></td><td>Opportunities to experiment with, test, challenge and verify AI-generated outputs.</td></tr>
+<tr><td><strong>Reflection</strong></td><td>Prompts or evidence that make students' decisions, learning and judgement visible.</td></tr>
+</tbody>
+</table>
+<p>The degree of student choice should reflect their readiness and the intended learning.</p>
+<p>Less experienced students may need a more clearly-defined task, suggested tools and guided reflections. More experienced students may take greater responsibility for framing the task, selecting tools and shaping their interactions with AI.</p>
+
+<h2>Check That AI Supports the Intended Learning</h2>
+<p>Good scaffolding should keep students engaged in the capability the activity is intended to develop.</p>
+<p>AI can support learning when students use it to:</p>
+<ul>
+<li>explore approaches;</li>
+<li>compare explanations or perspectives;</li>
+<li>generate material for critique;</li>
+<li>practise and receive feedback;</li>
+<li>test and refine their thinking.</li>
+</ul>
+<p>AI may undermine learning when it completes the thinking, judgement, creation or performance students are meant to develop.</p>
+<blockquote>Check whether students are still developing or practising the intended capability.</blockquote>
+
+<h2>When AI Has Bypassed the Learning</h2>
+<p>Where students cannot demonstrate the intended understanding after using AI to complete an activity, address the learning gap directly ("reverse-engineer" the AI output).</p>
+<p>A follow-up activity can require students to:</p>
+<ul>
+<li>identify what they did not understand or verify;</li>
+<li>examine weaknesses in the AI-supported work;</li>
+<li>explain the relevant concepts; and</li>
+<li>apply what they appear to have learnt from the completed activity to a new problem.</li>
+</ul>
+<p>For example, after an AI-completed OAL activity, an IPL lesson could require students to identify gaps and apply the concepts to a new situation.</p>
+
+<h2>Quick Check — Is AI Supporting the Learning?</h2>
+<div class="activity">
+  <span class="activity-label">Interactive quiz — sort each scenario (all 4 shown with correct answer &amp; feedback)</span>
+  <p>For each situation, decide whether AI supports students in developing the intended capability or does that work for them.</p>
+  <div class="scenario"><p class="ctx">1. Students ask AI for a different worked example of a concept, then attempt the practice set on their own.</p><p class="opts">Options: Supports the intended learning / Replaces the intended learning</p><p class="ans">Answer: Supports the intended learning</p><p class="fb">AI provides an additional explanation, but students still apply the concept themselves in the practice set.</p></div>
+  <div class="scenario"><p class="ctx">2. A student pastes the assignment brief into GenAI and submits a lightly edited version of the response.</p><p class="opts">Options: Supports the intended learning / Replaces the intended learning</p><p class="ans">Answer: Replaces the intended learning</p><p class="fb">AI has produced the response that the student was expected to develop. Light editing does not demonstrate the intended analysis, judgement or creation.</p></div>
+  <div class="scenario"><p class="ctx">3. Students generate three AI draft answers, then critique and rank them against the success criteria.</p><p class="opts">Options: Supports the intended learning / Replaces the intended learning</p><p class="ans">Answer: Supports the intended learning</p><p class="fb">Generating material for critique keeps evaluation and judgment with students.</p></div>
+  <div class="scenario"><p class="ctx">4. A student asks AI to write their reflection on what they learned from the project.</p><p class="opts">Options: Supports the intended learning / Replaces the intended learning</p><p class="ans">Answer: Replaces the intended learning</p><p class="fb">The reflection is intended to make the student's own learning and judgement visible. Asking AI to write it replaces that process.</p></div>
+</div>
+
+<div class="callout callout-note">
+  <p class="callout-head">ⓘ PAIR is a Teaching and Learning Aid to Develop AI Literacy</p>
+  <p>PAIR activities are useful hands-on activities for students to learn, in the context of the module / discipline / domain, basic and very specific AI literacy skills, such as verifying important AI claims against primary, official and trusted sources before relying on them. For example, for emerging news and current affairs, and specialised legal, regulatory or technical information, students may not learn until their PAIR lesson that GenAI can convincingly produce WRONG answers based on popular or prominent sources but miss more accurate niche and/or official sources. Students may also misunderstand that AI "cutoff dates" do NOT block Internet-connected AI tools from retrieving information after the cutoff date. The concept of a cutoff date refers to the data used to <em>train</em> the tool.</p>
+</div>
+
+<div class="callout callout-note">
+  <p class="callout-head">ⓘ AI Tools and Student Guidance on GenAI Use</p>
+  <p>Examples of AI tools students may encounter or use in PAIR activities include the tools referenced in the student guidance which you can <a href="https://sway.cloud.microsoft/qLxKSTW1Ody963Po?ref=Link">read here</a>. They include ChatGPT, Github Copilot and Gamma.</p>
+</div>
+
+<h2>Apply PAIR to One Learning Activity</h2>
+<p>Choose one activity from a module you teach, lead or support. Consider:</p>
+<ol>
+<li>what students should understand or do before using AI;</li>
+<li>what role AI should play;</li>
+<li>how students will evaluate and improve the output;</li>
+<li>what reflection or evidence will make their learning and judgement visible.</li>
+</ol>
+<p>Then decide what level of structure and choice your students need.</p>
+<div class="activity">
+  <span class="activity-label">Tap checklist — all 4 prompts</span>
+  <ul class="checklist-items">
+    <li>what students should understand or do before using AI;</li>
+    <li>what role AI should play;</li>
+    <li>how students will evaluate and improve the output;</li>
+    <li>what reflection or evidence will make their learning and judgement visible.</li>
+  </ul>
+</div>
+
+<div class="key-takeaway">
+  <p class="key-takeaway-head">✔ Key Takeaway</p>
+  <p>PAIR provides an adaptable structure for helping students clarify the task, select suitable AI support, interact critically with AI and reflect on their learning and judgement. You determine the task, scaffolding and degree of student choice so that AI supports—not replaces—the intended learning.</p>
+</div>
+
+<h1 class="part-title">Part 4: Assessment — How Do We Assess Learning in an AI-enabled World?</h1>
+
+<h2>Applying an AI Lens to Assessment</h2>
+<p>In a GenAI-enabled context, assessment should validly and reliably measure students' Anchor, Augment and/or Advance competencies.</p>
+
+<h2>Two Assessment Priorities</h2>
+<h3>Apply NP's GenAI-in-Assessment Guidance (Policy from AY2027)</h3>
+<p>GenAI is allowed by default in summative assessments unless it is explicitly restricted or prohibited. Lecturers must describe their specific restrictions or prohibitions clearly, students must always declare their GenAI use, and in all cases students must be informed of the list of always-prohibited uses - in effect, students must be informed that they cannot use GenAI to cheat.</p>
+
+<h3>Assess AI-adjusted Learning Outcomes</h3>
+<p>Use the 3As to clarify:</p>
+<ul>
+<li>what human or disciplinary capabilities students must demonstrate;</li>
+<li>how AI may be used productively;</li>
+<li>where new AI-enabled practice may be assessed.</li>
+</ul>
+<p>Where relevant, assessment should make visible students' ability to evaluate AI outputs, use AI meaningfully and exercise appropriate judgement and oversight.</p>
+<blockquote>A polished final product alone may not show what students know, can do or have contributed.</blockquote>
+
+<div class="callout callout-note">
+  <p class="callout-head">ⓘ Policy Reference</p>
+  <p>This section summarises the main requirements. Refer to the <a href="https://connectnpedu.sharepoint.com/sites/DigitalLearning/AIinLearning/SitePages/Policy-%26-Guidance.aspx">Gen AI in Summative Assessment Policy &amp; Guidance</a> for the full policy, processes and appendices.</p>
+</div>
+
+<h2>Four Lecturer Actions</h2>
+<div class="activity">
+  <span class="activity-label">Concept visual — Assessment actions sequence</span>
+  <h5>A Practical Sequence for Assessment Design</h5>
+  <div class="infographic-steps">
+    <div class="infographic-step"><b>1. Start With the Learning Outcome</b> — Describe the capability being assessed and what students must still demonstrate themselves.</div>
+    <div class="infographic-step"><b>2. State the GenAI Conditions Clearly</b> — State whether GenAI use is restricted or prohibited for each component. If no GenAI use conditions are stipulated, GenAI is allowed - it is NP's default position - you would still need to inform students of the always-prohibited list of GenAI uses.</div>
+    <div class="infographic-step"><b>3. Make Students' Contribution Visible</b> — Describe how students will be expected to show you they have achieved the learning outcome.</div>
+    <div class="infographic-step"><b>4. Prepare Students and Require Declaration</b> — Explain your conditions and other details to students early, provide suitable formative preparation and remind students if you are assessing an Augment or Advance outcome that GenAI use declarations are necessary.</div>
+  </div>
+</div>
+
+<h3>1. Start With the Learning Outcome</h3>
+<p>Identify:</p>
+<ul>
+<li>the capability the assessment is intended to measure;</li>
+<li>what students must demonstrate themselves; and</li>
+<li>where AI use reflects authentic professional practice.</li>
+</ul>
+<blockquote>You MUST amend your assessment design IF AI can complete that assessment to at least a passing standard and you cannot be certain how your students contributed to the completion of that assessment.</blockquote>
+
+<h3>2. State the GenAI Conditions Clearly</h3>
+<p>For each assessment component, make clear whether GenAI use is:</p>
+<ul>
+<li>allowed, where no restriction or prohibition has been stated;</li>
+<li>restricted, subject to stated conditions; or</li>
+<li>prohibited.</li>
+</ul>
+<p>This applies to all summative tasks that contribute to the module grade.</p>
+
+<div class="callout callout-note">
+  <p class="callout-head">ⓘ Did You Realise? In an AI-Pervasive World</p>
+  <ol>
+    <li>You MUST amend your assessment design IF AI can complete that assessment to at least a passing standard AND you cannot be certain how your students contributed to the completion of that assessment.</li>
+    <li>A take-home assignment's final product does NOT usually provide sufficient evidence of the achievement of learning outcomes unless it is accompanied by a live-check element or elements. Consider interactive oral assessments, e-tests and other types of question-and-answer designs.</li>
+    <li>If students' AI use can be directly assessed through e-tests, presentations, demonstrations and question-and-answer sessions, GenAI-use declarations can be brief. Generally, you should not need to analyse voluminous AI conversation and draft-work histories. You may not even need lengthy AI-use reflections unless you intend to rely on those for subsequent live interviews with students.</li>
+    <li>AI rapidly evolves, so any AI-use restrictions you impose may become outdated, insufficient or irrelevant quickly.</li>
+    <li>Many types of AI-use restrictions are impractical to enforce because lecturers do not supervise students 24/7; or, they are by themselves unnecessary to develop the competencies you wish students to develop.</li>
+  </ol>
+  <p><strong>Example:</strong></p>
+  <p>Even if you restrict AI use to preparation and prohibit AI for final presentations, students can use AI to prepare all the slides they will present including their presentation speeches (scripts). They can then just read off their own slides/scripts. How about designing the presentation's rules and marking rubric to reward the kinds of behaviour you desire? Impose restrictions on slide design so that students cannot read off AI-prepared slides; award most of the presentation grade for good answers to your higher-order-thinking questions following the presentation; grade students who do NOT read off scripts better than those who do; and so on.</p>
+</div>
+
+<div class="callout callout-warning">
+  <p class="callout-head">⚠ Always-Prohibited Uses</p>
+  <p>Always make clear to students that they must not:</p>
+  <ul>
+    <li>submit purely AI-generated content as their own;</li>
+    <li>disguise AI-generated content as original work;</li>
+    <li>rely solely on GenAI for insights or reflections;</li>
+    <li>use GenAI to simulate an interview, observation or interaction that must involve a real person.</li>
+  </ul>
+</div>
+
+<h3>3. Make Learning and Contribution Visible</h3>
+<p>Avoid vague instructions such as:</p>
+<blockquote>You may use AI appropriately.</blockquote>
+<p>State:</p>
+<ul>
+<li>what AI may be used for;</li>
+<li>what students must do themselves;</li>
+<li>what evidence they must retain or provide.</li>
+</ul>
+<p>Evidence of students' learning contributions may include drafts and selected interaction records, and would always include, at some point in the assessment process, "live" in-person demonstrations, explanations and answers to questions. Generally it is very inefficient and possibly also ineffective to analyse AI conversation histories for evidence of students' learning, so it should not be necessary to require complete AI chat histories by default. Similarly for AI-use reflections, unless they are used for live interviews on AI use.</p>
+
+<div class="activity">
+  <span class="activity-label">Expandable — "Assessing Augment Capabilities"</span>
+  <p>Where students are expected to use AI to Augment their work, the assessment should make their use of AI and their own judgement visible.</p>
+  <p>Students may be required to:</p>
+  <ul>
+    <li>define the problem or intended outcome;</li>
+    <li>select an appropriate AI tool;</li>
+    <li>evaluate, refine or reject AI-generated material;</li>
+    <li>explain their choices and contribution; and</li>
+    <li>reflect on where human judgement was required.</li>
+  </ul>
+  <p>Evidence may be gathered through the final output, selected process evidence, demonstrations, presentations or question-and-answer sessions.</p>
+  <p>For example, students using an AI image generator in a design project could be directly observed during the process and then, at the final presentation, could explain how they framed the task, selected and refined outputs, addressed design requirements and made the final creative decisions in response to assessors' questions.</p>
+</div>
+
+<h3>4. Prepare Students and Require Declaration</h3>
+<p>Explain your AI use conditions early and provide suitable formative preparation, checkpoints or mock runs where helpful.</p>
+<p>All relevant project and assignment submission cover pages must include an appropriate GenAI Use Declaration (see Appendix 2B of the GenAI-in-Assessment guidance). Any evidence should be proportionate and necessary to establish the intended learning outcome, especially students' own contributions. For reasons stated above, a complete AI interaction log or reflective essay is not generally evidence that you should require by default.</p>
+<p>Module leaders are responsible for:</p>
+<ul>
+<li>setting and communicating the conditions;</li>
+<li>ensuring declarations are completed;</li>
+<li>preparing students for the expected use or non-use of AI; and</li>
+<li>designing assessments that provide valid and reliable evidence of achievement of work-ready learning outcomes in an AI-pervasive world.</li>
+</ul>
+
+<div class="activity">
+  <span class="activity-label">Interactive quiz — Allowed, Restricted or Prohibited? (all 4 shown with correct answer &amp; feedback)</span>
+  <p>Decide how each situation sits under NP's GenAI guidance (policy from AY2027) for summative assessment.</p>
+  <div class="scenario"><p class="ctx">1. The brief states nothing about GenAI, and a student uses it to brainstorm approaches for a take-home assignment.</p><p class="opts">Options: Allowed / Restricted / Prohibited</p><p class="ans">Answer: Allowed</p><p class="fb">GenAI use is allowed by default in summative assessment unless it is explicitly restricted or prohibited. The student must still cite and declare the use.</p></div>
+  <div class="scenario"><p class="ctx">2. Students may use GenAI to prepare, but must complete the live presentation and question-and-answer session without it.</p><p class="opts">Options: Allowed / Restricted / Prohibited</p><p class="ans">Answer: Restricted</p><p class="fb">This is a restricted-use condition: GenAI is allowed for preparation but prohibited during the live component. Is such a restriction necessary, effective and aligned to 3As outcomes?</p></div>
+  <div class="scenario"><p class="ctx">3. A student submits a fully AI-generated report and declares the use on the cover page.</p><p class="opts">Options: Allowed / Restricted / Prohibited</p><p class="ans">Answer: Allowed</p><p class="fb">Submitting purely AI-generated content as one's own is always prohibited — but declaring AI use makes it honest, it is not "as one's own". If you wish to punish lack of originality, do so in the grading rubric for the report.</p></div>
+  <div class="scenario"><p class="ctx">4. Students must produce GenAI-generated images but must also frame the task, select and refine the output, and explain their choices.</p><p class="opts">Options: Allowed / Restricted / Prohibited</p><p class="ans">Answer: Allowed</p><p class="fb">GenAI is permitted provided students show they are masters of the tool. This is an example of assessment of an Augment learning outcome.</p></div>
+</div>
+
+<h2>Important Policy Reminders</h2>
+<div class="activity">
+  <span class="activity-label">Expandable — "Staff Use of GenAI in Grading"</span>
+  <p>Staff must not use GenAI to determine grades independently. Any approved use as a grading assistant requires management approval, appropriate quality assurance, disclosure to students and full human review of every grade and feedback decision.</p>
+</div>
+<div class="activity">
+  <span class="activity-label">Expandable — "Suspected GenAI Misuse"</span>
+  <p>AI-detection results, changes in writing style or unexpectedly sophisticated language may raise concerns, but they are not sufficient proof of misconduct.</p>
+  <p>Where misuse is suspected, follow the process in the Gen AI in Summative Assessment Guidance (Policy from AY2027):</p>
+  <ul>
+    <li>review the submission and the student's GenAI declaration;</li>
+    <li>interview the student to learn more about how the work was produced;</li>
+    <li>request available evidence of the development or writing process; and</li>
+    <li>check for inconsistencies between the student's declared and actual GenAI use.</li>
+  </ul>
+  <p>Do not assign a penalty or refer a case solely on the basis of an AI-detection result or personal impression, without prior investigation.</p>
+</div>
+<div class="activity">
+  <span class="activity-label">Expandable — "When an Assessment May Need Review"</span>
+  <p>Review the assessment when:</p>
+  <ul>
+    <li>AI can complete the central task without the intended capability being demonstrated;</li>
+    <li>the student's own contribution is difficult to establish;</li>
+    <li>the task no longer reflects current professional practice;</li>
+    <li>the GenAI conditions are unclear;</li>
+    <li>students have not been prepared for the required use or non-use of AI.</li>
+  </ul>
+</div>
+
+<h2>Apply It to Your Module</h2>
+<p>Consider one assessment:</p>
+<blockquote>What capability must students demonstrate, how may GenAI be used, and what evidence will make students' own contributions visible?</blockquote>
+
+<div class="key-takeaway">
+  <p class="key-takeaway-head">✔ Key Takeaway</p>
+  <p>Begin with the learning outcome and use the 3As to clarify what you should assess. State how GenAI may be used and design to validly and reliably collect the evidence necessary to make students' own contributions visible.</p>
+</div>
+
+<h1 class="part-title">Part 5: Data and Tech-Enhanced T&amp;L — Supporting Learning with AI Tools and Data</h1>
+
+<h2>Start with a T&amp;L Need</h2>
+<p>AI tools and learning data can extend learning opportunities and help us respond to learner needs. The starting point is not the technology: it is a clear T&amp;L purpose.</p>
+<blockquote>What could help students learn more effectively—and what would you need to check before using it?</blockquote>
+
+<h2>How AI and Data Can Help</h2>
+<div class="activity">
+  <span class="activity-label">Interactive explorer — Four practical uses (all 4 shown)</span>
+  <div class="use-case"><p><strong>Learning resources</strong></p><p>Use AI as a starting point to review module materials, draft practice examples, create alternative formats, check assignment clarity or summarise feedback themes.</p><p><em>Your focus: You provide the context and intended learning, then check, adapt and decide what to use.</em></p></div>
+  <div class="use-case"><p><strong>Learning support</strong></p><p>AI-enabled tutors and learning assistants can extend opportunities for explanation, practice and feedback during and beyond class time. This may include Brightspace Lumi Tutor, course-specific tutors or students' AI tools used appropriately.</p><p><em>Your focus: Set the intended learning, source materials, boundaries and role of the support within the module.</em></p></div>
+  <div class="use-case"><p><strong>Disciplinary practice</strong></p><p>AI may be embedded in authentic workflows such as coding and testing, design and media, data analysis, simulation, or research and evidence review.</p><p><em>Your focus: Help students apply disciplinary knowledge, evaluate outputs and exercise appropriate judgement—not simply operate the tool.</em></p></div>
+  <div class="use-case"><p><strong>Learning data</strong></p><p>Learning data can reveal patterns in participation or performance, indicate possible learner needs, inform targeted support and help review whether support is working.</p><p><em>Your focus: Treat AI-generated summaries, patterns or predictions as starting points. Review the evidence and learner context before acting.</em></p></div>
+</div>
+
+<h3>Using Learning Data Responsibly</h3>
+<p>Learning analytics may identify patterns or indicate that a student could be at risk of disengagement or underachievement. Such indicators are probabilistic; they do not establish that a student will fail, explain whether or why a student is struggling, or determine what action should be taken.</p>
+<p>You should:</p>
+<ul>
+<li>consider the quality and relevance of the data;</li>
+<li>speak with the student when appropriate;</li>
+<li>consider other contextual information; and</li>
+<li>use professional judgement to determine suitable support.</li>
+</ul>
+<p>Use learning data to support timely intervention—not to make automatic decisions, label students or publicly rank them.</p>
+
+<h3>Design More Targeted Learning Support</h3>
+<p>Learning data and assessment feedback may reveal different learning needs among your students. AI may help you propose differentiated explanations, practice activities, examples or feedback approaches.</p>
+<p>Review and adapt the suggestions, check that they address the identified learning needs, and decide how they should be used. AI-generated suggestions should not determine support decisions or replace direct engagement with students.</p>
+
+<h2>Explore a Common T&amp;L Use</h2>
+<div class="activity">
+  <span class="activity-label">Interactive explorer — Four teaching uses (all 4 shown)</span>
+  <div class="use-case"><p><strong>Learning resource</strong> — Possible approach: An AI assistant suitable for the task, such as M365 Copilot.</p><p>T&amp;L purpose: Create a simpler explanation, a step-by-step worksheet or a short self-check from the same source material.</p><p><em>Start here prompt: "Create a simpler explanation and five self-check questions for [concept]. Preserve the technical meaning and intended learning standard. Flag anything you are uncertain how to simplify."</em></p><p>Check: Check accuracy, the intended learning standard, and whether the examples are inclusive and accessible.</p><p>Your decision: Choose and adapt the format that is most useful for your learners.</p></div>
+  <div class="use-case"><p><strong>Student practice</strong> — Possible approach: Brightspace Lumi Tutor or a course-specific AI tutor.</p><p>T&amp;L purpose: Extend practice and feedback beyond class time using material and boundaries set for the module.</p><p><em>Start here prompt: "Decide which topic needs additional practice, what sources the tutor can use, and when students should seek support from a lecturer instead."</em></p><p>Check: Check that the tutor's explanations and feedback align with the module materials and intended learning.</p><p>Your decision: Set the role of the tool clearly so it complements, rather than replaces, facilitation.</p></div>
+  <div class="use-case"><p><strong>Disciplinary practice</strong> — Possible approach: A suitable course- or profession-specific AI tool.</p><p>T&amp;L purpose: Help students apply disciplinary knowledge through an authentic AI-supported workflow, such as coding, design, simulation or data analysis.</p><p><em>Start here prompt: "Clarify the capability students should develop and what they must still understand, decide or perform themselves."</em></p><p>Check: Check that the tool supports the intended learning and that students can evaluate and explain its output.</p><p>Your decision: Decide how the tool fits within the activity, what scaffolding students need and what evidence will show their learning.</p></div>
+  <div class="use-case"><p><strong>Learning data</strong> — Possible approach: A suitable analytics view or AI-supported summary process.</p><p>T&amp;L purpose: Look for a pattern in participation, performance or feedback that may indicate a need for support.</p><p><em>Start here prompt: "Review the original evidence and learner context before deciding whether a pattern needs action."</em></p><p>Check: Check that the information and process are appropriate, and that the apparent pattern is supported by the evidence.</p><p>Your decision: Use your judgement to decide whether an intervention is needed and whether it helped.</p></div>
+  <p><strong>Keep the learning purpose in view.</strong> The tool supports the activity; you determine how it is used.</p>
+</div>
+
+<h2>Choose Tools for the T&amp;L Purpose</h2>
+<p>Different needs may call for different tools. NP-provided tools may support lecturer productivity, learning resources, student support or learning analytics. Course- or discipline-specific tools may reflect authentic professional practice. Students may use suitable tools where the learning activity or assessment permits this.</p>
+<p>Before using a tool or learning data, consider four questions:</p>
+<h3>Learning fit</h3><p>Does the tool or data use support the intended learning or learner need?</p>
+<h3>Suitability</h3><p>Is it appropriate and accessible for the task and learners?</p>
+<h3>Information and output</h3><p>Is the information appropriate to use, and is the output accurate, relevant and suitable for learners?</p>
+<h3>Oversight and impact</h3><p>Who reviews the output, decides what action to take and checks whether it helped?</p>
+
+<h3>Using T&amp;L Information in AI Tools</h3>
+<div class="activity">
+  <span class="activity-label">Reference panel — Using T&amp;L information in AI tools</span>
+  <p>When using module materials, student information or assessment-related data, what you may enter depends on the tool and account being used.</p>
+  <div class="tool-grid">
+    <div class="tool-row"><strong>M365 Copilot (using your NP account)</strong> — May be used with information classified up to <b>Restricted / Sensitive Normal</b> within NP's Microsoft 365 environment.</div>
+    <div class="tool-row"><strong>Pair Chat (pair.gov.sg)</strong> — May be used with information classified up to <b>Restricted / Sensitive Normal</b>.</div>
+    <div class="tool-row"><strong>Public or personal-account AI tools</strong> — Do not enter personal, sensitive, confidential or proprietary information.</div>
+  </div>
+  <p>Use an approved tool appropriate to the T&amp;L information involved. Check its outputs before using them with students or to inform teaching decisions.</p>
+</div>
+
+<div class="activity">
+  <span class="activity-label">Interactive quiz — What Would You Check? (all 4 shown)</span>
+  <div class="scenario"><p class="ctx">1. An AI tutor gives an explanation that differs from the module materials.</p><p class="fb"><strong>What to check:</strong> Check the source content and accuracy before deciding whether the materials or tutor setup need adjustment.</p></div>
+  <div class="scenario"><p class="ctx">2. Students use a discipline-specific AI tool to produce a technically strong solution.</p><p class="fb"><strong>What to check:</strong> Check whether they can explain, evaluate and apply the underlying disciplinary knowledge.</p></div>
+  <div class="scenario"><p class="ctx">3. You want to upload assessment results into an AI tool.</p><p class="fb"><strong>What to check:</strong> Check whether the tool and process are appropriate for the information involved.</p></div>
+  <div class="scenario"><p class="ctx">4. Learning data suggests that several students may need support.</p><p class="fb"><strong>What to check:</strong> Review the evidence and learner context before deciding what action is appropriate.</p></div>
+  <p><strong>AI can help you create resources, extend learning support, enable disciplinary practice and identify patterns.</strong> You provide the context, check the outputs and decide how they are used.</p>
+</div>
+
+<h2>Keep in Mind</h2>
+<p>Choose one small T&amp;L need from a module you teach, lead or support. Consider:</p>
+<ul>
+<li>what type of AI tool or learning data could contribute;</li>
+<li>how it would support the intended learning;</li>
+<li>what would need checking;</li>
+<li>how you would know whether it helped.</li>
+</ul>
+
+<div class="key-takeaway">
+  <p class="key-takeaway-head">✔ Key Takeaway</p>
+  <p>Use AI tools and learning data where they add learning value or support authentic disciplinary practice. Select an appropriate approach, check the information and outputs, and retain professional judgement and responsibility.</p>
+</div>
+
+<h1 class="part-title">Part 6: Bring It Together</h1>
+
+<div class="activity">
+  <span class="activity-label">Concept visual — Bring it together</span>
+  <h5>Review one module through four areas</h5>
+  <div class="infographic-steps">
+    <div class="infographic-step"><b>Curriculum</b> — What may need review?</div>
+    <div class="infographic-step"><b>Facilitation</b> — Does AI support the intended learning?</div>
+    <div class="infographic-step"><b>Assessment</b> — What evidence keeps learning visible?</div>
+    <div class="infographic-step"><b>Data and Tools</b> — What needs checking before use?</div>
+  </div>
+</div>
+
+<h2>Review One Module Through Four Areas</h2>
+<p>Choose a module you teach, lead or support. Consider each question once.</p>
+<div class="activity">
+  <span class="activity-label">Tap checklist — Four-lens module review (all 4 questions + tips)</span>
+  <ul class="checklist-items">
+    <li><strong>Curriculum:</strong> Do the learning outcomes still reflect the competencies students need?<br/><em>Tip: Use the 3As to consider distinctly human capabilities, productive use of AI, and new AI-enabled professional practice.</em></li>
+    <li><strong>Facilitation:</strong> How could students use AI while still doing the intended thinking, judging or performing?<br/><em>Tip: Use PAIR to structure the problem, AI use, interaction and reflection, with support appropriate to develop students' 3As competencies.</em></li>
+    <li><strong>Assessment:</strong> What must students demonstrate, and how may GenAI be used?<br/><em>Tip: Align the outcomes to the 3As, make the GenAI conditions clear and collect evidence that validly and reliably measures students' own contributions.</em></li>
+    <li><strong>Data and Tech-Enhanced T&amp;L:</strong> What learning need could an AI tool or learning data help address?<br/><em>Tip: Consider whether the approach is suitable, what information and outputs need checking, and how its value will be reviewed.</em></li>
+  </ul>
+</div>
+
+<h2>Before the Quiz</h2>
+<p>The completion quiz checks your understanding of the key ideas introduced in this package.</p>
+
+<div class="activity">
+  <span class="activity-label">Expandable — "View Key Points to Remember" (full recap)</span>
+  <h5>Curriculum · 3As</h5>
+  <ul>
+    <li><strong>Anchor</strong> — Human qualities, disciplinary judgement and essential capabilities that remain important as AI becomes more capable.</li>
+    <li><strong>Augment</strong> — Productive use of AI to improve work while applying appropriate judgement and oversight.</li>
+    <li><strong>Advance</strong> — New AI-enabled possibilities, workflows or forms of professional practice.</li>
+  </ul>
+  <p><em>Begin with the intended competency, then align the learning outcome, activities and assessment.</em></p>
+
+  <h5>Facilitation · PAIR</h5>
+  <p>Problem → AI → Interaction → Reflection</p>
+  <ul>
+    <li><strong>Problem</strong> — Clarify or frame the task, requirements and intended outcome.</li>
+    <li><strong>AI</strong> — Consider and select suitable AI support.</li>
+    <li><strong>Interaction</strong> — Experiment with, evaluate and refine the outputs.</li>
+    <li><strong>Reflection</strong> — Consider what was learnt, where human judgement was needed and how the approach could improve.</li>
+  </ul>
+
+  <h5>Assessment · NP's GenAI Policy</h5>
+  <ul>
+    <li>GenAI is allowed by default in summative assessment unless explicitly restricted or prohibited.</li>
+    <li>State any conditions clearly for each assessment component.</li>
+    <li>Students must declare GenAI use.</li>
+    <li>Evidence should be proportionate; for example, complete AI interaction histories should not be required by default.</li>
+    <li>AI-detection results or changes in writing style are not by themselves proof of misconduct.</li>
+    <li>Staff remain responsible for every grade and feedback decision.</li>
+  </ul>
+  <p><strong>Always prohibited:</strong> submitting purely AI-generated work as one's own; disguising AI content as original; relying solely on AI for insights or reflection; and simulating human interactions where real interaction is required.</p>
+
+  <h5>Data and Tech-Enhanced T&amp;L</h5>
+  <p>Start with the learning need. Consider:</p>
+  <ul>
+    <li>Whether the tool or use of data supports the intended purpose.</li>
+    <li>Whether it is suitable and accessible.</li>
+    <li>Whether the information and outputs are appropriate and accurate.</li>
+    <li>Who interprets the information and decides what action to take.</li>
+  </ul>
+  <p><em>AI may draft, identify patterns or suggest possibilities. We retain professional judgement and responsibility.</em></p>
+</div>
+
+<p>You may revisit any section before attempting the quiz.</p>
+
+<h2>Choose One Small Next Step</h2>
+<p>Identify one practical action to take forward:</p>
+<div class="activity">
+  <span class="activity-label">Choice activity — all 4 options with feedback</span>
+  <div class="scenario"><p class="ctx"><strong>A.</strong> Review one learning outcome, activity or assessment using the 3As.</p><p class="fb">A single 3As review is a manageable way to begin identifying what may need attention.</p></div>
+  <div class="scenario"><p class="ctx"><strong>B.</strong> Apply PAIR to one learning activity.</p><p class="fb">Applying PAIR to a single activity is a focused way to check how AI can support, rather than replace learning.</p></div>
+  <div class="scenario"><p class="ctx"><strong>C.</strong> Check one assessment's GenAI conditions.</p><p class="fb">Checking one assessment's GenAI conditions is a focused way to apply the guidance in practice.</p></div>
+  <div class="scenario"><p class="ctx"><strong>D.</strong> Explore one suitable use of an AI tool or learning data.</p><p class="fb">Start with a clear teaching and learning need, then check the output, data considerations and your oversight.</p></div>
+</div>
+
+<h2>Closing</h2>
+<p>The key is to begin with the intended learning, then make deliberate choices about curriculum, facilitation, assessment and the use of tools and data.</p>
+<p>When you are ready, complete the separately administered quiz to fulfil the package requirements.</p>
+
+</body>
+</html>
