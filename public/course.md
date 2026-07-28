@@ -418,11 +418,11 @@ Review the assessment when:
 
 Consider one assessment:
 
-> What capability must students demonstrate, how may GenAI be used, and what evidence will make students’ own contributions visible?
+> What capability must students demonstrate, how may AI be used, and what evidence will make students’ own contributions visible?
 
 ## Key Takeaway
 
-Begin with the learning outcome and use the 3As to clarify what you should assess. State how GenAI may be used and design to validly and reliably collect the evidence necessary to make students’ own contributions visible.
+Begin with the learning outcome and use the 3As to clarify what you should assess. State how AI may be used and design to validly and reliably collect the evidence necessary to make students’ own contributions visible.
 
 ---
 

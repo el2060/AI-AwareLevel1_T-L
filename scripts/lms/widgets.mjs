@@ -577,7 +577,7 @@ export const fourLensReview = () =>
     tips: [
       "Use the 3As to consider distinctly human capabilities, productive use of AI, and new AI-enabled professional practice.",
       "Use PAIR to structure the problem, AI use, interaction and reflection, with support appropriate to develop students’ 3As competencies.",
-      "Align the outcomes to the 3As, make the GenAI conditions clear and collect evidence that validly and reliably measures students’ own contributions.",
+      "Align the outcomes to the 3As, make the AI conditions clear and collect evidence that validly and reliably measures students’ own contributions.",
       "Consider whether the approach is suitable, what information and outputs need checking, and how its value will be reviewed.",
     ],
   });
