@@ -886,7 +886,8 @@ function HomeFlow() {
           <p>
             After you have worked through every section of this package,
             complete the{" "}
-            <a href={QUIZ_URL} target="_blank" rel="noopener noreferrer">compulsory quiz on Brightspace</a>.
+            <a href={QUIZ_URL} target="_blank" rel="noopener noreferrer">compulsory quiz</a>{" "}
+            <strong>in this module</strong>.
           </p>
         </aside>
       </div>
