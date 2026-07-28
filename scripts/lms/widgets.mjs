@@ -72,7 +72,7 @@ export function nextStep() {
   const options = [
     { label: "Review one learning outcome, activity or assessment using the 3As.", feedback: "A single 3As review is a manageable way to begin identifying what may need attention." },
     { label: "Apply PAIR to one learning activity.", feedback: "Applying PAIR to a single activity is a focused way to check how AI can support, rather than replace learning." },
-    { label: "Check one assessment's GenAI conditions.", feedback: "Checking one assessment’s GenAI conditions is a focused way to apply the guidance in practice." },
+    { label: "Check one assessment's AI conditions.", feedback: "Checking one assessment’s AI conditions is a focused way to apply the guidance in practice." },
     { label: "Explore one suitable use of an AI tool or learning data.", feedback: "Start with a clear teaching and learning need, then check the output, data considerations and your oversight." },
   ];
   const buttons = options
@@ -481,7 +481,7 @@ export function quizReadinessRecap() {
     <section class="recap-panel recap-tone-4">
       <div class="recap-panel-head"><i>${icon("ClipboardCheck", { size: 18, strokeWidth: 2.1 })}</i><h4>Assessment · NP&rsquo;s GenAI Policy</h4></div>
       <ul class="recap-list">
-        <li>GenAI is allowed by default in summative assessment unless explicitly restricted or prohibited.</li>
+        <li>AI is allowed by default in summative assessment unless explicitly restricted or prohibited.</li>
         <li>State any conditions clearly for each assessment component.</li>
         <li>Students must declare GenAI use.</li>
         <li>Evidence should be proportionate; for example, complete AI interaction histories should not be required by default.</li>
