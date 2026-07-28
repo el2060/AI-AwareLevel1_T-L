@@ -1,24 +1,8 @@
 # AI T&L Essentials: Level 1 (AI-Aware)
 
-## Welcome
-
-AI is shaping how students learn and how work is done across many professions. Students may use GenAI to explain concepts, generate ideas or support assignment work, raising new considerations for teaching, learning and assessment.
-
-This package builds awareness of these considerations across four familiar T&L domains.
-
-### What You Will Learn
-
-By the end of this package, you will be able to describe how:
-
-- AI is changing the competencies students need and the implications for curriculum design, by reference to NP's 3As framework (Anchor, Augment and Advance);
-- you might adjust your learning outcomes and designs for the impact of AI in your discipline, domain, course and/or module;
-- AI can support learning and practice without replacing the intended thinking, judgement or performance;
-- you might redesign your summative assessments to efficiently and validly assess the achievement of those adjusted learning outcomes; and
-- you could use AI tools and data purposefully and responsibly to improve students' learning experience and performance.
-
-### Learning Time
-
-**Up to 2 hours.** The package includes the learning content, activities and completion quiz. You may move through the sections at your own pace and spend more time on areas most relevant to your needs.
+<!-- The home section is rendered by the HomeFlow and OpeningVisual components
+     in app/page.tsx, not from this file. Only the heading above is used here,
+     to establish the section in the contents list. -->
 
 ---
 
