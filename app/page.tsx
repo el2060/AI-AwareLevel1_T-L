@@ -486,10 +486,10 @@ function GenAiConditionsSorter() {
     storageKey="quiz-genai-conditions"
     trio
     scenarios={[
-      { id: "default", context: "The brief states nothing about GenAI, and a student uses it to brainstorm approaches for a take-home assignment.", answer: "Allowed", feedback: "GenAI use is allowed by default in summative assessment unless it is explicitly restricted or prohibited. The student must still cite and declare the use." },
+      { id: "default", context: "The brief states nothing about AI, and a student uses it to brainstorm approaches for a take-home assignment.", answer: "Allowed", feedback: "GenAI use is allowed by default in summative assessment unless it is explicitly restricted or prohibited. The student must still cite and declare the use." },
       { id: "live", context: "Students may use GenAI to prepare, but must complete the live presentation and question-and-answer session without it.", answer: "Restricted", feedback: "This is a restricted-use condition: GenAI is allowed for preparation but prohibited during the live component. Is such a restriction necessary, effective and aligned to 3As outcomes?" },
       { id: "declared", context: "A student submits a fully AI-generated report and declares the use on the cover page.", answer: "Allowed", feedback: "Submitting purely AI-generated content as one's own is always prohibited — but declaring AI use makes it honest - it is not “as one's own”. If you wish to punish lack of originality, do so in the grading rubric for the report." },
-      { id: "images", context: "Students must produce GenAI-generated images but must also frame the task, select and refine the output, and explain their choices.", answer: "Allowed", feedback: "GenAI is permitted provided students show they are masters of the tool. This is an example of assessment of an Augment learning outcome." },
+      { id: "images", context: "Students must produce AI-generated images but must also frame the task, select and refine the output, and explain their choices.", answer: "Allowed", feedback: "GenAI is permitted provided students show they are masters of the tool. This is an example of assessment of an Augment learning outcome." },
     ]}
   />;
 }

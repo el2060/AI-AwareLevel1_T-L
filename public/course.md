@@ -381,9 +381,9 @@ Module leaders are responsible for:
 
 ## Important Policy Reminders
 
-:::details Staff Use of GenAI in Grading
+:::details Staff Use of AI in Grading
 
-Staff must not use GenAI to determine grades independently. Any approved use as a grading assistant requires management approval, appropriate quality assurance, disclosure to students and full human review of every grade and feedback decision.
+Staff must not use AI to determine grades independently. Any approved use as a grading assistant requires management approval, appropriate quality assurance, disclosure to students and full human review of every grade and feedback decision.
 
 :::
 
@@ -396,7 +396,7 @@ Where misuse is suspected, follow the process in the Gen AI in Summative Assessm
 - review the submission and the student’s GenAI declaration;
 - interview the student to learn more about how the work was produced;
 - request available evidence of the development or writing process; and
-- check for inconsistencies between the student’s declared and actual GenAI use.
+- check for inconsistencies between the student’s declared and actual AI use.
 
 Do not assign a penalty or refer a case solely on the basis of an AI-detection result or personal impression, without prior investigation.
 
@@ -409,7 +409,7 @@ Review the assessment when:
 - AI can complete the central task without the intended capability being demonstrated;
 - the student’s own contribution is difficult to establish;
 - the task no longer reflects current professional practice;
-- the GenAI conditions are unclear;
+- the AI conditions are unclear;
 - students have not been prepared for the required use or non-use of AI.
 
 :::
