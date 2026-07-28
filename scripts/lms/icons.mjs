@@ -10,6 +10,7 @@ import { __iconNode as checkCircle2 } from "lucide-react/dist/esm/icons/circle-c
 import { __iconNode as chevronRight } from "lucide-react/dist/esm/icons/chevron-right.mjs";
 import { __iconNode as clipboardCheck } from "lucide-react/dist/esm/icons/clipboard-check.mjs";
 import { __iconNode as compass } from "lucide-react/dist/esm/icons/compass.mjs";
+import { __iconNode as externalLink } from "lucide-react/dist/esm/icons/external-link.mjs";
 import { __iconNode as eye } from "lucide-react/dist/esm/icons/eye.mjs";
 import { __iconNode as layers } from "lucide-react/dist/esm/icons/layers.mjs";
 import { __iconNode as lightbulb } from "lucide-react/dist/esm/icons/lightbulb.mjs";
@@ -33,6 +34,7 @@ const NODES = {
   ChevronRight: chevronRight,
   ClipboardCheck: clipboardCheck,
   Compass: compass,
+  ExternalLink: externalLink,
   Eye: eye,
   Layers: layers,
   Lightbulb: lightbulb,
@@ -57,6 +59,7 @@ const KEBAB = {
   ChevronRight: "chevron-right",
   ClipboardCheck: "clipboard-check",
   Compass: "compass",
+  ExternalLink: "external-link",
   Eye: "eye",
   Layers: "layers",
   Lightbulb: "lightbulb",

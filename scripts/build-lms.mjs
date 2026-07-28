@@ -171,7 +171,7 @@ function renderPage({ sections, index }) {
 
     ${bridge && index < total - 1 && !hasInlineNextPrompt ? `<div class="section-bridge"><span>Next</span><p>${esc(bridge)}</p></div>` : ""}
 
-    ${isLast ? `<div class="completion-panel" role="status" data-role="completion" hidden><i aria-hidden="true">${icon("CheckCircle2", { size: 22, strokeWidth: 2.2 })}</i><div><strong>Package complete</strong><p>You have worked through every section. When you are ready, complete the separately administered quiz to fulfil the package requirements.</p></div></div>` : ""}
+    ${isLast ? W.quizCta() : ""}
 
     <div class="section-actions">
       <div class="pager">

@@ -466,23 +466,69 @@ button:focus-visible, summary:focus-visible, a:focus-visible {
   line-height: 1.65;
 }
 
-/* Shown once every section is complete, so the package has a visible end
-   rather than simply running out of pages. */
-.completion-panel {
-  display: grid;
-  grid-template-columns: 44px minmax(0, 1fr);
-  align-items: start;
-  gap: 15px;
+/* The quiz is compulsory and administered outside this package, so the closing
+   call to action is always visible rather than gated on finishing every
+   section: a learner who lands here early still needs to know about it. Blue
+   on gold, because green with a tick reads as "done, nothing to do". */
+.quiz-cta {
   margin: 34px 0 8px;
-  padding: 20px 22px;
-  border: 1px solid #b7dcc0;
+  padding: 24px 26px;
   border-radius: var(--surface-radius);
-  background: var(--success-soft);
-  animation: feedback-in .3s ease both;
+  background: var(--blue);
 }
-.completion-panel > i { width: 44px; height: 44px; display: grid; place-items: center; border-radius: 50%; background: var(--success); color: #fff; }
-.completion-panel strong { display: block; color: var(--success); font-size: 18px; letter-spacing: -.015em; }
-.completion-panel p { margin: 6px 0 0; color: var(--ink-soft); font-size: 16px; line-height: 1.6; }
+.quiz-cta-flags { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
+.quiz-cta-pill {
+  padding: 4px 11px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #4a2c02;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.quiz-cta-monitored { color: #b9d2ee; font-size: 12.5px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; }
+.quiz-cta h2 { margin: 0 0 6px; color: #fff; font-size: 24px; letter-spacing: -.02em; }
+.quiz-cta > p { margin: 0 0 18px; color: #cfe0f3; font-size: 16px; line-height: 1.6; }
+.quiz-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 24px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #4a2c02;
+  font-size: 16.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color .16s ease, transform .12s ease;
+}
+.quiz-cta-link:hover { background: var(--gold-active); color: #4a2c02; }
+.quiz-cta-link:active { transform: scale(.98); }
+.quiz-cta-link:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+/* Printed and PDF copies cannot follow the button, so the address is spelled out. */
+.quiz-cta-url { margin: 15px 0 0; color: #9dc0e4; font-size: 12.5px; word-break: break-all; }
+
+/* Same message, quieter weight, so the requirement is known before starting. */
+.home-quiz-note {
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--gold);
+  background: var(--paper);
+}
+.home-quiz-note > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 5px;
+  color: var(--warning);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.home-quiz-note p { margin: 0; color: var(--ink); font-size: 15.5px; line-height: 1.6; }
+.home-quiz-note a { font-weight: 650; }
 
 .key-takeaway {
   margin: 40px 0 12px;

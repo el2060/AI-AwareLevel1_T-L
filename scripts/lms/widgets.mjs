@@ -4,6 +4,10 @@
 // restore the click behaviour.
 import { icon } from "./icons.mjs";
 
+// The completion quiz lives in Brightspace, outside this package.
+const QUIZ_URL = "https://nplms.polite.edu.sg/d2l/le/lessons/998763/units/14620765";
+const QUIZ_URL_LABEL = "nplms.polite.edu.sg/d2l/le/lessons/998763/units/14620765";
+
 let uid = 0;
 const nextId = (prefix) => `${prefix}-${(uid += 1)}`;
 
@@ -282,6 +286,10 @@ export function homeFlow() {
       <strong>Up to 2 hours</strong>
       <p>The package includes the learning content, activities and completion quiz. You may move through the sections at your own pace and spend more time on areas most relevant to your needs.</p>
     </aside>
+    <aside class="home-quiz-note" aria-label="Compulsory completion quiz">
+      <span>${icon("ClipboardCheck", { size: 14, strokeWidth: 2.4 })}Compulsory <i aria-hidden="true">·</i> completion is monitored</span>
+      <p>After you have worked through every section of this package, complete the <a href="${QUIZ_URL}" target="_blank" rel="noopener noreferrer">compulsory quiz on Brightspace</a>.</p>
+    </aside>
   </div>
 </section>`;
 }
@@ -503,6 +511,19 @@ export function quizReadinessRecap() {
     </section>
   </div>
 </details>`;
+}
+
+export function quizCta() {
+  return `<section class="quiz-cta" aria-labelledby="quiz-cta-title">
+  <div class="quiz-cta-flags">
+    <span class="quiz-cta-pill">Compulsory</span>
+    <span class="quiz-cta-monitored">Completion will be monitored</span>
+  </div>
+  <h2 id="quiz-cta-title">Final step: complete the quiz</h2>
+  <p>The quiz is administered separately on Brightspace and is required to complete this programme.</p>
+  <a class="quiz-cta-link" href="${QUIZ_URL}" target="_blank" rel="noopener noreferrer">Go to the compulsory quiz${icon("ExternalLink", { size: 17, strokeWidth: 2.2 })}</a>
+  <p class="quiz-cta-url">${QUIZ_URL_LABEL}</p>
+</section>`;
 }
 
 export function partFiveTakeaway() {

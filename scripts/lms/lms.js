@@ -313,7 +313,6 @@
   function initShell() {
     var shell = document.querySelector(".site-shell");
     if (!shell) return;
-    var index = Number(shell.dataset.sectionIndex);
     var total = Number(shell.dataset.sectionCount);
     var id = shell.dataset.sectionId;
 
@@ -345,13 +344,11 @@
 
     var progress = shell.querySelector('[data-role="progress"]');
     var completeCount = shell.querySelector('[data-role="complete-count"]');
-    var completion = shell.querySelector('[data-role="completion"]');
 
     function paint() {
       var done = completed.length;
       if (progress) progress.style.width = Math.round((done / total) * 100) + "%";
       if (completeCount) completeCount.textContent = done + " of " + total + " complete";
-      if (completion) completion.hidden = !(index === total - 1 && done === total);
       var links = shell.querySelectorAll('[data-role="contents-list"] a');
       Array.prototype.forEach.call(links, function (link) {
         var number = link.querySelector(".contents-number");

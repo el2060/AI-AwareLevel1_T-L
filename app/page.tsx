@@ -1,7 +1,11 @@
 "use client";
 
 import { ReactElement, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
-import { ArrowLeft, ArrowLeftRight, ArrowRight, BookOpen, Bot, Check, CheckCircle2, ChevronRight, ClipboardCheck, Compass, Eye, Layers, Lightbulb, RefreshCw, Rocket, Scale, ShieldCheck, Target, UserRound, Users, X } from "lucide-react";
+import { ArrowLeft, ArrowLeftRight, ArrowRight, BookOpen, Bot, Check, CheckCircle2, ChevronRight, ClipboardCheck, Compass, ExternalLink, Eye, Layers, Lightbulb, RefreshCw, Rocket, Scale, ShieldCheck, Target, UserRound, Users, X } from "lucide-react";
+
+// The completion quiz lives in Brightspace, outside this package.
+const QUIZ_URL = "https://nplms.polite.edu.sg/d2l/le/lessons/998763/units/14620765";
+const QUIZ_URL_LABEL = "nplms.polite.edu.sg/d2l/le/lessons/998763/units/14620765";
 
 type Section = {
   id: string;
@@ -874,6 +878,18 @@ function HomeFlow() {
             and spend more time on areas most relevant to your needs.
           </p>
         </aside>
+
+        <aside className="home-quiz-note" aria-label="Compulsory completion quiz">
+          <span>
+            <ClipboardCheck size={14} strokeWidth={2.4} aria-hidden="true" />
+            Compulsory <i aria-hidden="true">·</i> completion is monitored
+          </span>
+          <p>
+            After you have worked through every section of this package,
+            complete the{" "}
+            <a href={QUIZ_URL} target="_blank" rel="noopener noreferrer">compulsory quiz on Brightspace</a>.
+          </p>
+        </aside>
       </div>
     </section>
   );
@@ -1525,14 +1541,20 @@ export default function Home() {
           </div>
         )}
 
-        {isLastSection && allComplete && (
-          <div className="completion-panel" role="status">
-            <i aria-hidden="true"><CheckCircle2 size={22} strokeWidth={2.2} /></i>
-            <div>
-              <strong>Package complete</strong>
-              <p>You have worked through every section. When you are ready, complete the separately administered quiz to fulfil the package requirements.</p>
+        {isLastSection && (
+          <section className="quiz-cta" aria-labelledby="quiz-cta-title">
+            <div className="quiz-cta-flags">
+              <span className="quiz-cta-pill">Compulsory</span>
+              <span className="quiz-cta-monitored">Completion will be monitored</span>
             </div>
-          </div>
+            <h2 id="quiz-cta-title">Final step: complete the quiz</h2>
+            <p>The quiz is administered separately on Brightspace and is required to complete this programme.</p>
+            <a className="quiz-cta-link" href={QUIZ_URL} target="_blank" rel="noopener noreferrer">
+              Go to the compulsory quiz
+              <ExternalLink size={17} strokeWidth={2.2} aria-hidden="true" />
+            </a>
+            <p className="quiz-cta-url">{QUIZ_URL_LABEL}</p>
+          </section>
         )}
 
         <div className="section-actions">
