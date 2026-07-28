@@ -37,6 +37,10 @@ yarn-error.log*
 # local dev shell override (Windows-only path, breaks Linux CI/Vercel)
 .npmrc
 
+# static LMS export (regenerate with `npm run build:lms`)
+/lms-build/
+/AI_TL_Essentials_Level1_LMS.zip
+
 # typescript
 next-env.d.ts
 /dist/

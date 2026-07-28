@@ -10,6 +10,8 @@
     "build": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build",
     "vercel-build": "next build",
     "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
+    "build:lms": "npm run build && node scripts/build-lms.mjs",
+    "serve:lms": "node scripts/serve-lms.mjs",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
