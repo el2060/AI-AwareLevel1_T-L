@@ -387,7 +387,7 @@ const sectionBridges = [
   "See how these four areas connect to NP’s direction for AI-enabled T&L.",
   "Begin with curriculum: what competencies should our students develop and demonstrate as professional practice changes?",
   "Explore PAIR, a simple framework for helping students use AI purposefully, critically and responsibly in their learning.",
-  "Consider how clear GenAI conditions and assessment design can provide valid and reliable evidence of learning and students' own contribution.",
+  "Consider how clear AI conditions and assessment design can provide valid and reliable evidence of learning and students' own contribution.",
   "Explore how AI tools and learning data can be used purposefully to support learning, while protecting information, verifying outputs and retaining human oversight.",
   "Bring the four areas together by reviewing one module you teach, lead or support.",
 ];
@@ -1107,9 +1107,9 @@ function PairInfographic() {
 function AssessmentActionsInfographic() {
   const steps = [
     { number: "1", title: "Start With the Learning Outcome", detail: "Describe the capability being assessed and what students must still demonstrate themselves." },
-    { number: "2", title: "State the GenAI Conditions Clearly", detail: "State whether GenAI use is restricted or prohibited for each component. If no GenAI use conditions are stipulated, GenAI is allowed - it is NP's default position - you would still need to inform students of the always-prohibited list of GenAI uses." },
+    { number: "2", title: "State the AI Conditions Clearly", detail: "State whether AI use is restricted or prohibited for each component. If no AI use conditions are stipulated, AI is allowed - it is NP's default position - you would still need to inform students of the always-prohibited list of AI uses." },
     { number: "3", title: "Make Students’ Contribution Visible", detail: "Describe how students will be expected to show you they have achieved the learning outcome." },
-    { number: "4", title: "Prepare Students and Require Declaration", detail: "Explain your conditions and other details to students early, provide suitable formative preparation and remind students if you are assessing an Augment or Advance outcome that GenAI use declarations are necessary." },
+    { number: "4", title: "Prepare Students and Require Declaration", detail: "Explain your conditions and other details to students early, provide suitable formative preparation and remind students if you are assessing an Augment or Advance outcome that AI use declarations are necessary." },
   ];
   return (
     <figure className="concept-visual action-infographic" aria-labelledby="action-title">

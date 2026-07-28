@@ -222,11 +222,11 @@ For each situation, decide whether AI supports students in developing the intend
 
 :::note PAIR is a Teaching and Learning Aid to Develop AI Literacy
 
-PAIR activities are useful hands-on activities for students to learn, in the context of the module / discipline / domain, basic and very specific AI literacy skills, such as verifying important AI claims against primary, official and trusted sources before relying on them. For example, for emerging news and current affairs, and specialised legal, regulatory or technical information, students may not learn until their PAIR lesson that GenAI can convincingly produce WRONG answers based on popular or prominent sources but miss more accurate niche and/or official sources. Students may also misunderstand that AI “cutoff dates” do NOT block Internet-connected AI tools from retrieving information after the cutoff date. The concept of a cutoff date refers to the data used to *train* the tool.
+PAIR activities are useful hands-on activities for students to learn, in the context of the module / discipline / domain, basic and very specific AI literacy skills, such as verifying important AI claims against primary, official and trusted sources before relying on them. For example, for emerging news and current affairs, and specialised legal, regulatory or technical information, students may not learn until their PAIR lesson that AI can convincingly produce WRONG answers based on popular or prominent sources but miss more accurate niche and/or official sources. Students may also misunderstand that AI “cutoff dates” do NOT block Internet-connected AI tools from retrieving information after the cutoff date. The concept of a cutoff date refers to the data used to *train* the tool.
 
 :::
 
-:::note AI Tools and Student Guidance on GenAI Use
+:::note AI Tools and Student Guidance on AI Use
 
 Examples of AI tools students may encounter or use in PAIR activities include the tools referenced in the student guidance which you can [read here](https://sway.cloud.microsoft/qLxKSTW1Ody963Po?ref=Link). They include ChatGPT, Github Copilot and Gamma.
 
@@ -257,13 +257,13 @@ PAIR provides an adaptable structure for helping students clarify the task, sele
 
 ## Applying an AI Lens to Assessment
 
-In a GenAI-enabled context, assessment should validly and reliably measure students’ Anchor, Augment and/or Advance competencies.
+In an AI-enabled context, assessment should validly and reliably measure students’ Anchor, Augment and/or Advance competencies.
 
 ## Two Assessment Priorities
 
 ### Apply NP's GenAI-in-Assessment Guidance (Policy from AY2027)
 
-GenAI is allowed by default in summative assessments unless it is explicitly restricted or prohibited. Lecturers must describe their specific restrictions or prohibitions clearly, students must always declare their GenAI use, and in all cases students must be informed of the list of always-prohibited uses - in effect, students must be informed that they cannot use GenAI to cheat.
+AI is allowed by default in summative assessments unless it is explicitly restricted or prohibited. Lecturers must describe their specific restrictions or prohibitions clearly, students must always declare their AI use, and in all cases students must be informed of the list of always-prohibited uses - in effect, students must be informed that they cannot use AI to cheat.
 
 ### Assess AI-adjusted Learning Outcomes
 
@@ -297,9 +297,9 @@ Identify:
 
 > You MUST amend your assessment design IF AI can complete that assessment to at least a passing standard and you cannot be certain how your students contributed to the completion of that assessment.
 
-### 2. State the GenAI Conditions Clearly
+### 2. State the AI Conditions Clearly
 
-For each assessment component, make clear whether GenAI use is:
+For each assessment component, make clear whether AI use is:
 
 - allowed, where no restriction or prohibition has been stated;
 - restricted, subject to stated conditions; or
@@ -327,8 +327,8 @@ Always make clear to students that they must not:
 
 - submit purely AI-generated content as their own;
 - disguise AI-generated content as original work;
-- rely solely on GenAI for insights or reflections;
-- use GenAI to simulate an interview, observation or interaction that must involve a real person.
+- rely solely on AI for insights or reflections;
+- use AI to simulate an interview, observation or interaction that must involve a real person.
 
 :::
 
