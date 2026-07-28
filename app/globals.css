@@ -506,8 +506,6 @@ button:focus-visible, summary:focus-visible, a:focus-visible {
 .quiz-cta-link:hover { background: var(--gold-active); color: #4a2c02; }
 .quiz-cta-link:active { transform: scale(.98); }
 .quiz-cta-link:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
-/* Printed and PDF copies cannot follow the button, so the address is spelled out. */
-.quiz-cta-url { margin: 15px 0 0; color: #9dc0e4; font-size: 12.5px; word-break: break-all; }
 
 /* Same message, quieter weight, so the requirement is known before starting. */
 .home-quiz-note {

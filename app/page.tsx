@@ -5,7 +5,6 @@ import { ArrowLeft, ArrowLeftRight, ArrowRight, BookOpen, Bot, Check, CheckCircl
 
 // The completion quiz lives in Brightspace, outside this package.
 const QUIZ_URL = "https://nplms.polite.edu.sg/d2l/le/lessons/998763/units/14620765";
-const QUIZ_URL_LABEL = "nplms.polite.edu.sg/d2l/le/lessons/998763/units/14620765";
 
 type Section = {
   id: string;
@@ -1295,10 +1294,7 @@ export default function Home() {
   const active = sections.length ? Math.min(Math.max(storedActive, 0), sections.length - 1) : 0;
   const current = sections[active];
   const isHome = active === 0;
-  // The final section has no "next", so it is completed explicitly. Without
-  // this the progress bar would stall one section short of full.
   const isLastSection = sections.length > 0 && active === sections.length - 1;
-  const allComplete = sections.length > 0 && completed.length === sections.length;
   const progress = sections.length
     ? Math.round((completed.length / sections.length) * 100)
     : 0;
@@ -1314,6 +1310,14 @@ export default function Home() {
     // replaying a long upward scroll whenever a lecturer moves on.
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, [active]);
+
+  // Every other section is completed by moving forward off it. The last one
+  // has no "next", so arriving is the equivalent gesture — otherwise progress
+  // would stall one section short of full for everyone who read to the end.
+  useEffect(() => {
+    if (!isLastSection || !current) return;
+    setCompleted((items) => (items.includes(current.id) ? items : [...items, current.id]));
+  }, [isLastSection, current, setCompleted]);
 
   // The contents panel announces itself as a modal, so it also has to behave
   // as one: Escape closes it, Tab stays inside it, and focus returns to
@@ -1371,11 +1375,6 @@ export default function Home() {
     // should not mark it done.
     setCompleted((items) => Array.from(new Set([...items, current.id])));
     setActive(nextIndex);
-  }
-
-  function finishPackage() {
-    if (!current) return;
-    setCompleted((items) => Array.from(new Set([...items, current.id])));
   }
 
   function setActivityValue(key: string, value: string) {
@@ -1548,12 +1547,11 @@ export default function Home() {
               <span className="quiz-cta-monitored">Completion will be monitored</span>
             </div>
             <h2 id="quiz-cta-title">Final step: complete the quiz</h2>
-            <p>The quiz is administered separately on Brightspace and is required to complete this programme.</p>
+            <p>The quiz is administered separately in this module and is required to complete this programme.</p>
             <a className="quiz-cta-link" href={QUIZ_URL} target="_blank" rel="noopener noreferrer">
               Go to the compulsory quiz
               <ExternalLink size={17} strokeWidth={2.2} aria-hidden="true" />
             </a>
-            <p className="quiz-cta-url">{QUIZ_URL_LABEL}</p>
           </section>
         )}
 
@@ -1566,7 +1564,6 @@ export default function Home() {
               Previous
             </button>
             {active < sections.length - 1 && <button className="next-button" onClick={goNext}>Next section</button>}
-            {isLastSection && !allComplete && <button className="next-button" onClick={finishPackage}>Mark package as complete</button>}
           </div>
         </div>
       </main>

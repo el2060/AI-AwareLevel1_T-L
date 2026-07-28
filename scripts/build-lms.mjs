@@ -177,7 +177,6 @@ function renderPage({ sections, index }) {
       <div class="pager">
         ${index > 0 ? `<a class="pager-link" href="${pageName(index - 1)}">Previous</a>` : `<button disabled>Previous</button>`}
         ${index < total - 1 ? `<a class="pager-link next-button" href="${pageName(index + 1)}" data-role="next">Next section</a>` : ""}
-        ${isLast ? `<button class="next-button" type="button" data-role="finish">Mark package as complete</button>` : ""}
       </div>
     </div>
   </main>

@@ -6,7 +6,6 @@ import { icon } from "./icons.mjs";
 
 // The completion quiz lives in Brightspace, outside this package.
 const QUIZ_URL = "https://nplms.polite.edu.sg/d2l/le/lessons/998763/units/14620765";
-const QUIZ_URL_LABEL = "nplms.polite.edu.sg/d2l/le/lessons/998763/units/14620765";
 
 let uid = 0;
 const nextId = (prefix) => `${prefix}-${(uid += 1)}`;
@@ -520,9 +519,8 @@ export function quizCta() {
     <span class="quiz-cta-monitored">Completion will be monitored</span>
   </div>
   <h2 id="quiz-cta-title">Final step: complete the quiz</h2>
-  <p>The quiz is administered separately on Brightspace and is required to complete this programme.</p>
+  <p>The quiz is administered separately in this module and is required to complete this programme.</p>
   <a class="quiz-cta-link" href="${QUIZ_URL}" target="_blank" rel="noopener noreferrer">Go to the compulsory quiz${icon("ExternalLink", { size: 17, strokeWidth: 2.2 })}</a>
-  <p class="quiz-cta-url">${QUIZ_URL_LABEL}</p>
 </section>`;
 }
 

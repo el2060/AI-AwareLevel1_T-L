@@ -334,13 +334,10 @@
     var next = shell.querySelector('[data-role="next"]');
     if (next) next.addEventListener("click", markComplete);
 
-    var finish = shell.querySelector('[data-role="finish"]');
-    if (finish) {
-      finish.addEventListener("click", function () {
-        markComplete();
-        paint();
-      });
-    }
+    // The last page has no "next" to leave by, so arriving is the equivalent
+    // gesture — otherwise progress stalls one section short for everyone who
+    // reads to the end.
+    if (Number(shell.dataset.sectionIndex) === total - 1) markComplete();
 
     var progress = shell.querySelector('[data-role="progress"]');
     var completeCount = shell.querySelector('[data-role="complete-count"]');
