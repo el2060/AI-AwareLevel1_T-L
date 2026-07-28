@@ -202,6 +202,37 @@ function renderPage({ sections, index }) {
 `;
 }
 
+// The app navigates with <button> and JavaScript; these pages navigate with
+// real <a href> links, which an LMS needs. The stylesheet, though, selects
+// those two controls by element name, so an anchor would pick up none of their
+// layout. Rather than copy the declarations (which would drift the first time
+// the app's CSS changed), widen the existing selectors to cover the anchors.
+function widenButtonSelectors(css) {
+  const widenings = [
+    { pattern: /\.pager button([^,{]*)/g, replace: (_, suffix) => `.pager button${suffix},.pager .pager-link${suffix}` },
+    { pattern: /\.contents-list>button([^,{]*)/g, replace: (_, suffix) => `.contents-list>button${suffix},.contents-list>a${suffix}` },
+  ];
+
+  for (const { pattern, replace } of widenings) {
+    const before = css;
+    css = css.replace(pattern, replace);
+    if (css === before) {
+      throw new Error(
+        `Selector ${pattern} no longer appears in the stylesheet. The app's CSS has changed; update widenButtonSelectors in scripts/build-lms.mjs.`,
+      );
+    }
+  }
+
+  // Anchors also carry link defaults the buttons never had: the reader's <a>
+  // rule underlines them, and they are inline rather than inline-block.
+  return (
+    css +
+    "\n.pager .pager-link{display:inline-block;text-decoration:none;color:inherit}" +
+    "\n.pager .pager-link.next-button{color:#fff}" +
+    "\n.contents-list>a{text-decoration:none;color:inherit;font-weight:inherit}\n"
+  );
+}
+
 async function findBuiltCss() {
   const assets = path.join(root, "dist", "client", "assets");
   if (!existsSync(assets)) return null;
@@ -240,6 +271,7 @@ async function main() {
   // The stylesheet is served from /assets/ in both builds, so font URLs already
   // resolve; strip any leftover absolute root references just in case.
   css = css.replaceAll('url(/assets/', "url(");
+  css = widenButtonSelectors(css);
   await writeFile(path.join(outDir, "assets", "styles.css"), css);
 
   await cp(path.join(root, "public", "np-logo.png"), path.join(outDir, "assets", "np-logo.png"));
