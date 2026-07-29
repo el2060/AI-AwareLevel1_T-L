@@ -309,11 +309,10 @@ This applies to all summative tasks that contribute to the module grade.
 
 :::note Did You Realise? In an AI-Pervasive World
 
-1. You MUST amend your assessment design IF AI can complete that assessment to at least a passing standard AND you cannot be certain how your students contributed to the completion of that assessment.
-2. A take-home assignment's final product does NOT usually provide sufficient evidence of the achievement of learning outcomes unless it is accompanied by a live-check element or elements. Consider interactive oral assessments, e-tests and other types of question-and-answer designs.
-3. If students' AI use can be directly assessed through e-tests, presentations, demonstrations and question-and-answer sessions, GenAI-use declarations can be brief. Generally, you should not need to analyse voluminous AI conversation and draft-work histories. You may not even need lengthy AI-use reflections unless you intend to rely on those for subsequent live interviews with students.
-4. AI rapidly evolves, so any AI-use restrictions you impose may become outdated, insufficient or irrelevant quickly.
-5. Many types of AI-use restrictions are impractical to enforce because lecturers do not supervise students 24/7; or, they are by themselves unnecessary to develop the competencies you wish students to develop.
+1. A take-home assignment's final product does NOT usually provide sufficient evidence of the achievement of learning outcomes unless it is accompanied by a live-check element or elements. Consider interactive oral assessments, e-tests and other types of question-and-answer designs.
+2. If students' AI use can be directly assessed through e-tests, presentations, demonstrations and question-and-answer sessions, GenAI-use declarations can be brief. Generally, you should not need to analyse voluminous AI conversation and draft-work histories. You may not even need lengthy AI-use reflections unless you intend to rely on those for subsequent live interviews with students.
+3. AI rapidly evolves, so any AI-use restrictions you impose may become outdated, insufficient or irrelevant quickly.
+4. Many types of AI-use restrictions are impractical to enforce because lecturers do not supervise students 24/7; or, they are by themselves unnecessary to develop the competencies you wish students to develop.
 
 **Example:**
 
