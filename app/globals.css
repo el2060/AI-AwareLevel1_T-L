@@ -507,12 +507,14 @@ button:focus-visible, summary:focus-visible, a:focus-visible {
 .quiz-cta-link:active { transform: scale(.98); }
 .quiz-cta-link:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 
-/* Same message, quieter weight, so the requirement is known before starting. */
+/* Same message, quieter weight than the closing CTA, so the requirement is
+   known before starting without competing with the homepage. */
 .home-quiz-note {
-  padding: 14px 18px;
-  border: 1px solid var(--line);
+  padding: 15px 18px;
+  border: 1px solid #f4dfc4;
   border-left: 5px solid var(--gold);
-  background: var(--paper);
+  border-radius: var(--surface-radius);
+  background: var(--warning-soft);
 }
 .home-quiz-note > span {
   display: flex;
@@ -525,8 +527,26 @@ button:focus-visible, summary:focus-visible, a:focus-visible {
   letter-spacing: .06em;
   text-transform: uppercase;
 }
-.home-quiz-note p { margin: 0; color: var(--ink); font-size: 15.5px; line-height: 1.6; }
-.home-quiz-note a { font-weight: 650; }
+.home-quiz-note p { margin: 0; color: var(--ink); font-size: 15.5px; line-height: 1.65; }
+.home-quiz-note strong { color: var(--warning-ink); font-weight: 700; }
+/* Inline, but unmistakably a link: always underlined with an external-link
+   icon, and it fills in on hover so the pointer target is obvious. */
+.home-quiz-note a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  padding: 1px 5px;
+  border-radius: 5px;
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: background-color .15s ease, color .15s ease;
+}
+.home-quiz-note a svg { align-self: center; }
+.home-quiz-note a:hover { background: var(--blue); color: #fff; text-decoration-color: rgba(255, 255, 255, .6); }
+.home-quiz-note a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
 
 .key-takeaway {
   margin: 40px 0 12px;

@@ -886,7 +886,10 @@ function HomeFlow() {
           <p>
             After you have worked through every section of this package,
             complete the{" "}
-            <a href={QUIZ_URL} target="_blank" rel="noopener noreferrer">compulsory quiz</a>{" "}
+            <a href={QUIZ_URL} target="_blank" rel="noopener noreferrer">
+              compulsory quiz
+              <ExternalLink size={14} strokeWidth={2.4} aria-hidden="true" />
+            </a>{" "}
             <strong>in this module</strong>.
           </p>
         </aside>
