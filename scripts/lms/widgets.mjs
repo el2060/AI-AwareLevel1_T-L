@@ -287,7 +287,7 @@ export function homeFlow() {
     </aside>
     <aside class="home-quiz-note" aria-label="Compulsory completion quiz">
       <span>${icon("ClipboardCheck", { size: 14, strokeWidth: 2.4 })}Compulsory <i aria-hidden="true">·</i> completion is monitored</span>
-      <p>After you have worked through every section of this package, complete the <a href="${QUIZ_URL}" target="_blank" rel="noopener noreferrer">compulsory quiz</a> <strong>in this module</strong>.</p>
+      <p>After you have worked through every section of this package, complete the <a href="${QUIZ_URL}" target="_blank" rel="noopener noreferrer">compulsory quiz${icon("ExternalLink", { size: 14, strokeWidth: 2.4 })}</a> <strong>in this module</strong>.</p>
     </aside>
   </div>
 </section>`;
