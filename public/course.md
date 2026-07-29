@@ -509,6 +509,6 @@ Identify one practical action to take forward:
 
 ## Closing
 
-The key is to begin with the intended learning, then make deliberate choices about curriculum, facilitation, assessment and the use of tools and data.
+The key is to begin with the intended learning, then make deliberate choices about curriculum, facilitation, assessment, and the use of tools and data.
 
-When you are ready, complete the separately administered quiz to fulfil the package requirements.
+Once you have completed all sections, proceed to the compulsory quiz.

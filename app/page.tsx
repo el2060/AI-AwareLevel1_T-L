@@ -884,13 +884,12 @@ function HomeFlow() {
             Compulsory <i aria-hidden="true">·</i> completion is monitored
           </span>
           <p>
-            After you have worked through every section of this package,
-            complete the{" "}
+            Once you have worked through all sections, complete the{" "}
             <a href={QUIZ_URL} target="_blank" rel="noopener noreferrer">
               compulsory quiz
               <ExternalLink size={14} strokeWidth={2.4} aria-hidden="true" />
-            </a>{" "}
-            <strong>in this module</strong>.
+            </a>
+            .
           </p>
         </aside>
       </div>
@@ -1548,10 +1547,10 @@ export default function Home() {
           <section className="quiz-cta" aria-labelledby="quiz-cta-title">
             <div className="quiz-cta-flags">
               <span className="quiz-cta-pill">Compulsory</span>
-              <span className="quiz-cta-monitored">Completion will be monitored</span>
+              <span className="quiz-cta-monitored">Completion is monitored</span>
             </div>
-            <h2 id="quiz-cta-title">Final step: complete the quiz</h2>
-            <p>The quiz is administered separately in this module and is required to complete this programme.</p>
+            <h2 id="quiz-cta-title">Final step: Complete the quiz</h2>
+            <p>Complete the quiz to fulfil the requirements of this package.</p>
             <a className="quiz-cta-link" href={QUIZ_URL} target="_blank" rel="noopener noreferrer">
               Go to the compulsory quiz
               <ExternalLink size={17} strokeWidth={2.2} aria-hidden="true" />
