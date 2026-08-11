@@ -60,6 +60,8 @@ Use the 3As to consider which competencies are relevant to the discipline, modul
 
 A module may focus on one or combine several of the 3As. They do not need to be addressed equally.
 
+*Consider: Which of the 3As are most relevant to this module, and where should the emphasis be?*
+
 Reviewing a module through the 3As does not automatically mean it must be changed. The review may confirm that the current learning outcomes, activities and assessment remain appropriate.
 
 ## Quick Check
@@ -120,7 +122,7 @@ What is one adjustment that would improve the alignment between the learning out
 
 ## Supporting Context · Student AI Baseline Competencies
 
-The sector student AI baseline provides a shared reference for the foundational AI competencies students should progressively develop.
+MOE's student AI baseline competencies provide a common reference for the foundational AI knowledge and capabilities that students should progressively develop across their studies.
 
 <!--student-baseline-visual-->
 
