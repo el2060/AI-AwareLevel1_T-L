@@ -1179,7 +1179,7 @@ function AlignmentCheckVisual() {
 function BringTogetherVisual() {
   const lenses = [
     { icon: BookOpen, title: "Curriculum", detail: "What may need review?" },
-    { icon: Lightbulb, title: "Facilitation", detail: "Does AI support the intended learning?" },
+    { icon: Lightbulb, title: "Facilitation", detail: "How can AI support the intended learning?" },
     { icon: ClipboardCheck, title: "Assessment", detail: "What evidence keeps learning visible?" },
     { icon: ShieldCheck, title: "Data and Tools", detail: "What needs checking before use?" },
   ];

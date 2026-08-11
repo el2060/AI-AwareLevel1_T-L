@@ -434,7 +434,7 @@ export function alignmentCheckVisual() {
 export function bringTogetherVisual() {
   const lenses = [
     { iconName: "BookOpen", title: "Curriculum", detail: "What may need review?" },
-    { iconName: "Lightbulb", title: "Facilitation", detail: "Does AI support the intended learning?" },
+    { iconName: "Lightbulb", title: "Facilitation", detail: "How can AI support the intended learning?" },
     { iconName: "ClipboardCheck", title: "Assessment", detail: "What evidence keeps learning visible?" },
     { iconName: "ShieldCheck", title: "Data and Tools", detail: "What needs checking before use?" },
   ];
