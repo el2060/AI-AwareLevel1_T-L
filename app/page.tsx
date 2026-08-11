@@ -754,7 +754,7 @@ function OpeningVisual() {
   const areas = [
     {
       title: "Curriculum Design and Development",
-      detail: "What competencies your students need as professional practice changes.",
+      detail: "How AI is reshaping the competencies your students need as professional practice changes.",
       icon: BookOpen,
     },
     {
