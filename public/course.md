@@ -116,9 +116,11 @@ Which of these may be relevant?
 
 <!--alignment-check-visual-->
 
-### Step 3 · Identify One Adjustment
+### Step 3 · Consider Any Adjustment
 
-What is one adjustment that would improve the alignment between the learning outcome, activities and assessment?
+Based on your review, is any adjustment needed to strengthen the alignment between the learning outcome, activities and assessment?
+
+If not, the current design may remain appropriate.
 
 ## Supporting Context · Student AI Baseline Competencies
 
@@ -263,7 +265,7 @@ In an AI-enabled context, assessment should validly and reliably measure student
 
 ## Two Assessment Priorities
 
-### Apply NP's GenAI-in-Assessment Guidance (Policy from AY2027)
+### Apply NP's GenAI-in-Assessment Guidance (Policy from AY2026)
 
 AI is allowed by default in summative assessments unless it is explicitly restricted or prohibited. Lecturers must describe their specific restrictions or prohibitions clearly, students must always declare their AI use, and in all cases students must be informed of the list of always-prohibited uses - in effect, students must be informed that they cannot use AI to cheat.
 
@@ -297,7 +299,7 @@ Identify:
 - what students must demonstrate themselves; and
 - where AI use reflects authentic professional practice.
 
-> You MUST amend your assessment design IF AI can complete that assessment to at least a passing standard and you cannot be certain how your students contributed to the completion of that assessment.
+> You MUST review and, where necessary, amend the assessment design if AI can complete the task to a level that could meet the assessment requirements, and the assessment does not provide sufficient evidence of the student's own learning and contribution.
 
 ### 2. State the AI Conditions Clearly
 
@@ -326,7 +328,7 @@ Even if you restrict AI use to preparation and prohibit AI for final presentatio
 
 Always make clear to students that they must not:
 
-- submit purely AI-generated content as their own;
+- submit purely AI-generated work in place of demonstrating their own learning and contribution;
 - disguise AI-generated content as original work;
 - rely solely on AI for insights or reflections;
 - use AI to simulate an interview, observation or interaction that must involve a real person.
@@ -392,7 +394,7 @@ Staff must not use AI to determine grades independently. Any approved use as a g
 
 AI-detection results, changes in writing style or unexpectedly sophisticated language may raise concerns, but they are not sufficient proof of misconduct.
 
-Where misuse is suspected, follow the process in the Gen AI in Summative Assessment Guidance (Policy from AY2027):
+Where misuse is suspected, follow the process in the Gen AI in Summative Assessment Guidance (Policy from AY2026):
 
 - review the submission and the student’s GenAI declaration;
 - interview the student to learn more about how the work was produced;

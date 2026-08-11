@@ -570,7 +570,7 @@ export const genAiConditionsSorter = () =>
   scenarioSorter({
     eyebrow: "Check the conditions",
     title: "Allowed, Restricted or Prohibited?",
-    prompt: "Decide how each situation sits under NP's GenAI guidance (policy from AY2027) for summative assessment.",
+    prompt: "Decide how each situation sits under NP's GenAI guidance (policy from AY2026) for summative assessment.",
     options: ["Allowed", "Restricted", "Prohibited"],
     countNoun: "checked",
     storageKey: "quiz-genai-conditions",
